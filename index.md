@@ -67,6 +67,7 @@ Six design principles translate care ethics into something institutions can buil
 
 ## Publications
 
+- ["Safeguarding Sovereignty with Data as Soil"](/safer-sovereignty/): Audrey applies the 6-Pack of Care to enterprise AI — data is soil, not oil, and resilience comes from bounded local stewards under federated safety, rather than a single global brain. _(First published by The Kyndryl Institute, 28 April 2026)_
 - ["Sunset Section 230 and Unleash the First Amendment"](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/): Audrey, Jaron Lanier, and Allison Stanger argue for ending algorithmic amplification's liability shield while protecting human speech — the reach-not-speech reform at the heart of Pack 5. _(Communications of the ACM, January 2026)_
 - ["How Malicious AI Swarms Can Threaten Democracy"](https://www.science.org/doi/10.1126/science.adz1697): Audrey joins Maria Ressa, Nick Bostrom, Nicholas Christakis, and 19 other researchers to document how LLM-powered agent swarms can infiltrate communities and fabricate consensus at population scale. _(Science, 2026)_
 - ["Conversation Networks"](https://www.mediatechdemocracy.com/conversation-networks): Audrey, Deb Roy, and Lawrence Lessig propose civic communication infrastructure — interoperable apps with Civic AI guided by communities — as the technical layer beneath 6-Pack of Care. _(McGill Centre for Media, Technology and Democracy, March 2025)_
