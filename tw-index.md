@@ -66,7 +66,7 @@ next_action:
 
 ## 學術發表
 
-- [〈資料如土壤，以守護主權〉](/tw/safer-sovereignty/)：唐鳳將關懷六力應用於企業 AI——資料是土壤，不是石油；韌性來自聯邦化安全下的有界在地守護者，而非單一的全球大腦。_(原刊於 The Kyndryl Institute，2026 年 4 月 28 日)_
+- [〈以資料為土壤，守護主權〉](/tw/safer-sovereignty/)：唐鳳將關懷六力應用於企業 AI——資料是土壤，不是石油；韌性來自聯邦式安全下的有界在地守護者，而非單一的全球大腦。_(原刊於 The Kyndryl Institute，2026 年 4 月 28 日)_
 - [〈廢除 Section 230，釋放第一修正案〉](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/)：唐鳳、Jaron Lanier 與 Allison Stanger 主張終結演算法放大的免責保護，同時保護人類言論——這是 Pack 5 核心的觸及而非言論改革。_(Communications of the ACM, 2026 年 1 月)_
 - [〈惡意 AI 群集如何威脅民主〉](https://www.science.org/doi/10.1126/science.adz1697)：唐鳳與 Maria Ressa、Nick Bostrom、Nicholas Christakis 等 19 位研究者共同記錄 LLM 驅動的智慧體群集如何滲透社群、在人口規模上製造假共識。_(Science, 2026)_
 - [〈對話網路〉](https://www.mediatechdemocracy.com/conversation-networks)：唐鳳、Deb Roy 與 Lawrence Lessig 提出公民通訊基礎設施——可互通的應用程式加上由社群引導的仁工智慧——作為關懷六力的技術層。_(McGill Centre for Media, Technology and Democracy, 2025 年 3 月)_
