@@ -21,15 +21,13 @@ But even soil is not the whole story. An organization can keep its data beautifu
 
 This frames AI not as the subject of sovereignty, but as the mechanism through which sovereignty is exercised or surrendered.
 
-## Challenging the Mainframe Mentality
+## Challenging Mainframe Mentality
 
 Many enterprises are approaching AI with a mainframe mentality: one giant enterprise copilot in the cloud, one model connected to every document, workflow, and application, everyone becoming a terminal typing into the same intelligence.
 
 This looks efficient, just as the mainframe once did. But it also creates monoculture risk, central honeypots, hidden jurisdictional dependencies, and organizational atrophy. Local nuance is reduced to prompt engineering. Local authority becomes a permissions spreadsheet. In calm conditions, this feels convenient. In crisis, it becomes a bottleneck. The global model that performs brilliantly on last quarter's patterns becomes a liability the moment a new tariff, a new conflict, or a new regulation changes the local rules overnight.
 
 Having a single point of control that concentrates risk as well as capability is not the answer. Nor is fragmentation. The answer is bounded delegation.
-
-## From Kami to Steward: A Model for Decision Sovereignty
 
 In the Japanese Shinto tradition, a Kami (神) is a guardian associated with a particular place: a grove, a river, an old tree. Its role is not universal command. It is care for one ecosystem. Kami is akin to a form of enterprise governance. To make the practical meaning plain, I will call the enterprise equivalent a steward: a locally accountable role, embodied by a person, a team, or a bounded system, tasked with operating an AI agent within a defined mandate for a defined community. The river's guardian does not try to govern the forest. Likewise, the steward of a hospital triage system should not become the steward of payroll, personnel or procurement.
 
@@ -45,7 +43,7 @@ What these organizations often lack is not operational discipline. It is a gover
 
 > Hyper-centralization is not resilience. It is a single point of failure.
 
-## The Sovereignty Stack
+## Sovereignty Stack
 
 For organizations deploying AI in core decision-making, decision sovereignty means being able to determine not only where data resides, but how it is interpreted, what actions may follow, how decisions can be reviewed, and how the system can be paused or replaced. One useful way to think about this is as a stack with five layers:
 
@@ -61,7 +59,7 @@ Consider a multinational insurer operating claims-processing systems in Japan, B
 
 The bounded alternative is different. Each jurisdiction runs a smaller domain-specific model fine-tuned on local claims data, regulatory language, and interaction patterns. These models share a common evaluation framework so global risk teams can compare performance and share lessons. But interpretation, enforcement, and appeals stay local. Each model can be audited, retrained, paused, or retired independently.
 
-## Federate Safety, Do Not Centralize It
+## Federate Safety, Do Not Centralize
 
 Bounded stewards must still cooperate without recreating the centralized fragility we set out to escape. Federation is the answer: not one global safety authority, but many local stewards sharing threat intelligence and evaluation methods under common protocols while keeping enforcement local.
 
@@ -69,7 +67,7 @@ This is already happening. The ROOST initiative, Robust Open Online Safety Tools
 
 The test of whether such a federation is working is simple: after a disruption, do local teams and partners trust the system more, or less? In a volatile world, whether trust rises or falls after a crisis is a core business-continuity metric.
 
-## The Courage to Sunset
+## Courage to Sunset
 
 Enterprise infrastructure is beset by what I call imperial creep: systems that expand beyond their mandate because they were built to live forever. Here stewardship should mean operating a system within a clearly bounded purpose. When that purpose is never explicit, never reviewed, and never brought to an end, stewardship turns imperial. The assistant that schedules maintenance quietly becomes a procurement agent. The fraud model quietly becomes an employee-monitoring system. The service-desk assistant quietly becomes a behavioral scoring engine. Nobody authorized these expansions. They happened because nobody defined the boundary or the ending.
 
@@ -83,7 +81,7 @@ Therefore, I would encourage leaders to do the following:
 4. **Join a federated safety network.** Extend cybersecurity information-sharing to cover AI-specific incidents. Share proofs, model cards, and evaluation results, not raw data. The goal is shared defense without shared dependence.
 5. **Design exit before scale.** Every deployment needs a sunset clause and a succession plan. If you cannot switch models, clouds, or vendors without losing continuity, you do not have sovereignty. You have managed dependence.
 
-## The Plurality of the Enterprise
+## Enterprise Plurality
 
 The assumption that a single global intelligence layer is the answer needs reexamining, especially in fragile or highly regulated environments. The organizations that thrive will not be those that build the thickest walls or the largest central databases. They will be those that treat data as living soil, appoint local stewards to tend it, and measure success by whether trust, coordination, and accountability grow stronger under pressure, not by whether one model can answer every question from every continent.
 
