@@ -7,6 +7,7 @@ alt_lang_url: "/tw/safer-sovereignty"
 permalink: "/safer-sovereignty/"
 date: 2026-04-28
 description: "Audrey Tang on decision sovereignty, bounded local stewards, and federated safety — applying the 6-Pack of Care to enterprise AI in a fragmented world."
+og_image: "/img/safer-sovereignty.jpg"
 ---
 
 _Originally published by [The Kyndryl Institute](https://www.kyndryl.com/us/en/institute/2026/04/safer-sovereignty) on 28 April 2026._

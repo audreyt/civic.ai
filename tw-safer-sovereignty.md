@@ -7,6 +7,7 @@ alt_lang_url: "/safer-sovereignty"
 permalink: "/tw/safer-sovereignty/"
 date: 2026-04-28
 description: "唐鳳談決策主權、有界在地守護者與聯邦式安全：在碎裂世界中，將關懷六力應用於企業 AI。"
+og_image: "/img/safer-sovereignty.jpg"
 ---
 
 _本文原刊於 [The Kyndryl Institute](https://www.kyndryl.com/us/en/institute/2026/04/safer-sovereignty)，2026 年 4 月 28 日。_
