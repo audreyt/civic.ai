@@ -12,49 +12,49 @@ SITE_URL_ALIASES = (SITE_URL,)
 
 # Files managed by the doc-sync workflow.
 SYNC_FILES = (
-    "index.md", "manifesto.md", "faq.md",
-    "1.md", "2.md", "3.md", "4.md", "5.md", "6.md",
-    "tw-index.md", "tw-manifesto.md", "tw-faq.md",
-    "tw-1.md", "tw-2.md", "tw-3.md", "tw-4.md", "tw-5.md", "tw-6.md",
+    "index.md", "manifesto.md",
+    "3.md", "4.md", "5.md", "6.md", "7.md", "8.md",
+    "tw-index.md", "tw-manifesto.md",
+    "tw-3.md", "tw-4.md", "tw-5.md", "tw-6.md", "tw-7.md", "tw-8.md",
 )
 
 # Mapping from local filename to Google Docs tab id.
 TAB_MAP: dict[str, str] = {
-    "faq.md": "t.jutu46j75do3",
     "manifesto.md": "t.iphokcalvpzi",
     "index.md": "t.n06zotu1buvc",
-    "1.md": "t.wvx7cq952sj5",
-    "2.md": "t.w4pue0hgeutw",
-    "3.md": "t.a0wddqpxtuk7",
-    "4.md": "t.8b7he5x870mo",
-    "5.md": "t.keauzhwx9sq",
-    "6.md": "t.rk66ffskrbnk",
+    "3.md": "t.wvx7cq952sj5",
+    "4.md": "t.w4pue0hgeutw",
+    "5.md": "t.a0wddqpxtuk7",
+    "6.md": "t.8b7he5x870mo",
+    "7.md": "t.keauzhwx9sq",
+    "8.md": "t.rk66ffskrbnk",
     "tw-index.md": "t.0",
     "tw-manifesto.md": "t.pstem4cg1bvo",
-    "tw-1.md": "t.mzhiy338dord",
-    "tw-2.md": "t.nv6d0g7hrqd0",
-    "tw-3.md": "t.tl7fjs4m0x99",
-    "tw-4.md": "t.ee73sjuyra3m",
-    "tw-5.md": "t.5vty71f16vz6",
-    "tw-6.md": "t.aozqqajhyyft",
-    "tw-faq.md": "t.au4rn9sutt1y",
+    "tw-3.md": "t.mzhiy338dord",
+    "tw-4.md": "t.nv6d0g7hrqd0",
+    "tw-5.md": "t.tl7fjs4m0x99",
+    "tw-6.md": "t.ee73sjuyra3m",
+    "tw-7.md": "t.5vty71f16vz6",
+    "tw-8.md": "t.aozqqajhyyft",
 }
 
 # Per-file doc ID override (files not listed default to DOC_ID).
 FILE_DOC_ID: dict[str, str] = {f: DOC_ID_TW for f in (
-    "tw-index.md", "tw-manifesto.md", "tw-faq.md",
-    "tw-1.md", "tw-2.md", "tw-3.md", "tw-4.md", "tw-5.md", "tw-6.md",
+    "tw-index.md", "tw-manifesto.md",
+    "tw-3.md", "tw-4.md", "tw-5.md", "tw-6.md", "tw-7.md", "tw-8.md",
 )}
+# Note: 1.md (Introduction), 2.md (Foundations), 9.md (FAQ), 10.md (Applications),
+# 11.md (Call to Action) are not yet synced — no Google Docs tabs assigned.
 
 # Partial-tab sync: only manage content from the first heading whose
 # text starts with the given prefix.  Files not listed sync the full tab.
 CONTENT_START: dict[str, str] = {
-    "1.md": "Pack 1",
-    "2.md": "Pack 2",
-    "3.md": "Pack 3",
-    "4.md": "Pack 4",
-    "5.md": "Pack 5",
-    "6.md": "Pack 6",
+    "3.md": "Pack 1",
+    "4.md": "Pack 2",
+    "5.md": "Pack 3",
+    "6.md": "Pack 4",
+    "7.md": "Pack 5",
+    "8.md": "Pack 6",
 }
 
 

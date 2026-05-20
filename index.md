@@ -8,12 +8,12 @@ openclaw_discovery: true
 manifesto_link: "/manifesto"
 manifesto_text: "Manifesto"
 prev_action:
-    url: "/faq"
-    text: "FAQ"
+    url: "/11"
+    text: "Call to Action"
     arrow: "left"
 next_action:
     url: "/1"
-    text: "Pack 1: Attentiveness"
+    text: "Chapter 1: Introduction"
     arrow: "right"
 ---
 
@@ -23,9 +23,9 @@ next_action:
 
 **Governance should feel like a daily capability, not just a periodic vote.**
 
-Most AI alignment work tries to solve values from the top down: write better rules, infer better preferences, train better models. Those tools matter. They are not enough on their own.
+Most AI alignment work tries to solve values from the top down: write better regulatory walls, infer better preferences, train better models. While top-down safety walls can buy time, they cannot prevent cascading failures in a complex polycrisis. True resilience requires portable, pro-social practices.
 
-The 6-Pack starts somewhere else. It asks who gets heard, who is accountable, how failures are repaired, and when a system should stop. Alignment is not solved once. It is maintained in public.
+Instead of seeing conflict as a fire to put out, we can treat polarization as a **geothermal engine** — harnessing the underlying heat of disagreement to generate co-creation by amplifying overlap rather than outrage. The 6-Pack starts here. It asks who gets heard, who is accountable, how failures are repaired, and when a system should stop. Alignment is not solved once; it is maintained in public.
 
 The unit of deployment is the **Kami** — a bounded local steward, not a universal governor. Kamis help neighbourhoods, schools, unions, faith groups, cities, and diasporas do what collective self-government has always promised but rarely delivered at scale: listen across difference, deliberate in the open, remember faithfully, and act together.
 
@@ -39,23 +39,29 @@ The breakthrough is not smarter chatbots. It is stronger self-government: instit
 
 ## Start here
 
-- **Policy.** Read the [Manifesto](/manifesto/), the [FAQ](/faq/), and ["AI Alignment Cannot Be Top-Down"](/ai-alignment-cannot-be-top-down/).
-- **Engineering.** Start with [Pack 3: Competence](/3/), [Measures](/measures/), and ["Inside the Kami"](/inside-the-kami/).
-- **Civic practice.** Start with [Pack 1: Attentiveness](/1/), [Pack 4: Responsiveness](/4/), and [Podcast: The 6-Pack of Care](/podcast/).
+- **The book.** Begin with [Chapter 1: Introduction](/1/) and [Chapter 2: Foundations](/2/), then follow the six packs (Chapters 3–8).
+- **Policy.** Read the [Manifesto](/manifesto/), the [FAQ](/9/), and ["AI Alignment Cannot Be Top-Down"](/ai-alignment-cannot-be-top-down/).
+- **Engineering.** Start with [Chapter 5: Competence](/5/), [Measures](/measures/), and ["Inside the Kami"](/inside-the-kami/).
+- **Civic practice.** Start with [Chapter 3: Attentiveness](/3/), [Chapter 6: Responsiveness](/6/), and [Podcast: The 6-Pack of Care](/podcast/).
 - **{{ openclaw_bootstrap.guides.en.homeLinkLabel }}.** {{ openclaw_bootstrap.guides.en.homeLinkText }}
 
 ## The 6-Pack
 
 The 6-Pack is an application of [⿻ Plurality](https://plurality.net) to AI governance. Packs 1–4 form a feedback loop (Attentiveness → Responsibility → Competence → Responsiveness → back to Attentiveness). Pack 5 scales that loop across organisations. Pack 6 is the boundary condition that keeps every deployment local, plural, and sunset-ready. The unit of deployment is the **Kami** — a bounded local steward, not a universal governor.
 
-Six design principles translate care ethics into something institutions can build and inspect:
+The book translates care ethics into something institutions can build and inspect:
 
-- **[Pack 1: Attentiveness](/1/)** — what the people closest to the problem are seeing that institutions still miss.
-- **[Pack 2: Responsibility](/2/)** — who is accountable, with what authority, and what happens if they fail.
-- **[Pack 3: Competence](/3/)** — whether the system actually works in practice: audited, explainable, and safe to fail.
-- **[Pack 4: Responsiveness](/4/)** — whether affected people can contest outcomes and force repair.
-- **[Pack 5: Solidarity](/5/)** — whether the ecosystem rewards cooperation, exit, and public accountability over lock-in.
-- **[Pack 6: Symbiosis](/6/)** — whether the system stays bounded, local, and sunset-ready instead of hardening into permanent rule.
+- **[Chapter 1: Introduction](/1/)** — we, the people, are the superintelligence.
+- **[Chapter 2: Foundations](/2/)** — relational health, care ethics, and the role of AI in civic infrastructure.
+- **[Chapter 3: Attentiveness](/3/)** — what the people closest to the problem are seeing that institutions still miss.
+- **[Chapter 4: Responsibility](/4/)** — who is accountable, with what authority, and what happens if they fail.
+- **[Chapter 5: Competence](/5/)** — whether the system actually works in practice: audited, explainable, and safe to fail.
+- **[Chapter 6: Responsiveness](/6/)** — whether affected people can contest outcomes and force repair.
+- **[Chapter 7: Solidarity](/7/)** — whether the ecosystem rewards cooperation, exit, and public accountability over lock-in.
+- **[Chapter 8: Symbiosis](/8/)** — whether the system stays bounded, local, and sunset-ready instead of hardening into permanent rule.
+- **[Chapter 9: FAQ](/9/)** — fifteen hard questions the framework must answer.
+- **[Chapter 10: Civic AI in Practice](/10/)** — five case studies across scales, cultures, and problem domains.
+- **[Chapter 11: Call to Action](/11/)** — till the soil, tend the garden, make democracy fast, fair, and fun.
 - **[Measures](/measures/)** — one headline public measure per pack, with supporting diagnostics.
 
 ## Four proof points

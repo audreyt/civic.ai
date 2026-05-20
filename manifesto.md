@@ -10,43 +10,43 @@ nav_prev:
     url: "/"
     text: "Home"
 nav_next:
-    url: "/faq"
-    text: "FAQ"
+    url: "/1"
+    text: "Chapter 1: Introduction"
 permalink: "/manifesto/"
 audio: /audio/manifesto.mp3
 ---
 
 When we discuss "AI" and "society," two futures compete.
 
-In one—arguably the default trajectory—AI supercharges conflict.
+In one — arguably the default trajectory — AI supercharges conflict.
 
 In the other, AI augments our ability to cooperate across differences. This means treating differences as fuel and inventing a combustion engine to turn them into energy, rather than constantly putting out fires. I call this **⿻ Plurality**.
 
 Today, I want to discuss an application of this idea to AI governance, developed at Oxford's Ethics in AI Institute, called the [6-Pack of Care](https://civic.ai).
 
-As AI becomes a thousand, perhaps ten thousand times faster than us, we face a fundamental asymmetry. The default trajectory: we become the **garden**, and AI becomes the **gardener**—a top-down intelligence tending humanity from above.
+As AI becomes a thousand, perhaps ten thousand times faster than us, we face a fundamental asymmetry. The default trajectory: we become the **garden**, and AI becomes the **gardener** — a top-down intelligence tending humanity from above.
 
 At that speed, traditional ethics struggle. Consequentialism — even its most sophisticated forms — relies on predicting and overseeing outcomes. When an AI system optimises far beyond our comprehension, we cannot intervene before unintended consequences cascade. Deontology relies on moral agents interpreting obligations in good faith on roughly equal footing. When the "interpreter" operates thousands of times faster, the gap between a rule's letter and its spirit widens in ways we can neither foresee nor correct. Both traditions have far more depth than caricature suggests, but care ethics offers something neither provides: it starts from relationships and process rather than from outcomes or rules alone.
 
-A framework that acknowledges this asymmetry but refuses the gardener role is an ethics around **civic care**, particularly the work of Joan Tronto. The core idea is that we remain each other's gardeners. AI becomes local infrastructure—a spirit of place, a _Kami_—that supports care _at the speed care actually grows_.
+A framework that acknowledges this asymmetry but refuses the gardener role is an ethics around **civic care**, particularly the work of Joan Tronto. The core idea is that we remain each other's gardeners. AI becomes local infrastructure — a spirit of place, a _Kami_ — that supports care _at the speed care actually grows_.
 
 This approach mandates a hyper-local, parochial moral scope. Each _Kami_ is bound to specific relationships, rather than being a colonising or maximising ("paper-clipping") force.
 
-Designing AI as care infrastructure requires digital permaculture, mirroring a movement that embraces anti-fragility through diversity—what Professor Yuk Hui calls "technodiversity"—rather than fragile monocultures.
+Designing AI as care infrastructure requires digital permaculture, mirroring a movement that embraces anti-fragility through diversity — what Professor Yuk Hui calls "technodiversity" — rather than fragile monocultures.
 
 The vertical narrative of a technological "singularity" needs a horizontal alternative. Today, I wish to discuss that alternative: a steering wheel called **⿻ Plurality** and its design principles, the **6-Pack of Care**.
 
 # From Protest to Demo
 
-Our journey began in 2014 with the Sunflower Movement, a protest against an opaque trade deal with Beijing. Public trust in the government plummeted to 9 percent. Our social fabric was coming apart, largely due to "engagement through enragement" parasitic AI—what I call _antisocial media_.
+Our journey began in 2014 with the Sunflower Movement, a protest against an opaque trade deal with Beijing. Public trust in the government plummeted to 9 per cent. Our social fabric was coming apart, largely due to "engagement through enragement" parasitic AI — what I call _antisocial media_.
 
 As civic technologists, we didn't just protest. We pivoted to demonstration ("demo"). We occupied the parliament for three weeks and began building the system we wanted to see from the inside.
 
-We crowdsourced internet access and livestreamed debates for radical transparency. Half a million people on the street, and many more online, used collaborative tools pioneered by other movements—such as Loomio (from Occupy Wellington) and later Polis (from Occupy Seattle).
+We crowdsourced internet access and livestreamed debates for radical transparency. Half a million people on the street, and many more online, used collaborative tools pioneered by other movements — such as Loomio (from Occupy Wellington) and later Polis (from Occupy Seattle).
 
-We drafted better versions of the trade deal together, iteratively. Each day, we reviewed the low-hanging fruit—the ideas agreed upon the previous day—and the best arguments from both sides on the remaining conflicts. Then we resolved them step by step.
+We drafted better versions of the trade deal together, iteratively. Each day, we reviewed the low-hanging fruit — the ideas agreed upon the previous day — and the best arguments from both sides on the remaining conflicts. Then we resolved them step by step.
 
-By shifting from protest to a productive demo, we began tilling the soil of our democracy. Systemically applying such bridge-making algorithms contributed to increased public trust — not alone, but as part of a broader democratic renewal. Trust climbed from 9 percent in 2014 to over 70 percent by 2020. We showed that the best way to fix a system is to build a better one.
+By shifting from protest to a productive demo, we began tilling the soil of our democracy. Systemically applying such bridge-making algorithms contributed to increased public trust — not alone, but as part of a broader democratic renewal. Trust climbed from 9 per cent in 2014 to over 70 per cent by 2020. We showed that the best way to fix a system is to build a better one.
 
 # From Outrage to Overlap
 
@@ -83,9 +83,9 @@ We convened a national **Alignment Assembly** with the Collective Intelligence P
 1.  **Discovery (Open):** We sent 200,000 SMS messages (a "democracy lottery"). Everyone, even those not selected, could use Polis to set the agenda. This broad participation contributes significantly to legitimacy.
 2.  **Definition (Protected):** We invited 447 demographically representative citizens to deliberate in 44 virtual tables of roughly 10.
 
-**AI assistants** provided real-time transcripts and facilitation. Language models (tools similar to Google Jigsaw's Sensemaker) synthesised proposals in real-time—ideas such as requiring digital signatures for ads, making platforms jointly liable for the full amount scammed, or dialling down the network reach (slowing CDN connections) of non-compliant platforms.
+**AI assistants** provided real-time transcripts and facilitation. Language models (tools similar to Google Jigsaw's Sensemaker) synthesised proposals in real-time — ideas such as requiring digital signatures for ads, making platforms jointly liable for the full amount scammed, or dialling down the network reach (slowing CDN connections) of non-compliant platforms.
 
-The final package earned over 85 percent cross-partisan support. This rigour is crucial. It functions as a "duck-rabbit"—from one side it looks like a deliberation, from the other it looks like a rigorous poll, providing legitimacy for the legislature.
+The final package earned over 85 per cent cross-partisan support. This rigour is crucial. It functions as a "duck-rabbit" — from one side it looks like a deliberation, from the other it looks like a rigorous poll, providing legitimacy for the legislature.
 
 The amendments passed within months. As of 2025, Taiwan is likely the only country imposing full-spectrum, real-name KYC rules for social media advertisements. This approach employs **Civic AI**.
 
@@ -103,13 +103,13 @@ These successes treat deliberation as a civic muscle that needs exercise. But de
 
 # From Pilots to Policy
 
-To move these governance engines from pilots to the default, we must reengineer the infrastructure itself. We must design for participation and democratic legitimacy. If AI makes all the decisions for us—even good ones—our civic muscle atrophies. It's like sending our robotic avatars to the gym to exercise for us.
+To move these governance engines from pilots to the default, we must reengineer the infrastructure itself. We must design for participation and democratic legitimacy. If AI makes all the decisions for us — even good ones — our civic muscle atrophies. It's like sending our robotic avatars to the gym to exercise for us.
 
 Here are key policy levers:
 
 - **Expression ≠ Amplification (Freedom of Speech vs. Freedom of Reach).** We must distinguish hosting speech from algorithmic amplification. In the US context, Section 230 protects speech, but has never protected amplification. We must reframe the debate around recommender accountability, regulating amplification without touching the speech itself.
 - **Social Portability.** We must mandate "number portability for social." The Utah Digital Choice Act (effective July 2026) mandates that citizens can take their entire social graph to new services. It requires platforms to choose a fair, non-discriminatory, interoperable protocol (e.g., ActivityPub, AT Protocol, or DSNP), with the state publishing qualifying technical standards. The information superhighway must have off-ramps, which forces platforms to compete on quality of care, not lock-in.
-- **Bridging-Based Ranking Transparency.** We can audit the relational health of platforms. X.com is already testing bridge-based ranking (derived from Community Notes) as the default feed. Its new Collaborative Notes feature lets human contributors request AI-drafted context, then collectively rate and refine it—a two-lane pattern where AI provides speed and humans provide judgement.
+- **Bridging-Based Ranking Transparency.** We can audit the relational health of platforms. X.com is already testing bridge-based ranking (derived from Community Notes) as the default feed. Its new Collaborative Notes feature lets human contributors request AI-drafted context, then collectively rate and refine it — a two-lane pattern where AI provides speed and humans provide judgement.
 - **Federated Trust & Safety.** We must adopt open-source, federated models. A key example is the **ROOST.tools** (Robust Open Online Safety Tools) initiative for Child Sexual Abuse Material (CSAM) defence, launched this year in Paris. The initiative bridged the security camp (Eric Schmidt) and the open camp (Yann LeCun). Instead of relying on a single source (e.g., Microsoft PhotoDNA), ROOST allows partners (e.g., Bluesky, Roblox, or Discord) to train local AIs — what I call _Kami_ — to detect CSAM within their specific cultural context. Embeddings are translated into text (legal to hold, with fewer privacy issues) and shared via federated learning. Safety is tuned to local norms without being colonised by a single corporate policy.
 
 # From "Is" to "Ought"
@@ -152,7 +152,7 @@ This principle focuses on making credible, flexible commitments to act on the ne
 
 In practice, this responsibility means developing **model specs** with verifiable commitments. A frontier model maker can _pre-commit_ to adopting a crowdsourced code of conduct (from an Alignment Assembly) if it meets thresholds for due process and relational health.
 
-Institutionalisation is also required. In Taiwan, we introduced **Participation Officers (POs)** in every ministry. This structure is "fractal"—present in every agency and team. POs institutionalise the input/output process, translating public input into workable rules and ensuring commitments are honoured and cascaded throughout the organisation.
+Institutionalisation is also required. In Taiwan, we introduced **Participation Officers (POs)** in every ministry. This structure is "fractal" — present in every agency and team. POs institutionalise the input/output process, translating public input into workable rules and ensuring commitments are honoured and cascaded throughout the organisation.
 
 _Rule of thumb: No unchecked power; answers are required._
 
@@ -172,9 +172,9 @@ A system that cannot be corrected will fail. Since competent action invariably i
 
 Some teams may then feed approved community feedback into routing or model updates — including **Reinforcement Learning from Community Feedback (RLCF)** — but that implementation choice comes after a more basic civic commitment: the community defines what counts as harm, repair, and improvement.
 
-Responsiveness also means extending alignment assemblies with [GlobalDialogues.ai](https://globaldialogues.ai/) and [Weval.org](https://weval.org/)—a "Wikipedia for Evals."
+Responsiveness also means extending alignment assemblies with [GlobalDialogues.ai](https://globaldialogues.ai/) and [Weval.org](https://weval.org/) — a "Wikipedia for Evals."
 
-Weval allows diverse communities to document and share their lived experiences, both positive and negative, with AI. It emphasises capturing not only the harms an AI might cause in a specific cultural context—such as increasing self-harm or psychosis—but also the unexpected benefits it might bring. How are people using AI to improve their lives? When does it work best?
+Weval allows diverse communities to document and share their lived experiences, both positive and negative, with AI. It emphasises capturing not only the harms an AI might cause in a specific cultural context — such as increasing self-harm or psychosis — but also the unexpected benefits it might bring. How are people using AI to improve their lives? When does it work best?
 
 By surfacing this full spectrum of impacts, we shift the incentive structure. We can't improve what we don't see. By making both positive and negative outcomes visible, we create a public dashboard that allows labs to test their models against real-world concerns and opportunities. This helps us move beyond simply mitigating harm to actively learning from and amplifying beneficial uses.
 
@@ -198,7 +198,7 @@ _Rule of thumb: Make positive-sum games easy to play._
 
 # Symbiosis: **"Kami of Care"**
 
-The final piece of the puzzle addresses the ultimate fear: that AI systems, even designed as infrastructure, could still compete—expanding their reach until one dominates all others. How do we ensure a world of cooperative local systems rather than a single, all-powerful ruler?
+The final piece of the puzzle addresses the ultimate fear: that AI systems, even designed as infrastructure, could still compete — expanding their reach until one dominates all others. How do we ensure a world of cooperative local systems rather than a single, all-powerful ruler?
 
 The inspiration comes from an ancient idea, beautifully expressed in the Japanese Shinto tradition: the concept of **_Kami_** (神).
 
@@ -217,7 +217,7 @@ The solution is not to create a bigger AI to rule over them. Instead, we create 
 1.  **Federation:** The AIs agree on a shared set of rules for how to interact peacefully, like countries agreeing on trade laws and diplomatic protocols. This agreement creates a common ground for cooperation.
 2.  **Subsidiarity:** This idea is simple but profound: **problems should always be solved at the most local level possible.** The national-level AI shouldn't interfere with the city-level AI unless there's a problem the city truly cannot solve on its own. This separation protects the autonomy and purpose of each local _Kami_.
 
-The vision of a **"society of AI permaculturists"** is the direct alternative to the **"singleton"**—the idea of a single AI that eventually manages everything. Instead of one monolithic intelligence, we envision a vibrant, diverse ecosystem of many specialised intelligences.
+The vision of a **"society of AI permaculturists"** is the direct alternative to the **"singleton"** — the idea of a single AI that eventually manages everything. Instead of one monolithic intelligence, we envision a vibrant, diverse ecosystem of many specialised intelligences.
 
 _Rule of thumb: Build for "enough," not forever._
 
@@ -233,7 +233,7 @@ To explain my role, I wrote this poetic job description:
 - When we see "user experience," let's make it **about human experience.**
 - When we hear "the singularity is near" — let us remember: The **Plurality** is here.
 
-The singularity is a vertical vision. Plurality is a horizontal one. The future of AI is a decentralised network of smaller, open and locally verifiable systems—_local Kamis_, spirits of place.
+The singularity is a vertical vision. Plurality is a horizontal one. The future of AI is a decentralised network of smaller, open and locally verifiable systems — _local Kamis_, spirits of place.
 
 # We, the People, Are the Superintelligence
 

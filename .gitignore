@@ -23,3 +23,12 @@ docs/
 # Local scratch files
 z/
 z-*
+
+# Python pycache
+__pycache__/
+**/__pycache__/
+
+# Work scripts/temp files
+scripts/srt_work/
+scripts/tts_dialogue.py
+wiley_strategy.md
