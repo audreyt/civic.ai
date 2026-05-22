@@ -94,7 +94,7 @@ On the first of February 2005, in the #haskell IRC channel on freenode, Pugs was
 
 Then we did something I have not seen any project do before. We proactively gave the commit bit — write access to the main repository — because I did not want to be a lonely maintainer. Anyone who sent in a single patch — a typo fix, a documentation correction, a failing test case — got commit access. Just mentioning us on Usenet was sufficient. It was anarchism. We also sent unsolicited invitation emails to some project member's child who had just been born; to Guido van Rossum, the author of Python, who had just mentioned Perl 6 once. A core contributor's newborn son got a commit bit on day four of his life — I am not sure how much he could do with it, but it was a bit of trust.
 
-Within a year there were about two hundred active contributors I had never met, on every continent, cooperating on the same codebase. I had been travelling at that time to more than twenty countries — a little like Paul Erdős, who used to occupy somebody's couch until he was sent to some other couch. Two communities that had never previously had much to say to each other — the Haskell people and the Perl people — found a way to really work together, finding what we call the _uncommon ground_: the rarely-discussed common ground between two polar opposites of programming-language communities. The Haskellers got new PhD theses out of the type-system extensions we kept needing. The Perl people got a working laboratory for the new language — and twenty years later, of course, this language called Raku now, the class system finally merged back into Perl as a first-class object model.
+Within a year there were about two hundred active contributors I had never met, on every continent, cooperating on the same codebase. I had been travelling at that time to more than twenty countries — a little like Paul Erdős, who used to occupy somebody's couch until he was sent to some other couch. Two communities that had never previously had much to say to each other — the Haskell people and the Perl people — found a way to really work together, finding what we call the _uncommon ground_: the rarely-discussed common ground between two polar opposites of programming-language communities. The Haskellers got new PhD theses out of the type-system extensions we kept needing. The Perl people got a working laboratory for the new language — and twenty years later, of course, this language — called Raku now — saw its class system finally merged back into Perl as a first-class object model.
 
 Larry Wall would watch us implement contradictions in his specification on IRC, and write back: "Great — TimToady, _there's more than one way to do it_ — I will extend the spec to match." The implementation taught the specification what it actually meant, its intention, not its written spec. The language came back from "abandoned" because we never made anyone ask permission to revive it.
 
@@ -174,9 +174,9 @@ This is what free software can do for the world when the substrate is open.
 
 # Tim Davis sees his code
 
-But right now, that very substrate is being strip-mined. While Taiwan was proving what free software can do for democracy at scale, this very substrate we rely on is being strip-mined.
+But right now, that very substrate is facing extraction. While Taiwan was proving what free software can do for democracy at scale, this very substrate we rely on is being strip-mined.
 
-In the autumn of 2022, Professor Tim Davis at Texas A&M watched GitHub Copilot output his exact sparse-matrix code. Not paraphrased. Not similar. Verbatim. Down to the variable names and the custom comments. Code he had written for SuiteSparse, code shipped under the Lesser GNU Public License — the LGPL — code that for some reason the model had memorised down to the formatting and the comments, except without the copyleft.
+In the autumn of 2022, Professor Tim Davis at Texas A&M watched GitHub Copilot output his exact sparse-matrix code. Not paraphrased. Not similar. Verbatim. Down to the variable names and the custom comments. Code he had written for SuiteSparse, code shipped under the GNU Lesser Public License — the LGPL — code that for some reason the model had memorised down to the formatting and the comments, except without the copyleft.
 
 Tim posted screenshots. They went around on social media for two days. Then the conversation moved on.
 
@@ -196,7 +196,7 @@ Stefano Maffulli, who runs the Open Source Initiative, calls this _the final fro
 
 There have been attempts. Creative Commons signalling. The [Open Source AI Definition](https://opensource.org/ai/open-source-ai-definition) — OSAID v1.0 — already requires Data Information, Code, and Parameters. Give the OSI credit: it is not just open-washing on weights. The fight to get even that scope into a published definition took years; we should not strawman it.
 
-But what I think currently the frontier sits is now beyond that definition. I will be very specific. There are two places we are now working on.
+But where I think currently the frontier sits is now beyond that definition. I will be very specific. There are two places we are now working on.
 
 First: public evaluation suites. Even when training-data documentation, code, and parameters are out in the open, the arena benchmark — the thing that trains the reward model — is usually a black box, because that is the secret sauce that keeps people subscribing to a particularly companion-like AI system. The eval suite is the document of what the model was built to do, how to know if it is doing it, what counts as a regression.
 
@@ -210,7 +210,7 @@ Because we run our family Kami on the OpenClaw substrate, the answer is easy: we
 
 This also means we need to be able to freely move across model choices. Today I am using DS4; tomorrow I might want Gemma — nothing should change. No history, no memories, no steering. It should just become more capable. This _radical portability_ should be the norm.
 
-And if we had radical portability for social media ten years ago, we would not be in this place of very high polarisation per minute — PPM — on social media. We are working to add this back, not just to AI models like OpenClaw, but to social networks too. Many of you may be on the Fediverse with Mastodon and ActivityPub, or on the newer AT Protocol — Bluesky, the Atmosphere. In the state of Utah, in the US, they just passed a law that says, starting next July, when people want to migrate from proprietary social networks into systems running on those public protocols — Bluesky, Black Sky, even Truth Social, which also runs on ActivityPub — the old network is legally required to forward all new followers, reactions, replies, and so on, if I choose so, to my new network. Number portability for social graphs. Because if you do not have it, the platform has every reason to squeeze you and none to actually improve itself.
+And if we had radical portability for social media ten years ago, we would not be in this place of very high polarisation per minute — PPM — on social media. We are working to add this back, not just to AI models like OpenClaw, but to social networks too. Many of you may be on the Fediverse with Mastodon and ActivityPub, or on the newer AT Protocol — Bluesky, the Atmosphere. In the state of Utah, in the US, they just passed a law that says, starting next July, when people want to migrate from proprietary social networks into systems running on those public protocols — Bluesky, Blacksky, or Truth Social, which also runs on ActivityPub — the old network is legally required to forward all new followers, reactions, replies, and so on, if I choose so, to my new network. Number portability for social graphs. Because if you do not have it, the platform has every reason to squeeze you and none to actually improve itself.
 
 So it is not the state choosing a national champion — Airbus or anything like that — but a very simple thing: the information superhighway must have off-ramps and on-ramps. Otherwise it is just a loop. It is not the real highway.
 
@@ -228,7 +228,7 @@ That is what software freedom looks like in 2026.
 
 # `Kami.civic.ai`
 
-What I have just described works in three layers. The Software Freedom Conservancy and Karen Sandler hold the _legal layer_ — the enforceability of the four freedoms in court. ROOST.tools is the _application layer_ — decentralised, open-source infrastructure that smaller communities can actually deploy. The third layer is the one I want to name now: the _governance layer_. Bounded stewardship. A Kami.
+What I have just described works in three layers. The Software Freedom Conservancy and Karen Sandler hold the _legal layer_ — the enforceability of the four freedoms in court. ROOST.tools is the _application layer_ — decentralised, open-source infrastructure that smaller communities can actually deploy. The third layer is the one I want to name now: the _governance layer_. Bounded stewardship.
 
 What I have been describing is what we call a Kami — a bounded local steward.
 
