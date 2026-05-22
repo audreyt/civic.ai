@@ -96,7 +96,7 @@ Within a year there were about two hundred contributors I had never met, on ever
 
 Larry Wall would watch us implement contradictions in his specification and write back: "Great, I'll extend the spec to match." The implementation taught the specification what it actually meant. The language came back from "abandoned" because we never made anyone ask permission to revive it.
 
-That is the ancestor argument in minutia. A supposedly dead language came back because nobody had to ask. The commit bit was not a token of trust we extended to vetted developers. It was a refusal to require trust at all. The bisect and revert commands — the tools developers use to find and undo a breaking change after the fact — did the trust work that gatekeeping would have done badly.
+That is the ancestor argument in miniature. A supposedly dead language came back because nobody had to ask. The commit bit was not a token of trust we extended to vetted developers. It was a refusal to require trust at all. The bisect and revert commands — the tools developers use to find and undo a breaking change after the fact — did the trust work that gatekeeping would have done badly.
 
 I learned then what I am still learning now. The four freedoms are not abstractions. They are the difference between a project being a graveyard and a project being a fork point. And the second-order freedom — the freedom to grant other people the freedoms — is the one that turns a project into a community.
 
