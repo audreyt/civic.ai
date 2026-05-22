@@ -29,7 +29,7 @@ Also: [**Measures**](https://civic.ai/measures/) and [**FAQ**](https://civic.ai/
 
 ## Site
 
-**[civic.ai](https://civic.ai/)** — bilingual (British English / Traditional Mandarin) static site.
+**[civic.ai](https://civic.ai/)** — bilingual (British English/Traditional Mandarin) static site.
 
 Built with [Eleventy](https://www.11ty.dev/) v3 and [Bun](https://bun.sh/):
 

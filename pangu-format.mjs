@@ -16,12 +16,22 @@ import visit from "unist-util-visit";
 // ——  always (Mandarin style: no surrounding spaces)
 // ……  always
 // /   always (abbreviations, CJK pairs — leave alone)
-// -   always
+// -   only when not adjacent to -, |, <, or > (avoid breaking
+//     table separators like `| --- |` and arrows like `->`).
 // &   only when both touching chars are uppercase Latin [A-Z] (e.g. T&S, R&D)
+// **/_  remove spaces inserted between CJK and markdown emphasis markers.
+//       CommonMark does not recognise intraword emphasis between CJK
+//       characters, so remark parses `CJK**bold**CJK` as one text node;
+//       pangu then sees `**` as Latin punctuation and inserts spaces around
+//       it. The asterisks are syntax, not content, so the spaces are wrong.
+const CJK = "[\\p{Script=Han}「」『』（）【】〔〕，。：；！？《》〈〉、・…—]";
 function revert(s) {
     return s
-        .replace(/ *(——|……|\/|-) */g, (_, p) => p)
-        .replace(/([A-Z]) & ([A-Z])/g, "$1&$2");
+        .replace(/ *(——|……|\/) */g, (_, p) => p)
+        .replace(/(?<![-|<>]) *-(?![-|<>]) */g, "-")
+        .replace(/([A-Z]) & ([A-Z])/g, "$1&$2")
+        .replace(new RegExp(`(${CJK}) (\\*\\*|_)`, "gu"), "$1$2")
+        .replace(new RegExp(`(\\*\\*|_) (${CJK})`, "gu"), "$1$2");
 }
 
 function applySelective(val) {
@@ -46,7 +56,7 @@ async function processFile(file, checkOnly) {
     visit(tree, "text", (node) => {
         const original = node.value;
         const updated = applySelective(original);
-        if (revert(original) === updated) return;
+        if (original === updated) return;
         const { start, end } = node.position;
         // Safety: verify the source slice matches what remark parsed
         if (body.slice(start.offset, end.offset) !== original) return;
