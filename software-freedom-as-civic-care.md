@@ -77,7 +77,11 @@ Not long ago, Daniel Stenberg in Sweden triaged a corporate-security email about
 
 He answered it anyway. Then he wrote a blog post about how the automated CVE-triage industry is breaking the free software maintenance economy. Then he went back to writing Curl.
 
-Seven months later, in March 2024, Andres Freund noticed SSH logins on Debian sid taking unusual CPU and about half a second longer than expected. He bisected, walking back through the project's commit history until he found exactly which change had introduced the slowdown. Turns out that "Jia Tan", a contributor who had been carefully grooming the xz-utils maintainer Lasse Collin for two years through sock puppets and fake pressure campaigns — no doubt many of them helped by language models that speak fluent English — had inserted a backdoor into the xz release tarballs that, had it reached stable systemd-linked distributions, could have enabled unauthorised remote code execution against the affected OpenSSH builds. It did not: it was caught in Debian sid and other testing and beta channels. The attack exploited maintainer scarcity, burnout, and patient social engineering — what we now call _synthetic intimacy_.
+Seven months later, in March 2024, Andres Freund noticed SSH logins on Debian sid taking unusual CPU and about half a second longer than expected. He bisected, walking back through the project's commit history until he found exactly which change had introduced the slowdown.
+
+Turns out that "Jia Tan", a contributor who had been carefully grooming the xz-utils maintainer Lasse Collin for two years through sock puppets and fake pressure campaigns — no doubt many of them helped by language models that speak fluent English — had inserted a backdoor into the xz release tarballs that, had it reached stable systemd-linked distributions, could have enabled unauthorised remote code execution against the affected OpenSSH builds.
+
+It did not: it was caught in Debian sid and other testing and beta channels. The attack exploited maintainer scarcity, burnout, and patient social engineering — what we now call _synthetic intimacy_.
 
 This is what our community is facing now. The path to repair, the patch path, is being hijacked, much as recommender systems have been hijacking young people's and other people's reward centres for engagement. The AI conversation is just catching up to this — _malicious AI swarms_ — which is one of my main topics here in Oxford.
 
