@@ -132,9 +132,14 @@
                 {% endif %}
             </div>
             <h1>
-                {{ title }}{% if subtitle %}<br /><small
-                    style="font-size: 0.7em; font-weight: 400"
-                    >{{ subtitle }}</small
+                {{ title }}{% if subtitle %}<span
+                    style="
+                        display: block;
+                        font-size: 0.85em;
+                        font-weight: 400;
+                        margin-top: 0.6em;
+                    "
+                    >{{ subtitle }}</span
                 >{% endif %}
             </h1>
             {% if date %}
