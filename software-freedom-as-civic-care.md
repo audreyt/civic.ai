@@ -6,7 +6,7 @@ lang: en-gb
 alt_lang_url: "/tw/software-freedom-as-civic-care"
 permalink: "/software-freedom-as-civic-care/"
 date: 2026-05-22
-description: "Tang discusses how the Free Software movement is foundational to care ethics, democracy, local stewardship and self-governance."
+description: "A discussion on how the Free Software movement is foundational to care ethics, democracy, local stewardship and self-governance."
 og_image: "/img/software-freedom-as-civic-care.jpg"
 nav_next:
     url: "/"
@@ -33,7 +33,7 @@ I am here to say that out loud. And then to discuss with you about what we do ne
 
 ---
 
-# The Room as Ancestor
+# Ancestorial Room
 
 We are sitting inside a four-hundred-year-old experiment in being a good enough ancestor.
 
@@ -47,7 +47,7 @@ The question we are here to ask is what happens to that promise now that AI join
 
 ---
 
-# 4 Freedoms
+# Four Freedoms
 
 Stallman set up the FSF in 1985; the Free Software Definition followed in 1986; the familiar numbering into freedoms 0 through 3 settled later. Many of you can recite them. I want to read them again, as muscles rather than as licences.
 
@@ -69,7 +69,7 @@ The four freedoms are how we keep the substrate complementary across generations
 
 ---
 
-# The Lonely Maintainer
+# Lonely Maintainer
 
 I maintain many projects. At one time I maintained more than a hundred projects on the Comprehensive Perl Archive Network, or CPAN. And it is quite lonely, actually, doing most of the maintenance work. And this is now expanding to an untoward degree.
 
@@ -175,7 +175,7 @@ This is what free software can do for the world when the substrate is open.
 
 ---
 
-# Tim Davis sees his code
+# Tim Sees Code
 
 But right now, that very substrate is facing extraction. While Taiwan was proving what free software can do for democracy at scale, this very substrate we rely on is being strip-mined.
 
@@ -193,7 +193,7 @@ The frontier is not whether AI companies will eventually see the light and retra
 
 ---
 
-# Civic AI: A New Frontier
+# Civic AI, New Frontier
 
 Stefano Maffulli, former Executive Director of the Open Source Initiative, calls this _the final frontier of copyleft_. Laura sent me his piece. He is right that it is the next domain. I would call it a new frontier — just to be diplomatic; there may be new frontiers after this.
 
