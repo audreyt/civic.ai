@@ -86,7 +86,10 @@ const files =
     fileArgs.length > 0
         ? fileArgs
         : await Array.fromAsync(
-              glob("**/*.md", { ignore: ["node_modules/**", "docs/**"] })
+              glob("**/*.md", {
+                  exclude: (p) =>
+                      p.startsWith("node_modules/") || p.startsWith("docs/"),
+              })
           );
 
 let anyChanged = false;
