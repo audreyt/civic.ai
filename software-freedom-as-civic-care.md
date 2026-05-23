@@ -195,7 +195,7 @@ That is the wound. Not the technical wound. The moral one. You wrote the code. Y
 
 These language models are now erasing whole communities. Stack Overflow is one. The xkcd dependency tree — the tiny project in Nebraska that the entire internet rests on — is now feeding the model that may eventually replace the project's only maintainer, because everything above it will just talk to its agentic engineer to rewrite all its dependencies. And so: no maintainers needed anymore.
 
-I am not here to pretend this is comfortable. It is not. The free-software movement taught the world the word _open_, and the largest AI companies are now using that word while closing the repair path. This is what we are carrying as a community.
+I am not here to pretend this is comfortable. It is not. The open-source movement taught the world the word _open_, and the largest AI companies are now using that word while closing the repair path. This is what we are carrying as a community.
 
 The frontier is not whether AI companies will eventually see the light and retrain their models under attribution-based control. They probably will not. The frontier is whether our community can put forward an answer concrete enough that the rest of the policy ecosystem has to argue _against_ it as a new default.
 
