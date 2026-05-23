@@ -219,7 +219,7 @@ Releasing the eval suite itself, as public domain or as copyleft, would allow pe
 
 Second: repair protocols. When the model fails — and the one we set up for my father did fail multiple times — what is the path back? Who is on the hook? In what timeline? Through what process? Open-source AI without a repair protocol is open in name only. The artefact is downloadable. The system is not actually open until somebody downstream can carry the patch all the way upstream and have it land.
 
-Because we run our family Kami on the OpenClaw substrate, the answer is easy: we ask the OpenClaw model to repair itself. "It breaks this way" — and it figures out, using a fallback language model, how to fix it. If you launch OpenClaw with no parameters, it launches a guardian — a warden of sorts — so that when everything else is broken, this small language model can repair the larger one.
+Because we run our family Kami on the OpenClaw substrate, the answer is easy: we ask the OpenClaw model to repair itself. "It breaks this way" — and it figures out, using a fallback language model, how to fix it. If you launch OpenClaw with no parameters, it launches a Crestodian — a guardian, a warden of sorts — so that when everything else is broken, this small language model can repair the larger one.
 
 This also means we need to be able to freely move across model choices. Today I am using DS4; tomorrow I might want Gemma — nothing should change. DS4 withholds no history, no memories, no steering. It should just become more capable. This _radical portability_ should be the norm.
 
