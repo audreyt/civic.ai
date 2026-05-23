@@ -197,9 +197,9 @@ These language models are now erasing whole communities. Stack Overflow is one. 
 
 I am not here to pretend this is comfortable. It is not. The open-source movement taught the world the word _open_, and the largest AI companies are now using that word while closing the repair path. This is what we are carrying as a community.
 
-The frontier is not whether AI companies will eventually see the light and retrain their models under attribution-based control. They probably will not. The frontier is whether our community can put forward an answer concrete enough that the rest of the policy ecosystem has to argue _against_ it as a new default.
+The frontier is not whether AI companies will eventually see the light and retrain their models under attribution-based control. They probably will not.
 
-The way the Montreal Protocol forced refrigeration manufacturers to stop destroying the ozone. The way we now ask: data as _soil_, not data as _oil_.
+The frontier is whether our community can put forward an answer concrete enough that the rest of the policy ecosystem has to argue _against_ it as a new default. The way the Montreal Protocol forced refrigeration manufacturers to stop destroying the ozone. The way we now ask: data as _soil_, not data as _oil_.
 
 ---
 
