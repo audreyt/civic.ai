@@ -1,6 +1,6 @@
 ---
 layout: chapter
-title: "We the People are Truly the Superintelligence"
+title: "Solve at MIT 2026: Keynote Speech & Fireside Conversation"
 author: "Audrey Tang"
 lang: en-gb
 alt_lang_url: "/tw/we-the-people-are-truly-the-superintelligence"
@@ -42,11 +42,11 @@ I call the second future the [Plurality](https://plurality.net) future.
 
 Today, let us focus on three things: how tech can rebuild trust; how small community experiments can scale into national policy; and how Civic AI can work in practice.
 
-## 9 to 70
+## Percentage Rebound
 
 Twelve years ago in Taiwan, the government’s approval rating was at 9 percent. Nine.
 
-In a country of 23 million people, that meant almost anything the president said, 20 million people were against.
+In a country of 23.5 million people, that meant almost anything the president said, 20 million people were against.
 
 Half a million of us occupied the parliament for three weeks, peacefully. It is called the Sunflower Movement. But we did not call ourselves protesters. We were demonstrators.
 
@@ -116,7 +116,7 @@ If it does not work the way you want, you can tell it: I want it to work this wa
 
 The good thing here is that it belongs to the community. It is not the training data of some data centre somewhere. If my father were led astray by a remote chatbot, we might have to pray and wait half a year for a sycophancy reduction update. Here, we can till the soil, and its behaviour changes ten minutes later.
 
-## Kami
+## Local Kami
 
 This is a unit of deployment that I call Kami — K-A-M-I — from Japanese Shinto culture.
 
@@ -160,36 +160,36 @@ Till the soil. Tend the garden. Let us make democracy fast, fair, and fun again.
 
 **Hala Hana**: Is that your view of technology — that abundance?
 
-**Audrey Tang**: Yes. Instead of tech on top — which extracts our relationships to feed some engagement or intimacy algorithm — we can ensure abundant care. One logic is utilitarian, optimising some score. The ethic of care attends to particular relationships.
+**Audrey Tang**: Yes. Instead of tech on top, which extracts our relationships to feed some engagement or intimacy algorithm, we can ensure abundant care. One logic is utilitarian, optimising some score. The ethic of care attends to particular relationships.
 
 **Hala Hana**: Could you walk us through the poem you wrote as your job description — and what would you change today?
 
-**Audrey Tang**: Ten years ago, as the first digital minister, I got to write what “digital minister” even means. In Mandarin, shuwei means both digital and plural, so I was also minister for pluralism. My job description quickly became this: when we see the internet of things, let’s make it an internet of beings. When we see virtual reality, let’s make it shared reality. When we see machine learning, let’s make it collaborative learning. When we see user experience, let’s make it about human experience. Whenever we hear that the singularity is near, let us always remember that the plurality is here. Today I would add one line: we, the people, are truly the superintelligence.
+**Audrey Tang**: Ten years ago, as the first digital minister, I got to write what “digital minister” even means. In Mandarin, shuwei means both digital and plural, so I was also minister for pluralism. My job description quickly became this: When we see the internet of things, let’s make it an internet of beings. When we see virtual reality, let’s make it shared reality. When we see machine learning, let’s make it collaborative learning. When we see user experience, let’s make it about human experience. Whenever we hear that the singularity is near, let us always remember that the plurality is here. Today, I would add one line: We, the people, are truly the superintelligence.
 
 **Hala Hana**: How is the rest of the world — business, big tech — taking up that prayer?
 
-**Audrey Tang**: It is a prayer. As a poetician, I write primarily to highlight new possibilities, not to topple the old order. In the words of Buckminster Fuller, it is to build the new one that renders the old one obsolete. For the first time, people are fed up with peak PPM — polarisation per minute — on social media. People are fed up with peak slop. We are seeing what some are calling the Big Tobacco moment of Big Tech: why are they still producing chemicals that deplete the ozone of our social fabric? They have to switch to a better ingredient, one that replenishes the ozone rather than depleting it.
+**Audrey Tang**: It is a prayer. As a poetician, I write primarily to highlight new possibilities, not to topple the old order. In the words of Buckminster Fuller, it is to build the new one that renders the old one obsolete. For the first time, people are fed up with peak PPM — polarisation per minute — on social media. People are fed up with peak slop. We are seeing what some are calling the Big Tobacco moment of Big Tech: Why are they still producing chemicals that deplete the ozone of our social fabric? They have to switch to a better ingredient, one that replenishes the ozone rather than depletes.
 
 **Hala Hana**: Do we have time? Do we have to wait for the harm before we act? What would the ozone treaty look like today?
 
-**Audrey Tang**: The harm is already here. It is just not evenly distributed. For people facing deepfake scams, this is not a superintelligence takeoff ten years in the future. It is millions lost today. These warning shots, often caused by synthetic intimacy, are already here. We need to respond internationally, something like the Montreal Protocol. But that does not mean only investing in the brake and never the gas pedal. It is about investing in a better steering wheel.
+**Audrey Tang**: The harm is already here. It is just not evenly distributed. For people facing deepfake scams, this is not a superintelligence takeoff 10 years in the future. It is millions lost today. These warning shots, often caused by synthetic intimacy, are already here. We need to respond internationally, something like the Montreal Protocol. But that does not mean only investing in the brake and never the gas pedal. It is about investing in a better steering wheel.
 
-**Audrey Tang**: I am on the board of [ROOST](https://roost.tools/), the Robust Open Online Safety Tools effort. The idea is to counter harms such as child sexual abuse material not by sending every private chat to some central service, but by training local models that run on laptops, under a community code of conduct. For each incoming piece of content, the system can produce citations in a way that people can contest, with a reasoned audit trail. This is already in production through communities and platforms including Discord, Bluesky, Roblox, Notion, and others.
+**Audrey Tang**: I am on the board of [ROOST](https://roost.tools/), the Robust Open Online Safety Tools effort. The idea is to counter harms such as child sexual abuse material not by sending every private chat to some central service, but by training local models that run on laptops, under a community code of conduct. For each incoming piece of content, the system can produce citations in a way that people can contest, with a reasoned audit trail. This is already in production through communities and platforms including Discord, Bluesky, Roblox and Notion.
 
 **Hala Hana**: What would you ask us to do, not just as individuals but as a collective?
 
 **Audrey Tang**: The information diet helps. The greyscale move shields against doomscrolling. The uncommon-ground meta-prompt shields against synthetic intimacy. But it is the third move — treating the output as an interactive artifact, like a brochure — that makes collective action possible. Otherwise, it is like one person changing a daily habit, or switching to a new refrigerator. That does not enforce the Montreal Protocol in any meaningful way.
 
-**Audrey Tang**: Once we demonstrate that this is possible, we can turn that group selfie into policy. Through Project Liberty Institute, I have worked with Governor Spencer Cox of Utah on a law that takes effect next July. If you are a Utah citizen, you can move from one social network to another and keep your community. The old network — like number portability across telecoms — has to forward new likes, reactions, and followers to your new one. If you are fed up with the recommendation algorithm or AI slop and you walk away, you do not have to pay the coordination cost. Better alternatives, and corridors that move people between those sanctuaries, are how we rewild the internet.
+**Audrey Tang**: Once we demonstrate that this is possible, we can turn that group selfie into policy. Through Project Liberty Institute, I have worked with Governor Spencer Cox of Utah on a law that takes effect next July. If you are a Utah resident, you can move from one social network to another and keep your community. The old network, like number portability across telecoms, has to forward new likes, reactions and followers to your new one. If you are fed up with the recommendation algorithm or AI slop and you walk away, you do not have to pay the coordination cost. Better alternatives, and corridors that move people between those sanctuaries, are how we rewild the internet.
 
 **Hala Hana**: You call yourself a hopemonger. Tell me more.
 
-**Audrey Tang**: There is an ideal degree of panic. Too much urgency and people become paralysed. It becomes a self-fulfilling prophecy: a prophet says we are all doomed, we give up, and then we are doomed. Too little urgency, and we do not even look up. So when people feel doomed, when they say we cannot fight the inevitable, see that as a warning sign — because nothing is inevitable.
+**Audrey Tang**: There is an ideal degree of panic. Too much urgency and people become paralysed. It becomes a self-fulfilling prophecy: A prophet says we are all doomed, we give up, and then we are doomed. Too little urgency, and we do not even look up. So, when people feel doomed, when they say we cannot fight the inevitable, see that as a warning sign, because nothing is inevitable.
 
 **Audrey Tang**: In the 1980s, people said it was inevitable that Taiwan would never develop advanced technology industries. Now we have TSMC. At the beginning of COVID, people said it was inevitable that Taiwan would suffer the most because of our proximity and travel with Wuhan. But we lost only seven people that first year. See prophecies as provocations. Band together. Use civic power to rebel against the tyranny.
 
 **Hala Hana**: What is next for you?
 
-**Audrey Tang**: There is a Linux moment happening with frontier AI. For the first time, something is faster than my previous workhorse model, more powerful, and fully steerable. The point is both philosophical and practical. I am working with Oxford Philosophy on a new book called _Civic AI_. And there is a policy point: more policymakers need to know that this option exists, and then make it the low bar. At least it has to be steerable like this. At least it has to be answerable like this.
+**Audrey Tang**: There is a Linux moment happening with frontier AI. For the first time, something is faster than my previous workhorse model, more powerful and fully steerable. The point is both philosophical and practical. I am working with Oxford Philosophy on a new book called _Civic AI_. And there is a policy point: More policymakers need to know that this option exists, and then make it the low bar. At least it has to be steerable like this. At least it has to be answerable like this.
 
 **Audrey Tang**: Technology-forcing policies, like the Montreal Protocol, do not force us to slam the brake, and they do not tell us to accelerate off a cliff. They force us to invest, together, in constructing a better steering wheel.
