@@ -175,7 +175,7 @@ Parliament passed it within months. In later reporting, the Ministry of Digital 
 
 The same protocol is also running in California — a platform called [Engaged California](https://engaged.ca.gov/), running on AGPL software called Ethelo, has been used to get uncommon-ground ideas around recovery from the Eaton and Palisades wildfires. Eight thousand signups, about nine hundred directly affected people heard, in the same shape, one polity over. And now Engaged California is doing another round, asking anyone in California whose work is affected by AI — which is pretty much everyone — to chime in about apprenticeship, belonging, care, and dignity.
 
-The same idea, running on actually all-AGPL software — Pol.is, Ethelo, and so on — makes the polity something like a care loop. It is free software scaled to the rooms you cannot fit in an IRC or Discord server.
+The same idea, running on actually all-AGPL software — Pol.is, Ethelo, GoVocal, and so on — makes the polity something like a care loop. It is free software scaled to the rooms you cannot fit in an IRC or Discord server.
 
 And the Kami keeps being trained after the deliberation ends. Tools like the Ministry of Digital Affairs's accessibility-first [Fraudbuster portal](https://fraudbuster.digiat.org.tw/accessibility/) and its Japanese counterpart, the citizen-built [scam-intelligence database](https://antifraud.dd2030.org/) keep the substrate live. This is the answer to the lonely maintainer: a community that keeps showing up to train the Kami that defends a polity from malicious AI swarms.
 
