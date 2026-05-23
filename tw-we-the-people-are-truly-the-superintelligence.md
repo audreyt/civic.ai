@@ -1,6 +1,7 @@
 ---
 layout: chapter
-title: "Solve at MIT 2026：主題演講與爐邊對談"
+title: "SOLVE at MIT 2026"
+subtitle: "主題演講與爐邊對談"
 author: "唐鳳"
 lang: zh-tw
 alt_lang_url: "/we-the-people-are-truly-the-superintelligence"
@@ -16,7 +17,7 @@ nav_next:
 ---
 
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/cOv7fxsbAew" title="我們全民，才是超級智慧 — 唐鳳於 MIT Solve 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/cOv7fxsbAew" title="我們全民，才是超級智慧 — 唐鳳於 MIT SOLVE 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 謝謝這個會場裡的每一位 Solver。

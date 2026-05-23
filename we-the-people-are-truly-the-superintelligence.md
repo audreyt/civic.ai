@@ -1,6 +1,7 @@
 ---
 layout: chapter
-title: "Solve at MIT 2026: Keynote Speech & Fireside Conversation"
+title: "SOLVE at MIT 2026"
+subtitle: "Keynote Speech & Fireside Conversation"
 author: "Audrey Tang"
 lang: en-gb
 alt_lang_url: "/tw/we-the-people-are-truly-the-superintelligence"
@@ -16,7 +17,7 @@ nav_next:
 ---
 
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/cOv7fxsbAew" title="We the People are Truly the Superintelligence — Audrey Tang at MIT Solve 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/cOv7fxsbAew" title="We the People are Truly the Superintelligence — Audrey Tang at MIT SOLVE 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 Thank you to every Solver in this room.

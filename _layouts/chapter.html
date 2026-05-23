@@ -131,7 +131,12 @@
                 >
                 {% endif %}
             </div>
-            <h1>{{ title }}</h1>
+            <h1>
+                {{ title }}{% if subtitle %}<br /><small
+                    style="font-size: 0.7em; font-weight: 400"
+                    >{{ subtitle }}</small
+                >{% endif %}
+            </h1>
             {% if date %}
             <p class="chapter-date">
                 {% if lang2 == 'en' %} {{ date | date: "%B %-d, %Y" }} {% else
