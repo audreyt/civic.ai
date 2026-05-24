@@ -11,6 +11,7 @@ og_image: "/img/software-freedom-as-civic-care.jpg"
 nav_next:
     url: "/"
     text: "Home"
+audio: /audio/software-freedom-as-civic-care.mp3
 ---
 
 Thank you all for making this a room for a bridge from Free Software to Ethics in AI.

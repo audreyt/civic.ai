@@ -266,16 +266,8 @@ def transform(text: str) -> str:
 
 # ── Synthesis ─────────────────────────────────────────────────────────────────
 
-def synthesise(text: str, out_path: str) -> None:
-    if not API_KEY:
-        sys.exit("Error: ELEVENLABS_API_KEY not set")
-
-    print(f"Characters: {len(text):,}  (limit 40,000)")
-    if len(text) > 40_000:
-        sys.exit(f"Error: text is {len(text):,} chars, exceeds 40,000 limit")
-
+def synthesise_chunk(text: str, out_path: str) -> None:
     url = f"https://api.elevenlabs.io/v1/text-to-speech/{VOICE_ID}?output_format={FORMAT}"
-    t0 = time.time()
     r = requests.post(url,
         headers={"xi-api-key": API_KEY, "Content-Type": "application/json"},
         json={"text": text, "model_id": MODEL, "voice_settings": VOICE_SETTINGS},
@@ -283,13 +275,100 @@ def synthesise(text: str, out_path: str) -> None:
     )
     if r.status_code != 200:
         sys.exit(f"ElevenLabs error {r.status_code}: {r.text[:400]}")
-
-    os.makedirs(os.path.dirname(out_path) or ".", exist_ok=True)
     with open(out_path, "wb") as f:
         f.write(r.content)
 
-    elapsed = time.time() - t0
-    print(f"Wrote {out_path}  ({len(r.content)//1024} KB, {elapsed:.1f}s)")
+
+def synthesise(text: str, out_path: str) -> None:
+    if not API_KEY:
+        sys.exit("Error: ELEVENLABS_API_KEY not set")
+
+    max_chars = 25000
+    print(f"Characters: {len(text):,}")
+
+    # Split text into paragraphs
+    paragraphs = text.split("\n\n")
+    chunks = []
+    current_chunk = []
+    current_len = 0
+
+    for para in paragraphs:
+        # If a single paragraph is somehow larger than max_chars, split it by sentences
+        if len(para) > max_chars:
+            sentences = re.split(r"(?<=[.!?])\s+", para)
+            for sentence in sentences:
+                if len(sentence) > max_chars:
+                    # Hard split
+                    for i in range(0, len(sentence), max_chars):
+                        chunks.append(sentence[i:i+max_chars])
+                else:
+                    if current_len + len(sentence) + 1 > max_chars:
+                        if current_chunk:
+                            chunks.append("\n\n".join(current_chunk))
+                        current_chunk = [sentence]
+                        current_len = len(sentence)
+                    else:
+                        current_chunk.append(sentence)
+                        current_len += len(sentence) + 1
+        else:
+            if current_len + len(para) + 2 > max_chars:
+                if current_chunk:
+                    chunks.append("\n\n".join(current_chunk))
+                current_chunk = [para]
+                current_len = len(para)
+            else:
+                current_chunk.append(para)
+                current_len += len(para) + 2
+
+    if current_chunk:
+        chunks.append("\n\n".join(current_chunk))
+
+    print(f"Split into {len(chunks)} chunks for synthesis")
+
+    if len(chunks) == 1:
+        synthesise_chunk(chunks[0], out_path)
+    else:
+        # Synthesize each chunk to a temp file, then concat
+        tmpdir = tempfile.mkdtemp(prefix="tts_synth_")
+        parts = []
+        listfile = os.path.join(tmpdir, "concat.txt")
+        try:
+            t0 = time.time()
+            for i, chunk in enumerate(chunks):
+                part_path = os.path.join(tmpdir, f"part_{i:03d}.mp3")
+                print(f"Synthesising chunk {i+1}/{len(chunks)} ({len(chunk):,} chars)...")
+                synthesise_chunk(chunk, part_path)
+                parts.append(part_path)
+            
+            # Concatenate
+            print("Concatenating chunks...")
+            with open(listfile, "w") as f:
+                for p in parts:
+                    f.write(f"file '{p}'\n")
+            
+            os.makedirs(os.path.dirname(out_path) or ".", exist_ok=True)
+            subprocess.run(
+                ["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", listfile,
+                 "-c", "copy", out_path],
+                check=True, capture_output=True,
+            )
+            elapsed = time.time() - t0
+            print(f"Wrote {out_path}  ({os.path.getsize(out_path)//1024} KB, {elapsed:.1f}s)")
+        finally:
+            # Clean up temp files
+            for p in parts:
+                try:
+                    os.unlink(p)
+                except OSError:
+                    pass
+            try:
+                os.unlink(listfile)
+            except OSError:
+                pass
+            try:
+                os.rmdir(tmpdir)
+            except OSError:
+                pass
 
 
 # ── Loudness normalization ───────────────────────────────────────────────
