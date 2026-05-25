@@ -219,11 +219,11 @@ overview_image:
 
 <figure class="conf-quote">
     <div class="conf-quote-portrait">
-        <a href="https://www.vatican.va/content/leo-xiv/en/messages/communications/documents/20260124-messaggio-comunicazioni-sociali.html"><img src="/img/pope-leo-xiv.jpg" alt="Official portrait of Pope Leo XIV © Vatican Media" title="Official portrait of Pope Leo XIV © Vatican Media" width="512" height="512" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:50%;border:2px solid var(--border);box-shadow:0 10px 24px rgba(15,25,35,.12)" /></a>
+        <a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html"><img src="/img/pope-leo-xiv.jpg" alt="Official portrait of Pope Leo XIV © Vatican Media" title="Official portrait of Pope Leo XIV © Vatican Media" width="512" height="512" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:50%;border:2px solid var(--border);box-shadow:0 10px 24px rgba(15,25,35,.12)" /></a>
     </div>
     <div class="conf-quote-copy">
         <blockquote>
-            <p>We need faces and voices to speak for people again. We need to cherish the gift of communication as the deepest truth of humanity, to which all technological innovation should also be oriented.</p>
+            <p>In the era of artificial intelligence, when human dignity is threatened by new forms of dehumanization, ours is the pressing duty to remain profoundly human… True progress always stems from a heart open to others, an intelligence willing to listen and a will that seeks what unites rather than what separates.</p>
         </blockquote>
         <figcaption>— Pope Leo XIV</figcaption>
     </div>

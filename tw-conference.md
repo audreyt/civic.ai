@@ -219,11 +219,11 @@ overview_image:
 
 <figure class="conf-quote">
     <div class="conf-quote-portrait">
-        <a href="https://www.vatican.va/content/leo-xiv/en/messages/communications/documents/20260124-messaggio-comunicazioni-sociali.html"><img src="/img/pope-leo-xiv.jpg" alt="教宗良十四世官方肖像 © Vatican Media" title="教宗良十四世官方肖像 © Vatican Media" width="512" height="512" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:50%;border:2px solid var(--border);box-shadow:0 10px 24px rgba(15,25,35,.12)" /></a>
+        <a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html"><img src="/img/pope-leo-xiv.jpg" alt="教宗良十四世官方肖像 © Vatican Media" title="教宗良十四世官方肖像 © Vatican Media" width="512" height="512" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:50%;border:2px solid var(--border);box-shadow:0 10px 24px rgba(15,25,35,.12)" /></a>
     </div>
     <div class="conf-quote-copy">
         <blockquote>
-            <p>我們需要面容與聲音，再度為人發聲。我們必須珍視『溝通』這份恩賜，將其視為人性最深沉的真理：所有科技創新，皆應以此為依歸。</p>
+            <p>在 AI 時代，當人的尊嚴受到新型去人性化威脅時，我們迫切的責任就是保持深刻的人性… 真正的進步，總是源自向他人開放的心、願意聆聽的智慧，以及尋求合一而非分裂的意志。</p>
         </blockquote>
         <figcaption>——教宗良十四世</figcaption>
     </div>
