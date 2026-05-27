@@ -110,7 +110,7 @@ But in a data-as-soil conversation, we can move the same model into the local co
 
 My father, for example, used to talk to ChatGPT and other tools, asking plenty of questions about health, education, philosophy, life. Now he can ask them in a family Signal group where the model is just one participant.
 
-Just a couple days ago, I drafted a guide on how to set this up with ["pi-ds4"](https://audreyt.org/pi-ds4) — a frontier AI stack running entirely on this MacBook in offline mode, with a stable seed, a reproducible audit trail, and full directional steering.
+Just a couple days ago, I drafted a guide on how to set this up with ["pi-ds4"](https://pi.audreyt.org) — a frontier AI stack running entirely on this MacBook in offline mode, with a stable seed, a reproducible audit trail, and full directional steering.
 
 If it does not work the way you want, you can tell it: I want it to work this way. Ten minutes later, it steers the story to work that way.
 
@@ -118,9 +118,9 @@ The good thing here is that it belongs to the community. It is not the training 
 
 ## Local Kami
 
-This is a unit of deployment that I call Kami — K-A-M-I — from Japanese Shinto culture.
+This is a unit of deployment that I call Kami _(Knowledge Artefact Management Intelligence)_.
 
-Kami means the spirit of a particular field: a river, a forest, a shrine. It is always specific, always parochial, and inspectable. Its knowledge is local and transparent.
+From Japanese Shinto culture, Kami means the spirit of a particular field: a river, a forest, a shrine. It is always specific, always parochial, and inspectable. Its knowledge is local and transparent.
 
 The Kami is bounded. It can be cultivated by the community. And when the community has grown out of that need, it can fade away without sycophancy, synthetic intimacy, or other tricks.
 

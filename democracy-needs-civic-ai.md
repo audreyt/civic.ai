@@ -25,7 +25,7 @@ together.
 I use "tending" in the conceptual sense of a garden. We fertilised and watered
 it with our public writing, private arguments, finished and unfinished thoughts,
 as well as the tensions we refused to resolve too quickly. All of it living on
-[hardware we hold, inspect and can shut down](https://audreyt.org/pi-ds4).
+[hardware we hold, inspect and can shut down](https://pi.audreyt.org).
 
 No cloud. No one else's server. Airplane mode — no signal, no internet. Just the
 model and what it carried inside.
