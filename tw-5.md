@@ -80,3 +80,7 @@ Pack 5 的公開主指標是**搭橋指數**。公開問題是：共同決策中
 ### 結語意象：標示清楚的交流道
 
 想像一個標示清楚的交流道——多條車道、明確的標誌、安全的匯流——讓行駛更順暢，因為道路是為共享而建的。
+
+<noscript><img src="/img/pack5-1.jpg" alt="手繪漫畫頁，標題為「SOLIDARITY——PROBLEM」，談負和與零和思維，以兩位廚師爭一顆橘子的四格呈現：盯著橘子、化身怪獸搶奪（負和）、平分橘子（零和），以及一張輸贏象限圖，問如何盡可能達成「雙贏」。" class="overview-image" width="1437" height="1999" loading="lazy" decoding="async"></noscript>
+
+<noscript><img src="/img/pack5-2.jpg" alt="手繪漫畫頁，標題為「NOT：mutually assured destruction／BUT：as win-win as possible——SOLUTION」：兩位廚師發現一人需要橙酒、另一人需要橙汁，於是果皮與皮屑做酒、果肉做汁，讓雙方都得到百分之百且毫無浪費；台灣 pol.is 上關於是否更改時區的辯論，從「獨特性」對上「經濟」被重構為歡迎創作者的金卡居留，結語為「更好的討論能幫助我們達成雙贏」。" class="overview-image" width="1437" height="1999" loading="lazy" decoding="async"></noscript>

@@ -82,3 +82,7 @@ Pack 4 的公開主指標是**失利下的信任**：在發生不良結果並嘗
 ### 結語意象：工坊牆上退役的壞零件
 
 想像一間工坊，牆上掛滿退役的「壞掉零件」，每個都標記著它是如何壞的、如何避免未來的損壞、以及誰修復了它。那面牆不是恥辱牆——是學習牆。隱藏自己壞掉零件的工坊，會重蹈覆轍。
+
+<noscript><img src="/img/pack4-1.jpg" alt="手繪漫畫頁，標題為「RESPONSIVENESS——PROBLEM」：一隻拿著羅盤的兔子說明社會需要指標來判斷前進方向，但這些指標往往是壞掉的；成對的圖表對比上揚的「平均收入」與真實情況——上層階級大幅上升、下層階級卻停滯——並以一張對照表把點擊對應到標題黨、留言對應到激怒式論戰、使用者好評對應到諂媚的聊天機器人。" class="overview-image" width="1437" height="1999" loading="lazy" decoding="async"></noscript>
+
+<noscript><img src="/img/pack4-2.jpg" alt="手繪漫畫頁，標題為「NOT：metrics that mislead us／BUT：metrics made by us, for us——SOLUTION」：列出三步驟——衡量我們真正在乎的事、用多種方式衡量、經常重新評估指標——並以 Weval.org 為例，那是一個公開的 AI 聊天機器人評估集合，衡量誠實、文化流暢度、衝突調解與心理健康最佳實務等價值，綠色的「BY US」與「FOR US」箭頭從一群動物角色上方升起。" class="overview-image" width="1437" height="1999" loading="lazy" decoding="async"></noscript>

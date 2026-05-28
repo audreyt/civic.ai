@@ -84,3 +84,7 @@ Pack 6 的公開主指標是**退出就緒度**：系統是否能在不讓社群
 ### 結語意象：河流守護者
 
 想像一條河流，由在地的守護者照料著；每位守護自己的河岸，向上游和下游分享警訊，並在季節更替時退場。河流不需要一個統治者。它需要許多了解自己河段的管理者——也知道何時該放手。這份紀律同樣約束建造者。一種在創辦者淡出後就無法存續的管理方式，不是關懷——而是依賴。
+
+<noscript><img src="/img/pack6-1.jpg" alt="手繪漫畫頁，標題為「SYMBIOSIS——PROBLEM」，寫著「別把整個社會放進同一個籃子」：卡通動物先是全擠進一個紫色籃子，接著籃子破裂散落，說明把現代文化、新聞與政治都交給少數跨國平台會造成單點故障，並抹平教會與地方社群這層厚實的中間層；下方排著一列相同的灰色人形。" class="overview-image" width="1437" height="1999" loading="lazy" decoding="async"></noscript>
+
+<noscript><img src="/img/pack6-2.jpg" alt="手繪漫畫頁，標題為「NOT：one-size-fits-all overlord／BUT：local solutions for local folks——SOLUTION」，呼籲「為使用者而戰」，並舉三例——猶他州兩黨立法要求社群媒體使用者資料可攜且可互通、開源在地模型 GPT-OSS 讓社群自帶政策、以及偵測兒虐的開源工具 ROOST——配圖為一隻兔子抱著標示「MY DATA」的包袱、一隻貓面對寫著「Constitution」的螢幕，以及一個有翅膀的讀者，結語說這些示範了科技如何分散而非集中權力。" class="overview-image" width="1437" height="1999" loading="lazy" decoding="async"></noscript>
