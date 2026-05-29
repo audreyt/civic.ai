@@ -244,6 +244,12 @@ main {
     font-size: 1.1rem;
 }
 
+main img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
 main article {
     max-width: 900px;
     margin: 0 auto;
@@ -531,10 +537,16 @@ main p:has(> strong:first-child) {
 }
 
 .figure-caption {
-    margin-top: 12px;
-    font-size: 0.85rem;
+    margin-top: 8px;
+    margin-bottom: 2em;
+    font-size: 0.72rem;
+    line-height: 1.45;
     color: var(--muted);
     text-align: center;
+}
+
+p + .figure-caption {
+    margin-top: -8px;
 }
 
 .figure-caption strong {
