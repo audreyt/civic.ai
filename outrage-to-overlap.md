@@ -1,6 +1,6 @@
 ---
 layout: chapter
-title: "From Outrage to Overlap: Civic AI and the 6-Pack of Care"
+title: "Outrage to Overlap: Civic AI & 6-Pack of Care"
 author: "Audrey Tang"
 lang: en-gb
 alt_lang_url: "/tw/outrage-to-overlap"
