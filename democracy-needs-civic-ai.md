@@ -289,7 +289,7 @@ is still human collaboration itself.
 
 ## Kami
 
-The better image is the Kami. In Japanese tradition, a Kami belongs to a place
+The better image is the Kami — **k**nowledge **a**rtefact **m**anagement **i**ntelligence. In Japanese tradition, a Kami belongs to a place
 — a river, a grove, a neighborhood shrine. Its authority is local. Its
 knowledge is specific. It does not pretend to be omniscient. The Kami of a
 river does not manage the forest.

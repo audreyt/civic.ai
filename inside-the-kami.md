@@ -81,8 +81,9 @@ different tasks to different subsystems.
 The slogan version is memorable because it is correct: **the AI that folds our
 proteins should not be the AI that folds our laundry.**
 
-For Civic AI, the implication is direct. A Kami should not be a mini-sovereign
-mind roaming across domains. It should be a specialist: good at one class of
+For Civic AI, the implication is direct. A Kami — **k**nowledge **a**rtefact
+**m**anagement **i**ntelligence — should not be a mini-sovereign mind roaming
+across domains. It should be a specialist: good at one class of
 community work, replaceable when its job changes, and unable to turn local
 success into universal mandate.
 
