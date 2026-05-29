@@ -118,7 +118,7 @@ Another table said: if social media shows something unsigned and unsolicited —
 
 Another table asked: what if foreign platforms in jurisdictions that do not respect our laws or our joint liability simply keep showing scam ads and ignore us? Their answer: for every day they ignore us, we slow their video down by 1%. We restore full speed once they are willing to implement KYC, or know your customer, rules. So, the chatbots did not vote; the people did.
 
-# 96% & 94%
+# 85% & 94%
 
 Of those ideas, all three survived the final vote. More than 85% of this mini-public said they were happy with this bundle of policies, and the other 15% said they could live with them. So, it became law. The advertisements were regulated by law only two months after the Alignment Assembly, and throughout 2025 — according to official sources — the deepfake investment scams were down by more than 94%. That problem is all but solved in Taiwan.
 
