@@ -7,7 +7,7 @@ alt_lang_url: "/tw/outrage-to-overlap"
 permalink: "/outrage-to-overlap/"
 date: 2026-05-28
 description: "A talk at the Oxford Taiwan Studies Seminar Series: free software teaches us repair; AI threatens repair when it closes the loop; and Civic AI should be judged by whether it grows a community's capacity to care for itself — the 6-Pack of Care."
-og_image: "/img/outrage-to-overlap.jpg"
+og_image: "/img/outrage-to-overlap-og.jpg"
 nav_next:
     url: "/"
     text: "Home"

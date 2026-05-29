@@ -7,7 +7,7 @@ alt_lang_url: "/outrage-to-overlap"
 permalink: "/tw/outrage-to-overlap/"
 date: 2026-05-28
 description: "牛津台灣研究系列講座：自由軟體教我們修復；當 AI 把修復的迴圈封閉起來時，它便威脅了修復；而仁工智慧應以一個標準來評斷——它是否提升了一個社群照顧自己的能力，也就是「關懷六力」。"
-og_image: "/img/outrage-to-overlap.jpg"
+og_image: "/img/outrage-to-overlap-og.jpg"
 nav_next:
     url: "/tw/"
     text: "首頁"
