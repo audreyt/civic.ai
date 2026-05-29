@@ -27,7 +27,7 @@ Most AI alignment work tries to solve values from the top down: write better rul
 
 The 6-Pack starts somewhere else. It asks who gets heard, who is accountable, how failures are repaired, and when a system should stop. Alignment is not solved once. It is maintained in public.
 
-The unit of deployment is the **Kami** — a bounded local steward, not a universal governor. Kamis help neighbourhoods, schools, unions, faith groups, cities, and diasporas do what collective self-government has always promised but rarely delivered at scale: listen across difference, deliberate in the open, remember faithfully, and act together.
+The unit of deployment is the **Kami** — **k**nowledge **a**rtefact **m**anagement **i**ntelligence — a bounded local steward, not a universal governor. Kamis help neighbourhoods, schools, unions, faith groups, cities, and diasporas do what collective self-government has always promised but rarely delivered at scale: listen across difference, deliberate in the open, remember faithfully, and act together.
 
 No central model owns them. No platform extracts from them. Communities govern them, inspect them, contest them, and shut them down.
 
