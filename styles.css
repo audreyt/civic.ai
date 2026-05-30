@@ -163,6 +163,39 @@ header img.oxford-logo:hover {
     background: rgba(255, 255, 255, 0.08);
 }
 
+/* ─── PRIMARY NAV ─── */
+header nav.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 7px 22px;
+    margin: 22px auto 0;
+    max-width: 640px;
+    line-height: 1.4;
+}
+
+header nav.site-nav a {
+    color: rgba(255, 255, 255, 0.82);
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 3px 1px;
+    border-bottom: 1px solid transparent;
+    transition:
+        color 0.2s,
+        border-color 0.2s;
+}
+
+header nav.site-nav a:hover,
+header nav.site-nav a:focus-visible {
+    color: #fff;
+    border-bottom-color: var(--gold-light);
+}
+
 header h1 {
     font-family: var(--serif);
     font-size: clamp(1.8rem, 4vw, 2.6rem);
@@ -815,6 +848,16 @@ footer a:hover {
     footer {
         padding: 40px 20px;
     }
+
+    header nav.site-nav {
+        gap: 5px 14px;
+        margin-top: 16px;
+    }
+
+    header nav.site-nav a {
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -882,6 +925,7 @@ footer a:hover {
     .next-action,
     .skip-link,
     .lang-toggle,
+    .site-nav,
     .audio-section,
     .video-embed,
     footer {

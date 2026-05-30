@@ -6,6 +6,8 @@ alt_lang_url: "/3"
 permalink: "/tw/3/"
 ---
 
+<noscript><img src="/img/pack3-1-tw.jpg" alt="手繪漫畫頁，標題為「COMPETENCE——PROBLEM」，描繪左右我們生活的演算法如何從可理解走向難以理解：先是簡單的平均評分，接著是只有工程師勉強看懂的分數與對數公式，最後是糾結的機器學習圖示，旁邊一個小角色與一個灰色框，框中寫著「要成為如此浩瀚的心智，連祂自己都再也說不出自己真正的名字」。" class="overview-image" width="1024" height="1536" loading="lazy" decoding="async"></noscript>
+
 橋樑的勝任與否並非取決於藍圖是否優雅；它是因為能承載——並在卡車經過、風起、檢查員檢查螺栓時繼續承載而勝任。
 
 Tronto 堅持：「承擔責任和實際執行關懷工作是兩回事。」勝任力關乎執行：兌現承諾的可運作程式碼，經過稽核、可解釋且安全試錯。而且至關重要的是：「勝任地關懷不僅僅是技術問題，更是道德問題。」一個以良好意圖交付破損關懷的系統，是道德上的失敗，不僅僅是技術上的失敗。
@@ -84,7 +86,5 @@ Tronto 堅持：「承擔責任和實際執行關懷工作是兩回事。」勝�
 ### 結語意象：掛著檢查標籤的橋
 
 想像一座維護良好的橋樑，上面掛著檢查標籤——日期、載重測試、下次檢查——任何過橋的人都看得到。勝任力不是沒有失敗；而是有人檢查過、而且會再檢查的證明。
-
-<noscript><img src="/img/pack3-1-tw.jpg" alt="手繪漫畫頁，標題為「COMPETENCE——PROBLEM」，描繪左右我們生活的演算法如何從可理解走向難以理解：先是簡單的平均評分，接著是只有工程師勉強看懂的分數與對數公式，最後是糾結的機器學習圖示，旁邊一個小角色與一個灰色框，框中寫著「要成為如此浩瀚的心智，連祂自己都再也說不出自己真正的名字」。" class="overview-image" width="1024" height="1536" loading="lazy" decoding="async"></noscript>
 
 <noscript><img src="/img/pack3-2-tw.jpg" alt="手繪漫畫頁，標題為「NOT：just trust us lol／BUT：everyone can check the process——SOLUTION」：影響每個人的演算法應讓每個人都能檢視，並以 X 上的 Community Notes（前身為 Birdwatch）為例，三隻動物角色分別檢核輸入、自由且公開的程式碼（標示「MY CODE」的清單）以及輸出，結語為「要『信任流程』，我們得能夠檢查流程」。" class="overview-image" width="1024" height="1536" loading="lazy" decoding="async"></noscript>

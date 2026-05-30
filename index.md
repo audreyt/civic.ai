@@ -23,28 +23,34 @@ next_action:
 
 **Governance should feel like a daily capability, not just a periodic vote.**
 
-Most AI alignment work tries to solve values from the top down: write better rules, infer better preferences, train better models. Those tools matter. They are not enough on their own.
+Civic AI is artificial intelligence that answers to the people it affects. Instead of one powerful system built to govern everyone, the idea is to build many small ones that a community can own, inspect, correct, and switch off.
 
-The 6-Pack starts somewhere else. It asks who gets heard, who is accountable, how failures are repaired, and when a system should stop. Alignment is not solved once. It is maintained in public.
+Each of these local stewards has a name — the **Kami** (**k**nowledge **a**rtefact **m**anagement **i**ntelligence): a spirit of place, not a universal governor.
 
-The unit of deployment is the **Kami** — **k**nowledge **a**rtefact **m**anagement **i**ntelligence — a bounded local steward, not a universal governor. Kami help neighbourhoods, schools, unions, faith groups, cities, and diasporas do what collective self-government has always promised but rarely delivered at scale: listen across difference, deliberate in the open, remember faithfully, and act together.
+Most AI _alignment_ work — the effort to get AI to act in line with human values — tries to solve those values from the top down: write better rules, infer better preferences, train better models. Those tools matter. They are not enough on their own. The 6-Pack of Care starts somewhere else. It asks who gets heard, who is accountable, how failures are repaired, and when a system should stop. Alignment is not solved once. It is maintained in public.
 
-No central model owns them. No platform extracts from them. Communities govern them, inspect them, contest them, and shut them down.
+Kami help neighbourhoods, schools, unions, faith groups, cities, and diasporas do what collective self-government has always promised but rarely delivered at scale: listen across difference, deliberate in the open, remember faithfully, and act together. No central model owns them. No platform extracts from them. Communities govern them, inspect them, contest them, and shut them down.
 
 The breakthrough is not smarter chatbots. It is stronger self-government: institutions that show their work, repair harm in public, and carry civic memory across generations.
 
-**[Civic AI Conference 2026 — 25 March, Rhodes House, Oxford](/conference/)**
-
-**[Podcast: Can AI Be Compassionate?](/compassion-and-ai/)** — Buddhist ethics, interdependence, and why compassion is a way of being, not a skill to train into a system.
-
 ## Start here
 
-- **Policy.** Read the [Manifesto](/manifesto/), the [FAQ](/faq/), and ["AI Alignment Cannot Be Top-Down"](/ai-alignment-cannot-be-top-down/).
-- **Engineering.** Start with [Pack 3: Competence](/3/), [Measures](/measures/), and ["Inside the Kami"](/inside-the-kami/).
-- **Civic practice.** Start with [Pack 1: Attentiveness](/1/), [Pack 4: Responsiveness](/4/), and [Podcast: The 6-Pack of Care](/podcast/).
-- **{{ openclaw_bootstrap.guides.en.homeLinkLabel }}.** {{ openclaw_bootstrap.guides.en.homeLinkText }}
+Just heard about Civic AI? Three steps in.
 
-## The 6-Pack
+1. **Get the idea.** Read the [Manifesto](/manifesto/) — the whole argument in Audrey Tang's own words.
+2. **Meet the six principles.** Skim [the 6-Pack](#the-6-pack) below: six plain-language tests for AI a community can actually trust.
+3. **See it work.** ["AI Alignment Cannot Be Top-Down"](/ai-alignment-cannot-be-top-down/) tells how Taiwan answered a wave of AI-enabled scam ads — the framework in the real world.
+
+Prefer to listen? Take the [6-Pack of Care podcast](/podcast/) or ["Can AI Be Compassionate?"](/compassion-and-ai/) along for a walk.
+
+**Already know what you're after?**
+
+- **Policy & governance** — [Manifesto](/manifesto/), [FAQ](/faq/), and ["AI Alignment Cannot Be Top-Down"](/ai-alignment-cannot-be-top-down/).
+- **Builders & engineers** — [Pack 3: Competence](/3/), [Measures](/measures/), and ["Inside the Kami"](/inside-the-kami/).
+- **Civic & community practice** — [Pack 1: Attentiveness](/1/), [Pack 4: Responsiveness](/4/), and the [6-Pack of Care podcast](/podcast/).
+- **{{ openclaw_bootstrap.guides.en.homeLinkLabel }}** — {{ openclaw_bootstrap.guides.en.homeLinkText }}
+
+<h2 id="the-6-pack">The 6-Pack</h2>
 
 The 6-Pack is an application of [⿻ Plurality](https://plurality.net) to AI governance. Packs 1–4 form a feedback loop (Attentiveness → Responsibility → Competence → Responsiveness → back to Attentiveness). Pack 5 scales that loop across organisations. Pack 6 is the boundary condition that keeps every deployment local, plural, and sunset-ready. The unit of deployment is the **Kami** — a bounded local steward, not a universal governor.
 
@@ -92,4 +98,4 @@ Six design principles translate care ethics into something institutions can buil
 
 </div>
 
-The project sits between a [manifesto](/manifesto/), a set of operational pack pages, and a book arriving in 2026. Audrey Tang and Caroline Green will present the framework at the [Civic AI Conference](/conference/) on 25 March 2026.
+The project sits between a [manifesto](/manifesto/), a set of operational pack pages, and a book arriving in 2026. Audrey Tang and Caroline Green presented the framework at the [Civic AI Conference](/conference/) at Rhodes House, Oxford, on 25 March 2026 — that page has the agenda, selected talks, and the community's Polis sensemaking on AI and care.

@@ -6,6 +6,8 @@ alt_lang_url: "/1"
 permalink: "/tw/1/"
 ---
 
+<noscript><img src="/img/pack1-1-tw.jpg" alt="手繪漫畫頁，標題為「ATTENTIVENESS——PROBLEM」：一隻平靜的兔子勾選寫著「bad guy／worse guy／no chance of winning」的選票，旁邊是一片紅色混亂、怪物般人物的叫罵戰場，說明公民只能偶爾投票或在網路上互罵；下方三個小圖示分別代表凸顯彼此認同的事實與價值、在分歧處保持建設性，以及找出真正全新的解方。" class="overview-image" width="1024" height="1536" loading="lazy" decoding="async"></noscript>
+
 在斑馬線前，駕駛為孩子減速——沒有人會停下來先解完方程式再行動。一個需求出現了，隨之而來的是義務。這就是覺察力。
 
 現在擴大來看。一個 AI 面對一個充滿「斑馬線」的世界——工人、河流、語言、習俗。它可以把這些視為障礙，也可以視為需要關懷的關係。兩者的區別始於第一眼。
@@ -93,7 +95,5 @@ Joan Tronto 稱覺察力為「暫時擱置自利，真正從需要者的角度�
 ### 結語意象：能說「不」的快樂女主人
 
 想像一位快樂的女主人，叫得出每位客人的名字，為他們的行囊騰出空間——但她也會穿過房間，找到獨自站在牆邊的人，問出只有他們能回答的問題。這就是覺察力。而因為有些客人試圖抹去其他人，女主人堅守一條底線：好客，但家中必須尊重權利。教 AI 系統覺察，而非過早最佳化，我們就能保住更多珍貴之物，也能創造更多可共享之物。
-
-<noscript><img src="/img/pack1-1-tw.jpg" alt="手繪漫畫頁，標題為「ATTENTION——PROBLEM」：一隻平靜的兔子勾選寫著「bad guy／worse guy／no chance of winning」的選票，旁邊是一片紅色混亂、怪物般人物的叫罵戰場，說明公民只能偶爾投票或在網路上互罵；下方三個小圖示分別代表凸顯彼此認同的事實與價值、在分歧處保持建設性，以及找出真正全新的解方。" class="overview-image" width="1024" height="1536" loading="lazy" decoding="async"></noscript>
 
 <noscript><img src="/img/pack1-2-tw.jpg" alt="手繪漫畫頁，標題為「NOT：only the powerful and popular／BUT：voices from every community——SOLUTION」：多元的動物擬人角色圍坐圓桌如同公民大會，旁註說明 Polis 平台沒有「分享」或「回覆」按鈕，讓人們以同意／不同意／不確定投票，凸顯最能跨越分歧的想法，使科技增強而非取代我們的發聲；下方是一群小角色與一顆大大的手繪愛心。" class="overview-image" width="1024" height="1536" loading="lazy" decoding="async"></noscript>

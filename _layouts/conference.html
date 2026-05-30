@@ -195,6 +195,22 @@
             window.__avif = __imgProbe(
                 '{{ "/img/probe.avif" | relative_url }}'
             );
+            // Hash-jump guard: record any user scroll as early as possible
+            // (in <head>, before first paint) so a deep-link correction never
+            // yanks a reader who has already started moving.
+            window.__userMoved = false;
+            function __markMoved() {
+                window.__userMoved = true;
+            }
+            window.addEventListener("wheel", __markMoved, {
+                passive: true,
+                once: true,
+            });
+            window.addEventListener("touchmove", __markMoved, {
+                passive: true,
+                once: true,
+            });
+            window.addEventListener("keydown", __markMoved, { once: true });
         </script>
     </head>
     <body>
@@ -265,6 +281,25 @@
                 {{ title }}
             </p>
             <p class="chapter-date">{{ date_line }}</p>
+
+            <nav
+                class="site-nav"
+                aria-label="{% if lang2 == 'en' %}Site sections{% else %}網站導覽{% endif %}"
+            >
+                {% if lang2 == 'en' %}
+                <a href="{{ '/' | relative_url }}">Home</a>
+                <a href="{{ '/manifesto/' | relative_url }}">Manifesto</a>
+                <a href="{{ '/#the-6-pack' | relative_url }}">The 6-Pack</a>
+                <a href="{{ '/faq/' | relative_url }}">FAQ</a>
+                <a href="{{ '/conference/' | relative_url }}">Conference</a>
+                {% else %}
+                <a href="{{ '/tw/' | relative_url }}">首頁</a>
+                <a href="{{ '/tw/manifesto/' | relative_url }}">計畫宣言</a>
+                <a href="{{ '/tw/#the-6-pack' | relative_url }}">關懷六力</a>
+                <a href="{{ '/tw/faq/' | relative_url }}">常見問題</a>
+                <a href="{{ '/tw/conference/' | relative_url }}">研討會</a>
+                {% endif %}
+            </nav>
         </header>
 
         <main id="main">
@@ -434,6 +469,19 @@
             }
         </script>
         <script>
+            // userMoved guard is registered in <head> (before first paint).
+            function jumpToHash() {
+                if (window.__userMoved || location.hash.length < 2) return;
+                var id;
+                try {
+                    id = decodeURIComponent(location.hash.slice(1));
+                } catch (e) {
+                    id = location.hash.slice(1);
+                }
+                var target = document.getElementById(id);
+                if (target) target.scrollIntoView();
+            }
+            window.addEventListener("load", jumpToHash);
             window.__avif.then(function (ok) {
                 document.querySelectorAll("noscript").forEach(function (ns) {
                     var html = ns.textContent;
@@ -445,6 +493,7 @@
                     var img = tmp.querySelector("img");
                     if (img) ns.parentNode.insertBefore(img, ns);
                 });
+                jumpToHash();
             });
         </script>
     </body>

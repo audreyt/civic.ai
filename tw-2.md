@@ -6,6 +6,8 @@ alt_lang_url: "/2"
 permalink: "/tw/2/"
 ---
 
+<noscript><img src="/img/pack2-1-tw.jpg" alt="手繪漫畫頁，標題為「RESPONSIBILITY——PROBLEM」：一群卡通動物擠在一起、各自喊出推卸責任的藉口，例如「我只是賣顧客要買的東西」與「我只是聽命行事」，下方寫著「沒有人負責時，就沒有人負責」，並以說明文字記述台灣 2024 年臉書深偽詐騙案，引用平台卸責的回應「是我們的演算法推送給你的」。" class="overview-image" width="1024" height="1536" loading="lazy" decoding="async"></noscript>
+
 你的鄰居敲門：「你那塊地上的樹正在壓裂共用的牆。」負責任的回應不是「感謝您的回饋」，而是：誰來檢查、何時檢查、如果風險高會怎麼做、修復失敗如何申訴，以及若修復延遲你該承擔什麼。
 
 傾聽而不行動是作秀。行動而無限制是專斷。負責力是兩者之間的橋樑：將認可轉化為有約束力的參與——你可以驗證、質疑、撤銷的承諾。
@@ -100,7 +102,5 @@ Tronto 將「負責力」提升為關懷實踐中最具政治核心性的階段�
 ### 結語意象：簽名的工單
 
 想像門旁貼著一張工單：要修什麼、誰來修、何時完成；如何驗收；如果失敗找誰。簽名清晰可辨——未依約履約的罰則也同樣標示清晰。換言之，教我們的系統張貼它們的工單、簽署它們、並信守承諾。
-
-<noscript><img src="/img/pack2-1-tw.jpg" alt="手繪漫畫頁，標題為「RESPONSIBILITY——PROBLEM」：一群卡通動物擠在一起、各自喊出推卸責任的藉口，例如「我只是賣顧客要買的東西」與「我只是聽命行事」，下方寫著「沒有人負責時，就沒有人負責」，並以說明文字記述台灣 2024 年臉書深偽詐騙案，引用平台卸責的回應「是我們的演算法推送給你的」。" class="overview-image" width="1024" height="1536" loading="lazy" decoding="async"></noscript>
 
 <noscript><img src="/img/pack2-2-tw.jpg" alt="手繪漫畫頁，標題為「NOT：vague promises／BUT：exact commitments——SOLUTION」：一隻若有所思、抱著橘色愛心的貓抬頭望向一疊大字問題——WHO、WHAT、WHEN、WHY、HOW——旁邊文字提出可稽核的「參與契約」，指定具體負責的人、但把做法交由其自行決定，結尾說明台灣公民大會制定了逾 85% 公民認同的法律，一年內深偽詐騙下降了 94%。" class="overview-image" width="1024" height="1536" loading="lazy" decoding="async"></noscript>

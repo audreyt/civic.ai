@@ -1,6 +1,6 @@
 # 6-Pack of Care
 
-Civic AI is alignment by public process: community-authored safeguards, public accountability, and bounded local systems.
+Civic AI answers to the people it affects — alignment by public process: community-authored safeguards, public accountability, and bounded local systems.
 
 This repository contains the public site for the 6-Pack of Care, a governance framework by [Audrey Tang](https://afp.oxford-aiethics.ox.ac.uk/people/ambassador-audrey-tang) and [Caroline Green](https://www.oxford-aiethics.ox.ac.uk/caroline-emmer-de-albuquerque-green) at Oxford's Institute for Ethics in AI.
 
@@ -23,9 +23,17 @@ Also: [**Measures**](https://civic.ai/measures/) and [**FAQ**](https://civic.ai/
 
 ## Start here
 
-- **Policy.** [Manifesto](https://civic.ai/manifesto/), [FAQ](https://civic.ai/faq/), and [AI Alignment Cannot Be Top-Down](https://civic.ai/ai-alignment-cannot-be-top-down/).
-- **Engineering.** [Pack 3](https://civic.ai/3/), [Inside the Kami](https://civic.ai/inside-the-kami/), and [Measures](https://civic.ai/measures/).
-- **Civic practice.** [Pack 1](https://civic.ai/1/), [Pack 2](https://civic.ai/2/), and [Pack 4](https://civic.ai/4/).
+**Just heard about Civic AI?** The friendliest way in is the website — **[civic.ai](https://civic.ai/)** — which renders all of this with illustrations and audio. Three steps:
+
+1. **Get the idea.** Read the [Manifesto](https://civic.ai/manifesto/) — the whole argument in Audrey Tang's own words.
+2. **Meet the six principles.** Skim the [six packs](#the-six-packs) above: plain-language tests for AI a community can actually trust.
+3. **See it work.** [AI Alignment Cannot Be Top-Down](https://civic.ai/ai-alignment-cannot-be-top-down/) tells how Taiwan answered a wave of AI-powered scam ads.
+
+**Already know what you're after?**
+
+- **Policy & governance** — [Manifesto](https://civic.ai/manifesto/), [FAQ](https://civic.ai/faq/), and [AI Alignment Cannot Be Top-Down](https://civic.ai/ai-alignment-cannot-be-top-down/).
+- **Builders & engineers** — [Pack 3: Competence](https://civic.ai/3/), [Inside the Kami](https://civic.ai/inside-the-kami/), and [Measures](https://civic.ai/measures/).
+- **Civic & community practice** — [Pack 1: Attentiveness](https://civic.ai/1/), [Pack 4: Responsiveness](https://civic.ai/4/), and the [podcast](https://civic.ai/podcast/).
 
 ## Site
 
