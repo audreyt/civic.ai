@@ -6,7 +6,7 @@ alt_lang_url: "/5"
 permalink: "/tw/5/"
 ---
 
-<noscript><img src="/img/pack5-1-tw.jpg" alt="手繪漫畫頁，標題為「SOLIDARITY——PROBLEM」，談負和與零和思維，以兩位廚師爭一顆橘子的四格呈現：盯著橘子、化身怪獸搶奪（負和）、平分橘子（零和），以及一張輸贏象限圖，問如何盡可能達成「雙贏」。" class="overview-image" width="1024" height="1536" loading="lazy" decoding="async"></noscript>
+<noscript><img src="/img/pack5-1-tw.jpg" alt="手繪漫畫頁，標題為「團結力——PROBLEM」，寫著「別把整個社會放進同一個籃子」：卡通動物先是全擠進一個紫色籃子，接著籃子破裂散落，說明把現代文化、新聞與政治都交給少數跨國平台會造成單點故障，並抹平教會與地方社群這層厚實的中間層；下方排著一列相同的灰色人形。" class="overview-image" width="1024" height="1536" loading="lazy" decoding="async"></noscript>
 
 交通更安全不是因為每個駕駛都是聖人，而是因為道路、標誌和規則使安全駕駛比魯莽駕駛更容易。
 
@@ -83,4 +83,4 @@ Pack 5 的公開主指標是**搭橋指數**。公開問題是：共同決策中
 
 想像一個標示清楚的交流道——多條車道、明確的標誌、安全的匯流——讓行駛更順暢，因為道路是為共享而建的。
 
-<noscript><img src="/img/pack5-2-tw.jpg" alt="手繪漫畫頁，標題為「NOT：mutually assured destruction／BUT：as win-win as possible——SOLUTION」：兩位廚師發現一人需要橙酒、另一人需要橙汁，於是果皮與皮屑做酒、果肉做汁，讓雙方都得到百分之百且毫無浪費；台灣 pol.is 上關於是否更改時區的辯論，從「獨特性」對上「經濟」被重構為歡迎創作者的金卡居留，結語為「更好的討論能幫助我們達成雙贏」。" class="overview-image" width="1024" height="1536" loading="lazy" decoding="async"></noscript>
+<noscript><img src="/img/pack5-2-tw.jpg" alt="手繪漫畫頁，標題為「NOT：相互保證毀滅／BUT：盡可能雙贏——SOLUTION」，呼籲「為使用者而戰」，並舉三例——猶他州兩黨立法要求社群媒體使用者資料可攜且可互通、開源在地模型 GPT-OSS 讓社群自帶政策、以及偵測兒虐的開源工具 ROOST——配圖為一隻兔子抱著標示「我的資料」的包袱、一隻貓面對寫著「章程」的螢幕，以及一個有翅膀的讀者，結語說這些示範了科技如何分散而非集中權力。" class="overview-image" width="1024" height="1536" loading="lazy" decoding="async"></noscript>
