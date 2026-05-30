@@ -17,12 +17,28 @@
 //   node import-comics.mjs          # download + convert all pages
 //   node import-comics.mjs --check  # list what would be done, fetch nothing
 //
-// Note: run with `node`, not `bun` — bun currently mis-resolves one of
-// sharp's transitive imports (semver/functions/coerce).
+// This is a maintenance script, not part of the site build, so `sharp` is
+// deliberately kept out of the project's dependencies (it is a heavy native
+// package that would otherwise be installed on every deploy). We load it on
+// demand below, installing it transiently with `npm install --no-save` if it
+// is not already present. Run with `node`, not `bun` — bun currently
+// mis-resolves one of sharp's transitive imports (semver/functions/coerce).
 
-import sharp from "sharp";
 import { writeFile } from "fs/promises";
 import { resolve } from "path";
+import { execFileSync } from "child_process";
+
+async function loadSharp() {
+    try {
+        return (await import("sharp")).default;
+    } catch {
+        console.log("sharp not found — installing it transiently (--no-save)…");
+        execFileSync("npm", ["install", "--no-save", "sharp@^0.34.5"], {
+            stdio: "inherit",
+        });
+        return (await import("sharp")).default;
+    }
+}
 
 const BASE_URL =
     "https://raw.githubusercontent.com/ncase/civic-ai-comics/main/comics-en";
@@ -38,6 +54,8 @@ const JPEG = { quality: 90, mozjpeg: true, chromaSubsampling: "4:4:4" };
 const AVIF = { quality: 60 };
 
 const check = process.argv.includes("--check");
+// Only needed for the actual conversion, so --check stays dependency-free.
+const sharp = check ? null : await loadSharp();
 
 async function fetchPng(name) {
     const url = `${BASE_URL}/${name}`;
