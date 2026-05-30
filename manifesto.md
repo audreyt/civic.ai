@@ -28,7 +28,7 @@ As AI becomes a thousand, perhaps ten thousand times faster than us, we face a f
 
 At that speed, traditional ethics struggle. Consequentialism — even its most sophisticated forms — relies on predicting and overseeing outcomes. When an AI system optimises far beyond our comprehension, we cannot intervene before unintended consequences cascade. Deontology relies on moral agents interpreting obligations in good faith on roughly equal footing. When the "interpreter" operates thousands of times faster, the gap between a rule's letter and its spirit widens in ways we can neither foresee nor correct. Both traditions have far more depth than caricature suggests, but care ethics offers something neither provides: it starts from relationships and process rather than from outcomes or rules alone.
 
-A framework that acknowledges this asymmetry but refuses the gardener role is an ethics around **civic care**, particularly the work of Joan Tronto. The core idea is that we remain each other's gardeners. AI becomes local infrastructure—a spirit of place, a _Kami_—that supports care _at the speed care actually grows_.
+A framework that acknowledges this asymmetry but refuses the gardener role is an ethics around **civic care**, particularly the work of Joan Tronto. The core idea is that we remain each other's gardeners. AI becomes local infrastructure—a spirit of place, a _Kami_ (**k**nowledge **a**rtefact **m**anagement **i**ntelligence)—that supports care _at the speed care actually grows_.
 
 This approach mandates a hyper-local, parochial moral scope. Each _Kami_ is bound to specific relationships, rather than being a colonising or maximising ("paper-clipping") force.
 
@@ -233,7 +233,7 @@ To explain my role, I wrote this poetic job description:
 - When we see "user experience," let's make it **about human experience.**
 - When we hear "the singularity is near" — let us remember: The **Plurality** is here.
 
-The singularity is a vertical vision. Plurality is a horizontal one. The future of AI is a decentralised network of smaller, open and locally verifiable systems—_local Kamis_, spirits of place.
+The singularity is a vertical vision. Plurality is a horizontal one. The future of AI is a decentralised network of smaller, open and locally verifiable systems—_local Kami_, spirits of place.
 
 # We, the People, Are the Superintelligence
 

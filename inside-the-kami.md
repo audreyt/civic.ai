@@ -81,7 +81,7 @@ different tasks to different subsystems.
 The slogan version is memorable because it is correct: **the AI that folds our
 proteins should not be the AI that folds our laundry.**
 
-For Civic AI, the implication is direct. A Kami should not be a mini-sovereign
+For Civic AI, the implication is direct. A Kami — **k**nowledge **a**rtefact **m**anagement **i**ntelligence — should not be a mini-sovereign
 mind roaming across domains. It should be a specialist: good at one class of
 community work, replaceable when its job changes, and unable to turn local
 success into universal mandate.
@@ -135,7 +135,7 @@ repair. Appeals, public repair logs and community-authored evals such as
 how we probe the hardest case in Bengio's framework: "unknown."
 
 **Pack 5: Solidarity.** These architectures suggest a better basis for
-federation. Kamis can share provenance, schemas, eval results and verified
+federation. Kami can share provenance, schemas, eval results and verified
 factual claims without flattening local context into one global authority.
 Federation should move institutional knowledge, not intimate histories. Shared
 facts; local judgement.

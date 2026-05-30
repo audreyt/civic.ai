@@ -22,7 +22,7 @@ This is the first full walk-through of the framework in conversation form. If th
 - The 6-Pack treats AI alignment as a public process, not a one-time value upload.
 - Packs 1–4 form a loop: listen, bind commitments, execute safely, and repair in public.
 - Pack 5 shifts attention from individual systems to the rules of the wider ecosystem.
-- Pack 6 reframes AI as a bounded local steward, or Kami, rather than a permanent centre of control.
+- Pack 6 reframes AI as a bounded local steward, or Kami — **k**nowledge **a**rtefact **m**anagement **i**ntelligence — rather than a permanent centre of control.
 - The target audience is not only ethicists: policymakers, engineers, and civic practitioners can all use the framework.
 
 ## Listen
@@ -179,7 +179,7 @@ But if we do meronymity, selective disclosure, then we can make sure that it com
 
 \*\*Audrey Tang: Yeah, Kami here is used metaphorically as a local steward\*\*: specifically, an AI system that is bounded to something place-specific or community-specific, that cooperates with the relational health. So all it cares about is the relational health of this particular community. We talk about how community nodes can bridge a community together. And an AI that drafts such community nodes is this kind of Kami. It simply does not worry about paving the galaxy with paper clips or with solar panels or anything like that. It's not trying to grab power by itself. All it cares about is the relational health of this community. And if the community has fully healed, if the community has moved on, if there's no such community anymore, then the Kami can be switched off with no regret.
 
-So again, in ethic terms, it means that it optimises for the virtue of relational civic care. It is not optimising for the consequential outcome of maximum happiness in the universe. This is the horizontal alternative that we call Plurality — many local Kamis, in an overlapping way, taking care of each garden instead of a vertical superintelligence supreme gardener that doesn't know what's enough. This "enoughness," this boundedness, is the defining characteristic of symbiosis. Otherwise, it's parasitic.
+So again, in ethic terms, it means that it optimises for the virtue of relational civic care. It is not optimising for the consequential outcome of maximum happiness in the universe. This is the horizontal alternative that we call Plurality — many local Kami, in an overlapping way, taking care of each garden instead of a vertical superintelligence supreme gardener that doesn't know what's enough. This "enoughness," this boundedness, is the defining characteristic of symbiosis. Otherwise, it's parasitic.
 
 \*\*Caroline Green: So, before we started working with each other, the institute created a care assistant called Dedicate, rooted in many conversations with family caregivers to understand what it is that they need to feel supported in their everyday life as a caregiver. And that idea behind Dedicate translates quite well onto specifically that symbiosis pack, because it's all about creating connectedness\*\*: using AI to create connectedness between organisations and people that are out there to support family caregivers with advice and information. We built a system where we have that content given to us by them, and then we have an AI on top of that which makes the information easily accessible to family caregivers in the moment when they need it most. But that chatbot also has its limits. So, if somebody types in a question around a very specific medical question, or something not commonly found within caregiving at all, that chatbot will say, oh, this is not my area.
 
@@ -189,7 +189,7 @@ So again, in ethic terms, it means that it optimises for the virtue of relationa
 
 And Dedicate right now is for people living in the UK, or England even specifically. But we could build systems like that in other contexts and other cultures where caregiving might be different.
 
-\*\*Audrey Tang: Right. So it forms a federation of Kamis, instead of trying to build one simple superintelligence that knows everything and can do everything. Usually when you try to build a super solution that works everywhere, it ends up just coercing every place to look just like the place where the designers lived\*\*: and then just colonises the rest of the world. Starting from symbiosis means knowing that this boundedness, this "enoughness," is actually better for people's relational health.
+\*\*Audrey Tang: Right. So it forms a federation of Kami, instead of trying to build one simple superintelligence that knows everything and can do everything. Usually when you try to build a super solution that works everywhere, it ends up just coercing every place to look just like the place where the designers lived\*\*: and then just colonises the rest of the world. Starting from symbiosis means knowing that this boundedness, this "enoughness," is actually better for people's relational health.
 
 \*\*Caroline Green: So Audrey, we have learned so much about the civic care approach. We have learned about the framework, the 6-Pack of Care, which is ready to be used\*\*: which has been used and tested, actually, in various contexts. So it's something that's out there for people to pick up.
 

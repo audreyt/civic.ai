@@ -21,7 +21,7 @@ This debate places the 6-Pack inside the superintelligence-risk conversation. It
 
 - Tang argues that `P(Doom)` is not a number when the denominator is unknown.
 - Governance should upgrade with capability rather than lag behind it.
-- The alternative to one permanent centre is many bounded local stewards, or Kamis.
+- The alternative to one permanent centre is many bounded local stewards, or Kami (**k**nowledge **a**rtefact **m**anagement **i**ntelligence).
 - Civic resilience depends on participatory institutions, not only lab-side safety techniques.
 
 ## Watch
