@@ -1,0 +1,6 @@
+name = "civic_ai"
+version = "0.1.0"
+defaultTargets = ["CivicAi"]
+
+[[lean_lib]]
+name = "CivicAi"

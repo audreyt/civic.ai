@@ -11,6 +11,7 @@
         "format": "prettier --write . && bun run pangu-format.mjs",
         "prepare": "husky",
         "check": "astro check && tsgo --noEmit",
+        "check:lean": "cd formal && lake build",
         "test": "bun test",
         "sync:public": "bun run scripts/sync-public.mjs",
         "minify-html": "bun run scripts/minify-html.mjs",

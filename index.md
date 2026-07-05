@@ -70,6 +70,7 @@ Six design principles translate care ethics into something institutions can buil
 - **[Pack 5: Solidarity](/5/)** — whether the ecosystem rewards cooperation, exit, and public accountability over lock-in.
 - **[Pack 6: Symbiosis](/6/)** — whether the system stays bounded, local, and sunset-ready instead of hardening into permanent rule.
 - **[Map & Measures](/measures/#map)** — the whole framework on one clickable map, followed by one headline public measure per pack and supporting diagnostics.
+- **[Lean formalization](/formal-care/)** — the machine-checkable skeleton: six named care primitives, the four-pack care cycle, Pack 5 as non-separable solidarity, and Pack 6 as boundary condition.
 
 ## Four proof points
 

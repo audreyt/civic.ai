@@ -14,7 +14,7 @@ Civic AI is artificial intelligence that answers to the people it affects: many 
 
 ## Quickstart
 
-Requires [Bun](https://bun.sh/).
+Requires [Bun](https://bun.sh/). The Lean formalization additionally uses Lean 4 via elan.
 
 ```bash
 bun install     # install dependencies
@@ -29,6 +29,7 @@ bun run build   # production build → dist/
 | `bun run dev`             | Astro dev server with live reload at `http://127.0.0.1:4321`.                                            |
 | `bun run build`           | Production build of the static site → `dist/`.                                                           |
 | `bun run check`           | Astro + TypeScript checks: `astro check && tsgo --noEmit`.                                               |
+| `bun run check:lean`      | Build the Lean 4 formalization under `formal/` with Lake.                                                |
 | `bun test`                | Focused Bun tests for the custom Markdown renderer and root-content loader.                              |
 | `bun run lint`            | Check formatting: `prettier --check` + `pangu-format --check` (CJK spacing).                             |
 | `bun run format`          | Auto-fix formatting: `prettier --write` + `pangu-format`.                                                |
@@ -40,25 +41,27 @@ A husky **pre-commit hook** runs `prettier` + `pangu-format` on staged Markdown,
 
 ## Repository layout
 
-| Path                            | What it is                                                                                                         |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `src/`                          | Astro source: typed root-content loader, custom Markdown renderer, layouts, components, routes, endpoints.         |
-| `_data/`                        | Global data: `site.json`, `paths.json` (reading paths), `comics.json`, glossary, Polis report, OpenClaw bootstrap. |
-| `*.md` (root)                   | Canonical Markdown content, British English. Front-matter `permalink` sets the URL.                                |
-| `tw-*.md`                       | Traditional Mandarin twin of each English page (served under `/tw/…`); kept in parity.                             |
-| `img/`, `fonts/`, `audio/`      | Source static assets copied through generated `public/` into the build.                                            |
-| `styles.css`                    | All site styles (mobile-first; CSS custom properties).                                                             |
-| `astro.config.mjs`              | Astro static build config: custom-domain root, directory URLs, `dist/` output.                                     |
-| `openclaw.md`, `tw-openclaw.md` | Human OpenClaw bootstrap guides; machine-readable endpoint is generated from `_data/openclaw_bootstrap.js`.        |
-| `*.mjs`, `*.py`, `scripts/`     | Content, validation, build, and migration helper scripts (see [Scripts](#scripts)).                                |
-| `specs/`                        | Internal design & implementation notes (unpublished).                                                              |
-| `public/`                       | **Generated** Astro public directory from `scripts/sync-public.mjs` — never edit by hand (gitignored).             |
-| `dist/`                         | **Generated** build output — never edit by hand (gitignored).                                                      |
+| Path                            | What it is                                                                                                                          |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `src/`                          | Astro source: typed root-content loader, custom Markdown renderer, layouts, components, routes, endpoints.                          |
+| `_data/`                        | Global data: `site.json`, `paths.json` (reading paths), `comics.json`, glossary, Polis report, OpenClaw bootstrap.                  |
+| `formal/`                       | Lean 4 source for the machine-checkable 6-Pack formalization; selected files are served through allowlisted Astro source endpoints. |
+| `*.md` (root)                   | Canonical Markdown content, British English. Front-matter `permalink` sets the URL.                                                 |
+| `tw-*.md`                       | Traditional Mandarin twin of each English page (served under `/tw/…`); kept in parity.                                              |
+| `img/`, `fonts/`, `audio/`      | Source static assets copied through generated `public/` into the build.                                                             |
+| `styles.css`                    | All site styles (mobile-first; CSS custom properties).                                                                              |
+| `astro.config.mjs`              | Astro static build config: custom-domain root, directory URLs, `dist/` output.                                                      |
+| `openclaw.md`, `tw-openclaw.md` | Human OpenClaw bootstrap guides; machine-readable endpoint is generated from `_data/openclaw_bootstrap.js`.                         |
+| `*.mjs`, `*.py`, `scripts/`     | Content, validation, build, and migration helper scripts (see [Scripts](#scripts)).                                                 |
+| `specs/`                        | Internal design & implementation notes (unpublished).                                                                               |
+| `public/`                       | **Generated** Astro public directory from `scripts/sync-public.mjs` — never edit by hand (gitignored).                              |
+| `dist/`                         | **Generated** build output — never edit by hand (gitignored).                                                                       |
 
 ## Authoring content
 
 - Each page is a single Markdown file with YAML front matter. `permalink` sets the URL — e.g. `1.md` → `/1/`, `manifesto.md` → `/manifesto/`.
 - Every English page `foo.md` has a Traditional Mandarin twin `tw-foo.md` served at `/tw/foo/`. The two link to each other through the `alt_lang_url` front-matter key — **keep them in parity** when you change either.
+- When prose links to a Lean theorem, keep the theorem name, page anchor, and source link in parity across English and Mandarin.
 - Front-matter keys in use: `layout`, `title`, `meta_description`, `summary`, `lang`, `permalink`, `alt_lang_url`.
 - Formatting rules (em dashes, four-space YAML, locked Mandarin terminology) are enforced by `bun run lint` and the pre-commit hook; details in [AGENTS.md](AGENTS.md).
 

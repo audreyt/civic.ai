@@ -30,6 +30,13 @@ expect("glossary/index.html", 'id="civic-ai"');
 expect("glossary/index.html", "Civic AI");
 expect("tw/glossary/index.html", 'id="civic-ai"');
 expect("tw/glossary/index.html", "仁工智慧");
+expect("formal-care/index.html", "bridging_not_nat_separable");
+expect("tw/formal-care/index.html", "團結力的不可分解性");
+const solidarityLean = built("formal/CivicAi/Care/Solidarity.lean");
+if (!solidarityLean.includes("theorem bridging_not_nat_separable"))
+    throw new Error("Solidarity Lean source missing theorem");
+if (/\b(sorry|admit)\b/.test(solidarityLean))
+    throw new Error("Solidarity Lean source contains proof placeholder");
 const skill = built(".well-known/openclaw/SKILL.md");
 if (!/^[\x00-\x7F]*$/.test(skill))
     throw new Error("OpenClaw skill is not ASCII-only");

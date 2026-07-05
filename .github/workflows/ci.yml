@@ -16,6 +16,14 @@ jobs:
                   ref: ${{ github.event.pull_request.head.sha || github.ref }}
                   repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
 
+            - name: Check Lean formalization
+              uses: leanprover/lean-action@v1
+              with:
+                  lake-package-directory: formal
+                  auto-config: false
+                  build: true
+                  use-mathlib-cache: false
+
             - name: Setup Bun
               uses: oven-sh/setup-bun@v2
 

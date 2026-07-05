@@ -42,6 +42,12 @@
                 "label_tw": "衡量指標"
             },
             {
+                "url": "/formal-care/",
+                "url_tw": "/tw/formal-care/",
+                "label_en": "Lean formalization",
+                "label_tw": "Lean 形式化"
+            },
+            {
                 "url": "/inside-the-kami/",
                 "url_tw": "/tw/inside-the-kami/",
                 "label_en": "Inside the Kami",

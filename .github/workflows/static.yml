@@ -23,6 +23,14 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v4
 
+            - name: Check Lean formalization
+              uses: leanprover/lean-action@v1
+              with:
+                  lake-package-directory: formal
+                  auto-config: false
+                  build: true
+                  use-mathlib-cache: false
+
             - name: Setup Bun
               uses: oven-sh/setup-bun@v2
 
