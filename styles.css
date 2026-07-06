@@ -977,11 +977,19 @@ main p:has(> strong:first-child) {
 /* ─── VIDEO EMBED ─── */
 .video-embed {
     position: relative;
-    padding-top: 56.25%;
-    margin: 32px 0;
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 16 / 9;
+    margin: 32px auto;
     border-radius: 4px;
     overflow: hidden;
     border: 1px solid var(--border);
+}
+
+@media (orientation: landscape) {
+    .video-embed {
+        max-width: 100%;
+    }
 }
 
 .video-embed iframe {
