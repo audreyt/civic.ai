@@ -205,7 +205,7 @@ overview_image:
     h: 1781
 ---
 
-<div class="conf-quotes-pair">
+<div class="conf-quotes-pair" id="quotes-pair">
 <figure class="conf-quote">
     <div class="conf-quote-portrait">
         <a href="https://www.gyalwarinpoche.com/news/3-13"><img src="/img/his-holiness-dalai-lama.jpg" alt="His Holiness the 14th Dalai Lama answers a question from Tenzin Yangtso" title="His Holiness the 14th Dalai Lama answers a question from Tenzin Yangtso" width="512" height="512" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:50%;border:2px solid var(--border);box-shadow:0 10px 24px rgba(15,25,35,.12)" /></a>
