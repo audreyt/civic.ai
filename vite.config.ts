@@ -9,7 +9,7 @@ export default defineConfig({
         jsPlugins: [
             { name: "vite-plus", specifier: "vite-plus/oxlint-plugin" },
         ],
-        ignorePatterns: ["worker/**", "coverage/**"],
+        ignorePatterns: ["worker/**", "sensemaker/**", "coverage/**"],
         rules: {
             "vite-plus/prefer-vite-plus-imports": "error",
             "no-unused-vars": [
@@ -41,6 +41,7 @@ export default defineConfig({
         ignorePatterns: [
             "node_modules/**",
             "worker/**",
+            "sensemaker/generated/**",
             ".astro/**",
             "dist/**",
             "public/**",

@@ -1,3 +1,4 @@
+import { renderPolisReport } from "../../_data/polis_report.js";
 import type { PageRecord } from "./pages";
 import { renderConceptMap } from "./conceptMap";
 import {
@@ -43,6 +44,10 @@ export function expandShortcodes(
         .replaceAll(
             "<!-- astro:concept-map -->",
             renderConceptMap(page.data.lang)
+        )
+        .replaceAll(
+            "<!-- astro:polis-report -->",
+            renderPolisReport(page.data.lang)
         )
         .replaceAll(
             "<!-- astro:openclaw-raw-skill-note en -->",

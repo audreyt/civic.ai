@@ -1,0 +1,41 @@
+{
+    "consensusSummary": "Across all three opinion groups, participants found broad agreement on most statements. The strongest common ground concerned human contact, disclosure, accountability, and community voice.",
+    "differencesSummary": "A smaller set of statements revealed meaningful divisions between the three opinion groups. These are the tensions worth exploring further.",
+    "groups": [
+        {
+            "code": "A",
+            "statementIds": [
+                "10",
+                "14",
+                "19",
+                "2"
+            ],
+            "summary": "The most comfortable with AI adoption. This group is notably less concerned about slowing down and does not believe companies should be forced to help displaced workers. They support AI companionship for elderly people but are sceptical of offering imperfect AI tools to families.",
+            "title": "Innovation-Ready"
+        },
+        {
+            "code": "B",
+            "statementIds": [
+                "3",
+                "9",
+                "18",
+                "19"
+            ],
+            "summary": "The largest group. They favour offering AI tools to families, even imperfect ones, and want strong worker protections. They believe AI companies should compensate creators and are open to AI with guardrails.",
+            "title": "Supportive Reformers"
+        },
+        {
+            "code": "C",
+            "statementIds": [
+                "19",
+                "3",
+                "14",
+                "7"
+            ],
+            "summary": "The smallest but most decisive group. They take strong, clear positions and are the most cautious about AI. They want to slow down, demand strict regulation, and reject the notion of offering imperfect AI tools.",
+            "title": "Principled Sceptics"
+        }
+    ],
+    "locale": "en",
+    "snapshotId": "39b1eed77ad2caed03c11d38b7f5730b5008f9df14e4c7617dc3b2854b740db0"
+}

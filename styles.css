@@ -2445,6 +2445,11 @@ body.comics-page main {
 }
 
 /* ─── POLIS REPORT ─── */
+.polis-generated-report :not(pre) > code {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
 .polis-overview {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2901,6 +2906,13 @@ html[data-theme="dark"] .audio-section {
     gap: 18px;
 }
 
+.polis-consensus-grid > *,
+.polis-two-up > *,
+.polis-method-grid > *,
+.polis-side-stack > * {
+    min-width: 0;
+}
+
 .polis-stats-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     margin-bottom: 28px;
@@ -2935,6 +2947,16 @@ html[data-theme="dark"] .audio-section {
     grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.85fr);
     align-items: start;
     margin-bottom: 32px;
+}
+.polis-consensus-card,
+.polis-side-card,
+.polis-visual-card {
+    max-width: none;
+    margin: 0;
+}
+
+.polis-side-card a {
+    overflow-wrap: anywhere;
 }
 
 .polis-consensus-card,

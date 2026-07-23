@@ -1,0 +1,96 @@
+{
+    "decoding": {
+        "num_ctx": 8192,
+        "seed": 0,
+        "temperature": 0,
+        "top_k": 1,
+        "top_p": 1
+    },
+    "files": {
+        "acceptedBaseline": {
+            "bytes": 3218,
+            "path": "sensemaker/source/accepted-baseline.json",
+            "sha256": "a167931763d433e2b28b784fcee07bff608cbfb1ae1350dbe64341df113943b7"
+        },
+        "evidence": {
+            "bytes": 40688,
+            "path": "sensemaker/generated/evidence.json",
+            "sha256": "3255091242d7fa6ccde5be171a5aabcca49007c931bb2e5e7ca45ac71006f692"
+        },
+        "generatorCli": {
+            "bytes": 719,
+            "path": "sensemaker/src/cli.mjs",
+            "sha256": "8168bcf1d67234bf171010dcdc1d527b4ea025c0d8cb60552d2b60f7d4019cbd"
+        },
+        "generatorLib": {
+            "bytes": 29424,
+            "path": "sensemaker/src/lib.mjs",
+            "sha256": "a5a8f27ff715477565c5ba4d5e37e4853ff76d273d258670f7c780f6a5ba9e18"
+        },
+        "narrativeEn": {
+            "bytes": 1952,
+            "path": "sensemaker/generated/narrative.en.json",
+            "sha256": "35aae6d3d65355e0823efaae72256bee9e89143eade410e49975de57b401f767"
+        },
+        "narrativeZhTw": {
+            "bytes": 1737,
+            "path": "sensemaker/generated/narrative.zh-tw.json",
+            "sha256": "e0d17b13e188d4b148d453b8f0cfbd093d53f5f8ed78a64fcf90365fa85e6611"
+        },
+        "packageJson": {
+            "bytes": 311,
+            "path": "sensemaker/package.json",
+            "sha256": "a3d4e91036590bb2f6aecaede598ef1a17a05aae99a4a8904b11766a81a03a12"
+        },
+        "promptEn": {
+            "bytes": 950,
+            "path": "sensemaker/prompts/en.txt",
+            "sha256": "02ac89ca76a6152fb1b6fd699e427ea87b104fd678ccea3c683817d3ff964301"
+        },
+        "promptZhTw": {
+            "bytes": 879,
+            "path": "sensemaker/prompts/zh-tw.txt",
+            "sha256": "5f297c2d51b58d6c1cbf9c67195888fee64a5ffddd0405430e9c68d89ebb83d5"
+        },
+        "reportEn": {
+            "bytes": 36050,
+            "path": "sensemaker/generated/report.en.html",
+            "sha256": "af31bb0be7da1a172ec6e31a1c442242658ef650d73a2f4223f7f193969c94f5"
+        },
+        "reportZhTw": {
+            "bytes": 35278,
+            "path": "sensemaker/generated/report.zh-tw.html",
+            "sha256": "072b37dd300684ed235992d5bd6da87ef227ad129ca623d7be3ce6f65cd2699f"
+        },
+        "snapshotManifest": {
+            "bytes": 1381,
+            "path": "_data/polis_care_snapshot/manifest.json",
+            "sha256": "339e897e62069dfc87351261ef8bc203e0a38626097d10c07a62b15628118f23"
+        },
+        "translations": {
+            "bytes": 2124,
+            "path": "sensemaker/source/translations.zh-tw.json",
+            "sha256": "2e5737d2bb5076978a82ed7542adf116e671a16cca1f8ae0ebd3b50483580d1a"
+        }
+    },
+    "generatorVersion": 1,
+    "model": {
+        "digest": "77136510022ab8b4240a9e4d4094e74de16e638acecde7fcd670c123eb15b44e",
+        "family": "gemma4",
+        "format": "gguf",
+        "name": "gemma4:12b-it-qat-mtp",
+        "ollamaVersion": "0.32.1",
+        "parameterSize": "11.9B",
+        "provider": "ollama",
+        "quantization": "Q4_K_M"
+    },
+    "replayRunsPerLocale": 2,
+    "schemaVersion": 1,
+    "snapshotId": "39b1eed77ad2caed03c11d38b7f5730b5008f9df14e4c7617dc3b2854b740db0",
+    "upstream": {
+        "commit": "18b769a1afd6947cbaf2d1cfab2ca43a17b2949c",
+        "license": "Apache-2.0",
+        "relationship": "design-lineage",
+        "repository": "https://github.com/Jigsaw-Code/sensemaking-tools"
+    }
+}

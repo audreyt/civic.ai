@@ -20,6 +20,11 @@
     "scripts": {
         "prepare": "vp config",
         "sync:public": "bun scripts/sync-public.mjs",
+        "polis:refresh": "bun scripts/refresh-polis-care-snapshot.mjs",
+        "sensemaker:extract": "cd sensemaker && bun src/cli.mjs extract",
+        "sensemaker:regenerate": "cd sensemaker && bun src/cli.mjs regenerate",
+        "sensemaker:verify": "cd sensemaker && bun src/cli.mjs verify",
+        "sensemaker:test": "cd sensemaker && bun test",
         "minify-html": "bun scripts/minify-html.mjs",
         "lint": "vp fmt --check . && vp lint && bun pangu-format.mjs --check && bun scripts/check-tw-typography.mjs",
         "format": "vp fmt . && bun pangu-format.mjs",
@@ -35,7 +40,7 @@
         "import-comics": "bun import-comics.mjs",
         "en": "bun scripts/review-set.mjs en",
         "tw": "bun scripts/review-set.mjs tw",
-        "ci": "vp check && vp test && vp build && vp run check-links && vp run check:hybrid && vp run check:astro-output && vp run check:search && vp run check:parity && vp run worker:typecheck && vp run worker:test"
+        "ci": "vp check && vp test && vp run sensemaker:test && vp run sensemaker:verify && vp build && vp run check-links && vp run check:hybrid && vp run check:astro-output && vp run check:search && vp run check:parity && vp run worker:typecheck && vp run worker:test"
     },
     "dependencies": {
         "markdown-it-anchor": "^9.2.0",

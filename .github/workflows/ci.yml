@@ -57,6 +57,12 @@ jobs:
             - name: Test worker
               run: vp run worker:test
 
+            - name: Test deterministic sensemaker
+              run: vp run sensemaker:test
+
+            - name: Verify replay artifacts
+              run: vp run sensemaker:verify
+
             - name: Build
               run: vp build
 

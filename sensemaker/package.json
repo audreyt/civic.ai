@@ -1,0 +1,12 @@
+{
+    "name": "@civic-ai/sensemaker",
+    "private": true,
+    "packageManager": "bun@1.3.14",
+    "type": "module",
+    "scripts": {
+        "extract": "bun src/cli.mjs extract",
+        "regenerate": "bun src/cli.mjs regenerate",
+        "verify": "bun src/cli.mjs verify",
+        "test": "bun test"
+    }
+}

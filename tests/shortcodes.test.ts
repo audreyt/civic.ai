@@ -256,6 +256,24 @@ test("expandShortcodes returns the expanded body when no legacy syntax remains",
     expect(result).toBe("Plain body with no legacy shortcodes.");
 });
 
+test("expandShortcodes inserts the bilingual report from one snapshot", () => {
+    const english = expandShortcodes(
+        { sourcePath: "polis-report.md", data: { lang: "en-gb" } },
+        "<!-- astro:polis-report -->"
+    );
+    const mandarin = expandShortcodes(
+        { sourcePath: "tw-polis-report.md", data: { lang: "zh-tw" } },
+        "<!-- astro:polis-report -->"
+    );
+
+    const snapshotId =
+        "39b1eed77ad2caed03c11d38b7f5730b5008f9df14e4c7617dc3b2854b740db0";
+    expect(english).toContain(`data-polis-snapshot="${snapshotId}"`);
+    expect(english).toContain("views of 62 participants");
+    expect(mandarin).toContain(`data-polis-snapshot="${snapshotId}"`);
+    expect(mandarin).toContain("62 位參與者");
+});
+
 test("expandShortcodes exercises the zh-lang branch of all site shortcodes", () => {
     const result = expandShortcodes(
         { sourcePath: "src/pages/tw-index.md", data: { lang: "zh-tw" } },
