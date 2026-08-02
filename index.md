@@ -53,6 +53,8 @@ Prefer visuals? Browse [all comics](/comics/) — Nicky Case's illustrated overv
 
 **Ready to run one?** [Set up your own Kami](/kami/) on your own laptop in three steps — bounded, local, and private.
 
+**Ready to listen at scale?** Run [Uncommon Ground](https://github.com/audreyt/uncommon-ground) — the broad-listening recipe from Audrey's talks: a question pool in, a written reply for every questioner out, one self-contained bilingual page as the receipt. See a live closed loop at [audreyt.org/dd](https://audreyt.org/dd) — 266 questions, 18 rooms, answered in writing.
+
 **Already know what you're after?**
 
 <!-- astro:reading-paths -->

@@ -51,6 +51,8 @@ next_action:
 
 **想自己跑一個嗎？** 在你自己的筆電上，三個步驟[架設你自己的 Kami](/tw/kami/)——有界限、在地、私密。
 
+**想大規模傾聽嗎？** 跑一次[罕見共識](https://github.com/audreyt/uncommon-ground)配方——來自唐鳳演講的廣聽工具包：輸入提問池，輸出給每一位提問者的書面回覆，並織成一頁獨立檔案的雙語收據。實際的閉環請看 [audreyt.org/dd](https://audreyt.org/dd)——266 個提問、18 個場次，全部以書面回覆。
+
 **已經知道自己在找什麼？**
 
 <!-- astro:reading-paths -->
