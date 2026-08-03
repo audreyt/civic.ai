@@ -13,6 +13,9 @@ export type Lang2 = "en" | "zh";
 export interface ComicsOverlayFrame {
     id?: string;
     text: string;
+    aria?: string;
+    bgImageURL?: string;
+    bgImageParameter?: string;
     top: string;
     left: string;
     width: string;

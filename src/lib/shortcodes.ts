@@ -154,16 +154,24 @@ function renderOverlayFrame(frame: ComicsOverlayFrame): string {
     // renderOverlayLayer already filters out blank-after-trim frames before
     // calling this, so at least one non-whitespace line always survives —
     // ariaText is guaranteed non-empty here.
-    const ariaText = frame.text
+    // Prefer the authored `aria` reading (e.g. a hiragana gloss so screen
+    // readers pronounce a kanji spelling correctly); fall back to the
+    // visible text when no override is given.
+    const ariaText = (frame.aria ?? frame.text)
         .split("\n")
         .map((line) => line.trim())
         .filter((line) => line !== "")
         .join(" ");
     const labelAttr = ` aria-label="${escapeAttr(ariaText)}"`;
-    // The gallery now draws on the wordless (no baked-in lettering) art, so
-    // a background box is no longer needed to hide original English text —
-    // always transparent, regardless of the authored frame.bg value.
-    const background = "transparent";
+    // Per-frame background: the authored colour (frame.bg), or — when the
+    // frame carries a baked bgImageURL — the crop of an image behind this
+    // box. bgImageURL + bgImageParameter are precomputed once by
+    // scripts/bake-overlay-bgimage.mjs, so nothing is recomputed here;
+    // bgImageParameter falls back to a whole-image "contain" when absent.
+    let background = frame.bg;
+    if (frame.bgImageURL) {
+        background = `url('${escapeAttr(frame.bgImageURL)}') ${frame.bgImageParameter ?? "center center / contain"} no-repeat ${frame.bg}`;
+    }
     // --fs carries the authored size (frame.fontSize is a bare cqw number,
     // e.g. 2.5 -> "2.5cqw"); the shared stylesheet rule turns it into the
     // real font-size via calc(--fs * --ov-scale), which is fixed at 1 —
@@ -176,9 +184,9 @@ function renderOverlayFrame(frame: ComicsOverlayFrame): string {
     const text = escapeHtml(frame.text).replace(/\n/g, "&#10;");
     if (frame.shapeOn && frame.sL && frame.sR && frame.sD) {
         const { clip, left, right } = shapePolys(frame.sL, frame.sR, frame.sD);
-        return `<div class="ov shaped"${labelAttr} style="${base}background:${background};text-align:${frame.align};line-height:1.3;-webkit-clip-path:${clip};clip-path:${clip};"><span style="float:left;width:50%;height:100%;shape-outside:${left};"></span><span style="float:right;width:50%;height:100%;shape-outside:${right};"></span><span class="shaped-text">${text}</span></div>`;
+        return `<div class="ov shaped" tabindex="0"${labelAttr} style="${base}background:${background};text-align:${frame.align};line-height:1.3;-webkit-clip-path:${clip};clip-path:${clip};"><span style="float:left;width:50%;height:100%;shape-outside:${left};"></span><span style="float:right;width:50%;height:100%;shape-outside:${right};"></span><span class="shaped-text">${text}</span></div>`;
     }
-    return `<div class="ov rect"${labelAttr} style="${base}background:${background};"><span style="text-align:${frame.align}">${text}</span></div>`;
+    return `<div class="ov rect" tabindex="0"${labelAttr} style="${base}background:${background};"><span style="text-align:${frame.align}">${text}</span></div>`;
 }
 
 function renderOverlayLayer(key: string, arVar?: string): string {
@@ -196,28 +204,24 @@ function renderOverlayLayer(key: string, arVar?: string): string {
 export function renderComicsGalleryJa(): string {
     const overview = comics.overview.en;
     const caption = `<p class="figure-caption"><strong>概要。</strong>Nicky Case が描いた「ケアの6つの力」全体図。</p>`;
-    const note = `<p class="figure-caption">読み上げの動作はEdgeのみで確認しています。<br />画像の保存は各囲い最下部のボタンを利用してください。</p>`;
-    const dl = (jaImg: string) =>
-        `<a class="next-action-button" href="${escapeAttr(jaImg)}" download><span class="button-text">画像を保存</span></a>`;
+    const note = `<p class="figure-caption">読み上げの動作はEdgeのみで確認しています。</p>`;
     const pages = comics.packs
         .flatMap((pack) =>
             pack.pages.map((page) => {
                 const img = `/img/pack${pack.num}-${page.id}-wordless.jpg`;
-                const jaImg = `/img/pack${pack.num}-${page.id}-ja.jpg`;
                 const key = `pack${pack.num}-${page.id}`;
                 const title = pack.title.ja ?? pack.title.en;
                 const type = page.type.ja ?? page.type.en;
                 const alt = `${title.replace(/^[０-９\d]+\s*/, "")}——${type}（漫画ページ）`;
                 const link = `<a href="/${pack.slug}/" class="comics-page-link" id="pack-${pack.num}-${page.id}"><noscript><img src="${escapeAttr(img)}" alt="${escapeAttr(alt)}" width="1437" height="1999" loading="lazy" decoding="async" /></noscript>${renderOverlayLayer(key)}<span class="comics-page-label"><span class="comics-page-pack">${escapeHtml(title)}</span><span class="comics-page-type">${escapeHtml(type)}</span></span></a>`;
-                return `<div class="comics-cell">${link}${dl(jaImg)}</div>`;
+                return `<div class="comics-cell">${link}</div>`;
             })
         )
         .join("");
     const credit = `イラスト：<a href="https://ncase.me">Nicky Case</a>（CC0）。日本語テキストは暫定訳です。<a href="${escapeAttr(comics.source_repo)}">原資料</a>は GitHub を参照。`;
     const overviewImg = "/img/overview-small-wordless.jpg";
-    const overviewJa = "/img/overview-small-ja.jpg";
     const overviewAlt = "「ケアの6つの力」全体図";
-    return `<div class="comics-gallery">${note}<section class="comics-overview"><a href="/#the-6-pack" class="comics-overview-link"><noscript><img src="${escapeAttr(overviewImg)}" alt="${escapeAttr(overviewAlt)}" class="overview-image" width="${overview.width}" height="${overview.height}" loading="lazy" decoding="async" /></noscript>${renderOverlayLayer("overview-small", "1280 / 1781")}</a>${caption}${dl(overviewJa)}</section><div class="comics-grid">${pages}</div><p class="comics-credit">${credit}</p></div>`;
+    return `<div class="comics-gallery">${note}<section class="comics-overview"><a href="/#the-6-pack" class="comics-overview-link"><noscript><img src="${escapeAttr(overviewImg)}" alt="${escapeAttr(overviewAlt)}" class="overview-image" width="${overview.width}" height="${overview.height}" loading="lazy" decoding="async" /></noscript>${renderOverlayLayer("overview-small", "1280 / 1781")}</a>${caption}</section><div class="comics-grid">${pages}</div><p class="comics-credit">${credit}</p></div>`;
 }
 
 export function renderGlossaryList(lang: string | undefined): string {

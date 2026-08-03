@@ -93,6 +93,22 @@
         const imgs = () => layers().map(imgFor).filter(Boolean);
         const toJa = (src) =>
             src.replace(/-wordless(\.[a-z0-9]+)(?=($|[?#]))/i, "-ja$1");
+        const toWordless = (src) =>
+            src.replace(/-ja(\.[a-z0-9]+)(?=($|[?#]))/i, "-wordless$1");
+        // Base panel art follows the document language: the original
+        // Japanese shows the lettered `-ja` art (text baked in) under the
+        // overlays; any live translation swaps back to `-wordless` so the
+        // (translated) overlay text is what reads. Skipped mid-print so the
+        // enterPrint/exitPrint snapshot stays authoritative.
+        const syncImgLang = () => {
+            if (printState.active) return;
+            const ja = isJa();
+            imgs().forEach((img) => {
+                const src = img.getAttribute("src") || "";
+                const next = ja ? toJa(src) : toWordless(src);
+                if (next !== src) img.setAttribute("src", next);
+            });
+        };
         // Print swaps every overlay image to its lettered `-ja` variant so
         // the Japanese text prints inline (no live overlay in print CSS —
         // see the `@media print { .ja-ov-layer { display: none } }` rule).
@@ -167,6 +183,7 @@
         const apply = () => {
             stopObs();
             restoreFs();
+            syncImgLang();
             fitAll();
             startObs();
         };
