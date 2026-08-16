@@ -1,10 +1,14 @@
 {
     "decoding": {
-        "num_ctx": 8192,
+        "cachePrompt": false,
+        "contextLength": 8192,
+        "maxTokens": 800,
         "seed": 0,
+        "stream": false,
         "temperature": 0,
-        "top_k": 1,
-        "top_p": 1
+        "think": false,
+        "topK": 1,
+        "topP": 1
     },
     "files": {
         "acceptedBaseline": {
@@ -18,14 +22,14 @@
             "sha256": "3255091242d7fa6ccde5be171a5aabcca49007c931bb2e5e7ca45ac71006f692"
         },
         "generatorCli": {
-            "bytes": 719,
+            "bytes": 1112,
             "path": "sensemaker/src/cli.mjs",
-            "sha256": "8168bcf1d67234bf171010dcdc1d527b4ea025c0d8cb60552d2b60f7d4019cbd"
+            "sha256": "f45a4a8782df22b6f7eace8c45f50d21d92d2596c2328c2b1adef74da25ca938"
         },
         "generatorLib": {
-            "bytes": 29424,
+            "bytes": 31208,
             "path": "sensemaker/src/lib.mjs",
-            "sha256": "a5a8f27ff715477565c5ba4d5e37e4853ff76d273d258670f7c780f6a5ba9e18"
+            "sha256": "29d612619c2fa3e49b2aad939ad719c62d62a0968aa62f65c625daac6a60b550"
         },
         "narrativeEn": {
             "bytes": 1952,
@@ -52,15 +56,30 @@
             "path": "sensemaker/prompts/zh-tw.txt",
             "sha256": "5f297c2d51b58d6c1cbf9c67195888fee64a5ffddd0405430e9c68d89ebb83d5"
         },
+        "replayHtml": {
+            "bytes": 2965,
+            "path": "sensemaker/src/replay.html",
+            "sha256": "62ca823f82a7ab1c1b55833abbac3e4c3fbf934af27136f0fa74d8ec25d6d809"
+        },
+        "replayModelManifest": {
+            "bytes": 1733,
+            "path": "sensemaker/models/wllama.json",
+            "sha256": "808e62a4c9e53618cc8eb3fcf25fb4aadb51e7af36dd1317144366425ff0d0d8"
+        },
+        "replayWasm": {
+            "bytes": 16976,
+            "path": "sensemaker/src/replay-wasm.mjs",
+            "sha256": "4e0548427aff54587bd1c81e0ac3add265d3abaf1ee0d665f39ebc33ab74c1af"
+        },
         "reportEn": {
-            "bytes": 36050,
+            "bytes": 36049,
             "path": "sensemaker/generated/report.en.html",
-            "sha256": "af31bb0be7da1a172ec6e31a1c442242658ef650d73a2f4223f7f193969c94f5"
+            "sha256": "923a82f61b12537201efa38e0f969f50e77c38d543f6c9605f08669a467ae945"
         },
         "reportZhTw": {
-            "bytes": 35278,
+            "bytes": 35277,
             "path": "sensemaker/generated/report.zh-tw.html",
-            "sha256": "072b37dd300684ed235992d5bd6da87ef227ad129ca623d7be3ce6f65cd2699f"
+            "sha256": "261b040f14983d47a8b1a5dc3fe8b90e3fdd5f682efeee39a0e586743570e9ed"
         },
         "snapshotManifest": {
             "bytes": 1381,
@@ -73,16 +92,50 @@
             "sha256": "2e5737d2bb5076978a82ed7542adf116e671a16cca1f8ae0ebd3b50483580d1a"
         }
     },
-    "generatorVersion": 1,
+    "generatorVersion": 2,
     "model": {
-        "digest": "77136510022ab8b4240a9e4d4094e74de16e638acecde7fcd670c123eb15b44e",
-        "family": "gemma4",
+        "backend": "cpu-wasm-simd",
+        "digest": "6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e",
+        "family": "qwen2",
+        "filename": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
         "format": "gguf",
-        "name": "gemma4:12b-it-qat-mtp",
-        "ollamaVersion": "0.32.1",
-        "parameterSize": "11.9B",
-        "provider": "ollama",
-        "quantization": "Q4_K_M"
+        "gpuLayers": 0,
+        "launcher": {
+            "integrity": "sha512-fm+wpUr2oigH1PXZvwgATrM2tYWHMDG8ASzTEe9uukCye4X5Ldx1K5BTHPFKITrIWvQQAQ256d1NpbEveBcKjA==",
+            "package": "puppeteer-core",
+            "version": "25.3.0"
+        },
+        "license": "Apache-2.0",
+        "name": "Qwen2.5-1.5B-Instruct",
+        "parameterSize": "1.5B",
+        "provider": "wllama",
+        "quantization": "Q4_K_M",
+        "rawCompletionBytes": {
+            "en": 1617,
+            "zh-TW": 1402
+        },
+        "rawCompletionSha256": {
+            "en": "d3572fc1e84a51970cf5043b381adfe62ac5dbc037a2ca0caf2479d9334edfed",
+            "zh-TW": "b1a5431649de21b0c37b60273db4980ec92e25d47b5630ddfdbd08e857e3567a"
+        },
+        "repository": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+        "revision": "dd26da440ef0330c47919d1ecae0966d24022222",
+        "runtime": "@wllama/wllama",
+        "runtimeAssets": {
+            "javascript": {
+                "bytes": 357890,
+                "path": "node_modules/@wllama/wllama/esm/index.js",
+                "sha256": "2ed031e8d61cebd1d4c7d4956a6350f5afc7fa7c678c3a324d66f6df958f67db"
+            },
+            "webassembly": {
+                "bytes": 7656521,
+                "path": "node_modules/@wllama/wllama/esm/wasm/wllama.wasm",
+                "sha256": "4197ce6d3dc9240c42ee52b4197dc99638875a06b0083901f8a57767338a0cfa"
+            }
+        },
+        "runtimeIntegrity": "sha512-m5L0KKtmUTKz5lGvVVa/Y3qRtoobu80Jne51U0CSR6O930aOUURzhMEAolNsN4v0kfQ9u58wi2IdpUicLfaXUw==",
+        "runtimeVersion": "3.5.1",
+        "threads": 1
     },
     "replayRunsPerLocale": 2,
     "schemaVersion": 1,

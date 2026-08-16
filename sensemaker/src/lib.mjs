@@ -21,15 +21,23 @@ const SNAPSHOT_MANIFEST_PATH = resolve(
     REPO_ROOT,
     "_data/polis_care_snapshot/manifest.json"
 );
+export const REPLAY_MODEL_MANIFEST_PATH = resolve(
+    PACKAGE_ROOT,
+    "models/wllama.json"
+);
 
 export const LOCALES = ["en", "zh-TW"];
 export const DEFAULT_MODEL = "gemma4:12b-it-qat-mtp";
-export const MODEL_OPTIONS = Object.freeze({
+export const GENERATION_OPTIONS = Object.freeze({
+    contextLength: 8192,
+    maxTokens: 800,
     temperature: 0,
-    top_k: 1,
-    top_p: 1,
+    topK: 1,
+    topP: 1,
     seed: 0,
-    num_ctx: 8192,
+    stream: false,
+    think: false,
+    cachePrompt: false,
 });
 
 const UPSTREAM = Object.freeze({
@@ -161,7 +169,7 @@ export async function buildEvidence() {
     });
 }
 
-function outputSchema(locale) {
+export function outputSchema(locale) {
     const groupSchema = {
         type: "object",
         additionalProperties: false,
@@ -207,6 +215,41 @@ function modelEvidence(evidence) {
     const { participants: _participants, ...rest } = evidence;
     return rest;
 }
+export async function buildGenerationSpec(locale, evidence) {
+    if (!LOCALES.includes(locale)) {
+        throw new Error(`Unsupported locale: ${locale}`);
+    }
+    const baseline = (await readJson(BASELINE_PATH))[locale];
+    const prompt = await readFile(PROMPT_PATHS[locale], "utf8");
+    const payload = {
+        task: "Produce the publication narrative from the canonical evidence while preserving supported accepted copy.",
+        snapshotId: evidence.snapshotId,
+        locale,
+        evidence: modelEvidence(evidence),
+        acceptedBaseline: baseline,
+    };
+    return sortValue({
+        messages: [
+            { role: "system", content: prompt },
+            { role: "user", content: JSON.stringify(payload) },
+        ],
+        max_tokens: GENERATION_OPTIONS.maxTokens,
+        temperature: GENERATION_OPTIONS.temperature,
+        temp: GENERATION_OPTIONS.temperature,
+        top_k: GENERATION_OPTIONS.topK,
+        top_p: GENERATION_OPTIONS.topP,
+        seed: GENERATION_OPTIONS.seed,
+        cache_prompt: GENERATION_OPTIONS.cachePrompt,
+        response_format: {
+            type: "json_schema",
+            json_schema: {
+                name: "civic_deliberation_narrative",
+                strict: true,
+                schema: outputSchema(locale),
+            },
+        },
+    });
+}
 
 async function fetchJson(url, init) {
     const response = await fetch(url, {
@@ -245,20 +288,24 @@ export async function getModelMetadata({
     });
 }
 
-async function callModel({ baseUrl, model, prompt, payload, locale }) {
+async function callModel({ baseUrl, model, spec }) {
     const response = await fetchJson(`${baseUrl}/api/chat`, {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
             model,
-            stream: false,
-            think: false,
-            format: outputSchema(locale),
-            options: MODEL_OPTIONS,
-            messages: [
-                { role: "system", content: prompt },
-                { role: "user", content: JSON.stringify(payload) },
-            ],
+            stream: GENERATION_OPTIONS.stream,
+            think: GENERATION_OPTIONS.think,
+            format: spec.response_format.json_schema.schema,
+            options: {
+                temperature: GENERATION_OPTIONS.temperature,
+                top_k: GENERATION_OPTIONS.topK,
+                top_p: GENERATION_OPTIONS.topP,
+                seed: GENERATION_OPTIONS.seed,
+                num_ctx: GENERATION_OPTIONS.contextLength,
+                num_predict: GENERATION_OPTIONS.maxTokens,
+            },
+            messages: spec.messages,
         }),
     });
     const content = response.message?.content;
@@ -355,6 +402,10 @@ export function validateNarrative(narrative, evidence, baseline, locale) {
     }
     return sortValue(narrative);
 }
+export async function validateGeneratedNarrative(narrative, evidence, locale) {
+    const baseline = (await readJson(BASELINE_PATH))[locale];
+    return validateNarrative(narrative, evidence, baseline, locale);
+}
 
 export function validateNarrativePair(english, mandarin) {
     for (let index = 0; index < english.groups.length; index += 1) {
@@ -370,32 +421,15 @@ export function validateNarrativePair(english, mandarin) {
 }
 
 export async function generateNarrative(locale, evidence, options = {}) {
-    if (!LOCALES.includes(locale)) {
-        throw new Error(`Unsupported locale: ${locale}`);
-    }
-    const baseline = (await readJson(BASELINE_PATH))[locale];
-    const prompt = await readFile(PROMPT_PATHS[locale], "utf8");
     const baseUrl =
         options.baseUrl ||
         process.env.SENSEMAKER_OLLAMA_URL ||
         "http://127.0.0.1:11434";
     const model =
         options.model || process.env.SENSEMAKER_MODEL || DEFAULT_MODEL;
-    const payload = {
-        task: "Produce the publication narrative from the canonical evidence while preserving supported accepted copy.",
-        snapshotId: evidence.snapshotId,
-        locale,
-        evidence: modelEvidence(evidence),
-        acceptedBaseline: baseline,
-    };
-    const candidate = await callModel({
-        baseUrl,
-        model,
-        prompt,
-        payload,
-        locale,
-    });
-    return validateNarrative(candidate, evidence, baseline, locale);
+    const spec = await buildGenerationSpec(locale, evidence);
+    const candidate = await callModel({ baseUrl, model, spec });
+    return validateGeneratedNarrative(candidate, evidence, locale);
 }
 
 function escapeHtml(value) {
@@ -514,7 +548,11 @@ export function renderReportHtml(evidence, narrative, locale, model) {
             return `<div class="polis-group polis-group-${group.code.toLowerCase()}"><h4 id="group-${group.code.toLowerCase()}">${zh ? "群組" : "Group"} ${group.code}: ${escapeHtml(groupNarrative.title)} (${group.count} ${zh ? "位成員" : group.count === 1 ? "member" : "members"})</h4><p>${escapeHtml(groupNarrative.summary)}</p>${citationList(groupNarrative, evidence, locale)}</div>`;
         })
         .join("\n");
-    const modelLabel = `${model.name} · ${model.digest.slice(0, 12)} · Ollama ${model.ollamaVersion}`;
+    const runtimeLabel =
+        model.provider === "wllama"
+            ? `wllama ${model.runtimeVersion}`
+            : `Ollama ${model.ollamaVersion}`;
+    const modelLabel = `${model.name} · ${model.digest.slice(0, 12)} · ${runtimeLabel}`;
 
     return `<div class="polis-generated-report" data-polis-snapshot="${evidence.snapshotId}">
 <p>${zh ? `本報告彙集了在牛津大學羅德樓舉辦的 <a href="/tw/conference/">2026 仁工智慧研討會</a>中 ${evidence.counts.participants} 位參與者的意見。所有統計、圖表與敘事皆綁定同一份 Polis 快照。` : `This report captures the views of ${evidence.counts.participants} participants at the <a href="/conference/">Civic AI Conference 2026</a> at Rhodes House, Oxford. Every statistic, chart, and narrative is bound to the same Polis snapshot.`}</p>
@@ -568,6 +606,9 @@ async function buildManifest(evidence, model) {
         promptZhTw: PROMPT_PATHS["zh-TW"],
         generatorLib: resolve(PACKAGE_ROOT, "src/lib.mjs"),
         generatorCli: resolve(PACKAGE_ROOT, "src/cli.mjs"),
+        replayWasm: resolve(PACKAGE_ROOT, "src/replay-wasm.mjs"),
+        replayHtml: resolve(PACKAGE_ROOT, "src/replay.html"),
+        replayModelManifest: REPLAY_MODEL_MANIFEST_PATH,
         packageJson: resolve(PACKAGE_ROOT, "package.json"),
         evidence: paths.evidence,
         narrativeEn: paths.narrativeEn,
@@ -581,11 +622,11 @@ async function buildManifest(evidence, model) {
     }
     return sortValue({
         schemaVersion: 1,
-        generatorVersion: 1,
+        generatorVersion: 2,
         snapshotId: evidence.snapshotId,
         replayRunsPerLocale: 2,
         model,
-        decoding: MODEL_OPTIONS,
+        decoding: GENERATION_OPTIONS,
         upstream: UPSTREAM,
         files,
     });
@@ -639,7 +680,7 @@ export async function verifyArtifacts() {
     }
     if (
         manifest.replayRunsPerLocale !== 2 ||
-        stableJson(manifest.decoding) !== stableJson(MODEL_OPTIONS)
+        stableJson(manifest.decoding) !== stableJson(GENERATION_OPTIONS)
     ) {
         throw new Error("Generated manifest has incompatible replay settings");
     }

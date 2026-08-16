@@ -16,11 +16,21 @@ if (command === "extract") {
     console.log(
         `Regenerated both report locales from snapshot ${manifest.snapshotId}.`
     );
+} else if (command === "regenerate:wasm") {
+    const { regenerateArtifactsWithWllama } = await import("./replay-wasm.mjs");
+    const manifest = await regenerateArtifactsWithWllama({
+        acceptNew: process.argv.includes("--accept-new"),
+    });
+    console.log(
+        `Replayed both report locales with wllama from snapshot ${manifest.snapshotId}.`
+    );
 } else if (command === "verify") {
     const manifest = await verifyArtifacts();
     console.log(
         `Verified both report locales against snapshot ${manifest.snapshotId}.`
     );
 } else {
-    throw new Error("Usage: bun src/cli.mjs <extract|regenerate|verify>");
+    throw new Error(
+        "Usage: bun src/cli.mjs <extract|regenerate|regenerate:wasm|verify>"
+    );
 }

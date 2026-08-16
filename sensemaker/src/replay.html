@@ -1,0 +1,82 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>Civic AI deterministic narrative replay</title>
+<pre id="log"></pre>
+<script type="module">
+    import { Wllama } from "/wllama/index.js";
+
+    const logElement = document.querySelector("#log");
+
+    async function report(message) {
+        logElement.textContent += `${message}\n`;
+        console.log(message);
+        await fetch("/progress", {
+            method: "POST",
+            headers: { "content-type": "text/plain; charset=utf-8" },
+            body: message,
+        });
+    }
+
+    async function finish(value) {
+        await fetch("/result", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(value),
+        });
+    }
+
+    try {
+        const inputResponse = await fetch("/input.json");
+        if (!inputResponse.ok) {
+            throw new Error(`input.json: ${inputResponse.status}`);
+        }
+        const input = await inputResponse.json();
+        const wllama = new Wllama({ default: "/wllama/wasm/wllama.wasm" });
+        let previousProgress = -1;
+
+        await report(`Loading ${input.model.name}`);
+        await wllama.loadModelFromUrl("/model.gguf", {
+            ...input.loadOptions,
+            progressCallback: ({ loaded, total }) => {
+                const progress = Math.floor((loaded / total) * 20) * 5;
+                if (progress !== previousProgress) {
+                    previousProgress = progress;
+                    void report(`Model ${progress}%`);
+                }
+            },
+        });
+        await report("Model loaded");
+
+        const completions = {};
+        for (const locale of input.locales) {
+            const runs = [];
+            for (let run = 1; run <= input.runsPerLocale; run += 1) {
+                const started = performance.now();
+                await report(`${locale} run ${run} started`);
+                const response = await wllama.createChatCompletion(
+                    input.specs[locale]
+                );
+                const content = response.choices?.[0]?.message?.content;
+                if (typeof content !== "string") {
+                    throw new Error(`${locale} run ${run} returned no content`);
+                }
+                JSON.parse(content);
+                runs.push(content);
+                await report(
+                    `${locale} run ${run} completed in ${((performance.now() - started) / 1000).toFixed(1)}s`
+                );
+            }
+            if (runs.some((content) => content !== runs[0])) {
+                throw new Error(`${locale}: deterministic replay mismatch`);
+            }
+            completions[locale] = runs[0];
+        }
+
+        await report("Replay complete");
+        await finish({ completions });
+    } catch (error) {
+        const message = `${error?.stack || error}`;
+        await report(`Replay failed: ${message}`);
+        await finish({ error: message });
+    }
+</script>

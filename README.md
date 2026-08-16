@@ -59,6 +59,7 @@ vp test
 | `vp run polis:refresh -- --commit <sha>` | Refresh the checked-in Polis snapshot from one immutable upstream commit.                                |
 | `vp run sensemaker:extract`              | Print canonical narrative evidence derived from the checked-in Polis snapshot.                           |
 | `vp run sensemaker:regenerate`           | Generate each report locale twice with local Ollama and write only byte-identical canonical results.     |
+| `vp run sensemaker:regenerate:wasm`      | Replay each locale twice in Chrome with the pinned public GGUF and wllama WASM runtime.                  |
 | `vp run sensemaker:verify`               | Verify snapshot, prompt, narrative, rendered report, and manifest hashes without contacting a model.     |
 | `vp run sensemaker:test`                 | Run the isolated offline grounding and replay tests in `sensemaker/`.                                    |
 | `vp run vectorize:sync-site`             | Upsert the Civic AI search corpus into the `civic-ai-site` Cloudflare Vectorize index.                   |
@@ -73,7 +74,7 @@ A Vite+ **pre-commit hook** runs `vp staged` (formatting + CJK spacing + Mandari
 
 `/conference/sensemaking/` and `/conference/report/` use the same checked-in Polis snapshot. A normal build is offline: the sensemaking view derives directly from verified CSVs, while the report consumes verified bilingual narrative artifacts bound to the same snapshot ID.
 
-Anyone can verify and rebuild both published views without Ollama:
+Anyone can verify and rebuild both published views without a model:
 
 ```bash
 vp run sensemaker:test
@@ -81,7 +82,7 @@ vp run sensemaker:verify
 vp build
 ```
 
-Refreshing the source or replaying the local batch-one narrative inference is an explicit maintenance operation. See [`sensemaker/README.md`](sensemaker/README.md) for the immutable-source workflow, current model digest, deterministic decoding settings, bilingual evidence rules, and exact regeneration commands.
+Refreshing the source or replaying the local batch-one narrative inference is an explicit maintenance operation. The canonical replay uses a public content-pinned GGUF through a pinned wllama WebAssembly runtime; Ollama remains available for intentionally creating candidates with different provenance. See [`sensemaker/README.md`](sensemaker/README.md) for the immutable-source workflow, model and runtime digests, deterministic decoding settings, bilingual evidence rules, and exact regeneration commands.
 
 Search uses Pagefind for English pages, a Fuse-backed Traditional Mandarin sidebar from `/tw/search-index.json`, and a separately configured `worker/` `/au/:question` API for streamed answers — see `worker/README.md` for that package's own setup. The Worker retrieves from Cloudflare Vectorize binding `SITE_VECTORIZE` (`civic-ai-site`) and uses `AUDREY_MODEL=nemotron-ultra` with `BASETEN_API_KEY` plus optional `CF_AIG_TOKEN` to stream Nemotron Ultra through the Cloudflare AI Gateway; without those secrets it returns a deterministic excerpt/stub response for tests and local development.
 

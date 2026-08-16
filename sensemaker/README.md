@@ -9,12 +9,13 @@ The site build never contacts Pol.is, GitHub, Ollama, or another model service. 
 
 ## Guarantees
 
-There are two distinct replay guarantees:
+There are three distinct operations:
 
-1. `bun src/cli.mjs verify` lets anyone reproduce the evidence and report HTML from the checked-in snapshot and narratives without a model. It checks every input and output SHA-256 value.
-2. `bun src/cli.mjs regenerate` repeats the local model inference twice per locale, sequentially at batch size one. It writes nothing unless the two canonical JSON results for each locale are byte-identical.
+1. `bun src/cli.mjs verify` reproduces the evidence and report HTML from the checked-in snapshot and narratives without a model. It checks every input and output SHA-256 value.
+2. `bun src/cli.mjs regenerate:wasm` downloads one revision-pinned public GGUF, verifies its byte length and SHA-256 digest, and runs the pinned wllama WebAssembly runtime in headless Chrome. It runs each locale twice and rejects any raw completion-byte mismatch. By default it also rejects output that differs from the reviewed narrative or, after the first accepted WASM replay, any model/runtime/raw-completion provenance drift.
+3. `bun src/cli.mjs regenerate` remains an Ollama adapter for intentionally producing a candidate with different provenance. It likewise runs each locale twice before writing.
 
-The committed artifacts remain the publication guarantee. Model inference is an auditable derivation step, not a request-time dependency.
+The committed artifacts remain the publication guarantee. Model inference is an auditable editorial derivation step, never a request-time or site-build dependency.
 
 ## Canonical snapshot
 
@@ -70,34 +71,35 @@ After a refresh, the report verification and site build intentionally fail until
 
 ## Replay local narrative inference
 
-### Prerequisites
+### Canonical portable replay
 
-Run an Ollama server and install a schema-capable local model. The accepted artifact was produced with:
+The accepted replay uses these public, content-pinned artifacts:
 
 ```text
-Ollama       0.32.1
-model tag    gemma4:12b-it-qat-mtp
-model digest 77136510022ab8b4240a9e4d4094e74de16e638acecde7fcd670c123eb15b44e
-family       gemma4
-parameters   11.9B
-quantisation Q4_K_M
+model        Qwen2.5-1.5B-Instruct
+repository   Qwen/Qwen2.5-1.5B-Instruct-GGUF
+revision     dd26da440ef0330c47919d1ecae0966d24022222
+file         qwen2.5-1.5b-instruct-q4_k_m.gguf
+bytes        1117320736
+SHA-256      6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e
+licence      Apache-2.0
+runtime      @wllama/wllama 3.5.1
+launcher     puppeteer-core 25.3.0
+backend      CPU WebAssembly SIMD, one thread, zero GPU layers
 ```
 
-The tag is not an identity: the full digest in `generated/manifest.json` is authoritative. This custom model is not available from the public Ollama registry under that bare tag. Exact third-party re-inference therefore requires access to the recorded model artifact. Without it, anyone can still verify and rebuild the committed report bytes; another schema-capable Ollama model can generate a new candidate, but that is a new provenance record rather than an exact replay of this one.
+The package tarball integrities, served JavaScript/WASM hashes, model URL, model identity, and execution shape are recorded in `models/wllama.json`. The model is not committed to Git. The replay command caches it under `${XDG_CACHE_HOME:-~/.cache}/civic-ai/sensemaker/` after verification.
 
-Select a different local model or server only when intentionally creating a new candidate:
+Prerequisites are Chrome or Chromium, enough disk space for the 1,117,320,736-byte model, and the normal root install:
 
 ```bash
-SENSEMAKER_MODEL=<ollama-tag> \
-SENSEMAKER_OLLAMA_URL=http://127.0.0.1:11434 \
-vp run sensemaker:regenerate
+vp install
+vp run sensemaker:regenerate:wasm
 ```
 
-For the recorded model on the default local server:
+Set `SENSEMAKER_BROWSER` when Chrome is not in a standard location. Set `SENSEMAKER_MODEL_PATH` to use an already-downloaded GGUF; the command still verifies its exact byte length and SHA-256 digest before loading it. `SENSEMAKER_MODEL_CACHE` changes the download cache. `SENSEMAKER_REPLAY_TIMEOUT_MS` changes the two-hour default timeout. Restricted CI sandboxes that prevent Chrome from initialising its own sandbox can set `SENSEMAKER_BROWSER_NO_SANDBOX=1`; do not use that escape hatch on a normal workstation.
 
-```bash
-vp run sensemaker:regenerate
-```
+The command starts a loopback-only file server, verifies and serves the locally installed wllama JavaScript and WASM without a CDN, and uses pinned `puppeteer-core` to launch headless Chrome and surface page errors. Generation runs entirely inside the browser. Results return through a loopback POST rather than browser-debugging protocol polling, so long CPU inference is not exposed to a per-call Puppeteer timeout. The browser profile is temporary and deleted after the run.
 
 Each locale uses:
 
@@ -109,12 +111,35 @@ temperature  0
 top_k        1
 top_p        1
 seed         0
-num_ctx      8192
+context      8192
+max tokens   800
+GPU layers   0
+threads      1
 concurrency  1
 repetitions  2 per locale
 ```
 
-Generation order is English run one, English run two, Traditional Mandarin run one, Traditional Mandarin run two. Dynamic batching is not used. The command compares canonical JSON after each pair and aborts before writing if either pair differs.
+Generation order is English run one, English run two, Traditional Mandarin run one, Traditional Mandarin run two. Dynamic batching is not used. The browser compares the two raw completion strings for each locale before returning them; the command then validates schema, prose bounds, locked evidence citations, and bilingual parity.
+
+The first accepted WASM run is allowed to replace the prior model provenance only because its validated canonical narratives match the already-reviewed narrative files byte for byte. Later default runs must also match the accepted wllama model, runtime, and raw completion hashes. A mismatch fails without writing. `--accept-new` bypasses that final acceptance guard only for an intentional, human-reviewed source/model/prose change:
+
+```bash
+vp run sensemaker:regenerate:wasm -- --accept-new
+```
+
+That flag does not weaken schema, grounding, bilingual-parity, or two-run determinism checks.
+
+### Optional Ollama candidates
+
+The original adapter remains available for experimenting with another locally installed schema-capable model:
+
+```bash
+SENSEMAKER_MODEL=<ollama-tag> \
+SENSEMAKER_OLLAMA_URL=http://127.0.0.1:11434 \
+vp run sensemaker:regenerate
+```
+
+This is a new provenance record, not a replay of the accepted wllama artifact. The previously used private Ollama assembly was `gemma4:12b-it-qat-mtp` at digest `77136510022ab8b4240a9e4d4094e74de16e638acecde7fcd670c123eb15b44e` under Ollama `0.32.1`; its bare tag was never a public model identity.
 
 ## Review and publish a regenerated report
 
@@ -141,6 +166,7 @@ The model writes qualitative prose only. It is prohibited from writing digits, p
 ## Files
 
 ```text
+models/wllama.json               Public model and WASM runtime content pins
 prompts/                         Localised model instructions
 source/accepted-baseline.json    Reviewed prose and locked evidence IDs
 source/translations.zh-tw.json   Reviewed statement translations
@@ -149,8 +175,10 @@ generated/narrative.*.json       Accepted model outputs
 generated/report.*.html          Deterministically rendered report bodies
 generated/manifest.json          Source, prompt, model, runtime, and output hashes
 src/lib.mjs                      Evidence, inference, validation, rendering, verification
-src/cli.mjs                      extract, regenerate, and verify commands
-tests/replay.test.mjs            Offline synchronization and grounding tests
+src/replay-wasm.mjs              Model verification, loopback server, browser launcher
+src/replay.html                  In-browser wllama generation and raw replay comparison
+src/cli.mjs                      extract, regenerate, regenerate:wasm, and verify commands
+tests/replay.test.mjs            Offline synchronization, grounding, and replay-contract tests
 ```
 
 `polis-report.md` and `tw-polis-report.md` contain only the `astro:polis-report` marker. `_data/polis_report.js` verifies the generated manifest and supplies the matching locale at build time. The build refuses to combine a report with a different sensemaking snapshot.

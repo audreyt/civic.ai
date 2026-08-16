@@ -1,0 +1,42 @@
+{
+    "schemaVersion": 1,
+    "model": {
+        "name": "Qwen2.5-1.5B-Instruct",
+        "family": "qwen2",
+        "parameterSize": "1.5B",
+        "quantization": "Q4_K_M",
+        "format": "gguf",
+        "repository": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+        "revision": "dd26da440ef0330c47919d1ecae0966d24022222",
+        "filename": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+        "downloadUrl": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/resolve/dd26da440ef0330c47919d1ecae0966d24022222/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+        "bytes": 1117320736,
+        "sha256": "6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e",
+        "license": "Apache-2.0"
+    },
+    "runtime": {
+        "package": "@wllama/wllama",
+        "version": "3.5.1",
+        "integrity": "sha512-m5L0KKtmUTKz5lGvVVa/Y3qRtoobu80Jne51U0CSR6O930aOUURzhMEAolNsN4v0kfQ9u58wi2IdpUicLfaXUw==",
+        "launcher": {
+            "package": "puppeteer-core",
+            "version": "25.3.0",
+            "integrity": "sha512-fm+wpUr2oigH1PXZvwgATrM2tYWHMDG8ASzTEe9uukCye4X5Ldx1K5BTHPFKITrIWvQQAQ256d1NpbEveBcKjA=="
+        },
+        "backend": "cpu-wasm-simd",
+        "gpuLayers": 0,
+        "threads": 1,
+        "assets": {
+            "javascript": {
+                "path": "node_modules/@wllama/wllama/esm/index.js",
+                "bytes": 357890,
+                "sha256": "2ed031e8d61cebd1d4c7d4956a6350f5afc7fa7c678c3a324d66f6df958f67db"
+            },
+            "webassembly": {
+                "path": "node_modules/@wllama/wllama/esm/wasm/wllama.wasm",
+                "bytes": 7656521,
+                "sha256": "4197ce6d3dc9240c42ee52b4197dc99638875a06b0083901f8a57767338a0cfa"
+            }
+        }
+    }
+}
