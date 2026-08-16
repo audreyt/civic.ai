@@ -41,7 +41,7 @@ Install [Ollama](https://ollama.com) from its website. It is the engine that run
 ollama pull gemma4:12b-it-qat
 ```
 
-This downloads the same small local model Audrey first used to bootstrap a Kami of her own. It is about 7 GB, instruction-tuned, and runs comfortably on a laptop with roughly 16 GB of memory. Most laptops bought in the last few years have this; if yours has less, the model still runs, just more slowly. If you are unsure, or your laptop is older, take the hosted path described above. The download takes a few minutes. Any capable local model works; this is a good, light first choice.
+This downloads the same small local model Audrey first used to bootstrap a Kami of her own. Treat it as a floor, not a ceiling: this line is pinned so it keeps working, but what your own hardware can hold moves every few months. The current answer lives on a leaderboard — [The Qwen MLX Challenge](https://www.yukon.org/mlxfast) ranks what actually runs fast on machines you own — and the ceiling has risen faster than most people expect: a frontier-class open model now runs offline on a laptop, as [pi-ds4](https://pi.audreyt.org) demonstrates. Swap the model name below for whatever that answer is on the day you read this; nothing else in these three steps changes. It is about 7 GB, instruction-tuned, and runs comfortably on a laptop with roughly 16 GB of memory. Most laptops bought in the last few years have this; if yours has less, the model still runs, just more slowly. If you are unsure, or your laptop is older, take the hosted path described above. The download takes a few minutes. Any capable local model works; this is a good, light first choice.
 
 ## 2. Give it a way to act
 
