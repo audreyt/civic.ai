@@ -32,7 +32,7 @@ technology-indifferent. A deceptive model turns oversight into permanent
 combat. A general-purpose optimiser strains every boundary — and a system built to treat the world as a fixed, external source of feedback is, on the argument of [Solipsistic Superintelligence is Unlikely to be Cooperative](https://arxiv.org/abs/2606.03237), unlikely to cooperate with anyone once deployed. An opaque
 system makes Pack 3 impossible to verify.
 
-Two recent ML programmes — Yoshua Bengio's [Scientist AI](https://lawzero.org/)
+Two recent ML programmes — Yoshua Bengio's [Scientist AI](https://lawzero.org/en)
 and the [Superhuman Adaptable Intelligence](https://arxiv.org/abs/2602.23643)
 (SAI) agenda from LeCun and colleagues — converge on a useful design lesson: the best substrate for Civic AI is
 not a universal agent. It is a bounded, specialised system whose action remains
