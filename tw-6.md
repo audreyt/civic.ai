@@ -65,7 +65,7 @@ Packs 1 到 4 描述的是關懷應該如何被實踐，Pack 5 描述它如何�
 
 - **界限執行器。** 運算/觸及的配額；資料的 TTL；政策引擎。
 - **條約登錄庫。** 發現 + 合規檢查。
-- **在地安全工具組。** 社群可用 GPT-OSS 與 gpt-oss-safeguard 自帶政策，並用 ROOST 這類開源工具偵測兒少安全危害——而不把權力集中到單一中心。
+- **在地安全工具組。** 社群可用 GPT-OSS 與 [gpt-oss-safeguard](https://developers.openai.com/cookbook/articles/gpt-oss-safeguard-guide) 自帶政策，並用 [ROOST](https://roost.tools) 這類開源工具偵測兒少安全危害——而不把權力集中到單一中心。
 - **繼任套件。** 交接腳本；資料保真度檢查；「冷啟動」教戰手冊。
 - **生態儀表板。** 跨智慧體的多樣性、冗餘、退出便利與交接準備度。
 

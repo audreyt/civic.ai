@@ -18,9 +18,9 @@ By en↔tw pairing, matching the repo's own invariant (see `README.md` →
   the excludes below.
 - `bun run tw` cats the matching `tw-foo.md` files, in the same (alphabetical)
   order, minus the same excludes.
-- Repo metadata — `README.md`, `CLAUDE.md`, `AGENTS.md` — is held out by name
-  in `scripts/review-set.mjs`: none has a `tw-` twin by design, so they're
-  excluded from parity checking too. Only those three names are special-cased.
+- Repo metadata — `README.md`, `CLAUDE.md`, `AGENTS.md`, `DESIGN.md` — is held
+  out by name in `scripts/review-set.mjs`: none has a `tw-` twin by design, so
+  they're excluded from parity checking too.
 - Adding a page means adding both `foo.md` and `tw-foo.md`; both runs pick it
   up with no edit here.
 

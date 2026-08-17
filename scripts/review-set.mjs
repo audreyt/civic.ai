@@ -34,7 +34,7 @@ import { fileURLToPath } from "url";
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, "..");
 
-const META = new Set(["README.md", "CLAUDE.md", "AGENTS.md"]);
+const META = new Set(["README.md", "CLAUDE.md", "AGENTS.md", "DESIGN.md"]);
 
 function parseExclusions() {
     const path = join(here, "review-set.md");
@@ -72,7 +72,7 @@ function base(name) {
 }
 
 const enAll = globSync("*.md", { cwd: root })
-    .filter((f) => !f.startsWith("tw-"))
+    .filter((f) => !f.startsWith("tw-") && !f.startsWith("ja-"))
     .filter((f) => !META.has(f))
     .sort();
 const twAll = globSync("tw-*.md", { cwd: root }).sort();
