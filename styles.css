@@ -4134,8 +4134,22 @@ h4[id] {
 }
 
 /* ─── GLOSSARY LIST ─── */
+.glossary-tier h2 {
+    margin-top: 0.55em;
+    margin-bottom: 0.35em;
+}
+.glossary-tier:first-of-type h2 {
+    margin-top: 0.2em;
+}
+
+.glossary-tier p {
+    margin-top: 0;
+    margin-bottom: 0.7em;
+    color: var(--muted);
+}
+
 .glossary-list {
-    margin: 1.5em 0;
+    margin: 0.5em 0 0.35em;
 }
 .glossary-list dt {
     font-family: var(--sans);
@@ -4144,12 +4158,14 @@ h4[id] {
     margin-top: 1.3em;
     scroll-margin-top: 24px;
 }
+.glossary-list dt:first-child {
+    margin-top: 0.5em;
+}
 .glossary-list dd {
     margin: 0.3em 0 0;
     padding-left: 0;
     line-height: 1.6;
 }
-
 /* ─── CONCEPT MAP · THE DAY WHEEL ───
    Build-time sundial + station manifest rendered by src/lib/conceptMap.ts
    from _data/concept_map.json. Zero client JS; everything below is

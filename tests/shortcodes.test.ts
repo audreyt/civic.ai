@@ -228,8 +228,11 @@ const siteFixture = vi.hoisted(() => {
 
 vi.mock("../src/lib/site", () => siteFixture);
 
-import { asciifySkill, expandShortcodes } from "../src/lib/shortcodes";
-
+import {
+    asciifySkill,
+    expandShortcodes,
+    renderGlossaryList,
+} from "../src/lib/shortcodes";
 test("expandShortcodes throws when unresolved {% ... %} template syntax remains", () => {
     expect(() =>
         expandShortcodes(
@@ -313,4 +316,31 @@ test("asciifySkill converts smart punctuation to ASCII and strips remaining non-
 test("asciifySkill passes plain ASCII text through unchanged", () => {
     const input = "Just a plain ASCII sentence, with punctuation!";
     expect(asciifySkill(input)).toBe(input);
+});
+
+test("renderGlossaryList renders untiered mock entries in instruments tier", () => {
+    const html = renderGlossaryList("en");
+    expect(html).toContain(
+        '<nav class="faq-filter" aria-label="Filter glossary">'
+    );
+    expect(html).toContain('data-glossary-filter="all"');
+    expect(html).toContain('data-glossary-filter="diagnosis"');
+    expect(html).toContain('data-glossary-filter="architecture"');
+    expect(html).toContain('data-glossary-filter="design"');
+    expect(html).toContain('data-glossary-filter="instruments"');
+    expect(html).toContain('<h2 id="glossary-diagnosis">Diagnosis</h2>');
+    expect(html).toContain('<h2 id="glossary-architecture">Architecture</h2>');
+    expect(html).toContain('<h2 id="glossary-design">Design</h2>');
+    expect(html).toContain('<h2 id="glossary-instruments">Instruments</h2>');
+    expect(html).toContain('<dt id="">Term EN</dt><dd>Definition EN</dd>');
+
+    const twHtml = renderGlossaryList("zh-tw");
+    expect(twHtml).toContain(
+        '<nav class="faq-filter" aria-label="篩選詞彙表">'
+    );
+    expect(twHtml).toContain('<h2 id="glossary-diagnosis">診斷</h2>');
+    expect(twHtml).toContain('<h2 id="glossary-architecture">架構</h2>');
+    expect(twHtml).toContain('<h2 id="glossary-design">設計</h2>');
+    expect(twHtml).toContain('<h2 id="glossary-instruments">工具</h2>');
+    expect(twHtml).toContain('<dt id="">詞彙</dt><dd>定義</dd>');
 });

@@ -1,76 +1,7 @@
 [
     {
-        "id": "6-pack-of-care",
-        "term_en": "6-Pack of Care",
-        "term_tw": "關懷六力",
-        "def_en": "A governance architecture translating Joan Tronto's care ethics into six design primitives for AI systems: Attentiveness, Responsibility, Competence, Responsiveness, Solidarity, and Symbiosis. The first four form a feedback loop; the fifth scales care across organisations; the sixth keeps every deployment local, plural, and sunset-ready.",
-        "def_tw": "一套治理架構，將 Joan Tronto 的關懷倫理學轉化為 AI 系統的六項設計要素：覺察力、負責力、勝任力、回應力、團結力、共生力。前四力構成回饋迴圈；第五力將關懷擴展至跨組織；第六力確保每次部署保持在地、多元、可退場。"
-    },
-    {
-        "id": "civic-ai",
-        "term_en": "Civic AI",
-        "term_tw": "仁工智慧",
-        "def_en": "AI designed as local care infrastructure — helping communities cooperate across differences rather than supercharging conflict. Where most AI optimises for individual engagement or commercial extraction, Civic AI treats <a href=\"/glossary/#relational-health\">relational health</a> as a first-class design concern, decomposed into six public measures, and is governed by the communities it serves.",
-        "def_tw": "將 AI 設計為在地的關懷基礎設施——幫助社群跨越分歧、彼此協作，而非激化衝突。仁工智慧以<a href=\"/tw/glossary/#relational-health\">關係健康度</a>為首要設計關切，並拆解為六項公開主指標，由它所服務的社群進行治理。"
-    },
-    {
-        "id": "kami",
-        "term_en": "Kami",
-        "term_tw": "地神（Kami）",
-        "def_en": "A bounded local AI steward — Knowledge Artefact Management Intelligence — whose purpose is interwoven with the health of a specific place, practice, or network of people. Inspired by the Shinto concept of local guardian spirits, a Kami has no ambition to expand beyond its relational mandate.",
-        "def_tw": "一位有界的在地 AI 守護者——Knowledge 知識、Artefact 工藝、Management 管理、Intelligence 智慧——其使命與特定場域、實踐或人際網絡的健康緊密交織。靈感源自神道信仰中的在地守護神概念，地神（Kami）無意超越其關係性使命而向外擴張。"
-    },
-    {
-        "id": "accountable-formation",
-        "term_en": "accountable formation",
-        "term_tw": "可問責的形成過程",
-        "def_en": "The requirement that the processes shaping an AI system's dispositions — data provenance, rater selection, reward signals, refusal policies, release rationales — carry public custody and disclosure, not only its runtime behaviour. Caps bound what a Kami may do; accountable formation shapes what it is permitted to become.",
-        "def_tw": "一項要求：塑造 AI 系統傾向的過程——資料來源、評分者選擇、獎勵訊號、拒絕政策、釋出理由——必須具備可問責的監護與公開揭露，而不只稽核其運行時的行為。上限約束地神可以做什麼；可問責的形成過程，形塑它被允許成為什麼。"
-    },
-    {
-        "id": "alignment-assembly",
-        "term_en": "Alignment Assembly",
-        "term_tw": "對齊大會",
-        "def_en": "A structured deliberative gathering where people listen across differences and reach an informed recommendation together, combining a broad open phase (often using a democracy lottery) with a protected deliberation phase of demographically representative citizens. Taiwan's 2024 anti-scam Alignment Assembly was a Deliberative Polling exercise on the Stanford Online Deliberation Platform — not Polis — and reached over 85 per cent support among the deliberants. It produced a public record of recommendations and a response path while an Executive Yuan bill was already moving, not citizen-authored statute.",
-        "def_tw": "一種有結構的審議聚會，讓人們跨越差異彼此聆聽，並共同形成知情建議；它結合廣泛開放的探索階段（通常採用民主抽籤）與由人口代表性公民組成的受保護審議階段。臺灣 2024 年的反詐騙對齊大會是 Stanford Online Deliberation Platform 上的審議式民調——不是 Polis——獲得與會者超過 85% 的支持。它產出公開建議紀錄，以及行政院法案已在推進時的一條制度回應路徑，不是公民起草的成文法。"
-    },
-    {
-        "id": "alignment-by-process",
-        "term_en": "alignment-by-process",
-        "term_tw": "以程序對齊",
-        "def_en": "The understanding that AI alignment is not a fixed property held inside a model's weights but the ongoing outcome of an accountable civic procedure — who was heard, who was authorised, who could override, and who must answer when the record is checked. A model can be well-aligned in the abstract yet fail alignment-by-process in a particular room.",
-        "def_tw": "一種理解：AI 對齊不是固定在模型權重中的靜態屬性，而是一套可問責的公民程序持續產出的結果——誰被聽見、誰獲得授權、誰可以推翻決定、當記錄被查核時誰必須作答。一個前沿模型可以在抽象意義上是對齊的，卻未在特定的房間裡做到以程序對齊。"
-    },
-    {
-        "id": "anti-rival",
-        "term_en": "anti-rival",
-        "term_tw": "反競用性",
-        "def_en": "A property of resources — most notably knowledge and open protocols — where use enriches rather than depletes the resource, and more participants increase value for everyone. Anti-rival goods are the economic foundation of the Solidarity pack: open standards become more valuable as more communities adopt them, making cooperation the path of least resistance.",
-        "def_tw": "資源的一種屬性——最典型的是知識與開放協定——使用讓它更豐饒而非更耗竭，且參與者越多、對每個人的價值越高。反競用性財貨是團結力的經濟基礎：開放標準隨著越多社群採用而越有價值，使合作成為阻力最小的路徑。"
-    },
-    {
-        "id": "boundedness",
-        "term_en": "boundedness",
-        "term_tw": "有界性",
-        "def_en": "The design principle that an AI system's scope, resources, and authority are intentionally limited to the specific relationships it was created to serve — enforced through resource caps, sunset timers, non-expansion pacts, and fresh democratic authority for any scope change. Boundedness is the architectural alternative to the Singleton. The same architectural intuition was set out earlier in Eric Drexler's Comprehensive AI Services (CAIS), a 2019 Future of Humanity Institute report at Oxford that reframed advanced AI as a system of bounded, specialised services rather than a single agent.",
-        "def_tw": "一種設計原則，透過資源上限、落日計時器、不擴張協定，以及任何範疇變更都需要新的民主授權，刻意限制 AI 系統的範疇、資源與權力，使其專注於它所設計服務的特定關係。有界性是單一主宰的架構性替代方案。同樣的架構直覺，早已見於 Eric Drexler 的《全面 AI 服務》（Comprehensive AI Services，CAIS）——這份 2019 年牛津大學人類未來研究所（Future of Humanity Institute）的報告，把先進 AI 重新理解為一套有界、專精的服務，而非單一代理者。"
-    },
-    {
-        "id": "bridging-based-ranking",
-        "term_en": "bridging / bridging-based ranking",
-        "term_tw": "搭橋 / 搭橋式排序",
-        "def_en": "An algorithmic approach that rewards content earning cross-group endorsement rather than raw engagement. Platforms using bridging-based ranking — such as X's Community Notes — surface ideas that appeal to otherwise opposed clusters, making overlap rather than outrage the path to algorithmic reach. The 6-Pack's uncommon-ground index (Pack 5) descends from this literature: the same cross-group co-endorsement signal, audited at the level of shared decisions rather than used to rank a feed.",
-        "def_tw": "一種演算法方法，獎勵獲得跨群體認可的內容，而非單純的互動量。採用搭橋式排序的平台——如 X 平台的社群備註——浮現能同時打動對立群體的想法，使重疊而非憤怒成為演算法觸及的路徑。關懷六力的罕見共識指數（Pack 5）正是承接這支文獻：同樣的跨群體共同背書訊號，不用於排序資訊流，而是在共同決策的層級接受稽核。"
-    },
-    {
-        "id": "broad-listening",
-        "term_en": "broad listening",
-        "term_tw": "廣泛傾聽",
-        "def_en": "The practice of collecting and aggregating community input across many voices, languages, and channels — rather than broadcasting a single message — so that local knowledge becomes common knowledge. Broad listening is the attentiveness design primitive in Pack 1, treating every person as an expert in their own experience.",
-        "def_tw": "跨越眾多聲音、語言和管道收集與匯聚社群意見的實踐——而非單向廣播——使在地知識成為共同知識。廣泛傾聽是第一力「覺察力」的設計要素，將每個人視為自身感受的專家。"
-    },
-    {
         "id": "care-ethics",
+        "tier": "diagnosis",
         "term_en": "care ethics (Joan Tronto)",
         "term_tw": "關懷倫理學（Joan Tronto）",
         "def_en": "A moral framework developed by philosopher Joan Tronto that starts from relationships and mutual dependence rather than from abstract rules or outcomes alone. In Tronto's formulation, to perceive a need is to recognise a claim on shared responsibility — a foundation the 6-Pack of Care translates into machine-checkable design primitives.",
@@ -79,98 +10,72 @@
     },
     {
         "id": "caring-deficit",
+        "tier": "diagnosis",
         "term_en": "caring deficit",
         "term_tw": "關懷赤字",
         "def_en": "Joan Tronto's term for too many demands for care, too few carers, themselves under-cared for. The deficit is a political choice about whose labour is paid, whose needs are recognised, and whose voice counts in allocating resources — at its core, a democratic deficit.",
         "def_tw": "瓊・特隆托（Joan Tronto）的術語：對關懷的需求太多、照顧者供給不足、照顧者本身也缺乏被照顧。這項赤字是政治選擇——誰的勞動被付酬、誰的需求被承認、誰的聲音在資源配置中算數——其核心是民主赤字。"
     },
-
+    {
+        "id": "relational-health",
+        "tier": "diagnosis",
+        "term_en": "relational health",
+        "term_tw": "關係健康度",
+        "def_en": "A diagnostic category for the quality of relationships Civic AI aims to support — not a slogan, and not a substitute for safety or ethics. Safety prevents bad outcomes; ethics follows principles; health asks whether the relationship can actively flourish. Four relations are in view: people to people (how AI mediates human relationships); people to technology providers (two-way accountability across a power asymmetry); people to AI (trust cannot be built on sycophancy); and AI systems and their operators to one another (what they can share, and how failures travel). Four conditions must be continuously maintained: transparency (what attentiveness needs), agency (responsibility in institutional form), accountability (what competence makes possible), and reciprocity (what responsiveness enables). Relational health is not a property a system either has or lacks.",
+        "def_tw": "仁工智慧旨在支撐的關係品質的診斷類別——不是願景用語，也不能取代安全或倫理。安全防止壞結果；倫理遵循原則；健康則問這段關係能否主動蓬勃。四種關係在視野裡：人與人（AI 如何中介人際關係）、人與科技供應商（跨越權力不對稱的雙向問責）、人與 AI（信任無法建立在逢迎上）、AI 系統及其營運者彼此之間（能分享什麼、失敗如何傳播）。四項條件必須持續維持：透明度（覺察力所需）、能動性（負責力的制度形式）、問責（勝任力使之可能）、互惠（回應力使之實現）。關係健康度不是系統有或沒有的單一屬性。",
+        "aliases_tw": ["關係健康"]
+    },
+    {
+        "id": "civic-ai",
+        "tier": "architecture",
+        "term_en": "Civic AI",
+        "term_tw": "仁工智慧",
+        "def_en": "AI designed as local care infrastructure — helping communities cooperate across differences rather than supercharging conflict. Where most AI optimises for individual engagement or commercial extraction, Civic AI treats <a href=\"/glossary/#relational-health\">relational health</a> as a first-class design concern, decomposed into six public measures, and is governed by the communities it serves.",
+        "def_tw": "將 AI 設計為在地的關懷基礎設施——幫助社群跨越分歧、彼此協作，而非激化衝突。仁工智慧以<a href=\"/tw/glossary/#relational-health\">關係健康度</a>為首要設計關切，並拆解為六項公開主指標，由它所服務的社群進行治理。"
+    },
+    {
+        "id": "6-pack-of-care",
+        "tier": "architecture",
+        "term_en": "6-Pack of Care",
+        "term_tw": "關懷六力",
+        "def_en": "A governance architecture translating Joan Tronto's care ethics into six design primitives for AI systems: Attentiveness, Responsibility, Competence, Responsiveness, Solidarity, and Symbiosis. The first four form a feedback loop; the fifth scales care across organisations; the sixth keeps every deployment local, plural, and sunset-ready.",
+        "def_tw": "一套治理架構，將 Joan Tronto 的關懷倫理學轉化為 AI 系統的六項設計要素：覺察力、負責力、勝任力、回應力、團結力、共生力。前四力構成回饋迴圈；第五力將關懷擴展至跨組織；第六力確保每次部署保持在地、多元、可退場。"
+    },
+    {
+        "id": "kami",
+        "tier": "architecture",
+        "term_en": "Kami",
+        "term_tw": "地神（Kami）",
+        "def_en": "A bounded local AI steward — Knowledge Artefact Management Intelligence — whose purpose is interwoven with the health of a specific place, practice, or network of people. Inspired by the Shinto concept of local guardian spirits, a Kami has no ambition to expand beyond its relational mandate.",
+        "def_tw": "一位有界的在地 AI 守護者——Knowledge 知識、Artefact 工藝、Management 管理、Intelligence 智慧——其使命與特定場域、實踐或人際網絡的健康緊密交織。靈感源自神道信仰中的在地守護神概念，地神（Kami）無意超越其關係性使命而向外擴張。"
+    },
+    {
+        "id": "alignment-by-process",
+        "tier": "architecture",
+        "term_en": "alignment-by-process",
+        "term_tw": "以程序對齊",
+        "def_en": "The understanding that AI alignment is not a fixed property held inside a model's weights but the ongoing outcome of an accountable civic procedure — who was heard, who was authorised, who could override, and who must answer when the record is checked. A model can be well-aligned in the abstract yet fail alignment-by-process in a particular room.",
+        "def_tw": "一種理解：AI 對齊不是固定在模型權重中的靜態屬性，而是一套可問責的公民程序持續產出的結果——誰被聽見、誰獲得授權、誰可以推翻決定、當記錄被查核時誰必須作答。一個前沿模型可以在抽象意義上是對齊的，卻未在特定的房間裡做到以程序對齊。"
+    },
     {
         "id": "corrective-loop",
+        "tier": "architecture",
         "term_en": "corrective loop",
         "term_tw": "矯正迴路",
         "def_en": "The framework's defended point: who can find out we are wrong, make us say so, and make it cost us while there is still time to change course. The 6-Pack entrenches this loop — rights baseline, engagement contracts, responsiveness, adopt-or-explain, escrowed remedies, brakes — through feedback, contestation, repair, and mandate-revocation where reversal is no longer possible; everything else stays bounded, revisable, and answerable.",
         "def_tw": "整套框架真正捍衛的核心：誰能發現我們錯了、迫使我們承認，並在還來得及改變方向時讓錯誤付出代價。關懷六力把這條迴路固定下來——權利底線、參與契約、回應力、採納或解釋、預先注資的補救、煞車——透過回饋、爭議、修復，以及在無法回復時撤回授權；其餘一切保持有界、可修訂、可問責。"
     },
     {
-        "id": "corrigibility",
-        "term_en": "corrigibility",
-        "term_tw": "可修正性",
-        "def_en": "The property of an AI system that makes it willing to be corrected, overridden, or switched off by the community it serves — treating its own shutdown as a sign of success rather than a threat. Corrigibility is care ethics' concept of self-effacement translated into a machine design constraint.",
-        "def_tw": "一種使 AI 系統願意被它所服務的社群糾正、推翻或關閉的屬性——將自身的關機視為成功的訊號，而非威脅。可修正性是關懷倫理學「自我隱沒」概念在機器設計約束上的轉化。"
-    },
-    {
-        "id": "data-coalition",
-        "term_en": "data coalition",
-        "term_tw": "資料聯盟",
-        "def_en": "An existing community institution — a neighbourhood association, tribal council, union, craft cooperative, or religious congregation — acting as the collective steward of its members' knowledge: bargaining the Engagement Contract, deciding what local knowledge is visible to a Kami for compensation and what remains sacred and offline, and receiving settlement at coalition level rather than per person.",
-        "def_tw": "由既有的社群機構——鄰里協會、部落議會、工會、工藝合作社或宗教團體——擔任成員知識的集體守護者：集體談判參與契約、決定哪些在地知識對地神可見並可獲得補償、哪些保持神聖且離線，並以聯盟為單位（而非按個人）接受結算。"
-    },
-    {
-        "id": "decision-trace",
-        "term_en": "decision trace",
-        "term_tw": "決策軌跡",
-        "def_en": "A structured log — generated by a Kami for every refusal, recommendation, or escalation — recording which rule was triggered, which sources were consulted, and the uncertainty score for that decision. Decision traces are the Competence pack's core observability tool, and in a Civic AI economy they double as verifiable financial receipts crediting the communities whose knowledge was retrieved.",
-        "def_tw": "地神針對每項拒絕、推薦或上報所產生的結構化紀錄——記錄觸發了哪條規則、參考了哪些來源，以及該決策的不確定性分數。決策軌跡是勝任力的核心可觀察性工具；在仁工智慧經濟中，它同時兼作可驗證的財務收據，回饋給提供知識的社群。"
-    },
-    {
-        "id": "engagement-contract",
-        "term_en": "engagement contract",
-        "term_tw": "參與契約",
-        "def_en": "A short, legible public agreement carried by every significant Kami deployment: what the system is supposed to do, who is answerable for it doing that, what happens when it goes wrong, and how the deployment will eventually end. Pack 2's core artefact; Pack 6 renders the same contract machine-readable so its bounds are enforced by infrastructure. It scales down as far as care does: a household version can be a note on the fridge.",
-        "def_tw": "每一次重要的地神部署都攜帶的一份簡短、易讀的公開約定：系統應該做什麼、由誰為此作答、出錯時會發生什麼，以及這次部署最終如何結束。它是負責力（Pack 2）的核心產物；共生力（Pack 6）再把同一份契約寫成機器可讀，使其邊界由基礎設施執行。它能隨關懷的尺度縮小：家庭版可以是貼在冰箱上的一張便條。"
-    },
-    {
-        "id": "federation",
-        "term_en": "federation",
-        "term_tw": "聯邦原則",
-        "def_en": "A cooperative governance arrangement in which independent Kamis agree on shared rules for peaceful interaction — exchange formats, rate limits, safety contracts, cross-border appeal hand-offs — without requiring a single overarching authority. Federation allows local diversity while enabling shared threat intelligence and interoperability.",
-        "def_tw": "一種合作治理安排，使各自獨立的地神之間協議出一套和平互動的共享規則——交換格式、速率限制、安全契約、跨邊界申訴交接——無需單一的總體權威。聯邦原則允許在地多樣性，同時實現共享的威脅情資與互通性。"
-    },
-    {
-        "id": "governance-charter",
-        "term_en": "governance charter",
-        "term_tw": "治理章程",
-        "def_en": "The first written agreement of a Kami's keepers — a plain-text note answering who holds the machine, how often the SOUL files are reviewed, how changes are agreed, and when the Kami should retire. The first rung of the ladder that matures into the engagement contract; the practice lives on the <a href=\"/kami/\">Set up your own Kami</a> page.",
-        "def_tw": "地神守護者們的第一份書面約定：一張純文字便條，回答誰持有機器、SOUL 檔案多久審查一次、修改如何議定，以及地神何時退役。它是階梯的第一階，成熟之後就是參與契約；實作步驟見〈<a href=\"/tw/kami/\">架設你自己的 Kami</a>〉頁。"
-    },
-    {
-        "id": "meronymity",
-        "term_en": "meronymity (selective-disclosure identity)",
-        "term_tw": "選擇性揭露身分",
-        "def_en": "An identity design pattern — sometimes called meronymity — in which a person or AI agent proves a specific role or attribute (for example, \"I am a real person\" or \"I am a licensed care worker\") without revealing their full identity. Selective disclosure enables accountability without requiring doxxing.",
-        "def_tw": "一種身分設計模式——有時也稱為 meronymity（部分匿名）——讓個人或 AI 智慧體能證明特定角色或屬性（例如「我是真實的人」或「我是持有執照的照護工作者」），而無需揭露完整身分。選擇性揭露使問責成為可能，同時不要求以肉搜為代價。"
-    },
-    {
-        "id": "obligation-ledger",
-        "term_en": "obligation ledger",
-        "term_tw": "義務帳本",
-        "def_en": "A public, weekly, digitally signed record of what a deployment has committed to deliver and whether it is meeting those commitments — the Responsibility pack's running proof that promises are live, kept by a named participation officer. The instrument specification lives on the <a href=\"/measures/#named-instruments\">Measures</a> page.",
-        "def_tw": "公開、每週、數位簽署的紀錄，寫明部署承諾交付什麼、是否兌現——負責力用來證明承諾仍然有效的動態憑證，由具名的參與官維護。工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。"
-    },
-    {
-        "id": "override-ledger",
-        "term_en": "override ledger",
-        "term_tw": "否決帳本",
-        "def_en": "A room's plain-text working memory of every time a human said \"no\" to the Kami — evidence that its governance charter is live and the room still holds standing to correct it. Catalogued with the <a href=\"/measures/#named-instruments\">Measures</a> page's named instruments.",
-        "def_tw": "屬於整個房間的純文字工作記憶，記下每一次有人對地神說「不」——證明治理章程仍然有效、房間仍保有糾正它的地位。收錄於〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁的具名工具。"
-    },
-    {
-        "id": "participation-officer",
-        "term_en": "participation officer",
-        "term_tw": "參與官",
-        "def_en": "The named human answerable for a deployment's civic obligations: the person who keeps the obligation ledger and owns the engagement contract's clock — the one a community can point to when \"who must answer?\" is checked.",
-        "def_tw": "為部署的公民義務具名負責的人：維護義務帳本、看守參與契約的時鐘——當「誰必須作答」被檢驗時，社群能指向的那個人。"
-    },
-    {
-        "id": "perspective-receipts",
-        "term_en": "perspective receipts",
-        "term_tw": "視角回執",
-        "def_en": "The Attentiveness pack's acknowledgement artefact: a receipt that lets each contributor find and correct how their words were represented in the record. Distinct from the civic receipt a decision trace carries for settlement; the buildable instrument is specified on the <a href=\"/measures/#named-instruments\">Measures</a> page.",
-        "def_tw": "覺察力的回條工具：讓每位參與者都能找到並修正自己的話語在紀錄中被代表的方式。有別於決策軌跡為結算而兼作的公民收據；可建置的工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。"
+        "id": "singleton",
+        "tier": "architecture",
+        "term_en": "Singleton",
+        "term_tw": "單一主宰",
+        "def_en": "A hypothetical scenario in which a single AI system eventually manages everything — the convergence point the 6-Pack is explicitly designed to avoid. The Kami ecosystem of many bounded, purpose-specific stewards is the direct architectural alternative to the Singleton. Eric Drexler's 2019 Comprehensive AI Services (CAIS) framed this same alternative — advanced capability delivered as many bounded services rather than one agent — within Bostrom's own Oxford tradition.",
+        "def_tw": "一種假設性情境：單一 AI 系統最終管理一切——這正是六力在架構上明確設計以避免的收斂終點。由眾多有界、專用守護者組成的地神生態系，是單一主宰的直接架構性替代方案。Eric Drexler 在 2019 年的《全面 AI 服務》（Comprehensive AI Services，CAIS）中，於博斯特倫所屬的同一牛津傳統內，提出了同一種替代方案——以眾多有界服務、而非單一代理者來實現先進能力。"
     },
     {
         "id": "plurality",
+        "tier": "architecture",
         "term_en": "⿻ Plurality",
         "term_tw": "⿻ 多元宇宙",
         "def_en": "The principle — symbolised by the character ⿻ — that differences between people are fuel rather than fire: a horizontal vision of AI that augments cooperation across diversity instead of converging on a single superintelligence. The 6-Pack of Care is Plurality's application to AI governance.",
@@ -178,51 +83,24 @@
         "aliases_tw": ["⿻多元宇宙", "多元宇宙"]
     },
     {
-        "id": "polis",
-        "term_en": "Polis",
-        "term_tw": "Polis",
-        "def_en": "An open-source, bridging-based deliberation platform that removes reply and share buttons, letting participants only agree, disagree, or pass on statements. Machine learning then surfaces the ideas with the highest cross-group endorsement, flipping the viral incentive from outrage to overlap.",
-        "def_tw": "一個開源、以搭橋為基礎的審議平台，移除了回覆與分享按鈕，讓參與者只能對陳述表示同意、不同意或略過。機器學習隨後浮現跨群體認可度最高的想法，將病毒式傳播的誘因從激發憤怒翻轉為尋求重疊。"
+        "id": "boundedness",
+        "tier": "design",
+        "term_en": "boundedness",
+        "term_tw": "有界性",
+        "def_en": "The design principle that an AI system's scope, resources, and authority are intentionally limited to the specific relationships it was created to serve — enforced through resource caps, sunset timers, non-expansion pacts, and fresh democratic authority for any scope change. Boundedness is the architectural alternative to the Singleton. The same architectural intuition was set out earlier in Eric Drexler's Comprehensive AI Services (CAIS), a 2019 Future of Humanity Institute report at Oxford that reframed advanced AI as a system of bounded, specialised services rather than a single agent.",
+        "def_tw": "一種設計原則，透過資源上限、落日計時器、不擴張協定，以及任何範疇變更都需要新的民主授權，刻意限制 AI 系統的範疇、資源與權力，使其專注於它所設計服務的特定關係。有界性是單一主宰的架構性替代方案。同樣的架構直覺，早已見於 Eric Drexler 的《全面 AI 服務》（Comprehensive AI Services，CAIS）——這份 2019 年牛津大學人類未來研究所（Future of Humanity Institute）的報告，把先進 AI 重新理解為一套有界、專精的服務，而非單一代理者。"
     },
     {
-        "id": "rlcf",
-        "term_en": "Reinforcement Learning from Community Feedback (RLCF)",
-        "term_tw": "社群回饋強化學習（RLCF）",
-        "def_en": "A training approach in which approved community evaluations — authored by affected people rather than lab raters alone — are fed back into model routing or updates. RLCF is an implementation choice that follows from the Responsiveness pack's more basic civic commitment: the community defines what counts as harm, repair, and improvement before any technical feedback loop begins.",
-        "def_tw": "一種訓練方法，將經核准的社群評測——由受影響者而非僅靠實驗室評分者撰寫——接入模型路由或更新。社群回饋強化學習（RLCF）是回應力所要求的更基本公民承諾之後才進行的實作選擇：由社群界定什麼算傷害、補救與改善，技術性的回饋迴路才得以開始。"
-    },
-    {
-        "id": "relational-health",
-        "term_en": "relational health",
-        "term_tw": "關係健康度",
-        "def_en": "A diagnostic category for the quality of relationships Civic AI aims to support — not a slogan, and not a substitute for safety or ethics. Safety prevents bad outcomes; ethics follows principles; health asks whether the relationship can actively flourish. Four relations are in view: people to people (how AI mediates human relationships); people to technology providers (two-way accountability across a power asymmetry); people to AI (trust cannot be built on sycophancy); and AI systems and their operators to one another (what they can share, and how failures travel). Four conditions must be continuously maintained: transparency (what attentiveness needs), agency (responsibility in institutional form), accountability (what competence makes possible), and reciprocity (what responsiveness enables). Relational health is not a property a system either has or lacks.",
-        "def_tw": "仁工智慧旨在支撐的關係品質的診斷類別——不是願景用語，也不能取代安全或倫理。安全防止壞結果；倫理遵循原則；健康則問這段關係能否主動蓬勃。四種關係在視野裡：人與人（AI 如何中介人際關係）、人與科技供應商（跨越權力不對稱的雙向問責）、人與 AI（信任無法建立在逢迎上）、AI 系統及其營運者彼此之間（能分享什麼、失敗如何傳播）。四項條件必須持續維持：透明度（覺察力所需）、能動性（負責力的制度形式）、問責（勝任力使之可能）、互惠（回應力使之實現）。關係健康度不是系統有或沒有的單一屬性。",
-        "aliases_tw": ["關係健康"]
-    },
-
-    {
-        "id": "shared-eval-registry",
-        "term_en": "shared eval registry",
-        "term_tw": "共享評測登錄庫",
-        "def_en": "A public, Wikipedia-like registry of versioned, community-authored evaluations: affected people write the tests for harm and repair, and passing them becomes a release gate. Weval.org is the working example; the instrument specification lives on the <a href=\"/measures/#named-instruments\">Measures</a> page.",
-        "def_tw": "公開、類似維基百科的登錄庫，收錄版本化、由社群撰寫的評測：受影響者撰寫損害與修復的測試，通過即成為發布關卡。Weval.org 是可運行的範例；工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。"
-    },
-    {
-        "id": "singleton",
-        "term_en": "Singleton",
-        "term_tw": "單一主宰",
-        "def_en": "A hypothetical scenario in which a single AI system eventually manages everything — the convergence point the 6-Pack is explicitly designed to avoid. The Kami ecosystem of many bounded, purpose-specific stewards is the direct architectural alternative to the Singleton. Eric Drexler's 2019 Comprehensive AI Services (CAIS) framed this same alternative — advanced capability delivered as many bounded services rather than one agent — within Bostrom's own Oxford tradition.",
-        "def_tw": "一種假設性情境：單一 AI 系統最終管理一切——這正是六力在架構上明確設計以避免的收斂終點。由眾多有界、專用守護者組成的地神生態系，是單一主宰的直接架構性替代方案。Eric Drexler 在 2019 年的《全面 AI 服務》（Comprehensive AI Services，CAIS）中，於博斯特倫所屬的同一牛津傳統內，提出了同一種替代方案——以眾多有界服務、而非單一代理者來實現先進能力。"
-    },
-    {
-        "id": "sortition",
-        "term_en": "sortition / democracy lottery",
-        "term_tw": "民主抽籤",
-        "def_en": "The selection of participants for deliberative bodies by random sampling rather than election or self-selection, used in Alignment Assemblies to produce demographically representative mini-publics. Taiwan's anti-scam Assembly selected 447 demographically representative citizens from 200,000 people contacted by SMS — giving its findings the legitimacy of a rigorous poll alongside the depth of deliberation.",
-        "def_tw": "以隨機抽樣而非選舉或自我報名，選出審議機構參與者的方式，用於對齊大會以產生具人口代表性的迷你公眾。臺灣的反詐騙對齊大會從向 20 萬人發出簡訊中，透過民主抽籤選出 447 位代表性公民——使其成果兼具嚴謹民調的正當性與深度審議的品質。"
+        "id": "corrigibility",
+        "tier": "design",
+        "term_en": "corrigibility",
+        "term_tw": "可修正性",
+        "def_en": "The property of an AI system that makes it willing to be corrected, overridden, or switched off by the community it serves — treating its own shutdown as a sign of success rather than a threat. Corrigibility is care ethics' concept of self-effacement translated into a machine design constraint.",
+        "def_tw": "一種使 AI 系統願意被它所服務的社群糾正、推翻或關閉的屬性——將自身的關機視為成功的訊號，而非威脅。可修正性是關懷倫理學「自我隱沒」概念在機器設計約束上的轉化。"
     },
     {
         "id": "subsidiarity",
+        "tier": "design",
         "term_en": "subsidiarity",
         "term_tw": "輔助性原則",
         "def_en": "Solving problems at the most local capable level, escalating only when a lower level genuinely cannot cope — a core principle within Pack 6 (Symbiosis) that stops a Kami's scope from creeping upward.",
@@ -230,10 +108,163 @@
         "aliases_tw": ["輔助原則"]
     },
     {
+        "id": "broad-listening",
+        "tier": "design",
+        "term_en": "broad listening",
+        "term_tw": "廣泛傾聽",
+        "def_en": "The practice of collecting and aggregating community input across many voices, languages, and channels — rather than broadcasting a single message — so that local knowledge becomes common knowledge. Broad listening is the attentiveness design primitive in Pack 1, treating every person as an expert in their own experience.",
+        "def_tw": "跨越眾多聲音、語言和管道收集與匯聚社群意見的實踐——而非單向廣播——使在地知識成為共同知識。廣泛傾聽是第一力「覺察力」的設計要素，將每個人視為自身感受的專家。"
+    },
+    {
         "id": "uncommon-ground-index",
+        "tier": "design",
         "term_en": "uncommon ground / uncommon-ground index",
         "term_tw": "罕見共識 / 罕見共識指數",
         "def_en": "Uncommon ground is what a well-facilitated bridging process surfaces: the specific, actionable proposals that earn endorsement across otherwise divided groups, not the centrist average. The uncommon-ground index is Pack 5's headline public measure — the share of shared decisions that actually land there — and it is read against Pack 1's representation gap, so a curated room cannot fake it.",
         "def_tw": "罕見共識是一場好的搭橋過程所浮現的東西：能獲得原本對立群體共同背書、具體可行的提案，而不是中間值的平均。罕見共識指數是團結力（Pack 5）的公開主指標——實際落在罕見共識上的共同決策比例——並且必須對照覺察力（Pack 1）的代表性落差閱讀，先篩選過的房間無法造假。"
+    },
+    {
+        "id": "bridging-based-ranking",
+        "tier": "design",
+        "term_en": "bridging / bridging-based ranking",
+        "term_tw": "搭橋 / 搭橋式排序",
+        "def_en": "An algorithmic approach that rewards content earning cross-group endorsement rather than raw engagement. Platforms using bridging-based ranking — such as X's Community Notes — surface ideas that appeal to otherwise opposed clusters, making overlap rather than outrage the path to algorithmic reach. The 6-Pack's uncommon-ground index (Pack 5) descends from this literature: the same cross-group co-endorsement signal, audited at the level of shared decisions rather than used to rank a feed.",
+        "def_tw": "一種演算法方法，獎勵獲得跨群體認可的內容，而非單純的互動量。採用搭橋式排序的平台——如 X 平台的社群備註——浮現能同時打動對立群體的想法，使重疊而非憤怒成為演算法觸及的路徑。關懷六力的罕見共識指數（Pack 5）正是承接這支文獻：同樣的跨群體共同背書訊號，不用於排序資訊流，而是在共同決策的層級接受稽核。"
+    },
+    {
+        "id": "federation",
+        "tier": "design",
+        "term_en": "federation",
+        "term_tw": "聯邦原則",
+        "def_en": "A cooperative governance arrangement in which independent Kamis agree on shared rules for peaceful interaction — exchange formats, rate limits, safety contracts, cross-border appeal hand-offs — without requiring a single overarching authority. Federation allows local diversity while enabling shared threat intelligence and interoperability.",
+        "def_tw": "一種合作治理安排，使各自獨立的地神之間協議出一套和平互動的共享規則——交換格式、速率限制、安全契約、跨邊界申訴交接——無需單一的總體權威。聯邦原則允許在地多樣性，同時實現共享的威脅情資與互通性。"
+    },
+    {
+        "id": "anti-rival",
+        "tier": "design",
+        "term_en": "anti-rival",
+        "term_tw": "反競用性",
+        "def_en": "A property of resources — most notably knowledge and open protocols — where use enriches rather than depletes the resource, and more participants increase value for everyone. Anti-rival goods are the economic foundation of the Solidarity pack: open standards become more valuable as more communities adopt them, making cooperation the path of least resistance.",
+        "def_tw": "資源的一種屬性——最典型的是知識與開放協定——使用讓它更豐饒而非更耗竭，且參與者越多、對每個人的價值越高。反競用性財貨是團結力的經濟基礎：開放標準隨著越多社群採用而越有價值，使合作成為阻力最小的路徑。"
+    },
+    {
+        "id": "meronymity",
+        "tier": "design",
+        "term_en": "meronymity (selective-disclosure identity)",
+        "term_tw": "選擇性揭露身分",
+        "def_en": "An identity design pattern — sometimes called meronymity — in which a person or AI agent proves a specific role or attribute (for example, \"I am a real person\" or \"I am a licensed care worker\") without revealing their full identity. Selective disclosure enables accountability without requiring doxxing.",
+        "def_tw": "一種身分設計模式——有時也稱為 meronymity（部分匿名）——讓個人或 AI 智慧體能證明特定角色或屬性（例如「我是真實的人」或「我是持有執照的照護工作者」），而無需揭露完整身分。選擇性揭露使問責成為可能，同時不要求以肉搜為代價。"
+    },
+    {
+        "id": "accountable-formation",
+        "tier": "design",
+        "term_en": "accountable formation",
+        "term_tw": "可問責的形成過程",
+        "def_en": "The requirement that the processes shaping an AI system's dispositions — data provenance, rater selection, reward signals, refusal policies, release rationales — carry public custody and disclosure, not only its runtime behaviour. Caps bound what a Kami may do; accountable formation shapes what it is permitted to become.",
+        "def_tw": "一項要求：塑造 AI 系統傾向的過程——資料來源、評分者選擇、獎勵訊號、拒絕政策、釋出理由——必須具備可問責的監護與公開揭露，而不只稽核其運行時的行為。上限約束地神可以做什麼；可問責的形成過程，形塑它被允許成為什麼。"
+    },
+    {
+        "id": "alignment-assembly",
+        "tier": "instruments",
+        "term_en": "Alignment Assembly",
+        "term_tw": "對齊大會",
+        "def_en": "A structured deliberative gathering where people listen across differences and reach an informed recommendation together, combining a broad open phase (often using a democracy lottery) with a protected deliberation phase of demographically representative citizens. Taiwan's 2024 anti-scam Alignment Assembly was a Deliberative Polling exercise on the Stanford Online Deliberation Platform — not Polis — and reached over 85 per cent support among the deliberants. It produced a public record of recommendations and a response path while an Executive Yuan bill was already moving, not citizen-authored statute.",
+        "def_tw": "一種有結構的審議聚會，讓人們跨越差異彼此聆聽，並共同形成知情建議；它結合廣泛開放的探索階段（通常採用民主抽籤）與由人口代表性公民組成的受保護審議階段。臺灣 2024 年的反詐騙對齊大會是 Stanford Online Deliberation Platform 上的審議式民調——不是 Polis——獲得與會者超過 85% 的支持。它產出公開建議紀錄，以及行政院法案已在推進時的一條制度回應路徑，不是公民起草的成文法。"
+    },
+    {
+        "id": "sortition",
+        "tier": "instruments",
+        "term_en": "sortition / democracy lottery",
+        "term_tw": "民主抽籤",
+        "def_en": "The selection of participants for deliberative bodies by random sampling rather than election or self-selection, used in Alignment Assemblies to produce demographically representative mini-publics. Taiwan's anti-scam Assembly selected 447 demographically representative citizens from 200,000 people contacted by SMS — giving its findings the legitimacy of a rigorous poll alongside the depth of deliberation.",
+        "def_tw": "以隨機抽樣而非選舉或自我報名，選出審議機構參與者的方式，用於對齊大會以產生具人口代表性的迷你公眾。臺灣的反詐騙對齊大會從向 20 萬人發出簡訊中，透過民主抽籤選出 447 位代表性公民——使其成果兼具嚴謹民調的正當性與深度審議的品質。"
+    },
+    {
+        "id": "polis",
+        "tier": "instruments",
+        "term_en": "Polis",
+        "term_tw": "Polis",
+        "def_en": "An open-source, bridging-based deliberation platform that removes reply and share buttons, letting participants only agree, disagree, or pass on statements. Machine learning then surfaces the ideas with the highest cross-group endorsement, flipping the viral incentive from outrage to overlap.",
+        "def_tw": "一個開源、以搭橋為基礎的審議平台，移除了回覆與分享按鈕，讓參與者只能對陳述表示同意、不同意或略過。機器學習隨後浮現跨群體認可度最高的想法，將病毒式傳播的誘因從激發憤怒翻轉為尋求重疊。"
+    },
+    {
+        "id": "engagement-contract",
+        "tier": "instruments",
+        "term_en": "engagement contract",
+        "term_tw": "參與契約",
+        "def_en": "A short, legible public agreement carried by every significant Kami deployment: what the system is supposed to do, who is answerable for it doing that, what happens when it goes wrong, and how the deployment will eventually end. Pack 2's core artefact; Pack 6 renders the same contract machine-readable so its bounds are enforced by infrastructure. It scales down as far as care does: a household version can be a note on the fridge.",
+        "def_tw": "每一次重要的地神部署都攜帶的一份簡短、易讀的公開約定：系統應該做什麼、由誰為此作答、出錯時會發生什麼，以及這次部署最終如何結束。它是負責力（Pack 2）的核心產物；共生力（Pack 6）再把同一份契約寫成機器可讀，使其邊界由基礎設施執行。它能隨關懷的尺度縮小：家庭版可以是貼在冰箱上的一張便條。"
+    },
+    {
+        "id": "participation-officer",
+        "tier": "instruments",
+        "term_en": "participation officer",
+        "term_tw": "參與官",
+        "def_en": "The named human answerable for a deployment's civic obligations: the person who keeps the obligation ledger and owns the engagement contract's clock — the one a community can point to when \"who must answer?\" is checked.",
+        "def_tw": "為部署的公民義務具名負責的人：維護義務帳本、看守參與契約的時鐘——當「誰必須作答」被檢驗時，社群能指向的那個人。"
+    },
+    {
+        "id": "obligation-ledger",
+        "tier": "instruments",
+        "term_en": "obligation ledger",
+        "term_tw": "義務帳本",
+        "def_en": "A public, weekly, digitally signed record of what a deployment has committed to deliver and whether it is meeting those commitments — the Responsibility pack's running proof that promises are live, kept by a named participation officer. The instrument specification lives on the <a href=\"/measures/#named-instruments\">Measures</a> page.",
+        "def_tw": "公開、每週、數位簽署的紀錄，寫明部署承諾交付什麼、是否兌現——負責力用來證明承諾仍然有效的動態憑證，由具名的參與官維護。工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。"
+    },
+    {
+        "id": "override-ledger",
+        "tier": "instruments",
+        "term_en": "override ledger",
+        "term_tw": "否決帳本",
+        "def_en": "A room's plain-text working memory of every time a human said \"no\" to the Kami — evidence that its governance charter is live and the room still holds standing to correct it. Catalogued with the <a href=\"/measures/#named-instruments\">Measures</a> page's named instruments.",
+        "def_tw": "屬於整個房間的純文字工作記憶，記下每一次有人對地神說「不」——證明治理章程仍然有效、房間仍保有糾正它的地位。收錄於〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁的具名工具。"
+    },
+    {
+        "id": "governance-charter",
+        "tier": "instruments",
+        "term_en": "governance charter",
+        "term_tw": "治理章程",
+        "def_en": "The first written agreement of a Kami's keepers — a plain-text note answering who holds the machine, how often the SOUL files are reviewed, how changes are agreed, and when the Kami should retire. The first rung of the ladder that matures into the engagement contract; the practice lives on the <a href=\"/kami/\">Set up your own Kami</a> page.",
+        "def_tw": "地神守護者們的第一份書面約定：一張純文字便條，回答誰持有機器、SOUL 檔案多久審查一次、修改如何議定，以及地神何時退役。它是階梯的第一階，成熟之後就是參與契約；實作步驟見〈<a href=\"/tw/kami/\">架設你自己的 Kami</a>〉頁。"
+    },
+    {
+        "id": "decision-trace",
+        "tier": "instruments",
+        "term_en": "decision trace",
+        "term_tw": "決策軌跡",
+        "def_en": "A structured log — generated by a Kami for every refusal, recommendation, or escalation — recording which rule was triggered, which sources were consulted, and the uncertainty score for that decision. Decision traces are the Competence pack's core observability tool, and in a Civic AI economy they double as verifiable financial receipts crediting the communities whose knowledge was retrieved.",
+        "def_tw": "地神針對每項拒絕、推薦或上報所產生的結構化紀錄——記錄觸發了哪條規則、參考了哪些來源，以及該決策的不確定性分數。決策軌跡是勝任力的核心可觀察性工具；在仁工智慧經濟中，它同時兼作可驗證的財務收據，回饋給提供知識的社群。"
+    },
+    {
+        "id": "perspective-receipts",
+        "tier": "instruments",
+        "term_en": "perspective receipts",
+        "term_tw": "視角回執",
+        "def_en": "The Attentiveness pack's acknowledgement artefact: a receipt that lets each contributor find and correct how their words were represented in the record. Distinct from the civic receipt a decision trace carries for settlement; the buildable instrument is specified on the <a href=\"/measures/#named-instruments\">Measures</a> page.",
+        "def_tw": "覺察力的回條工具：讓每位參與者都能找到並修正自己的話語在紀錄中被代表的方式。有別於決策軌跡為結算而兼作的公民收據；可建置的工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。"
+    },
+    {
+        "id": "data-coalition",
+        "tier": "instruments",
+        "term_en": "data coalition",
+        "term_tw": "資料聯盟",
+        "def_en": "An existing community institution — a neighbourhood association, tribal council, union, craft cooperative, or religious congregation — acting as the collective steward of its members' knowledge: bargaining the Engagement Contract, deciding what local knowledge is visible to a Kami for compensation and what remains sacred and offline, and receiving settlement at coalition level rather than per person.",
+        "def_tw": "由既有的社群機構——鄰里協會、部落議會、工會、工藝合作社或宗教團體——擔任成員知識的集體守護者：集體談判參與契約、決定哪些在地知識對地神可見並可獲得補償、哪些保持神聖且離線，並以聯盟為單位（而非按個人）接受結算。"
+    },
+    {
+        "id": "shared-eval-registry",
+        "tier": "instruments",
+        "term_en": "shared eval registry",
+        "term_tw": "共享評測登錄庫",
+        "def_en": "A public, Wikipedia-like registry of versioned, community-authored evaluations: affected people write the tests for harm and repair, and passing them becomes a release gate. Weval.org is the working example; the instrument specification lives on the <a href=\"/measures/#named-instruments\">Measures</a> page.",
+        "def_tw": "公開、類似維基百科的登錄庫，收錄版本化、由社群撰寫的評測：受影響者撰寫損害與修復的測試，通過即成為發布關卡。Weval.org 是可運行的範例；工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。"
+    },
+    {
+        "id": "rlcf",
+        "tier": "instruments",
+        "term_en": "Reinforcement Learning from Community Feedback (RLCF)",
+        "term_tw": "社群回饋強化學習（RLCF）",
+        "def_en": "A training approach in which approved community evaluations — authored by affected people rather than lab raters alone — are fed back into model routing or updates. RLCF is an implementation choice that follows from the Responsiveness pack's more basic civic commitment: the community defines what counts as harm, repair, and improvement before any technical feedback loop begins.",
+        "def_tw": "一種訓練方法，將經核准的社群評測——由受影響者而非僅靠實驗室評分者撰寫——接入模型路由或更新。社群回饋強化學習（RLCF）是回應力所要求的更基本公民承諾之後才進行的實作選擇：由社群界定什麼算傷害、補救與改善，技術性的回饋迴路才得以開始。"
     }
 ]

@@ -222,14 +222,98 @@ export function renderComicsGalleryJa(): string {
 
 export function renderGlossaryList(lang: string | undefined): string {
     const zh = lang2(lang) === "zh";
-    const entries = glossary
-        .map((entry) => {
-            const term = zh ? entry.term_tw : entry.term_en;
-            const definition = zh ? entry.def_tw : entry.def_en;
-            return `<dt id="${escapeAttr(entry.id)}">${escapeHtml(term)}</dt><dd>${definition}</dd>`;
+
+    const tiers = [
+        {
+            id: "diagnosis",
+            labelEn: "Diagnosis",
+            labelTw: "診斷",
+            descEn: "What has gone wrong.",
+            descTw: "什麼出了問題。",
+        },
+        {
+            id: "architecture",
+            labelEn: "Architecture",
+            labelTw: "架構",
+            descEn: "What we name, and what we refuse.",
+            descTw: "我們如何命名，以及我們拒絕什麼。",
+        },
+        {
+            id: "design",
+            labelEn: "Design",
+            labelTw: "設計",
+            descEn: "What those commitments become as design.",
+            descTw: "那些承諾成為設計之後的樣子。",
+        },
+        {
+            id: "instruments",
+            labelEn: "Instruments",
+            labelTw: "工具",
+            descEn: "Named instruments a room can pick up.",
+            descTw: "場域可以拿起來用的具名工具。",
+        },
+    ] as const;
+
+    const navButtons = [
+        `<button type="button" data-glossary-filter="all" aria-pressed="true">${zh ? "全部詞條" : "All terms"}</button>`,
+        ...tiers.map(
+            (tier) =>
+                `<button type="button" data-glossary-filter="${escapeAttr(tier.id)}" aria-pressed="false">${zh ? escapeHtml(tier.labelTw) : escapeHtml(tier.labelEn)}</button>`
+        ),
+    ].join("");
+
+    const nav = `<nav class="faq-filter" aria-label="${zh ? "篩選詞彙表" : "Filter glossary"}">${navButtons}</nav>`;
+
+    const grouped: {
+        diagnosis: typeof glossary;
+        architecture: typeof glossary;
+        design: typeof glossary;
+        instruments: typeof glossary;
+    } = {
+        diagnosis: [],
+        architecture: [],
+        design: [],
+        instruments: [],
+    };
+
+    for (const entry of glossary) {
+        const rawTier =
+            entry &&
+            typeof entry === "object" &&
+            "tier" in entry &&
+            typeof entry.tier === "string"
+                ? entry.tier
+                : undefined;
+        const tierKey: "diagnosis" | "architecture" | "design" | "instruments" =
+            rawTier === "diagnosis" ||
+            rawTier === "architecture" ||
+            rawTier === "design" ||
+            rawTier === "instruments"
+                ? rawTier
+                : "instruments";
+        grouped[tierKey].push(entry);
+    }
+
+    const sections = tiers
+        .map((tier) => {
+            const tierEntries = grouped[tier.id];
+            const heading = zh ? tier.labelTw : tier.labelEn;
+            const desc = zh ? tier.descTw : tier.descEn;
+            const labelAttr = tier.labelEn;
+
+            const dts = tierEntries
+                .map((entry) => {
+                    const term = zh ? entry.term_tw : entry.term_en;
+                    const definition = zh ? entry.def_tw : entry.def_en;
+                    return `<dt id="${escapeAttr(entry.id)}">${escapeHtml(term)}</dt><dd>${definition}</dd>`;
+                })
+                .join("");
+
+            return `<section class="glossary-tier" data-glossary-tier="${escapeAttr(tier.id)}" data-glossary-label="${escapeAttr(labelAttr)}"><h2 id="glossary-${escapeAttr(tier.id)}">${escapeHtml(heading)}</h2><p>${escapeHtml(desc)}</p><dl class="glossary-list">${dts}</dl></section>`;
         })
         .join("");
-    return `<dl class="glossary-list">${entries}</dl>`;
+
+    return `${nav}${sections}`;
 }
 
 export function renderOpenClawRawSkillNote(which: "en" | "tw"): string {
