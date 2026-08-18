@@ -44,9 +44,9 @@
     {
         "id": "anti-rival",
         "term_en": "anti-rival",
-        "term_tw": "反競爭性",
+        "term_tw": "反競用性",
         "def_en": "A property of resources — most notably knowledge and open protocols — where use enriches rather than depletes the resource, and more participants increase value for everyone. Anti-rival goods are the economic foundation of the Solidarity pack: open standards become more valuable as more communities adopt them, making cooperation the path of least resistance.",
-        "def_tw": "資源的一種屬性——最典型的是知識與開放協定——使用讓它更豐饒而非更耗竭，且參與者越多、對每個人的價值越高。反競爭性財貨是團結力的經濟基礎：開放標準隨著越多社群採用而越有價值，使合作成為阻力最小的路徑。"
+        "def_tw": "資源的一種屬性——最典型的是知識與開放協定——使用讓它更豐饒而非更耗竭，且參與者越多、對每個人的價值越高。反競用性財貨是團結力的經濟基礎：開放標準隨著越多社群採用而越有價值，使合作成為阻力最小的路徑。"
     },
     {
         "id": "boundedness",
@@ -157,7 +157,7 @@
     {
         "id": "perspective-receipts",
         "term_en": "perspective receipts",
-        "term_tw": "觀點收據",
+        "term_tw": "視角回執",
         "def_en": "The Attentiveness pack's acknowledgement artefact: a receipt that lets each contributor find and correct how their words were represented in the record. Distinct from the civic receipt a decision trace carries for settlement; the buildable instrument is specified on the <a href=\"/measures/#named-instruments\">Measures</a> page.",
         "def_tw": "覺察力的回條工具：讓每位參與者都能找到並修正自己的話語在紀錄中被代表的方式。有別於決策軌跡為結算而兼作的公民收據；可建置的工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。"
     },
