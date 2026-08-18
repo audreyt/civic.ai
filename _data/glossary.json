@@ -10,8 +10,8 @@
         "id": "civic-ai",
         "term_en": "Civic AI",
         "term_tw": "仁工智慧",
-        "def_en": "AI designed as local care infrastructure — helping communities cooperate across differences rather than supercharging conflict. Where most AI optimises for individual engagement or commercial extraction, Civic AI treats relational health as a first-class design concern, decomposed into six public measures, and is governed by the communities it serves.",
-        "def_tw": "將 AI 設計為在地的關懷基礎設施——幫助社群跨越分歧、彼此協作，而非激化衝突。仁工智慧以關係健康為首要設計關切，並拆解為六項公開主指標，由它所服務的社群進行治理。"
+        "def_en": "AI designed as local care infrastructure — helping communities cooperate across differences rather than supercharging conflict. Where most AI optimises for individual engagement or commercial extraction, Civic AI treats <a href=\"/glossary/#relational-health\">relational health</a> as a first-class design concern, decomposed into six public measures, and is governed by the communities it serves.",
+        "def_tw": "將 AI 設計為在地的關懷基礎設施——幫助社群跨越分歧、彼此協作，而非激化衝突。仁工智慧以<a href=\"/tw/glossary/#relational-health\">關係健康度</a>為首要設計關切，並拆解為六項公開主指標，由它所服務的社群進行治理。"
     },
     {
         "id": "kami",
@@ -31,8 +31,8 @@
         "id": "alignment-assembly",
         "term_en": "Alignment Assembly",
         "term_tw": "對齊大會",
-        "def_en": "A structured deliberative gathering where people listen across differences and reach an informed recommendation together, combining a broad open phase (often using a democracy lottery) with a protected deliberation phase of demographically representative citizens. Taiwan's 2024 anti-scam Alignment Assembly reached over 85 per cent cross-partisan support, and its principles passed into law within months.",
-        "def_tw": "一種有結構的審議聚會，讓人們跨越差異彼此聆聽，並共同形成知情建議；它結合廣泛開放的探索階段（通常採用民主抽籤）與由人口代表性公民組成的受保護審議階段。臺灣 2024 年的反詐騙對齊大會獲得超過 85% 的跨黨派支持，相關原則在數月內化為法律。"
+        "def_en": "A structured deliberative gathering where people listen across differences and reach an informed recommendation together, combining a broad open phase (often using a democracy lottery) with a protected deliberation phase of demographically representative citizens. Taiwan's 2024 anti-scam Alignment Assembly was a Deliberative Polling exercise on the Stanford Online Deliberation Platform — not Polis — and reached over 85 per cent support among the deliberants. It produced a public record of recommendations and a response path while an Executive Yuan bill was already moving, not citizen-authored statute.",
+        "def_tw": "一種有結構的審議聚會，讓人們跨越差異彼此聆聽，並共同形成知情建議；它結合廣泛開放的探索階段（通常採用民主抽籤）與由人口代表性公民組成的受保護審議階段。臺灣 2024 年的反詐騙對齊大會是 Stanford Online Deliberation Platform 上的審議式民調——不是 Polis——獲得與會者超過 85% 的支持。它產出公開建議紀錄，以及行政院法案已在推進時的一條制度回應路徑，不是公民起草的成文法。"
     },
     {
         "id": "alignment-by-process",
@@ -77,6 +77,14 @@
         "def_tw": "由哲學家 Joan Tronto 發展的道德框架，從關係與相互依存出發，而非僅從抽象規則或結果出發。在 Tronto 的論述中，覺察到需求，就是承認它對我們共同責任的主張——關懷六力正是以此為基礎，將其轉化為機器可檢驗的設計要素。",
         "aliases_tw": ["關懷倫理"]
     },
+    {
+        "id": "caring-deficit",
+        "term_en": "caring deficit",
+        "term_tw": "關懷赤字",
+        "def_en": "Joan Tronto's term for too many demands for care, too few carers, themselves under-cared for. The deficit is a political choice about whose labour is paid, whose needs are recognised, and whose voice counts in allocating resources — at its core, a democratic deficit.",
+        "def_tw": "瓊・特隆托（Joan Tronto）的術語：對關懷的需求太多、照顧者供給不足、照顧者本身也缺乏被照顧。這項赤字是政治選擇——誰的勞動被付酬、誰的需求被承認、誰的聲音在資源配置中算數——其核心是民主赤字。"
+    },
+
     {
         "id": "corrective-loop",
         "term_en": "corrective loop",
@@ -183,6 +191,15 @@
         "def_en": "A training approach in which approved community evaluations — authored by affected people rather than lab raters alone — are fed back into model routing or updates. RLCF is an implementation choice that follows from the Responsiveness pack's more basic civic commitment: the community defines what counts as harm, repair, and improvement before any technical feedback loop begins.",
         "def_tw": "一種訓練方法，將經核准的社群評測——由受影響者而非僅靠實驗室評分者撰寫——接入模型路由或更新。社群回饋強化學習（RLCF）是回應力所要求的更基本公民承諾之後才進行的實作選擇：由社群界定什麼算傷害、補救與改善，技術性的回饋迴路才得以開始。"
     },
+    {
+        "id": "relational-health",
+        "term_en": "relational health",
+        "term_tw": "關係健康度",
+        "def_en": "A diagnostic category for the quality of relationships Civic AI aims to support — not a slogan, and not a substitute for safety or ethics. Safety prevents bad outcomes; ethics follows principles; health asks whether the relationship can actively flourish. Four relations are in view: people to people (how AI mediates human relationships); people to technology providers (two-way accountability across a power asymmetry); people to AI (trust cannot be built on sycophancy); and AI systems and their operators to one another (what they can share, and how failures travel). Four conditions must be continuously maintained: transparency (what attentiveness needs), agency (responsibility in institutional form), accountability (what competence makes possible), and reciprocity (what responsiveness enables). Relational health is not a property a system either has or lacks.",
+        "def_tw": "仁工智慧旨在支撐的關係品質的診斷類別——不是願景用語，也不能取代安全或倫理。安全防止壞結果；倫理遵循原則；健康則問這段關係能否主動蓬勃。四種關係在視野裡：人與人（AI 如何中介人際關係）、人與科技供應商（跨越權力不對稱的雙向問責）、人與 AI（信任無法建立在逢迎上）、AI 系統及其營運者彼此之間（能分享什麼、失敗如何傳播）。四項條件必須持續維持：透明度（覺察力所需）、能動性（負責力的制度形式）、問責（勝任力使之可能）、互惠（回應力使之實現）。關係健康度不是系統有或沒有的單一屬性。",
+        "aliases_tw": ["關係健康"]
+    },
+
     {
         "id": "shared-eval-registry",
         "term_en": "shared eval registry",
