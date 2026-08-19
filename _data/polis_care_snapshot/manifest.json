@@ -1,0 +1,35 @@
+{
+    "schemaVersion": 1,
+    "snapshotId": "39b1eed77ad2caed03c11d38b7f5730b5008f9df14e4c7617dc3b2854b740db0",
+    "exportId": "r2jstrdchy3udbrf8arjx",
+    "repository": "https://github.com/audreyt/polis-tally",
+    "commit": "b1cce6f7761871e51729859600f6b92b3c59b3d7",
+    "timeZone": "Europe/London",
+    "files": {
+        "summary": {
+            "name": "r2jstrdchy3udbrf8arjx-summary.csv",
+            "bytes": 142,
+            "sha256": "6462e7b9f32d13bb7fb63305f09a979ebdf806194e7ef6625d4e330695fb1858"
+        },
+        "comments": {
+            "name": "r2jstrdchy3udbrf8arjx-comments.csv",
+            "bytes": 3817,
+            "sha256": "da702589389076ba050026431ead0c95fa24459e4b7396cea81cab0a33092c70"
+        },
+        "votes": {
+            "name": "r2jstrdchy3udbrf8arjx-votes.csv",
+            "bytes": 54752,
+            "sha256": "8e4d5efd5f2863156f39932e69c16bf459dd1c35f6b3684e068bfd902e782853"
+        },
+        "participantVotes": {
+            "name": "r2jstrdchy3udbrf8arjx-participant-votes.csv",
+            "bytes": 2950,
+            "sha256": "408f29244df2bd7297a95edd6e5732299baf2d01b65c5d0c569a353a250646db"
+        },
+        "commentGroups": {
+            "name": "r2jstrdchy3udbrf8arjx-comment-groups.csv",
+            "bytes": 3083,
+            "sha256": "d92a52f338a7777a0320a44e0b09a660e592b0173e168c0831653a64c4efa9fe"
+        }
+    }
+}

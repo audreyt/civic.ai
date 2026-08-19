@@ -29,10 +29,10 @@ The 6-Pack describes the governance around a Civic AI. This essay asks a narrowe
 The 6-Pack is deliberately technology-agnostic. Its governance should
 outlast any one model family. But technology-agnostic is not
 technology-indifferent. A deceptive model turns oversight into permanent
-combat. A general-purpose optimiser strains every boundary. An opaque
+combat. A general-purpose optimiser strains every boundary — and a system built to treat the world as a fixed, external source of feedback is, on the argument of [Solipsistic Superintelligence is Unlikely to be Cooperative](https://arxiv.org/abs/2606.03237), unlikely to cooperate with anyone once deployed. An opaque
 system makes Pack 3 impossible to verify.
 
-Two recent ML programmes — Yoshua Bengio's [Scientist AI](https://lawzero.org/)
+Two recent ML programmes — Yoshua Bengio's [Scientist AI](https://lawzero.org/en)
 and the [Superhuman Adaptable Intelligence](https://arxiv.org/abs/2602.23643)
 (SAI) agenda from LeCun and colleagues — converge on a useful design lesson: the best substrate for Civic AI is
 not a universal agent. It is a bounded, specialised system whose action remains
@@ -78,7 +78,7 @@ where governance belongs.
 The SAI programme of LeCun and colleagues attacks a different myth: that the right goal is one
 general intelligence good at everything.
 
-Its case is mathematical before it is political. The No Free Lunch theorem — a
+Its case is mathematical before it is political. The [No Free Lunch theorem](https://doi.org/10.1109/4235.585893) — a
 formal result in machine learning — says no single algorithm dominates every
 class of problem. Multi-task systems suffer
 negative transfer when tasks compete for the same representational capacity.
@@ -98,7 +98,7 @@ smarter AI requires one system to do everything.
 
 ## Taniguchi: meaning by negotiation, not by decree
 
-A third programme, less prominent in the Western AI-safety conversation but load-bearing for Civic AI, comes from Tadahiro Taniguchi and colleagues' _Collective Predictive Coding_ (CPC). Its 2026 _Artificial Life_ paper, which I co-authored, frames the next step beyond Bengio's epistemic honesty and SAI's specialisation: how should a community of bounded, specialised systems and their human counterparts negotiate the shared meanings — words, norms, categories, agreements — that make coordination possible at all?
+A third programme, less prominent in the Western AI-safety conversation but load-bearing for Civic AI, comes from Tadahiro Taniguchi and colleagues' [_Collective Predictive Coding_](https://doi.org/10.1162/ARTL.a.475) (CPC). Its 2026 _Artificial Life_ paper, which I co-authored, frames the next step beyond Bengio's epistemic honesty and SAI's specialisation: how should a community of bounded, specialised systems and their human counterparts negotiate the shared meanings — words, norms, categories, agreements — that make coordination possible at all?
 
 The dominant alignment paradigm answers this top-down. A supervisor — a single human, a model card, a reinforcement-learning-from-human-feedback (RLHF) preference dataset — holds a privileged "ground-truth" distribution, and every other system is taught to converge on it. The paper calls this _hierarchical alignment_, and is precise about its political cost: alignment becomes the imposition of one community's values on all others, which is exactly the singleton condition the 6-Pack is built to refuse.
 

@@ -2303,6 +2303,13 @@ body.comics-page main {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
+.comics-cell > .comics-page-link {
+    border: none;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+}
+
 .comics-page-link img {
     width: 100%;
     height: auto;
@@ -2398,10 +2405,6 @@ body.comics-page main {
     overflow-wrap: break-word;
 }
 
-.ja-ov-layer .ov.rect > span[data-no-soft-wrap] {
-    white-space: pre;
-}
-
 .ja-ov-layer .ov.shaped {
     --ov-scale: 1;
 }
@@ -2412,7 +2415,51 @@ body.comics-page main {
     overflow-wrap: break-word;
 }
 
+.comics-cell {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--surface);
+    transition:
+        border-color 0.15s,
+        box-shadow 0.15s;
+}
+
+.comics-cell:hover,
+.comics-cell:focus-within {
+    border-color: var(--gold-light);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.comics-gallery .next-action-button {
+    align-self: center;
+    margin: 8px 0 12px;
+    color: var(--heading);
+    border-color: var(--border);
+}
+
+.comics-gallery .next-action-button:hover {
+    color: var(--heading);
+    background: var(--warm);
+    border-color: var(--gold-light);
+}
+
+@media print {
+    .ja-ov-layer,
+    .comics-gallery .next-action-button,
+    .comics-gallery .comics-page-label {
+        display: none !important;
+    }
+}
+
 /* ─── POLIS REPORT ─── */
+.polis-generated-report :not(pre) > code {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
 .polis-overview {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2869,6 +2916,13 @@ html[data-theme="dark"] .audio-section {
     gap: 18px;
 }
 
+.polis-consensus-grid > *,
+.polis-two-up > *,
+.polis-method-grid > *,
+.polis-side-stack > * {
+    min-width: 0;
+}
+
 .polis-stats-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     margin-bottom: 28px;
@@ -2903,6 +2957,16 @@ html[data-theme="dark"] .audio-section {
     grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.85fr);
     align-items: start;
     margin-bottom: 32px;
+}
+.polis-consensus-card,
+.polis-side-card,
+.polis-visual-card {
+    max-width: none;
+    margin: 0;
+}
+
+.polis-side-card a {
+    overflow-wrap: anywhere;
 }
 
 .polis-consensus-card,
@@ -4080,8 +4144,22 @@ h4[id] {
 }
 
 /* ─── GLOSSARY LIST ─── */
+.glossary-tier h2 {
+    margin-top: 0.55em;
+    margin-bottom: 0.35em;
+}
+.glossary-tier:first-of-type h2 {
+    margin-top: 0.2em;
+}
+
+.glossary-tier p {
+    margin-top: 0;
+    margin-bottom: 0.7em;
+    color: var(--muted);
+}
+
 .glossary-list {
-    margin: 1.5em 0;
+    margin: 0.5em 0 0.35em;
 }
 .glossary-list dt {
     font-family: var(--sans);
@@ -4090,12 +4168,14 @@ h4[id] {
     margin-top: 1.3em;
     scroll-margin-top: 24px;
 }
+.glossary-list dt:first-child {
+    margin-top: 0.5em;
+}
 .glossary-list dd {
     margin: 0.3em 0 0;
     padding-left: 0;
     line-height: 1.6;
 }
-
 /* ─── CONCEPT MAP · THE DAY WHEEL ───
    Build-time sundial + station manifest rendered by src/lib/conceptMap.ts
    from _data/concept_map.json. Zero client JS; everything below is

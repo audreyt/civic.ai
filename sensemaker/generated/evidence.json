@@ -1,0 +1,1394 @@
+{
+    "counts": {
+        "clusteredParticipants": 45,
+        "groups": 3,
+        "participants": 62,
+        "sourceSummaryVotersInConversation": 46,
+        "statements": 20,
+        "voteEvents": 671
+    },
+    "exportId": "r2jstrdchy3udbrf8arjx",
+    "groups": [
+        {
+            "code": "A",
+            "count": 17,
+            "internalId": "0",
+            "sharePct": 27,
+            "standoutStatementIds": [
+                "14",
+                "2"
+            ]
+        },
+        {
+            "code": "B",
+            "count": 21,
+            "internalId": "1",
+            "sharePct": 34,
+            "standoutStatementIds": [
+                "3",
+                "10",
+                "9"
+            ]
+        },
+        {
+            "code": "C",
+            "count": 7,
+            "internalId": "2",
+            "sharePct": 11,
+            "standoutStatementIds": [
+                "10",
+                "19",
+                "7"
+            ]
+        }
+    ],
+    "participants": [
+        {
+            "group": "A",
+            "id": "0",
+            "plot": {
+                "x": 62.386975840788,
+                "y": 257.752298256944
+            }
+        },
+        {
+            "group": "A",
+            "id": "5",
+            "plot": {
+                "x": 96.394018900569,
+                "y": 251.762625346552
+            }
+        },
+        {
+            "group": "A",
+            "id": "6",
+            "plot": {
+                "x": 57.33723478929,
+                "y": 290.568717338668
+            }
+        },
+        {
+            "group": "A",
+            "id": "9",
+            "plot": {
+                "x": 201.45741235944,
+                "y": 249.836271321909
+            }
+        },
+        {
+            "group": "A",
+            "id": "10",
+            "plot": {
+                "x": 158.413068684865,
+                "y": 301.166620064559
+            }
+        },
+        {
+            "group": "A",
+            "id": "14",
+            "plot": {
+                "x": 569.050282315827,
+                "y": 328.226271337033
+            }
+        },
+        {
+            "group": "A",
+            "id": "17",
+            "plot": {
+                "x": 349.558419555204,
+                "y": 257.607363168316
+            }
+        },
+        {
+            "group": "A",
+            "id": "21",
+            "plot": {
+                "x": 87.256781974995,
+                "y": 232.996445619299
+            }
+        },
+        {
+            "group": "A",
+            "id": "22",
+            "plot": {
+                "x": 77.860021764168,
+                "y": 285.542329210876
+            }
+        },
+        {
+            "group": "A",
+            "id": "25",
+            "plot": {
+                "x": 323.199265957879,
+                "y": 397.718259293759
+            }
+        },
+        {
+            "group": "A",
+            "id": "32",
+            "plot": {
+                "x": 330.520120869768,
+                "y": 253.334095530381
+            }
+        },
+        {
+            "group": "A",
+            "id": "37",
+            "plot": {
+                "x": 597.579320941539,
+                "y": 316.032173144564
+            }
+        },
+        {
+            "group": "A",
+            "id": "39",
+            "plot": {
+                "x": 165.374176568447,
+                "y": 254.203233879265
+            }
+        },
+        {
+            "group": "A",
+            "id": "40",
+            "plot": {
+                "x": 325.110895792327,
+                "y": 251.362414522564
+            }
+        },
+        {
+            "group": "A",
+            "id": "42",
+            "plot": {
+                "x": 414.544663230855,
+                "y": 418
+            }
+        },
+        {
+            "group": "A",
+            "id": "43",
+            "plot": {
+                "x": 531.819629403538,
+                "y": 237.972350716893
+            }
+        },
+        {
+            "group": "A",
+            "id": "46",
+            "plot": {
+                "x": 244.132074572406,
+                "y": 251.169160896235
+            }
+        },
+        {
+            "group": "B",
+            "id": "1",
+            "plot": {
+                "x": 157.12816415936,
+                "y": 284.912536210651
+            }
+        },
+        {
+            "group": "B",
+            "id": "4",
+            "plot": {
+                "x": 493.379543062234,
+                "y": 114.651657304388
+            }
+        },
+        {
+            "group": "B",
+            "id": "7",
+            "plot": {
+                "x": 62.386975840788,
+                "y": 257.752298256944
+            }
+        },
+        {
+            "group": "B",
+            "id": "8",
+            "plot": {
+                "x": 86.953657872812,
+                "y": 279.856417034466
+            }
+        },
+        {
+            "group": "B",
+            "id": "11",
+            "plot": {
+                "x": 122.303037441152,
+                "y": 310.27697505983
+            }
+        },
+        {
+            "group": "B",
+            "id": "12",
+            "plot": {
+                "x": 298.027107853926,
+                "y": 42
+            }
+        },
+        {
+            "group": "B",
+            "id": "13",
+            "plot": {
+                "x": 352.804887565437,
+                "y": 98.560533108312
+            }
+        },
+        {
+            "group": "B",
+            "id": "15",
+            "plot": {
+                "x": 457.233546165722,
+                "y": 185.222896854162
+            }
+        },
+        {
+            "group": "B",
+            "id": "16",
+            "plot": {
+                "x": 131.123641883606,
+                "y": 259.834529862326
+            }
+        },
+        {
+            "group": "B",
+            "id": "18",
+            "plot": {
+                "x": 162.923829622141,
+                "y": 255.564217193
+            }
+        },
+        {
+            "group": "B",
+            "id": "20",
+            "plot": {
+                "x": 311.868336750346,
+                "y": 228.68501894645
+            }
+        },
+        {
+            "group": "B",
+            "id": "23",
+            "plot": {
+                "x": 288.224584491595,
+                "y": 319.925990919405
+            }
+        },
+        {
+            "group": "B",
+            "id": "24",
+            "plot": {
+                "x": 46.913929917408,
+                "y": 229.962267303011
+            }
+        },
+        {
+            "group": "B",
+            "id": "26",
+            "plot": {
+                "x": 281.733768477237,
+                "y": 323.144800747427
+            }
+        },
+        {
+            "group": "B",
+            "id": "27",
+            "plot": {
+                "x": 108.78212619251,
+                "y": 287.825351681545
+            }
+        },
+        {
+            "group": "B",
+            "id": "30",
+            "plot": {
+                "x": 428.715259164621,
+                "y": 310.785146282226
+            }
+        },
+        {
+            "group": "B",
+            "id": "31",
+            "plot": {
+                "x": 508.141703983588,
+                "y": 106.895264870219
+            }
+        },
+        {
+            "group": "B",
+            "id": "34",
+            "plot": {
+                "x": 367.977875451779,
+                "y": 324.616034279866
+            }
+        },
+        {
+            "group": "B",
+            "id": "36",
+            "plot": {
+                "x": 508.926907998691,
+                "y": 199.032323491072
+            }
+        },
+        {
+            "group": "B",
+            "id": "41",
+            "plot": {
+                "x": 597.579320941539,
+                "y": 316.032173144564
+            }
+        },
+        {
+            "group": "B",
+            "id": "45",
+            "plot": {
+                "x": 436.679761993715,
+                "y": 401.591090771002
+            }
+        },
+        {
+            "group": "C",
+            "id": "3",
+            "plot": {
+                "x": 155.873643763745,
+                "y": 327.556695380814
+            }
+        },
+        {
+            "group": "C",
+            "id": "19",
+            "plot": {
+                "x": 520.336968475631,
+                "y": 398.655369006815
+            }
+        },
+        {
+            "group": "C",
+            "id": "29",
+            "plot": {
+                "x": 541.513003691576,
+                "y": 338.170342223965
+            }
+        },
+        {
+            "group": "C",
+            "id": "33",
+            "plot": {
+                "x": 537.583382403462,
+                "y": 334.953630740717
+            }
+        },
+        {
+            "group": "C",
+            "id": "35",
+            "plot": {
+                "x": 42,
+                "y": 326.615978503672
+            }
+        },
+        {
+            "group": "C",
+            "id": "38",
+            "plot": {
+                "x": 296.418427889154,
+                "y": 361.109466542072
+            }
+        },
+        {
+            "group": "C",
+            "id": "44",
+            "plot": {
+                "x": 185.13195759218,
+                "y": 322.144525552093
+            }
+        },
+        {
+            "group": "U",
+            "id": "2",
+            "plot": {
+                "x": 57.12689526006,
+                "y": 293.619015087187
+            }
+        },
+        {
+            "group": "U",
+            "id": "28",
+            "plot": {
+                "x": 183.21773754358,
+                "y": 306.07339710938
+            }
+        },
+        {
+            "group": "U",
+            "id": "47",
+            "plot": {
+                "x": 499.281180485543,
+                "y": 241.390343050853
+            }
+        },
+        {
+            "group": "U",
+            "id": "48",
+            "plot": {
+                "x": 348.266169239154,
+                "y": 228.791533848867
+            }
+        },
+        {
+            "group": "U",
+            "id": "49",
+            "plot": {
+                "x": 598,
+                "y": 309.931577647525
+            }
+        },
+        {
+            "group": "U",
+            "id": "50",
+            "plot": {
+                "x": 286.596866308661,
+                "y": 353.219923283244
+            }
+        },
+        {
+            "group": "U",
+            "id": "51",
+            "plot": {
+                "x": 352.583459898285,
+                "y": 236.444691861511
+            }
+        },
+        {
+            "group": "U",
+            "id": "52",
+            "plot": {
+                "x": 358.647645292427,
+                "y": 377.46668146664
+            }
+        },
+        {
+            "group": "U",
+            "id": "53",
+            "plot": {
+                "x": 62.386975840788,
+                "y": 257.752298256944
+            }
+        },
+        {
+            "group": "U",
+            "id": "54",
+            "plot": {
+                "x": 416.089901560166,
+                "y": 150.784785977019
+            }
+        },
+        {
+            "group": "U",
+            "id": "55",
+            "plot": {
+                "x": 216.961815246769,
+                "y": 287.753885659853
+            }
+        },
+        {
+            "group": "U",
+            "id": "56",
+            "plot": {
+                "x": 92.405110067271,
+                "y": 266.848503673292
+            }
+        },
+        {
+            "group": "U",
+            "id": "57",
+            "plot": {
+                "x": 62.386975840788,
+                "y": 257.752298256944
+            }
+        },
+        {
+            "group": "U",
+            "id": "58",
+            "plot": {
+                "x": 459.046094390931,
+                "y": 178.739366948332
+            }
+        },
+        {
+            "group": "U",
+            "id": "59",
+            "plot": {
+                "x": 61.602723367487,
+                "y": 260.650879723663
+            }
+        },
+        {
+            "group": "U",
+            "id": "60",
+            "plot": {
+                "x": 58.307064290821,
+                "y": 251.291139308807
+            }
+        },
+        {
+            "group": "U",
+            "id": "61",
+            "plot": {
+                "x": 56.497200892353,
+                "y": 282.028820751837
+            }
+        }
+    ],
+    "question": {
+        "en": "What kind of AI use would people accept in care, government, and everyday public life?",
+        "tw": "人們願意接受哪一種 AI 應用於照護、政府與日常公共生活？"
+    },
+    "schemaVersion": 1,
+    "snapshotId": "39b1eed77ad2caed03c11d38b7f5730b5008f9df14e4c7617dc3b2854b740db0",
+    "source": {
+        "commit": "b1cce6f7761871e51729859600f6b92b3c59b3d7",
+        "files": {
+            "commentGroups": {
+                "bytes": 3083,
+                "name": "r2jstrdchy3udbrf8arjx-comment-groups.csv",
+                "sha256": "d92a52f338a7777a0320a44e0b09a660e592b0173e168c0831653a64c4efa9fe"
+            },
+            "comments": {
+                "bytes": 3817,
+                "name": "r2jstrdchy3udbrf8arjx-comments.csv",
+                "sha256": "da702589389076ba050026431ead0c95fa24459e4b7396cea81cab0a33092c70"
+            },
+            "participantVotes": {
+                "bytes": 2950,
+                "name": "r2jstrdchy3udbrf8arjx-participant-votes.csv",
+                "sha256": "408f29244df2bd7297a95edd6e5732299baf2d01b65c5d0c569a353a250646db"
+            },
+            "summary": {
+                "bytes": 142,
+                "name": "r2jstrdchy3udbrf8arjx-summary.csv",
+                "sha256": "6462e7b9f32d13bb7fb63305f09a979ebdf806194e7ef6625d4e330695fb1858"
+            },
+            "votes": {
+                "bytes": 54752,
+                "name": "r2jstrdchy3udbrf8arjx-votes.csv",
+                "sha256": "8e4d5efd5f2863156f39932e69c16bf459dd1c35f6b3684e068bfd902e782853"
+            }
+        },
+        "id": "39b1eed77ad2caed03c11d38b7f5730b5008f9df14e4c7617dc3b2854b740db0",
+        "repository": "https://github.com/audreyt/polis-tally",
+        "timeZone": "Europe/London"
+    },
+    "sourceWindow": {
+        "from": {
+            "en": "24 Mar 2026",
+            "tw": "2026年3月24日"
+        },
+        "to": {
+            "en": "26 Mar 2026",
+            "tw": "2026年3月26日"
+        }
+    },
+    "statements": [
+        {
+            "category": "consensus",
+            "groupSpreadPct": 19,
+            "groups": {
+                "A": {
+                    "agreePct": 81,
+                    "agrees": 13,
+                    "disagrees": 0,
+                    "passes": 3,
+                    "totalVotes": 16
+                },
+                "B": {
+                    "agreePct": 100,
+                    "agrees": 12,
+                    "disagrees": 0,
+                    "passes": 0,
+                    "totalVotes": 12
+                },
+                "C": {
+                    "agreePct": 100,
+                    "agrees": 4,
+                    "disagrees": 0,
+                    "passes": 0,
+                    "totalVotes": 4
+                }
+            },
+            "id": "0",
+            "text": {
+                "en": "AI in care homes should free up time for staff to spend with residents, not replace human contact.",
+                "zh-TW": "AI 在照護機構中應該為工作人員騰出更多時間與住民相處，而非取代人與人之間的接觸。"
+            },
+            "totals": {
+                "agreePct": 91,
+                "agrees": 29,
+                "disagreePct": 0,
+                "disagrees": 0,
+                "passes": 3,
+                "totalVotes": 32
+            }
+        },
+        {
+            "category": "consensus",
+            "groupSpreadPct": 17,
+            "groups": {
+                "A": {
+                    "agreePct": 85,
+                    "agrees": 11,
+                    "disagrees": 0,
+                    "passes": 2,
+                    "totalVotes": 13
+                },
+                "B": {
+                    "agreePct": 92,
+                    "agrees": 11,
+                    "disagrees": 0,
+                    "passes": 1,
+                    "totalVotes": 12
+                },
+                "C": {
+                    "agreePct": 75,
+                    "agrees": 3,
+                    "disagrees": 1,
+                    "passes": 0,
+                    "totalVotes": 4
+                }
+            },
+            "id": "1",
+            "text": {
+                "en": "People living with dementia deserve a say in whether AI tools are used in their care.",
+                "zh-TW": "失智症患者應該對是否使用 AI 工具來照護他們擁有發言權。"
+            },
+            "totals": {
+                "agreePct": 86,
+                "agrees": 25,
+                "disagreePct": 3,
+                "disagrees": 1,
+                "passes": 3,
+                "totalVotes": 29
+            }
+        },
+        {
+            "category": "difference",
+            "groupSpreadPct": 43,
+            "groups": {
+                "A": {
+                    "agreePct": 79,
+                    "agrees": 11,
+                    "disagrees": 0,
+                    "passes": 3,
+                    "totalVotes": 14
+                },
+                "B": {
+                    "agreePct": 40,
+                    "agrees": 4,
+                    "disagrees": 4,
+                    "passes": 2,
+                    "totalVotes": 10
+                },
+                "C": {
+                    "agreePct": 83,
+                    "agrees": 5,
+                    "disagrees": 1,
+                    "passes": 0,
+                    "totalVotes": 6
+                }
+            },
+            "id": "2",
+            "text": {
+                "en": "Using AI to keep an elderly person company when no human is available is better than leaving them alone.",
+                "zh-TW": "在沒有人陪伴的情況下，用 AI 來陪伴長者，好過讓他們獨自一人。"
+            },
+            "totals": {
+                "agreePct": 67,
+                "agrees": 20,
+                "disagreePct": 17,
+                "disagrees": 5,
+                "passes": 5,
+                "totalVotes": 30
+            }
+        },
+        {
+            "category": "difference",
+            "groupSpreadPct": 94,
+            "groups": {
+                "A": {
+                    "agreePct": 15,
+                    "agrees": 2,
+                    "disagrees": 6,
+                    "passes": 5,
+                    "totalVotes": 13
+                },
+                "B": {
+                    "agreePct": 94,
+                    "agrees": 16,
+                    "disagrees": 0,
+                    "passes": 1,
+                    "totalVotes": 17
+                },
+                "C": {
+                    "agreePct": 0,
+                    "agrees": 0,
+                    "disagrees": 7,
+                    "passes": 0,
+                    "totalVotes": 7
+                }
+            },
+            "id": "3",
+            "text": {
+                "en": "Families caring for someone with a serious illness should be offered AI tools to help, even if those tools are not perfect.",
+                "zh-TW": "照顧重病家人的家庭應該被提供 AI 工具來協助，即使這些工具並不完美。"
+            },
+            "totals": {
+                "agreePct": 49,
+                "agrees": 18,
+                "disagreePct": 35,
+                "disagrees": 13,
+                "passes": 6,
+                "totalVotes": 37
+            }
+        },
+        {
+            "category": "consensus",
+            "groupSpreadPct": 10,
+            "groups": {
+                "A": {
+                    "agreePct": 92,
+                    "agrees": 12,
+                    "disagrees": 0,
+                    "passes": 1,
+                    "totalVotes": 13
+                },
+                "B": {
+                    "agreePct": 90,
+                    "agrees": 9,
+                    "disagrees": 0,
+                    "passes": 1,
+                    "totalVotes": 10
+                },
+                "C": {
+                    "agreePct": 100,
+                    "agrees": 5,
+                    "disagrees": 0,
+                    "passes": 0,
+                    "totalVotes": 5
+                }
+            },
+            "id": "4",
+            "text": {
+                "en": "When AI helps make a decision about your benefits, housing, or health, you should be told.",
+                "zh-TW": "當 AI 協助做出關於你的福利、住房或健康的決定時，你應該被告知。"
+            },
+            "totals": {
+                "agreePct": 93,
+                "agrees": 26,
+                "disagreePct": 0,
+                "disagrees": 0,
+                "passes": 2,
+                "totalVotes": 28
+            }
+        },
+        {
+            "category": "consensus",
+            "groupSpreadPct": 31,
+            "groups": {
+                "A": {
+                    "agreePct": 69,
+                    "agrees": 9,
+                    "disagrees": 2,
+                    "passes": 2,
+                    "totalVotes": 13
+                },
+                "B": {
+                    "agreePct": 93,
+                    "agrees": 14,
+                    "disagrees": 0,
+                    "passes": 1,
+                    "totalVotes": 15
+                },
+                "C": {
+                    "agreePct": 100,
+                    "agrees": 5,
+                    "disagrees": 0,
+                    "passes": 0,
+                    "totalVotes": 5
+                }
+            },
+            "id": "5",
+            "text": {
+                "en": "If an AI system treats people unfairly because of their race, age, or disability, someone should be held responsible.",
+                "zh-TW": "如果 AI 系統因為種族、年齡或身心障礙而不公平地對待人們，應該有人為此負責。"
+            },
+            "totals": {
+                "agreePct": 85,
+                "agrees": 28,
+                "disagreePct": 6,
+                "disagrees": 2,
+                "passes": 3,
+                "totalVotes": 33
+            }
+        },
+        {
+            "category": "consensus",
+            "groupSpreadPct": 7,
+            "groups": {
+                "A": {
+                    "agreePct": 93,
+                    "agrees": 13,
+                    "disagrees": 0,
+                    "passes": 1,
+                    "totalVotes": 14
+                },
+                "B": {
+                    "agreePct": 100,
+                    "agrees": 13,
+                    "disagrees": 0,
+                    "passes": 0,
+                    "totalVotes": 13
+                },
+                "C": {
+                    "agreePct": 100,
+                    "agrees": 4,
+                    "disagrees": 0,
+                    "passes": 0,
+                    "totalVotes": 4
+                }
+            },
+            "id": "6",
+            "text": {
+                "en": "People should always be able to reach a real person when dealing with a government service, even if AI handles most tasks.",
+                "zh-TW": "在使用政府服務時，即使 AI 處理了大部分工作，人們仍應隨時能夠聯繫到真人。"
+            },
+            "totals": {
+                "agreePct": 97,
+                "agrees": 30,
+                "disagreePct": 0,
+                "disagrees": 0,
+                "passes": 1,
+                "totalVotes": 31
+            }
+        },
+        {
+            "category": "consensus",
+            "groupSpreadPct": 40,
+            "groups": {
+                "A": {
+                    "agreePct": 60,
+                    "agrees": 9,
+                    "disagrees": 3,
+                    "passes": 3,
+                    "totalVotes": 15
+                },
+                "B": {
+                    "agreePct": 79,
+                    "agrees": 11,
+                    "disagrees": 0,
+                    "passes": 3,
+                    "totalVotes": 14
+                },
+                "C": {
+                    "agreePct": 100,
+                    "agrees": 5,
+                    "disagrees": 0,
+                    "passes": 0,
+                    "totalVotes": 5
+                }
+            },
+            "id": "7",
+            "text": {
+                "en": "The UK should create an independent body with real power to shut down harmful AI systems.",
+                "zh-TW": "英國應該建立一個獨立機構，擁有關閉有害 AI 系統的實權。"
+            },
+            "totals": {
+                "agreePct": 74,
+                "agrees": 25,
+                "disagreePct": 9,
+                "disagrees": 3,
+                "passes": 6,
+                "totalVotes": 34
+            }
+        },
+        {
+            "category": "consensus",
+            "groupSpreadPct": 27,
+            "groups": {
+                "A": {
+                    "agreePct": 73,
+                    "agrees": 11,
+                    "disagrees": 3,
+                    "passes": 1,
+                    "totalVotes": 15
+                },
+                "B": {
+                    "agreePct": 92,
+                    "agrees": 11,
+                    "disagrees": 0,
+                    "passes": 1,
+                    "totalVotes": 12
+                },
+                "C": {
+                    "agreePct": 100,
+                    "agrees": 5,
+                    "disagrees": 0,
+                    "passes": 0,
+                    "totalVotes": 5
+                }
+            },
+            "id": "8",
+            "text": {
+                "en": "People are being harmed by AI-driven decisions while the government takes too long to act.",
+                "zh-TW": "人們正在因 AI 驅動的決策而受到傷害，而政府的行動太慢了。"
+            },
+            "totals": {
+                "agreePct": 84,
+                "agrees": 27,
+                "disagreePct": 9,
+                "disagrees": 3,
+                "passes": 2,
+                "totalVotes": 32
+            }
+        },
+        {
+            "category": "consensus",
+            "groupSpreadPct": 50,
+            "groups": {
+                "A": {
+                    "agreePct": 50,
+                    "agrees": 7,
+                    "disagrees": 4,
+                    "passes": 3,
+                    "totalVotes": 14
+                },
+                "B": {
+                    "agreePct": 100,
+                    "agrees": 14,
+                    "disagrees": 0,
+                    "passes": 0,
+                    "totalVotes": 14
+                },
+                "C": {
+                    "agreePct": 100,
+                    "agrees": 6,
+                    "disagrees": 0,
+                    "passes": 0,
+                    "totalVotes": 6
+                }
+            },
+            "id": "9",
+            "text": {
+                "en": "Workers who lose their jobs because of AI should get real help finding new work, not just advice.",
+                "zh-TW": "因 AI 失去工作的勞工應該得到實際幫助來找到新工作，而不只是建議。"
+            },
+            "totals": {
+                "agreePct": 79,
+                "agrees": 27,
+                "disagreePct": 12,
+                "disagrees": 4,
+                "passes": 3,
+                "totalVotes": 34
+            }
+        },
+        {
+            "category": "difference",
+            "groupSpreadPct": 80,
+            "groups": {
+                "A": {
+                    "agreePct": 6,
+                    "agrees": 1,
+                    "disagrees": 11,
+                    "passes": 4,
+                    "totalVotes": 16
+                },
+                "B": {
+                    "agreePct": 67,
+                    "agrees": 8,
+                    "disagrees": 3,
+                    "passes": 1,
+                    "totalVotes": 12
+                },
+                "C": {
+                    "agreePct": 86,
+                    "agrees": 6,
+                    "disagrees": 1,
+                    "passes": 0,
+                    "totalVotes": 7
+                }
+            },
+            "id": "10",
+            "text": {
+                "en": "Companies should not be allowed to replace workers with AI unless they help those workers find new roles.",
+                "zh-TW": "除非公司幫助員工找到新職位，否則不應被允許用 AI 取代他們。"
+            },
+            "totals": {
+                "agreePct": 43,
+                "agrees": 15,
+                "disagreePct": 43,
+                "disagrees": 15,
+                "passes": 5,
+                "totalVotes": 35
+            }
+        },
+        {
+            "category": "difference",
+            "groupSpreadPct": 9,
+            "groups": {
+                "A": {
+                    "agreePct": 38,
+                    "agrees": 5,
+                    "disagrees": 3,
+                    "passes": 5,
+                    "totalVotes": 13
+                },
+                "B": {
+                    "agreePct": 42,
+                    "agrees": 5,
+                    "disagrees": 2,
+                    "passes": 5,
+                    "totalVotes": 12
+                },
+                "C": {
+                    "agreePct": 33,
+                    "agrees": 1,
+                    "disagrees": 2,
+                    "passes": 0,
+                    "totalVotes": 3
+                }
+            },
+            "id": "11",
+            "text": {
+                "en": "New AI data centres in Oxfordshire will create good jobs for local people, not just for tech workers from elsewhere.",
+                "zh-TW": "牛津郡新建的 AI 資料中心將為當地居民創造好的工作機會，而不只是為外地的科技工作者。"
+            },
+            "totals": {
+                "agreePct": 39,
+                "agrees": 11,
+                "disagreePct": 25,
+                "disagrees": 7,
+                "passes": 10,
+                "totalVotes": 28
+            }
+        },
+        {
+            "category": "consensus",
+            "groupSpreadPct": 20,
+            "groups": {
+                "A": {
+                    "agreePct": 80,
+                    "agrees": 12,
+                    "disagrees": 1,
+                    "passes": 2,
+                    "totalVotes": 15
+                },
+                "B": {
+                    "agreePct": 86,
+                    "agrees": 12,
+                    "disagrees": 1,
+                    "passes": 1,
+                    "totalVotes": 14
+                },
+                "C": {
+                    "agreePct": 100,
+                    "agrees": 4,
+                    "disagrees": 0,
+                    "passes": 0,
+                    "totalVotes": 4
+                }
+            },
+            "id": "12",
+            "text": {
+                "en": "Communities should have a voice in deciding how AI is used in their local schools and hospitals.",
+                "zh-TW": "社區應該在決定如何在當地學校和醫院使用 AI 時擁有發言權。"
+            },
+            "totals": {
+                "agreePct": 85,
+                "agrees": 28,
+                "disagreePct": 6,
+                "disagrees": 2,
+                "passes": 3,
+                "totalVotes": 33
+            }
+        },
+        {
+            "category": "consensus",
+            "groupSpreadPct": 17,
+            "groups": {
+                "A": {
+                    "agreePct": 83,
+                    "agrees": 10,
+                    "disagrees": 1,
+                    "passes": 1,
+                    "totalVotes": 12
+                },
+                "B": {
+                    "agreePct": 100,
+                    "agrees": 12,
+                    "disagrees": 0,
+                    "passes": 0,
+                    "totalVotes": 12
+                },
+                "C": {
+                    "agreePct": 100,
+                    "agrees": 5,
+                    "disagrees": 0,
+                    "passes": 0,
+                    "totalVotes": 5
+                }
+            },
+            "id": "13",
+            "text": {
+                "en": "Schools should teach children to question what AI tells them, not just how to use it.",
+                "zh-TW": "學校應該教導孩子質疑 AI 告訴他們的內容，而不僅僅是如何使用它。"
+            },
+            "totals": {
+                "agreePct": 93,
+                "agrees": 27,
+                "disagreePct": 3,
+                "disagrees": 1,
+                "passes": 1,
+                "totalVotes": 29
+            }
+        },
+        {
+            "category": "difference",
+            "groupSpreadPct": 47,
+            "groups": {
+                "A": {
+                    "agreePct": 47,
+                    "agrees": 7,
+                    "disagrees": 2,
+                    "passes": 6,
+                    "totalVotes": 15
+                },
+                "B": {
+                    "agreePct": 8,
+                    "agrees": 1,
+                    "disagrees": 8,
+                    "passes": 3,
+                    "totalVotes": 12
+                },
+                "C": {
+                    "agreePct": 0,
+                    "agrees": 0,
+                    "disagrees": 5,
+                    "passes": 0,
+                    "totalVotes": 5
+                }
+            },
+            "id": "14",
+            "text": {
+                "en": "AI tools in schools do more to help struggling students catch up than they do to harm learning.",
+                "zh-TW": "學校中的 AI 工具對幫助落後學生趕上進度的效果，大於它對學習造成的傷害。"
+            },
+            "totals": {
+                "agreePct": 25,
+                "agrees": 8,
+                "disagreePct": 47,
+                "disagrees": 15,
+                "passes": 9,
+                "totalVotes": 32
+            }
+        },
+        {
+            "category": "consensus",
+            "groupSpreadPct": 14,
+            "groups": {
+                "A": {
+                    "agreePct": 86,
+                    "agrees": 12,
+                    "disagrees": 0,
+                    "passes": 2,
+                    "totalVotes": 14
+                },
+                "B": {
+                    "agreePct": 90,
+                    "agrees": 9,
+                    "disagrees": 1,
+                    "passes": 0,
+                    "totalVotes": 10
+                },
+                "C": {
+                    "agreePct": 100,
+                    "agrees": 6,
+                    "disagrees": 0,
+                    "passes": 0,
+                    "totalVotes": 6
+                }
+            },
+            "id": "15",
+            "text": {
+                "en": "When I talk to a chatbot or AI assistant, I should always be told it is not a real person.",
+                "zh-TW": "當我與聊天機器人或 AI 助手交談時，我應該總是被告知它不是真人。"
+            },
+            "totals": {
+                "agreePct": 90,
+                "agrees": 27,
+                "disagreePct": 3,
+                "disagrees": 1,
+                "passes": 2,
+                "totalVotes": 30
+            }
+        },
+        {
+            "category": "consensus",
+            "groupSpreadPct": 14,
+            "groups": {
+                "A": {
+                    "agreePct": 86,
+                    "agrees": 12,
+                    "disagrees": 1,
+                    "passes": 1,
+                    "totalVotes": 14
+                },
+                "B": {
+                    "agreePct": 91,
+                    "agrees": 10,
+                    "disagrees": 0,
+                    "passes": 1,
+                    "totalVotes": 11
+                },
+                "C": {
+                    "agreePct": 100,
+                    "agrees": 4,
+                    "disagrees": 0,
+                    "passes": 0,
+                    "totalVotes": 4
+                }
+            },
+            "id": "16",
+            "text": {
+                "en": "Big technology companies care more about profits than about what happens to our communities.",
+                "zh-TW": "大型科技公司更在乎利潤，而非我們社區會發生什麼。"
+            },
+            "totals": {
+                "agreePct": 90,
+                "agrees": 26,
+                "disagreePct": 3,
+                "disagrees": 1,
+                "passes": 2,
+                "totalVotes": 29
+            }
+        },
+        {
+            "category": "consensus",
+            "groupSpreadPct": 25,
+            "groups": {
+                "A": {
+                    "agreePct": 75,
+                    "agrees": 9,
+                    "disagrees": 0,
+                    "passes": 3,
+                    "totalVotes": 12
+                },
+                "B": {
+                    "agreePct": 83,
+                    "agrees": 10,
+                    "disagrees": 1,
+                    "passes": 1,
+                    "totalVotes": 12
+                },
+                "C": {
+                    "agreePct": 100,
+                    "agrees": 3,
+                    "disagrees": 0,
+                    "passes": 0,
+                    "totalVotes": 3
+                }
+            },
+            "id": "17",
+            "text": {
+                "en": "A community that takes care of its people matters more than one with the most advanced technology.",
+                "zh-TW": "一個照顧人民的社區，比一個擁有最先進技術的社區更重要。"
+            },
+            "totals": {
+                "agreePct": 81,
+                "agrees": 22,
+                "disagreePct": 4,
+                "disagrees": 1,
+                "passes": 4,
+                "totalVotes": 27
+            }
+        },
+        {
+            "category": "consensus",
+            "groupSpreadPct": 23,
+            "groups": {
+                "A": {
+                    "agreePct": 77,
+                    "agrees": 10,
+                    "disagrees": 1,
+                    "passes": 2,
+                    "totalVotes": 13
+                },
+                "B": {
+                    "agreePct": 100,
+                    "agrees": 11,
+                    "disagrees": 0,
+                    "passes": 0,
+                    "totalVotes": 11
+                },
+                "C": {
+                    "agreePct": 86,
+                    "agrees": 6,
+                    "disagrees": 1,
+                    "passes": 0,
+                    "totalVotes": 7
+                }
+            },
+            "id": "18",
+            "text": {
+                "en": "AI companies should have to pay artists and writers when they use their work to train AI systems.",
+                "zh-TW": "AI 公司在使用藝術家和作家的作品來訓練 AI 系統時，應該付費給他們。"
+            },
+            "totals": {
+                "agreePct": 87,
+                "agrees": 27,
+                "disagreePct": 6,
+                "disagrees": 2,
+                "passes": 2,
+                "totalVotes": 31
+            }
+        },
+        {
+            "category": "difference",
+            "groupSpreadPct": 69,
+            "groups": {
+                "A": {
+                    "agreePct": 31,
+                    "agrees": 4,
+                    "disagrees": 6,
+                    "passes": 3,
+                    "totalVotes": 13
+                },
+                "B": {
+                    "agreePct": 79,
+                    "agrees": 11,
+                    "disagrees": 2,
+                    "passes": 1,
+                    "totalVotes": 14
+                },
+                "C": {
+                    "agreePct": 100,
+                    "agrees": 6,
+                    "disagrees": 0,
+                    "passes": 0,
+                    "totalVotes": 6
+                }
+            },
+            "id": "19",
+            "text": {
+                "en": "We should slow down on AI until we better understand what it does to people.",
+                "zh-TW": "在更好地了解 AI 對人們的影響之前，我們應該放慢 AI 的發展速度。"
+            },
+            "totals": {
+                "agreePct": 64,
+                "agrees": 21,
+                "disagreePct": 24,
+                "disagrees": 8,
+                "passes": 4,
+                "totalVotes": 33
+            }
+        }
+    ]
+}

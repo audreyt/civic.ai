@@ -1,9 +1,9 @@
 import { expect, test, vi } from "vite-plus/test";
 
-// `_data/polis_care_deliberation.js`'s default export performs real network
-// fetches against raw.githubusercontent.com. `src/lib/polis.ts` only awaits
-// and forwards its result, so the loader is mocked here to keep this test
-// deterministic and offline rather than exercising the real fetch.
+// The real loader verifies and derives the checked-in Polis snapshot.
+// `src/lib/polis.ts` only awaits and forwards that result, so this focused
+// bridge test mocks the derivation; `polis-snapshot.test.ts` covers the real
+// offline loader.
 vi.mock("../_data/polis_care_deliberation.js", () => ({
     default: async () => ({ ok: true, mocked: true }),
 }));

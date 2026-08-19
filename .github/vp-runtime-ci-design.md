@@ -1,7 +1,7 @@
 # Vite+-Managed Runtime CI Design
 
-Date: 2026-07-12
-Status: Approved for implementation
+Date: 2026-07-14
+Status: Implemented
 Supersedes: `bun-native-ci-design.md` (2026-07-10, Bun-native CI boundary)
 
 ## Problem
@@ -13,28 +13,28 @@ Bun does not implement the `node:inspector` API that Vitest's `coverage-v8` prov
 Bun has not left the picture. `package.json#devEngines.packageManager` still pins Bun as the package manager `vp install` provisions, and Bun remains the deliberate runtime for two things outside the vp-managed root lifecycle:
 
 1. Standalone utility scripts (`pangu-format.mjs`, `scripts/*.mjs`) entered through `vp run <script>` — the script body, not the CI workflow, is what invokes `bun`.
-2. The isolated `worker/` Cloudflare package, which keeps its own `bun.lock`, its own install, and its own `bun test` run, entirely separate from the root vp lifecycle.
+2. The isolated `worker/` Cloudflare package, which keeps its own `bun.lock`, its own install entered through `vp install`, and its own `bun test` run, entirely separate from the root vp lifecycle.
 
 ## Goals
 
 1. Bootstrap both workflows' root lifecycle through the same managed Node.js runtime `vp` uses locally, pinned by `package.json#devEngines.runtime` (22.23.1), via `voidzero-dev/setup-vp@v1`.
 2. Install root dependencies with an explicit, frozen `vp install --frozen-lockfile` step, matching the sibling architecture already running in `plurality.net`.
-3. Keep Bun as the configured package manager and as the explicit, separate runtime for utility scripts (entered via `vp run`) and for `worker/`'s own install/typecheck/test.
+3. Keep Bun as the configured package manager and as the separate runtime for utility scripts and `worker/`, while entering dependency installation and package scripts through `vp`.
 4. Preserve every validator the prior Bun-native design ran: same-repository pull-request auto-formatting without granting privileged credentials to fork code, content/build validators (internal links, hybrid design, Astro output, search output, build parity), worker typecheck/test, GitHub Pages hidden-file preservation, and deployment retries.
 5. Leave the fork-restriction and auto-format security model (`pull_request` trigger, `github.event.pull_request.head.repo.full_name == github.repository` gating) untouched — that boundary is orthogonal to the runtime cutover.
 
 ## Non-goals
 
 - Re-litigate the fork/same-repository pull-request security boundary; it is unchanged from `bun-native-ci-design.md`.
-- Move `worker/`'s install, typecheck, or test onto the vp-managed runtime; it stays a separate Bun package by design.
+- Change `worker/`'s package manager or test runner; it stays a separate Bun package while Vite+ supplies the pinned Bun executable and command entry point.
 - Report current test/coverage/snapshot counts here. Those figures belong to the root suite and content-validator work tracked separately from this workflow-bootstrap cutover, and would go stale independently of it.
 - Change build or deployment outputs.
 
 ## Considered approaches
 
-### `voidzero-dev/setup-vp@v1` root bootstrap + separate Bun setup for `worker/` — selected
+### `voidzero-dev/setup-vp@v1` bootstrap + Vite+-managed Bun for `worker/` — selected
 
-Mirrors `plurality.net`: `voidzero-dev/setup-vp@v1` pins `node-version: '22.23.1'` (matching `devEngines.runtime`) with `cache: true` and `run-install: false`, followed by an explicit `vp install --frozen-lockfile` step. `worker/`'s install and test keep their own `oven-sh/setup-bun@v2` step and `bun install --frozen-lockfile`, unchanged in spirit from the prior design's worker handling.
+Both workflows use `voidzero-dev/setup-vp@v1` with `node-version: '22.23.1'` (matching `devEngines.runtime`), `cache: true`, and `run-install: false`, followed by explicit frozen `vp install` steps at the root and in `worker/`. Vite+ resolves the root `packageManager` pin and provisions Bun for both installs, so a separate `oven-sh/setup-bun` action is redundant. `worker/` still owns its lockfile and executes its typecheck and test under Bun.
 
 ### Global `bunfig.toml` `[run] bun = true`
 
@@ -56,11 +56,11 @@ In `.github/workflows/ci.yml` and `.github/workflows/static.yml`:
 
 ### Worker runtime, install, and test
 
-`worker/` keeps its own `oven-sh/setup-bun@v2` step and `bun install --frozen-lockfile` in `worker/`, run before the root `worker:typecheck`/`worker:test` package scripts — which `cd worker` and shell out to `bun run typecheck`/`bun run test` — are invoked via `vp run`.
+`worker/` keeps its own `bun.lock` and Bun test runner. Its dependencies are installed with `working-directory: worker` and `vp install --frozen-lockfile`; the package manager resolves to the root `packageManager` pin provisioned by Vite+. The root `worker:typecheck`/`worker:test` package scripts — which `cd worker` and shell out to `bun run typecheck`/`bun run test` — are invoked via `vp run`, so the workflows need no separate package-manager setup action or direct Bun command.
 
 ### GitHub Action runtimes
 
-Unchanged from the prior design: current generations of `actions/checkout@v7`, `actions/configure-pages@v6`, `actions/upload-pages-artifact@v5`, `actions/deploy-pages@v5`. `oven-sh/setup-bun@v2` and the new `voidzero-dev/setup-vp@v1` both declare their own maintained action runtimes; `.github/dependabot.yml`'s weekly `github-actions` update continues to surface future action-runtime transitions.
+Unchanged from the prior design: current generations of `actions/checkout@v7`, `actions/configure-pages@v6`, `actions/upload-pages-artifact@v5`, and `actions/deploy-pages@v5`. `voidzero-dev/setup-vp@v1` declares its own maintained action runtime; `.github/dependabot.yml`'s weekly `github-actions` update continues to surface future action-runtime transitions.
 
 ### Hidden Pages artifact compatibility
 
@@ -80,13 +80,13 @@ Implementation is complete only after all of the following pass, matching the tw
 
 1. `vp fmt --check` validates the modified YAML and Markdown files.
 2. `vp install --frozen-lockfile` succeeds at the pinned `node-version: '22.23.1'` in both workflows.
-3. `worker/` installs with its own `bun install --frozen-lockfile` and passes `vp run worker:typecheck` and `vp run worker:test`.
+3. `worker/` installs with `vp install --frozen-lockfile` in its working directory and passes `vp run worker:typecheck` and `vp run worker:test` without a separate Bun setup action.
 4. The complete root validation chain in `ci.yml`/`static.yml` runs in order: auto-format (same-repository pull requests only) → `vp check` → `vp run worker:typecheck` → `vp test` → `vp run worker:test` → `vp build` → `vp run check-links` → `vp run check:hybrid` → `vp run check:astro-output` → `vp run check:search` → `vp run check:parity`.
 5. The Pages upload step sets `include-hidden-files: true`, preserving `.nojekyll` and `.well-known/openclaw/SKILL.md`.
-6. A workflow search confirms no remaining `bun --bun` invocations, no `pull_request_target`, and no reference to the removed root `check` package script.
+6. A workflow search confirms no remaining `actions/setup-node`, `oven-sh/setup-bun`, `bun --bun`, or direct Bun workflow commands; no `pull_request_target`; and no reference to the removed root `check` package script.
 
 Actual pass/fail counts, coverage percentages, and snapshot/file totals for the root suite and content validators are tracked with that migration, not restated here.
 
 ## Expected result
 
-Both workflows bootstrap through the same managed Node.js runtime `vp` uses locally, install root dependencies with an explicit frozen-lockfile step, and enter every root validator through `vp`/`vp run`. Bun stays the configured package manager, the intentional runtime for utility scripts entered via `vp run`, and the separate runtime/install/test for `worker/`. Same-repository pull-request auto-formatting, fork restrictions, content/build validators, worker typecheck/test, Pages hidden-file preservation, and deployment retries are all preserved from `bun-native-ci-design.md`.
+Both workflows bootstrap through the same managed Node.js runtime `vp` uses locally and install root and worker dependencies through explicit frozen `vp install` steps. Bun stays the configured package manager, the intentional runtime for utility scripts entered via `vp run`, and the runtime/test runner for the separate `worker/` package without a redundant setup action. Same-repository pull-request auto-formatting, fork restrictions, content/build validators, worker typecheck/test, Pages hidden-file preservation, and deployment retries are all preserved from `bun-native-ci-design.md`.

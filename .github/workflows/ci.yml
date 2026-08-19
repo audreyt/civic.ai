@@ -29,12 +29,9 @@ jobs:
             - name: Install dependencies
               run: vp install --frozen-lockfile
 
-            - name: Setup Bun
-              uses: oven-sh/setup-bun@v2
-
             - name: Install worker dependencies
               working-directory: worker
-              run: bun install --frozen-lockfile
+              run: vp install --frozen-lockfile
 
             - name: Auto-format
               if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
@@ -59,6 +56,12 @@ jobs:
 
             - name: Test worker
               run: vp run worker:test
+
+            - name: Test deterministic sensemaker
+              run: vp run sensemaker:test
+
+            - name: Verify replay artifacts
+              run: vp run sensemaker:verify
 
             - name: Build
               run: vp build

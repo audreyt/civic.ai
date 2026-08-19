@@ -1,29 +1,43 @@
+import { createHash } from "node:crypto";
+import { readFile } from "node:fs/promises";
+import { resolve } from "node:path";
+
 const EXPORT_ID = "r2jstrdchy3udbrf8arjx";
-const SNAPSHOT_BLOB_BASE =
-    "https://github.com/audreyt/polis-tally/blob/gh-pages";
-const SNAPSHOT_RAW_BASE =
-    "https://raw.githubusercontent.com/audreyt/polis-tally/gh-pages";
+const TIME_ZONE = "Europe/London";
+const SNAPSHOT_DIR = resolve(process.cwd(), "_data/polis_care_snapshot");
+const SNAPSHOT_MANIFEST = resolve(SNAPSHOT_DIR, "manifest.json");
+const SOURCE_FILES = {
+    summary: `${EXPORT_ID}-summary.csv`,
+    comments: `${EXPORT_ID}-comments.csv`,
+    votes: `${EXPORT_ID}-votes.csv`,
+    participantVotes: `${EXPORT_ID}-participant-votes.csv`,
+    commentGroups: `${EXPORT_ID}-comment-groups.csv`,
+};
 const EN_DATE = new Intl.DateTimeFormat("en-GB", {
     day: "numeric",
     month: "short",
     year: "numeric",
+    timeZone: TIME_ZONE,
 });
 const TW_DATE = new Intl.DateTimeFormat("zh-Hant-TW", {
     day: "numeric",
     month: "long",
     year: "numeric",
+    timeZone: TIME_ZONE,
 });
 const EN_TIME = new Intl.DateTimeFormat("en-GB", {
     day: "numeric",
     hour: "2-digit",
     minute: "2-digit",
     month: "short",
+    timeZone: TIME_ZONE,
 });
 const TW_TIME = new Intl.DateTimeFormat("zh-Hant-TW", {
     day: "numeric",
     hour: "2-digit",
     minute: "2-digit",
     month: "long",
+    timeZone: TIME_ZONE,
 });
 const CLUSTER_STYLES = [
     {
@@ -51,6 +65,75 @@ const UNCLUSTERED_STYLE = {
 function toInt(value) {
     const parsed = Number.parseInt(value ?? "", 10);
     return Number.isFinite(parsed) ? parsed : 0;
+}
+
+function requireTimestamp(value, label) {
+    const timestamp = Number.parseInt(value ?? "", 10);
+    if (!Number.isSafeInteger(timestamp) || timestamp <= 0) {
+        throw new Error(`${label}: missing or invalid timestamp`);
+    }
+    return timestamp;
+}
+
+function requireCount(value, label) {
+    const count = Number.parseInt(value ?? "", 10);
+    if (!Number.isSafeInteger(count) || count < 0) {
+        throw new Error(`${label}: missing or invalid count`);
+    }
+    return count;
+}
+
+function readVoteCounts(row, prefix, label) {
+    const totalVotes = requireCount(row[`${prefix}votes`], `${label} votes`);
+    const agrees = requireCount(row[`${prefix}agrees`], `${label} agrees`);
+    const disagrees = requireCount(
+        row[`${prefix}disagrees`],
+        `${label} disagrees`
+    );
+    const passes = requireCount(row[`${prefix}passes`], `${label} passes`);
+    if (agrees + disagrees + passes !== totalVotes) {
+        throw new Error(`${label}: vote counts do not add up`);
+    }
+    return { agrees, disagrees, passes, totalVotes };
+}
+function compareIds(left, right) {
+    const leftNumber = Number(left);
+    const rightNumber = Number(right);
+    if (Number.isFinite(leftNumber) && Number.isFinite(rightNumber)) {
+        return leftNumber - rightNumber;
+    }
+    const leftText = String(left);
+    const rightText = String(right);
+    return leftText < rightText ? -1 : leftText > rightText ? 1 : 0;
+}
+
+function sha256(value) {
+    return createHash("sha256").update(value).digest("hex");
+}
+
+function canonicalizeNumbers(value) {
+    if (typeof value === "number") {
+        if (!Number.isFinite(value)) {
+            throw new Error("Polis derivation produced a non-finite number");
+        }
+        if (Number.isInteger(value)) {
+            return value;
+        }
+        const rounded = Number(value.toFixed(12));
+        return Object.is(rounded, -0) ? 0 : rounded;
+    }
+    if (Array.isArray(value)) {
+        for (let index = 0; index < value.length; index += 1) {
+            value[index] = canonicalizeNumbers(value[index]);
+        }
+        return value;
+    }
+    if (value && typeof value === "object") {
+        for (const key of Object.keys(value)) {
+            value[key] = canonicalizeNumbers(value[key]);
+        }
+    }
+    return value;
 }
 
 function normalizeText(value) {
@@ -291,7 +374,11 @@ function buildEdges(items, maxPerItem, threshold) {
                 similarity: cosineSimilarity(item.vector, candidate.vector),
             }))
             .filter((candidate) => candidate.similarity >= threshold)
-            .sort((left, right) => right.similarity - left.similarity)
+            .sort(
+                (left, right) =>
+                    right.similarity - left.similarity ||
+                    compareIds(left.id, right.id)
+            )
             .slice(0, maxPerItem);
 
         for (const neighbor of neighbors) {
@@ -328,7 +415,11 @@ function buildParticipantEdges(items) {
                 id: candidate.id,
                 similarity: cosineSimilarity(item.vector, candidate.vector),
             }))
-            .sort((left, right) => right.similarity - left.similarity)
+            .sort(
+                (left, right) =>
+                    right.similarity - left.similarity ||
+                    compareIds(left.id, right.id)
+            )
             .slice(0, 1);
 
         const bridge = items
@@ -342,7 +433,11 @@ function buildParticipantEdges(items) {
                 similarity: cosineSimilarity(item.vector, candidate.vector),
             }))
             .filter((candidate) => candidate.similarity >= 0.7)
-            .sort((left, right) => right.similarity - left.similarity)
+            .sort(
+                (left, right) =>
+                    right.similarity - left.similarity ||
+                    compareIds(left.id, right.id)
+            )
             .slice(0, 1);
 
         for (const candidate of [...sameCluster, ...bridge]) {
@@ -496,7 +591,10 @@ function buildLeaderHistory(votes, statementIds, participantGroups, scoreFor) {
                 };
             })
             .filter((candidate) => candidate.totalVotes >= 6)
-            .sort((left, right) => right.score - left.score);
+            .sort(
+                (left, right) =>
+                    right.score - left.score || compareIds(left.id, right.id)
+            );
 
         if (!candidates.length) {
             continue;
@@ -517,93 +615,150 @@ function buildLeaderHistory(votes, statementIds, participantGroups, scoreFor) {
     return history;
 }
 
-async function fetchText(url) {
-    const response = await fetch(url);
-    if (!response.ok) {
-        throw new Error(`${response.status} ${response.statusText}`);
+async function loadSnapshot() {
+    const manifest = JSON.parse(await readFile(SNAPSHOT_MANIFEST, "utf8"));
+    if (
+        manifest.schemaVersion !== 1 ||
+        manifest.exportId !== EXPORT_ID ||
+        manifest.timeZone !== TIME_ZONE ||
+        !/^[0-9a-f]{40}$/.test(manifest.commit ?? "")
+    ) {
+        throw new Error("Polis snapshot manifest is incompatible");
     }
-    return response.text();
+
+    const files = {};
+    const normalizedFiles = {};
+    for (const [key, expectedName] of Object.entries(SOURCE_FILES)) {
+        const descriptor = manifest.files?.[key];
+        if (
+            descriptor?.name !== expectedName ||
+            !Number.isSafeInteger(descriptor.bytes) ||
+            !/^[0-9a-f]{64}$/.test(descriptor.sha256 ?? "")
+        ) {
+            throw new Error(
+                `Polis snapshot manifest has an invalid ${key} entry`
+            );
+        }
+        const bytes = await readFile(resolve(SNAPSHOT_DIR, expectedName));
+        const digest = sha256(bytes);
+        if (bytes.length !== descriptor.bytes || digest !== descriptor.sha256) {
+            throw new Error(
+                `Polis snapshot ${expectedName} does not match its manifest`
+            );
+        }
+        files[key] = bytes.toString("utf8");
+        normalizedFiles[key] = {
+            name: expectedName,
+            bytes: descriptor.bytes,
+            sha256: descriptor.sha256,
+        };
+    }
+
+    const expectedSnapshotId = sha256(
+        JSON.stringify({
+            schemaVersion: 1,
+            exportId: EXPORT_ID,
+            repository: manifest.repository,
+            commit: manifest.commit,
+            timeZone: TIME_ZONE,
+            files: normalizedFiles,
+        })
+    );
+    if (manifest.snapshotId !== expectedSnapshotId) {
+        throw new Error(
+            "Polis snapshot manifest ID does not match its contents"
+        );
+    }
+
+    const sourceUrls = Object.fromEntries(
+        Object.entries(SOURCE_FILES).map(([key, name]) => [
+            key,
+            `${manifest.repository}/blob/${manifest.commit}/${name}`,
+        ])
+    );
+    sourceUrls.snapshotRepo = `${manifest.repository}/tree/${manifest.commit}`;
+    return { files, manifest, sourceUrls };
 }
 
 export default async function () {
-    const sourceFiles = {
-        summary: `${EXPORT_ID}-summary.csv`,
-        comments: `${EXPORT_ID}-comments.csv`,
-        votes: `${EXPORT_ID}-votes.csv`,
-        participantVotes: `${EXPORT_ID}-participant-votes.csv`,
-        commentGroups: `${EXPORT_ID}-comment-groups.csv`,
-    };
-    const sourceUrls = {
-        summary: `${SNAPSHOT_BLOB_BASE}/${sourceFiles.summary}`,
-        comments: `${SNAPSHOT_BLOB_BASE}/${sourceFiles.comments}`,
-        votes: `${SNAPSHOT_BLOB_BASE}/${sourceFiles.votes}`,
-        participantVotes: `${SNAPSHOT_BLOB_BASE}/${sourceFiles.participantVotes}`,
-        commentGroups: `${SNAPSHOT_BLOB_BASE}/${sourceFiles.commentGroups}`,
-        snapshotRepo: "https://github.com/audreyt/polis-tally/tree/gh-pages",
-    };
-    const fetchUrls = {
-        summary: `${SNAPSHOT_RAW_BASE}/${sourceFiles.summary}`,
-        comments: `${SNAPSHOT_RAW_BASE}/${sourceFiles.comments}`,
-        votes: `${SNAPSHOT_RAW_BASE}/${sourceFiles.votes}`,
-        participantVotes: `${SNAPSHOT_RAW_BASE}/${sourceFiles.participantVotes}`,
-    };
-
     try {
-        const [summaryText, commentsText, votesText, participantVotesText] =
-            await Promise.all([
-                fetchText(fetchUrls.summary),
-                fetchText(fetchUrls.comments),
-                fetchText(fetchUrls.votes),
-                fetchText(fetchUrls.participantVotes),
-            ]);
+        const { files, manifest, sourceUrls } = await loadSnapshot();
+        const summaryText = files.summary;
+        const commentsText = files.comments;
+        const votesText = files.votes;
+        const participantVotesText = files.participantVotes;
+        const commentGroupsText = files.commentGroups;
 
         const summary = parseSummary(summaryText);
-        const comments = parseCsvObjects(commentsText).map((row) => ({
-            id: row["comment-id"],
-            authorId: row["author-id"],
-            body: normalizeText(row["comment-body"]),
-            timestamp: toInt(row.timestamp),
-            isoTimestamp: new Date(toInt(row.timestamp) * 1000).toISOString(),
-            agrees: toInt(row.agrees),
-            disagrees: toInt(row.disagrees),
-        }));
+        const comments = parseCsvObjects(commentsText)
+            .map((row) => {
+                const id = row["comment-id"];
+                const timestamp = requireTimestamp(
+                    row.timestamp,
+                    `Comment ${id}`
+                );
+                return {
+                    id,
+                    authorId: row["author-id"],
+                    body: normalizeText(row["comment-body"]),
+                    timestamp,
+                    isoTimestamp: new Date(timestamp * 1000).toISOString(),
+                    agrees: toInt(row.agrees),
+                    disagrees: toInt(row.disagrees),
+                };
+            })
+            .sort((left, right) => compareIds(left.id, right.id));
         const votes = parseCsvObjects(votesText)
-            .map((row) => ({
-                commentId: row["comment-id"],
-                voterId: row["voter-id"],
-                value: toInt(row.vote),
-                timestamp: toInt(row.timestamp),
-                isoTimestamp: new Date(
-                    toInt(row.timestamp) * 1000
-                ).toISOString(),
-            }))
-            .sort((left, right) => left.timestamp - right.timestamp);
-        const participantRows = parseCsvObjects(participantVotesText);
+            .map((row) => {
+                const timestamp = requireTimestamp(
+                    row.timestamp,
+                    `Vote ${row["voter-id"]}:${row["comment-id"]}`
+                );
+                return {
+                    commentId: row["comment-id"],
+                    voterId: row["voter-id"],
+                    value: toInt(row.vote),
+                    timestamp,
+                    isoTimestamp: new Date(timestamp * 1000).toISOString(),
+                };
+            })
+            .sort(
+                (left, right) =>
+                    left.timestamp - right.timestamp ||
+                    compareIds(left.commentId, right.commentId) ||
+                    compareIds(left.voterId, right.voterId)
+            );
+        const participantRows = parseCsvObjects(participantVotesText).sort(
+            (left, right) => compareIds(left.participant, right.participant)
+        );
+        const commentGroupRows = parseCsvObjects(commentGroupsText);
+        const commentGroupById = Object.fromEntries(
+            commentGroupRows.map((row) => [row["comment-id"], row])
+        );
+        if (Object.keys(commentGroupById).length !== commentGroupRows.length) {
+            throw new Error(
+                "Polis comment-group snapshot contains duplicate IDs"
+            );
+        }
+
         const commentIds = comments.map((comment) => comment.id);
         const commentById = Object.fromEntries(
             comments.map((comment) => [comment.id, comment])
         );
-
         const nonEmptyGroups = [
             ...new Set(
                 participantRows
                     .map((row) => row["group-id"] || "none")
                     .filter((groupId) => groupId !== "none")
             ),
-        ];
-        const groupCounts = Object.fromEntries(
-            nonEmptyGroups.map((groupId) => [
-                groupId,
-                participantRows.filter((row) => row["group-id"] === groupId)
-                    .length,
-            ])
-        );
-        const orderedGroups = nonEmptyGroups.sort(
-            (left, right) => groupCounts[right] - groupCounts[left]
-        );
+        ].sort(compareIds);
+        const orderedGroups = nonEmptyGroups;
+        if (nonEmptyGroups.length > CLUSTER_STYLES.length) {
+            throw new Error("Polis snapshot has more clusters than styles");
+        }
         const groupMeta = new Map(
-            orderedGroups.map((groupId, index) => {
-                const style = CLUSTER_STYLES[index] || CLUSTER_STYLES.at(-1);
+            nonEmptyGroups.map((groupId, index) => {
+                const style = CLUSTER_STYLES[index];
                 return [
                     groupId,
                     {
@@ -646,67 +801,79 @@ export default async function () {
         );
 
         const statementStats = new Map(
-            commentIds.map((commentId) => [
-                commentId,
-                {
-                    id: commentId,
-                    body: commentById[commentId]?.body || "",
-                    createdAt: commentById[commentId]?.isoTimestamp || null,
-                    createdAtDisplay: formatDatePair(
-                        commentById[commentId]?.isoTimestamp || Date.now()
-                    ),
+            commentIds.map((commentId) => {
+                const comment = commentById[commentId];
+                const official = commentGroupById[commentId];
+                if (!official) {
+                    throw new Error(
+                        `Polis comment-group snapshot is missing comment ${commentId}`
+                    );
+                }
+                if (normalizeText(official.comment) !== comment.body) {
+                    throw new Error(
+                        `Polis comment ${commentId} differs between snapshot files`
+                    );
+                }
+
+                const groups = Object.fromEntries(
+                    orderedGroups.map((groupId) => {
+                        const code = groupMeta
+                            .get(groupId)
+                            .displayCode.toLowerCase();
+                        return [
+                            groupId,
+                            readVoteCounts(
+                                official,
+                                `group-${code}-`,
+                                `Comment ${commentId}, group ${code}`
+                            ),
+                        ];
+                    })
+                );
+                groups.none = {
                     agrees: 0,
                     disagrees: 0,
                     passes: 0,
                     totalVotes: 0,
-                    groups: Object.fromEntries(
-                        [...orderedGroups, "none"].map((groupId) => [
-                            groupId,
-                            {
-                                agrees: 0,
-                                disagrees: 0,
-                                passes: 0,
-                                totalVotes: 0,
-                            },
-                        ])
-                    ),
-                },
-            ])
+                };
+                const totals = readVoteCounts(
+                    official,
+                    "total-",
+                    `Comment ${commentId}`
+                );
+                const groupedVotes = orderedGroups.reduce(
+                    (total, groupId) => total + groups[groupId].totalVotes,
+                    0
+                );
+                if (groupedVotes !== totals.totalVotes) {
+                    throw new Error(
+                        `Comment ${commentId}: group totals do not match total votes`
+                    );
+                }
+                return [
+                    commentId,
+                    {
+                        id: commentId,
+                        body: comment.body,
+                        createdAt: comment.isoTimestamp,
+                        createdAtDisplay: formatDatePair(comment.isoTimestamp),
+                        ...totals,
+                        groups,
+                    },
+                ];
+            })
         );
 
         const participants = participantRows.map((row, index) => {
             const groupId = row["group-id"] || "none";
+            if (!groupMeta.has(groupId)) {
+                throw new Error(
+                    `Participant ${row.participant} has unknown group ${groupId}`
+                );
+            }
             const voteMap = Object.fromEntries(
                 commentIds.map((commentId) => [commentId, row[commentId] || ""])
             );
-
-            for (const commentId of commentIds) {
-                const value = voteMap[commentId];
-                if (value === "") {
-                    continue;
-                }
-
-                const numericValue = toInt(value);
-                const stats = statementStats.get(commentId);
-                stats.totalVotes += 1;
-                if (numericValue > 0) {
-                    stats.agrees += 1;
-                } else if (numericValue < 0) {
-                    stats.disagrees += 1;
-                } else {
-                    stats.passes += 1;
-                }
-
-                const groupStats = stats.groups[groupId];
-                groupStats.totalVotes += 1;
-                if (numericValue > 0) {
-                    groupStats.agrees += 1;
-                } else if (numericValue < 0) {
-                    groupStats.disagrees += 1;
-                } else {
-                    groupStats.passes += 1;
-                }
-            }
 
             return {
                 id: row.participant,
@@ -812,7 +979,10 @@ export default async function () {
                     ),
                 };
             })
-            .sort((left, right) => right.score - left.score)
+            .sort(
+                (left, right) =>
+                    right.score - left.score || compareIds(left.id, right.id)
+            )
             .map((statement, index, collection) => ({
                 ...statement,
                 rank: index + 1,
@@ -946,7 +1116,8 @@ export default async function () {
                 .filter((statement) => statement.distinctiveness > 0)
                 .sort(
                     (left, right) =>
-                        right.distinctiveness - left.distinctiveness
+                        right.distinctiveness - left.distinctiveness ||
+                        compareIds(left.id, right.id)
                 )
                 .slice(0, 3);
 
@@ -996,9 +1167,17 @@ export default async function () {
             Math.max(...votes.map((vote) => vote.timestamp)) * 1000
         );
 
-        return {
+        return canonicalizeNumbers({
             ok: true,
             exportId: EXPORT_ID,
+            snapshotId: manifest.snapshotId,
+            snapshot: {
+                id: manifest.snapshotId,
+                commit: manifest.commit,
+                repository: manifest.repository,
+                timeZone: manifest.timeZone,
+                files: manifest.files,
+            },
             sourceUrls,
             snapshotUrl: sourceUrls.snapshotRepo,
             question: {
@@ -1010,11 +1189,17 @@ export default async function () {
                 tw: "這是一個只靠 Polis 匯出資料重建的 Habermolt 風格審議頁面。下方內容以投票向量、跨群支持度與本地推導為基礎，沒有使用隱藏 API 或智慧體中介資料。",
             },
             summary: {
-                voters: toInt(summary.voters),
-                votersInConversation: toInt(summary["voters-in-conv"]),
-                comments: toInt(summary.comments),
-                groups: toInt(summary.groups),
-                commenters: toInt(summary.commenters),
+                voters: requireCount(summary.voters, "Summary voters"),
+                votersInConversation: requireCount(
+                    summary["voters-in-conv"],
+                    "Summary voters in conversation"
+                ),
+                comments: requireCount(summary.comments, "Summary comments"),
+                groups: requireCount(summary.groups, "Summary groups"),
+                commenters: requireCount(
+                    summary.commenters,
+                    "Summary commenters"
+                ),
             },
             stats: {
                 participants: participantCoords.length,
@@ -1035,9 +1220,10 @@ export default async function () {
             statementEdges,
             participants: participantCoords.sort((left, right) => {
                 if (left.group.displayCode === right.group.displayCode) {
-                    return Number(left.id) - Number(right.id);
+                    return compareIds(left.id, right.id);
                 }
-                return left.group.displayCode.localeCompare(
+                return compareIds(
+                    left.group.displayCode,
                     right.group.displayCode
                 );
             }),
@@ -1061,14 +1247,11 @@ export default async function () {
                     "與 Habermolt 相比，這裡缺少的是：智慧體名稱、撰寫出的意見、語意嵌入，以及原生的排序歷史。",
                 ],
             },
-        };
+        });
     } catch (error) {
-        return {
-            ok: false,
-            exportId: EXPORT_ID,
-            sourceUrls,
-            snapshotUrl: sourceUrls.snapshotRepo,
-            error: String(error),
-        };
+        throw new Error(
+            `Failed to load deterministic Polis snapshot: ${error instanceof Error ? error.message : String(error)}`,
+            { cause: error }
+        );
     }
 }

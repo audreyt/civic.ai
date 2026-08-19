@@ -20,12 +20,13 @@
             "slug": "1",
             "title": {
                 "en": "Pack 1: Attentiveness",
-                "tw": "一：覺察力"
+                "tw": "一：覺察力",
+                "ja": "１ 注意深さ"
             },
             "pages": [
                 {
                     "id": "1",
-                    "type": { "en": "Problem", "tw": "問題" },
+                    "type": { "en": "Problem", "tw": "問題", "ja": "問題点" },
                     "alt": {
                         "en": "Attentiveness — Problem (comic page)",
                         "tw": "覺察力——問題（漫畫頁）"
@@ -33,7 +34,7 @@
                 },
                 {
                     "id": "2",
-                    "type": { "en": "Solution", "tw": "解方" },
+                    "type": { "en": "Solution", "tw": "解方", "ja": "解決策" },
                     "alt": {
                         "en": "Attentiveness — Solution (comic page)",
                         "tw": "覺察力——解方（漫畫頁）"
@@ -46,12 +47,13 @@
             "slug": "2",
             "title": {
                 "en": "Pack 2: Responsibility",
-                "tw": "二：負責力"
+                "tw": "二：負責力",
+                "ja": "２ 責任"
             },
             "pages": [
                 {
                     "id": "1",
-                    "type": { "en": "Problem", "tw": "問題" },
+                    "type": { "en": "Problem", "tw": "問題", "ja": "問題点" },
                     "alt": {
                         "en": "Responsibility — Problem (comic page)",
                         "tw": "負責力——問題（漫畫頁）"
@@ -59,7 +61,7 @@
                 },
                 {
                     "id": "2",
-                    "type": { "en": "Solution", "tw": "解方" },
+                    "type": { "en": "Solution", "tw": "解方", "ja": "解決策" },
                     "alt": {
                         "en": "Responsibility — Solution (comic page)",
                         "tw": "負責力——解方（漫畫頁）"
@@ -72,12 +74,13 @@
             "slug": "3",
             "title": {
                 "en": "Pack 3: Competence",
-                "tw": "三：勝任力"
+                "tw": "三：勝任力",
+                "ja": "３ 有能さ"
             },
             "pages": [
                 {
                     "id": "1",
-                    "type": { "en": "Problem", "tw": "問題" },
+                    "type": { "en": "Problem", "tw": "問題", "ja": "問題点" },
                     "alt": {
                         "en": "Competence — Problem (comic page)",
                         "tw": "勝任力——問題（漫畫頁）"
@@ -85,7 +88,7 @@
                 },
                 {
                     "id": "2",
-                    "type": { "en": "Solution", "tw": "解方" },
+                    "type": { "en": "Solution", "tw": "解方", "ja": "解決策" },
                     "alt": {
                         "en": "Competence — Solution (comic page)",
                         "tw": "勝任力——解方（漫畫頁）"
@@ -98,12 +101,13 @@
             "slug": "4",
             "title": {
                 "en": "Pack 4: Responsiveness",
-                "tw": "四：回應力"
+                "tw": "四：回應力",
+                "ja": "４ 応答"
             },
             "pages": [
                 {
                     "id": "1",
-                    "type": { "en": "Problem", "tw": "問題" },
+                    "type": { "en": "Problem", "tw": "問題", "ja": "問題点" },
                     "alt": {
                         "en": "Responsiveness — Problem (comic page)",
                         "tw": "回應力——問題（漫畫頁）"
@@ -111,7 +115,7 @@
                 },
                 {
                     "id": "2",
-                    "type": { "en": "Solution", "tw": "解方" },
+                    "type": { "en": "Solution", "tw": "解方", "ja": "解決策" },
                     "alt": {
                         "en": "Responsiveness — Solution (comic page)",
                         "tw": "回應力——解方（漫畫頁）"
@@ -124,12 +128,13 @@
             "slug": "5",
             "title": {
                 "en": "Pack 5: Solidarity",
-                "tw": "五：團結力"
+                "tw": "五：團結力",
+                "ja": "５ 連帯"
             },
             "pages": [
                 {
                     "id": "1",
-                    "type": { "en": "Problem", "tw": "問題" },
+                    "type": { "en": "Problem", "tw": "問題", "ja": "問題点" },
                     "alt": {
                         "en": "Solidarity — Problem (comic page)",
                         "tw": "團結力——問題（漫畫頁）"
@@ -137,7 +142,7 @@
                 },
                 {
                     "id": "2",
-                    "type": { "en": "Solution", "tw": "解方" },
+                    "type": { "en": "Solution", "tw": "解方", "ja": "解決策" },
                     "alt": {
                         "en": "Solidarity — Solution (comic page)",
                         "tw": "團結力——解方（漫畫頁）"
@@ -150,12 +155,13 @@
             "slug": "6",
             "title": {
                 "en": "Pack 6: Symbiosis",
-                "tw": "六：共生力"
+                "tw": "六：共生力",
+                "ja": "６ 共生"
             },
             "pages": [
                 {
                     "id": "1",
-                    "type": { "en": "Problem", "tw": "問題" },
+                    "type": { "en": "Problem", "tw": "問題", "ja": "問題点" },
                     "alt": {
                         "en": "Symbiosis — Problem (comic page)",
                         "tw": "共生力——問題（漫畫頁）"
@@ -163,7 +169,7 @@
                 },
                 {
                     "id": "2",
-                    "type": { "en": "Solution", "tw": "解方" },
+                    "type": { "en": "Solution", "tw": "解方", "ja": "解決策" },
                     "alt": {
                         "en": "Symbiosis — Solution (comic page)",
                         "tw": "共生力——解方（漫畫頁）"

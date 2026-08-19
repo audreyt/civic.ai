@@ -1,3 +1,4 @@
+import { renderPolisReport } from "../../_data/polis_report.js";
 import type { PageRecord } from "./pages";
 import { renderConceptMap } from "./conceptMap";
 import {
@@ -43,6 +44,10 @@ export function expandShortcodes(
         .replaceAll(
             "<!-- astro:concept-map -->",
             renderConceptMap(page.data.lang)
+        )
+        .replaceAll(
+            "<!-- astro:polis-report -->",
+            renderPolisReport(page.data.lang)
         )
         .replaceAll(
             "<!-- astro:openclaw-raw-skill-note en -->",
@@ -146,6 +151,15 @@ function shapePolys(
 }
 
 function renderOverlayFrame(frame: ComicsOverlayFrame): string {
+    // renderOverlayLayer already filters out blank-after-trim frames before
+    // calling this, so at least one non-whitespace line always survives —
+    // ariaText is guaranteed non-empty here.
+    const ariaText = frame.text
+        .split("\n")
+        .map((line) => line.trim())
+        .filter((line) => line !== "")
+        .join(" ");
+    const labelAttr = ` aria-label="${escapeAttr(ariaText)}"`;
     // The gallery now draws on the wordless (no baked-in lettering) art, so
     // a background box is no longer needed to hide original English text —
     // always transparent, regardless of the authored frame.bg value.
@@ -162,21 +176,9 @@ function renderOverlayFrame(frame: ComicsOverlayFrame): string {
     const text = escapeHtml(frame.text).replace(/\n/g, "&#10;");
     if (frame.shapeOn && frame.sL && frame.sR && frame.sD) {
         const { clip, left, right } = shapePolys(frame.sL, frame.sR, frame.sD);
-        return `<div class="ov shaped" style="${base}background:${background};text-align:${frame.align};line-height:1.3;-webkit-clip-path:${clip};clip-path:${clip};"><span style="float:left;width:50%;height:100%;shape-outside:${left};"></span><span style="float:right;width:50%;height:100%;shape-outside:${right};"></span><span class="shaped-text">${text}</span></div>`;
+        return `<div class="ov shaped"${labelAttr} style="${base}background:${background};text-align:${frame.align};line-height:1.3;-webkit-clip-path:${clip};clip-path:${clip};"><span style="float:left;width:50%;height:100%;shape-outside:${left};"></span><span style="float:right;width:50%;height:100%;shape-outside:${right};"></span><span class="shaped-text">${text}</span></div>`;
     }
-    const meaningfulLines = frame.text
-        .split("\n")
-        .map((line) => line.trim())
-        .filter((line) => line !== "");
-    const boxWidthPct = parseFloat(frame.width);
-    const eachSegmentFitsOneLine = meaningfulLines.every(
-        (line) => line.length * frame.fontSize <= boxWidthPct
-    );
-    const noSoftWrap =
-        meaningfulLines.length > 1 && eachSegmentFitsOneLine
-            ? " data-no-soft-wrap"
-            : "";
-    return `<div class="ov rect" style="${base}background:${background};"><span${noSoftWrap} style="text-align:${frame.align}">${text}</span></div>`;
+    return `<div class="ov rect"${labelAttr} style="${base}background:${background};"><span style="text-align:${frame.align}">${text}</span></div>`;
 }
 
 function renderOverlayLayer(key: string, arVar?: string): string {
@@ -188,44 +190,130 @@ function renderOverlayLayer(key: string, arVar?: string): string {
     );
     if (!frames.length) return "";
     const style = arVar ? ` style="--ov-ar:${arVar};"` : "";
-    return `<div class="ja-ov-layer"${style}>${frames.map(renderOverlayFrame).join("")}</div>`;
+    return `<div class="ja-ov-layer"${style}>${frames.map((frame) => renderOverlayFrame(frame)).join("")}</div>`;
 }
 
-// Provisional Japanese-language overlay for the comics gallery: the source
-// images and links stay the English ones (no ja chapter pages exist), and a
-// real-DOM text layer from comics-ja-overlays.json is drawn on top of each
-// panel. See claude_aki/civic-ai-ja-overlay-instructions.md for the source
-// brief this implements.
 export function renderComicsGalleryJa(): string {
-    // Wordless (no baked-in lettering) art from the same upstream repo —
-    // see import-comics-wordless.mjs. Dimensions match the lettered
-    // versions exactly, so width/height and comics.overview stay shared.
     const overview = comics.overview.en;
     const caption = `<p class="figure-caption"><strong>概要。</strong>Nicky Case が描いた「ケアの6つの力」全体図。</p>`;
+    const note = `<p class="figure-caption">読み上げの動作はEdgeのみで確認しています。<br />画像の保存は各囲い最下部のボタンを利用してください。</p>`;
+    const dl = (jaImg: string) =>
+        `<a class="next-action-button" href="${escapeAttr(jaImg)}" download><span class="button-text">画像を保存</span></a>`;
     const pages = comics.packs
         .flatMap((pack) =>
             pack.pages.map((page) => {
                 const img = `/img/pack${pack.num}-${page.id}-wordless.jpg`;
+                const jaImg = `/img/pack${pack.num}-${page.id}-ja.jpg`;
                 const key = `pack${pack.num}-${page.id}`;
-                return `<a href="/${pack.slug}/" class="comics-page-link" id="pack-${pack.num}-${page.id}"><noscript><img src="${escapeAttr(img)}" alt="${escapeAttr(page.alt.en)}" width="1437" height="1999" loading="lazy" decoding="async" /></noscript>${renderOverlayLayer(key)}<span class="comics-page-label"><span class="comics-page-pack">${escapeHtml(pack.title.en)}</span><span class="comics-page-type">${escapeHtml(page.type.en)}</span></span></a>`;
+                const title = pack.title.ja ?? pack.title.en;
+                const type = page.type.ja ?? page.type.en;
+                const alt = `${title.replace(/^[０-９\d]+\s*/, "")}——${type}（漫画ページ）`;
+                const link = `<a href="/${pack.slug}/" class="comics-page-link" id="pack-${pack.num}-${page.id}"><noscript><img src="${escapeAttr(img)}" alt="${escapeAttr(alt)}" width="1437" height="1999" loading="lazy" decoding="async" /></noscript>${renderOverlayLayer(key)}<span class="comics-page-label"><span class="comics-page-pack">${escapeHtml(title)}</span><span class="comics-page-type">${escapeHtml(type)}</span></span></a>`;
+                return `<div class="comics-cell">${link}${dl(jaImg)}</div>`;
             })
         )
         .join("");
     const credit = `イラスト：<a href="https://ncase.me">Nicky Case</a>（CC0）。日本語テキストは暫定訳です。<a href="${escapeAttr(comics.source_repo)}">原資料</a>は GitHub を参照。`;
     const overviewImg = "/img/overview-small-wordless.jpg";
-    return `<div class="comics-gallery"><section class="comics-overview"><a href="/#the-6-pack" class="comics-overview-link"><noscript><img src="${escapeAttr(overviewImg)}" alt="${escapeAttr(overview.alt)}" class="overview-image" width="${overview.width}" height="${overview.height}" loading="lazy" decoding="async" /></noscript>${renderOverlayLayer("overview-small", "1280 / 1781")}</a>${caption}</section><div class="comics-grid">${pages}</div><p class="comics-credit">${credit}</p></div>`;
+    const overviewJa = "/img/overview-small-ja.jpg";
+    const overviewAlt = "「ケアの6つの力」全体図";
+    return `<div class="comics-gallery">${note}<section class="comics-overview"><a href="/#the-6-pack" class="comics-overview-link"><noscript><img src="${escapeAttr(overviewImg)}" alt="${escapeAttr(overviewAlt)}" class="overview-image" width="${overview.width}" height="${overview.height}" loading="lazy" decoding="async" /></noscript>${renderOverlayLayer("overview-small", "1280 / 1781")}</a>${caption}${dl(overviewJa)}</section><div class="comics-grid">${pages}</div><p class="comics-credit">${credit}</p></div>`;
 }
 
 export function renderGlossaryList(lang: string | undefined): string {
     const zh = lang2(lang) === "zh";
-    const entries = glossary
-        .map((entry) => {
-            const term = zh ? entry.term_tw : entry.term_en;
-            const definition = zh ? entry.def_tw : entry.def_en;
-            return `<dt id="${escapeAttr(entry.id)}">${escapeHtml(term)}</dt><dd>${definition}</dd>`;
+
+    const tiers = [
+        {
+            id: "diagnosis",
+            labelEn: "Diagnosis",
+            labelTw: "診斷",
+            descEn: "What has gone wrong.",
+            descTw: "什麼出了問題。",
+        },
+        {
+            id: "architecture",
+            labelEn: "Architecture",
+            labelTw: "架構",
+            descEn: "What we name, and what we refuse.",
+            descTw: "我們如何命名，以及我們拒絕什麼。",
+        },
+        {
+            id: "design",
+            labelEn: "Design",
+            labelTw: "設計",
+            descEn: "What those commitments become as design.",
+            descTw: "那些承諾成為設計之後的樣子。",
+        },
+        {
+            id: "instruments",
+            labelEn: "Instruments",
+            labelTw: "工具",
+            descEn: "Named instruments a room can pick up.",
+            descTw: "場域可以拿起來用的具名工具。",
+        },
+    ] as const;
+
+    const navButtons = [
+        `<button type="button" data-glossary-filter="all" aria-pressed="true">${zh ? "全部詞條" : "All terms"}</button>`,
+        ...tiers.map(
+            (tier) =>
+                `<button type="button" data-glossary-filter="${escapeAttr(tier.id)}" aria-pressed="false">${zh ? escapeHtml(tier.labelTw) : escapeHtml(tier.labelEn)}</button>`
+        ),
+    ].join("");
+
+    const nav = `<nav class="faq-filter" aria-label="${zh ? "篩選詞彙表" : "Filter glossary"}">${navButtons}</nav>`;
+
+    const grouped: {
+        diagnosis: typeof glossary;
+        architecture: typeof glossary;
+        design: typeof glossary;
+        instruments: typeof glossary;
+    } = {
+        diagnosis: [],
+        architecture: [],
+        design: [],
+        instruments: [],
+    };
+
+    for (const entry of glossary) {
+        const rawTier =
+            entry &&
+            typeof entry === "object" &&
+            "tier" in entry &&
+            typeof entry.tier === "string"
+                ? entry.tier
+                : undefined;
+        const tierKey: "diagnosis" | "architecture" | "design" | "instruments" =
+            rawTier === "diagnosis" ||
+            rawTier === "architecture" ||
+            rawTier === "design" ||
+            rawTier === "instruments"
+                ? rawTier
+                : "instruments";
+        grouped[tierKey].push(entry);
+    }
+
+    const sections = tiers
+        .map((tier) => {
+            const tierEntries = grouped[tier.id];
+            const heading = zh ? tier.labelTw : tier.labelEn;
+            const desc = zh ? tier.descTw : tier.descEn;
+            const labelAttr = tier.labelEn;
+
+            const dts = tierEntries
+                .map((entry) => {
+                    const term = zh ? entry.term_tw : entry.term_en;
+                    const definition = zh ? entry.def_tw : entry.def_en;
+                    return `<dt id="${escapeAttr(entry.id)}">${escapeHtml(term)}</dt><dd>${definition}</dd>`;
+                })
+                .join("");
+
+            return `<section class="glossary-tier" data-glossary-tier="${escapeAttr(tier.id)}" data-glossary-label="${escapeAttr(labelAttr)}"><h2 id="glossary-${escapeAttr(tier.id)}">${escapeHtml(heading)}</h2><p>${escapeHtml(desc)}</p><dl class="glossary-list">${dts}</dl></section>`;
         })
         .join("");
-    return `<dl class="glossary-list">${entries}</dl>`;
+
+    return `${nav}${sections}`;
 }
 
 export function renderOpenClawRawSkillNote(which: "en" | "tw"): string {

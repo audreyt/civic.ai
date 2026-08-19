@@ -1,0 +1,202 @@
+<script is:inline>
+    // @ts-nocheck
+    (() => {
+        const NS = "__jaComicsOverlay__";
+        const html = document.documentElement;
+        const MIN_SCALE = 0.3;
+        const ITER = 12;
+
+        const FS_OVERRIDES = {
+            "5cqw": "3cqw",
+        };
+
+        const layers = () => [...document.querySelectorAll(".ja-ov-layer")];
+        if (!layers().length) return;
+
+        const isJa = () =>
+            /^ja(-|$)/i.test((html.getAttribute("lang") || "").trim());
+
+        const overflowing = (e) =>
+            e.scrollHeight > e.clientHeight + 1 ||
+            e.scrollWidth > e.clientWidth + 1;
+        const parseFs = (v) => {
+            const m = String(v)
+                .trim()
+                .match(/^([\d.]+)([a-z%]*)$/i);
+            return m ? { n: parseFloat(m[1]), unit: m[2] || "px" } : null;
+        };
+        const norm = (v) => String(v).trim().toLowerCase();
+        const markOrig = (box) => {
+            if (!box.hasAttribute("data-jafit"))
+                box.setAttribute(
+                    "data-jafit",
+                    box.style.getPropertyValue("--fs")
+                );
+        };
+        const setFs = (box, val) => {
+            markOrig(box);
+            box.style.setProperty("--fs", val, "important");
+        };
+        const restoreFs = () =>
+            document.querySelectorAll("[data-jafit]").forEach((e) => {
+                const o = e.getAttribute("data-jafit");
+                if (o) e.style.setProperty("--fs", o);
+                else e.style.removeProperty("--fs");
+                e.removeAttribute("data-jafit");
+            });
+        const applyOverride = (box) => {
+            const key = norm(box.style.getPropertyValue("--fs"));
+            if (!(key in FS_OVERRIDES)) return false;
+            const spec = FS_OVERRIDES[key];
+            if (typeof spec === "number") {
+                const b = parseFs(box.style.getPropertyValue("--fs"));
+                if (b) setFs(box, +(b.n * spec).toFixed(4) + b.unit);
+            } else setFs(box, spec);
+            return true;
+        };
+        const fitBox = (box) => {
+            const base = parseFs(
+                box.style.getPropertyValue("--fs") ||
+                    getComputedStyle(box).getPropertyValue("--fs")
+            );
+            if (!base || !base.n) return;
+            if (!overflowing(box)) return;
+            const set = (k) => setFs(box, +(base.n * k).toFixed(4) + base.unit);
+            set(MIN_SCALE);
+            if (overflowing(box)) return;
+            let lo = MIN_SCALE,
+                hi = 1;
+            for (let i = 0; i < ITER; i++) {
+                const mid = (lo + hi) / 2;
+                set(mid);
+                if (overflowing(box)) hi = mid;
+                else lo = mid;
+            }
+            set(lo);
+        };
+        const fitAll = () => {
+            const nonJa = !isJa();
+            layers().forEach((L) => {
+                const bs = [];
+                L.querySelectorAll("*").forEach((e) => {
+                    if (e.style.getPropertyValue("--fs")) bs.push(e);
+                });
+                if (nonJa) bs.forEach(applyOverride);
+                bs.forEach(fitBox);
+            });
+        };
+
+        const imgFor = (layer) => {
+            const a = layer.closest("a");
+            return a ? a.querySelector("img") : null;
+        };
+        const imgs = () => layers().map(imgFor).filter(Boolean);
+        const toJa = (src) =>
+            src.replace(/-wordless(\.[a-z0-9]+)(?=($|[?#]))/i, "-ja$1");
+        // Print swaps every overlay image to its lettered `-ja` variant so
+        // the Japanese text prints inline (no live overlay in print CSS —
+        // see the `@media print { .ja-ov-layer { display: none } }` rule).
+        // beforeprint/afterprint and the matchMedia("print") change event
+        // can all fire for a single print — Safari only does beforeprint/
+        // afterprint, Firefox relies on the matchMedia listener, and
+        // browsers that fire both would otherwise call enter/exit twice.
+        // printState guards that reentrancy AND (more importantly) captures
+        // each image's literal pre-print `src` — including the async AVIF
+        // src rewrite in ClientScripts.astro — so exit restores exactly
+        // what was on screen rather than recomputing a "-wordless" guess
+        // that would clobber a `.avif` extension or any src not currently
+        // wordless.
+        const printState = { active: false, snapshot: null };
+        const enterPrint = () => {
+            if (printState.active) return;
+            printState.active = true;
+            printState.snapshot = imgs().map((img) => [
+                img,
+                img.getAttribute("src") || "",
+            ]);
+            printState.snapshot.forEach(([img, src]) => {
+                const next = toJa(src);
+                if (next !== src) img.setAttribute("src", next);
+            });
+        };
+        const exitPrint = () => {
+            if (!printState.active) return;
+            printState.active = false;
+            const snapshot = printState.snapshot || [];
+            printState.snapshot = null;
+            snapshot.forEach(([img, src]) => img.setAttribute("src", src));
+        };
+        const preloadJa = () => {
+            imgs().forEach((img) => {
+                const ja = toJa(img.getAttribute("src") || "");
+                if (/-ja\./i.test(ja)) new Image().src = ja;
+            });
+        };
+
+        const st = (window[NS] = window[NS] || {});
+        const stopObs = () => {
+            if (st.obs) st.obs.forEach((o) => o.disconnect());
+            st.obs = null;
+        };
+        const startObs = () => {
+            const obs = [];
+            const oLang = new MutationObserver(run);
+            oLang.observe(html, {
+                attributes: true,
+                attributeFilter: ["lang"],
+            });
+            obs.push(oLang);
+            layers().forEach((L) => {
+                const oText = new MutationObserver(run);
+                oText.observe(L, {
+                    childList: true,
+                    characterData: true,
+                    subtree: true,
+                });
+                obs.push(oText);
+                const a = L.closest("a");
+                if (a) {
+                    const oImg = new MutationObserver(run);
+                    oImg.observe(a, { childList: true });
+                    obs.push(oImg);
+                }
+            });
+            st.obs = obs;
+        };
+
+        const apply = () => {
+            stopObs();
+            restoreFs();
+            fitAll();
+            startObs();
+        };
+        const run = () => {
+            cancelAnimationFrame(st.raf);
+            st.raf = requestAnimationFrame(apply);
+        };
+
+        stopObs();
+        if (st.onResize) window.removeEventListener("resize", st.onResize);
+        st.onResize = run;
+        window.addEventListener("resize", run);
+        window.addEventListener("load", () => {
+            run();
+            const idle =
+                window.requestIdleCallback || ((f) => setTimeout(f, 1200));
+            idle(preloadJa);
+        });
+        if (document.fonts && document.fonts.ready)
+            document.fonts.ready.then(run);
+        setTimeout(run, 500);
+        run();
+
+        window.addEventListener("beforeprint", enterPrint);
+        window.addEventListener("afterprint", exitPrint);
+        const mq = window.matchMedia && window.matchMedia("print");
+        if (mq && mq.addEventListener)
+            mq.addEventListener("change", (e) => {
+                if (e.matches) enterPrint();
+                else exitPrint();
+            });
+    })();
+</script>

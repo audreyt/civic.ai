@@ -51,43 +51,6 @@ const siteFixture = vi.hoisted(() => {
         fontFamily: "sans-serif",
         pad: 1,
     };
-    const multiLineFitsFrame: ComicsOverlayFrame = {
-        // Two short meaningful lines that each individually fit within the
-        // box width — exercises the "true" side of the `noSoftWrap`
-        // ternary's `meaningfulLines.length > 1 && eachSegmentFitsOneLine`
-        // condition.
-        text: "ab\ncd",
-        top: "40%",
-        left: "10%",
-        width: "80%",
-        height: "10%",
-        fontSize: 1,
-        align: "left",
-        color: "#000",
-        bg: "transparent",
-        italic: false,
-        angle: "0deg",
-        fontFamily: "sans-serif",
-        pad: 1,
-    };
-    const multiLineOverflowFrame: ComicsOverlayFrame = {
-        // Two meaningful lines, but each is wider than the box —
-        // exercises the "false" side of `eachSegmentFitsOneLine` while
-        // `meaningfulLines.length > 1` stays true.
-        text: "a long overflowing line\nanother long overflowing line",
-        top: "45%",
-        left: "10%",
-        width: "5%",
-        height: "10%",
-        fontSize: 5,
-        align: "left",
-        color: "#000",
-        bg: "transparent",
-        italic: false,
-        angle: "0deg",
-        fontFamily: "sans-serif",
-        pad: 1,
-    };
     const emptyTextFrame: ComicsOverlayFrame = {
         text: "   ",
         top: "0%",
@@ -164,13 +127,7 @@ const siteFixture = vi.hoisted(() => {
             ],
         },
         comicsJaOverlays: {
-            "pack1-a": [
-                emptyTextFrame,
-                shapedFrame,
-                italicRectFrame,
-                multiLineFitsFrame,
-                multiLineOverflowFrame,
-            ],
+            "pack1-a": [emptyTextFrame, shapedFrame, italicRectFrame],
             "overview-small": [italicRectFrame],
         },
         glossary: [
@@ -271,8 +228,11 @@ const siteFixture = vi.hoisted(() => {
 
 vi.mock("../src/lib/site", () => siteFixture);
 
-import { asciifySkill, expandShortcodes } from "../src/lib/shortcodes";
-
+import {
+    asciifySkill,
+    expandShortcodes,
+    renderGlossaryList,
+} from "../src/lib/shortcodes";
 test("expandShortcodes throws when unresolved {% ... %} template syntax remains", () => {
     expect(() =>
         expandShortcodes(
@@ -297,6 +257,24 @@ test("expandShortcodes returns the expanded body when no legacy syntax remains",
         "Plain body with no legacy shortcodes."
     );
     expect(result).toBe("Plain body with no legacy shortcodes.");
+});
+
+test("expandShortcodes inserts the bilingual report from one snapshot", () => {
+    const english = expandShortcodes(
+        { sourcePath: "polis-report.md", data: { lang: "en-gb" } },
+        "<!-- astro:polis-report -->"
+    );
+    const mandarin = expandShortcodes(
+        { sourcePath: "tw-polis-report.md", data: { lang: "zh-tw" } },
+        "<!-- astro:polis-report -->"
+    );
+
+    const snapshotId =
+        "39b1eed77ad2caed03c11d38b7f5730b5008f9df14e4c7617dc3b2854b740db0";
+    expect(english).toContain(`data-polis-snapshot="${snapshotId}"`);
+    expect(english).toContain("views of 62 participants");
+    expect(mandarin).toContain(`data-polis-snapshot="${snapshotId}"`);
+    expect(mandarin).toContain("62 位參與者");
 });
 
 test("expandShortcodes exercises the zh-lang branch of all site shortcodes", () => {
@@ -338,4 +316,31 @@ test("asciifySkill converts smart punctuation to ASCII and strips remaining non-
 test("asciifySkill passes plain ASCII text through unchanged", () => {
     const input = "Just a plain ASCII sentence, with punctuation!";
     expect(asciifySkill(input)).toBe(input);
+});
+
+test("renderGlossaryList renders untiered mock entries in instruments tier", () => {
+    const html = renderGlossaryList("en");
+    expect(html).toContain(
+        '<nav class="faq-filter" aria-label="Filter glossary">'
+    );
+    expect(html).toContain('data-glossary-filter="all"');
+    expect(html).toContain('data-glossary-filter="diagnosis"');
+    expect(html).toContain('data-glossary-filter="architecture"');
+    expect(html).toContain('data-glossary-filter="design"');
+    expect(html).toContain('data-glossary-filter="instruments"');
+    expect(html).toContain('<h2 id="glossary-diagnosis">Diagnosis</h2>');
+    expect(html).toContain('<h2 id="glossary-architecture">Architecture</h2>');
+    expect(html).toContain('<h2 id="glossary-design">Design</h2>');
+    expect(html).toContain('<h2 id="glossary-instruments">Instruments</h2>');
+    expect(html).toContain('<dt id="">Term EN</dt><dd>Definition EN</dd>');
+
+    const twHtml = renderGlossaryList("zh-tw");
+    expect(twHtml).toContain(
+        '<nav class="faq-filter" aria-label="篩選詞彙表">'
+    );
+    expect(twHtml).toContain('<h2 id="glossary-diagnosis">診斷</h2>');
+    expect(twHtml).toContain('<h2 id="glossary-architecture">架構</h2>');
+    expect(twHtml).toContain('<h2 id="glossary-design">設計</h2>');
+    expect(twHtml).toContain('<h2 id="glossary-instruments">工具</h2>');
+    expect(twHtml).toContain('<dt id="">詞彙</dt><dd>定義</dd>');
 });

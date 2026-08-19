@@ -103,15 +103,18 @@ describe("vp-first root lifecycle, Bun package-manager/worker boundary", () => {
         expect(text).toContain("actions/deploy-pages@v5");
     });
 
-    test("confines Bun-native shell commands to the separate worker package", () => {
-        const commandLines = allWorkflowText()
-            .split("\n")
-            .filter((line) => /^\s*run:.*\bbun\b/.test(line));
+    test("uses setup-vp's managed package manager for root and worker installs", () => {
+        const text = allWorkflowText();
+        expect(text).not.toContain("oven-sh/setup-bun");
+        expect(text).not.toMatch(/^\s*run:.*\bbun\b/m);
 
-        expect(commandLines.length).toBeGreaterThan(0);
-        expect(commandLines.every((line) => line.includes("bun install"))).toBe(
-            true
-        );
+        for (const relativePath of workflowPaths) {
+            expect(
+                workflows[relativePath]!.match(
+                    /run: vp install --frozen-lockfile/g
+                )
+            ).toHaveLength(2);
+        }
     });
 
     test("routes every root lifecycle command through plain vp, never bunx/vpx/bun --bun", () => {

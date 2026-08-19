@@ -45,8 +45,14 @@ test("keeps book-aligned source material tableless", () => {
 test("expands generated glossary pages", () => {
     expect(getPageByUrl("/glossary/").html).toContain('id="civic-ai"');
     expect(getPageByUrl("/glossary/").html).toContain("Civic AI");
+    expect(getPageByUrl("/glossary/").html).toContain(
+        'id="glossary-diagnosis"'
+    );
     expect(getPageByUrl("/tw/glossary/").html).toContain('id="civic-ai"');
     expect(getPageByUrl("/tw/glossary/").html).toContain("仁工智慧");
+    expect(getPageByUrl("/tw/glossary/").html).toContain(
+        'id="glossary-diagnosis"'
+    );
 });
 
 test("excludes OpenClaw human guide from sitemap", () => {

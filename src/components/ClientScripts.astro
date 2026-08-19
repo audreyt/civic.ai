@@ -541,4 +541,88 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                 else main.insertBefore(nav, heads[0]);
             })();
         </script>
+        <script>
+// @ts-nocheck
+            // Add glossary tier filtering and hash reveal.
+            (function () {
+                var main = document.getElementById("main");
+                if (!main) return;
+                var sections = Array.prototype.slice.call(
+                    main.querySelectorAll("section.glossary-tier")
+                );
+                if (!sections.length) return;
+
+                var nav = main.querySelector("nav.faq-filter:has([data-glossary-filter])");
+                if (!nav) nav = main.querySelector("nav[data-glossary-filter], nav.faq-filter");
+                if (!nav) return;
+
+                var toc = main.querySelector(".page-toc");
+
+                function tocItemFor(section) {
+                    if (!toc) return null;
+                    var h2 = section.querySelector("h2[id]");
+                    if (!h2 || !h2.id) return null;
+                    var link = toc.querySelector('a[href="#' + h2.id + '"]');
+                    return link ? link.parentElement : null;
+                }
+
+                var entries = sections.map(function (sec) {
+                    return {
+                        tier: sec.getAttribute("data-glossary-tier"),
+                        section: sec,
+                        tocItem: tocItemFor(sec),
+                    };
+                });
+
+                var currentTier = "all";
+
+                function show(tier) {
+                    currentTier = tier;
+                    nav.querySelectorAll("button[data-glossary-filter]").forEach(
+                        function (button) {
+                            button.setAttribute(
+                                "aria-pressed",
+                                button.getAttribute("data-glossary-filter") === tier
+                                    ? "true"
+                                    : "false"
+                            );
+                        }
+                    );
+                    entries.forEach(function (entry) {
+                        var visible = tier === "all" || entry.tier === tier;
+                        entry.section.hidden = !visible;
+                        if (entry.tocItem) entry.tocItem.hidden = !visible;
+                    });
+                }
+
+                nav.addEventListener("click", function (event) {
+                    var button = event.target.closest("[data-glossary-filter]");
+                    if (!button) return;
+                    show(button.getAttribute("data-glossary-filter"));
+                });
+
+                function revealHashTarget() {
+                    var id = decodeURIComponent(
+                        (window.location.hash || "").slice(1)
+                    );
+                    if (!id) return;
+                    var target = document.getElementById(id);
+                    if (!target) return;
+                    var section = target.closest("section.glossary-tier");
+                    if (!section) return;
+                    var targetTier = section.getAttribute("data-glossary-tier");
+                    if (currentTier !== "all" && currentTier !== targetTier) {
+                        show("all");
+                    }
+                    window.requestAnimationFrame(function () {
+                        target.scrollIntoView();
+                    });
+                }
+
+                window.addEventListener("hashchange", revealHashTarget);
+                if (window.location.hash) {
+                    revealHashTarget();
+                }
+            })();
+        </script>
 

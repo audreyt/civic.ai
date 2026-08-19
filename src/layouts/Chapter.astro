@@ -3,6 +3,7 @@ import type { ActionLink, PageRecord } from "../lib/pages";
 import { lang2, site } from "../lib/site";
 import { normalizeSearchLang } from "../lib/search";
 import ClientScripts from "../components/ClientScripts.astro";
+import ComicsJaOverlay from "../components/ComicsJaOverlay.astro";
 import InShort from "../components/InShort.astro";
 import PageHead from "../components/PageHead.astro";
 import PartnerColophon from "../components/PartnerColophon.astro";
@@ -12,6 +13,8 @@ import SearchOverlay from "../components/SearchOverlay.astro";
 interface Props { page: PageRecord; }
 const { page } = Astro.props;
 const zh = lang2(page.data.lang) === "zh";
+const isJaComics =
+    page.data.lang === "ja" && page.data.page_class === "comics-page";
 const pagefindIndexed =
     page.includeInSitemap === true &&
     page.data.search_exclude !== true &&
@@ -74,5 +77,6 @@ if (page.data.og_image || page.data.thumbnail) articleLd.image = `${site.url}${p
     <PartnerColophon lang={page.data.lang} />
     <script is:inline type="application/ld+json" set:html={JSON.stringify(articleLd)}></script>
     <ClientScripts page={page} />
+    {isJaComics && <ComicsJaOverlay />}
   </body>
 </html>
