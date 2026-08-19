@@ -564,13 +564,17 @@ html[data-theme="light"] .partner-logo {
 }
 
 .partner-colophon p {
-    max-width: 40rem;
+    max-width: 616px;
     margin: 0 auto;
     color: var(--text);
     font-family: var(--sans);
     font-size: 0.72rem;
     line-height: 1.55;
     letter-spacing: 0.04em;
+}
+
+.partner-colophon a {
+    white-space: nowrap;
 }
 
 /* ─── TABLES ─── */
@@ -1174,10 +1178,16 @@ footer {
     line-height: 1.8;
 }
 
+footer p {
+    max-width: 616px;
+    margin: 0 auto;
+}
+
 footer a {
     color: var(--gold-light);
     text-decoration: none;
     text-decoration-thickness: 1px;
+    white-space: nowrap;
 }
 
 footer a:hover {

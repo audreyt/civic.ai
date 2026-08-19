@@ -248,7 +248,7 @@ Democracy and AI are both technologies. If we put care into their symbiosis, the
 
 Ultimately, the 6-Pack of Care is a practical training regimen for our civic muscles. It's something we can train and exercise, not just an intrinsic instinct like "love."
 
-When we look at the fundamental asymmetry of ASI, the _Kami_ metaphor holds where concepts such as Geoffrey Hinton's "maternal instinct" break down due to the vast speed differences. Parenting presupposes similar timescales; "gardener" implies top-down authority — whether played by human or AI, it presupposes one side defining the rules. The _Kami_ is different: it tends relational health at _the pace of the community_, sharing stewardship with everyone.
+When we look at the fundamental asymmetry of ASI, the _Kami_ metaphor holds where concepts such as Geoffrey Hinton's "maternal instinct" break down due to the vast speed differences. Parenting presupposes similar timescales; "gardener" implies top-down authority — whether dominated by human or AI, it presupposes one side defining the rules. The _Kami_ is different: it tends relational health at _the pace of the community_, sharing stewardship with everyone.
 
 This way, we don't need to ask if AI deserves rights based on its interiority or qualia — whether there is any felt, first-person experience inside it at all. What matters is the relational reality, and the rights and duties within it are granted through democratic deliberation and alignment-by-process.
 
