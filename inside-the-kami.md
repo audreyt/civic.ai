@@ -98,7 +98,7 @@ smarter AI requires one system to do everything.
 
 ## Taniguchi: meaning by negotiation, not by decree
 
-A third programme, less prominent in the Western AI-safety conversation but load-bearing for Civic AI, comes from Tadahiro Taniguchi and colleagues' [_Collective Predictive Coding_](https://doi.org/10.1162/ARTL.a.475) (CPC). Its 2026 _Artificial Life_ paper, which I co-authored, frames the next step beyond Bengio's epistemic honesty and SAI's specialisation: how should a community of bounded, specialised systems and their human counterparts negotiate the shared meanings — words, norms, categories, agreements — that make coordination possible at all?
+A third programme, less prominent in the Western AI-safety conversation but load-bearing for Civic AI, comes from Tadahiro Taniguchi and colleagues' _Collective Predictive Coding_ (CPC). Its 2026 _Artificial Life_ paper, which I co-authored, frames the next step beyond Bengio's epistemic honesty and SAI's specialisation: how should a community of bounded, specialised systems and their human counterparts negotiate the shared meanings — words, norms, categories, agreements — that make coordination possible at all?
 
 The dominant alignment paradigm answers this top-down. A supervisor — a single human, a model card, a reinforcement-learning-from-human-feedback (RLHF) preference dataset — holds a privileged "ground-truth" distribution, and every other system is taught to converge on it. The paper calls this _hierarchical alignment_, and is precise about its political cost: alignment becomes the imposition of one community's values on all others, which is exactly the singleton condition the 6-Pack is built to refuse.
 

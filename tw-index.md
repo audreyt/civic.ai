@@ -84,7 +84,7 @@ next_action:
 ## 學術發表
 
 - [〈AI 與數位公共廣場的未來〉](https://journals.sagepub.com/doi/10.1177/26339137261459441)：唐鳳與 Beth Goldberg、Hélène Landemore 等二十多位共同作者，描繪 LLM 如何強化數位公共廣場——集體對話、搭橋系統、社群調解與真人驗證——這份經同儕審查的研究議程直接引用了關懷六力。_(Collective Intelligence, 2026)_
-- [〈以資料為土壤，守護主權〉](/tw/safer-sovereignty/)：唐鳳將 Tenzin Yangtso 提出的「資料是土壤，不是石油」應用於企業 AI——韌性來自聯邦式安全下的有界在地守護者，而非單一的全球大腦。_(原刊於 The Kyndryl Institute，2026 年 4 月 28 日)_
+- ["Safeguarding Sovereignty with Data as Soil"](/safer-sovereignty/): Audrey applies the 6-Pack of Care to enterprise AI — data is soil, not oil, and resilience comes from bounded local stewards under federated safety, rather than a single global brain. _(First published by The Kyndryl Institute, 28 April 2026)_
 - [〈廢除 Section 230，釋放第一修正案〉](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/)：唐鳳、Jaron Lanier 與 Allison Stanger 主張終結演算法放大的免責保護，同時保護人類言論——這是 Pack 5 核心的觸及而非言論改革。_(Communications of the ACM, 2026 年 1 月)_
 - [〈惡意 AI 群集如何威脅民主〉](https://www.science.org/doi/10.1126/science.adz1697)：唐鳳與 Maria Ressa、Nick Bostrom、Nicholas Christakis 等 18 位研究者共同記錄 LLM 驅動的智慧體群集如何滲透社群、在人口規模上製造假共識。_(Science, 2026)_
 - [〈透過集體預測編碼的共生對齊〉](https://doi.org/10.1162/ARTL.a.475)：唐鳳與谷口忠大等六位共同作者，形式化共生對齊——有界智慧體透過集體預測編碼協商共享意義，而不是收斂到單一主導模型。Packs 5 和 6 的數學骨架。_(Artificial Life, 2026)_
