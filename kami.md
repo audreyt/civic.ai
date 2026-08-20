@@ -30,7 +30,8 @@ Hosted does not have to mean weaker or leakier — not if you ask any provider t
 
 Pick the model that fits your machine.
 
-- **For machines with 16 GB RAM or more:** We recommend `gemma4:12b-it-qat` (about a 7 GB download), which is the model used in these steps.
+**For machines with 16 GB RAM or more:** We recommend `ornith:9b`, which is the model used in these steps.
+
 - **For machines with less than 16 GB RAM:** Take the hosted path described above.
 
 ## 1. Give it a local brain
@@ -38,7 +39,7 @@ Pick the model that fits your machine.
 Install [Ollama](https://ollama.com) from its website. It is the engine that runs an AI model privately on your computer. It installs like any other app: open the file you download and follow the prompts. Once it is installed, return to the Terminal, type this line, and press Return:
 
 ```bash
-ollama pull gemma4:12b-it-qat
+ollama pull ornith:9b
 ```
 
 This downloads the same small local model Audrey first used to bootstrap a Kami of her own. Treat it as a floor, not a ceiling: this line is pinned so it keeps working, but what your own hardware can hold moves every few months. The current answer lives on a leaderboard — [Artificial Analysis's open-model comparison](https://artificialanalysis.ai/models/open-source) ranks open-weight models by intelligence, openness and size class, so you can read off what fits the machine you own — and the ceiling has risen faster than most people expect: a frontier-class open model now runs offline on a laptop, as [pi-ds4](https://pi.audreyt.org) demonstrates. Swap the model name below for whatever that answer is on the day you read this; nothing else in these three steps changes. It is about 7 GB, instruction-tuned, and runs comfortably on a laptop with roughly 16 GB of memory. Most laptops bought in the last few years have this; if yours has less, the model still runs, just more slowly. If you are unsure, or your laptop is older, take the hosted path described above. The download takes a few minutes. Any capable local model works; this is a good, light first choice.
@@ -52,7 +53,7 @@ npm install -g openclaw
 openclaw onboard
 ```
 
-The setup asks a few questions in plain language. When it asks who will provide the intelligence, choose **Ollama**. When it asks which model, choose **gemma4:12b-it-qat**, the one you just downloaded. If a question is unfamiliar, the safe answer is usually the default; press Return to accept it.
+When it asks which model, choose **ornith:9b**, the one you just downloaded.
 
 If you chose the hosted path described above, choose a hosted model here when asked. Everything else stays the same.
 
