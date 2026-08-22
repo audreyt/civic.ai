@@ -29,11 +29,12 @@ test("keeps book-aligned source material tableless", () => {
     const kamiSetup = getPageByUrl("/kami/").html;
     expect(kamiSetup).not.toContain("<th>RAM</th>");
     expect(kamiSetup).toContain("For machines with 16 GB RAM or more:");
-    expect(kamiSetup).toContain("gemma4:12b-it-qat");
+    expect(kamiSetup).toContain("ornith:9b");
 
     const twKamiSetup = getPageByUrl("/tw/kami/").html;
     expect(twKamiSetup).not.toContain("<th>記憶體</th>");
     expect(twKamiSetup).toContain("記憶體達 16 GB 或以上：");
+    expect(twKamiSetup).toContain("ornith:9b");
 
     const measures = getPageByUrl("/measures/").html;
     expect(measures).not.toContain("<th>Pack</th>");

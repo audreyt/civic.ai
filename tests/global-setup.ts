@@ -4,6 +4,9 @@ import { fileURLToPath } from "node:url";
 // Resolves to the repo root regardless of the process's current working
 // directory (this file lives at `<root>/tests/global-setup.ts`).
 const projectRoot = fileURLToPath(new URL("..", import.meta.url));
+const vpExecutable = fileURLToPath(
+    new URL("../node_modules/.bin/vp", import.meta.url)
+);
 
 function run(command: string, args: string[]): void {
     execFileSync(command, args, { cwd: projectRoot, stdio: "inherit" });
@@ -30,7 +33,7 @@ function run(command: string, args: string[]): void {
  * executes.
  */
 export default function setup(): void {
-    run("vp", ["exec", "tsc", "--noEmit"]);
+    run(vpExecutable, ["exec", "tsc", "--noEmit"]);
     run("bun", ["pangu-format.mjs", "--check"]);
     run("bun", ["scripts/check-tw-typography.mjs"]);
 }
