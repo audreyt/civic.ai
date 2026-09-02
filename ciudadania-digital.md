@@ -62,7 +62,7 @@ Around the same time, social media platforms shifted from subscription-based fee
 
 ## Polis
 
-We discovered a tool called Polis — open-source, with one crucial design choice: no reply button. No retweet button. You cannot attack someone else's statement. You can only agree, disagree or pass. There is nowhere for trolls to grow.
+We discovered a tool called [Polis](https://pol.is) — open-source, with one crucial design choice: no reply button. No retweet button. You cannot attack someone else's statement. You can only agree, disagree or pass. There is nowhere for trolls to grow.
 
 On social media, outrage goes viral. On Polis, overlap goes viral — because the only way your statement spreads is if people who disagree on everything else still endorse yours.
 

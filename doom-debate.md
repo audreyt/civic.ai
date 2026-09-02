@@ -119,7 +119,7 @@ I think it’s amazing that you’re actually there in government, actually impl
 
 I will say, though, I feel like I have to push back because as cool as this stuff sounds, I’m just skeptical that it can help more than, let’s say, twenty percent, right? So I feel like all of the difficulties of government and reaching consensus and political polarization, if I had to guess, knowing very little, I’d be like, “Okay, yeah, maybe you’re improving things twenty percent,” but don’t you still drag in all the same problems, and it’s still hard to make anything work, even with these systems?
 
-**Audrey Tang**: Yeah, definitely, which is why this cannot stay at a national level. The point of going with open-source systems, such as Polis or Dembrane and so on, is that people can then learn that you can apply this recursively to smaller polities.
+**Audrey Tang**: Yeah, definitely, which is why this cannot stay at a national level. The point of going with open-source systems, such as [Polis](https://pol.is) or Dembrane and so on, is that people can then learn that you can apply this recursively to smaller polities.
 
 It can be applied, and has been applied, to the civics classes of our schools. We changed our curriculum in 2019 after AlphaGo, knowing that anything that is routinely automatable will be automated, and so the students need to learn not just literacy, but rather competency, the ability to train their civic muscle together through curiosity and collaboration.
 
@@ -557,7 +557,7 @@ So anyway, just hand-waving a bit, but this idea of Yudkowskian sci-fi nanotechn
 
 **Liron Shapira**: Right, right, right. Yes. And so in your scenario, when you use very few words and you just say super hot data centers that bake the Earth, you are implying that a lot of stuff has happened to get to that point, because you need quite a lot of data centers to bake the Earth, correct?
 
-**Audrey Tang**: Well, I think according to RAND, they say that it is possible that an AI system plus human can find this kind of compound that makes it much easier to trigger a kind of flash event that recursively makes the atmosphere much, much hotter without a coordinated conversation. So it’s like the vulnerable world hypothesis from Nick Bostrom, also from Oxford.
+**Audrey Tang**: Well, I think according to RAND, they say that it is possible that an AI system plus human can find this kind of compound that makes it much easier to trigger a kind of flash event that recursively makes the atmosphere much, much hotter without a coordinated conversation. So it’s like the vulnerable world hypothesis from [Nick Bostrom](https://global.oup.com/academic/product/superintelligence-9780199678112), also from Oxford.
 
 **Liron Shapira**: I’m just curious, but what exactly are you thinking is heating the Earth in this? I’m a little bit confused because I think the Earth will get hot when there’s…
 
@@ -735,7 +735,7 @@ I talk with people in Nairobi, in Kenya, in some parts of India, and some of the
 
 So then if you put in what they feel in a local doctor… this case actually happened… it would just diagnose as malnutrition, whereas it’s actually not malnutrition.
 
-And there’s a dashboard called Weval.org where the kind of crowdsourced people’s experience of such mistreatments, epistemic injustice, in Sri Lanka, in many other places, civil society organizations come together, working with CIP, the Collective Intelligence Project, to document such cases so that we can see that these models, even as they score higher and higher on ARC eval or whatever, actually sometimes score lower and lower on this kind of alignment to local communities’ needs.
+And there’s a dashboard called [Weval.org](https://weval.org/) where the kind of crowdsourced people’s experience of such mistreatments, epistemic injustice, in Sri Lanka, in many other places, civil society organizations come together, working with CIP, the [Collective Intelligence Project](https://www.cip.org/alignmentassemblies), to document such cases so that we can see that these models, even as they score higher and higher on ARC eval or whatever, actually sometimes score lower and lower on this kind of alignment to local communities’ needs.
 
 **Liron Shapira**: Right. So if I’m understanding correctly, you would have preferred if OpenAI kind of gives this open-ended, open source… and you’re even saying you like their open source model. So you’re basically saying they should add more user-tweakable parameters so that everybody can align it to their taste more powerfully?
 

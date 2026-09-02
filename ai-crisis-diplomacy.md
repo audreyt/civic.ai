@@ -41,7 +41,7 @@ Taiwan's 111 government SMS is a dedicated short-code for official messages, so 
 
 ### Consensus: AI that listens at scale
 
-Tools like Polis simplify interaction to agree or disagree, removing reply threads that amplify emotions. They surface bridging statements — ideas that people with opposing views still find reasonable — and make them visible. The vTaiwan process combines this with in-person dialogue, transforming polarised issues into workable policy. Tools like Talk to the City push the scale of listening further, with auditability at the core: every theme traces back to original participant statements, so society can verify whether the summary is faithful. In crisis diplomacy, legitimacy comes from speed and verifiability.
+Tools like [Polis](https://pol.is) simplify interaction to agree or disagree, removing reply threads that amplify emotions. They surface bridging statements — ideas that people with opposing views still find reasonable — and make them visible. The vTaiwan process combines this with in-person dialogue, transforming polarised issues into workable policy. Tools like Talk to the City push the scale of listening further, with auditability at the core: every theme traces back to original participant statements, so society can verify whether the summary is faithful. In crisis diplomacy, legitimacy comes from speed and verifiability.
 
 ### Safety: AI incidents as civil defence
 

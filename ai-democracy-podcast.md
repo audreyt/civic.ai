@@ -107,7 +107,7 @@ Can you tell me a little bit more about that. Are there specific projects you've
 
 But after the pivot to the 'for you' feed, they just figure out with the parasitic AI that keeps people addicted to the touch screens — and it turns out engagement is easier through enragement. It turns out that people, when they're isolated in these small screens, prefer to see things that are much more sensational and polarising than what is healing or bridging. And so, it's like rewarding your children every time they are mean to somebody else.
 
-So, in this sense, this parasitic AI was the first misaligned AI system that turned a neutral platform into a non-ethical platform. And in Taiwan, at the same time, we were experimenting with the other direction. We worked with the open-source system called Polis, but in 2015, we were trying the other direction: Pro-social media.
+So, in this sense, this parasitic AI was the first misaligned AI system that turned a neutral platform into a non-ethical platform. And in Taiwan, at the same time, we were experimenting with the other direction. We worked with the open-source system called [Polis](https://pol.is), but in 2015, we were trying the other direction: Pro-social media.
 
 We worked with Polis, an open-source system. When Uber came to Taiwan that year, many people are very afraid they would take the job of taxis, that this algorithmic dispatch is going to ignore the professional driver license system, and people would get maybe higher quality service, maybe lower quality service, really nobody knows. And we use the Polis system to basically ask the entire society 'what do you feel about this situation?' Because people are experts in their feelings.
 

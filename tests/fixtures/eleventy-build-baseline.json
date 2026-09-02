@@ -34,6 +34,7 @@
                 "search-overlay",
                 "search-suggestions",
                 "search-toggle",
+                "sources-for-this-pack",
                 "what-could-go-wrong",
                 "what-it-looks-like-in-practice",
                 "why-it-matters"
@@ -75,6 +76,7 @@
                 "search-overlay",
                 "search-suggestions",
                 "search-toggle",
+                "sources-for-this-pack",
                 "what-could-go-wrong",
                 "why-it-matters"
             ]
@@ -113,6 +115,7 @@
                 "search-overlay",
                 "search-suggestions",
                 "search-toggle",
+                "sources-for-this-pack",
                 "the-apprentice-model",
                 "what-could-go-wrong",
                 "what-it-looks-like-in-practice",
@@ -153,6 +156,7 @@
                 "search-overlay",
                 "search-suggestions",
                 "search-toggle",
+                "sources-for-this-pack",
                 "the-brake-as-a-care-mechanism",
                 "what-could-go-wrong",
                 "what-it-looks-like-in-practice",
@@ -194,6 +198,7 @@
                 "search-overlay",
                 "search-suggestions",
                 "search-toggle",
+                "sources-for-this-pack",
                 "what-could-go-wrong",
                 "what-it-looks-like-in-practice",
                 "why-it-matters"
@@ -234,6 +239,7 @@
                 "search-overlay",
                 "search-suggestions",
                 "search-toggle",
+                "sources-for-this-pack",
                 "what-could-go-wrong",
                 "what-it-looks-like-in-practice",
                 "why-it-matters"
@@ -424,7 +430,8 @@
                 "search-toggle",
                 "stories-before-specification",
                 "what-could-go-wrong",
-                "what-they-built"
+                "what-they-built",
+                "where-this-work-sits"
             ]
         },
         {
@@ -839,6 +846,7 @@
                 "faq-19",
                 "faq-2",
                 "faq-20",
+                "faq-21",
                 "faq-3",
                 "faq-4",
                 "faq-5",
@@ -932,6 +940,7 @@
                 "boundedness",
                 "bridging-based-ranking",
                 "broad-listening",
+                "care-centred-design",
                 "care-ethics",
                 "caring-deficit",
                 "civic-ai",
@@ -957,6 +966,7 @@
                 "perspective-receipts",
                 "plurality",
                 "polis",
+                "privileged-irresponsibility",
                 "relational-health",
                 "rlcf",
                 "search-container",
@@ -1205,7 +1215,8 @@
                 "trust-under-loss",
                 "uncommon-ground-index",
                 "verified-execution-rate",
-                "what-each-measure-refuses-to-reward"
+                "what-each-measure-refuses-to-reward",
+                "where-the-measures-come-from"
             ]
         },
         {
@@ -1563,6 +1574,46 @@
             ]
         },
         {
+            "path": "sources/index.html",
+            "lang": "en-gb",
+            "title": "Sources & Further Reading — Civic AI",
+            "description": "Where the 6-Pack of Care comes from: the care-ethics lineage from Fisher and Tronto to van Wynsberghe",
+            "canonical": "https://civic.ai/sources/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/sources/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/sources/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/sources/"
+                }
+            ],
+            "ids": [
+                "care-ethics-applied-to-technology--the-direct-precedent",
+                "civic-ask-answer",
+                "civic-ask-history",
+                "main",
+                "pack-1-attentiveness",
+                "pack-2-responsibility",
+                "pack-3-competence",
+                "pack-4-responsiveness",
+                "pack-5-solidarity",
+                "pack-6-symbiosis",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
+                "search-toggle",
+                "the-alignment-conversation-this-joins",
+                "the-care-ethics-foundation",
+                "what-is-ours"
+            ]
+        },
+        {
             "path": "tw/1/index.html",
             "lang": "zh-tw",
             "title": "一：覺察力——感知關懷 — 仁工智慧",
@@ -1597,6 +1648,7 @@
                 "定義",
                 "實作上長什麼樣子",
                 "從理念到實踐",
+                "本力文獻",
                 "為何重要",
                 "結語意象能說不的快樂女主人"
             ]
@@ -1635,6 +1687,7 @@
                 "定義",
                 "從理念到實踐",
                 "有力度的監督",
+                "本力文獻",
                 "核心工藝參與契約",
                 "為何重要",
                 "第二個案例深偽責任飛輪",
@@ -1677,6 +1730,7 @@
                 "定義",
                 "實作上長什麼樣子",
                 "從理念到實踐",
+                "本力文獻",
                 "為何重要",
                 "結語意象掛著檢查標籤的橋"
             ]
@@ -1715,6 +1769,7 @@
                 "定義",
                 "實際上長什麼樣子",
                 "從理念到實作",
+                "本力文獻",
                 "為什麼重要",
                 "煞車是一種關懷機制",
                 "結語意象工坊牆上退役的壞零件",
@@ -1755,6 +1810,7 @@
                 "定義",
                 "實際上長什麼樣子",
                 "從理念到實作",
+                "本力文獻",
                 "為什麼重要",
                 "結語意象標示清楚的交流道",
                 "與其他力的介接",
@@ -1795,6 +1851,7 @@
                 "定義",
                 "實際上長什麼樣子",
                 "從理念到實作",
+                "本力文獻",
                 "為什麼重要",
                 "結語意象河流守護者",
                 "與其他力的介接",
@@ -1986,6 +2043,7 @@
                 "故事先於規格",
                 "權利作為底線",
                 "權力必須回答問題",
+                "這項工作的位置",
                 "關係優先"
             ]
         },
@@ -2401,6 +2459,7 @@
                 "faq-19",
                 "faq-2",
                 "faq-20",
+                "faq-21",
                 "faq-3",
                 "faq-4",
                 "faq-5",
@@ -2494,6 +2553,7 @@
                 "boundedness",
                 "bridging-based-ranking",
                 "broad-listening",
+                "care-centred-design",
                 "care-ethics",
                 "caring-deficit",
                 "civic-ai",
@@ -2519,6 +2579,7 @@
                 "perspective-receipts",
                 "plurality",
                 "polis",
+                "privileged-irresponsibility",
                 "relational-health",
                 "rlcf",
                 "search-container",
@@ -2738,7 +2799,8 @@
                 "在稱之為仁工智慧之前",
                 "地圖",
                 "如何閱讀這些指標",
-                "輔助診斷"
+                "輔助診斷",
+                "這些指標從何而來"
             ]
         },
         {
@@ -3101,6 +3163,46 @@
                 "孤獨的維護者",
                 "封閉堆疊之內",
                 "祖先空間"
+            ]
+        },
+        {
+            "path": "tw/sources/index.html",
+            "lang": "zh-tw",
+            "title": "文獻與延伸閱讀 — 仁工智慧",
+            "description": "關懷六力從何而來：從 Fisher 與 Tronto 到 van Wynsberghe「以關懷為中心的設計」的關懷倫理系譜，以及每一力背後的文獻，附連結。",
+            "canonical": "https://civic.ai/tw/sources/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/sources/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/sources/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/sources/"
+                }
+            ],
+            "ids": [
+                "civic-ask-answer",
+                "civic-ask-history",
+                "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
+                "search-toggle",
+                "一覺察力",
+                "三勝任力",
+                "二負責力",
+                "五團結力",
+                "六共生力",
+                "四回應力",
+                "屬於我們的部分",
+                "本框架所加入的對齊對話",
+                "關懷倫理應用於技術直接的先例",
+                "關懷倫理的基礎"
             ]
         },
         {

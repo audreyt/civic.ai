@@ -65,7 +65,7 @@ That ethos is the spirit of healthy connection to one another, healthy connectio
 
 ## Horizontal Relationships & The Gardener Analogy
 
-That ethos of care interestingly then, again deeply relational, connects to your emphasis on the horizontal rather than the vertical. And here again I got very excited because I've studied networks for 30 years. I have a horizontal view of the world rather than vertical — it's the web rather than the ladder, to borrow Carol Gilligan's seminal work.
+That ethos of care interestingly then, again deeply relational, connects to your emphasis on the horizontal rather than the vertical. And here again I got very excited because I've studied networks for 30 years. I have a horizontal view of the world rather than vertical — it's the web rather than the ladder, to borrow [Carol Gilligan](https://www.hup.harvard.edu/books/9780674445444)'s seminal work.
 
 That's where you change the idea of the gardener. Because you start by saying, well, you know, we could be the gardener that programs AI; AI could be the gardener that cultivates us, we hope that's not where we go. But your notion, the Kami notion, is a different one; it's horizontal, because we shape one another. So the gardener and the garden are in reciprocal relationship.
 

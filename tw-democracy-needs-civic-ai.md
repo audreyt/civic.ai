@@ -37,7 +37,7 @@ nav_next:
 
 預設軌跡有一個很誘人的形狀。一個強大的系統。一個通用智慧。受訓於一切，治理一切，最佳化一切，而且是從上面來治理。在這個故事裡，它強大到讓政治變得不再必要。民主不是被摧毀；它只是……被超越了。就像你學會騎腳踏車之後，輔助輪就被拿掉。
 
-這不是假設。1 月時，我和另外 21 位研究者在《Science》共同發表了一篇論文，其中包括 Nick Bostrom、Maria Ressa 和 Nicholas Christakis。我們研究的是[惡意 AI 群集](https://www.science.org/doi/10.1126/science.adz1697)：這些 AI 智慧體能維持持久身分、建立合成關係，並為那些從未得到受操弄者同意的目標彼此協調。
+這不是假設。1 月時，我和另外 21 位研究者在《Science》共同發表了一篇論文，其中包括 [Nick Bostrom](https://global.oup.com/academic/product/superintelligence-9780199678112)、Maria Ressa 和 Nicholas Christakis。我們研究的是[惡意 AI 群集](https://www.science.org/doi/10.1126/science.adz1697)：這些 AI 智慧體能維持持久身分、建立合成關係，並為那些從未得到受操弄者同意的目標彼此協調。
 
 我們現在已經有技術，可以模擬一個根本不存在的公眾，而且把它做得和真實公眾難以區分。那個打動你的草根運動？它可能根本沒有根。
 
@@ -75,7 +75,7 @@ nav_next:
 
 <noscript><img src="/img/democracy-needs-civic-ai-gilligan.jpg" alt="Carol Gilligan 肖像。語錄：'Radical listening holds the potential for transformation because it starts from a place of not knowing and develops the muscle of curiosity.'" class="overview-image" width="2992" height="1934" loading="lazy" decoding="async"></noscript>
 
-Carol Gilligan 在她 2023 年那本精彩的 _In a Human Voice_ 裡寫道：「激進傾聽之所以有轉化的潛力，是因為它從不知開始，並鍛鍊出好奇的肌力。」
+[Carol Gilligan](https://www.hup.harvard.edu/books/9780674445444) 在她 2023 年那本精彩的 _In a Human Voice_ 裡寫道：「激進傾聽之所以有轉化的潛力，是因為它從不知開始，並鍛鍊出好奇的肌力。」
 
 這不是柔軟。這是我所知道最艱難的紀律。而這正是三萬英尺高空上的地神正在做的事：從不知道開始，朝向他者伸手。
 

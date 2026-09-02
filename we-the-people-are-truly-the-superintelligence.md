@@ -51,7 +51,7 @@ In a country of 23.5 million people, that meant almost anything the president sa
 
 Hundreds of us occupied the parliament peacefully for three weeks; half a million stood in the streets outside. It is called the Sunflower Movement. But we did not call ourselves protesters. We were demonstrators.
 
-Civic technologists put on demos: the Loomio system from Occupy Wellington, the Polis system from Occupy Seattle. Every day, using those tools, we looked at the divisions, the uncommon grounds that people could agree on, and the remaining disagreements. One bridge at a time, we converged on a coherent set of proposals. Three weeks later, the head of the parliament simply said: OK, the crowdsourced version has passed. Go home.
+Civic technologists put on demos: the Loomio system from Occupy Wellington, the [Polis](https://pol.is) system from Occupy Seattle. Every day, using those tools, we looked at the divisions, the uncommon grounds that people could agree on, and the remaining disagreements. One bridge at a time, we converged on a coherent set of proposals. Three weeks later, the head of the parliament simply said: OK, the crowdsourced version has passed. Go home.
 
 It left everybody slightly happier, and nobody decidedly unhappy.
 

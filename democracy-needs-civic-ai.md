@@ -51,7 +51,7 @@ In this story, democracy is not destroyed. It is simply … outgrown. Like
 training wheels on a bicycle after you learn how to ride.
 
 This is not hypothetical. In January, I co-authored a paper in _Science_ with
-21 other researchers, including Nick Bostrom, Maria Ressa and Nicholas
+21 other researchers, including [Nick Bostrom](https://global.oup.com/academic/product/superintelligence-9780199678112), Maria Ressa and Nicholas
 Christakis. We studied [malicious AI swarms](https://www.science.org/doi/10.1126/science.adz1697): networks of AI agents that maintain
 persistent identities, build synthetic relationships and coordinate on goals
 never agreed by people they manipulated.
@@ -118,7 +118,7 @@ How to make that union operational?
 
 <noscript><img src="/img/democracy-needs-civic-ai-gilligan.jpg" alt="Carol Gilligan. Quote: 'Radical listening holds the potential for transformation because it starts from a place of not knowing and develops the muscle of curiosity.'" class="overview-image" width="2992" height="1934" loading="lazy" decoding="async"></noscript>
 
-In Carol Gilligan's fascinating 2023 book, _In a Human Voice_, she said:
+In [Carol Gilligan](https://www.hup.harvard.edu/books/9780674445444)'s fascinating 2023 book, _In a Human Voice_, she said:
 "Radical listening holds the potential for transformation because it starts
 from a place of not knowing and develops the muscle of curiosity."
 
