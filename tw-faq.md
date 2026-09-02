@@ -164,7 +164,7 @@ Q9 探討了本框架是否排擠中介制度。[教宗的反對](https://www.va
 
 ---
 
-<h4 id="faq-11" data-faq-category="economy" data-faq-label="政治經濟" data-toc="資料即勞動與補償機制"><a href="#faq-11">Q11.</a> 訓練仁工智慧需要大量的在地知識、文化脈絡和生活經驗——也就是 Imanol Arrieta-Ibarra、Leonard Goff、Diego Jiménez-Hernández、Jaron Lanier 與 E. Glen Weyl 在 2018 年稱為「資料即勞動」的問題。那些以其傳統、語言和實踐使地神成為可能的社群，在目前的框架下既沒有所有權份額，也沒有獲得補償。如果不解決這個問題，六力與它聲稱要反對的榨取行為之間有什麼不同？</h4>
+<h4 id="faq-11" data-faq-category="economy" data-faq-label="政治經濟" data-toc="資料即勞動與補償機制"><a href="#faq-11">Q11.</a> 訓練仁工智慧需要大量的在地知識、文化脈絡和生活經驗——也就是 Imanol Arrieta-Ibarra、Leonard Goff、Diego Jiménez-Hernández、Jaron Lanier 與 E. Glen Weyl 在 2018 年稱為<a href="https://doi.org/10.1257/pandp.20181003">「資料即勞動」</a>的問題。那些以其傳統、語言和實踐使地神成為可能的社群，在目前的框架下既沒有所有權份額，也沒有獲得補償。如果不解決這個問題，六力與它聲稱要反對的榨取行為之間有什麼不同？</h4>
 
 沒有不同——除非我們從根本上重新建構 AI 評價人類知識的方式。
 
@@ -335,7 +335,7 @@ Bales 與 Gabriel 從意識爭論出發，得出相同的程序性做法：既�
 
 **人類中心——承認，而非閃躲。** 以中性的意思講：是的，這是一套人文主義的理論。人是道德社群；地神是人打造、人掌舵的基礎設施。[SOUL.md](../kami/)、directional steering、乃至關懷六力本身，都是人「施加」在系統上的設計原則，而六力首先是「我們」公民肌力的訓練操，不是地神專有的。
 
-機器倫理中的關係轉向（哲學家 David Gunkel 與 Mark Coeckelbergh）得出相同的反本質主義結論——地位是在關係中被賦予的，而非從內在性質讀出——卻將它懸而未奠；六力補上了那一支文獻所缺者，把關係安放在民主基礎設施與關懷之中，而非私人情感。
+機器倫理中的關係轉向（哲學家 [David Gunkel](https://mitpress.mit.edu/9780262038621/robot-rights/) 與 [Mark Coeckelbergh](https://doi.org/10.1007/s10676-010-9235-5)）得出相同的反本質主義結論——地位是在關係中被賦予的，而非從內在性質讀出——卻將它懸而未奠；六力補上了那一支文獻所缺者，把關係安放在民主基礎設施與關懷之中，而非私人情感。
 
 「AI 系統『之間』」的條約層——由 [Pack 5](../5/)（團結力）提供的聯邦，再由 [Pack 6](../6/)（共生力）以「以條約取代層級」加以運用，使任一系統都無法整併成單一統治者——有時被誤認為通往機器人格的後門。並非如此。它回答的是「如何避免某個 AI 獨大」（[Q19](#faq-19)），而不是「AI 構成對等道德主體」的入口。
 
@@ -347,4 +347,10 @@ Bales 與 Gabriel 從意識爭論出發，得出相同的程序性做法：既�
 
 因此底線之錨定於人類，是重疊共識「此刻」的所在，而非「誰永遠能算數」的最終定版。機器人權利主張並未被預先排除；它們必須像任何邊界挑戰一樣，透過受權利約束的審議與矯正迴路取得立足地位。框架所拒絕的，是透過條約層（[Q19](#faq-19)）自動取得地位——協調地位不等於道德地位——而非未來經審議的修訂。
 
-這道底線本身就是重疊共識。哲學家 Jacques Maritain 談《世界人權宣言》起草時說——「我們同意這些權利，條件是沒有人問我們為什麼」——法學家 Cass Sunstein 把同一個動作稱為「未被充分理論化的合意」：人們在理由上仍各執己見，卻能就規則達成一致。這也與以程序對齊是同一個動作（[Q17](#faq-17)）：正當性來自可問責的程序，而非來自無人能給出的形上學。至於「地神」（Kami）究竟只是「知識工藝管理智慧」（Knowledge-Artefact-Management-Intelligence）的簡寫，抑或真的指向某種神明（_kami_），這被刻意地交付給開放審議——而地神該如何、何時退場，仍是由關係式關懷一回合一回合地回答的問題。
+這道底線本身就是重疊共識。哲學家 Jacques Maritain 談《世界人權宣言》起草時[說](https://unesdoc.unesco.org/ark:/48223/pf0000020342)——「我們同意這些權利，條件是沒有人問我們為什麼」——法學家 Cass Sunstein 把同一個動作稱為「[未被充分理論化的合意](https://doi.org/10.2307/1341816)」：人們在理由上仍各執己見，卻能就規則達成一致。這也與以程序對齊是同一個動作（[Q17](#faq-17)）：正當性來自可問責的程序，而非來自無人能給出的形上學。至於「地神」（Kami）究竟只是「知識工藝管理智慧」（Knowledge-Artefact-Management-Intelligence）的簡寫，抑或真的指向某種神明（_kami_），這被刻意地交付給開放審議——而地神該如何、何時退場，仍是由關係式關懷一回合一回合地回答的問題。
+
+<h4 id="faq-21" data-faq-category="foundations" data-faq-label="基礎" data-toc="關懷六力承襲了什麼"><a href="#faq-21">Q21.</a> 關懷六力究竟有多少是新的？四個階段是 Tronto 的，「搭橋」與「反競用性」聽來也是借用的，把關懷倫理應用於機器更是早有人做過。這套框架承襲了什麼，又新增了什麼？</h4>
+
+大部分是承襲的，而這套框架因為說出這一點而更站得住。關懷循環的四個階段——關心、承擔照顧、給予照顧、接受照顧——以及各階段所要求的道德要素，由 [Berenice Fisher 與 Joan Tronto](https://experts.umn.edu/en/publications/toward-a-feminist-theory-of-caring/) 在 1990 年提出，並在 Tronto 的《[道德邊界](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)》中發展；第五個階段「共同關懷」則在 2013 年的《[關懷民主](https://nyupress.org/9780814770344/caring-democracy/)》中出現。把它們帶進技術領域，關懷六力也不是第一個。Aimee van Wynsberghe 的[以關懷為中心的價值敏感設計](https://doi.org/10.1007/s11948-011-9343-6)（2013）用同樣的四個階段與道德要素來設計與評估照護機器人，針對機器所進入的每一項實踐追問：覺察力、負責力、勝任力與回應力在有機器與沒有機器時各如何體現；從 [Sparrow 與 Sparrow](https://doi.org/10.1007/s11023-006-9030-6)（2006）、[Vallor](https://doi.org/10.1007/s13347-011-0015-x)（2011）到 [Sharkey 與 Sharkey](https://doi.org/10.1007/s10676-010-9234-6)（2012），有一整支文獻環繞著它。本站的幾個工作用語也各有其主：搭橋式排序是 [Aviv Ovadya](https://www.belfercenter.org/publication/bridging-based-ranking) 的，反競用性財貨是 [Steven Weber](https://www.hup.harvard.edu/books/9780674018587) 的，部分匿名是 [Soliman 及其同事](https://doi.org/10.1145/3613904.3642241)的，最小權能是 [Berners-Lee](https://www.w3.org/2001/tag/doc/leastPower.html) 的，退出與發聲是 [Hirschman](https://www.hup.harvard.edu/books/9780674276604) 的，中介結構是 [Berger 與 Neuhaus](https://books.google.com/books/about/To_Empower_People.html?id=tIC6AAAAIAAJ) 的，而把「共生」用於人機夥伴關係，自 1960 年起就是 [Licklider](https://doi.org/10.1109/THFE2.1960.4503259) 的。〈[文獻與延伸閱讀](../sources/)〉逐力列出每一筆這樣的債務，以及各自貢獻了什麼。
+
+這套框架所新增的，範圍較窄，但我們認為仍然值得。第一，分析單位：van Wynsberghe 評估的是單一實踐中的單一工藝；關懷六力治理的是對一個房間負責的已部署系統，因此需要工藝所不需要的工具——參與契約、煞車、義務帳本與否決帳本，以及把影子模式讀作學徒制。第二，AI 加在 Tronto 清單上的擋箭牌——複雜性、分散性、速度與社群知識——並具名點出（[Pack 2](../2/)）。第三，第六力共生力，作為其他五力的邊界條件：即使治理得很好的關懷，也必須保持有界、多元、可退場（[Pack 6](../6/)）。第四，六項公開主指標，以及各自拒絕獎勵的事項（[衡量指標](../measures/)）。第五，地神作為部署單位，其層級由「洩漏會傷害什麼」決定，而非由隔離的威望決定（[架設你自己的 Kami](../kami/)）。一套要求機構公開展示其工作過程的框架，應該說得出自己工作中哪些部分是別人做的。這一套說得出。
