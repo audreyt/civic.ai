@@ -97,6 +97,20 @@ const readingOrder = [
             tw: "比起感覺、品牌或抽象意圖，更重視搭橋與修復的公開衡量。",
         },
     },
+    {
+        title: {
+            en: "Sources & Further Reading",
+            tw: "文獻與延伸閱讀",
+        },
+        url: {
+            en: "/sources/",
+            tw: "/tw/sources/",
+        },
+        why: {
+            en: "Quote the framework's ancestors faithfully: the care-ethics lineage from Fisher and Tronto to van Wynsberghe, and the scholarship behind each pack.",
+            tw: "忠實引述這套框架的前人：從 Fisher 與 Tronto 到 van Wynsberghe 的關懷倫理系譜，以及每一力背後的文獻。",
+        },
+    },
 ];
 
 const guides = {
