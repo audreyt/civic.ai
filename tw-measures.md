@@ -96,3 +96,7 @@ nav_next:
 6. **邊界誠實**（Pack 6）——什麼問題不在範圍內？誰正在承擔那個問題？
 
 如果任何答案含糊，部署就還沒準備好。重點不是保衛關懷六力，而是讓房間可問責。
+
+### 這些指標從何而來
+
+指標是我們的；它們立足的地面不是。「滿足即可，而非最大化」是 Herbert Simon 的[滿意解](https://doi.org/10.2307/1884852)（1955）。「指標一旦成為目標就不再是好指標」這項警告有三個經典陳述——坎貝爾定律（[1979](<https://doi.org/10.1016/0149-7189(79)90048-X>)）、古德哈特定律（1975），以及 Marilyn Strathern 為它寫下的簡潔版本（1997）——「每項指標拒絕獎勵什麼」正是對著這三者寫的。失落後信任把程序正義的發現操作化：Tom Tyler 在《[人們為何守法](https://press.princeton.edu/books/paperback/9780691126739/why-people-obey-the-law)》中指出，在實質上敗訴的人，仍會接受他們認為公平的程序。罕見共識指數稽核的，正是 Aviv Ovadya 的[搭橋式排序](https://www.belfercenter.org/publication/bridging-based-ranking)用來排序的那種跨群體訊號。退場整備度則是把 Albert Hirschman 的[退出](https://www.hup.harvard.edu/books/9780674276604)變成一場演練。完整足跡見〈[文獻與延伸閱讀](/tw/sources/)〉。

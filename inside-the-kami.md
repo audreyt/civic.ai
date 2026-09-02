@@ -41,7 +41,7 @@ under human authorisation.
 That convergence does not settle politics. It does narrow the technical search
 space.
 
-None of this is a new intuition. In 2019, within the same Oxford tradition that produced Bostrom's _Superintelligence_, Eric Drexler's [_Reframing Superintelligence: Comprehensive AI Services_](https://web.archive.org/web/20250905024310/https://www.fhi.ox.ac.uk/wp-content/uploads/Reframing_Superintelligence_FHI-TR-2019-1.1-1.pdf) (CAIS) argued that advanced AI is most plausibly reached not as a single self-improving agent but as a growing ecology of bounded, specialised services — the same shape Bengio and LeCun now arrive at from trust and capability arguments. What CAIS left open is exactly what the 6-Pack supplies: not the architecture of boundedness, but its legitimacy — who authorises a service, who is owed an answer, who can revoke the mandate.
+None of this is a new intuition. In 2019, within the same Oxford tradition that produced Bostrom's _[Superintelligence](https://global.oup.com/academic/product/superintelligence-9780199678112)_, Eric Drexler's [_Reframing Superintelligence: Comprehensive AI Services_](https://web.archive.org/web/20250905024310/https://www.fhi.ox.ac.uk/wp-content/uploads/Reframing_Superintelligence_FHI-TR-2019-1.1-1.pdf) (CAIS) argued that advanced AI is most plausibly reached not as a single self-improving agent but as a growing ecology of bounded, specialised services — the same shape Bengio and LeCun now arrive at from trust and capability arguments. What CAIS left open is exactly what the 6-Pack supplies: not the architecture of boundedness, but its legitimacy — who authorises a service, who is owed an answer, who can revoke the mandate.
 
 ## Bengio: truth without appetite
 
@@ -100,7 +100,7 @@ smarter AI requires one system to do everything.
 
 A third programme, less prominent in the Western AI-safety conversation but load-bearing for Civic AI, comes from Tadahiro Taniguchi and colleagues' _Collective Predictive Coding_ (CPC). Its 2026 _Artificial Life_ paper, which I co-authored, frames the next step beyond Bengio's epistemic honesty and SAI's specialisation: how should a community of bounded, specialised systems and their human counterparts negotiate the shared meanings — words, norms, categories, agreements — that make coordination possible at all?
 
-The dominant alignment paradigm answers this top-down. A supervisor — a single human, a model card, a reinforcement-learning-from-human-feedback (RLHF) preference dataset — holds a privileged "ground-truth" distribution, and every other system is taught to converge on it. The paper calls this _hierarchical alignment_, and is precise about its political cost: alignment becomes the imposition of one community's values on all others, which is exactly the singleton condition the 6-Pack is built to refuse.
+The dominant alignment paradigm answers this top-down. A supervisor — a single human, a model card, a reinforcement-learning-from-human-feedback ([RLHF](https://arxiv.org/abs/2203.02155)) preference dataset — holds a privileged "ground-truth" distribution, and every other system is taught to converge on it. The paper calls this _hierarchical alignment_, and is precise about its political cost: alignment becomes the imposition of one community's values on all others, which is exactly the singleton condition the 6-Pack is built to refuse.
 
 CPC offers a different formulation: _symbiotic alignment_. Treat the population of agents — humans and AIs together — as a _symbol-emergence system_. Each agent has its own internal states and its own observations of the world, and the group as a whole maintains a shared communicative variable — language, norms, categories, a Polis cluster label, a deliberation outcome. The total collective free energy of the system — a single measure of how badly, taken together, the agents' predictions fit the world and each other — splits into two parts:
 
@@ -215,4 +215,4 @@ If the previous decade of AI research was dominated by the question _how do we a
 
 The field is getting clearer about what belongs inside a Kami. The more
 important question — who gets to authorise it, limit it and retire it — is
-still, irreducibly, ours.
+still, irreducibly, ours. That question, too, has a literature: Seth Lazar's [democratic duties of explanation](https://arxiv.org/abs/2208.08628) and Kate Vredenburgh's [right to explanation](https://doi.org/10.1111/jopp.12262) ask, in political philosophy's terms, who is owed an account of why a system did what it did. The [Sources](/sources/) page places this essay's substrate arguments beside them.

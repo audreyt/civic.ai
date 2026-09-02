@@ -62,7 +62,7 @@ Prefer visuals? Browse [all comics](/comics/) — Nicky Case's illustrated overv
 <h2 id="the-6-pack">The 6-Pack</h2>
 
 The 6-Pack is an application of [⿻ Plurality](https://plurality.net) to AI governance. Packs 1–4 form a feedback loop — the care cycle (Attentiveness → Responsibility → Competence → Responsiveness → back to Attentiveness). Pack 5 scales that loop across organisations. Pack 6 is the boundary condition that keeps every deployment local, plural, and sunset-ready. The unit of deployment is the **Kami** — a bounded local steward, not a universal governor. Each pack descends in layers: its closing image teaches a pattern, patterns become buildable tools, tools become named instruments, and instruments feed the diagnostics behind one headline measure.
-The framework draws openly from Joan Tronto's care ethics, deliberative democracy, and Plurality. Its value is not six new virtues but care translated into institutional machinery — and if a pack name does not change who can object, who must answer, what gets logged, or what happens after failure, it is decoration.
+The framework draws openly on care ethics — the four phases of care that [Berenice Fisher and Joan Tronto](https://experts.umn.edu/en/publications/toward-a-feminist-theory-of-caring/) set out in 1990, and Aimee van Wynsberghe's 2013 use of them as a [design framework for care robots](https://doi.org/10.1007/s11948-011-9343-6) — as well as on deliberative democracy and ⿻ Plurality; the [Sources](/sources/) page names every such debt, pack by pack. Its value is not six new virtues but care translated into institutional machinery — and if a pack name does not change who can object, who must answer, what gets logged, or what happens after failure, it is decoration.
 
 Six design principles translate care ethics into something institutions can build and inspect:
 
@@ -73,6 +73,7 @@ Six design principles translate care ethics into something institutions can buil
 - **[Pack 5: Solidarity](/5/)** — whether the ecosystem rewards cooperation, exit, and public accountability over lock-in.
 - **[Pack 6: Symbiosis](/6/)** — whether the system stays bounded, local, and sunset-ready instead of hardening into permanent rule.
 - **[Map & Measures](/measures/#map)** — the whole framework on one clickable map, followed by one headline public measure per pack and supporting diagnostics.
+- **[Sources & Further Reading](/sources/)** — where each part of the framework came from, with links: the care-ethics lineage, its first application to technology, and the scholarship behind each pack.
 
 ## Four proof points
 
@@ -86,7 +87,7 @@ The book widens these into seven case studies. They are not seven identical proo
 ## Publications
 
 - ["AI and the Future of Digital Public Squares"](https://journals.sagepub.com/doi/10.1177/26339137261459441): Audrey joins Beth Goldberg, Hélène Landemore, and two dozen co-authors to map how LLMs can strengthen digital public squares — collective dialogue, bridging systems, community moderation, and proof-of-humanity — a peer-reviewed agenda that cites the 6-Pack of Care directly. _(Collective Intelligence, 2026)_
-- [〈以資料為土壤，守護主權〉](/tw/safer-sovereignty/)：唐鳳將 Tenzin Yangtso 提出的「資料是土壤，不是石油」應用於企業 AI——韌性來自聯邦式安全下的有界在地守護者，而非單一的全球大腦。_(原刊於 The Kyndryl Institute，2026 年 4 月 28 日)_
+- ["Safeguarding Sovereignty with Data as Soil"](/safer-sovereignty/): Audrey applies Tenzin Yangtso's idea that data is soil, not oil, to enterprise AI — resilience comes from bounded local stewards under federated safety, rather than a single global brain. _(First published by The Kyndryl Institute, 28 April 2026)_
 - ["Sunset Section 230 and Unleash the First Amendment"](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/): Audrey, Jaron Lanier, and Allison Stanger argue for ending algorithmic amplification's liability shield while protecting human speech — the reach-not-speech reform at the heart of Pack 5. _(Communications of the ACM, January 2026)_
 - ["How Malicious AI Swarms Can Threaten Democracy"](https://www.science.org/doi/10.1126/science.adz1697): Audrey joins Maria Ressa, Nick Bostrom, Nicholas Christakis, and 18 other researchers to document how LLM-powered agent swarms can infiltrate communities and fabricate consensus at population scale. _(Science, 2026)_
 - ["Symbiotic Alignment via Collective Predictive Coding"](https://doi.org/10.1162/ARTL.a.475): Audrey joins Tadahiro Taniguchi, Yusuke Hayashi, Olaf Witkowski, and three co-authors to formalise symbiotic alignment — bounded agents negotiate shared meaning through collective predictive coding rather than a master model. The mathematical backbone of Packs 5 and 6. _(Artificial Life, 2026)_

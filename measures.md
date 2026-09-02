@@ -96,3 +96,7 @@ The measures above audit a running deployment. These six questions gate whether 
 6. **Boundary honesty** (Pack 6) — what problem is out of scope, and who is carrying that problem instead?
 
 If the answer to any of these is vague, the deployment is not ready. The point is not to defend the 6-Pack. The point is to make the room answerable.
+
+### Where the measures come from
+
+The measures are ours; the ground they stand on is not. "Sufficiency, not maximisation" is Herbert Simon's [satisficing](https://doi.org/10.2307/1884852) (1955). The warning that a measure which becomes a target stops measuring has three classic statements — Campbell's law ([1979](<https://doi.org/10.1016/0149-7189(79)90048-X>)), Goodhart's law (1975), and Marilyn Strathern's shorthand for it (1997) — and "what each measure refuses to reward" is written against all three. Trust-under-loss operationalises the procedural-justice finding, from Tom Tyler's _[Why People Obey the Law](https://press.princeton.edu/books/paperback/9780691126739/why-people-obey-the-law)_, that people who lose on the merits still accept a process they judge fair. The uncommon-ground index audits the cross-group signal that Aviv Ovadya's [bridging-based ranking](https://www.belfercenter.org/publication/bridging-based-ranking) uses to rank. Exit readiness is Albert Hirschman's [exit](https://www.hup.harvard.edu/books/9780674276604) turned into a drill. The [Sources](/sources/) page carries the full trail.

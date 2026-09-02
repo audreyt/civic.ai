@@ -19,13 +19,13 @@ nav_next:
 
 2024 年 2 月至 2025 年 3 月間，一項跨部門協作召集了英國長期照護社群的 100 多位代表，共同產製——也就是與受影響的人們一起打造——長期照護中負責任仁工智慧（Civic AI）的定義。協作者包括照護與支援受益者、無酬照顧者、專業照護工作者、照護提供者、科技提供者、政策制定者、決策者，以及公民社會代表。三位來自學界、私部門與公民社會的主持人協調了這項工作。
 
-最終定義發表於《刺胳針健康長壽》（_The Lancet Healthy Longevity_），以照護價值作為 AI 政策與實踐的出發點，而非效率指標。這項工作之所以成為覺察力的案例研究，在於它是如何產出的：察覺誰被遺漏、先傾聽再解決問題，並拒絕讓強勢聲音不受挑戰地主導議程。
+最終定義發表於《刺胳針健康長壽》（_[The Lancet Healthy Longevity](https://doi.org/10.1016/j.lanhl.2026.100817)_），以照護價值作為 AI 政策與實踐的出發點，而非效率指標。這項工作之所以成為覺察力的案例研究，在於它是如何產出的：察覺誰被遺漏、先傾聽再解決問題，並拒絕讓強勢聲音不受挑戰地主導議程。
 
 ## 共同產製如何實踐覺察力
 
 ### 關係優先
 
-這項協作並非從一個技術問題開始。它從一場圓桌會議開始——向長期照護社群發出公開邀請，建立跨部門的關係，並對照護中 AI 的現況形成共識。第一階段的目標不是產出成果，而是建立坦誠對話所需的信任和跨部門連結。社會照護卓越研究院（SCIE）的共同產製原則引導了整個過程，以平等、多元、可及性和互惠為基礎：透過安全、自願的管道傾聽，而非擷取資料。
+這項協作並非從一個技術問題開始。它從一場圓桌會議開始——向長期照護社群發出公開邀請，建立跨部門的關係，並對照護中 AI 的現況形成共識。第一階段的目標不是產出成果，而是建立坦誠對話所需的信任和跨部門連結。[社會照護卓越研究院](https://www.scie.org.uk/co-production/)（SCIE）的共同產製原則引導了整個過程，以平等、多元、可及性和互惠為基礎：透過安全、自願的管道傾聽，而非擷取資料。
 
 ### 權力必須回答問題
 
@@ -41,7 +41,7 @@ nav_next:
 
 ### 拒絕虛假的多元
 
-這項協作主動採取措施，避免徒有包容之表而無其實。它遵循了 SCIE 的共同產製階梯，其中諮詢被排在最低層級，平等夥伴關係排在最高。照護工作者慈善基金會的「以照護工作者為中心」指南為方法提供了參考。經驗豐富的引導者和公民社會團體帶領工作小組。當某些聲音有主導之虞——例如商業壓力與照護價值衝突時——過程的結構確保了較安靜、較脆弱的觀點不被抹消。最後階段召集了 50 多位協作者到場進行審議式集會，面對面辯論並定稿了定義與實踐指南。
+這項協作主動採取措施，避免徒有包容之表而無其實。它遵循了 SCIE 的共同產製階梯——Sherry Arnstein 1969 年[公民參與階梯](https://doi.org/10.1080/01944366908977225)的後裔——其中諮詢被排在最低層級，平等夥伴關係排在最高。[照護工作者慈善基金會](https://www.thecareworkerscharity.org.uk/)的「以照護工作者為中心」指南為方法提供了參考。經驗豐富的引導者和公民社會團體帶領工作小組。當某些聲音有主導之虞——例如商業壓力與照護價值衝突時——過程的結構確保了較安靜、較脆弱的觀點不被抹消。最後階段召集了 50 多位協作者到場進行審議式集會，面對面辯論並定稿了定義與實踐指南。
 
 ## 從理念到實踐
 
@@ -95,4 +95,8 @@ nav_next:
 
 **→ 回應力（Pack 4）：** 定義對選擇與掌控的堅持——人們應能對其使用和被施加的 AI 做出知情選擇——是一項回應力主張。照護必須適應接受照護的人，而非相反。
 
-<p class="figure-caption">Green C, Reinmund T, Hamblin K, Sinha SK. Responsible use of artificial intelligence in the provision of long-term care for older people: a care-centric approach. <em>The Lancet Healthy Longevity</em>, 2026.</p>
+## 這項工作的位置
+
+共同產製並非從一張白紙開始。關懷倫理應用於照護場域中的機器，已有十五年歷史；組織本站的四個關懷階段，最早由 Aimee van Wynsberghe 在 [2013 年](https://doi.org/10.1007/s11948-011-9343-6)用作照護機器人的設計框架，並在她的《[Healthcare Robots](https://www.routledge.com/Healthcare-Robots-Ethics-Design-and-Implementation/Wynsberghe/p/book/9781032098609)》（2015）中發展。Robert 與 Linda Sparrow（[2006](https://doi.org/10.1007/s11023-006-9030-6)）、Mark Coeckelbergh（[2010](https://doi.org/10.1007/s10677-009-9186-2)）、Shannon Vallor（[2011](https://doi.org/10.1007/s13347-011-0015-x)）以及 Amanda 與 Noel Sharkey（[2012](https://doi.org/10.1007/s10676-010-9234-6)）訂下了高齡照護中機器議題的辯論框架；Yuan 及其同事的 [2023 年綜述](https://doi.org/10.1007/s12369-023-01053-6)則以 Tronto 的四個階段重讀十八項高齡照護機器人研究。共同產製所新增的是方法：與受影響的人一起、而非替他們產出定義，而且是在一道以平等夥伴關係為最高一階的階梯上。完整足跡見〈[文獻與延伸閱讀](/tw/sources/)〉。
+
+<p class="figure-caption">Green C, Reinmund T, Hamblin K, Sinha SK. <a href="https://doi.org/10.1016/j.lanhl.2026.100817">Responsible use of artificial intelligence in the provision of long-term care for older people: a care-centric approach</a>. <em>The Lancet Healthy Longevity</em> 7, no. 2 (2026): 100817.</p>

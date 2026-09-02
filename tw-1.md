@@ -16,7 +16,9 @@ permalink: "/tw/1/"
 
 在《[道德邊界](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)》（_[Moral Boundaries](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)_）中，Joan Tronto 稱覺察力為「暫時擱置自利，真正從需要者的角度去看的能力。」其反面，是她所命名的*特權式不負責*（privileged irresponsibility）：不去注意的特權。Tronto 寫道，相對享有特權的人被授予種種特權，「使人得以徑自忽視某些自己不必面對的困苦；我建議我們把這種特權形式稱為『特權式不負責』。」覺察力，就是拒絕這種特權的修練。
 
-Carol Gilligan 點出這種修練所鍛鍊的肌力：「激進傾聽之所以有轉化的潛力，是因為它從『不知道』開始，並鍛鍊出好奇的肌力。」好奇心並非被動；它要靠反覆練習才能養成：一次次轉向缺席之處，而不是假定缺席就代表那裡什麼都沒有。
+Carol Gilligan 在《In a Human Voice》（2023）中點出這種修練所鍛鍊的肌力：「激進傾聽之所以有轉化的潛力，是因為它從『不知道』開始，並鍛鍊出好奇的肌力。」好奇心並非被動；它要靠反覆練習才能養成：一次次轉向缺席之處，而不是假定缺席就代表那裡什麼都沒有。
+
+這裡的詞彙是承襲而來的，這份承襲值得點明。關懷循環所遵循的四個階段——關心、承擔照顧、給予照顧、接受照顧——最早由 [Berenice Fisher 與 Joan Tronto](https://experts.umn.edu/en/publications/toward-a-feminist-theory-of-caring/) 在 1990 年提出；第一至四力的名稱，各是 Tronto 為該階段指派的道德要素。把它們帶進技術領域，這也不是第一次：Aimee van Wynsberghe 的[以關懷為中心的價值敏感設計](https://doi.org/10.1007/s11948-011-9343-6)（2013）用同樣的四個階段與道德要素，來設計與評估照護機器人。第一至四力保留她的提問——每項要素在有機器與沒有機器時各如何體現、由誰體現——並把分析單位從一間病房裡的單一工藝，擴大到對一個房間負責的已部署系統。〈[文獻與延伸閱讀](/tw/sources/)〉逐力追溯每一筆這樣的債務。
 
 具體的設計要素——廣泛傾聽、搭橋地圖、視角回執——為這種修練創造條件，但它們所促成的道德關注，仍然需要任何程序都無法取代的人類判斷。這些工具幫助人們看見關係與缺口，卻不能取代「看見」本身。
 
@@ -38,10 +40,10 @@ Carol Gilligan 點出這種修練所鍛鍊的肌力：「激進傾聽之所以�
 
 ### 實作上長什麼樣子
 
-- **尋找缺席者。**「我們沒有聽到夜班照護者的聲音——去找到他們。」缺席的聲音本身就是證據。Hélène Landemore 在 2026 年的《Politics Without Politicians》中，借用了 G. K. Chesterton 所說的民主「快樂女主人」考驗：重點不在於門是否敞開，而在於是否把安靜的人帶進房間。
+- **尋找缺席者。**「我們沒有聽到夜班照護者的聲音——去找到他們。」缺席的聲音本身就是證據。Hélène Landemore 在 2026 年的《[Politics Without Politicians](https://news.yale.edu/2026/02/18/bring-out-shy-people-case-politics-without-politicians)》中，借用了 G. K. Chesterton 所說的民主「[快樂女主人](https://www.online-literature.com/chesterton/tremendous-trifles/32/)」考驗——「一切真正的民主，都是（像快樂女主人那樣）把害羞的人請出來的努力」：重點不在於門是否敞開，而在於是否把安靜的人帶進房間。
 - **公開工作過程——以小冊子呈現。** 把 AI 的產出當成小冊子（brochure）來呈現：可共享、可編輯的工藝，讓每項主張都連結到來源並標示分歧，而不是把分歧抹平成虛假共識的私下聊天回覆。
 - **公平分配注意力。** 不要只追隨最響亮的聲音。給受影響最大的人時間。對那些規模較小、較難接觸、也更容易被忽略的群體，要額外投入注意力。
-- **解讀衝突樣態。** 在繪製分歧地圖時，問自己：是否總是同一群人在每個議題上彼此對立（強化型裂痕，reinforcing cleavages），還是聯盟會因議題而改變（交錯型裂痕，cross-cutting cleavages——值得尋找的橋樑就在這裡）？地圖應該讓能跨越分歧的人浮現，也標示那些需要額外照料的裂口。
+- **解讀衝突樣態。** 在繪製分歧地圖時，問自己：是否總是同一群人在每個議題上彼此對立（強化型裂痕，reinforcing cleavages），還是聯盟會因議題而改變（交錯型裂痕，cross-cutting cleavages——值得尋找的橋樑就在這裡；這組詞彙來自政治學，出自 Lipset 與 Rokkan）？地圖應該讓能跨越分歧的人浮現，也標示那些需要額外照料的裂口。
 - **內建修復機制。** 日落條款、審查點、可逆轉的預設值，以及願意適時停運、交接權限的謙卑態度。
 
 ### 從理念到實踐
@@ -56,7 +58,7 @@ Carol Gilligan 點出這種修練所鍛鍊的肌力：「激進傾聽之所以�
 ### 可立即建置的工具
 
 - **廣泛傾聽。** 多語言、多管道的輸入，保留來源和不確定性。
-- **搭橋地圖。** 顯示重疊和分歧的圖表，附上引文，運用像 [Polis](https://pol.is) 這類工具在不抹平差異的前提下浮現共識。
+- **搭橋地圖。** 顯示重疊和分歧的圖表，附上引文，運用像 [Polis](https://pol.is)（[Small 等人，2021](https://doi.org/10.6035/recerca.5516)）這類工具在不抹平差異的前提下浮現共識——這正是 Aviv Ovadya 所命名的[搭橋式排序](https://www.belfercenter.org/publication/bridging-based-ranking)設計原則。
 - **視角回執。** 讓每個人都能找到和修正他們被代表的方式。
 - **機器可驗證的規則。** 可被軟體自動執行的社群資料規範——正是 Pack 3 所建「政策即程式碼」防護措施引擎的一種用法。
 - **公平排隊。** 優先處理高風險議題和微弱聲音的簡單演算法。
@@ -76,7 +78,7 @@ Carol Gilligan 點出這種修練所鍛鍊的肌力：「激進傾聽之所以�
 
 - **單一指標主導一切。** 參與度上升，信任度下降。
     - **修復方案：** 使用一組平衡指標，並輪換由哪一項帶頭。
-- **傾聽劇場。** 報告光鮮亮麗，結果卻一成不變。
+- **傾聽劇場。** 報告光鮮亮麗，結果卻一成不變——正是 [Arnstein 參與階梯](https://doi.org/10.1080/01944366908977225)上「象徵性參與」的那一階。
     - **修復方案：** 真正的決策關卡、外部否決權，以及抽查。
 - **大聲者主導。** 資金充足的團體佔據管道。
     - **修復方案：** 限流、公平配額、公開注意力儀表板。
@@ -103,5 +105,16 @@ Carol Gilligan 點出這種修練所鍛鍊的肌力：「激進傾聽之所以�
 ### 結語意象：能說「不」的快樂女主人
 
 想像一位快樂的女主人，叫得出每位客人的名字，為他們的行囊騰出空間——但她也會穿過房間，找到獨自站在牆邊的人，問出只有他們能回答的問題。這就是覺察力。而因為有些客人試圖抹去其他人，女主人堅守一條底線：好客，但家中必須尊重權利。教 AI 系統覺察——不過早最佳化，並主動好奇還有誰尚未加入對話——我們就能保住更多珍貴之物，也能創造更多可共享之物。一個需求出現了，隨之而來的是義務。一切就從這裡開始。
+
+### 本力文獻
+
+- Fisher 與 Tronto，[〈Toward a Feminist Theory of Caring〉](https://experts.umn.edu/en/publications/toward-a-feminist-theory-of-caring/)（1990）；Tronto，《[Moral Boundaries](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)》（1993），頁 105–108、120–121——階段、道德要素與特權式不負責。
+- van Wynsberghe，[〈Designing Robots for Care〉](https://doi.org/10.1007/s11948-011-9343-6)（2013）——首次把四個階段用作技術設計框架。
+- Chesterton，[〈The Travellers in State〉](https://www.online-literature.com/chesterton/tremendous-trifles/32/)（1909），經 Landemore《[Politics Without Politicians](https://news.yale.edu/2026/02/18/bring-out-shy-people-case-politics-without-politicians)》（2026）引用——快樂女主人。
+- Ovadya，《[Bridging-Based Ranking](https://www.belfercenter.org/publication/bridging-based-ranking)》（2022）；Small 等人，[〈Polis〉](https://doi.org/10.6035/recerca.5516)（2021）——搭橋地圖。
+- Arnstein，[〈A Ladder of Citizen Participation〉](https://doi.org/10.1080/01944366908977225)（1969）——傾聽劇場即象徵性參與。
+- Tessler 等人，[〈AI Can Help Humans Find Common Ground〉](https://doi.org/10.1126/science.adq2852)（《Science》，2024）——模型中介者能找出對立群體共同背書陳述的證據。
+- Schroeder 等人，[〈How Malicious AI Swarms Can Threaten Democracy〉](https://doi.org/10.1126/science.adz1697)（《Science》，2026）——合成公眾。
+- 完整足跡與每一筆來源的貢獻，見〈[文獻與延伸閱讀](/tw/sources/)〉。
 
 <noscript><img src="/img/pack1-2-tw.jpg" alt="手繪漫畫頁，標題為「NOT：only the powerful and popular／BUT：voices from every community——SOLUTION」：多元的動物擬人角色圍坐圓桌如同公民大會，旁註說明 Polis 平台沒有「分享」或「回覆」按鈕，讓人們以同意／不同意／不確定投票，凸顯最能跨越分歧的想法，使科技增強而非取代我們的發聲；下方是一群小角色與一顆大大的手繪愛心。" class="overview-image" width="1437" height="1999" loading="lazy" decoding="async"></noscript>

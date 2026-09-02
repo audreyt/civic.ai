@@ -19,13 +19,13 @@ This is the gap that attentiveness is designed to close: the distance between th
 
 Between February 2024 and March 2025, a cross-sector collaboration convened more than 100 representatives from across the UK's long-term care community to co-produce — to build jointly with the people affected — a definition of responsible AI in long-term care. The collaborators included care and support recipients, unpaid caregivers, professional care workers, care providers, technology providers, policy makers, decision makers, and civil society representatives. Three hosts from academia, the private sector, and civil society coordinated the work.
 
-The resulting definition, published in _The Lancet Healthy Longevity_, centres care values as the starting point for AI policy and practice rather than efficiency metrics. What makes this work a case study in attentiveness is how it was produced: noticing who is missing, listening before solving, and refusing to let powerful voices set the agenda unchallenged.
+The resulting definition, published in _[The Lancet Healthy Longevity](https://doi.org/10.1016/j.lanhl.2026.100817)_, centres care values as the starting point for AI policy and practice rather than efficiency metrics. What makes this work a case study in attentiveness is how it was produced: noticing who is missing, listening before solving, and refusing to let powerful voices set the agenda unchallenged.
 
 ## How the co-production practised attentiveness
 
 ### Relationships first
 
-The collaboration did not begin with a technology problem. It began with a roundtable — an open invitation to the long-term care community to establish relationships across sectors and develop a shared understanding of the current state of AI in care. The goal of this first phase was not to produce outputs but to build the trust and cross-sector connections necessary for honest conversation. Co-production principles from the Social Care Institute for Excellence (SCIE) guided the process, grounded in equality, diversity, accessibility, and reciprocity: listening through secure, voluntary channels rather than extracting data.
+The collaboration did not begin with a technology problem. It began with a roundtable — an open invitation to the long-term care community to establish relationships across sectors and develop a shared understanding of the current state of AI in care. The goal of this first phase was not to produce outputs but to build the trust and cross-sector connections necessary for honest conversation. Co-production principles from the [Social Care Institute for Excellence](https://www.scie.org.uk/co-production/) (SCIE) guided the process, grounded in equality, diversity, accessibility, and reciprocity: listening through secure, voluntary channels rather than extracting data.
 
 ### Power must answer questions
 
@@ -41,7 +41,7 @@ The definition that emerged is rooted in the view that care is a human need tied
 
 ### No fake pluralism
 
-The collaboration took active steps to avoid the appearance of inclusion without the substance. It followed the SCIE co-production ladder, which ranks consultation lowest and equal partnership highest. The Care Workers' Charity's guide to centring care workers informed the approach. Experienced facilitators and civil society groups led the working groups. When some voices risked dominating — as happened when commercial pressures clashed with care values — the structure of the process ensured that the quieter, more vulnerable perspectives were not erased. The final phase brought more than 50 collaborators together physically for deliberative assembly, where the definition and practice guidance were debated and finalised face to face.
+The collaboration took active steps to avoid the appearance of inclusion without the substance. It followed the SCIE co-production ladder — a descendant of Sherry Arnstein's 1969 [ladder of citizen participation](https://doi.org/10.1080/01944366908977225) — which ranks consultation lowest and equal partnership highest. [The Care Workers' Charity](https://www.thecareworkerscharity.org.uk/)'s guide to centring care workers informed the approach. Experienced facilitators and civil society groups led the working groups. When some voices risked dominating — as happened when commercial pressures clashed with care values — the structure of the process ensured that the quieter, more vulnerable perspectives were not erased. The final phase brought more than 50 collaborators together physically for deliberative assembly, where the definition and practice guidance were debated and finalised face to face.
 
 ## From ideas to practice
 
@@ -95,4 +95,8 @@ This case study connects to other packs in the framework:
 
 **→ Responsiveness (Pack 4):** The definition's insistence on choice and control — that people should be able to make informed choices about the AI they use and are subjected to — is a responsiveness claim. Care must adapt to the person receiving it, not the other way around.
 
-<p class="figure-caption">Green C, Reinmund T, Hamblin K, Sinha SK. Responsible use of artificial intelligence in the provision of long-term care for older people: a care-centric approach. <em>The Lancet Healthy Longevity</em>, 2026.</p>
+## Where this work sits
+
+The co-production did not start from a blank page. Care ethics has been applied to machines in care settings for fifteen years, and the four phases of care that organise this site were first used as a design framework for care robots by Aimee van Wynsberghe in [2013](https://doi.org/10.1007/s11948-011-9343-6) and developed in her _[Healthcare Robots](https://www.routledge.com/Healthcare-Robots-Ethics-Design-and-Implementation/Wynsberghe/p/book/9781032098609)_ (2015). Robert and Linda Sparrow ([2006](https://doi.org/10.1007/s11023-006-9030-6)), Mark Coeckelbergh ([2010](https://doi.org/10.1007/s10677-009-9186-2)), Shannon Vallor ([2011](https://doi.org/10.1007/s13347-011-0015-x)), and Amanda and Noel Sharkey ([2012](https://doi.org/10.1007/s10676-010-9234-6)) set the terms of the debate on machines in aged care, and Yuan and colleagues' [2023 review](https://doi.org/10.1007/s12369-023-01053-6) reads eighteen aged-care robot studies through Tronto's four phases. What the co-production adds is method: a definition produced with the people affected rather than for them, on a ladder whose top rung is equal partnership. The full trail is on the [Sources](/sources/) page.
+
+<p class="figure-caption">Green C, Reinmund T, Hamblin K, Sinha SK. <a href="https://doi.org/10.1016/j.lanhl.2026.100817">Responsible use of artificial intelligence in the provision of long-term care for older people: a care-centric approach</a>. <em>The Lancet Healthy Longevity</em> 7, no. 2 (2026): 100817.</p>
