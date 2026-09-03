@@ -5,13 +5,15 @@ lang: en-gb
 alt_lang_url: "/tw/podcast/"
 permalink: "/podcast/"
 date: 2025-09-05
-description: 'Originally recorded for <a href="https://podcasts.ox.ac.uk/6-pack-care-ambassador-audrey-tang-and-dr-caroline-green-civic-care-approach">Accelerating AI Ethics</a>, University of Oxford Institute for Ethics in AI.'
+description: "Originally recorded for Accelerating AI Ethics, University of Oxford Institute for Ethics in AI."
 nav_next:
     url: "/"
     text: "Home"
 ---
 
 <em>Audrey Tang and Caroline Green introduce the 6-Pack of Care — live, in the week the site launched. Fifty-eight minutes covering all six packs, from attentiveness to symbiosis, with grounding in social care practice, co-production, the Kami metaphor, and what to do after listening.</em>
+
+Originally recorded for [Accelerating AI Ethics](https://podcasts.ox.ac.uk/6-pack-care-ambassador-audrey-tang-and-dr-caroline-green-civic-care-approach), University of Oxford Institute for Ethics in AI.
 
 ## In brief
 

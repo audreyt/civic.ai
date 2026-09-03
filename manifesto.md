@@ -37,7 +37,7 @@ Designing AI as care infrastructure requires digital permaculture, mirroring a m
 
 The vertical narrative of a technological "singularity" needs a horizontal alternative. Today, I wish to discuss that alternative: a steering wheel called **⿻ Plurality** and its design principles, the **6-Pack of Care**.
 
-# From Protest to Demo
+## From Protest to Demo
 
 Our journey began in 2014 with the Sunflower Movement, a protest against an opaque trade deal with Beijing. Public trust in the government plummeted to 9 per cent. Our social fabric was coming apart, largely due to "engagement through enragement" parasitic AI — what I call _antisocial media_.
 
@@ -49,7 +49,7 @@ We drafted better versions of the trade deal together, iteratively. Each day, we
 
 By shifting from protest to a productive demo, we began tilling the soil of our democracy. Systemically applying such bridge-making algorithms contributed to increased public trust — not alone, but as part of a broader democratic renewal. Trust climbed from 9 per cent in 2014 to over 70 per cent by 2020. We showed that the best way to fix a system is to build a better one.
 
-# From Outrage to Overlap
+## From Outrage to Overlap
 
 In 2015, we handled our first major case using a bridge-making algorithm. Uber's entry into Taiwan sparked a firestorm. We introduced **Polis**, a tool designed to find "uncommon ground."
 
@@ -63,7 +63,7 @@ We flipped the incentive for going viral from outrage to overlap.
 
 After just three weeks, the result was a coherent bundle of ideas that left everybody slightly happier and nobody very unhappy. The consensus on principles became law and resolved the conflict.
 
-# From Gridlock to Governance
+## From Gridlock to Governance
 
 This approach highlights a crucial insight: how we deliberate matters. It's about exercising our "civic muscle."
 
@@ -75,7 +75,7 @@ This illustrates the "legitimacy of sensemaking." At their root, many conflicts 
 
 For example, in our marriage equality debate, polarisation occurred because one side argued for individual rights ("hūn"), while the other focused on family kinship ("yīn"). They were arguing about different things. Once this interpretation became common knowledge through legitimate sensemaking, the path forward (legalising individual weddings without forcing family kinship) became clear, depolarising the issue.
 
-# Alignment Assemblies
+## Alignment Assemblies
 
 More recently, we applied the same approach at scale to the plague of deepfake investment scams, often featuring figures such as Jensen Huang (likely generated using NVIDIA GPUs). People wanted action, but we didn't want censorship.
 
@@ -90,7 +90,7 @@ The final package earned over 85 per cent cross-partisan support. This rigour is
 
 The amendments passed within months. As of 2025, Taiwan is likely the only country imposing full-spectrum, real-name KYC rules — "know your customer" checks that verify who is actually paying for an advert — for social media advertisements. This approach employs **Civic AI**.
 
-# From Tokyo to California
+## From Tokyo to California
 
 This phenomenon doesn't just apply to Taiwan.
 
@@ -102,7 +102,7 @@ In California, the **[Engaged California](https://engaged.ca.gov/)** platform (d
 
 These successes treat deliberation as a civic muscle that needs exercise. But demos alone do not bend the curve. Law and market design must follow.
 
-# From Pilots to Policy
+## From Pilots to Policy
 
 To move these governance engines from pilots to the default, we must reengineer the infrastructure itself. We must design for participation and democratic legitimacy. If AI makes all the decisions for us — even good ones — our civic muscle atrophies. It's like sending our robotic avatars to the gym to exercise for us.
 
@@ -113,7 +113,7 @@ Here are key policy levers:
 - **Bridging-Based Ranking Transparency.** We can audit the relational health of platforms. X.com is already testing [bridge-based ranking](https://www.belfercenter.org/publication/bridging-based-ranking) (derived from Community Notes) as the default feed. Its new Collaborative Notes feature lets human contributors request AI-drafted context, then collectively rate and refine it — a two-lane pattern where AI provides speed and humans provide judgement.
 - **Federated Trust & Safety.** We must adopt open-source, federated models. A key example is the **[ROOST.tools](https://roost.tools)** (Robust Open Online Safety Tools) initiative for Child Sexual Abuse Material (CSAM) defence, launched at the Paris AI Action Summit in February 2025. The initiative bridged the security camp (Eric Schmidt) and the open camp (Yann LeCun). Instead of relying on a single source (e.g., Microsoft PhotoDNA), ROOST allows partners (e.g., Bluesky, Roblox, or Discord) to train local AIs — what I call _Kamis_ — to detect CSAM within their specific cultural context. Embeddings are translated into text (legal to hold, with fewer privacy issues) and shared via federated learning. Safety is tuned to local norms without being colonised by a single corporate policy.
 
-# From "Is" to "Ought"
+## From "Is" to "Ought"
 
 The examples so far showed democratic, decentralised defence acceleration (d/acc) in the info domain. More generally, many actors tackle _vertical_ alignment — the technical question across many domains: "Is the AI loyally serving its principal?"
 
@@ -137,7 +137,7 @@ Civic AI does not replace representative democracy but widens listening, records
 
 The defended point is not a perfect foundation. We do not answer "what grounds this?" with a bigger foundation. We answer: who can find out we are wrong, make us say so, and make it cost us now? That corrective loop is entrenched. Everything else remains bounded, revisable, and answerable: the public is found in the footprint of what the system touches; one-way doors go slow; and any system that weakens the right of correction cannot claim the 6-Pack's mandate.
 
-# Attentiveness: **"Caring about"**
+## Attentiveness: **"Caring about"**
 
 Before optimising, we must choose what to notice. We must notice what people closest to the pain are noticing, turning local knowledge into common knowledge.
 
@@ -151,7 +151,7 @@ Bridging algorithms prioritise marginalised voices. Unlike majority voting, smal
 
 _Rule of thumb: Bridge first, decide second._
 
-# Responsibility: **"Taking care of"**
+## Responsibility: **"Taking care of"**
 
 This principle focuses on making credible, flexible commitments to act on the needs identified.
 
@@ -161,7 +161,7 @@ Institutionalisation is also required. In Taiwan, we introduced **Participation 
 
 _Rule of thumb: No unchecked power; answers are required._
 
-# Competence: **"Care-giving"**
+## Competence: **"Care-giving"**
 
 Good intentions require working code. Competence is shipping systems that deliver care and build trust, backed by auditing and evaluation.
 
@@ -171,7 +171,7 @@ Security is also competence, and a moral question. A hijacked _Kami_ cannot tend
 
 _Rule of thumb: Security failures reveal moral failure in build and deployment before they read as technical oversights._
 
-# Responsiveness: **"Care-receiving"**
+## Responsiveness: **"Care-receiving"**
 
 A system that cannot be corrected will fail. Since competent action invariably introduces new problems, we need appeals, community-authored evaluations, and public repair loops.
 
@@ -189,7 +189,7 @@ In Tronto's formulation, the first four packs form a feedback loop: Attentivenes
 
 _Rule of thumb: Always measure trust-under-loss._
 
-# Solidarity: **"Caring with"**
+## Solidarity: **"Caring with"**
 
 Solidarity and plurality scale when cooperation is the path of least resistance. If the ecosystem does not reward caregiving, there will not be enough care. And care, as Tronto reminds us, is only viable as a political ideal when liberal, pluralistic, democratic institutions already guarantee the rights and justice it depends on.
 
@@ -201,7 +201,7 @@ The infrastructure makes decentralised defence easier and more dominant, making 
 
 _Rule of thumb: Make positive-sum games easy to play._
 
-# Symbiosis: **"Kami of Care"**
+## Symbiosis: **"Kami of Care"**
 
 The final piece of the puzzle addresses the ultimate fear: that AI systems, even designed as infrastructure, could still compete — expanding their reach until one dominates all others. How do we ensure a world of cooperative local systems rather than a single, all-powerful ruler?
 
@@ -226,7 +226,7 @@ The vision of a **"society of AI permaculturists"** is the direct alternative to
 
 _Rule of thumb: Build for "enough," not forever._
 
-# Plurality Is Here
+## Plurality Is Here
 
 In 2016, I joined the Cabinet as the Minister of "Shùwèi" (數位). In Mandarin, this word means both digital _and_ plural (more than one). So I was also the Minister of Plurality.
 
@@ -240,7 +240,7 @@ To explain my role, I wrote this poetic job description:
 
 The singularity is a vertical vision. Plurality is a horizontal one. The future of AI is a decentralised network of smaller, open and locally verifiable systems — _local Kamis_, spirits of place.
 
-# We, the People, Are the Superintelligence
+## We, the People, Are the Superintelligence
 
 The superintelligence we need is already here. It's the untapped potential of human collaboration. It's "We, the People."
 

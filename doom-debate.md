@@ -5,7 +5,7 @@ lang: en-gb
 alt_lang_url: "/tw/doom-debate/"
 permalink: "/doom-debate/"
 date: 2026-01-20
-description: 'Originally recorded for <a href="https://www.youtube.com/watch?v=bvcmiirT8ME">Doom Debates</a> with Liron Shapira.'
+description: "Originally recorded for Doom Debates with Liron Shapira."
 summary: "This debate places the 6-Pack inside the superintelligence-risk conversation. It is useful if you want the strongest contrast between top-down safety narratives and the case for bounded, democratic governance."
 summary_label: "In brief"
 summary_anchor: "in-brief"
@@ -22,6 +22,8 @@ nav_next:
 ---
 
 <em>Audrey Tang joins Liron Shapira on Doom Debates — a series on superintelligence risk. Ninety minutes on why P(Doom) is Not a Number, what a glass-horse architecture looks like, and how the 6-Pack of Care provides a blueprint for Civic AI governance at civilisational scale.</em>
+
+Originally recorded for [Doom Debates](https://www.youtube.com/watch?v=bvcmiirT8ME) with Liron Shapira.
 
 ## Watch
 

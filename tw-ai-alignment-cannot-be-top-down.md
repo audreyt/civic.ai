@@ -6,7 +6,7 @@ lang: zh-tw
 alt_lang_url: "/ai-alignment-cannot-be-top-down"
 permalink: "/tw/ai-alignment-cannot-be-top-down/"
 date: 2025-11-03
-description: '原載於 <a href="https://ai-frontiers.org/articles/ai-alignment-cannot-be-top-down">AI Frontiers</a>。'
+description: "原載於 AI Frontiers。"
 nav_next:
     url: "/tw/"
     text: "首頁"
@@ -14,6 +14,8 @@ audio: /audio/ai-alignment-cannot-be-top-down.mp3
 ---
 
 當少數公司替所有人定義 AI 對齊時，AI 對齊就會失敗。這篇文章主張以公共程序來實現對齊：由公民掌舵、以公開問責維持，並由貼近在地情境的社群規模助理承接。
+
+原載於 [AI Frontiers](https://ai-frontiers.org/articles/ai-alignment-cannot-be-top-down)。
 
 ## 摘要
 

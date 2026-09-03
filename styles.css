@@ -46,15 +46,15 @@
     --heading: #002147;
     --gold: #886d35;
     --gold-light: #c9a961;
-    --teal: #2a7f8a;
+    --teal: #236f79;
     --poster-paper: #faf8f5;
     --border: #e0ddd7;
     --shadow: 0 2px 8px rgba(0, 33, 71, 0.06);
     --shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.08);
     --serif: "Monlam Bodyig", "Lora", Georgia, serif;
     --sans: "Monlam Bodyig", "Outfit", system-ui, sans-serif;
-    --accent-teal: #2a7f8a;
-    --accent-blue: #2a7f8a;
+    --accent-teal: #236f79;
+    --accent-blue: #236f79;
     --accent-gradient: linear-gradient(135deg, var(--oxford-blue), #003366);
 }
 
@@ -68,12 +68,12 @@ html[data-theme="light"] {
     --muted: #5f6a7d;
     --heading: #002147;
     --gold: #886d35;
-    --teal: #2a7f8a;
+    --teal: #236f79;
     --border: #e0ddd7;
     --shadow: 0 2px 8px rgba(0, 33, 71, 0.06);
     --shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.08);
-    --accent-teal: #2a7f8a;
-    --accent-blue: #2a7f8a;
+    --accent-teal: #236f79;
+    --accent-blue: #236f79;
 }
 
 html[data-theme="dark"] {
@@ -143,11 +143,16 @@ a {
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
     text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
-    transition: color 0.2s;
+    transition:
+        color 0.2s,
+        text-decoration-thickness 0.2s,
+        text-decoration-color 0.2s;
 }
 
 a:hover {
     color: var(--gold);
+    text-decoration-thickness: 2px;
+    text-decoration-color: currentColor;
 }
 
 /* ─── GLOSSARY GLOSSING ─── */
@@ -720,6 +725,9 @@ h4 {
 }
 /* FAQ grouping and filter pills */
 .faq-filter {
+    position: sticky;
+    top: 8px;
+    z-index: 20;
     display: inline-flex;
     flex-wrap: wrap;
     gap: 6px;
@@ -1232,10 +1240,12 @@ footer a:hover {
 }
 
 /* ─── SKIP LINK ─── */
-/* Skip link: kept in the accessibility tree for screen readers, but never shown
-   visually (no on-focus reveal). */
+/* Visually hidden until focused, then revealed as an overlay. */
 .skip-link {
     position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 100;
     width: 1px;
     height: 1px;
     margin: -1px;
@@ -1247,7 +1257,17 @@ footer a:hover {
 }
 
 .skip-link:focus-visible {
-    outline: none;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 10px 16px;
+    overflow: visible;
+    clip: auto;
+    background: var(--oxford-blue);
+    color: #fff;
+    border-radius: 8px;
+    outline: 2px solid var(--gold-light);
+    outline-offset: 2px;
 }
 
 /* ─── FOCUS ─── */

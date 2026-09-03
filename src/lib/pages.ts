@@ -147,6 +147,9 @@ function loadPage(sourceName: string): PageRecord {
     normalizeUrlFields(data.agenda);
     normalizeUrlFields(data.hosts);
     const url = deriveUrl(sourceName, data);
+    // Intentional asymmetry: only the English sensemaker is emitted as a
+    // standalone document. Its Mandarin twin goes through the normal
+    // shortcode/markdown branch and renders inside the site chrome.
     const isRawHtmlDocument = sourceName === "sensemaker.html";
     const rawBody = parsed.content;
     const expanded = expandShortcodes({ sourcePath, data }, rawBody);

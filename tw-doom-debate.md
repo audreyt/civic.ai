@@ -5,7 +5,7 @@ lang: zh-tw
 alt_lang_url: "/doom-debate/"
 permalink: "/tw/doom-debate/"
 date: 2026-01-20
-description: '原始錄音收錄於 <a href="https://www.youtube.com/watch?v=bvcmiirT8ME">Doom Debates</a>，對談者為 Liron Shapira。'
+description: "原始錄音收錄於 Doom Debates，對談者為 Liron Shapira。"
 summary: "這場辯論把關懷六力放進超級智慧風險的討論中。如果想看見由上而下安全敘事，與有界、民主治理主張之間最鮮明的對照，這一頁最有用。"
 summary_label: "摘要"
 summary_anchor: "摘要"
@@ -22,6 +22,8 @@ nav_next:
 ---
 
 <em>唐鳳與 Liron Shapira 在《末日辯論》節目中展開深度對談——這是一個以超級智慧風險為主題的訪談系列。九十分鐘，探討為何 P (末日) 是 NaN（非數值）、什麼是透明馬架構，以及關懷六力如何在文明尺度上為仁工智慧治理提供藍圖。</em>
+
+原始錄音收錄於 [Doom Debates](https://www.youtube.com/watch?v=bvcmiirT8ME)，對談者為 Liron Shapira。
 
 ## 觀看
 

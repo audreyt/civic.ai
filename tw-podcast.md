@@ -5,13 +5,15 @@ lang: zh-tw
 alt_lang_url: "/podcast/"
 permalink: "/tw/podcast/"
 date: 2025-09-05
-description: '原始錄音來自牛津 AI 倫理研究院的 <a href="https://podcasts.ox.ac.uk/6-pack-care-ambassador-audrey-tang-and-dr-caroline-green-civic-care-approach">Accelerating AI Ethics</a> Podcast。'
+description: "原始錄音來自牛津 AI 倫理研究院的 Accelerating AI Ethics Podcast。"
 nav_next:
     url: "/tw/"
     text: "首頁"
 ---
 
 <em>唐鳳與 Caroline Green 現場介紹關懷六力——就在網站上線的那週。五十八分鐘涵蓋六力全部，從覺察力到共生力，紮根於社會關懷實踐、共同產出、地神比喻，以及聆聽之後可以採取的行動。</em>
+
+原始錄音來自牛津 AI 倫理研究院的 [Accelerating AI Ethics](https://podcasts.ox.ac.uk/6-pack-care-ambassador-audrey-tang-and-dr-caroline-green-civic-care-approach) Podcast。
 
 ## 摘要
 

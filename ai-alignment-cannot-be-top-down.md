@@ -6,7 +6,7 @@ lang: en-gb
 alt_lang_url: "/tw/ai-alignment-cannot-be-top-down"
 permalink: "/ai-alignment-cannot-be-top-down/"
 date: 2025-11-03
-description: 'Originally published in <a href="https://ai-frontiers.org/articles/ai-alignment-cannot-be-top-down">AI Frontiers</a>.'
+description: "Originally published in AI Frontiers."
 nav_next:
     url: "/"
     text: "Home"
@@ -14,6 +14,8 @@ audio: /audio/ai-alignment-cannot-be-top-down.mp3
 ---
 
 AI alignment fails when a handful of companies define it for everyone. This essay argues for alignment by public process: citizen steering, public accountability, and community-scale assistants tuned to local contexts.
+
+Originally published in [AI Frontiers](https://ai-frontiers.org/articles/ai-alignment-cannot-be-top-down).
 
 ## In brief
 

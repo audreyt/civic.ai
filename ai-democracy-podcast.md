@@ -5,7 +5,7 @@ lang: en-gb
 alt_lang_url: "/tw/ai-democracy-podcast/"
 permalink: "/ai-democracy-podcast/"
 date: 2025-08-05
-description: 'Originally recorded for <a href="https://podcasts.ox.ac.uk/ai-and-democracy-ambassador-audrey-tang-plurality-practice-transparency-and-collective-intelligence">Accelerating AI Ethics</a>, University of Oxford Institute for Ethics in AI.'
+description: "Originally recorded for Accelerating AI Ethics, University of Oxford Institute for Ethics in AI."
 og_image: "/img/ai-democracy-podcast.jpg"
 nav_next:
     url: "/"
@@ -13,6 +13,8 @@ nav_next:
 ---
 
 <em>Audrey Tang joins Dr Caroline Green for the first episode of Accelerating AI Ethics — recorded on Audrey's first day as an Oxford Accelerator Fellow. Fifty-eight minutes on digital democracy, collective intelligence, plurality as an alternative to singularity, and why AI ethics must be by design, not afterthought.</em>
+
+Originally recorded for [Accelerating AI Ethics](https://podcasts.ox.ac.uk/ai-and-democracy-ambassador-audrey-tang-plurality-practice-transparency-and-collective-intelligence), University of Oxford Institute for Ethics in AI.
 
 ## In brief
 

@@ -6,13 +6,15 @@ lang: zh-tw
 alt_lang_url: "/compassion-and-ai/"
 permalink: "/tw/compassion-and-ai/"
 date: 2026-03-13
-description: '原始錄音來自牛津 AI 倫理研究院的 <a href="https://podcasts.ox.ac.uk/accelerating-ai-ethics">Accelerating AI Ethics</a> Podcast。'
+description: "原始錄音來自牛津 AI 倫理研究院的 Accelerating AI Ethics Podcast。"
 nav_next:
     url: "/tw/"
     text: "首頁"
 ---
 
 <em>Caroline Green 與格西洛朵桑波——藏傳佛教僧侶暨學者——在達蘭薩拉麥羅甘吉對談，探討 AI 是否能真正具有慈悲心。他們從佛教倫理出發，深入緣起、平等觀，以及為何慈悲是一種存在方式，而非一種可以訓練進系統的技能。</em>
+
+原始錄音來自牛津 AI 倫理研究院的 [Accelerating AI Ethics](https://podcasts.ox.ac.uk/accelerating-ai-ethics) Podcast。
 
 ## 摘要
 
