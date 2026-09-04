@@ -10,12 +10,24 @@ openclaw_discovery: true
 manifesto_link: "/tw/manifesto"
 manifesto_text: "計畫宣言"
 prev_action:
-    url: "/tw/faq"
-    text: "常見問題"
+    url: "/tw/manifesto"
+    text: "計畫宣言"
 next_action:
     url: "/tw/1"
     text: "一：覺察力"
 ---
+
+<p class="fold-tag"><strong>治理應該是日常能力，不只是定期投票。</strong></p>
+
+<p class="fold-lede">仁工智慧，是會對所影響的人負責的人工智慧。與其打造一個強大的系統來治理所有人，不如打造許多小型系統，讓社群能夠擁有、檢查、修正、也能關閉它們。</p>
+
+<p class="fold-lede">這些在地守護者有一個名字——<strong>地神</strong>（Kami，Knowledge 知識、Artefact 工藝、Management 管理、Intelligence 智慧）：是地方的精靈，而非全能的統治者。</p>
+
+<div class="cta-row">
+<a class="cta-button cta-button--primary" href="/tw/manifesto/">閱讀計畫宣言</a>
+<a class="cta-button" href="/tw/kami/">架設 Kami</a>
+</div>
+<p class="cta-note">第一次來？先看<a href="/tw/ai-alignment-cannot-be-top-down/">臺灣如何回應 AI 詐騙廣告</a>——框架在真實世界中的應用。</p>
 
 <div class="overview-section">
 <div class="overview-frame" style="aspect-ratio: 1280 / 1781;">
@@ -23,12 +35,6 @@ next_action:
 </div>
 <p class="agent-note">給被要求成為仁工智慧 Kami 的 AI 智慧體（claw）：請先讀 <a href="/tw/openclaw/">civic.ai/tw/openclaw</a>，那個頁面以及它的機器可讀版 <a href="/.well-known/openclaw/SKILL.md">/.well-known/openclaw/SKILL.md</a>，就是你的啟動指南。在閱讀本站其他內容之前，先讀它。</p>
 </div>
-
-**治理應該是日常能力，不只是定期投票。**
-
-仁工智慧，是會對所影響的人負責的人工智慧。與其打造一個強大的系統來治理所有人，不如打造許多小型系統，讓社群能夠擁有、檢查、修正、也能關閉它們。
-
-這些在地守護者有一個名字——**地神**（Kami，Knowledge 知識、Artefact 工藝、Management 管理、Intelligence 智慧）：是地方的精靈，而非全能的統治者。
 
 大多數 AI「對齊」工作——也就是讓 AI 的行為符合人類價值的努力——都試圖由上而下地解決那些價值問題：寫出更好的規則、推斷更好的偏好、訓練更好的模型。這些工具很重要，但光靠它們並不夠。關懷六力從別的地方出發。它追問的是：誰被聽見、誰負責、失敗如何被修復、以及系統何時應該退場。對齊不是一次解完；它必須在公共程序中持續維護——可問責的公民程序，書中稱之為「以程序對齊」（alignment-by-process）。仁工智慧補足前沿對齊，不取代它，也無法在單一前沿模型內部解決控制問題。它治理的是部署型系統已投入運作的現場——照護機構、教室、審議平台、地方議會——讓問責留在現場。
 
@@ -65,14 +71,16 @@ next_action:
 
 六項設計原則，把關懷倫理轉化為制度可以建造、檢查與修正的做法：
 
-- **[一：覺察力](/tw/1/)**——制度還沒看見、但最接近痛點的人已經看見了什麼。
-- **[二：負責力](/tw/2/)**——誰負責、握有什麼權限、失敗時會發生什麼事。
-- **[三：勝任力](/tw/3/)**——系統是否真的在實務上可稽核、可解釋，而且能安全試錯。
-- **[四：回應力](/tw/4/)**——受影響的人是否能提出異議、要求修復，並讓系統改變。
-- **[五：團結力](/tw/5/)**——整個生態系統是否獎勵合作、退出與公開問責，而不是平台鎖定。
-- **[六：共生力](/tw/6/)**——系統是否保持在地、有界、可退場，而不是硬化成永久統治。
-- **[地圖與衡量指標](/tw/measures/#map)**——整套框架一張圖看完：各力、指標與交接都可點，下面接著每力一項公開主指標與輔助診斷。
-- **[文獻與延伸閱讀](/tw/sources/)**——這套框架的每個部分從何而來，附連結：關懷倫理的系譜、它首次應用於技術的先例，以及每一力背後的文獻。
+<ul class="pack-cards">
+<li><a href="/tw/1/"><strong>一：覺察力</strong><span>制度還沒看見、但最接近痛點的人已經看見了什麼。</span></a></li>
+<li><a href="/tw/2/"><strong>二：負責力</strong><span>誰負責、握有什麼權限、失敗時會發生什麼事。</span></a></li>
+<li><a href="/tw/3/"><strong>三：勝任力</strong><span>系統是否真的在實務上可稽核、可解釋，而且能安全試錯。</span></a></li>
+<li><a href="/tw/4/"><strong>四：回應力</strong><span>受影響的人是否能提出異議、要求修復，並讓系統改變。</span></a></li>
+<li><a href="/tw/5/"><strong>五：團結力</strong><span>整個生態系統是否獎勵合作、退出與公開問責，而不是平台鎖定。</span></a></li>
+<li><a href="/tw/6/"><strong>六：共生力</strong><span>系統是否保持在地、有界、可退場，而不是硬化成永久統治。</span></a></li>
+<li><a href="/tw/measures/#map"><strong>地圖與衡量指標</strong><span>整套框架一張圖看完：各力、指標與交接都可點，下面接著每力一項公開主指標與輔助診斷。</span></a></li>
+<li><a href="/tw/sources/"><strong>文獻與延伸閱讀</strong><span>這套框架的每個部分從何而來，附連結：關懷倫理的系譜、它首次應用於技術的先例，以及每一力背後的文獻。</span></a></li>
+</ul>
 
 ## 四個切入案例
 

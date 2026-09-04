@@ -67,7 +67,7 @@ test("excludes OpenClaw human guide from sitemap", () => {
 test("normalizes front-matter action and navigation links", () => {
     const indexPage = getPageByUrl("/");
     expect(indexPage.data.manifesto_link).toBe("/manifesto/");
-    expect(indexPage.data.prev_action?.url).toBe("/faq/");
+    expect(indexPage.data.prev_action?.url).toBe("/manifesto/");
     expect(indexPage.data.next_action?.url).toBe("/1/");
 
     const comicsPage = getPageByUrl("/comics/");
@@ -76,7 +76,7 @@ test("normalizes front-matter action and navigation links", () => {
 
     const twIndexPage = getPageByUrl("/tw/");
     expect(twIndexPage.data.manifesto_link).toBe("/tw/manifesto/");
-    expect(twIndexPage.data.prev_action?.url).toBe("/tw/faq/");
+    expect(twIndexPage.data.prev_action?.url).toBe("/tw/manifesto/");
     expect(twIndexPage.data.next_action?.url).toBe("/tw/1/");
 
     expect(indexPage.data.alt_lang_url).toBe("/tw/");

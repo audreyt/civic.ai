@@ -1,6 +1,6 @@
 ---
 import type { PageRecord } from "../lib/pages";
-import { formatDateDisplay } from "../lib/site";
+import { formatDateDisplay, lang2 } from "../lib/site";
 import HeaderTools from "./HeaderTools.astro";
 import SiteLogos from "./SiteLogos.astro";
 import SiteNav from "./SiteNav.astro";
@@ -9,6 +9,7 @@ import SiteWordmark from "./SiteWordmark.astro";
 interface Props { page: PageRecord; headerTitle?: string; headerSubtitle?: string; headerDate?: string; }
 const { page, headerTitle, headerSubtitle, headerDate } = Astro.props;
 const isHome = page.url === "/" || page.url === "/tw/";
+const zh = lang2(page.data.lang) === "zh";
 const displayTitle = headerTitle || page.data.header_title || page.data.title;
 const displaySubtitle = headerSubtitle || page.data.subtitle;
 ---
@@ -19,7 +20,7 @@ const displaySubtitle = headerSubtitle || page.data.subtitle;
       <SiteLogos lang={page.data.lang} />
       <h1><span style="white-space: nowrap">{displayTitle}</span>{displaySubtitle && <><span style="font-weight: 300">-</span><span style="white-space: nowrap">{displaySubtitle}</span></>}</h1>
       {page.data.description && <p set:html={page.data.description} />}
-      {page.data.manifesto_link && <><br /><a href={page.data.manifesto_link} class="next-action-button"><span class="button-text">{page.data.manifesto_text}</span></a></>}
+      {page.data.manifesto_link && <div class="header-cta-row"><a href={page.data.manifesto_link} class="next-action-button"><span class="button-text">{page.data.manifesto_text}</span></a><a href={zh ? "/tw/kami/" : "/kami/"} class="next-action-button"><span class="button-text">{zh ? "架設 Kami" : "Set up Kami"}</span></a></div>}
       <SiteNav lang={page.data.lang} />
     </>
   ) : (

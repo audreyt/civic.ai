@@ -5338,3 +5338,268 @@ html[data-theme="dark"] .cmap-arc-5 {
     color: var(--muted, #777);
     margin: 0.75rem 0 0.25rem;
 }
+
+/* ─── MOBILE-FIRST PERSUASION UPGRADE ───
+   Reversible: delete this trailing block to restore the previous treatment.
+   Base rules target phones; min-width queries restore the desktop treatment. */
+:root {
+    --display: "Cormorant Garamond", "Lora", Georgia, serif;
+    --tap-min: 44px;
+}
+
+/* Display serif + calmer body rhythm (existing tokens reused) */
+body {
+    line-height: 1.65;
+}
+
+header h1 {
+    font-family: var(--display);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+}
+
+.site-header--home h1 {
+    font-size: clamp(2.2rem, 8vw, 3.4rem);
+    line-height: 1.05;
+}
+
+.site-header--home .header-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.site-header--home .header-cta-row .next-action-button {
+    margin-top: 0;
+    min-height: var(--tap-min);
+}
+
+/* Fold: tagline + lede + CTA + proof strip above the overview poster */
+.fold-tag {
+    font-family: var(--display);
+    font-size: 1.5rem;
+    line-height: 1.3;
+    color: var(--heading);
+    margin: 0 0 0.6em;
+}
+
+.fold-tag strong {
+    color: inherit;
+    font-weight: 600;
+}
+
+.fold-lede {
+    font-size: 1.05rem;
+    margin: 0.6em 0;
+}
+
+.cta-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 1.2em 0 0.4em;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 24px;
+    border-radius: 4px;
+    border: 1px solid var(--teal);
+    background: transparent;
+    color: var(--teal);
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    text-underline-offset: 3px;
+}
+
+.cta-button:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.cta-button--primary {
+    background: var(--oxford-blue);
+    border-color: var(--oxford-blue);
+    color: #fff;
+}
+
+.cta-button--primary:hover {
+    background: var(--teal);
+    border-color: var(--teal);
+    color: #fff;
+}
+
+html[data-theme="dark"] .cta-button--primary {
+    background: var(--teal);
+    border-color: var(--teal);
+    color: #fff;
+}
+
+html[data-theme="dark"] .cta-button--primary:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+}
+
+.cta-note {
+    font-size: 0.92rem;
+    color: var(--muted);
+    margin: 0.4em 0 0;
+}
+
+/* Thumb-first nav: scroll-snap row on phones, wrapped row on desktop */
+header nav.site-nav {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    max-width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scrollbar-width: thin;
+    padding-bottom: 4px;
+}
+
+header nav.site-nav a {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--tap-min);
+    padding: 6px 2px;
+    font-size: 0.85rem;
+}
+
+.site-header--interior nav.site-nav a {
+    font-size: 0.85rem;
+}
+
+.site-header__tools .lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--tap-min);
+}
+
+.theme-toggle,
+.search-toggle {
+    min-width: var(--tap-min);
+    min-height: var(--tap-min);
+}
+
+/* Thumb-zone prev/next: stacked full-width buttons */
+.next-action {
+    position: static;
+    padding: 32px 20px;
+}
+
+.next-action-content {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.next-action-content .next-action-button {
+    justify-content: center;
+    width: 100%;
+    min-height: 48px;
+}
+
+/* 6-Pack as tappable cards instead of text bullets */
+.pack-cards {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 1.2em 0;
+    padding: 0;
+}
+
+.pack-cards li {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.pack-cards a {
+    display: block;
+    min-height: var(--tap-min);
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    color: var(--text);
+    text-decoration: none;
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        border-color 0.2s;
+}
+
+.pack-cards a:hover {
+    border-color: var(--teal);
+    box-shadow: var(--shadow-hover);
+    color: var(--text);
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+.pack-cards strong {
+    display: block;
+    margin-bottom: 2px;
+    color: var(--heading);
+}
+
+.pack-cards span {
+    font-size: 0.95rem;
+    color: var(--muted);
+}
+
+@media (min-width: 720px) {
+    .cta-row {
+        flex-direction: row;
+    }
+
+    header nav.site-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 640px;
+        overflow: visible;
+        padding-bottom: 0;
+    }
+
+    header nav.site-nav a {
+        min-height: 0;
+        font-size: 0.8rem;
+    }
+
+    .site-header--interior nav.site-nav {
+        justify-content: flex-start;
+        max-width: none;
+    }
+
+    .site-header--interior nav.site-nav a {
+        font-size: 0.72rem;
+    }
+
+    .next-action {
+        position: relative;
+        padding: 48px 24px;
+    }
+
+    .next-action-content {
+        flex-direction: row;
+    }
+
+    .next-action-content .next-action-button {
+        width: auto;
+    }
+
+    .pack-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}

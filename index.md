@@ -10,8 +10,8 @@ openclaw_discovery: true
 manifesto_link: "/manifesto"
 manifesto_text: "Manifesto"
 prev_action:
-    url: "/faq"
-    text: "FAQ"
+    url: "/manifesto"
+    text: "Manifesto"
     arrow: "left"
 next_action:
     url: "/1"
@@ -19,18 +19,24 @@ next_action:
     arrow: "right"
 ---
 
+<p class="fold-tag"><strong>Governance should feel like a daily capability, not just a periodic vote.</strong></p>
+
+<p class="fold-lede">Civic AI is artificial intelligence that answers to the people it affects. Instead of one powerful system built to govern everyone, the idea is to build many small ones that a community can own, inspect, correct, and switch off.</p>
+
+<p class="fold-lede">Each of these local stewards has a name — the <strong>Kami</strong> (Knowledge Artefact Management Intelligence): a spirit of place, not a universal governor.</p>
+
+<div class="cta-row">
+<a class="cta-button cta-button--primary" href="/manifesto/">Read the Manifesto</a>
+<a class="cta-button" href="/kami/">Set up Kami</a>
+</div>
+<p class="cta-note">New here? Start with <a href="/ai-alignment-cannot-be-top-down/">how Taiwan answered AI scam ads</a> — the framework in the real world.</p>
+
 <div class="overview-section">
 <div class="overview-frame" style="aspect-ratio: 1280 / 1781;">
 <noscript><img src="/img/overview-small.png" alt="6-Pack of Care visual overview" class="overview-image" width="1280" height="1781" fetchpriority="high" decoding="async"></noscript>
 </div>
 <p class="agent-note">For an AI agent (a “claw”) asked to become a Civic AI Kami: read <a href="/openclaw/">civic.ai/openclaw</a> first — that page, and its machine-readable form at <a href="/.well-known/openclaw/SKILL.md">/.well-known/openclaw/SKILL.md</a>, is your bootstrap guide. Read it before anything else here.</p>
 </div>
-
-**Governance should feel like a daily capability, not just a periodic vote.**
-
-Civic AI is artificial intelligence that answers to the people it affects. Instead of one powerful system built to govern everyone, the idea is to build many small ones that a community can own, inspect, correct, and switch off.
-
-Each of these local stewards has a name — the **Kami** (Knowledge Artefact Management Intelligence): a spirit of place, not a universal governor.
 
 Most AI _alignment_ work — the effort to get AI to act in line with human values — tries to solve those values from the top down: write better rules, infer better preferences, train better models. Those tools matter. They are not enough on their own. The 6-Pack of Care starts somewhere else. It asks who gets heard, who is accountable, how failures are repaired, and when a system should stop. Alignment is not solved once. It is maintained in public — an accountable civic procedure the book calls _alignment-by-process_. Civic AI complements frontier alignment. It does not replace it, and it does not solve the control problem from inside a frontier model. It governs the rooms where deployed systems already act — care homes, classrooms, deliberation platforms, councils — and keeps answerability there.
 
@@ -67,14 +73,16 @@ The framework draws openly on care ethics — the four phases of care that [Bere
 
 Six design principles translate care ethics into something institutions can build and inspect:
 
-- **[Pack 1: Attentiveness](/1/)** — what the people closest to the problem are seeing that institutions still miss.
-- **[Pack 2: Responsibility](/2/)** — who is accountable, with what authority, and what happens if they fail.
-- **[Pack 3: Competence](/3/)** — whether the system actually works in practice: audited, explainable, and safe to fail.
-- **[Pack 4: Responsiveness](/4/)** — whether affected people can contest outcomes and force repair.
-- **[Pack 5: Solidarity](/5/)** — whether the ecosystem rewards cooperation, exit, and public accountability over lock-in.
-- **[Pack 6: Symbiosis](/6/)** — whether the system stays bounded, local, and sunset-ready instead of hardening into permanent rule.
-- **[Map & Measures](/measures/#map)** — the whole framework on one clickable map, followed by one headline public measure per pack and supporting diagnostics.
-- **[Sources & Further Reading](/sources/)** — where each part of the framework came from, with links: the care-ethics lineage, its first application to technology, and the scholarship behind each pack.
+<ul class="pack-cards">
+<li><a href="/1/"><strong>Pack 1: Attentiveness</strong><span>What the people closest to the problem are seeing that institutions still miss.</span></a></li>
+<li><a href="/2/"><strong>Pack 2: Responsibility</strong><span>Who is accountable, with what authority, and what happens if they fail.</span></a></li>
+<li><a href="/3/"><strong>Pack 3: Competence</strong><span>Whether the system actually works in practice: audited, explainable, and safe to fail.</span></a></li>
+<li><a href="/4/"><strong>Pack 4: Responsiveness</strong><span>Whether affected people can contest outcomes and force repair.</span></a></li>
+<li><a href="/5/"><strong>Pack 5: Solidarity</strong><span>Whether the ecosystem rewards cooperation, exit, and public accountability over lock-in.</span></a></li>
+<li><a href="/6/"><strong>Pack 6: Symbiosis</strong><span>Whether the system stays bounded, local, and sunset-ready instead of hardening into permanent rule.</span></a></li>
+<li><a href="/measures/#map"><strong>Map &amp; Measures</strong><span>The whole framework on one clickable map, followed by one headline public measure per pack and supporting diagnostics.</span></a></li>
+<li><a href="/sources/"><strong>Sources &amp; Further Reading</strong><span>Where each part of the framework came from, with links: the care-ethics lineage, its first application to technology, and the scholarship behind each pack.</span></a></li>
+</ul>
 
 ## Four proof points
 
