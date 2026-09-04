@@ -36,7 +36,7 @@ Most AI _alignment_ work — the effort to get AI to act in line with human valu
 
 Kamis help neighbourhoods, schools, unions, faith groups, cities, and diasporas do what collective self-government has always promised but rarely delivered at scale: listen across difference, [deliberate in the open](https://habermolt.com), remember faithfully, and act together. No central model owns them. No platform extracts from them. Communities govern them, inspect them, contest them, and shut them down.
 
-The breakthrough is not smarter chatbots. It is stronger self-government: institutions that show their work, repair harm in public, and carry civic memory across generations. The superintelligence does not need to come. It is already here. It is us — not because a mini-public equals machine superintelligence, but because, under the right institutional conditions, people with tools produce accountable collective intelligence that no central optimiser can legitimately replace. That claim is strong enough without inflation.
+The breakthrough is not smarter chatbots. It is stronger self-government: institutions that show their work, repair harm in public, and carry civic memory across generations. The superintelligence does not need to come. It is already here. It is us — not because a mini-public equals machine superintelligence, but because, under the right institutional conditions, people with tools produce accountable collective intelligence that no central optimiser can legitimately replace.
 
 ## Start here
 
