@@ -1,3 +1,11 @@
+# Agent Notes
+
+Finish the current request. An explicit user instruction in this conversation overrides this file, except: do not wrap `vp` lifecycle commands in Bun; do not edit `dist/` or generated `public/`; keep British English and Traditional Mandarin pairs in parity (including the em-dash convention below). Do not push or deploy unless explicitly requested (pushing `main` deploys `dist/` to Pages).
+
+Treat action requests as authorization to edit. Do not stop at a plan or an offer to continue. If missing information would materially change the outcome, ask before acting; otherwise proceed and finish the local work.
+
+Delegate independent slices in parallel when that would save time. Keep replies short. Match verification to the change.
+
 ## Build & Development
 
 **Root lifecycle:** [Vite+](https://viteplus.dev/) (`vp`), running under its own managed Node.js runtime (pinned via `package.json#devEngines.runtime`, currently 22.23.1). Bun remains the configured package manager (`package.json#devEngines.packageManager`) and is the intentional runtime for standalone utility scripts (`pangu-format.mjs`, `scripts/*.mjs`) entered through `vp run <script>`, and for the isolated `worker/` Cloudflare package, which keeps its own `bun.lock`, install, and test run, entirely separate from the root `vp` lifecycle — see `worker:typecheck`/`worker:test` below. Never wrap a `vp` lifecycle command (`vp test`, `vp check`, `vp build`) in Bun's own runner: it silently forces `vp test`'s Vitest coverage-v8 provider onto Bun, which does not implement the `node:inspector` API coverage collection needs, and the run fails outright.
@@ -11,9 +19,11 @@ vp check                # formatting check + lint + type-aware checks
 vp test                 # root test suite, 100% coverage gate
 vp build                # production build → ./dist/
 vp run check-links      # validate built internal links in ./dist/
+vp run worker:typecheck # isolated worker/ Cloudflare package
+vp run worker:test      # isolated worker/ tests
 ```
 
-Verify significant changes with the relevant focused test plus `vp build`; before completion run the full validation chain in README/CI.
+Match verification to the change. Markdown: content and typography gates. Code or layout: `vp check`, the focused test the change can break, and `vp build`. Tests moved: `vp test`. `worker/` moved: `vp run worker:typecheck` and `vp run worker:test`. After those pass, broaden only if something failed or the change grew. Do not add tests that restate a reversible copy edit.
 
 ## Architecture
 
@@ -59,8 +69,8 @@ Docs are local at `node_modules/vite-plus/docs` or online at https://viteplus.de
 ## Review Checklist
 
 - [ ] Run `vp install` after pulling remote changes and before getting started.
-- [ ] Run `vp check` and `vp test` to format, lint, type check and test changes.
-- [ ] Check if there are `vite.config.ts` tasks or `package.json` scripts necessary for validation, run via `vp run <script>`.
+- [ ] Match verification to the change. Markdown: content and typography gates. Code or layout: `vp check`, the focused test the change can break, and `vp build`. Tests moved: `vp test`. `worker/` moved: `vp run worker:typecheck` and `vp run worker:test`. After those pass, broaden only if something failed or the change grew. Do not add tests that restate a reversible copy edit.
+- [ ] Check if there are `vite.config.ts` tasks or `package.json` scripts necessary for the change, run via `vp run <script>`.
 - [ ] If setup, runtime, or package-manager behavior looks wrong, run `vp env doctor` and include its output when asking for help.
 
 <!--VITE PLUS END-->

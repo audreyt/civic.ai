@@ -17,17 +17,13 @@ next_action:
     text: "一：覺察力"
 ---
 
+<p class="cta-note">第一次來？先看<a href="/tw/ai-alignment-cannot-be-top-down/">臺灣如何回應 AI 詐騙廣告</a>。</p>
+
 <p class="fold-tag"><strong>治理應該是日常能力，不只是定期投票。</strong></p>
 
 <p class="fold-lede">仁工智慧，是會對所影響的人負責的人工智慧。與其打造一個強大的系統來治理所有人，不如打造許多小型系統，讓社群能夠擁有、檢查、修正、也能關閉它們。</p>
 
-<p class="fold-lede">這些在地守護者有一個名字——<strong>地神</strong>（Kami，Knowledge 知識、Artefact 工藝、Management 管理、Intelligence 智慧）：是地方的精靈，而非全能的統治者。</p>
-
-<div class="cta-row">
-<a class="cta-button cta-button--primary" href="/tw/manifesto/">閱讀計畫宣言</a>
-<a class="cta-button" href="/tw/kami/">架設 Kami</a>
-</div>
-<p class="cta-note">第一次來？先看<a href="/tw/ai-alignment-cannot-be-top-down/">臺灣如何回應 AI 詐騙廣告</a>——框架在真實世界中的應用。</p>
+<p class="fold-lede">這些在地守護者有一個名字——<a href="/tw/manifesto/">地神</a>（Kami：Knowledge 知識、Artefact 工藝、Management 管理、Intelligence 智慧）：是地方的精靈，而非全能的統治者。</p>
 
 <div class="overview-section">
 <div class="overview-frame" style="aspect-ratio: 1280 / 1781;">

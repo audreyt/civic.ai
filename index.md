@@ -19,17 +19,13 @@ next_action:
     arrow: "right"
 ---
 
+<p class="cta-note">New here? Start with <a href="/ai-alignment-cannot-be-top-down/">how Taiwan answered AI scam ads</a>.</p>
+
 <p class="fold-tag"><strong>Governance should feel like a daily capability, not just a periodic vote.</strong></p>
 
 <p class="fold-lede">Civic AI is artificial intelligence that answers to the people it affects. Instead of one powerful system built to govern everyone, the idea is to build many small ones that a community can own, inspect, correct, and switch off.</p>
 
-<p class="fold-lede">Each of these local stewards has a name — the <strong>Kami</strong> (Knowledge Artefact Management Intelligence): a spirit of place, not a universal governor.</p>
-
-<div class="cta-row">
-<a class="cta-button cta-button--primary" href="/manifesto/">Read the Manifesto</a>
-<a class="cta-button" href="/kami/">Set up Kami</a>
-</div>
-<p class="cta-note">New here? Start with <a href="/ai-alignment-cannot-be-top-down/">how Taiwan answered AI scam ads</a> — the framework in the real world.</p>
+<p class="fold-lede">Each of these local stewards has a name — the <a href="/kami/">Kami</a> (Knowledge Artefact Management Intelligence): a spirit of place, not a universal governor.</p>
 
 <div class="overview-section">
 <div class="overview-frame" style="aspect-ratio: 1280 / 1781;">
