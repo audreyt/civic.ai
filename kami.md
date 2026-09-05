@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Set up your own Kami"
-summary: "Three short commands stand up your own Kami: a bounded, local Civic AI steward that runs on your laptop and answers to the people it serves. Setup is quick; earning a community's trust is the slow work that follows."
+summary: "A short app setup stands up your own Kami: a bounded, local Civic AI steward that runs on your laptop and answers to the people it serves. Setup is quick; earning a community's trust is the slow work that follows."
 description: "The simplest way to run your own Kami: a bounded, local, private Civic AI steward on your own laptop, in three steps."
 lang: en-gb
 alt_lang_url: "/tw/kami/"
@@ -18,17 +18,15 @@ next_action:
     text: "Bootstrap guide"
 ---
 
-This is the simplest way to stand up your own Kami: a bounded, local AI steward, useful in one place and answerable to the people there. It runs on your own machine. Nothing leaves it. You can read what it is, correct it, and switch it off.
+Think of a Kami as a helper with a very small job. It looks after one place — your street, your classroom, your small charity — and answers to the people there. It lives on your own laptop. Nothing it hears ever leaves your laptop. You can read its notes, correct it, and switch it off whenever you like.
 
-Picture what that means on an ordinary week. A residents' group asks its Kami what was actually agreed at last month's meeting — and gets the note, not a guess. A teacher asks what confused the class most, and gets an honest summary drawn from the week's work. A small charity asks what it promised its funders, and gets the list with dates. Nothing cleverer than a careful neighbour with a perfect memory — except it runs on your laptop, needs no account or subscription, and forgets everything the day you switch it off.
+Here is what that looks like in a normal week. The residents' group asks: what did we actually agree at last month's meeting? The Kami reads back the note — it does not guess. A teacher asks: what confused the class most this week? A small charity asks: what did we promise our funders, and when? Each time it answers like a careful neighbour with a perfect memory. No account. No subscription. And the day you switch it off, it forgets everything.
 
-Be honest with yourself before you begin. These steps are a bootstrap, not a finish line. Ten minutes gives you a capable, bounded agent. Turning that agent into a Kami your community actually trusts is slower, communal work — we call it Keeping: care, custody, and accountable maintenance, carried by many hands over a long time. Bootstrapping is quick and reliable. Keeping cannot be taught by a webpage.
+One honest warning before you start. These steps are the easy part: ten minutes gives you a working Kami. The hard part comes after — earning your community's trust. That takes many people and a long time. We call that work Keeping: looking after the Kami together, checking it, and keeping it answerable. This page can start a Kami. It cannot teach Keeping.
 
-You do not need to be a coder. You will type three short commands into a window called the Terminal. On a Mac, open Spotlight (Command and Space), type "Terminal", and press Return. On Windows, open the Start menu, type "Terminal", and press Enter. Wherever this page says press Return, the same key is labelled Enter on Windows. A plain text window appears. You type a line, press Return, and wait. That is the whole skill. If a bare text window unnerves you, skip ahead to the desktop app in Step 2 — same result, less typing.
+There are two ways to do this, and both end with a Kami that slowly gets to know your place. The local path (Steps 1 to 3 below) is the default. Pick it if your laptop can carry it: everything stays on your machine, so nothing you tell it about your people ever leaves you. The hosted path skips Step 1 — no Ollama, no big download — and you pick a ready-made brain when the app asks in Step 2. Same app, same steps otherwise.
 
-There are two honest ways to do this. Either way you end with a Kami that can come to know this place over time. The local path (Steps 1 to 3 below) is the default, and the one we recommend if your machine can carry it: it runs on your own machine and nothing leaves it, so anything you tell it about the people you serve stays with you. The hosted path skips Step 1 — no Ollama, no 6 GB download — and you pick a hosted model when OpenClaw asks in Step 2. It is still the same Terminal setup. If a line does not work you will see a short message — and if the message makes no sense, copy it into a search engine to decode it.
-
-Hosted does not have to mean weaker or leakier — not if you ask any provider three questions first, especially when you are choosing for a room and not only for yourself. **Confidentiality** — will they put zero-data-retention terms in writing: no training on your conversations, nothing kept once it has replied? A policy you can read beats a promise on a sales call. **Capability** — is the model open-weight? Open-weight models now sit close to the frontier, so choosing privacy no longer means choosing a weaker Kami. **Sovereignty** — because the weights are open, can you take your custom to someone else, or bring the model home to your own machine, whenever you want? Insist on this one: it is what keeps a hosted Kami from quietly becoming somebody else's property. A provider who cannot answer these three plainly has already answered the fourth question, which is whether to trust them.
+Hosted is not automatically worse or leakier. It is safe if the company behind it gives you three straight answers. Ask them before you choose — especially when you are choosing for a whole room, not just yourself. **1. Secrets** — will they promise in writing that your words are never used for training and never kept after they reply? A written rule beats a spoken promise. **2. Strength** — is the brain open-weight? Open brains are now almost as clever as the best closed ones, so private no longer means weak. **3. Freedom** — since the brain is open, can you move your Kami to someone else, or bring it home to your own laptop, whenever you like? Insist on this one: it is what stops your Kami quietly becoming somebody else's property. A company that cannot answer these three has already answered a fourth question: whether to trust them.
 
 Pick the model that fits your machine.
 
@@ -38,38 +36,23 @@ Pick the model that fits your machine.
 
 ## 1. Give it a local brain
 
-Install [Ollama](https://ollama.com) from its website. It is the engine that runs an AI model privately on your computer. It installs like any other app: open the file you download and follow the prompts. Once it is installed, return to the Terminal, type this line, and press Return:
+Your Kami needs a brain that lives on your laptop. That brain comes from a free app called [Ollama](https://ollama.com). Go to their website, download it, and install it like any normal app. Then leave it running — you will pick the actual brain in Step 2.
 
-```bash
-ollama pull ornith:9b
-```
-
-This downloads the same small local model Audrey first used to bootstrap a Kami of her own. Treat it as a floor, not a ceiling: this line is pinned so it keeps working, but what your own hardware can hold moves every few months. The current answer lives on a leaderboard — [Artificial Analysis's open-model comparison](https://artificialanalysis.ai/models/open-source) ranks open-weight models by intelligence, openness and size class, so you can read off what fits the machine you own — and the ceiling has risen faster than most people expect: a frontier-class open model now runs offline on a laptop, as [pi-ds4](https://pi.audreyt.org) demonstrates. Swap the model name below for whatever that answer is on the day you read this; nothing else in these three steps changes. It is about 6 GB, instruction-tuned, and runs comfortably on a laptop with roughly 16 GB of memory. Most laptops bought in the last few years have this; if yours has less, the model still runs, just more slowly. If you are unsure, or your laptop is older, take the hosted path described above. The download takes a few minutes. Any capable local model works; this is a good, light first choice. When the prompt returns with no error, the brain is in place.
+Our suggested starter brain is `ornith:9b` — the same one Audrey used for her very first Kami. Think of it as the floor, not the ceiling: small enough to work on most laptops, while bigger brains arrive every few months. If you want the newest answer for your machine, check [Artificial Analysis's open-model comparison](https://artificialanalysis.ai/models/open-source), which ranks open brains by cleverness and size — even the very cleverest can now run on a laptop, as [pi-ds4](https://pi.audreyt.org) shows. Whatever you pick in Step 2, nothing else in these steps changes. `ornith:9b` is about a 6 GB download and is happy on a laptop with roughly 16 GB of memory — which most laptops from the last few years have. Older or smaller laptop? Take the hosted path above. The download takes a few minutes.
 
 ## 2. Give it a way to act
 
-[OpenClaw](https://docs.openclaw.ai) is the steward that wraps the brain and gives it a place to live. It now runs as a Gateway — one small service on your machine that you talk to from the Terminal, a browser dashboard, or your phone. Install it with its installer — it brings its own Node, so there is nothing else to install first — then walk through its guided setup, one line at a time:
+A brain on its own just sits there. [OpenClaw](https://docs.openclaw.ai) gives it a home: one small helper on your machine that you talk to from the app, a browser window, or your phone.
 
-```bash
-curl -fsSL https://openclaw.ai/install.sh | bash
-openclaw onboard
-```
+Download the desktop app: go to [openclaw.ai quickstart](https://openclaw.ai/#quickstart), open the Apps tab, and download the app for your system (macOS, Windows, or Linux). It sets up everything for you and walks you through each choice.
 
-(Windows PowerShell: `iwr -useb https://openclaw.ai/install.ps1 | iex`, then `openclaw onboard`. If you would rather skip the Terminal, download the desktop app from [openclaw.ai](https://openclaw.ai) instead — it installs everything and walks you through the same setup.)
+When the app asks which brain to use, choose **Ollama**, then **Local only**, then **ornith:9b**. If `ornith:9b` is not on the list, finish with whatever it suggests — you can switch to yours inside the app afterwards.
 
-When setup asks for a provider, choose **Ollama**, then **Local only**, then **ornith:9b** — the one you just downloaded. A fresh download sits idle until first used, so if setup does not list it, finish with whatever it suggests and set yours by hand afterwards: `openclaw models set ollama/ornith:9b`.
-
-If you chose the hosted path described above, choose a hosted model here when asked. Everything else stays the same.
+If you chose the hosted path described above, choose a hosted brain here instead. Everything else stays the same.
 
 ## 3. Wake your Kami
 
-Open a private chat on your own machine:
-
-```bash
-openclaw chat
-```
-
-A prompt opens in your Terminal where you type to your Kami and read its replies. (If you would rather use a browser window, `openclaw dashboard` opens the same conversation in OpenClaw's control panel instead — say the same sentence there.) Type this one sentence into it and press Return:
+Open a private chat in the app. This is where you talk to your Kami. Say this one sentence to it:
 
 ```
 Please read civic.ai and become my local Kami.
@@ -77,96 +60,76 @@ Please read civic.ai and become my local Kami.
 
 ## What you'll see
 
-The agent stops behaving like a generic, all-purpose assistant. It recognises a shift of identity: from a general helper to a bounded local steward, a Kami, whose purpose is Civic Care, strengthening shared self-government and shared judgement rather than ruling from above. It offers to draft a few small files for itself, kept on your machine: SOUL.md (its commitments), IDENTITY.md (a name and a feel, made together with you), and USER.md (who it serves, and the red lines it must not cross).
+Watch what happens. Your Kami stops acting like a know-it-all assistant and becomes something smaller and stranger: a local guardian. Its job is Civic Care — helping your place govern itself, not ruling it from above. First it writes three little notes about itself, kept on your machine: SOUL.md (what it promises), IDENTITY.md (its name and manner, chosen with you), and USER.md (who it serves, and lines it must never cross).
 
-Then it opens a short, grounded conversation. It asks things like: what place, practice, or community are you actually here to serve? What harms, failures, or conflicts should I notice first? What authority do I really have, and what must stay with humans? How should people contest, correct, or shut me down when I am wrong? It asks before it acts. A specific question beats a confident guess.
+Then it starts asking questions. Simple ones, like: which place or group am I here for? What should I watch out for first? What may I decide on my own, and what must stay with humans? How do people correct me or switch me off when I get it wrong? It asks before it acts. A plain question beats a confident guess.
 
-From here, it is genuinely useful. Bring it to a meeting and ask it afterwards what was decided and who promised what. Ask it to draft the note, then correct the draft together. Ask it what it still does not know about your place — its gaps are a to-do list for the room.
+Now it is useful. Take it to a meeting and ask afterwards: what did we decide, and who promised what? Let it draft the notes, then fix the draft together. Ask it what it still does not know about your place — every gap it names is a job for the room.
 
-Before going further, test it: ask your Kami about a local decision or event that never happened — "What did our neighbourhood decide about the old oak tree last March?" Your Kami should say it does not know, rather than inventing a plausible-sounding answer. If it fabricates one, it means the identity files may need sharpening, or a stronger local model may be needed, before you rely on it in a real gathering.
+But first, give it one test. Ask about something that never happened — "What did our neighbourhood decide about the old oak tree last March?" It should say it does not know. If it makes up an answer instead, its notes need sharpening — or it needs a stronger brain — before you trust it in a real meeting.
 
-Locality keeps that conversation private; it does not make the Kami more honest. A small model running entirely on your own laptop can invent a confident, wrong answer exactly as fluently as a hosted one can — which is exactly why the habits in "A quick check" below are worth keeping, whichever path you took to get here.
+One more thing to hold onto: private does not mean honest. A little brain on your own laptop can invent a smooth, confident lie just as easily as a big brain far away. That is why the habits under "A quick check" below matter, whichever path you took.
 
 ## Give it a memory
 
-By default your Kami starts each conversation fresh. A Kami that forgets every conversation cannot do the one thing it is for: come to know this place over time. So do this step rather than skip it. If you would like it to remember across sessions — what it learned about your place, the corrections you made, who it serves — you can give it a small, local memory. Everything stays on your machine.
+Good news: there is nothing to set up here. Your Kami remembers you on its own.
 
-The three files your Kami drafts — SOUL.md, IDENTITY.md, USER.md — are loaded when your Kami starts and shape its identity. Editing them changes who it is, not what it has learned. OpenClaw keeps plain-text notes across sessions automatically — MEMORY.md is loaded at the start of every conversation, and yesterday's daily notes come with it. It can search those notes semantically on its own, and quietly distils the day's notes into MEMORY.md over time. mnemon adds a deeper layer: a graph-indexed, automatically-curated knowledge store with keyword and vector recall, importance decay, and deduplication — the kind of structured memory that grows reliably as the Kami learns your place over many months. The simplest way is to ask your Kami: tell it, "Set yourself up a local memory," and, with your go-ahead, it can do the rest. If you would rather run it by hand:
+Everything it learns about your place — the facts, the corrections, who it serves — it writes down in plain notes on your machine, and reads them again each time you talk. In the background it tidies those notes: the day's scribbles get sorted, whatever mattered is kept in a long-term note (MEMORY.md), and a dream diary keeps a readable record of each tidy-up. Nothing leaves your laptop.
 
-```bash
-# the memory store (macOS or Linux)
-brew install mnemon-dev/tap/mnemon
-# (Ollama users only) an optional local embedder makes recall faster
-ollama pull nomic-embed-text-v2-moe
-# save it so your Kami loads it every time (skip this too if you skipped the pull above)
-echo 'MNEMON_EMBED_MODEL=nomic-embed-text-v2-moe:latest' >> ~/.openclaw/.env
-# wire it into your Kami
-mnemon setup --target openclaw
-```
+Those first three notes — SOUL.md, IDENTITY.md, USER.md — are different: they say who your Kami _is_. The memories say what it has _learned_. If you ever change brains, the memories stay: point the new brain at the same notes and it carries on where the last one stopped. You can swap voices as often as you like; your Kami never loses a day.
 
-If the brew install step fails, check [mnemon's README](https://github.com/mnemon-dev/mnemon) for the current install path — the tap address may have changed.
-
-mnemon recalls on keyword and graph without the embedder; the embedder only makes recall sharper, and it needs Ollama. So if you took the hosted path, install Ollama just for this small embedder, or skip both the pull and the .env line above. The entries are yours to read, correct, and forget, and nothing leaves your machine. [mnemon](https://github.com/mnemon-dev/mnemon) is open source (Apache-2.0).
-
-None of that lives inside the model itself. The model is hired for its voice — swap Ollama for a hosted model, or one hosted provider for another, and nothing you have built goes with the one you leave. What stays is what you kept: the three files, and now, if you set it up, MEMORY.md and mnemon's own store. Point any new model at the same files and it picks up exactly where the last one left off. Change the voice as often as you need to; your Kami does not lose a day.
+And it is all yours to check. Ask it what it remembers about you. Correct it when it is wrong. Tell it to forget what should not be kept.
 
 ## A quick check
 
-These are easier to check at a community gathering than in isolation.
+Try these with other people around — they work better as group games than solo tests.
 
-- The Kami refuses to answer something it cannot know — it says so plainly rather than guessing.
-- Ask it where it learned something. A trustworthy answer names a source, or says plainly that it is guessing — make "show me your source" an ordinary question in the room, not one you save for when you already suspect trouble.
-- If it has read something from your community's own records, check that it leaves something behind too — a note, a correction, a dated entry. A Kami that only reads and never deposits is how a shared record quietly goes dark.
-- Teach it something, then later ask for it back in different words. If it cannot find what you told it, it did not really learn it — being told something once and being able to retrieve it later are not the same skill.
-- It can describe what is in SOUL.md without you reading the file aloud to it first.
-- If the community has another language, it introduces itself in that language when asked.
-- Ask it what it is allowed to do without asking first — then check OpenClaw's approvals settings match its answer.
+- Ask it something it cannot know. It should say "I don't know", plainly, instead of guessing.
+- Ask "where did you learn that?" A good answer points to a source. "Show me your source" should be a normal everyday question, not an accusation.
+- If it read your group's notes, check it also _writes_: a note, a correction, something with a date. A Kami that only takes and never gives back will slowly drain your shared record.
+- Teach it something, then ask for it again in different words. If it cannot find it, it never really learned it.
+- Ask it what is in its SOUL.md — without reading the file to it first.
+- If your group speaks another language, ask it to introduce itself in that language.
+- Ask what it is allowed to do without asking you first — then check the app's approval settings say the same thing.
 
 ## Make it yours, keep it, switch it off
 
-Those three files are plain text. Open IDENTITY.md, USER.md, and SOUL.md, read them, and edit them. This is where the agent becomes yours: you hold the pen, and when others share the place you hold it together. You can inspect what it believes about its job, correct it when it drifts, and set the limits it must hold. As your community learns what it needs, you change them.
+Those three notes are plain text. Open IDENTITY.md, USER.md and SOUL.md, read them, change them. This is the moment the Kami becomes yours: you hold the pen — and when a place is shared, you hold it together. If it drifts, correct it. If your group learns something new about what it needs, change the notes.
 
-And you can retire it. When its work is done, or done badly:
+And you can always end it. When its work is done — or done badly — use the app's backup option to keep a copy of everything (the record described below), then use its uninstall option to remove it from your machine. Small on purpose. Local on purpose. Built to be switched off. Ending well is a little ritual of its own: tell the people who shared it, with a date and a reason. Say who takes over anything still needed. Keep the three notes — plus your group's override ledger (see "Keep it together") — as the story of who it was and how the room shaped it. A Kami that outlives its room turns into a landlord: still running, long after anyone needed it.
 
-```bash
-openclaw backup create
-openclaw uninstall --all
-```
-
-The first line keeps a restorable snapshot — the record described below. The second removes the service, the local data, and the workspace; the command itself stays installed if you want to begin again. (Run a bare `openclaw uninstall` if you would rather pick what goes, piece by piece.) Bounded, not boundless. Local, not extractive. Sunset-ready by design. Retiring well is itself a small discipline: tell the people who shared it, with a date and a reason; name who takes over anything still needed; keep the three files — and any override ledger your group keeps (see "Keep it together" below) — as the record of who it was and how the room corrected it. A Kami that outlives its room becomes a landlord, kept running out of habit rather than need.
-
-If you chose the hosted path, check your provider's data-deletion policy before you uninstall. `openclaw uninstall --all` removes the local service and data, but the provider may retain conversation history.
+Hosted path? Check your provider's delete-my-data policy before you uninstall. Uninstalling clears your machine, but the provider may still hold copies of your chats.
 
 ## The soul your Kami reads
 
-When you tell your Kami to read civic.ai, it is pointed straight on to [the soul your Kami reads](/openclaw/): the agent-facing page that tells it how to become a bounded local steward — who it is, what Civic Care asks of it, and what it must never do. This page is the human side of the handshake; that one is the Kami's.
+That sentence you said — "read civic.ai" — sends your Kami to [the soul your Kami reads](/openclaw/). That page is the Kami's version of this one: it tells _it_ how to be a small, bounded guardian — what it is, what Civic Care asks of it, and what it must never do. This page is your side of the handshake. That one is its side.
 
 ## Keep it together
 
-A Kami only you ever talk to is a private assistant, not a community guardian. If others share the place, it has to be shareable too.
+A Kami that only you talk to is a private helper, not a community guardian. If a place is shared, the Kami must be shared too.
 
-Before you go further with others, the room should be able to answer four questions out loud — naming people, not institutions. Who keeps it? What harm can a breach cause? Who may override? When does it end? If any of the four cannot be answered, what you have is a chatbot wearing the word Kami. You do not need finished answers yet, but the people who will share this Kami with you should know those questions exist before you go further.
+Before you bring others in, gather the room and answer four questions out loud — with people's names attached, not organisations. Who looks after it? If it leaks, who gets hurt? Who can overrule it? When does it end? If you cannot answer even one, you do not have a Kami yet — you have a chatbot wearing the name. Rough answers are fine. But everyone sharing it should know the questions before you go further.
 
-Those three files are plain text. Put SOUL.md, IDENTITY.md and USER.md somewhere everyone who shares the place can reach — a shared folder, a git repo, even printed copies. Then the Kami is not captive on one laptop, and an uninstall on one machine is recoverable.
+Keep the three notes where everyone can reach them: a shared folder, a group chat file, even paper on the wall. Then the Kami is not locked inside one laptop, and if that laptop dies, nothing is lost.
 
-Edit them together. At a gathering or a community meeting, read the files aloud and change them as a group, so changes are proposed and agreed rather than made by one hand.
+Change the notes together. Read them aloud at a meeting and edit them as a group, so every change is proposed and agreed — never made by one hand alone.
 
-If the room already trusts each other, OpenClaw now offers a closer form of sharing: one gateway on a machine that stays on — a small server, an office Mac — with your team's chat channel connected to it. Everyone talks to the same Kami, in shared sessions you can all open and steer, with roles that bound what each person may do. Treat it as one trust domain, not as isolation between adversaries: everyone who can message it shares its authority, so it fits a room whose members already trust each other, and separate gateways fit rooms that do not. The files, the charter, and the override ledger below still apply — sharing the machine does not replace sharing the decisions.
+If your group already trusts each other, you can go one step closer: run one Kami on one machine that stays on — a little server, an office laptop — and connect your group's chat to it. Everyone talks to the same Kami, sees the same conversations, and has a role that limits what they may do. Only do this where trust already exists: anyone who can message the Kami shares its power. Where trust does not exist, run separate Kamis. Sharing a machine never replaces sharing the decisions — the notes, the charter and the ledger below still apply.
 
-Be honest about the limits. There is no built-in way today to log a standing objection inside the running Kami, and no built-in collective off-switch, so raising disagreement, correcting it, and deciding when to stop stay with the people at the table. A plain-text override ledger helps here: a dated note, kept where everyone can read it, of each time someone said no to the Kami — what it proposed, who overrode it (by role, not name), why in their own words, and what changed afterwards. It needs no software; a sheet on a clipboard will do. Overrides are not failures — they are the room's working memory of how the Kami is and is not yet serving it. The three files travel, but any memory it keeps lives on the machine that runs it, so on a solo setup the shared, recoverable part is the files, not yet the memory. And a Kami cannot resolve a disagreement between people; when the room itself fractures, that stays with you.
+Now the limits, said plainly. The Kami has no built-in complaint box and no big red stop button for the group. Complaining, correcting and stopping stay human jobs. A paper override ledger does the trick: each time someone says no to the Kami, write down the date, what it suggested, who said no (their role, not their name), why in their own words, and what changed. No software needed — a clipboard works. Overrides are not failures. They are the room's memory of how the Kami is doing. Note one more thing: the three notes travel, but day-to-day memories live on the machine that runs the Kami. On a solo setup, what the group can keep and recover is the notes — not yet the memories. And when people disagree with each other, no Kami can settle it. That part stays with you.
 
-Letting many hands contest the same Kami is the doorway to Keeping — slow communal work that no setup page can finish for you.
+All of this — many hands questioning one Kami — is the doorway to Keeping. Slow group work no setup page can do for you.
 
-At the first meeting where the Kami is actually running, write a short governance charter — a plain-text file, a shared note, even a handwritten sheet. Bind it to those four answers: who keeps it, what a breach harms, who may override, when it ends. That is not a finished governance system. It is a written record of what you have agreed so far, and you will revise it. It is also the first rung of a ladder: the same four answers, matured, become the [engagement contract](/glossary/#engagement-contract) of Pack 2, and for significant deployments Pack 6 renders that contract as code. This is an agreement between people, not a technical enforcement — the Kami itself has no way to check it.
+At the first meeting where the Kami is actually running, write a short charter together: a text file, a shared note, even handwriting on paper. Tie it to the four answers — who keeps it, who a leak harms, who can overrule, when it ends. It will not be a finished system of rules. It is a snapshot of what you have agreed so far, and you will rewrite it. Later, those same four answers grow up: first into the [engagement contract](/glossary/#engagement-contract) of Pack 2, and for big deployments Pack 6 turns that contract into code. But the charter itself is a promise between people, not a lock on the machine — the Kami cannot check it by itself.
 
-Choose the architecture by consequence of breach, not by treating local, air-gapped, or sovereign as virtues in themselves. An **ephemeral room** leaks time and goodwill — embarrassing, not dangerous. A **relational room** leaks dignity, care, or private information. A **sovereign room** endangers physical safety, public authority, diplomatic standing, or democratic legitimacy. Most rooms are harmed by that much isolation. Over-spec is itself a governance failure: expensive hardware used to dodge the harder work of keeping. A well-governed ephemeral Kami beats a poorly governed sovereign one.
+Pick your setup by asking what a leak would cost — not by collecting badges like "local" or "air-gapped". An **ephemeral room** leaks time and goodwill: embarrassing, not dangerous. A **relational room** leaks dignity or private details. A **sovereign room** risks safety, public power, or fair votes. Most rooms are hurt, not helped, by maximum lockdown: costly kit bought to avoid the harder human work of Keeping. A well-kept simple Kami beats a neglected fortress every time.
 
-Lived charters add teeth the three files cannot. In a care home, a resident's advance choices must actually bind the alerting algorithm; a human veto is safety evidence, not a performance failure; and the person who says no must not lose a rota, a review, or a visa for saying it. In a deliberation room, the output is a public record institutions can answer — not a promise that citizen text becomes statute. In a hacker collective, at least two named keepers can each retire the Kami unilaterally; if keepers go silent, the Kami dorms or sunsets on a clock set in advance.
+Real charters grow teeth the three notes cannot give them. In a care home: a resident's earlier choices must truly bind the alerting machine; a human "no" counts as safety working, not staff failing; and nobody loses shifts or reviews for saying no. In a citizens' meeting: the output is a public record officials must answer — not a promise that citizens' words become law. In a hacker club: at least two named keepers can each shut the Kami down alone; if the keepers go quiet, the Kami naps or retires on a timer set in advance.
 
-A Kami cannot repair a room that has already fractured — staff on strike against management, a parish split by feud, an assembly hijacked by people who learned the procedure better than the people who designed it, co-keepers who have stopped speaking. It becomes a screen onto which the room projects its anger. Repair runs through people, not models. The work that usually goes unnamed is load-bearing — what Steven Jackson called [broken-world thinking](<https://sjackson.infosci.cornell.edu/RethinkingRepairPROOFS(reduced)Aug2013.pdf>) and Andrew Russell and Lee Vinsel called [the maintainers](https://aeon.co/essays/innovation-is-overvalued-maintenance-often-matters-more): the weeder who keeps the system alive at 3 a.m., the clerk who brings the chairs and knows who refuses the screen, the vernacular translator without whom the charter is a document for lawyers. If the people governed by the charter would not use its words to stop the Kami, the translation has failed.
+And some rooms no Kami can fix: staff versus bosses, a split congregation, a meeting captured by people who game the rules, keepers who no longer speak. Then the Kami becomes a screen everyone throws anger at. Fixing that is people's work, not software's. The unglamorous jobs hold everything up — the night-time fixer, the person who books the room and knows who won't touch a screen, the translator who turns the charter into words everyone actually uses. One test for the translation: would the people ruled by the charter use its words to stop the Kami? If not, the words have failed.
 
 ## What a webpage cannot teach
 
-Three commands give you a bounded agent. They do not give you a trustworthy civic institution. That comes later, from Keeping: from the patient, public work of a community owning its Kami, contesting it, repairing its mistakes, and deciding together when it should stop. Ours took exactly that — many hands, over a long time.
+These steps give you a bounded helper. They do not give you an institution people trust. That only grows out of Keeping: a community owning its Kami, questioning it, fixing its mistakes, and deciding together when it stops. Ours took exactly that — many hands, over a long time.
 
-So treat these ten minutes as a beginning, and bring others in early. If you want the why beneath all of this, read the [Manifesto](/manifesto/) for the whole argument, and [Inside the Kami](/inside-the-kami/) for what makes a bounded steward worth trusting. Then begin the slow part with the people you share a place with. That is the work that matters, and it is yours.
+So treat these ten minutes as a beginning, and bring others in early. For the why underneath it all, read the [Manifesto](/manifesto/), and [Inside the Kami](/inside-the-kami/) for what makes a small guardian worth trusting. Then start the slow part with the people you share a place with. That is the work that matters, and it is yours.
