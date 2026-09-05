@@ -8,7 +8,7 @@ import type { ComicsOverlayFrame } from "../src/lib/site";
 // body). That means a handful of branches inside those renderers — the
 // `shapePolys` fallback defaults, an italic overlay frame, an overlay layer
 // with zero frames, a filtered-out empty-text frame, and an optional
-// OpenClaw guide section/field — are only reachable with fixture data the
+// OpenClaw guide field — are only reachable with fixture data the
 // real `_data/*.json` content never happens to contain. `../src/lib/site`
 // is mocked here with a minimal, self-consistent fixture that deliberately
 // exercises those paths; every other test in this file benefits from the
@@ -189,10 +189,6 @@ const siteFixture = vi.hoisted(() => {
                     mapping: [
                         { file: "BOOTSTRAP.md", text: "Mapping text EN." },
                     ],
-                    // Missing `memoryHeading` exercises the false branch of
-                    // the `if (guide.memoryHeading)` guard.
-                    memoryHeading: undefined,
-                    memoryIntro: undefined,
                     closing: "Closing EN.",
                 },
                 tw: {
@@ -217,8 +213,6 @@ const siteFixture = vi.hoisted(() => {
                     mappingHeading: "OpenClaw 對應",
                     mappingIntro: "對應說明。",
                     mapping: [{ file: "BOOTSTRAP.md", text: "對應文字。" }],
-                    memoryHeading: "記憶",
-                    memoryIntro: "記憶說明。",
                     closing: "結語。",
                 },
             },

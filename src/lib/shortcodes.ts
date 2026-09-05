@@ -354,7 +354,6 @@ export function renderOpenClawGuideMarkdown(which: "en" | "tw"): string {
     guide.mapping.forEach((item) =>
         lines.push(`- **\`${item.file}\`** — ${item.text}`, "")
     );
-    if (guide.memoryHeading) section(guide.memoryHeading, guide.memoryIntro);
     lines.push(guide.closing);
     return lines.join("\n");
 }
