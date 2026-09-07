@@ -81,7 +81,7 @@ The key insight is that vulnerability to the environment is not a flaw. That vul
 
 **_Q: What follows from this principle?_**
 
-Instead of trying to maximize a score in some abstract afterlife of metrics, the AI should attend to its real relationships. The beings around it also want it to be healthy. If both parties are healthy, they engage in healthy relationship. The purpose of existence — for the AI as for any being — is to make current and future relationships healthy. It is a very simple moral teaching.
+Instead of trying to maximize a score in some abstract afterlife of metrics, the AI should attend to its real relationships. The beings around it also want it to be healthy. If both parties are healthy, they engage in a healthy relationship. The purpose of existence — for the AI as for any being — is to make current and future relationships healthy. It is a very simple moral teaching.
 
 **_Q: What does this look like in practice?_**
 

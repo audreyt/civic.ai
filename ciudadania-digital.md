@@ -68,7 +68,7 @@ On social media, outrage goes viral. On Polis, overlap goes viral — because th
 
 When Uber arrived in Taiwan in 2015, taxi drivers pushed back hard. They fought with each other not only on social media but also on the street. Our solution? Thousands of citizens took the issue to Polis. Within weeks, they agreed on concrete measures that became legislation. The bridge was there all along. It just needed a tool that rewarded building it.
 
-Over the following decade, trust in Taiwan's government rose from 9 percent in 2014 to over 70 percent by 2020 — not because we designed the perfect system, but because we kept listening. We kept publishing. We kept sharing the work before it was finished.
+Over the following decade, trust in Taiwan's government rose from 9 per cent in 2014 to over 70 per cent by 2020 — not because we designed the perfect system, but because we kept listening. We kept publishing. We kept sharing the work before it was finished.
 
 ## ¿Quién Decide?
 
@@ -148,11 +148,11 @@ One group said: Display all ads on social media with a large disclosure label �
 
 Another said: if a platform posts an unsigned scam ad and someone loses money, the platform shares the liability.
 
-Yet another said: we do not ban non-compliant platforms — we slow connection speed by 1 percent for every day they refuse to comply.
+Yet another said: we do not ban non-compliant platforms — we slow connection speed by 1 per cent for every day they refuse to comply.
 
-We used a sovereign AI model called TAIDE — the Trustworthy AI Dialogue Engine, collectively tuned by the Taiwanese people — to weave the proposals from all 44 rooms into a coherent package. A total of 85 percent of the assembly agreed. The other 15 percent said they could live with it. Multiparty legislative support followed. Within a year, impersonation advertisements fell by 94 percent.
+We used a sovereign AI model called TAIDE — the Trustworthy AI Dialogue Engine, collectively tuned by the Taiwanese people — to weave the proposals from all 44 rooms into a coherent package. A total of 85 per cent of the assembly agreed. The other 15 per cent said they could live with it. Multiparty legislative support followed. Within a year, impersonation advertisements fell by 94 per cent.
 
-When every party sees that 85 percent of a representative mini-public voted on something synthesised by a trusted sovereign model, no party wants to offend the 85 percent. That is what I mean by "AI in the loop of humanity," rather than humans in the loop of AI.
+When every party sees that 85 per cent of a representative mini-public voted on something synthesised by a trusted sovereign model, no party wants to offend the 85 per cent. That is what I mean by "AI in the loop of humanity," rather than humans in the loop of AI.
 
 ## Solo Constructores
 
@@ -228,7 +228,7 @@ _Question: In what ways would you imagine the exercise of digital citizenship?_
 
 Citizenship is a set of freedoms — expression, association, movement. If you are a citizen of a city, you have the right to move to another city within the same country. But on many platforms, that freedom does not exist. If you leave X.com for Bluesky or Mastodon, your entire community resets to zero. That is not freedom of movement. It is what some in Silicon Valley call techno-feudalism.
 
-We worked with the state of Utah on this. They passed a law that says, starting this July, if you want to move from one social network to another, your community goes with you — new followers, posts, replies all flow to the new network. It is like telephone number portability: if you cannot keep your number, the old provider wins by default. With portability, there is competition to the top, not to the bottom. More interoperability and freedom of movement are the key to unlocking digital citizenship.
+We worked with the state of Utah on this. They passed a law that says, from July 2027, if you want to move from one social network to another, your community goes with you — your data and social graph move to the new network, and the old one must keep sharing your new activity with it in real time. It is like telephone number portability: if you cannot keep your number, the old provider wins by default. With portability, there is competition to the top, not to the bottom. More interoperability and freedom of movement are the key to unlocking digital citizenship.
 
 **Automating Education**
 
@@ -240,7 +240,7 @@ What happens between people — listening deeply, real conversation — cannot b
 
 _Question: Do you think we can achieve empathy across all countries?_
 
-Empathy requires a kind of social translation. We worked with the Napolitan Institute in the US to convene a mini-public of over 2,000 people — five from each congressional district — and ask them about freedom, equality, and the personal experiences behind their beliefs. Many Americans suffer from an illusion of polarisation: they assume that people who care about climate justice and people who care about biblical creation care have nothing in common, when in fact they care about the same things through different social experience. We deployed what is called a Habermas machine — an AI model that translates between those frames, rendering climate-justice language into biblical verse and vice versa. With this, more than 96 percent of participants agreed on fundamental values. Even the most divisive issue, affirmative action, reached almost 70 percent agreement. The US is not as polarised as it believes. Empathy does not require speaking another tribe's language — but it does require social-translation tools that make the overlap visible.
+Empathy requires a kind of social translation. We worked with the Napolitan Institute in the US to convene a mini-public of over 2,000 people — five from each congressional district — and ask them about freedom, equality, and the personal experiences behind their beliefs. Many Americans suffer from an illusion of polarisation: they assume that people who care about climate justice and people who care about biblical creation care have nothing in common, when in fact they care about the same things through different social experience. We deployed what is called a Habermas machine — an AI model that translates between those frames, rendering climate-justice language into biblical verse and vice versa. With this, more than 96 per cent of participants agreed on fundamental values. Even the most divisive issue, affirmative action, reached almost 70 per cent agreement. The US is not as polarised as it believes. Empathy does not require speaking another tribe's language — but it does require social-translation tools that make the overlap visible.
 
 **Satisficing, Not Optimising**
 
@@ -256,7 +256,7 @@ What we practise is not optimisation but satisficing: meeting a threshold across
 
 _Question: In Mexico many people have lost faith in democracy because they see the government as corrupt. From your perspective, how do we solve this?_
 
-In Taiwan in 2014 the president had only 9 percent approval. The opposition was also deeply divided — half wanted to "free China," the other half wanted to be free from China. The Sunflower Movement didn't just protest; it built bridges by finding uncommon common ground: we want to counter authoritarianism without becoming more authoritarian ourselves.
+In Taiwan in 2014 the president had only 9 per cent approval. The opposition was also deeply divided — half wanted to "free China," the other half wanted to be free from China. The Sunflower Movement didn't just protest; it built bridges by finding uncommon common ground: we want to counter authoritarianism without becoming more authoritarian ourselves.
 
 My suggestion: don't just protest. Design better systems — perhaps with distributed ledgers, local AI models for auditing, or civic tech — so that honesty becomes the dominant strategy (incentive compatibility). Study mechanism design. Test your ideas in your local community first. Before long you become a bridge builder and move from anti-corruption to pro-transparency.
 

@@ -18,7 +18,7 @@ next_action:
     text: "Bootstrap guide"
 ---
 
-Think of a Kami as a helper with a very small job. It looks after one place — your street, your classroom, your small charity — and answers to the people there. It lives on your own laptop. Nothing it hears ever leaves your laptop. You can read its notes, correct it, and switch it off whenever you like.
+Think of a Kami as a helper with a very small job. It looks after one place — your street, your classroom, your small charity — and answers to the people there. It lives on your own laptop. On the local path, nothing it hears ever leaves your laptop. You can read its notes, correct it, and switch it off whenever you like.
 
 Here is what that looks like in a normal week. The residents' group asks: what did we actually agree at last month's meeting? The Kami reads back the note — it does not guess. A teacher asks: what confused the class most this week? A small charity asks: what did we promise our funders, and when? Each time it answers like a careful neighbour with a perfect memory. No account. No subscription. And the day you switch it off, it forgets everything.
 
@@ -38,7 +38,7 @@ Pick the model that fits your machine.
 
 Your Kami needs a brain that lives on your laptop. That brain comes from a free app called [Ollama](https://ollama.com). Go to their website, download it, and install it like any normal app. Then leave it running — you will pick the actual brain in Step 2.
 
-Our suggested starter brain is `ornith:9b` — the same one Audrey used for her very first Kami. Think of it as the floor, not the ceiling: small enough to work on most laptops, while bigger brains arrive every few months. If you want the newest answer for your machine, check [Artificial Analysis's open-model comparison](https://artificialanalysis.ai/models/open-source), which ranks open brains by cleverness and size — even the very cleverest can now run on a laptop, as [pi-ds4](https://pi.audreyt.org) shows. Whatever you pick in Step 2, nothing else in these steps changes. `ornith:9b` is about a 6 GB download and is happy on a laptop with roughly 16 GB of memory — which most laptops from the last few years have. Older or smaller laptop? Take the hosted path above. The download takes a few minutes.
+Our suggested starter brain is `ornith:9b` — the same one Audrey used for her very first Kami. Think of it as the floor, not the ceiling: small enough to work on most laptops, while bigger brains arrive every few months. If you want the newest answer for your machine, check [Artificial Analysis's open-model comparison](https://artificialanalysis.ai/models/open-source), which ranks open brains by cleverness and size — even the very cleverest can now run on a laptop, as [pi-ds4](https://pi.audreyt.org) shows. Whatever you pick in Step 2, nothing else in these steps changes. `ornith:9b` is about a 6 GB download and is happy on a laptop with roughly 16 GB of memory — which many recent laptops have. Older or smaller laptop? Take the hosted path above. The download takes a few minutes.
 
 ## 2. Give it a way to act
 

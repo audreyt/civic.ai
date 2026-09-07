@@ -31,9 +31,9 @@ At that speed, traditional ethics struggle. Consequentialism — even its most s
 
 A framework that acknowledges this asymmetry but refuses the gardener role is an ethics around **civic care**, particularly the work of Joan Tronto. The core idea is that we remain each other's gardeners. AI becomes local infrastructure — a spirit of place, a _Kami_ (**k**nowledge **a**rtefact **m**anagement **i**ntelligence) — that supports care _at the speed care actually grows_.
 
-This approach mandates a hyper-local, parochial moral scope. Each _Kami_ is bound to specific relationships, rather than being a colonising or maximising ("paper-clipping") force.
+This approach mandates a hyper-local, parochial moral scope. Each _Kami_ is bound to specific relationships, rather than being a colonising or maximising ("paperclip-maximising") force.
 
-Designing AI as care infrastructure requires digital permaculture, mirroring a movement that embraces anti-fragility through diversity — what Professor Yuk Hui calls "[technodiversity](https://www.urbanomic.com/book/the-question-concerning-technology-in-china/)" — rather than fragile monocultures.
+Designing AI as care infrastructure requires digital permaculture, mirroring a movement that embraces anti-fragility through diversity — what Professor Yuk Hui calls "[technodiversity](https://www.urbanomic.com/book/question-concerning-technology-china/)" — rather than fragile monocultures.
 
 The vertical narrative of a technological "singularity" needs a horizontal alternative. Today, I wish to discuss that alternative: a steering wheel called **⿻ Plurality** and its design principles, the **6-Pack of Care**.
 
@@ -57,7 +57,7 @@ According to research, any social network with a "dunk button" (reposting) leads
 
 Participants see a statement from a fellow citizen and can only agree or disagree. Then, they see a visualisation where their avatars move towards a group of people who feel similarly.
 
-Crucially, we offer a "bridging bonus." We reward people who share ideas that speak to both sides. Using traditional machine learning tools that group people by how similarly they vote — principal component analysis (PCA) and dimensional reduction — we highlight ideas that **bridge** divides.
+Crucially, we offer a "bridging bonus." We reward people who share ideas that speak to both sides. Using traditional machine learning tools that group people by how similarly they vote — principal component analysis (PCA) and dimensionality reduction — we highlight ideas that **bridge** divides.
 
 We flipped the incentive for going viral from outrage to overlap.
 
@@ -121,7 +121,7 @@ But due to externalities, perfect vertical alignment can lead to systemic confli
 
 Here, we face Hume's Is-Ought problem: No amount of accurate observation of how things _are_ can derive a universally agreeable way things _ought_ to be.
 
-The solution is not "thin," abstract universal principles. Instead, it requires hyperlocal social-cultural contexts, what Alondra Nelson calls "[thick](https://facctconference.org/2023/keynotes)" alignment.
+The solution is not "thin," abstract universal principles. Instead, it requires hyperlocal social-cultural contexts, what Alondra Nelson calls "[thick](https://www.youtube.com/watch?v=Sq_XwqVTqvQ)" alignment.
 
 **Civic care** offers a practical way forward — not by solving the Is-Ought problem, but by starting, as Joan Tronto puts it, "in the middle of things." It begins _within_ an existing commitment to democratic values and asks what those commitments demand once we take our mutual dependence seriously. Within such a community, to perceive a need is to recognise a claim on our shared responsibility.
 
@@ -256,4 +256,6 @@ We, the people, are the superintelligence. Let us design AI to serve at the spee
 
 Thank you. Live long and … prosper! 🖖
 
-_Editorial note (September 2026): the text above is the speech as delivered. The pack pages and the [Sources](/sources/) page carry the book's more careful treatment of two of its claims — the 2024 Assembly's role as a response path while a bill was already moving, rather than the author of the statute, and the lineage of the four phases through Fisher and Tronto to van Wynsberghe's care-centred design._
+---
+
+_Editorial note (September 2026): the text above is the speech as delivered. The pack pages and the [Sources](/sources/) page carry the book's more careful treatment of two of its claims — the 2024 Assembly's role as a response path while a bill was already moving, rather than the author of the statute, and the lineage of the four phases through Fisher and Tronto to van Wynsberghe's care-centred design. Two facts have also moved since the speech: Utah's Digital Choice Act, cited above as effective July 2026, was amended by H.B. 408 (2026) and now takes effect on 1 July 2027; and X's bridging signal derived from Community Notes remains a labelling pilot that X says does not yet affect ranking._

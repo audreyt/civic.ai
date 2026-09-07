@@ -1,6 +1,6 @@
 # Review-set definition
 
-`bun run en` and `bun run tw` copy the English and Traditional-Mandarin page
+`vp run en` and `vp run tw` copy the English and Traditional-Mandarin page
 sets to the clipboard (`pbcopy`) for translation review. The set needs no
 hand-maintained **include** list — and it does have a small, deliberate
 **exclude** list below for pages that are paired (so they exist in both
@@ -14,11 +14,11 @@ By en↔tw pairing, matching the repo's own invariant (see `README.md` →
 > Every English page `foo.md` has a Traditional Mandarin twin `tw-foo.md`
 > served at `/tw/foo/`. Keep them in parity.
 
-- `bun run en` cats every `foo.md` whose `tw-foo.md` twin also exists, minus
+- `vp run en` cats every `foo.md` whose `tw-foo.md` twin also exists, minus
   the excludes below.
-- `bun run tw` cats the matching `tw-foo.md` files, in the same (alphabetical)
+- `vp run tw` cats the matching `tw-foo.md` files, in the same (alphabetical)
   order, minus the same excludes.
-- Repo metadata — `README.md`, `CLAUDE.md`, `AGENTS.md`, `DESIGN.md` — is held
+- Repo metadata — `README.md`, `AGENTS.md`, `DESIGN.md` — is held
   out by name in `scripts/review-set.mjs`: none has a `tw-` twin by design, so
   they're excluded from parity checking too.
 - Adding a page means adding both `foo.md` and `tw-foo.md`; both runs pick it
@@ -30,13 +30,13 @@ One base name per line (the English filename, e.g. `comics.md`, **not** the
 `tw-` twin). A single entry excludes both the English page and its Mandarin
 twin, so the list stays one-per-page. `#` starts a comment. Update this list
 when a paired page clearly shouldn't appear on a translator's clipboard
-(image galleries, Liquid-templated glossaries, structured-data indexes). When
+(image galleries, generated glossaries, structured-data indexes). When
 in doubt, leave it in and let the translator skip it.
 
 ```exclude
 # Image gallery — its source is picture layout, not prose to review:
 comics.md
-# Liquid-templated definition list — raw source is a {% for %} loop, not text:
+# Generated definition list — raw source is an `astro:glossary-list` marker, not prose:
 glossary.md
 ```
 
@@ -51,10 +51,11 @@ worth a judgment call:
 ## Parity check
 
 Any page present in one language but not the other is an **orphan** and a
-parity violation. `bun run en`/`bun run tw` print a `PARITY VIOLATION`
+parity violation. `vp run en`/`vp run tw` print a `PARITY VIOLATION`
 warning to stderr naming each orphan and its missing twin. The orphaned page
 is held out of the clipboard until its twin lands. Fix the violation by
-adding the missing twin — not by editing any list here.
+adding the missing twin — not by editing any list here. Known intentional
+orphan: `ja-comics.md` (Japanese comics gallery) has no `tw-` twin by design.
 
 A second warning, `exclude entry "X" is not a paired content page`, fires if
 you list a file here that doesn't exist (e.g. after a rename); remove the

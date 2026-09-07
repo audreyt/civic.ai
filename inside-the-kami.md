@@ -29,7 +29,7 @@ The 6-Pack describes the governance around a Civic AI. This essay asks a narrowe
 The 6-Pack is deliberately technology-agnostic. Its governance should
 outlast any one model family. But technology-agnostic is not
 technology-indifferent. A deceptive model turns oversight into permanent
-combat. A general-purpose optimiser strains every boundary — and a system built to treat the world as a fixed, external source of feedback is, on the argument of [Solipsistic Superintelligence is Unlikely to be Cooperative](https://arxiv.org/abs/2606.03237), unlikely to cooperate with anyone once deployed. An opaque
+combat. A general-purpose optimiser strains every boundary — and a system built to treat the world as a fixed, external source of feedback is, on the argument in [Solipsistic Superintelligence is Unlikely to be Cooperative](https://arxiv.org/abs/2606.03237), unlikely to cooperate with anyone once deployed. An opaque
 system makes Pack 3 impossible to verify.
 
 Two recent ML programmes — Yoshua Bengio's [Scientist AI](https://lawzero.org/en)

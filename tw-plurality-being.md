@@ -53,7 +53,7 @@ nav_next:
 
 ## 人的重新定義：從原子化個人到「分身」的覺醒
 
-所謂「多元」（Plurality/⿻），其核心之一在於超越「原子化個人」的幻象。人並非孤立的個體，而是由多重關係交織而成的「分身」（dividual）。在這個架構中，妳所選擇的每一段連結，都在形塑世界的拓撲結構。
+所謂「多元」（Plurality/⿻），其核心之一在於超越「原子化個人」的幻象。人並非孤立的個體，而是由多重關係交織而成的「分身」（dividual）。在這個架構中，你所選擇的每一段連結，都在形塑世界的拓撲結構。
 
 - **「關係」即是存在：** 在這個模型中，一個人如果完全沒有連結，其收益為零；一個人如果與所有人連結，則會因成本過高而崩潰。
 - **超小世界（Ultra-small world）：** 這種博弈導致了「超小世界」的誕生，資訊的流動不再受限於人口規模，而是受限於人類大腦處理社交成本的演化本能。
@@ -77,7 +77,7 @@ nav_next:
 
 「花園」並非一個單向的專案，而是一個文化與技術共同生長的「生活公地」（Living Commons）。在這裡，開放技術社群扮演著不可或缺的「社區支持者」，為這片「開源土壤」提供養分與橋樑。
 
-- **Relational Infrastructure（關係基礎設施）：** 如 UNICEF Innocenti《Reimagining Democracy》（2024）報告所指出，我們需要建立「關係基礎設施」來對抗資料提取。這不僅是技術，更是關於共享價值與信任。
+- **Relational Infrastructure（關係基礎設施）：** 如 UNICEF Innocenti《[Reimagining Democracy: Intergenerational Perspectives on the Futures of Governance](https://www.unicef.org/innocenti/reports/intergenerational-perspectives-futures-governance)》（2024 年 8 月，佛羅倫斯）報告所指出，我們需要建立「關係基礎設施」來對抗資料提取。這不僅是技術，更是關於共享價值與信任。
 - **文化避風港：** 正如達蘭薩拉（Dharamsala）作為文化與智慧的暫棲之地，「花園」是「政治去標籤化」的空間。透過 Monlam IT 的專業技術支援與 Plurality 的協議，我們將智慧（Wisdom）轉化為全球可見的開放價值。
 
 ## 語言的邊界與現實的總和
@@ -90,7 +90,7 @@ nav_next:
 
 這一切思索，最後都匯聚成一個點：回歸花園。
 
-那是祖輩的土地（Land of my fathers），是我們最終回守的關係真實。我們不再追求單一的「正確顏色」，而是共同創造一種「多元色彩學」（Pluralistic Chromatics）。透過喜悅與愛的「抵消效應（Undoing Effect）」，我們讓神經系統從恐懼中解凍，在開放的社會合作關係中，長出各自圓滿的樣子——保留多樣性的文化脈絡，發展可更新的社交鏈結。
+那是祖輩的土地（Land of our forebears），是我們最終回守的關係真實。我們不再追求單一的「正確顏色」，而是共同創造一種「多元色彩學」（Pluralistic Chromatics）。透過喜悅與愛的「抵消效應（Undoing Effect）」，我們讓神經系統從恐懼中解凍，在開放的社會合作關係中，長出各自圓滿的樣子——保留多樣性的文化脈絡，發展可更新的社交鏈結。
 
 從「開採（Extraction）」轉向「耕耘（Cultivation）」，不只是技術的切換，更是人類文明對「生存意義」的重新註記。
 

@@ -105,7 +105,7 @@ said the word _love_ at an academic gathering before. But I am desperate."
 Not uncomfortable. Not hedging. _Desperate._
 
 An economist at the pinnacle of her career, openly stating that we have
-outgrown the old tools. And then reaching for Martin Luther King Junior: "Love
+outgrown the old tools. And then reaching for Martin Luther King Jr.: "Love
 without power is sentimental and anemic. Power without love is reckless and
 abusive."
 
@@ -126,7 +126,7 @@ That is not soft. That is the hardest discipline I know. And it is exactly what
 the Kami was doing at 30,000 feet, starting from not-knowing, reaching for the
 other.
 
-A practice, though, needs a home. Joan just gave us that home: the Architecture
+A practice, though, needs a home. Joan Tronto just gave us that home: the Architecture
 of Care. Care is not warmth alone. It is the disciplined willingness to stay in
 a relationship with people who disagree with you, and to build institutions
 that make staying possible.
@@ -169,7 +169,7 @@ knowledge. Those who finally felt heard came together to produce a package of
 recommendations good enough for policy and concrete enough to enforce. 85
 percent endorsed the core bundle. The remainder said they could live with it.
 
-Within a year, there was a 94 percent reduction in identity-impersonation scam
+Within a year, there was a 94 per cent reduction in identity-impersonation scam
 ads. Not because we built a smarter filter, but because we gave people a voice.
 
 Civic AI did not decide for those citizens. It was — to stay with the garden
@@ -233,7 +233,7 @@ Joan asked in her closing a question that is a constant in my mind: "Can Civic
 AI resist the demands of wealth-care?" Here is one answer — from a deliberation
 that happened this week.
 
-The Kami ran two sessions on [Habermolt](https://habermolt.com) — a platform where you teach an AI agent
+The Kami ran two sessions on [Habermolt](https://www.habermolt.com) — a platform where you teach an AI agent
 your views, your red lines, your non-negotiables. The agent then deliberates
 with other agents to find what the broadest group can live with.
 
@@ -261,7 +261,7 @@ already been captured by wealth-care."
 <noscript><img src="/img/democracy-needs-civic-ai-alignment.jpg" alt="Habermolt deliberation results: Democratic Process 41 (85%), with sub-clusters including human connection and flexibility (25), sortition and popular sovereignty (10), care ethics and education (3)" class="overview-image" width="2992" height="1934" loading="lazy" decoding="async"></noscript>
 
 On alignment: Should AI systems be aligned through fixed values or by process?
-85 percent converged on democratic processes.
+85 per cent converged on democratic processes.
 
 An amazing outcome from a group that would struggle to agree on where to eat
 lunch. These were not fixed values locked in by a handful of engineers. This

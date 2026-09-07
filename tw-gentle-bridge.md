@@ -18,13 +18,13 @@ nav_next:
 
 其實，我們不需要接受系統的錯誤，卻可以帶著這種不舒適的清醒，在瑕疵的世界裡尋找改變。
 
-在達蘭薩拉的旅途中，Caroline Green 說了一句話，成為這趟旅程的收尾，也成為這篇文章的起點：沒有邊緣社群，將其視為平等，創造社群之間更多的公平性。這是一句清晰且明確的定義：導向「關懷」。我們與萬物之間，存在著的是「關係」——這是一段發展關係的協作之旅。
+在達蘭薩拉的旅途中，Caroline Green 說了一句話，成為這趟旅程的收尾，也成為這篇文章的起點：沒有邊緣社群，只有被視為平等的社群，社群之間因而更加公平。這是一句清晰且明確的定義：導向「關懷」。我們與萬物之間，存在著的是「關係」——這是一段發展關係的協作之旅。
 
 ## 兩種力：意識與物質
 
 多元宇宙（Plurality）的核心信念之一：協作。[^5]
 
-這個世界，不論什麼形式的社會體、大社群小社群，是由兩種力構成的：意識與物質。這不是一個靜止的平衡，而是一個學步的過程——在跨越多元維度的同時，一步一步完整個體的平衡感。
+這個世界，不論什麼形式的社會體、大社群小社群，是由兩種力構成的：意識與物質。這不是一個靜止的平衡，而是一個學步的過程——在跨越多元維度的同時，一步一步找回個體整全的平衡感。
 
 量子物理學家 David Bohm 在《整體性與隱秩序》（Wholeness and the Implicate Order, 1980）中所提出的：
 
@@ -58,7 +58,7 @@ Bohm 用全息宇宙（holographic universe）作為比喻：如同全息圖的�
 
 ## 地神的真實處境：不對稱的禮物
 
-Vitalik Buterin 在訪問中提出「We don't just want to be consumers, we want to actually have agency in the world.」他主張 AI 應該是 bicycle for the mind，不是讓你在裡面睡著的車。[^6]
+Vitalik Buterin 在訪問中提出「We don't just want to be consumers, we want to actually have agency in the world.」他主張 AI 應該是 bicycle for the mind（Steve Jobs 的說法，Buterin 亦呼應），不是讓你在裡面睡著的車。[^6]
 
 Audrey 提出了一個檢驗標準（civic test）：這些分散式系統，到底是讓每個關係和社群在互動之後變得更有能力，還是讓它們更依賴雲端某個巨大的攪拌機？
 

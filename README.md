@@ -84,7 +84,7 @@ vp build
 
 Refreshing the source or replaying the local batch-one narrative inference is an explicit maintenance operation. The canonical replay uses a public content-pinned GGUF through a pinned wllama WebAssembly runtime; Ollama remains available for intentionally creating candidates with different provenance. See [`sensemaker/README.md`](sensemaker/README.md) for the immutable-source workflow, model and runtime digests, deterministic decoding settings, bilingual evidence rules, and exact regeneration commands.
 
-Search uses Pagefind for English pages, a Fuse-backed Traditional Mandarin sidebar from `/tw/search-index.json`, and a separately configured `worker/` `/au/:question` API for streamed answers — see `worker/README.md` for that package's own setup. The Worker retrieves from Cloudflare Vectorize binding `SITE_VECTORIZE` (`civic-ai-site`) and defaults to `AUDREY_MODEL=@cf/deepseek-ai/deepseek-v4-flash-0731`, generating answers on the Workers AI binding with no gateway token required; setting `AUDREY_MODEL=nemotron-ultra` instead streams Nemotron Ultra through the Cloudflare AI Gateway, which does need `CF_AIG_TOKEN` (the Baseten credential is stored as an AI Gateway provider key on the Cloudflare side). Without either model configuration available it returns a deterministic excerpt/stub response for tests and local development.
+Search uses Pagefind for English pages, a Fuse-backed Traditional Mandarin sidebar from `/tw/search-index.json`, and a separately configured `worker/` `/au/:question` API for streamed answers — see `worker/README.md` for that package's own setup. The Worker retrieves from Cloudflare Vectorize binding `SITE_VECTORIZE` (`civic-ai-site`) and defaults to `AUDREY_MODEL=@cf/deepseek-ai/deepseek-v4-flash-0731`, generating answers on the Workers AI binding with no gateway token required; setting `AUDREY_MODEL=nemotron-ultra` instead streams Nemotron Ultra through the Cloudflare AI Gateway, which does need `CF_AIG_TOKEN` (the Baseten credential is stored as an AI Gateway provider key on the Cloudflare side). Without either model configuration available, it returns a deterministic excerpt/stub response for tests and local development.
 
 ## Repository layout
 
@@ -92,7 +92,7 @@ Search uses Pagefind for English pages, a Fuse-backed Traditional Mandarin sideb
 | ------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
 | `src/`                          | Astro source: typed root-content loader, custom Markdown renderer, layouts, components, routes, search endpoints. |
 | `_data/`                        | Global data plus the SHA-verified, immutable Polis snapshot used by both conference views.                        |
-| `*.md` (root)                   | Canonical Markdown content, British English. Front-matter `permalink` sets the URL.                               |
+| `*.md` (root)                   | Canonical Markdown content, British English. Front matter `permalink` sets the URL.                               |
 | `tw-*.md`                       | Traditional Mandarin twin of each English page (served under `/tw/…`); kept in parity.                            |
 | `assets/js/`                    | Source client scripts for the search overlay and `/au` answer stream, copied into generated `public/`.            |
 | `img/`, `fonts/`, `audio`       | Source static assets copied through generated `public/` into the build.                                           |
@@ -102,7 +102,7 @@ Search uses Pagefind for English pages, a Fuse-backed Traditional Mandarin sideb
 | `styles.css`                    | All site styles (mobile-first; CSS custom properties).                                                            |
 | `astro.config.mjs`              | Astro static build config: custom-domain root, directory URLs, `dist/` output.                                    |
 | `openclaw.md`, `tw-openclaw.md` | Human OpenClaw bootstrap guides; machine-readable endpoint is generated from `_data/openclaw_bootstrap.js`.       |
-| `specs/`                        | Internal design & implementation notes (unpublished).                                                             |
+| `specs/`                        | Optional local-only design & implementation notes (unpublished, gitignored).                                      |
 | `public/`                       | **Generated** Astro public directory from `scripts/sync-public.mjs` — never edit by hand (gitignored).            |
 | `dist/`                         | **Generated** build output — never edit by hand (gitignored).                                                     |
 
@@ -110,7 +110,7 @@ Search uses Pagefind for English pages, a Fuse-backed Traditional Mandarin sideb
 
 - Each page is a single Markdown file with YAML front matter. `permalink` sets the URL — e.g. `1.md` → `/1/`, `manifesto.md` → `/manifesto/`.
 - Every English page `foo.md` has a Traditional Mandarin twin `tw-foo.md` served at `/tw/foo/`. The two link to each other through the `alt_lang_url` front-matter key — **keep them in parity** when you change either.
-- Front-matter keys in use: `layout`, `title`, `meta_description`, `summary`, `lang`, `permalink`, `alt_lang_url`.
+- Front matter keys in use: `layout`, `title`, `meta_description`, `summary`, `lang`, `permalink`, `alt_lang_url`.
 - Formatting rules (em dashes, four-space YAML, locked Mandarin terminology) are enforced in CI by `vp check` and `vp test`'s global setup, and locally by the pre-commit hook (staged files) or `vp run lint` (full repo); details in [AGENTS.md](AGENTS.md).
 
 ## Contributing

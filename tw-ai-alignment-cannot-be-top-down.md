@@ -23,13 +23,13 @@ audio: /audio/ai-alignment-cannot-be-top-down.mp3
 - 社群媒體留下的教訓是，光靠由上而下的信任與安全團隊，無法單獨治理複雜的公共現實。
 - 較可行的路徑有三條：更清楚的產業規範、更好的市場誘因，以及具有公共監督的社群規模助理。
 
-2024 年 3 月，我打開 Facebook，看到了黃仁勳的臉。這位 Nvidia 執行長正用華語對我說話，提供投資建議。當然，那不是真的黃仁勳。那是 AI 生成的詐騙，而且我絕不是第一個被盯上的人：在臺灣各地，大量的詐騙正欺騙著數百萬公民。
+2024 年 3 月，我打開 Facebook，看到了黃仁勳的臉。這位 Nvidia 執行長正用華語對我說話，提供投資建議。當然，那不是真的黃仁勳。那是 AI 生成的詐騙，而且我絕不是第一個被盯上的人：在臺灣各地，大量的詐騙讓公民損失了數百萬元。
 
 我們面臨一個兩難。臺灣擁有亞洲最自由的網路；任何內容審查都是不可接受的。然而，AI 正被用來將這種自由武器化，以對抗公民。
 
 我們的回應——及其成功——展示了 AI 對齊必須如何運作的根本道理。我們沒有要求專家來解決。我們沒有讓少數研究人員決定什麼算作「詐欺」。相反，我們發送了 20 萬封隨機簡訊詢問公民：我們應該一起做什麼？
 
-447 位臺灣常民——在年齡、教育、地區、職業上反映了我們的整體人口——以 10 人一組進行了[審議](https://moda.gov.tw/en/major-policies/alignment-assemblies/2024-deliberative-assembly/1521)。他們不尋求完美的共識，而是尋求*罕見共識（uncommon ground）*——即持不同觀點的人仍能覺得合理的想法。幾個月內，我們提出的兩部新[法](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=J0080037)[律](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080226)就獲得了國會全數支持。到了 2025 年，詐騙廣告消失了。
+447 位臺灣常民——在年齡、教育、地區、職業上反映了我們的整體人口——以 10 人一組進行了[審議](https://moda.gov.tw/en/major-policies/alignment-assemblies/2024-deliberative-assembly/1521)。他們不尋求完美的共識，而是尋求*罕見共識（uncommon ground）*——即持不同觀點的人仍能覺得合理的想法。幾個月內，我們提出的兩部新[法](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=J0080037)[律](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080226)就獲得了跨黨派的廣泛支持。到了 2025 年，詐騙廣告減少了超過 94%。
 
 這就是我所謂的*覺察力（attentiveness）*：給予人民真實、持續的權力來引導科技。這是臺灣如何將 AI 與我們的社會對齊的基礎。這也是全球 AI 對齊努力中缺失的成分。
 
@@ -99,7 +99,7 @@ audio: /audio/ai-alignment-cannot-be-top-down.mp3
 
 **市場的結構方式，決定了覺察力是可長可久，還是適得其反。** 可攜性強制規定允許使用者在平台之間移動資料。這降低了想要離開有害平台的使用者的轉換成本，促使平台以關懷而非綁定來爭取使用者。採購標準可以迫使政府採用更可稽核的系統，訂閱模式允許公司專注於使用者信任和社群健康，而不是透過煽動性和分裂性內容追逐廣告收入。
 
-**一些司法管轄區已經朝這個方向邁進。** 例如，猶他州的 [數位選擇法案 (H.B. 418)](https://le.utah.gov/~2025/bills/static/HB0418.html) [建立](https://ash.harvard.edu/resources/utah-digital-choice-act-reshaping-social-media/) 了更大的社群媒體使用者資料可攜性和互通性，要求平台讓使用者的社交網絡可在服務之間轉移。在 [歐洲](http://digital-strategy.ec.europa.eu/en/factpages/data-act-explained) 和 [美國國會](https://www.congress.gov/bill/119th-congress/senate-bill/1634/text) 討論的類似提案將把這種可攜性擴展到 AI 生態系統。
+**一些司法管轄區已經朝這個方向邁進。** 例如，猶他州的 [數位選擇法 (H.B. 418)](https://le.utah.gov/~2025/bills/static/HB0418.html) [建立](https://ash.harvard.edu/resources/utah-digital-choice-act-reshaping-social-media/) 了更大的社群媒體使用者資料可攜性和互通性，要求平台讓使用者的社交網絡可在服務之間轉移。在 [歐洲](https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained) 和 [美國國會](https://www.congress.gov/bill/119th-congress/senate-bill/1634/text) 討論的類似提案將把這種可攜性擴展到 AI 生態系統。
 
 以這些方式轉移市場誘因可以使覺察力在經濟上可行。當關懷成為競爭優勢時，AI 的商業邏輯開始與社群價值觀對齊。
 

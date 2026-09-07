@@ -5,8 +5,8 @@ permalink: /tw/conference/
 title: "打開關懷六力"
 meta_description: "2026 年 3 月 25 日於牛津 Rhodes House 舉行的仁工智慧研討會——唐鳳、Caroline Green、Joan Tronto、Rosalind Picard、Iason Gabriel 等，談關懷倫理與 AI 對齊。"
 subtitle: "仁工智慧研討會 2026"
-date_line: "2026 年 3 月 25 日 — Rhodes House, Oxford"
-og_description: "2026 年 3 月 25 日 — Rhodes House, Oxford"
+date_line: "2026 年 3 月 25 日——Rhodes House, Oxford"
+og_description: "2026 年 3 月 25 日——Rhodes House, Oxford"
 alt_lang_url: "/conference/"
 alt_lang_label: "English"
 hosts:
@@ -24,8 +24,8 @@ goals:
     - title: "安全空間"
       text: "一個能夠公開提出困難問題、不確定性和挑戰的場所。"
     - title: "實質影響"
-      text: "當天成果將直接納入《仁工智慧》書籍計畫。"
-agenda_title: "議程草案"
+      text: "當天成果直接納入《仁工智慧》書籍計畫。"
+agenda_title: "議程"
 agenda:
     - time: "09:45"
       title: "歡迎致詞與定調今日"

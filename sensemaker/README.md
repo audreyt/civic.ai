@@ -11,9 +11,9 @@ The site build never contacts Pol.is, GitHub, Ollama, or another model service. 
 
 There are three distinct operations:
 
-1. `bun src/cli.mjs verify` reproduces the evidence and report HTML from the checked-in snapshot and narratives without a model. It checks every input and output SHA-256 value.
-2. `bun src/cli.mjs regenerate:wasm` downloads one revision-pinned public GGUF, verifies its byte length and SHA-256 digest, and runs the pinned wllama WebAssembly runtime in headless Chrome. It runs each locale twice and rejects any raw completion-byte mismatch. By default it also rejects output that differs from the reviewed narrative or, after the first accepted WASM replay, any model/runtime/raw-completion provenance drift.
-3. `bun src/cli.mjs regenerate` remains an Ollama adapter for intentionally producing a candidate with different provenance. It likewise runs each locale twice before writing.
+1. `cd sensemaker && bun src/cli.mjs verify` reproduces the evidence and report HTML from the checked-in snapshot and narratives without a model. It checks every input and output SHA-256 value.
+2. `cd sensemaker && bun src/cli.mjs regenerate:wasm` downloads one revision-pinned public GGUF, verifies its byte length and SHA-256 digest, and runs the pinned wllama WebAssembly runtime in headless Chrome. It runs each locale twice and rejects any raw completion-byte mismatch. By default it also rejects output that differs from the reviewed narrative or, after the first accepted WASM replay, any model/runtime/raw-completion provenance drift.
+3. `cd sensemaker && bun src/cli.mjs regenerate` remains an Ollama adapter for intentionally producing a candidate with different provenance. It likewise runs each locale twice before writing.
 
 The committed artifacts remain the publication guarantee. Model inference is an auditable editorial derivation step, never a request-time or site-build dependency.
 
@@ -159,7 +159,7 @@ Review these files before accepting the change:
 - `generated/report.zh-tw.html`
 - `generated/manifest.json`
 
-The model writes qualitative prose only. It is prohibited from writing digits, percentages, group sizes, markup, or citation syntax. Statement IDs are locked by the accepted baseline and must be identical across languages. The deterministic renderer adds all counts, percentages, evidence links, group sizes, charts, and snapshot provenance directly from canonical evidence.
+The model writes qualitative prose only. It must not write digits, percentages, group sizes, markup, or citation syntax. Statement IDs are locked by the accepted baseline and must be identical across languages. The deterministic renderer adds all counts, percentages, evidence links, group sizes, charts, and snapshot provenance directly from canonical evidence.
 
 `source/accepted-baseline.json` is transparent editorial steering. Supported human-reviewed wording is retained instead of asking a model to gratuitously paraphrase it. `source/translations.zh-tw.json` contains the reviewed statement translations used by both the evidence package and Mandarin report.
 

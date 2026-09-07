@@ -26,7 +26,7 @@ nav_next:
 
 ## Full transcript
 
-**Announcer**: Here to introduce their bold framework, the 6-Pack of Care, we've got Oxford University's Audrey Tang and Dr Caroline Emmer de Albuquerque Green, give them a round of applause.
+**Announcer**: Here to introduce their bold framework, the 6-Pack of Care, we've got Oxford University's Audrey Tang and Dr Caroline Emmer De Albuquerque Green, give them a round of applause.
 
 **Caroline Green**: Morning everyone. Welcome to the session on reimagining AI alignment. We're Audrey and Caroline, and Leslie, thank you so much for already defining what AI alignment is all about, which makes my job easier to dive straight into our work, civic AI, when we talk about AI alignment, the narrative often is that it's very much a thing by design, something that is all about the technology and how the technology works. But Audrey, your work has been about AI alignment by process. You very much believe in the civic nature of alignment. Tell us more about that.
 
@@ -44,7 +44,7 @@ A civic AI system is like a glorified chess clock with manners. It makes sure th
 
 Another table said, for an unsigned ad that we did not subscribe, unsolicited, somebody lost $7 million from the ad, well, the social media platform should be liable for the $7 million damage. That's another good idea. Joint liability. The third one: at the time, some foreign media systems do not have Taiwan office. What if they ignore our liability rules? Well, this table said, for every day they ignore us, let's slow down connection to their short video by 1%. Another very good idea.
 
-And so none of this is content censorship, but we were able, at the end of a long afternoon, to put it to vote. And more than 85% of people said, "It's a very good idea." And the other 15% were like, "Okay, we can live with it." Then it became law in just two months. So throughout last year, there are almost no deepfake ads anymore in Taiwan. It's down by more than 94%.
+And so none of this is content censorship, but we were able, at the end of a long afternoon, to put it to vote. And more than 85% of people said, "It's a very good idea." And the other 15% were like, "Okay, we can live with it." Then the resulting amendments passed within months. So throughout last year, there were almost no deepfake ads anymore in Taiwan. It's down by more than 94%.
 
 **Caroline Green**: Wow. So this story, the first time I heard it, I thought that's really amazing. I just really want to go back to the people and how you engage with them. So you send text messages to people, right? Which seems to be something very accessible because, so my background is I work with people in caregiving. So I work a lot with people who live in care homes, who work in home care agencies, family caregivers who, you know, in the middle of the night face something really difficult and often for them, technology is something that can really help, but it's also, you know, an issue of, there are issues of fear and accessibility.
 
@@ -76,9 +76,9 @@ So after a couple months, my dad did get the surgery and is now fully restored t
 
 **Caroline Green**: Thank you. Absolutely. And I think what strikes me here is that, you know, you're building this as part of your family, but not to replace your family, right? You're part of that, and there's part of care that you cannot replace through an AI, but it can really help you in a powerful way, and in a way that's really aligned with your family values, and, you know, in a space where you know he's also protected, right?
 
-**Audrey Tang**: Exactly, because it works with no Internet connection, except for Signal or for the peer-to-peer chat. People can really verify that none of our data is going to the cloudy cloud somewhere, but rather it stays entirely within this computer. Also, because it's not running in the cloud and sharing the same processing as thousands of other people, it's predictable. Every time if you enter the same prompt, it's guaranteed to give you the same output. And if you don't like where the output is going, you can steer it.
+**Audrey Tang**: Exactly, because it needs no connection to any cloud — only Signal or peer-to-peer chat to sync. People can really verify that none of our data is going to the cloudy cloud somewhere, but rather it stays entirely within this computer. Also, because it's not running in the cloud and sharing the same processing as thousands of other people, it's predictable. The same prompt usually gives the same answer, because it draws only on local notes. And if you don't like where the output is going, you can steer it.
 
-Tenzin Yangtso here, we cultivated the first Kami together, which also helped us draft the book we're doing. The point here is that because it's so predictable, and it draws only from local knowledge. It has no hallucination problems.
+Tenzin Yangtso here, we cultivated the first Kami together, which also helped us draft the book we're doing. The point here is that because it's so predictable, and it draws only from local knowledge. It hallucinates far less.
 
 **Caroline Green**: And I can tell you as an academic, it's a wonderful experience to be writing this book with you and the Kami. The Kami, which is a completely new experience. But yeah, something we can talk about sometime else.
 
@@ -114,7 +114,7 @@ You're also working on a social venture from Oxford, so would you like to talk a
 
 **Audrey Tang**: Right, so it becomes just a connective tissue to "we the people", who are already the superintelligence.
 
-**Caroline Green**: Absolutely. And you know, the problem is also people are very fearful of AI and tech. They don't trust tech companies. They feel like, you know, they're just going to be extracted from. They won't be able to get out of contracts. They don't know where their data is going. And also often — I mean, including me — I find it really tricky, and you saw that last week, Audrey. I was trying to build my own Kami for myself. I was like, how do I do this? I still don't. I don't speak that computer language that you still need. Right? It really needs to be an appliance.
+**Caroline Green**: Absolutely. And you know, the problem is also people are very fearful of AI and tech. They don't trust tech companies. They feel like, you know, they're just going to be extracted from. They won't be able to get out of contracts. They don't know where their data is going. And also often — I mean, including me — I find it really tricky, and you saw that last week, Audrey. I was trying to build my own Kami for myself. I was like, how do I do this? I still don't — I don't speak that computer language that you still need. Right? It really needs to be an appliance.
 
 **Audrey Tang**: Yeah, absolutely. So I think, you know, there's still a lot of work that needs to be done in order to really democratize technology so that people can actually use it without fear, without having to speak that, you know, really be like computer scientists in order to build something like that for them. So it's a big and really exciting journey. So that's for sure.
 
@@ -138,7 +138,7 @@ Thank you. What gives you hope, Audrey?
 
 **Caroline Green**: That takes me to the last minute, and I think it would be good to do a call for action. for everyone who's here. And I would say that, you know, we've already had people from around the world who have contacted us with projects that they feel align with civic AI and they wanted, you know, to get some input from us or some support or so on. And I would encourage everyone to keep on doing that, to reach out to us and to share any kind of ideas or projects that you have where you feel, "I feel like this is aligning" with your work. I thought that was really beautiful. But what's your call for action to everyone?
 
-**Audrey Tang**: And if you're interested in what Takahiro or Engaged California — the future of AI in the workplace — is doing in California, there's also an equivalent project just starting here in the UK. And that's nationalstrategy.uk.
+**Audrey Tang**: And if you're interested in what Takahiro or Engaged California — the future of AI in the workplace — is doing in California, there's also an equivalent project just starting here in the UK. And that's [nationalstrategy.uk](https://www.nationalstrategy.uk).
 
 **Caroline Green**: Great. Well, thanks to everybody for joining us, and I hope you have a wonderful day. Thank you, Audrey.
 

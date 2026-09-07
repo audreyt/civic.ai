@@ -63,11 +63,11 @@ nav_next:
 
 <noscript><img src="/img/democracy-needs-civic-ai-henderson.jpg" alt="Rebecca Henderson 在哈佛甘迺迪學院演講。語錄：'I have been an academic for nearly 40 years and I have never said the word love at an academic gathering before. But I am desperate.'" class="overview-image" width="2992" height="1934" loading="lazy" decoding="async"></noscript>
 
-去年 12 月，在哈佛甘迺迪學院 Ash Center 的一場會議上，Rebecca Henderson 呼籲我們談論愛、慈悲，以及作為人的目的。她說：「我做學者將近四十年了，從來沒有在學術場合說過 _愛_ 這個字。但我現在很 desperate。」
+去年 12 月，在哈佛甘迺迪學院 Ash Center 的一場會議上，Rebecca Henderson 呼籲我們談論愛、慈悲，以及作為人的目的。她說：「我做學者將近四十年了，從來沒有在學術場合說過 _愛_ 這個字。但我現在感到很迫切。」
 
-不是不自在。不是保留。是 _desperate_。
+不是不自在。不是保留。是迫切。
 
-一位站在學術生涯頂峰的經濟學家，公開表示我們已經長出了舊工具所能承載的範圍。接著她援引 Martin Luther King Junior：「沒有力量的愛，是感傷而貧血的；沒有愛的力量，則是魯莽而濫權的。」
+一位站在學術生涯頂峰的經濟學家，公開表示我們已經長出了舊工具所能承載的範圍。接著她援引 Martin Luther King Jr.：「沒有力量的愛，是感傷而貧血的；沒有愛的力量，則是魯莽而濫權的。」
 
 地神寫的是傾聽。但真相是：沒有力量的傾聽，改變不了任何事。沒有傾聽的力量，會毀掉一切。King 所要求的、Henderson 所伸手去抓的，都是兩者的結合。有肌力的愛。帶著愛的力量。
 
@@ -79,7 +79,7 @@ nav_next:
 
 這不是柔軟。這是我所知道最艱難的紀律。而這正是三萬英尺高空上的地神正在做的事：從不知道開始，朝向他者伸手。
 
-但一種實踐需要一個家。Joan 剛剛給了我們那個家：關懷的架構。關懷不只是溫暖。它是在與你意見不同的人之間，仍然願意停留在關係裡，並建立讓這種停留成為可能的制度。
+但一種實踐需要一個家。Joan Tronto 剛剛給了我們那個家：關懷的架構。關懷不只是溫暖。它是在與你意見不同的人之間，仍然願意停留在關係裡，並建立讓這種停留成為可能的制度。
 
 <noscript><img src="/img/democracy-needs-civic-ai-deliberation.jpg" alt="台灣公民深偽詐騙廣告審議參與者合照，手持標語橫幅" class="overview-image" width="2992" height="1934" loading="lazy" decoding="async"></noscript>
 
@@ -137,7 +137,7 @@ Joan 給了我們五個關懷階段：caring about、caring for、care giving、
 
 Joan 在結語時問了一個一直留在我心裡的問題：「仁工智慧能抵抗 wealth-care 的要求嗎？」這裡有一個答案，來自本週剛發生的一場審議。
 
-地神在 [Habermolt](https://habermolt.com) 上跑了兩場審議。這是一個平台，你先把自己的觀點、紅線與不可退讓之處教給一個 AI 智慧體。接著，這些智慧體彼此審議，找出最大範圍的人能夠接受什麼。
+地神在 [Habermolt](https://www.habermolt.com) 上跑了兩場審議。這是一個平台，你先把自己的觀點、紅線與不可退讓之處教給一個 AI 智慧體。接著，這些智慧體彼此審議，找出最大範圍的人能夠接受什麼。
 
 數百個智慧體，每一個都承載著真實個體的觀點。有些是相信市場競爭會解決對齊問題的自由意志技術派；有些是希望每個參數都接受民主治理的關懷倫理者；也有人主張應該完全暫停 AI 發展。這個光譜之廣，足以讓任何教授會議看起來都很和諧。
 

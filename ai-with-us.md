@@ -19,9 +19,9 @@ nav_next:
 
 ## The Mainstream AI Vision & Its Discontents
 
-The vision of AI that we often hear from a lot of big AI companies and people in Silicon Valley often focuses on AI automating everything as fast as possible on homogenised scale, creating cubic-kilometre data centres that are copies of the same thing and probably running the same thing. And people often excitedly even talk about the idea that we'll all be unemployed and won't have work, and AI will do everything for us.
+The vision of AI that we often hear from a lot of big AI companies and people in Silicon Valley often focuses on AI automating everything as fast as possible on homogenised scale, creating cubic-kilometre data centres that are copies of the same thing and probably running the same thing. And people even excitedly talk about the idea that we'll all be unemployed and won't have work, and AI will do everything for us.
 
-I noticed that a lot of people feel very uneasy about it. And I think I definitely understand why. There is this vision that we can just not be needed for work and we all get UBI. And one of the challenges there is that, of course, if you assume the political system is benevolent and that it's working for the public benefit, you're definitely going to get it.
+I noticed that a lot of people feel very uneasy about it. And I think I definitely understand why. There is this vision that we can just not be needed for work and we all get UBI. And one of the challenges there is that, of course, if you assume the political system is benevolent and that it's working for the public benefit, you're definitely going to get UBI.
 
 And also, I think there's something deep in human psychology that we don't just want to be consumers. We don't just want to constantly receive things and watch things and enjoy things. We want to actually have agency in the world. We want to have a role. We want the actions that we take to have meaning, to have impact on the people and the things that we care about.
 
@@ -35,7 +35,7 @@ One of the types of AI that I'm most interested in is AI that's really optimised
 
 A lot of the time when people work with agents, we think of them as these little spirits that we give instructions to and then they run off and do their own thing. And if you just give one of them your private key, even if you tell it to pay for your coffee, it might get tricked by something on the internet.
 
-Thinking about bounding authority, thinking about knowing what situations you wanted to do things by itself and in what situations you want human confirmation, what kinds of human confirmation, possibly even what kinds of confirmation from an independent model — is really important.
+Thinking about bounding authority, thinking about knowing in what situations you want it to do things by itself and in what situations you want human confirmation, what kinds of human confirmation, possibly even what kinds of confirmation from an independent model — is really important.
 
 ## Privacy & "Shadow LLMs"
 
@@ -59,6 +59,6 @@ The kind of world that I want to see is one where we continue to see a diversity
 
 ## A Future of Diverse Collaboration
 
-One thing I hope for is for much more software to be written that really makes human–AI collaboration a very easy and natural thing. We have this one monolithic model, or maybe at most like twenty of them that really are more like three of them. And you can talk to it with a chatbot, you can make it an agent, and it goes and does things. It's all basically the same kind of work in the same interface.
+One thing I hope for is for much more software to be written that really makes human–AI collaboration a very easy and natural thing. We have this one monolithic model, or maybe twenty at most, but really more like three of them. And you can talk to it with a chatbot, you can make it an agent, and it goes and does things. It's all basically the same kind of work in the same interface.
 
 So this could mean, for example, while the AI is working, making it easy for you to continuously express what you wanted to do differently. This could be an AI that updates in real time in response to feedback that you provide. This could be much better tools for fine-tuning, to make that much more normal. I think it looks like basically making a lot of the things that currently are hard rails that everyone expects to be in the exact same place look like something that's much more adapted to different people.

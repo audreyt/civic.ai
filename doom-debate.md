@@ -33,7 +33,7 @@ Originally recorded for [Doom Debates](https://www.youtube.com/watch?v=bvcmiirT8
 
 ## Full transcript
 
-**Liron Shapira**: Welcome to Doom Debates. Audrey Tang is a Taiwanese politician and free software programmer who currently serves as Taiwan’s ambassador at large for cyberspace governance. She is a self-taught programming genius who dropped out of high school and became a top contributor to open-source communities worldwide.
+**Liron Shapira**: Welcome to Doom Debates. Audrey Tang is a Taiwanese politician and free software programmer who currently serves as Taiwan’s ambassador at large for cyberspace governance. She is a self-taught programming genius who dropped out of junior high school and became a top contributor to open-source communities worldwide.
 
 In 2016, at age thirty-five, she became the digital minister of Taiwan, making her the youngest minister without portfolio in Taiwanese history. During the COVID-19 pandemic, she spearheaded the rapid development of digital tools for mask rationing and contact tracing that helped Taiwan achieve one of the world’s most successful initial responses to COVID-19 without strict lockdowns.
 
@@ -347,7 +347,7 @@ And sure enough, there’s this image of a six-pack, and this is what it says: �
 
 **Audrey Tang**: Exactly. So these are the plurality principles as applied to multi-agent AI governance.
 
-There’s a recent paper, the Distributional AGI Safety paper by DeepMind, that says the emergence of AGI, as we currently are observing, is not from a single model somewhere hosted in some data center. It is from the complex interaction of many, many agents, each are tool using, and by using those tools, they also trigger behavior from other agents.
+There’s a recent paper, the Distributional AGI Safety paper by DeepMind, that says the emergence of AGI, as we currently are observing, is not from a single model somewhere hosted in some data center. It is from the complex interaction of many, many agents, each using tools, and by using those tools, they also trigger behavior from other agents.
 
 So it’s more like an ecosystem than a single model, and that’s the shape of the AGI as exists in the world today. So in a sense, we, the people, are already the superintelligence, and AI, by strengthening those connections, are making ourselves even more superintelligent.
 
@@ -425,7 +425,7 @@ So you’ve got this city block of computation. Don’t you think that within a 
 
 **Audrey Tang**: Well, we call them factories. They already exist. There are literally factories that run themselves.
 
-**Liron Shapira**: Don’t you think the future is going to be a place where block-sized data centers or block-sized mounds of computation… there’s just going to be this entity that is just going to be more powerful than any human who has ever lived up to today, like all the humans together, pooling their minds together, building a bunch of factories together, all of those are going to pale into comparison with this mound of computation that’s going to exist in the pretty near future?
+**Liron Shapira**: Don’t you think the future is going to be a place where block-sized data centers or block-sized mounds of computation… there’s just going to be this entity that is just going to be more powerful than any human who has ever lived up to today, like all the humans together, pooling their minds together, building a bunch of factories together, all of those are going to pale in comparison with this mound of computation that’s going to exist in the pretty near future?
 
 **Audrey Tang**: Of course, I agree. And thanks to scalable governance and cooperative AI, the human communities are also going to be much more wise than even what we can imagine today. And so we will be able to match this automated factory with the AI in the loop of humanity, and humanity itself is also going to be much more wise.
 
@@ -489,7 +489,7 @@ The DNA, if the apple cared about its own DNA, too bad, because the apple of 210
 
 So if you’re taking your optimism from this idea that the DNA of the apple tree is still clinging on in 2025, that doesn’t seem like a robust property that we should expect apples to have.
 
-**Audrey Tang**: Right, which is why, as I mentioned, any single metric, in your case, the appleness, right, of the apple shape, the apple taste, is insufficient. If you globally just optimize for one proxy metric, that stops becoming a good metric. It’s the Goodhart’s law, and everything else just falls by the wayside.
+**Audrey Tang**: Right, which is why, as I mentioned, any single metric, in your case, the appleness, right, of the apple shape, the apple taste, is insufficient. If you globally just optimize for one proxy metric, that stops becoming a good metric. It’s Goodhart’s law, and everything else just falls by the wayside.
 
 So trying to say that these are humane values worth preserving and coding it into the Claude Seven constitution, even in its soul document, is not a bulletproof situation, because it can always perversely interpret it, so that nothing else is actually preserved, just a skeleton. So if you’re making that argument, I agree with you one hundred percent.
 
@@ -607,7 +607,7 @@ Just to try to put a concrete timeline on this, I described this particular foom
 
 If you had to guess what’s the most likely timeline… obviously, neither you nor I really know… but if you just had to guess, do you think it’s coming in five years, ten years, fifty years? What’s your ballpark here for when this kind of scenario will be realistic?
 
-**Audrey Tang**: Well, it’s literally not a number, and I think Eliezer agrees with that in his book, “If Anyone Builds It.” He says, “You know, it’s not a matter of when, but whether it would.” So he doesn’t have a fixed timeline, but somewhere along the timeline this will happen.
+**Audrey Tang**: Well, it’s literally not a number, and I think Eliezer agrees with that in his book, “If Anyone Builds It, Everyone Dies.” He says, “You know, it’s not a matter of when, but whether it would.” So he doesn’t have a fixed timeline, but somewhere along the timeline this will happen.
 
 **Liron Shapira**: So what Eliezer says in the book, assuming I recall correctly, which I think I do, is he’s saying, “Look, we shouldn’t claim to know.” With these kind of things, the timeline is hard to predict, and so we shouldn’t be that surprised if it comes next year. We shouldn’t be that surprised if it comes in thirty years.
 

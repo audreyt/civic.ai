@@ -29,7 +29,7 @@ These crises are not on the horizon. They are unfolding now. Deepfake videos fea
 
 We have seen what algorithmic time does to markets — the 2010 flash crash, where U.S. markets plunged and recovered in minutes. We can see what it does to trust — Europol has warned that organised crime is using AI-driven impersonation to scale fraud and evade detection across jurisdictions.
 
-And here is the shift that changes everything. AI is no longer just a tool. It is a participant. NIST's most recent guidance describes AI agent systems as capable of planning and taking autonomous actions that affect real-world systems, as OpenClaw recently demonstrated. Once incidents become agentic, response cannot depend on heroic improvisation. It requires institutionalised, cross-border mechanisms.
+And here is the shift that changes everything. AI is no longer just a tool. It is a participant. NIST's most recent guidance describes AI agent systems as capable of planning and taking autonomous actions that affect real-world systems — behaviour that tools like OpenClaw have recently demonstrated. Once incidents become agentic, response cannot depend on heroic improvisation. It requires institutionalised, cross-border mechanisms.
 
 ## Three building blocks for AI crisis diplomacy
 
@@ -37,7 +37,7 @@ So what does AI crisis diplomacy look like? Three building blocks and one region
 
 ### Trust: a whitelist for public integrity
 
-Taiwan's 111 government SMS is a dedicated short-code for official messages, so citizens can instantly verify what is real — a blue checkmark for public communication. Every message shows the agency's name and the last three digits of your phone number: proof that the sender knows who you are and the network guarantees who they are. When people trust the channel, phishing and impersonation lose steam. Every country needs its own version — a low-friction, verifiable trust channel that works even in crisis.
+Taiwan's 111 government SMS is a dedicated short code for official messages, so citizens can instantly verify what is real — a blue checkmark for public communication. Every message shows the agency's name and the last three digits of your phone number: proof that the sender knows who you are and the network guarantees who they are. When people trust the channel, phishing and impersonation lose steam. Every country needs its own version — a low-friction, verifiable trust channel that works even in crisis.
 
 ### Consensus: AI that listens at scale
 

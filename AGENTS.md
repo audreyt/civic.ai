@@ -35,14 +35,14 @@ Match verification to the change. Markdown: content and typography gates. Code o
 
 - `src/lib/legacyMarkdown.ts` — markdown-it, footnotes, anchors, and the CJK emphasis patch formerly in Eleventy
 - `src/lib/pages.ts` — typed root-content loader and URL derivation
-- `src/lib/shortcodes.ts` — explicit replacements for former Liquid/Nunjucks include shortcodes
+- `src/lib/shortcodes.ts` — explicit replacements for most former Liquid/Nunjucks include shortcodes (Nunjucks remains a runtime dependency of `PolisCareReport.astro`)
 - `src/components/` — shared head, navigation, footer, client scripts, Polis report, colophon
 - `src/layouts/` — `DefaultShell.astro`, `Default.astro`, `Chapter.astro`, `Conference.astro`
 - `src/pages/` — Astro routes and machine endpoints (`robots.txt`, `llms.txt`, `sitemap.xml`, `.well-known/openclaw/SKILL.md`)
 
 **Site data:** `_data/site.json` (title, description, URL, languages), plus `_data/paths.json`, `_data/comics.json`, `_data/glossary.json`, `_data/openclaw_bootstrap.js`, and Polis data/UI loaders.
 
-**Static assets:** source assets live in `img/`, `fonts/`, `audio/`, `styles.css`, `CNAME`, `.nojekyll`, and favicons. `scripts/sync-public.mjs` regenerates `public/` before dev/build; Astro copies `public/` to `dist/`.
+**Static assets:** source assets live in `img/`, `fonts/`, `audio/`, `styles.css`, `CNAME`, `.nojekyll`, and `favicon.ico`/`favicon.svg`. `scripts/sync-public.mjs` regenerates `public/` before dev/build; Astro copies `public/` to `dist/`.
 
 **Config:** `astro.config.mjs` — custom-domain root site, static output, directory URLs, `dist/` output.
 
@@ -55,7 +55,7 @@ Match verification to the change. Markdown: content and typography gates. Code o
 - Commits: short imperative style (e.g. `add manifesto link`, `ch7: fix anchor ids`)
 - Never edit `dist/` or generated `public/`; they are build artifacts
 - Optimize images before committing; reuse existing typography tokens in CSS
-- When adding/editing content, maintain parity between British English and Traditional Mandarin variants. `vp run en`/`vp run tw` cat the paired page sets to the clipboard and warn on stderr about any page missing its twin — see `scripts/review-set.md`.
+- When adding/editing content, maintain parity between British English and Traditional Mandarin variants. `vp run en`/`vp run tw` copy the paired page sets to the clipboard and warn on stderr about any page missing its twin — see `scripts/review-set.md`.
 - Em dashes: English files use `—` (spaced single); Mandarin `tw-*.md` files use `——` (double, no spaces)
 
 <!--VITE PLUS START-->

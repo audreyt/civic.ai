@@ -53,7 +53,7 @@ The co-production moved through four phases, each deepening the practice of atte
 
 3. **Send receipts.** An overarching co-production working group scrutinised all outputs from previous phases. This was the accountability layer — ensuring that what was heard in working groups was faithfully carried into the combined document. The resulting definition and principles for practice were not authored by researchers alone but assembled from the contributions of all groups, with transparent attribution.
 
-4. **Decide with brakes.** The final phase was a deliberative assembly. More than 50 collaborators gathered in person to examine the definition and practice guidance. Points of consensus were identified. But so were unresolved tensions: concerns about co-production being used as rhetoric, about the financial realities of implementation, about mistrust between care recipients and institutions. These open questions were published as part of the work, not hidden.
+4. **Decide with brakes.** The final phase was a deliberative assembly. More than 50 collaborators gathered in person to examine the definition and practice guidance. Points of consensus were identified. But there were also unresolved tensions: concerns about co-production being used as rhetoric, about the financial realities of implementation, about mistrust between care recipients and institutions. These open questions were published as part of the work, not hidden.
 
 ## What they built
 

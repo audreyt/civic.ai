@@ -36,7 +36,7 @@ At Oxford's Institute for Ethics in AI, my colleague Caroline Green and I have b
 
 The organizations that manage mission-critical infrastructure are often already practicing this kind of stewardship. They simply do not yet name it as such.
 
-Jun Murai argued in his recent essay for The Kyndryl Institute that connection is resilience and that effective governance is vital. I agree. But the critical question is not only about effective governance; it's by whom. That role belongs with the local steward operating under a charter, not with an unbounded model at the center.
+Jun Murai argued in his recent Kyndryl Institute essay ["Connection is resilience"](https://www.kyndryl.com/us/en/institute/2026/02/connection-is-resilience) that connection builds resilience and that effective governance is vital. I agree. But the critical question is not only about effective governance; it's by whom. That role belongs with the local steward operating under a charter, not with an unbounded model at the center.
 
 Consider what a large enterprise IT operator already does. It serves a bounded community: the patients of a hospital network, the depositors of a regional bank, the commuters of a transit system. It runs under explicit service-level agreements. It maintains audit trails and incident-response protocols. It practices graduated rollout by testing changes on a small scale first, running them safely in parallel, and retaining the ability to reverse course quickly. It hands systems over when contracts end. These are the operational habits of bounded stewardship.
 

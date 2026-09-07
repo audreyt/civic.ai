@@ -24,8 +24,8 @@ goals:
     - title: "Safe space"
       text: "A place where difficult questions, uncertainties and challenges can be raised openly."
     - title: "Real impact"
-      text: "The day's outcomes will directly feed into the Civic AI book project."
-agenda_title: "Draft Agenda"
+      text: "The day's outcomes feed directly into the Civic AI book project."
+agenda_title: "Agenda"
 agenda:
     - time: "09:45"
       title: "Welcome & Framing the Day"

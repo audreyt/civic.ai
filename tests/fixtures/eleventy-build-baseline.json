@@ -1058,7 +1058,7 @@
             "path": "ja/comics/index.html",
             "lang": "ja",
             "title": "ケアの6パック コミック — Civic AI",
-            "description": "「ケアの6パック」（6-Pack of Care）」の全コミックを閲覧。概要図へのワンクリックで各章に飛べます。",
+            "description": "「ケアの6パック（6-Pack of Care）」の全コミックを閲覧。概要図へのワンクリックで各章に飛べます。",
             "canonical": "https://civic.ai/ja/comics/",
             "alternates": [],
             "ids": [
@@ -1345,7 +1345,7 @@
         {
             "path": "plurality-ucsc/index.html",
             "lang": "en-gb",
-            "title": "⿻ UCSC: From Polarization to Co-creation — Civic AI",
+            "title": "⿻ UCSC: From Polarisation to Co-creation — Civic AI",
             "description": "Speech on Civic AI and democratic renewal delivered at the University of California, Santa Cruz.",
             "canonical": "https://civic.ai/plurality-ucsc/",
             "alternates": [
@@ -1609,6 +1609,8 @@
                 "search-toggle",
                 "the-alignment-conversation-this-joins",
                 "the-care-ethics-foundation",
+                "the-collective-intelligence-project",
+                "the-system-weeders-habermolt-deliberations",
                 "what-is-ours"
             ]
         },
@@ -3199,8 +3201,10 @@
                 "四回應力",
                 "屬於我們的部分",
                 "本框架所加入的對齊對話",
+                "系統除草人habermolt-審議",
                 "關懷倫理應用於技術直接的先例",
-                "關懷倫理的基礎"
+                "關懷倫理的基礎",
+                "集體智慧計畫"
             ]
         },
         {

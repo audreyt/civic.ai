@@ -86,7 +86,7 @@ Carol Gilligan 在《In a Human Voice》（2023）中點出這種修練所鍛鍊
     - **修復方案：** 滾動式視窗，提高後期提出、但具重要性的觀點的優先權。
 - **虛假等價。** 將有害主張視為同等正當。
     - **修復方案：** 將事實與價值觀分開，維護基本權利，拒絕虛假對等。
-- **合成公眾灌爆。** 最難的失敗模式不是冷漠，而是大規模的假參與。在加州，南海岸空氣品質管理區（South Coast AQMD）的瓦斯設備規則制定，曾遭超過 20,000 則反對意見灌入，透過 AI 驅動的倡議平台送出；[_Los Angeles Times_](https://www.latimes.com/environment/story/2026-02-17/ai-powered-campaign-may-have-killed-key-vote-on-air-quality) 與 [美國規劃協會](https://www.planning.org/planning/2026/jun/your-online-public-engagement-is-under-attack-from-ai/) 的報導都把這件事描述成警訊：平台生成的意見可以稀釋真實社群聲音；加州仍在審議的 [SB 1159](https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB1159) 草案則明定 AI 系統不是開放政府參與中的「公眾成員」。
+- **合成公眾灌爆。** 最難的失敗模式不是冷漠，而是大規模的假參與。在加州，南海岸空氣品質管理區（South Coast AQMD）的瓦斯設備規則制定，曾遭超過 20,000 則反對意見灌入，透過 AI 驅動的倡議平台送出；[_Los Angeles Times_](https://www.latimes.com/environment/story/2026-02-17/ai-powered-campaign-may-have-killed-key-vote-on-air-quality) 與 [美國規劃協會](https://www.planning.org/planning/2026/jun/your-online-public-engagement-is-under-attack-from-ai/) 的報導都把這件事描述成警訊：平台生成的意見可以稀釋真實社群聲音；加州 [SB 1159](https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB1159) 草案已於 2026 年 8 月經州議會一致通過、待州長簽署，明定 AI 系統不是開放政府參與中的「公眾成員」。
     - **修復方案：** 來源證明、速率限制、可問責的參與資格、選擇性揭露身分（團結力 Pack 5），以及能區分表達與放大的稽核軌跡——發言權屬於人類；被演算法倍增的權利不屬於任何人。
 - **被權力劫持。** 監督機制往往向最不希望受到審查的人靠攏。
     - **修復方案：** 保持監督獨立、裁決公開、資金透明、成員定期更替。

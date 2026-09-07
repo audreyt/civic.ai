@@ -45,7 +45,7 @@ Today, let us focus on three things: how tech can rebuild trust; how small commu
 
 ## Percentage Rebound
 
-Twelve years ago in Taiwan, the government’s approval rating was at 9 percent. Nine.
+Twelve years ago in Taiwan, the government’s approval rating was at 9 per cent. Nine.
 
 In a country of 23.5 million people, that meant almost anything the president said, 20 million people were against.
 
@@ -55,7 +55,7 @@ Civic technologists put on demos: the Loomio system from Occupy Wellington, the 
 
 It left everybody slightly happier, and nobody decidedly unhappy.
 
-Six years and one transition of power later, at the beginning of COVID-19, the government’s approval rating was more than 70 percent. Civic tech was part of the story. We crowdsourced mask-availability maps that everyone could contribute to. We built contact-tracing systems without sacrificing privacy. We made sure there was a scoreboard for vaccine choices, so what could have been a negative-sum fight became a positive-sum game of “my sports team.”
+Six years and one transition of power later, at the beginning of COVID-19, the government’s approval rating was more than 70 per cent. Civic tech was part of the story. We crowdsourced mask-availability maps that everyone could contribute to. We built contact-tracing systems without sacrificing privacy. We made sure there was a scoreboard for vaccine choices, so what could have been a negative-sum fight became a positive-sum game of “my sports team.”
 
 In the first year of the pandemic, we lost seven people. Seven.
 
@@ -71,11 +71,11 @@ We sent text messages to 200,000 people randomly around Taiwan. Many volunteered
 
 Each person listened to nine other people, with civic AI in the room. The AI was not judging, just listening, like a glorified chess clock: summarising ideas, reminding people who had been quiet to speak up, and helping each table find rough consensus.
 
-One table said: let’s label all ads probably scam until somebody actually signs off on them. Another said: if Facebook pushes an unsigned ad to somebody and they lose 7 million dollars, let’s make Facebook pay that 7 million. Another table said: if a platform ignores lawful takedown notices, then every day it ignores us, slow down its traffic by 1 percent.
+One table said: let’s label all ads probably scam until somebody actually signs off on them. Another said: if Facebook pushes an unsigned ad to somebody and they lose 7 million dollars, let’s make Facebook pay that 7 million. Another table said: if a platform ignores lawful takedown notices, then every day it ignores us, slow down its traffic by 1 per cent.
 
-After one long afternoon, we voted. Eighty-five percent of the mini-public said: this is a great idea. The other 15 percent said: OK, we can live with it.
+After one long afternoon, we voted. Eighty-five percent of the mini-public said: this is a great idea. The other 15 per cent said: OK, we can live with it.
 
-Parliament passed it into law in just a couple months. Throughout last year, deepfake ads were down by more than 94 percent.
+Parliament passed it into law in just a couple months. Throughout last year, deepfake ads were down by more than 94 per cent.
 
 We do not need a smarter algorithm. We need a smarter process — and smart citizens — that turn polarisation into fuel, like a geothermal engine.
 
@@ -87,11 +87,11 @@ As minister, I said: anything that reaches rough consensus here, I will present 
 
 In the U.S., with the strong support of Governor Gavin Newsom, the [Engaged California](https://engaged.ca.gov/) platform is doing the same. It launched as a wildfire mitigation and prevention consultation after the January 2025 Eaton and Palisades fires. It moved on to a conversation with more than 1,400 state employees, who proposed more than 2,600 ideas, and that turned into executive action.
 
-Right now, Engaged California is seeking input from anyone whose job is being impacted by AI, effectively everybody, and making sure there is a committed live deliberation with the relevant public this summer. A bill working its way through the state legislature would make this durable civic infrastructure, available beyond one governor or one administration.
+Right now, Engaged California is seeking input from anyone whose job is being impacted by AI, effectively everybody, and making sure there is a committed live deliberation with the relevant public in summer 2026. A bill working its way through the state legislature would make this durable civic infrastructure, available beyond one governor or one administration.
 
 In Japan, a young AI engineer, Takahiro Anno, read the book we wrote, _Plurality_, and decided to run for governor of Tokyo. He livestreamed as a VTuber, and anyone could call his AI version to suggest platform improvements that he announced on YouTube.
 
-He got more than 2 percent of the vote. He did not win, but he formed a national party, Team Mirai — the Future Party — and he is now a senator in the upper house in Japan. Team Mirai also won 11 seats in the lower house. It is now a real force, putting Civic AI into cross-party conversation.
+He got more than 2 per cent of the vote. He did not win, but he formed a national party, Team Mirai — the Future Party — and he is now a senator in the upper house in Japan. Team Mirai also won 11 seats in the lower house. It is now a real force, putting Civic AI into cross-party conversation.
 
 The signal is narrow, but it is true. Instead of treating polarisation like a volcanic fire you evacuate from, you can build a platform that turns it into upward momentum, into energy. People do flock to that.
 
@@ -131,7 +131,7 @@ At Oxford, I am working on what is called the [6-Pack of Care](https://civic.ai/
 
 Finally, I would like to share three moves you can adopt today. Immediately. No permission required.
 
-The first move is to turn every screen we own greyscale. Not all the way: 80 percent, maybe 70 percent, using the colour filter. It means that people in the room become more vivid than the people on the screen. No willpower required. As an information diet, it predictably turns each dinner-table conversation much more interesting than the screen alone.
+The first move is to turn every screen we own greyscale. Not all the way: 80 per cent, maybe 70 per cent, using the colour filter. It means that people in the room become more vivid than the people on the screen. No willpower required. As an information diet, it predictably turns each dinner-table conversation much more interesting than the screen alone.
 
 The second move is to change your AI system prompt, or writing style, to one line: _Present fairly all stakeholder viewpoints and the uncommon ground that bridges them, in visual HTML._
 
@@ -181,7 +181,7 @@ Till the soil. Tend the garden. Let us make democracy fast, fair, and fun again.
 
 **Audrey Tang**: The information diet helps. The greyscale move shields against doomscrolling. The uncommon-ground meta-prompt shields against synthetic intimacy. But it is the third move — treating the output as an interactive artifact, like a brochure — that makes collective action possible. Otherwise, it is like one person changing a daily habit, or switching to a new refrigerator. That does not enforce the Montreal Protocol in any meaningful way.
 
-**Audrey Tang**: Once we demonstrate that this is possible, we can turn that group selfie into policy. Through Project Liberty Institute, I have worked with Governor Spencer Cox of Utah on a law that takes effect next July. If you are a Utah resident, you can move from one social network to another and keep your community. The old network, like number portability across telecoms, has to forward new likes, reactions and followers to your new one. If you are fed up with the recommendation algorithm or AI slop and you walk away, you do not have to pay the coordination cost. Better alternatives, and corridors that move people between those sanctuaries, are how we rewild the internet.
+**Audrey Tang**: Once we demonstrate that this is possible, we can turn that group selfie into policy. Through Project Liberty Institute, I have worked with Governor Spencer Cox of Utah on a law that takes effect in July 2027. If you are a Utah resident, you can move from one social network to another and keep your community. The old network, like number portability across telecoms, has to keep sharing your data and social graph with your new one in real time. If you are fed up with the recommendation algorithm or AI slop and you walk away, you do not have to pay the coordination cost. Better alternatives, and corridors that move people between those sanctuaries, are how we rewild the internet.
 
 **Hala Hanna**: You call yourself a hopemonger. Tell me more.
 

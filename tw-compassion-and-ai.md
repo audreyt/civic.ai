@@ -31,7 +31,7 @@ nav_next:
 ## 收聽
 
 <div class="audio-section">
-  <p><em>完整 Podcast 將於 2026 年 4 月 19 日上線。</em></p>
+  <p><em>完整 Podcast 已可於 <a href="https://podcasts.ox.ac.uk/series/accelerating-ai-ethics">Accelerating AI Ethics</a> 收聽。</em></p>
 </div>
 
 ## 完整逐字稿

@@ -23,9 +23,9 @@ permalink: "/tw/5/"
 ### 定義
 
 - **不必曝光的可問責身分。** 智慧體身分應該能證明背後有真實管理者負責，但不必把私人細節攤在公眾面前——這就是選擇性揭露，或稱部分匿名（meronymity）——[Soliman 及其同事](https://doi.org/10.1145/3613904.3642241)在 CHI 2024 為「只揭露自己選定的身分面向、並有可信背書者」所創的詞：證明角色，而不揭露其人。問責不應以肉搜為代價。
-- **互通性勝於平台鎖定。** 可攜性和開放協定把競爭轉移到關懷品質。退出權保障自由，因為人們離開時不必失去自己的關係、歷史和受眾——這是 Albert Hirschman 所說的[退出](https://www.hup.harvard.edu/books/9780674276604)，只有在離開真正可行時，才能約束在位者。猶他州的《數位選擇法案》（Digital Choice Act）——要求社群網路在使用者遷移到新平台時，把按讚、追蹤者與社交圖譜一併轉送過去——正指出了方向。
+- **互通性勝於平台鎖定。** 可攜性和開放協定把競爭轉移到關懷品質。退出權保障自由，因為人們離開時不必失去自己的關係、歷史和受眾——這是 Albert Hirschman 所說的[退出](https://www.hup.harvard.edu/books/9780674276604)，只有在離開真正可行時，才能約束在位者。猶他州的《數位選擇法》（Digital Choice Act）——要求社群網路交出使用者的個人資料（含社交圖譜），並與使用者遷往的新平台持續即時共享——正指出了方向。
 - **聯邦勝於單體。** 分享威脅情報，但不要造出單一瓶頸。本地政策留在本地，防禦能力則能跨機構累積。
-- **表達不等於放大。** 推薦系統的問責是公民義務——正如 Renée DiResta 在 2018 年所說，[言論自由不等於觸及自由](https://www.wired.com/story/free-speech-is-not-the-same-as-free-reach/)，也是《[讓第 230 條落日](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/)》一文的論點。在公民脈絡裡，排序應獎勵跨群體的理由交換與共同解題，而不是只獎勵最快煽動某一群集的內容。加州仍在審議的 [SB 1159](https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB1159) 草案，擬以法條明定：AI 系統不是開放政府參與中的「公眾成員」。發言權屬於人類；被演算法倍增的權利不屬於任何人。
+- **表達不等於放大。** 推薦系統的問責是公民義務——正如 Renée DiResta 在 2018 年所說，[言論自由不等於觸及自由](https://www.wired.com/story/free-speech-is-not-the-same-as-free-reach/)，也是《[讓第 230 條落日](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/)》一文的論點。在公民脈絡裡，排序應獎勵跨群體的理由交換與共同解題，而不是只獎勵最快煽動某一群集的內容。加州 [SB 1159](https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB1159) 草案已於 2026 年 8 月經州議會一致通過、待州長簽署，擬以法條明定：AI 系統不是開放政府參與中的「公眾成員」。發言權屬於人類；被演算法倍增的權利不屬於任何人。
 
 ### 為什麼重要
 
@@ -39,14 +39,14 @@ permalink: "/tw/5/"
 
 卡內基（Carnegie）那逾 2,500 座公共圖書館之所以促進民主，靠的不是建築本身，而是開架書庫：讀者親自在書架間瀏覽，而不是央求館員代為取書。把能力鎖在專有 API 後面的垂直 AI 平台，重演的正是閉架模式；開放權重模型、開放協定與共享評測登錄庫，則是開架書庫的當代對應——這種基礎設施把社群當成有能力的行動者，而不是只能依平台條款受服務的消費者。
 
-知識與石油不同，是「反競用性」（anti-rival）的資源——這是 Steven Weber 在《開源的成功》中所創的[詞](https://www.hup.harvard.edu/books/9780674018587)：使用讓它更豐饒，而不是更耗竭。開放協定也是如此——eduroam 每多一所機構加入，就對每位成員更有價值，而沒有任何參與者能獨佔這份增益。配備了團結力的生態系統，也以同樣的方式運作：當一座城市採用選擇性揭露的證明，其他每座城市都能以趨近於零的邊際成本採用同一套標準。這一切都不會自然湧現；它需要把法律當作基礎設施——「互通性即公共財」的立法，猶他州的《數位選擇法案》正是運作中的原型。團結力，正是個人關懷循環接上公地的地方，借鑒 Elinor Ostrom 在《[跨越公地悲劇](https://doi.org/10.1017/CBO9780511807763)》（_[Governing the Commons](https://doi.org/10.1017/CBO9780511807763)_）中的洞察：共享資源需要明確的邊界與漸進的制裁才能長久維持。
+知識與石油不同，是「反競用性」（anti-rival）的資源——這是 Steven Weber 在《開源的成功》中所創的[詞](https://www.hup.harvard.edu/books/9780674018587)：使用讓它更豐饒，而不是更耗竭。開放協定也是如此——eduroam 每多一所機構加入，就對每位成員更有價值，而沒有任何參與者能獨佔這份增益。配備了團結力的生態系統，也以同樣的方式運作：當一座城市採用選擇性揭露的證明，其他每座城市都能以趨近於零的邊際成本採用同一套標準。這一切都不會自然湧現；它需要把法律當作基礎設施——「互通性即公共財」的立法，猶他州的《數位選擇法》正是運作中的原型。團結力，正是個人關懷循環接上公地的地方，借鑒 Elinor Ostrom 在《[跨越公地悲劇](https://doi.org/10.1017/CBO9780511807763)》（_[Governing the Commons](https://doi.org/10.1017/CBO9780511807763)_）中的洞察：共享資源需要明確的邊界與漸進的制裁才能長久維持。
 
 ### 實際上長什麼樣子
 
 - **選擇性揭露身分。** 智慧體、組織與個人都擁有可驗證的證明，由受信任的託管者保存；公開證明保持最小，但挑戰與撤銷都是真實可行的。
 - **社群可攜性。** 使用者可以匯出社交圖譜和內容，通過互通性測試，並在離開時保留自己的受眾。退出不再等於社會流放，自由才變得實際。供應商鎖定會把商業上的不便，變成人們無法退出的關懷關係。
 - **罕見共識稽核。** 平台公布罕見共識指數——衡量共同決策中真正獲得跨群體參與和背書的比例。這正是[搭橋式排序](https://www.belfercenter.org/publication/bridging-based-ranking)在排序資訊流時讀取的同一種跨群體訊號，在這裡從排序政策升格為公開稽核。多元不再只是品牌口號，而是能被看見的事實。這項指數不能替代真正的多元；它讓真正的多元更難造假，而且必須對照 Pack 1 的代表性落差一起讀——因為抬高共同背書最便宜的方法，就是縮限誰能進到房間裡。
-- **聯邦式安全網路。** 夥伴在自己的文化脈絡中偵測危害，透過開放工具分享所能分享的，並把執行留在本地，而不是把一切交給單一中心。[ROOST](https://roost.tools) 示範的是這項目的中可重用、可自行託管的那一層——Osprey 做事件回應，Coop 做審查——不是獨立 AI 已經彼此分享威脅情報、或以聯邦學習互相訓練的網路。
+- **聯邦式安全網路。** 夥伴在自己的文化脈絡中偵測危害，透過開放工具分享所能分享的，並把執行留在本地，而不是把一切交給單一中心。[ROOST](https://roost.tools) 示範的是這項目標中可重用、可自行託管的那一層——Osprey 做事件回應，Coop 做審查——但還不是獨立 AI 彼此分享威脅情報、或以聯邦學習互相訓練的網路。
 
 - **協定層級規範。** 用機器可讀的合作條款寫下共同義務：未經同意不得抓取、必須尊重申訴 webhook、必須尊重退出。
 
@@ -98,7 +98,7 @@ permalink: "/tw/5/"
 
 - Tronto，《[Caring Democracy](https://nyupress.org/9780814770344/caring-democracy/)》（2013），頁 23、35、169——共同關懷、其道德品質，以及收回擋箭牌；Sevenhuijsen，《[Citizenship and the Ethics of Care](https://www.routledge.com/Citizenship-and-the-Ethics-of-Care-Feminist-Considerations-on-Justice-Morality-and-Politics/Sevenhuijsen/p/book/9780415170826)》（1998）。
 - Hirschman，《[Exit, Voice, and Loyalty](https://www.hup.harvard.edu/books/9780674276604)》（1970）——退出作為約束。
-- Weber，《[The Success of Open Source](https://www.hup.harvard.edu/books/9780674018587)》（2004）——反競用性財貨；Benkler，《[The Wealth of Networks](https://www.benkler.org/Benkler_Wealth_Of_Networks.pdf)》（2006）——開架書庫。
+- Weber，《[The Success of Open Source](https://www.hup.harvard.edu/books/9780674018587)》（2004）——反競用性財貨；Benkler，《[The Wealth of Networks](https://yalebooks.yale.edu/book/9780300125771/the-wealth-of-networks/)》（2006）——開架書庫。
 - Soliman 等人，[〈Meronymous Communication〉](https://doi.org/10.1145/3613904.3642241)（CHI 2024）——部分匿名。
 - DiResta，[〈Free Speech Is Not the Same As Free Reach〉](https://www.wired.com/story/free-speech-is-not-the-same-as-free-reach/)（2018）；Lanier、Stanger 與唐鳳，[〈Sunset Section 230〉](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/)（2026）——表達不等於放大。
 - Ovadya，《[Bridging-Based Ranking](https://www.belfercenter.org/publication/bridging-based-ranking)》（2022）——公民排序規則。
