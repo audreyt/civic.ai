@@ -44,17 +44,18 @@
         "ci": "vp check && vp test && vp run sensemaker:test && vp run sensemaker:verify && vp build && vp run check-links && vp run check:hybrid && vp run check:astro-output && vp run check:search && vp run check:parity && vp run worker:typecheck && vp run worker:test"
     },
     "dependencies": {
+        "astro": "^7.0.6",
+        "gray-matter": "^4.0.3",
+        "js-yaml": "4.3.1",
+        "markdown-it": "^14.1.0",
         "markdown-it-anchor": "^9.2.0",
         "markdown-it-footnote": "^4.0.0",
+        "nunjucks": "^3.2.4",
         "pangu": "^7.2.1",
         "remark": "^15.0.1",
         "remark-pangu": "^2.2.0",
         "remark-parse": "^11.0.0",
-        "remark-stringify": "^11.0.0",
-        "astro": "^7.0.6",
-        "gray-matter": "^4.0.3",
-        "markdown-it": "^14.1.0",
-        "nunjucks": "^3.2.4"
+        "remark-stringify": "^11.0.0"
     },
     "devDependencies": {
         "@vitest/coverage-v8": "4.1.10",
