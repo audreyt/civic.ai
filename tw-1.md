@@ -40,7 +40,7 @@ Carol Gilligan 在《In a Human Voice》（2023）中點出這種修練所鍛鍊
 
 ### 實作上長什麼樣子
 
-- **尋找缺席者。**「我們沒有聽到夜班照護者的聲音——去找到他們。」缺席的聲音本身就是證據。Hélène Landemore 在 2026 年的《[Politics Without Politicians](https://news.yale.edu/2026/02/18/bring-out-shy-people-case-politics-without-politicians)》中，借用了 G. K. Chesterton 所說的民主「[快樂女主人](https://www.online-literature.com/chesterton/tremendous-trifles/32/)」考驗——「一切真正的民主，都是（像快樂女主人那樣）把害羞的人請出來的努力」：重點不在於門是否敞開，而在於是否把安靜的人帶進房間。
+- **尋找缺席者。**「我們沒有聽到夜班照護者的聲音——去找到他們。」缺席的聲音本身就是證據。Hélène Landemore 在耶魯新聞專訪中談及《Politics Without Politicians: The Case for Citizen Rule》（2026）時，借用了 G. K. Chesterton 所說的民主「[快樂女主人](https://www.online-literature.com/chesterton/tremendous-trifles/32/)」考驗——「一切真正的民主，都是（像快樂女主人那樣）把害羞的人請出來的努力」：重點不在於門是否敞開，而在於是否把安靜的人帶進房間。在《[Democratic Reason: Politics, Collective Intelligence, and the Rule of the Many](https://doi.org/10.1515/9781400845538)》（2013）中，她主張：在適當條件下，認知多樣的集體可以勝過少數人做成的決定——這是關於視角多樣性的條件論證，並不保證迷你公眾代表全體公眾，也不保證每次都更明智。《[Open Democracy: Reinventing Popular Rule for the Twenty-First Century](https://press.princeton.edu/books/hardcover/9780691181998/open-democracy)》（2020）把這套論證發展成開放迷你公眾的主張；隨機或分層抽選是為認知多樣性而設的設計，並非自動的代表性。
 - **公開工作過程——以小冊子呈現。** 把 AI 的產出當成小冊子（brochure）來呈現：可共享、可編輯的工藝，讓每項主張都連結到來源並標示分歧，而不是把分歧抹平成虛假共識的私下聊天回覆。
 - **公平分配注意力。** 不要只追隨最響亮的聲音。給受影響最大的人時間。對那些規模較小、較難接觸、也更容易被忽略的群體，要額外投入注意力。
 - **解讀衝突樣態。** 在繪製分歧地圖時，問自己：是否總是同一群人在每個議題上彼此對立（強化型裂痕，reinforcing cleavages），還是聯盟會因議題而改變（交錯型裂痕，cross-cutting cleavages——值得尋找的橋樑就在這裡；這組詞彙來自政治學，出自 Lipset 與 Rokkan）？地圖應該讓能跨越分歧的人浮現，也標示那些需要額外照料的裂口。
@@ -109,8 +109,8 @@ Carol Gilligan 在《In a Human Voice》（2023）中點出這種修練所鍛鍊
 ### 本力文獻
 
 - Fisher 與 Tronto，[〈Toward a Feminist Theory of Caring〉](https://experts.umn.edu/en/publications/toward-a-feminist-theory-of-caring/)（1990）；Tronto，《[Moral Boundaries](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)》（1993），頁 105–108、120–121——階段、道德要素與特權式不負責。
-- van Wynsberghe，[〈Designing Robots for Care〉](https://doi.org/10.1007/s11948-011-9343-6)（2013）——首次把四個階段用作技術設計框架。
-- Chesterton，[〈The Travellers in State〉](https://www.online-literature.com/chesterton/tremendous-trifles/32/)（1909），經 Landemore《[Politics Without Politicians](https://news.yale.edu/2026/02/18/bring-out-shy-people-case-politics-without-politicians)》（2026）引用——快樂女主人。
+- van Wynsberghe，[〈Designing Robots for Care〉](https://doi.org/10.1007/s11948-011-9343-6)（2013）——把四個階段帶進機器的一項文獻先例。
+- Chesterton，[〈The Travellers in State〉](https://www.online-literature.com/chesterton/tremendous-trifles/32/)（1909），經 Landemore《Politics Without Politicians》（2026）引用，見[耶魯新聞專訪](https://news.yale.edu/2026/02/18/bring-out-shy-people-case-politics-without-politicians)——快樂女主人；Landemore，《[Democratic Reason](https://doi.org/10.1515/9781400845538)》（2013）與《[Open Democracy](https://press.princeton.edu/books/hardcover/9780691181998/open-democracy)》（2020）——條件式認知多樣性論證，而非代表性保證。
 - Ovadya，《[Bridging-Based Ranking](https://www.belfercenter.org/publication/bridging-based-ranking)》（2022）；Small 等人，[〈Polis〉](https://doi.org/10.6035/recerca.5516)（2021）——搭橋地圖。
 - Arnstein，[〈A Ladder of Citizen Participation〉](https://doi.org/10.1080/01944366908977225)（1969）——傾聽劇場即象徵性參與。
 - Tessler 等人，[〈AI Can Help Humans Find Common Ground〉](https://doi.org/10.1126/science.adq2852)（《Science》，2024）——模型中介者能找出對立群體共同背書陳述的證據。

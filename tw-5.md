@@ -18,12 +18,12 @@ permalink: "/tw/5/"
 
 在《[關懷民主](https://nyupress.org/9780814770344/caring-democracy/)》（_[Caring Democracy](https://nyupress.org/9780814770344/caring-democracy/)_）中，（頁 23）Joan Tronto 的第五階段「共同關懷」要求：關懷必須與對正義、平等和所有人自由的民主承諾保持一致——這個階段的道德品質，多元、溝通、信任與尊重，她取自 Selma Sevenhuijsen 的《[Citizenship and the Ethics of Care](https://www.routledge.com/Citizenship-and-the-Ethics-of-Care-Feminist-Considerations-on-Justice-Morality-and-Politics/Sevenhuijsen/p/book/9780415170826)》。對仁工智慧而言，團結力提出的是一個結構性問題：這個生態系統的規則，究竟讓合作更容易被實踐，還是反而讓支配更容易？
 
-這個問題也有一種技術上的讀法。標準的多智慧體強化學習，最佳化的是各智慧體報酬的簡單加總——各自領取獎勵的智慧體在公地賽局中會背叛，正如 [Leibo 及其同事](https://arxiv.org/abs/1702.03037)在 2017 年針對序列社會困境所示；也正如 Trivedi 及其同事在《[唯我超智慧不太可能具備合作性](https://arxiv.org/abs/2606.03237)》（_[Solipsistic Superintelligence is Unlikely to be Cooperative](https://arxiv.org/abs/2606.03237)_）中所指出的，單邊最佳化是自我削弱的，因為合作是相互依存的行動者之間的均衡選擇問題——這正是為什麼建立在它之上的系統，總是可靠地產出極化、參與度最大化與公地的崩解。形式上說，團結力正是那個無法寫成個體加總的項：一種朝向共享意義的群體層次壓力，沒有任何單一智慧體能獨力滿足——只有整個群體才能。這還不是定論；但照這種讀法，一個省略了這一項的仁工智慧架構，不只在政治上孤單——在技術上也是不完整的。
+這個問題也有一種技術上的讀法。[Leibo 及其同事](https://arxiv.org/abs/1702.03037)在 2017 年研究序列社會困境的模擬：各自領取獎勵的智慧體可能合作，也可能背叛，取決於賽局與能力。Trivedi 及其同事的《[唯我超智慧不太可能具備合作性](https://arxiv.org/abs/2606.03237)》探討：在相互依存的行動者之間，單邊最佳化為何可能失敗。Taniguchi 及其同事提出另一種目標：加入任何單一智慧體都無法獨力滿足的集體項。這是團結的一種理論表述，並不證明各自領取獎勵的系統必然極化，也不證明公民合作非得採用這個特定項。
 
 ### 定義
 
 - **不必曝光的可問責身分。** 智慧體身分應該能證明背後有真實管理者負責，但不必把私人細節攤在公眾面前——這就是選擇性揭露，或稱部分匿名（meronymity）——[Soliman 及其同事](https://doi.org/10.1145/3613904.3642241)在 CHI 2024 為「只揭露自己選定的身分面向、並有可信背書者」所創的詞：證明角色，而不揭露其人。問責不應以肉搜為代價。
-- **互通性勝於平台鎖定。** 可攜性和開放協定把競爭轉移到關懷品質。退出權保障自由，因為人們離開時不必失去自己的關係、歷史和受眾——這是 Albert Hirschman 所說的[退出](https://www.hup.harvard.edu/books/9780674276604)，只有在離開真正可行時，才能約束在位者。猶他州的《數位選擇法》（Digital Choice Act）——要求社群網路交出使用者的個人資料（含社交圖譜），並與使用者遷往的新平台持續即時共享——正指出了方向。
+- **互通性勝於平台鎖定。** 可攜性和開放協定把競爭轉移到關懷品質。退出權保障自由，因為人們離開時不必失去自己的關係、歷史和受眾——這是 Albert Hirschman 所說的[退出](https://www.hup.harvard.edu/books/9780674276604)，只有在離開真正可行時，才能約束在位者。猶他州的《數位選擇法》（H.B. 418，2025；現為第 13-81 章）已要求提供可攜的個人資料副本，含社交圖譜（[§13-81-201](https://le.utah.gov/xcode/Title13/Chapter81/13-81-S201.html)，2026 年 7 月 1 日生效），以技術可行、實務可使用為限。現行互通性文本是[同步共享](https://le.utah.gov/xcode/Title13/Chapter81/13-81-S202.html)（§13-81-202），並排除推論與排序系統。H.B. 408（2026）自 2027 年 7 月 1 日起改為持續即時轉送。
 - **聯邦勝於單體。** 分享威脅情報，但不要造出單一瓶頸。本地政策留在本地，防禦能力則能跨機構累積。
 - **表達不等於放大。** 推薦系統的問責是公民義務——正如 Renée DiResta 在 2018 年所說，[言論自由不等於觸及自由](https://www.wired.com/story/free-speech-is-not-the-same-as-free-reach/)，也是《[讓第 230 條落日](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/)》一文的論點。在公民脈絡裡，排序應獎勵跨群體的理由交換與共同解題，而不是只獎勵最快煽動某一群集的內容。加州 [SB 1159](https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB1159) 草案已於 2026 年 8 月經州議會一致通過、待州長簽署，擬以法條明定：AI 系統不是開放政府參與中的「公眾成員」。發言權屬於人類；被演算法倍增的權利不屬於任何人。
 
@@ -31,7 +31,7 @@ permalink: "/tw/5/"
 
 若更大的基礎設施獎勵平台鎖定、不透明與煽動情緒，再好的在地修復也會變得脆弱。一個系統可以在單一部署裡很有覺察力、負責力、勝任力與回應力，卻仍被困在敵對的市場或協定環境裡。
 
-團結力意味著沒有人能獲得不關懷的結構性豁免。Tronto 的比喻是：「我們首先要做的，就是把所有那些逃避關懷責任的免責擋箭牌收回來。」對 AI 系統而言，等價的擋箭牌是：「我們太大了，無法被監管」、「使用者在服務條款裡已經同意了」、「我們開放了權重」，以及「我們捐款支持了安全研究」。團結力透過讓合作在結構上不可迴避，來收回這些擋箭牌。
+團結力意味著沒有人能獲得不關懷的結構性豁免。Tronto 的比喻是：「我們首先要做的，就是把所有那些逃避關懷責任的免責擋箭牌收回來。」對 AI 系統而言，等價的擋箭牌是：「我們太大了，無法被監管」、「使用者在服務條款裡已經同意了」、「我們開放了權重」，以及「我們捐款支持了安全研究」。團結力透過讓合作比背叛更省力來收回這些擋箭牌，而不假裝架構能使俘獲變得不可能。
 
 團結力是六力真正變成民主基礎設施的地方。它問的是：正義、平等、自由、多元與相互問責，究竟是因為這個生態系統而更容易被實踐，還是只能逆著它勉力維持？
 
@@ -39,7 +39,7 @@ permalink: "/tw/5/"
 
 卡內基（Carnegie）那逾 2,500 座公共圖書館之所以促進民主，靠的不是建築本身，而是開架書庫：讀者親自在書架間瀏覽，而不是央求館員代為取書。把能力鎖在專有 API 後面的垂直 AI 平台，重演的正是閉架模式；開放權重模型、開放協定與共享評測登錄庫，則是開架書庫的當代對應——這種基礎設施把社群當成有能力的行動者，而不是只能依平台條款受服務的消費者。
 
-知識與石油不同，是「反競用性」（anti-rival）的資源——這是 Steven Weber 在《開源的成功》中所創的[詞](https://www.hup.harvard.edu/books/9780674018587)：使用讓它更豐饒，而不是更耗竭。開放協定也是如此——eduroam 每多一所機構加入，就對每位成員更有價值，而沒有任何參與者能獨佔這份增益。配備了團結力的生態系統，也以同樣的方式運作：當一座城市採用選擇性揭露的證明，其他每座城市都能以趨近於零的邊際成本採用同一套標準。這一切都不會自然湧現；它需要把法律當作基礎設施——「互通性即公共財」的立法，猶他州的《數位選擇法》正是運作中的原型。團結力，正是個人關懷循環接上公地的地方，借鑒 Elinor Ostrom 在《[跨越公地悲劇](https://doi.org/10.1017/CBO9780511807763)》（_[Governing the Commons](https://doi.org/10.1017/CBO9780511807763)_）中的洞察：共享資源需要明確的邊界與漸進的制裁才能長久維持。
+知識與石油不同，是「反競用性」（anti-rival）的資源——這是 Steven Weber 在《開源的成功》中所創的[詞](https://www.hup.harvard.edu/books/9780674018587)：使用讓它更豐饒，而不是更耗竭。開放協定也是如此——eduroam 每多一所機構加入，就對每位成員更有價值，而沒有任何參與者能獨佔這份增益。配備了團結力的生態系統，也以同樣的方式運作：當一座城市採用選擇性揭露的證明，其他每座城市都能以趨近於零的邊際成本採用同一套標準。這一切都不會自然湧現；它需要把法律當作基礎設施——「互通性即公共財」的立法，猶他州的《數位選擇法》是已生效的可攜性成文法，尚不是 2027 年的持續轉送義務。團結力，正是個人關懷循環接上公地的地方，借鑒 Elinor Ostrom 在《[跨越公地悲劇](https://doi.org/10.1017/CBO9780511807763)》（_[Governing the Commons](https://doi.org/10.1017/CBO9780511807763)_）中的洞察：共享資源需要明確的邊界與漸進的制裁才能長久維持。
 
 ### 實際上長什麼樣子
 
@@ -103,8 +103,8 @@ permalink: "/tw/5/"
 - DiResta，[〈Free Speech Is Not the Same As Free Reach〉](https://www.wired.com/story/free-speech-is-not-the-same-as-free-reach/)（2018）；Lanier、Stanger 與唐鳳，[〈Sunset Section 230〉](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/)（2026）——表達不等於放大。
 - Ovadya，《[Bridging-Based Ranking](https://www.belfercenter.org/publication/bridging-based-ranking)》（2022）——公民排序規則。
 - Ostrom，《[Governing the Commons](https://doi.org/10.1017/CBO9780511807763)》（1990）與[〈Beyond Markets and States〉](https://doi.org/10.1257/aer.100.3.641)（2010）——公共資源設計原則與多中心治理。
-- Leibo 等人，[〈Multi-agent Reinforcement Learning in Sequential Social Dilemmas〉](https://arxiv.org/abs/1702.03037)（2017）；Taniguchi 等人，[〈Symbiotic Alignment〉](https://doi.org/10.1162/ARTL.a.475)（2026）；Trivedi 等人，[〈Solipsistic Superintelligence〉](https://arxiv.org/abs/2606.03237)（2026）——技術上的讀法。
-- 猶他州 H.B. 418，[《數位選擇法》](https://le.utah.gov/~2025/bills/static/HB0418.html)（2025）——寫進成文法的社交可攜性。
+- Leibo 等人，[〈Multi-agent Reinforcement Learning in Sequential Social Dilemmas〉](https://arxiv.org/abs/1702.03037)（2017）；Taniguchi 等人，[〈Symbiotic Alignment via Collective Predictive Coding: A Theoretical Framework for Co-Creative Human–AI Ecosystems〉](https://doi.org/10.1162/ARTL.a.475)（2026）；Trivedi 等人，[〈Solipsistic Superintelligence〉](https://arxiv.org/abs/2606.03237)（2026）——理論上的技術讀法，不是田野結果。
+- 猶他州 H.B. 418，[《數位選擇法》](https://le.utah.gov/~2025/bills/static/HB0418.html)（2025），現為 [§§13-81-201 與 13-81-202](https://le.utah.gov/xcode/Title13/Chapter81/13-81.html)（2026 年 7 月 1 日生效；2027 年 7 月 1 日由後法取代）；[H.B. 408](https://le.utah.gov/Session/2026/bills/enrolled/HB0408.pdf)（2026）——可攜性已生效；持續即時轉送自 2027 年 7 月 1 日起。
 - 完整足跡見〈[文獻與延伸閱讀](/tw/sources/)〉。
 
 <noscript><img src="/img/pack5-2-tw.jpg" alt="手繪漫畫頁，標題為「NOT：相互保證毀滅／BUT：盡可能雙贏——SOLUTION」：在每個「什麼」背後追問更深的「為什麼」，再打造一個同時滿足雙方的新「什麼」——兩位廚師發現一人要果皮做利口酒、一人要果肉榨汁，於是雙方百分之百滿足、毫無浪費；台灣也曾用 pol.is 平台把分歧的時區辯論化為雙贏的就業金卡，把科學家與藝術家迎進台灣，示範更好的討論如何幫助大家共贏。" class="overview-image" width="1437" height="1999" loading="lazy" decoding="async"></noscript>

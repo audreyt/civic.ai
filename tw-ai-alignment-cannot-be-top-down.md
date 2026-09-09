@@ -70,7 +70,7 @@ audio: /audio/ai-alignment-cannot-be-top-down.mp3
 
 ## 實踐中的覺察力
 
-**覺察力並非偶然出現；它建立在明確的倫理基礎上。** 在明尼蘇達大學 Joan Tronto 教授的關懷倫理基礎上，我與 Caroline Emmer De Albuquerque Green（牛津大學 AI 倫理研究所）共同開發了 [關懷六力（6-Pack of Care）](https://civic.ai/manifesto/)——六項環環相扣的實踐，將倫理原則轉化為制度設計。該框架承認一個基本的不對稱性：AI 以超出人類監督的速度和規模運作。為了保持對齊，我們的機構必須演進以匹配這種節奏，透過持續學習、回應和重新校準，並在每個層級都有人在迴路中。
+**覺察力並非偶然出現；它建立在明確的倫理基礎上。** 在 [Berenice Fisher 與 Joan Tronto](https://experts.umn.edu/en/publications/toward-a-feminist-theory-of-caring/) 於 1990 年提出的關懷倫理階段，以及 Aimee van Wynsberghe 2013 年把關懷帶進機器的[以關懷為中心的設計](https://doi.org/10.1007/s11948-011-9343-6)之上，我與 Caroline Emmer De Albuquerque Green（牛津大學 AI 倫理研究所）共同開發了 [關懷六力（6-Pack of Care）](https://civic.ai/manifesto/)——六項環環相扣的實踐，將倫理原則轉化為制度設計。該框架承認一個基本的不對稱性：AI 以超出人類監督的速度與規模運作。為了保持對齊，我們的制度必須學會持續學習、回應與重新校準，讓人在每一層都在迴路之中。
 
 <div class="overview-section">
 <noscript><img src="/img/overview-small-tw.png" alt="關懷六力插圖，由 Nicky Case 繪製" class="overview-image" width="1280" height="1781" loading="lazy" decoding="async"></noscript>
@@ -89,9 +89,9 @@ audio: /audio/ai-alignment-cannot-be-top-down.mp3
 
 **覺察力始於打開那個黑盒子。** 當 AI 企業使其推理對公眾清晰可讀時，對齊就成為共同責任，而非專有秘密。
 
-一些開發者確實發布了各種類型的 [模型憲法](https://www.anthropic.com/news/claudes-constitution) 和 [公開規格](https://model-spec.openai.com/2025-10-27.html)，用淺顯的語言定義系統的預期行為，並像開源程式碼一樣進行版本控制。每個條款代表一個承諾。一些原型也在 [測試推理階段引用](https://cookbook.openai.com/articles/gpt-oss-safeguard-guide)，其中 AI 模型的輸出引用指導輸出背後推理的政策條款——這是一種輕量級但強大的稽核機制。
+一些開發者確實發布了各種類型的 [模型憲法](https://www.anthropic.com/news/claudes-constitution) 和 [公開規格](https://model-spec.openai.com/2025-10-27.html)，用淺顯的語言定義系統的預期行為，並像開源程式碼一樣進行版本控制。每個條款都是公開的承諾。公開讓外人可以檢查這個主張；它本身並不能讓承諾自動可強制執行。[gpt-oss-safeguard](https://openai.com/index/introducing-gpt-oss-safeguard/) 這類模型可以依照開發者撰寫的政策，對內容進行分類。分類結果是稽核的一項輸入，並不能證明部署中的系統遵守了整份章程。
 
-**一旦意圖、推理和修訂被公開，外部人士——記者、研究人員、公民技術專家——就可以測試系統是否履行其承諾。** 這樣做，他們將對齊從基於信仰轉變為可驗證，從封閉程序轉變為可見的集體引導行為。
+**一旦意圖、推理和修訂被公開，外部人士——記者、研究人員、公民技術專家——就可以測試系統是否履行其承諾。** 那是驗證的條件，不是對齊已變得可強制執行的證明。
 
 ### 市場設計
 
@@ -99,7 +99,7 @@ audio: /audio/ai-alignment-cannot-be-top-down.mp3
 
 **市場的結構方式，決定了覺察力是可長可久，還是適得其反。** 可攜性強制規定允許使用者在平台之間移動資料。這降低了想要離開有害平台的使用者的轉換成本，促使平台以關懷而非綁定來爭取使用者。採購標準可以迫使政府採用更可稽核的系統，訂閱模式允許公司專注於使用者信任和社群健康，而不是透過煽動性和分裂性內容追逐廣告收入。
 
-**一些司法管轄區已經朝這個方向邁進。** 例如，猶他州的 [數位選擇法 (H.B. 418)](https://le.utah.gov/~2025/bills/static/HB0418.html) [建立](https://ash.harvard.edu/resources/utah-digital-choice-act-reshaping-social-media/) 了更大的社群媒體使用者資料可攜性和互通性，要求平台讓使用者的社交網絡可在服務之間轉移。在 [歐洲](https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained) 和 [美國國會](https://www.congress.gov/bill/119th-congress/senate-bill/1634/text) 討論的類似提案將把這種可攜性擴展到 AI 生態系統。
+**一些司法管轄區已經朝這個方向邁進。** 例如，猶他州的 [數位選擇法 (H.B. 418)](https://le.utah.gov/~2025/bills/static/HB0418.html) 已要求提供可攜的個人資料副本，含社交圖譜（[§13-81-201](https://le.utah.gov/xcode/Title13/Chapter81/13-81-S201.html)，2026 年 7 月 1 日生效）。現行互通性文本是同步共享（[§13-81-202](https://le.utah.gov/xcode/Title13/Chapter81/13-81-S202.html)），受技術可行、實務可行以及推論／排序排除條款限制。[H.B. 408](https://le.utah.gov/Session/2026/bills/enrolled/HB0408.pdf)（2026）自 2027 年 7 月 1 日起改為持續即時轉送。在 [歐洲](https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained) 與 [美國國會](https://www.congress.gov/bill/119th-congress/senate-bill/1634/text) 討論中的類似提案，則可能把這種可攜性延伸到 AI 生態系。
 
 以這些方式轉移市場誘因可以使覺察力在經濟上可行。當關懷成為競爭優勢時，AI 的商業邏輯開始與社群價值觀對齊。
 
@@ -109,13 +109,13 @@ audio: /audio/ai-alignment-cannot-be-top-down.mp3
 
 基礎模型旨在通用，而社群規模的助理則針對社群的特定歷史、方言和規範進行調整，作為全球技術與在地現實之間的中介。透過社群撰寫的評測、申訴迴路，以及在適當情況下使用像[社群回饋強化學習 (RLCF)](https://arxiv.org/pdf/2506.24118)這樣的系統，社群規模的助理可以把分歧轉化為意義建構與問題解決。
 
-像 [Polis](https://youtu.be/VbCZvU7i7VY?si=xxFvUkrTG3XoPak4&t=125) 這樣的平台，一個對公眾投票進行即時分析以建立政策辯論共識的機器學習平台，已經揭示了這在實踐中的樣子。當結合誠信基礎設施——由具代表性的公民團體監督、可驗證的真人身分憑證和透明日誌——AI 賦能的中介可以填補一體適用的全球模型必然遺漏的空白，使 AI 治理具適應性、多元化且可即時稽核。
+像 [Polis](https://youtu.be/VbCZvU7i7VY?si=xxFvUkrTG3XoPak4&t=125) 這樣的平台，一個對公眾投票進行即時分析以建立政策辯論共識的機器學習平台，已經揭示了這在實踐中的樣子。當結合誠信基礎設施——由公民團體監督（往往是分層自願報名的迷你公眾，不是全體公眾）、可驗證的真人身分憑證和透明日誌——AI 賦能的中介可以填補一體適用的全球模型必然遺漏的空白。那是適應性、多元、可稽核治理的設計，不是它已經如此的證明。
 
 ### 從 1% 試點到 99% 採用
 
 **如果這些覺察力的槓桿僅限於少數城市或實驗室的實驗，那將無關緊要。** 引導需要規模；它需要從試點轉向數十億人可以依賴的基礎設施。
 
-在高層次上，順序很重要。前沿 AI 企業必須先行，透過模型規格和條款級別的透明度開放系統。平台必須緊隨其後，建立用於搭橋備註的 API 並採用可攜性協定，允許社群和使用者歷史跨服務攜帶。監管者在定義使可攜性和互通性成為可能的標準方面發揮平行作用，而公民社會則透過代表性公民監督和社群規模的助理推進多元主義。
+在高層次上，順序很重要。前沿 AI 企業必須先行，透過模型規格和條款級別的透明度開放系統。平台必須緊隨其後，建立用於搭橋備註的 API 並採用可攜性協定，允許社群和使用者歷史跨服務攜帶。監管者在定義使可攜性和互通性成為可能的標準方面發揮平行作用，而公民社會則透過公民監督——往往是分層迷你公眾，不是全體公眾——和社群規模的助理推進多元主義。
 
 成功也必須是可衡量的：搭橋備註到達的速度有多快，它們減少極化的效果如何，輸出引用其治理規則的頻率，以及使用者在社群網路和 AI 服務之間移動的自由度。這些指標告訴我們覺察力在實踐中是否有效，以及哪裡需要修正路線。
 
