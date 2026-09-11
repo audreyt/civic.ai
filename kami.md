@@ -72,11 +72,9 @@ One more thing to hold onto: private does not mean honest. A little brain on you
 
 ## Give it a memory
 
-Good news: there is nothing to set up here. Your Kami remembers you on its own.
+The aim is to keep what it learns about your place — facts, corrections, and whom it serves — in plain notes on your machine. Open those notes and check what was actually saved; memory and background tidying depend on your setup. Local storage does not by itself keep a conversation private: remote models, web tools, connectors, or synchronisation can send data elsewhere. Check those settings before giving it private material.
 
-Everything it learns about your place — the facts, the corrections, who it serves — it writes down in plain notes on your machine, and reads them again each time you talk. In the background it tidies those notes: the day's scribbles get sorted, whatever mattered is kept in a long-term note (MEMORY.md), and a dream diary keeps a readable record of each tidy-up. Nothing leaves your laptop.
-
-Those first three notes — SOUL.md, IDENTITY.md, USER.md — are different: they say who your Kami _is_. The memories say what it has _learned_. If you ever change brains, the memories stay: point the new brain at the same notes and it carries on where the last one stopped. You can swap voices as often as you like; your Kami never loses a day.
+Those first three notes — SOUL.md, IDENTITY.md, USER.md — say who your Kami _is_. The memories say what it has _learned_. If you change brains, keep the notes, point the new brain at them, and test what it can recall. A surviving file is not a guarantee that the new model will read it faithfully.
 
 And it is all yours to check. Ask it what it remembers about you. Correct it when it is wrong. Tell it to forget what should not be kept.
 

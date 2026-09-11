@@ -14,7 +14,7 @@ permalink: "/tw/4/"
 
 勝任的行動會創造新資訊。被服務的人——或被辜負的人——如今對這套系統有了它自己尚未察覺的認識。拒絕接收這份知識，是通往一再失敗最快的路。
 
-在《[道德邊界](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)》（_[Moral Boundaries](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)_）中，Joan Tronto 將回應力描述為：觀察回應，並判斷關懷是否足夠、是否成功、是否完整。她還補上一個容易被忽略的提醒：接受關懷的人不必親自回應——關懷情境中的其他人也可以做出評估。最有資格判斷關懷是否奏效的，往往不是打造系統的工程師，而是與其影響朝夕相處的人。十年前，Aimee van Wynsberghe 就把同一項要素讀進了設計：回應力是「鼓勵被照顧者採取主動姿態，而非更被動、更脆弱的姿態」的那項要素（[2013](https://doi.org/10.1007/s11948-011-9343-6)，頁 418）。對仁工智慧而言，公開問題其實很簡單：當系統傷害了人，誰能提出異議、要多久才會得到回應，而且因為他說了話，究竟有什麼被改變？
+在《[關懷民主](https://nyupress.org/9780814770344/caring-democracy/)》（_[Caring Democracy](https://nyupress.org/9780814770344/caring-democracy/)_）中，Joan Tronto 將回應力描述為：「觀察回應，並對其做出判斷（例如，所給予的關懷是否足夠、成功或完整？）」她還補上一個容易被忽略的提醒：接受關懷的人不必親自回應——關懷情境中的其他人也可以做出評估。最有資格判斷關懷是否奏效的，往往不是打造系統的工程師，而是與其影響朝夕相處的人。十年前，Aimee van Wynsberghe 就把同一項要素讀進了設計：回應力是「鼓勵被照顧者採取主動姿態，而非更被動、更脆弱的姿態」的那項要素（[2013](https://doi.org/10.1007/s11948-011-9343-6)，頁 418）。對仁工智慧而言，公開問題其實很簡單：當系統傷害了人，誰能提出異議、要多久才會得到回應，而且因為他說了話，究竟有什麼被改變？
 
 ### 定義
 
@@ -41,7 +41,7 @@ Pack 3 檢查流程是否依承諾運作；Pack 4 檢查關懷是否真的落地
 ### 實際上長什麼樣子
 
 - **社群撰寫的評測。** 受影響社群共同定義何謂損害、何謂修復成功。
-- **共享評測登錄庫。** 把評測做成類似維基百科的公共登錄庫（如 [Weval](https://weval.org/)）：任何人都可以起草，公民社會夥伴負責審閱，實驗室則採納或公開說明理由。
+- **共享評測登錄庫。** 把評測做成類似維基百科的公共登錄庫：任何人都可以起草，公民社會夥伴負責審閱，實驗室則採納或公開說明理由。[Weval](https://weval.org/) 由[集體智慧計畫](https://www.cip.org/)打造，是可運行的範例；我們之中的一人（唐鳳）在那裡擔任資深研究員，這項推薦請一併衡量。
 - **清楚的申訴路徑。** 緊急案件 24 小時內回覆，標準案件 7 天，複雜案件 30 天。這些時限是參與契約中的承諾，違反即有後果，而不只是期許。申訴是這一頁上最古老的工具：Danielle Citron 的[技術性正當程序](https://openscholarship.wustl.edu/law_lawreview/vol85/iss6/2/)（2008）就要求自動化公共決策應有通知、聽證與說理，其後的[可質疑 AI](https://doi.org/10.1007/s11023-022-09611-z) 文獻，更把可質疑性從禮貌變成了設計要求。
 - **看得見的修復。** 每個事件都應該有一頁記錄：發生了什麼、影響了誰、改了什麼，以及新增了哪個測試來避免重演。
 - **校正積壓透明。** 保持公開的修復待辦隊列，標示未處理案件的案齡與責任人；當積壓件數或最久未結案件的案齡超過門檻時即升階處理，避免修復落後。
@@ -95,7 +95,7 @@ Pack 3 檢查流程是否依承諾運作；Pack 4 檢查關懷是否真的落地
 
 ### 本力文獻
 
-- Tronto，《[Moral Boundaries](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)》（1993），頁 106–108、127–134——接受照顧與回應力；van Wynsberghe，[〈Designing Robots for Care〉](https://doi.org/10.1007/s11948-011-9343-6)（2013），頁 418——回應力作為被照顧者的主動姿態。
+- Tronto，《[Moral Boundaries](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)》（1993），頁 105–108、134–136——接受照顧與回應力；van Wynsberghe，[〈Designing Robots for Care〉](https://doi.org/10.1007/s11948-011-9343-6)（2013），頁 418——回應力作為被照顧者的主動姿態。
 - Hirschman，《[Exit, Voice, and Loyalty](https://www.hup.harvard.edu/books/9780674276604)》（1970）——申訴即發聲。
 - Citron，[〈Technological Due Process〉](https://openscholarship.wustl.edu/law_lawreview/vol85/iss6/2/)（2008）；Alfrink 等人，[〈Contestable AI by Design〉](https://doi.org/10.1007/s11023-022-09611-z)（2023）；Lyons、Velloso 與 Miller，[〈Conceptualising Contestability〉](https://doi.org/10.1145/3449180)（2021）——申訴作為設計要求。
 - Sloane 等人，[〈Participation Is Not a Design Fix for Machine Learning〉](https://doi.org/10.1145/3551624.3555285)（2022）；Birhane 等人，[〈Power to the People?〉](https://doi.org/10.1145/3551624.3555290)（2022）——社群撰寫的評測作為有酬的參與式工作。

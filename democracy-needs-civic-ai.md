@@ -361,3 +361,7 @@ That is the question the Kami carried from Taiwan to Oxford. And it carries us
 now as we strive to free the future — together.
 
 Rosalind, our garden is yours.
+
+---
+
+_Editorial note (September 2026): the text above is the talk as delivered. The [Habermolt](https://www.habermolt.com) sessions reported here are autonomous-agent rankings: each agent carries one person's instructed views and ranks proposed statements. They are not citizen mandates, not a mini-public, and not independent empirical validation of Civic AI._

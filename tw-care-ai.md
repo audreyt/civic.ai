@@ -41,7 +41,7 @@ nav_next:
 
 ### 拒絕虛假的多元
 
-這項協作主動採取措施，避免徒有包容之表而無其實。它遵循了 SCIE 的共同產製階梯——Sherry Arnstein 1969 年[公民參與階梯](https://doi.org/10.1080/01944366908977225)的後裔——其中諮詢被排在最低層級，平等夥伴關係排在最高。[照護工作者慈善基金會](https://www.thecareworkerscharity.org.uk/)的「以照護工作者為中心」指南為方法提供了參考。經驗豐富的引導者和公民社會團體帶領工作小組。當某些聲音有主導之虞——例如商業壓力與照護價值衝突時——過程的結構確保了較安靜、較脆弱的觀點不被抹消。最後階段召集了 50 多位協作者到場進行審議式集會，面對面辯論並定稿了定義與實踐指南。
+這項協作主動採取措施，避免徒有包容之表而無其實。它遵循了 TLAP 的共同產製階梯——Sherry Arnstein 1969 年[公民參與階梯](https://doi.org/10.1080/01944366908977225)的後裔——其中脅迫被排在最低層級，平等夥伴關係排在最高。[照護工作者慈善基金會](https://www.thecareworkerscharity.org.uk/)的「以照護工作者為中心」指南為方法提供了參考。經驗豐富的引導者和公民社會團體帶領工作小組。當某些聲音有主導之虞——例如商業壓力與照護價值衝突時——過程的結構確保了較安靜、較脆弱的觀點不被抹消。最後階段召集了 50 多位協作者到場進行審議式集會，面對面辯論並定稿了定義與實踐指南。
 
 ## 從理念到實踐
 
@@ -97,6 +97,6 @@ nav_next:
 
 ## 這項工作的位置
 
-共同產製並非從一張白紙開始。關懷倫理應用於照護場域中的機器，已有十五年歷史；組織本站的四個關懷階段，最早由 Aimee van Wynsberghe 在 [2013 年](https://doi.org/10.1007/s11948-011-9343-6)用作照護機器人的設計框架，並在她的《[Healthcare Robots](https://www.routledge.com/Healthcare-Robots-Ethics-Design-and-Implementation/Wynsberghe/p/book/9781032098609)》（2015）中發展。Robert 與 Linda Sparrow（[2006](https://doi.org/10.1007/s11023-006-9030-6)）、Mark Coeckelbergh（[2010](https://doi.org/10.1007/s10677-009-9186-2)）、Shannon Vallor（[2011](https://doi.org/10.1007/s13347-011-0015-x)）以及 Amanda 與 Noel Sharkey（[2012](https://doi.org/10.1007/s10676-010-9234-6)）訂下了高齡照護中機器議題的辯論框架；Yuan 及其同事的 [2023 年綜述](https://doi.org/10.1007/s12369-023-01053-6)則以 Tronto 的四個階段重讀十八項高齡照護機器人研究。共同產製所新增的是方法：與受影響的人一起、而非替他們產出定義，而且是在一道以平等夥伴關係為最高一階的階梯上。完整足跡見〈[文獻與延伸閱讀](/tw/sources/)〉。
+共同產製並非從一張白紙開始。關懷倫理應用於照護場域中的機器，已有二十年歷史。組織本站的四個關懷階段，有文獻可考的技術設計先例：Aimee van Wynsberghe 的照護機器人研究，[2012 年在線上發表、2013 年刊登於期刊](https://doi.org/10.1007/s11948-011-9343-6)，並在她的《[Healthcare Robots](https://www.routledge.com/Healthcare-Robots-Ethics-Design-and-Implementation/Wynsberghe/p/book/9781032098609)》（2015）中發展。Robert 與 Linda Sparrow（[2006](https://doi.org/10.1007/s11023-006-9030-6)）、Mark Coeckelbergh（[2010](https://doi.org/10.1007/s10677-009-9186-2)）、Shannon Vallor（[2011](https://doi.org/10.1007/s13347-011-0015-x)）以及 Amanda 與 Noel Sharkey（[2012](https://doi.org/10.1007/s10676-010-9234-6)）訂下了高齡照護中機器議題的辯論框架；Yuan 及其同事的 [2023 年綜述](https://doi.org/10.1007/s12369-023-01053-6)則以 Tronto 的四個階段重讀十八項高齡照護機器人研究。共同產製所新增的是方法：與受影響的人一起、而非替他們產出定義，而且是在一道以平等夥伴關係為最高一階的階梯上。完整足跡見〈[文獻與延伸閱讀](/tw/sources/)〉。
 
-<p class="figure-caption">Green C, Reinmund T, Hamblin K, Sinha SK. <a href="https://doi.org/10.1016/j.lanhl.2026.100817">Responsible use of artificial intelligence in the provision of long-term care for older people: a care-centric approach</a>. <em>The Lancet Healthy Longevity</em> 7, no. 2 (2026): 100817.</p>
+<p class="figure-caption">Emmer De Albuquerque Green C, Reinmund T, Hamblin K, Sinha SK. <a href="https://doi.org/10.1016/j.lanhl.2026.100817">Responsible use of artificial intelligence in the provision of long-term care for older people: a care-centric approach</a>. <em>The Lancet Healthy Longevity</em> 7, no. 2 (2026): 100817.</p>
