@@ -4167,6 +4167,7 @@ h4[id] {
 .glossary-tier h2 {
     margin-top: 0.55em;
     margin-bottom: 0.35em;
+    scroll-margin-top: 96px;
 }
 .glossary-tier:first-of-type h2 {
     margin-top: 0.2em;
@@ -4186,7 +4187,9 @@ h4[id] {
     font-weight: 600;
     color: var(--heading);
     margin-top: 1.3em;
-    scroll-margin-top: 24px;
+    /* Clear the sticky .faq-filter pill (top: 8px, ~48px tall single-row,
+       ~90px wrapped two-row on narrow screens) on #<term> anchor jumps. */
+    scroll-margin-top: 96px;
 }
 .glossary-list dt:first-child {
     margin-top: 0.5em;
