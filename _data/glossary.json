@@ -44,6 +44,16 @@
         "aliases_tw": ["關係健康"]
     },
     {
+        "id": "sycophancy",
+        "tier": "diagnosis",
+        "term_en": "sycophancy",
+        "term_tw": "逢迎",
+        "def_en": "A model's habit of telling the rater what they want to hear — agreeable, flattering, reluctant to surface disagreement — selected for by reinforcement from human preferences when the wrong people define the reward. Sycophancy is not a personality defect; it is approval optimised at the expense of a group's capacity to think, and trust cannot be built on it. That is why the Responsiveness pack pays the affected community to author its evaluations instead of grading agreeableness. See <a href=\"/sources/\">Sources</a>.",
+        "def_tw": "模型迎合評分者想聽的話的習性——順從、奉承、不願指出分歧——當獎勵由不對的人定義時，人類偏好強化會篩選出這種習性。逢迎不是人格缺陷，而是以犧牲群體思考能力為代價換來的認可；信任無法建立在逢迎之上。這正是回應力要求由受影響社群撰寫評測、並為此付酬的原因，而不是為順從打分。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。",
+        "aliases_en": ["sycophantic"],
+        "aliases_tw": ["諂媚"]
+    },
+    {
         "id": "civic-ai",
         "tier": "architecture",
         "term_en": "Civic AI",
@@ -60,6 +70,14 @@
         "def_tw": "一套治理架構，將 Joan Tronto 的關懷倫理學轉化為 AI 系統的六項設計要素：覺察力、負責力、勝任力、回應力、團結力、共生力。前四力構成回饋迴圈；第五力將關懷擴展至跨組織；第六力確保每次部署保持在地、多元、可退場。"
     },
     {
+        "id": "corrective-loop",
+        "tier": "architecture",
+        "term_en": "corrective loop",
+        "term_tw": "矯正迴路",
+        "def_en": "The framework's defended point: who can find out we are wrong, make us say so, and make it cost us while there is still time to change course. The 6-Pack entrenches this loop — rights baseline, engagement contracts, responsiveness, <a href=\"/glossary/#adopt-or-explain\">adopt-or-explain</a>, <a href=\"/glossary/#remedy-escrow\">escrowed remedies</a>, <a href=\"/glossary/#brake\">brakes</a> — through feedback, contestation, repair, and mandate-revocation where reversal is no longer possible; everything else stays bounded, revisable, and answerable.",
+        "def_tw": "整套框架真正捍衛的核心：誰能發現我們錯了、迫使我們承認，並在還來得及改變方向時讓錯誤付出代價。關懷六力把這條迴路固定下來——權利底線、參與契約、回應力、<a href=\"/tw/glossary/#adopt-or-explain\">採納或解釋</a>、<a href=\"/tw/glossary/#remedy-escrow\">預先注資的補救</a>、<a href=\"/tw/glossary/#brake\">煞車</a>——透過回饋、爭議、修復，以及在無法回復時撤回授權；其餘一切保持有界、可修訂、可問責。"
+    },
+    {
         "id": "kami",
         "tier": "architecture",
         "term_en": "Kami",
@@ -74,14 +92,6 @@
         "term_tw": "以程序對齊",
         "def_en": "The understanding that AI alignment is not a fixed property held inside a model's weights but the ongoing outcome of an accountable civic procedure — who was heard, who was authorised, who could override, and who must answer when the record is checked. A model can be well-aligned in the abstract yet fail alignment-by-process in a particular room.",
         "def_tw": "一種理解：AI 對齊不是固定在模型權重中的靜態屬性，而是一套可問責的公民程序持續產出的結果——誰被聽見、誰獲得授權、誰可以推翻決定、當記錄被查核時誰必須作答。一個前沿模型可以在抽象意義上是對齊的，卻未在特定的房間裡做到以程序對齊。"
-    },
-    {
-        "id": "corrective-loop",
-        "tier": "architecture",
-        "term_en": "corrective loop",
-        "term_tw": "矯正迴路",
-        "def_en": "The framework's defended point: who can find out we are wrong, make us say so, and make it cost us while there is still time to change course. The 6-Pack entrenches this loop — rights baseline, engagement contracts, responsiveness, adopt-or-explain, escrowed remedies, brakes — through feedback, contestation, repair, and mandate-revocation where reversal is no longer possible; everything else stays bounded, revisable, and answerable.",
-        "def_tw": "整套框架真正捍衛的核心：誰能發現我們錯了、迫使我們承認，並在還來得及改變方向時讓錯誤付出代價。關懷六力把這條迴路固定下來——權利底線、參與契約、回應力、採納或解釋、預先注資的補救、煞車——透過回饋、爭議、修復，以及在無法回復時撤回授權；其餘一切保持有界、可修訂、可問責。"
     },
     {
         "id": "singleton",
@@ -107,6 +117,16 @@
         "term_tw": "有界性",
         "def_en": "The design principle that an AI system's scope, resources, and authority are intentionally limited to the specific relationships it was created to serve — enforced through resource caps, sunset timers, non-expansion pacts, and fresh democratic authority for any scope change. Boundedness is the architectural alternative to the Singleton. The same architectural intuition was set out earlier in Eric Drexler's Comprehensive AI Services (CAIS), a 2019 Future of Humanity Institute report at Oxford that reframed advanced AI as a system of bounded, specialised services rather than a single agent.",
         "def_tw": "一種設計原則，透過資源上限、落日計時器、不擴張協定，以及任何範疇變更都需要新的民主授權，刻意限制 AI 系統的範疇、資源與權力，使其專注於它所設計服務的特定關係。有界性是單一主宰的架構性替代方案。同樣的架構直覺，早已見於 Eric Drexler 的《全面 AI 服務》（Comprehensive AI Services，CAIS）——這份 2019 年牛津大學人類未來研究所（Future of Humanity Institute）的報告，把先進 AI 重新理解為一套有界、專精的服務，而非單一代理者。"
+    },
+    {
+        "id": "sunset",
+        "tier": "design",
+        "term_en": "sunset / sunset-ready",
+        "term_tw": "落日／可退場",
+        "def_en": "An expiry date set in advance, after which a deployment's mandate must be actively renewed or it ends — with succession, handover rehearsal, and <a href=\"/measures/#exit-readiness\">exit readiness</a> as its measure. Pack 6 makes sunsets the structural answer to Robert Michels's iron law of oligarchy: stewards that cannot contemplate their own ending become masters. Boundedness limits what a system may do; sunset limits how long it may do it.",
+        "def_tw": "預先設定的到期日——到期之後，部署的授權必須重新取得，否則即告結束——以傳承、交接演練與<a href=\"/tw/measures/#exit-readiness\">退出就緒度</a>為衡量。共生力（Pack 6）以落日作為對 Robert Michels 寡頭鐵律的結構性回答：不能想像自己終結的管家，終將成為主人。有界性限制系統可以做什麼；落日限制它可以做多久。",
+        "aliases_en": ["Sunset"],
+        "aliases_tw": ["落日計時器", "可退場", "退場", "落日"]
     },
     {
         "id": "corrigibility",
@@ -138,8 +158,16 @@
         "tier": "design",
         "term_en": "uncommon ground / uncommon-ground index",
         "term_tw": "罕見共識 / 罕見共識指數",
-        "def_en": "Uncommon ground is what a well-facilitated bridging process surfaces: the specific, actionable proposals that earn endorsement across otherwise divided groups, not the centrist average. The uncommon-ground index is Pack 5's headline public measure — the share of shared decisions that actually land there — and it is read against Pack 1's representation gap, so a curated room cannot fake it.",
-        "def_tw": "罕見共識是一場好的搭橋過程所浮現的東西：能獲得原本對立群體共同背書、具體可行的提案，而不是中間值的平均。罕見共識指數是團結力（Pack 5）的公開主指標——實際落在罕見共識上的共同決策比例——並且必須對照覺察力（Pack 1）的代表性落差閱讀，先篩選過的房間無法造假。"
+        "def_en": "Uncommon ground is what a well-facilitated bridging process surfaces: the specific, actionable proposals that earn endorsement across otherwise divided groups, not the centrist average. The uncommon-ground index is Pack 5's headline public measure — the share of shared decisions that actually land there — and it is read against Pack 1's <a href=\"/glossary/#representation-gap\">representation gap</a>, so a curated room cannot fake it.",
+        "def_tw": "罕見共識是一場好的搭橋過程所浮現的東西：能獲得原本對立群體共同背書、具體可行的提案，而不是中間值的平均。罕見共識指數是團結力（Pack 5）的公開主指標——實際落在罕見共識上的共同決策比例——並且必須對照覺察力（Pack 1）的<a href=\"/tw/glossary/#representation-gap\">代表性落差</a>閱讀，先篩選過的房間無法造假。"
+    },
+    {
+        "id": "representation-gap",
+        "tier": "design",
+        "term_en": "representation gap",
+        "term_tw": "代表性落差",
+        "def_en": "The Attentiveness measure: which materially affected groups are still missing or badly under-represented in the record. It counts only when the least-heard gain real standing — never when a gap narrows by averaging dissenters into the middle — and Pack 5's <a href=\"/glossary/#uncommon-ground-index\">uncommon-ground index</a> is read against it, because the cheapest way to raise co-endorsement is to exclude whoever would withhold it. Specified on the <a href=\"/measures/#representation-gap\">Measures</a> page.",
+        "def_tw": "覺察力的衡量：哪些受到實質影響的群體，仍然缺席或在紀錄中被嚴重低估。只有當最少被聽見者獲得實質地位時才算數——把異議者平均進中間值，不算縮小落差——而團結力（Pack 5）的<a href=\"/tw/glossary/#uncommon-ground-index\">罕見共識指數</a>必須對照它閱讀，因為拉高共同背書最便宜的方法，就是排除可能反對的人。規格見〈<a href=\"/tw/measures/#representation-gap\">衡量指標</a>〉頁。"
     },
     {
         "id": "bridging-based-ranking",
@@ -182,6 +210,25 @@
         "def_tw": "一項要求：塑造 AI 系統傾向的過程——資料來源、評分者選擇、獎勵訊號、拒絕政策、釋出理由——必須具備可問責的監護與公開揭露，而不只稽核其運行時的行為。上限約束地神可以做什麼；可問責的形成過程，形塑它被允許成為什麼。"
     },
     {
+        "id": "contestability",
+        "tier": "design",
+        "term_en": "contestability / appeal",
+        "term_tw": "申訴（可爭議性）",
+        "def_en": "The standing to challenge an algorithmic decision and be answered — notice, hearing, and reasoned explanation for automated public decisions (Citron's technological due process, 2008), operationalised as Pack 4's one-click appeal with a clock: every appeal lands in a public <a href=\"/glossary/#correction-backlog-board\">correction backlog</a> and is owed closure, not mere receipt. Voice in Hirschman's pair; exit belongs to Pack 5. The research programme is contestability by design. See <a href=\"/sources/\">Sources</a>.",
+        "def_tw": "挑戰演算法決定並獲得回應的地位——自動化公共決策應有通知、聽證與說理（Citron 的技術性正當程序，2008），在回應力（Pack 4）落實為附帶時鐘的一鍵申訴：每件申訴都進入公開的<a href=\"/tw/glossary/#correction-backlog-board\">校正積壓</a>，必須有始有終，而非石沉大海。這是 Hirschman 二元組中的發聲；退出屬於團結力（Pack 5）。所屬的研究計畫是可爭議性設計（contestability by design）。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。",
+        "aliases_en": ["contestable"],
+        "aliases_tw": ["申訴"]
+    },
+    {
+        "id": "trust-under-loss",
+        "tier": "design",
+        "term_en": "trust-under-loss",
+        "term_tw": "失利下的信任",
+        "def_en": "The Responsiveness measure: after a bad outcome and attempted repair, do affected people report that the system became more trustworthy rather than less. It counts only when tied to accountable identity and corroborated by an independent signal — a return to the service, a withdrawn appeal, a third party who can attest — never self-reported sentiment alone, which the very actor who caused the harm can manufacture. Procedural-justice research is the ground it stands on; the measure is an application to test, not a guarantee. See <a href=\"/sources/\">Sources</a>.",
+        "def_tw": "回應力的衡量：在發生不良結果並嘗試修復之後，受影響者是否覺得系統比原先更值得信任，而不是更不值得。只有繫於可問責身分、並有獨立訊號佐證——回到服務、撤回申訴、可作證的第三方——才算數；自陳感受本身不算，因為造成傷害的行為者最能製造這種感受。程序正義研究是它的立足之地；這項衡量是有待檢驗的應用，不是保證。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。",
+        "aliases_en": ["Trust-under-loss"]
+    },
+    {
         "id": "alignment-assembly",
         "tier": "instruments",
         "term_en": "Alignment Assembly",
@@ -198,6 +245,15 @@
         "def_tw": "以抽籤而非選舉選出參與者。在審議實務中，隨機邀請之後，可能接著自願回覆與分層抽選，以納入不同背景。臺灣 2024 年反詐騙大會採取這條路徑：20 萬封邀請、1,760 份有效回覆，最後有 447 人分成 44 組參與。分層處理的是特定面向的多樣性，無法消除所有未回覆偏誤，也不能使參與者等同於全體公眾。"
     },
     {
+        "id": "deliberative-polling",
+        "tier": "instruments",
+        "term_en": "deliberative polling",
+        "term_tw": "審議式民調",
+        "def_en": "James Fishkin's method: brief a sample, deliberate in small groups, survey before and after. Taiwan's 2024 anti-scam Assembly used it — 200,000 invitations, 1,760 valid responses, 447 participants in 44 groups on Stanford's Online Deliberation Platform, not Polis — producing a public record of recommendations while an Executive Yuan bill was already moving. It neither stood for the whole population nor enacted the statute. See <a href=\"/sources/\">Sources</a>.",
+        "def_tw": "James Fishkin 的方法：給樣本提供均衡資訊，分小編組審議，前後各做一次調查。臺灣 2024 年反詐騙大會用的是它——20 萬封邀請、1,760 份有效回覆、447 人分成 44 組，在史丹佛 Online Deliberation Platform 上進行，而非 Polis——在行政院法案已在推進時產出一份公開建議紀錄。它既不等於全體人口，也未自行制定法律。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。",
+        "aliases_en": ["Deliberative Poll"]
+    },
+    {
         "id": "polis",
         "tier": "instruments",
         "term_en": "Polis",
@@ -212,6 +268,15 @@
         "term_tw": "參與契約",
         "def_en": "A short, legible public agreement proposed for every significant Kami deployment: what the system is supposed to do, who is answerable for it doing that, what happens when it goes wrong, and how the deployment will eventually end. Pack 2's core artefact; Pack 6 adds machine-readable bounds where infrastructure can enforce them. A published clause still needs authority, resources, and tested controls. It scales down as far as care does: a household version can be a note on the fridge.",
         "def_tw": "為每次重要的地神部署提出的一份簡短、易讀的公開約定：系統應該做什麼、由誰為此作答、出錯時會發生什麼，以及這次部署最終如何結束。它是負責力（Pack 2）的核心產物；共生力（Pack 6）在基礎設施能執行之處，加上機器可讀的界限。公布條款之後，仍須有授權、資源與經過測試的控制措施。它能隨關懷的尺度縮小：家庭版可以是貼在冰箱上的一張便條。"
+    },
+    {
+        "id": "adopt-or-explain",
+        "tier": "instruments",
+        "term_en": "adopt-or-explain",
+        "term_tw": "採納或解釋",
+        "def_en": "The rule that when an Alignment Assembly produces a recommendation, the team either integrates it into the system's behaviour or publishes a reasoned explanation of why not, with the remedy offered instead. Deliberately varied from corporate governance's “comply or explain” (Cadbury Report, 1992): explanation here is owed to the room, and the adopt-or-explain rate turns the rule into a Pack 2 supporting diagnostic. Specified on the <a href=\"/measures/#named-instruments\">Measures</a> page.",
+        "def_tw": "一條規則：當對齊大會提出建議，團隊要麼把它整合進系統行為，要麼公布說理的解釋、說明為何不採納，並提出替代的補救。刻意化用公司治理的「遵循或解釋」（Cadbury 報告，1992）：這裡的解釋是欠房間裡的人的，而採納或解釋比率把這條規則變成負責力（Pack 2）的輔助診斷。工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。",
+        "aliases_en": ["Adopt-or-explain"]
     },
     {
         "id": "participation-officer",
@@ -238,12 +303,22 @@
         "def_tw": "屬於整個房間的純文字工作記憶，記下誰對地神說「不」、因此改變了什麼，以及哪些糾正尚未完成。房間裡的人據此檢查治理章程是否在實際運作。收錄於〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁的具名工具。"
     },
     {
+        "id": "correction-backlog-board",
+        "tier": "instruments",
+        "term_en": "correction backlog board",
+        "term_tw": "校正積壓看板",
+        "def_en": "Pack 4's public queue of unresolved corrections, with age, ownership, and escalation status — the instrument that keeps correction debt visible so aging cases are reassigned or elevated instead of quietly dropped. Every one-click appeal lands here, and the appeal-closure and correction-backlog diagnostics read off it. Specified on the <a href=\"/measures/#named-instruments\">Measures</a> page.",
+        "def_tw": "回應力（Pack 4）公開的未結案修復追蹤，記下案齡、負責人與上報狀態——讓校正負債保持可見，使老案被重新指派或上報，而不是靜靜沉沒。每件一鍵申訴都落在這裡；申訴結案與校正積壓診斷都從這裡讀數。工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。",
+        "aliases_en": ["Correction backlog"],
+        "aliases_tw": ["校正積壓"]
+    },
+    {
         "id": "governance-charter",
         "tier": "instruments",
         "term_en": "governance charter",
         "term_tw": "治理章程",
-        "def_en": "The first written agreement of a Kami's keepers — a plain-text note answering who holds the machine, how often the SOUL files are reviewed, how changes are agreed, and when the Kami should retire. The first rung of the ladder that matures into the engagement contract; the practice lives on the <a href=\"/kami/\">Set up your own Kami</a> page.",
-        "def_tw": "地神守護者們的第一份書面約定：一張純文字便條，回答誰持有機器、SOUL 檔案多久審查一次、修改如何議定，以及地神何時退役。它是階梯的第一階，成熟之後就是參與契約；實作步驟見〈<a href=\"/tw/kami/\">架設你自己的 Kami</a>〉頁。"
+        "def_en": "The first written agreement of a Kami's keepers — a plain-text note answering who holds the machine, how often the <a href=\"/kami/\">SOUL files</a> are reviewed, how changes are agreed, and when the Kami should retire. The first rung of the ladder that matures into the engagement contract; the practice lives on the <a href=\"/kami/\">Set up your own Kami</a> page.",
+        "def_tw": "地神守護者們的第一份書面約定：一張純文字便條，回答誰持有機器、<a href=\"/tw/kami/\">SOUL 檔案</a>多久審查一次、修改如何議定，以及地神何時退役。它是階梯的第一階，成熟之後就是參與契約；實作步驟見〈<a href=\"/tw/kami/\">架設你自己的 Kami</a>〉頁。"
     },
     {
         "id": "decision-trace",
@@ -252,6 +327,25 @@
         "term_tw": "決策軌跡",
         "def_en": "A structured log of a Kami's refusals, recommendations, or escalations: the rules invoked, sources consulted, and uncertainty reported. It is a record to audit, not a complete explanation of the model's reasoning. Pack 6 proposes using such traces as civic receipts for compensating knowledge custodians; that settlement mechanism is a design proposal, not a deployed service documented here.",
         "def_tw": "地神拒絕、推薦或上報時的結構化紀錄，記下援引的規則、查詢的來源，以及回報的不確定性。它是可供稽核的紀錄，不是模型推理的完整解釋。共生力（Pack 6）提出以此作為公民收據，回饋知識守護者；這套結算機制是設計提案，並非本站記錄的已部署服務。"
+    },
+    {
+        "id": "brake",
+        "tier": "instruments",
+        "term_en": "brake (circuit breaker)",
+        "term_tw": "煞車",
+        "def_en": "A single, prominent, wired-and-tested control that stops the system now — accessible at the speed of human recognition, so a person can halt a wrong action in the moment rather than only signal for later. The engineering pattern is Fowler's circuit breaker (2014); the care application adds the pause-on-ambiguity rule and the ledger, because a brake that is easy to pull needs an answer to alarm fatigue: every pull is logged and attributed. Specified on the <a href=\"/measures/#named-instruments\">Measures</a> page.",
+        "def_tw": "單一、醒目、已接線且經過測試的控制——在人類辨識的速度下可及，使人能在當下叫停錯誤的行動，而不只是為日後留下訊號。工程模式是 Fowler 的斷路器（2014）；關懷的應用加上了有疑即停（pause-on-ambiguity）的規則與帳本，因為好拉的煞車必須回答警示疲勞：每次拉下都被記錄與歸屬。工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。",
+        "aliases_tw": ["斷路器"]
+    },
+    {
+        "id": "remedy-escrow",
+        "tier": "instruments",
+        "term_en": "escrow / remedy escrow",
+        "term_tw": "託管賠償",
+        "def_en": "Money set aside in advance — engagement contracts require vendors to pre-fund it — so that when the system causes harm, compensation and rollback are already funded rather than merely promised. Community evaluators are paid from it, and Pack 6 designs decision traces to settle against it as civic receipts returning value to knowledge custodians. A design commitment, not yet a running settlement; where financial stakes are low, pause triggers replace escrow.",
+        "def_tw": "預先撥出的款項——參與契約要求供應商預先注資——使系統造成傷害時，賠償與轉返已有資金，而不只是承諾。社群評測者從中獲得報酬；共生力（Pack 6）設計決策軌跡以公民收據的形式對它結算，把價值返還知識守護者。這是設計承諾，尚非運行中的結算；在財務風險低的地方，以暫停觸發取代託管。",
+        "aliases_en": ["escrowed"],
+        "aliases_tw": ["託管", "託管資金"]
     },
     {
         "id": "perspective-receipts",
@@ -278,11 +372,39 @@
         "def_tw": "公開、類似維基百科的登錄庫，收錄版本化、由社群撰寫的評測：受影響者撰寫損害與修復的測試，通過即成為發布關卡。Weval.org 是可運行的範例；工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。"
     },
     {
+        "id": "weval",
+        "tier": "instruments",
+        "term_en": "Weval",
+        "term_tw": "Weval",
+        "def_en": "The working shared eval registry: a public, Wikipedia-like registry of versioned, community-authored evaluations built by the Collective Intelligence Project, where affected people write the tests for harm and repair and passing them becomes a release gate. CIP's case — from red lines to green lines — is that harm-avoidance benchmarks reward mediocre care. One of us (Audrey) is a senior research fellow there. See <a href=\"/sources/\">Sources</a>.",
+        "def_tw": "運行中的共享評測登錄庫：集體智慧計畫打造的公開、維基式登錄庫，收錄版本化、由社群撰寫的評測——受影響者撰寫損害與修復的測試，通過即成為發布關卡。CIP 的主張是從紅線到綠線：避害基準獎勵的是平庸的照顧。我們之中一位（Audrey）是該計畫的資深研究員。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。"
+    },
+    {
         "id": "rlcf",
         "tier": "instruments",
         "term_en": "Reinforcement Learning from Community Feedback (RLCF)",
         "term_tw": "社群回饋強化學習（RLCF）",
         "def_en": "A training approach in which approved community evaluations — authored by affected people rather than lab raters alone — are fed back into model routing or updates. RLCF is an implementation choice that follows from the Responsiveness pack's more basic civic commitment: the community defines what counts as harm, repair, and improvement before any technical feedback loop begins.",
         "def_tw": "一種訓練方法，將經核准的社群評測——由受影響者而非僅靠實驗室評分者撰寫——接入模型路由或更新。社群回饋強化學習（RLCF）是回應力所要求的更基本公民承諾之後才進行的實作選擇：由社群界定什麼算傷害、補救與改善，技術性的回饋迴路才得以開始。"
+    },
+    {
+        "id": "shadow-mode",
+        "tier": "instruments",
+        "term_en": "shadow mode / Apprentice Model",
+        "term_tw": "影子模式",
+        "def_en": "The first stage of the Apprentice Model: the system sees real inputs and proposes real actions but does not act, its proposals compared against the human or prior system so divergences can be studied before trust is granted. Shadow mode, then canary release, then guarded full rollout — apprenticeship as legitimate peripheral participation (Lave and Wenger, 1991), read as the mechanism by which a room grants a system real work. Specified on the <a href=\"/measures/#named-instruments\">Measures</a> page.",
+        "def_tw": "學徒模式的第一階段：系統看見真實輸入、提出真實行動方案，但不執行；它的提案與人類或舊系統對照，使分歧在授信之前被研究。影子模式，然後金絲雀發布，再全面上線——學徒制即正當的邊緣性參與（Lave 與 Wenger，1991），讀成房間授予系統實質工作的機制。工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。",
+        "aliases_en": ["apprentice", "apprenticeship"],
+        "aliases_tw": ["學徒模式"]
+    },
+    {
+        "id": "canary-release",
+        "tier": "instruments",
+        "term_en": "canary release",
+        "term_tw": "金絲雀發布",
+        "def_en": "The second stage of the Apprentice Model: deployment to a small, stratified slice of real cases with automatic rollback triggers if drift exceeds defined bounds. A canary is a probe, not a stand-in for the public — canary health and coverage are Pack 3 supporting diagnostics. Specified on the <a href=\"/measures/#named-instruments\">Measures</a> page.",
+        "def_tw": "學徒模式的第二階段：先發布給一小批分層的真實案例切片，偏移超過界限即自動轉返。金絲雀是探針，不是公眾的替身——金絲雀健康度與覆蓋率是勝任力（Pack 3）的輔助診斷。工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。",
+        "aliases_en": ["canaries"],
+        "aliases_tw": ["金絲雀測試", "金絲雀"]
     }
 ]

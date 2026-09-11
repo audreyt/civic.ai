@@ -246,6 +246,7 @@ test("getSearchSuggestions skips glossary entries missing a term or alias in the
                     term_en: "Empty Alias",
                     term_tw: "空別名",
                     aliases_tw: [""],
+                    aliases_en: [""],
                 },
             ],
         };
@@ -255,6 +256,7 @@ test("getSearchSuggestions skips glossary entries missing a term or alias in the
     const en = mockedSearch.getSearchSuggestions("en");
     expect(en).toContain("No Mandarin");
     expect(en).not.toContain("無英文");
+    expect(en).not.toContain("");
 
     const zh = mockedSearch.getSearchSuggestions("zh");
     expect(zh).toContain("無英文");
