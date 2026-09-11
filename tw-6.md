@@ -44,7 +44,7 @@ Packs 1 到 4 描述的是關懷應該如何被實踐，Pack 5 描述它如何�
 
 擷取式經濟把資料當作石油——探勘、開採、在集中式設施裡提煉，然後耗竭，價值歸於擁有煉油廠的人。正如 Nigel Shadbolt 在 2016 年[所論](https://www.ingenia.org.uk/articles/data-as-critical-national-infrastructure/)，這個隱喻從根上就不成立：資料不是競用性財貨，更宜視為共享的基礎設施。以關懷為本的公民模式——沿用 [Tenzin Yangtso](https://ty.civic.ai) 的說法——則把資料當作土壤——活的、共享的基質，必須在地滋養、避免會生物累積的毒素汙染，也絕不因過度耕作而耗盡。這個隱喻改變了我們最佳化的目標：不是「如何榨取最大價值？」而是「如何讓這個生態系保持健康？」；不是「如何擴張到全球？」而是「如何保持在地的回應力？」；不是「如何留住使用者？」而是「如何確保社群保有離開的能力？」
 
-土壤意味著在地模型。量化後的開放權重模型，如今已能在社群自己擁有的硬體上運行——社區活動中心的一台筆電、區公所的一台小型伺服器、診所裡的一台專用裝置。AI 就在房間裡運行；會議結束後，模型留在原地。升級到前沿能力遵循輔助性原則：為特定能力提出特定請求，記錄原因與持續時間，之後恢復在地守護。在地運行消耗的能源，也只是同等雲端呼叫的一小部分——忽視自身基礎設施環境成本的關懷倫理，並不算完全覺察。
+土壤意味著在地模型。量化後的開放權重模型，如今已能在社群自己擁有的硬體上運行——社區活動中心的一台筆電、區公所的一台小型伺服器、診所裡的一台專用裝置。AI 就在房間裡運行；會議結束後，模型留在原地。升級到前沿能力遵循輔助性原則：為特定能力提出特定請求，記錄原因與持續時間，之後恢復在地守護。忽視自身基礎設施環境成本的關懷倫理，並不算完全覺察。
 
 ### 實際上長什麼樣子
 
@@ -103,6 +103,7 @@ Packs 1 到 4 描述的是關懷應該如何被實踐，Pack 5 描述它如何�
 - Kasulis，《[Shinto: The Way Home](https://uhpress.hawaii.edu/title/shinto-the-way-home/)》（2004）——這個名字所呼應的神道地神。
 - Verbeek，[〈Materializing Morality〉](https://doi.org/10.1177/0162243905285847)（2006）；van Wynsberghe，[〈Designing Robots for Care〉](https://doi.org/10.1007/s11948-011-9343-6)（2013），頁 427——為什麼基礎設施可以是關懷的一部分卻不必自己會關懷。
 - Berger 與 Neuhaus，《[To Empower People](https://books.google.com/books/about/To_Empower_People.html?id=tIC6AAAAIAAJ)》（1977）——中介結構作為主要行動者。
+- Michels，《[Political Parties](https://archive.org/details/politicalparties00mich)》（1911）——寡頭鐵律。
 - 《[四十年](https://www.vatican.va/content/pius-xi/en/encyclicals/documents/hf_p-xi_enc_19310515_quadragesimo-anno.html)》通諭（1931），第 79 節；Føllesdal，[〈Subsidiarity〉](https://doi.org/10.1111/1467-9760.00052)（1998）——輔助性原則的出處。
 - Ostrom，《[Governing the Commons](https://doi.org/10.1017/CBO9780511807763)》（1990），頁 90——守護模式所對應的八項設計原則。
 - Shadbolt，[〈Data as Critical National Infrastructure〉](https://www.ingenia.org.uk/articles/data-as-critical-national-infrastructure/)（2016）；Arrieta-Ibarra 等人，[〈Should We Treat Data as Labor?〉](https://doi.org/10.1257/pandp.20181003)（2018）；Posner 與 Weyl，《[Radical Markets](https://press.princeton.edu/books/hardcover/9780691177502/radical-markets)》（2018）——資料作為基礎設施、作為勞動，以及資料聯盟。

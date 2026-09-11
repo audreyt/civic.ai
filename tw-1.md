@@ -14,7 +14,7 @@ permalink: "/tw/1/"
 
 現在擴大來看。一個 AI 面對一個充滿「斑馬線」的世界——工人、河流、語言、正從洪水中復原的社區。它可以把這些視為障礙，也可以視為需要關懷的關係。兩者的區別始於第一眼。
 
-在《[道德邊界](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)》（_[Moral Boundaries](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)_）中，Joan Tronto 稱覺察力為「暫時擱置自利，真正從需要者的角度去看的能力。」其反面，是她所命名的*特權式不負責*（privileged irresponsibility）：不去注意的特權。Tronto 寫道，相對享有特權的人被授予種種特權，「使人得以徑自忽視某些自己不必面對的困苦；我建議我們把這種特權形式稱為『特權式不負責』。」覺察力，就是拒絕這種特權的修練。
+在《[關懷民主](https://nyupress.org/9780814770344/caring-democracy/)》（_[Caring Democracy](https://nyupress.org/9780814770344/caring-democracy/)_，2013，頁 34）中，Joan Tronto 稱覺察力為「暫時擱置自利，真正從需要者的角度去看的能力。」其反面，是她所命名的*特權式不負責*（privileged irresponsibility）：不去注意的特權。Tronto 寫道，相對享有特權的人被授予種種特權，「使人得以徑自忽視某些自己不必面對的困苦；我建議我們把這種特權形式稱為『特權式不負責』。」覺察力，就是拒絕這種特權的修練。
 
 Carol Gilligan 在《In a Human Voice》（2023）中點出這種修練所鍛鍊的肌力：「激進傾聽之所以有轉化的潛力，是因為它從『不知道』開始，並鍛鍊出好奇的肌力。」好奇心並非被動；它要靠反覆練習才能養成：一次次轉向缺席之處，而不是假定缺席就代表那裡什麼都沒有。
 

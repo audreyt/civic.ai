@@ -12,7 +12,7 @@ permalink: "/tw/3/"
 
 橋樑的勝任與否並非取決於藍圖是否優雅；它是因為能承載——並在卡車經過、風起、檢查員檢查螺栓時繼續承載而勝任。
 
-在《[道德邊界](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)》（_[Moral Boundaries](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)_）中，Joan Tronto 堅持：「承擔責任和實際執行關懷工作是兩回事。」勝任力關乎執行：兌現承諾的可運作程式碼，經過稽核、可解釋且安全試錯。部署控制——軌跡、沙箱、金絲雀——讓失敗可被檢查；它們本身不是安全證明。而且至關重要的是——Aimee van Wynsberghe 把 Tronto 的框架帶進[機器人設計](https://doi.org/10.1007/s11948-011-9343-6)時，特別向工程師強調這一點——「勝任地關懷不僅僅是技術問題，更是道德問題。」一個以良好意圖交付破損關懷的系統，是道德上的失敗，不僅僅是技術上的失敗。承諾已經許下；橋卻沒能撐住。
+在《[關懷民主](https://nyupress.org/9780814770344/caring-democracy/)》（_[Caring Democracy](https://nyupress.org/9780814770344/caring-democracy/)_，2013，頁 35）中，Joan Tronto 堅持：「承擔責任和實際執行關懷工作是兩回事。」勝任力關乎執行：兌現承諾的可運作程式碼，經過稽核、可解釋且安全試錯。部署控制——軌跡、沙箱、金絲雀——讓失敗可被檢查；它們本身不是安全證明。而且至關重要的是——Aimee van Wynsberghe 把 Tronto 的框架帶進[機器人設計](https://doi.org/10.1007/s11948-011-9343-6)時，特別向工程師強調這一點——「勝任地關懷，就其關懷責任而言，不僅僅是技術問題，更是道德問題。」一個以良好意圖交付破損關懷的系統，是道德上的失敗，不僅僅是技術上的失敗。承諾已經許下；橋卻沒能撐住。
 
 插圖的框架：_我們檢核流程_——不是「相信我們就對了」，而是以透明度和快速的作業回饋來檢查關懷是如何被交付的。在仁工智慧（Civic AI）的脈絡裡，信任不是對供應商一次給定的態度；它是透過展現出來、可供檢驗的實踐，一點一滴掙得的——正是 Onora O'Neill 所稱的[可信賴性](https://www.bbc.co.uk/programmes/p00ghvd8)，而透明本身並不足以產生它。
 
@@ -98,7 +98,7 @@ permalink: "/tw/3/"
 
 ### 本力文獻
 
-- Tronto，《[Moral Boundaries](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)》（1993），頁 127–134——勝任力作為道德要素；van Wynsberghe，[〈Designing Robots for Care〉](https://doi.org/10.1007/s11948-011-9343-6)（2013），頁 423、427–428——賦能型與取代型。
+- Tronto，《[Caring Democracy](https://nyupress.org/9780814770344/caring-democracy/)》（2013），頁 35——上述引文；《[Moral Boundaries](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)》（1993），頁 127–137——勝任力作為道德要素；van Wynsberghe，[〈Designing Robots for Care〉](https://doi.org/10.1007/s11948-011-9343-6)（2013），頁 423、427–428——賦能型與取代型。
 - Polanyi，《[The Tacit Dimension](https://press.uchicago.edu/ucp/books/book/chicago/T/bo6035368.html)》（1966）；Lave 與 Wenger，《[Situated Learning](https://doi.org/10.1017/CBO9780511815355)》（1991）——內隱知識與學徒制。
 - Licklider，[〈Man-Computer Symbiosis〉](https://doi.org/10.1109/THFE2.1960.4503259)（1960）；Engelbart，[〈Augmenting Human Intellect〉](https://www.dougengelbart.org/content/view/138)（1962）——副駕駛的系譜。
 - Bainbridge，[〈Ironies of Automation〉](<https://doi.org/10.1016/0005-1098(83)90046-8>)（1983）；Santoni de Sio 與 van den Hoven，[〈Meaningful Human Control〉](https://doi.org/10.3389/frobt.2018.00015)（2018）——為什麼煞車與手冊是條件，而非功能。

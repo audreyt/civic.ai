@@ -113,8 +113,8 @@
         "tier": "design",
         "term_en": "corrigibility",
         "term_tw": "可修正性",
-        "def_en": "The property of an AI system that makes it willing to be corrected, overridden, or switched off by the community it serves — treating its own shutdown as a sign of success rather than a threat. Corrigibility is care ethics' concept of self-effacement translated into a machine design constraint.",
-        "def_tw": "一種使 AI 系統願意被它所服務的社群糾正、推翻或關閉的屬性——將自身的關機視為成功的訊號，而非威脅。可修正性是關懷倫理學「自我隱沒」概念在機器設計約束上的轉化。"
+        "def_en": "The property of an AI system that makes it willing to be corrected, overridden, or switched off by the community it serves — treating its own shutdown as a sign of success rather than a threat. Corrigibility is care ethics' concept of self-effacement translated into a machine design constraint. The term comes from AI safety: Nate Soares, Benja Fallenstein, and Eliezer Yudkowsky, “Corrigibility,” AAAI Workshops (2015), where it names an agent that does not resist correction or shutdown.",
+        "def_tw": "一種使 AI 系統願意被它所服務的社群糾正、推翻或關閉的屬性——將自身的關機視為成功的訊號，而非威脅。可修正性是關懷倫理學「自我隱沒」概念在機器設計約束上的轉化。「可修正性」一詞來自 AI 安全研究：Soares、Fallenstein 與 Yudkowsky 2015 年 AAAI 工作坊論文〈Corrigibility〉，指不抗拒被修正或關閉的系統。"
     },
     {
         "id": "subsidiarity",

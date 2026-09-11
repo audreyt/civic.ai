@@ -8,7 +8,7 @@ alt_lang_url: "/2"
 permalink: "/tw/2/"
 ---
 
-<noscript><img src="/img/pack2-1-tw.jpg" alt="手繪漫畫頁，標題為「RESPONSIBILITY——PROBLEM」：一群卡通動物擠在一起、各自喊出推卸責任的藉口，例如「我只是賣顧客要買的東西」與「我只是聽命行事」，下方寫著「沒有人負責時，就沒有人負責」，並以說明文字記述台灣 2024 年臉書深偽詐騙案，引用平台卸責的回應「是我們的演算法推送給你的」。" class="overview-image" width="1437" height="1999" loading="lazy" decoding="async"></noscript>
+<noscript><img src="/img/pack2-1-tw.jpg" alt="手繪漫畫頁，標題為「RESPONSIBILITY——PROBLEM」：一群卡通動物擠在一起、各自喊出推卸責任的藉口，例如「我只是賣顧客要買的東西」與「我只是聽命行事」，下方寫著「沒有人負責時，就沒有人負責」，並以說明文字記述台灣 2024 年臉書深偽詐騙案，引用平台卸責的回應「是演算法推送給你的」。" class="overview-image" width="1437" height="1999" loading="lazy" decoding="async"></noscript>
 
 你的鄰居敲門：「你那塊地上的樹正在壓裂共用的牆。」負責任的回應不是「感謝您的回饋」，而是：誰來檢查、何時檢查、如果風險高會怎麼做、修復失敗如何申訴，以及若修復延遲你該承擔什麼。
 
@@ -18,7 +18,7 @@ permalink: "/tw/2/"
 
 ### 為何重要
 
-為何負責力必須是明確的？因為權力預設就是逃避——Tronto 將這種模式命名為「特權式不負責」（privileged irresponsibility；《道德邊界》頁 120–121）：有權定義哪些關懷義務適用於自己，並慣於挑選成本最低的那些。在《[關懷民主](https://nyupress.org/9780814770344/caring-democracy/)》中，她辨識出五種讓這種逃避得以運作的結構性「擋箭牌」（頁 169 一併列出）：
+為何負責力必須是明確的？因為權力預設就是逃避——Tronto 將這種模式命名為「特權式不負責」（privileged irresponsibility；《道德邊界》頁 120–121）：有權定義哪些關懷義務適用於自己，並慣於挑選成本最低的那些。在《[關懷民主](https://nyupress.org/9780814770344/caring-democracy/)》中，她辨識出五種讓這種逃避得以運作的結構性「擋箭牌」（頁 33 一併列出，頁 169–171 收錄）：
 
 1. **保護擋箭牌。** 從事保護工作者（軍隊、安全）聲稱可免除其他關懷。
 2. **生產擋箭牌。** 賺錢養家者聲稱可免除家庭和社區關懷。
@@ -86,7 +86,7 @@ permalink: "/tw/2/"
 
 ### 第二個案例：深偽責任飛輪
 
-2024 年臺灣深偽詐騙對齊大會——447 位公民，大規模邀請後再從自願報名者中分層抽選，在 Stanford Online Deliberation Platform 上分成 44 組[審議式民調](https://deliberation.stanford.edu/)，採用與集體智慧計畫共同發展的[對齊大會](https://www.cip.org/alignmentassemblies)形式——可以讀作一份公民尺度的參與契約，但書中強調一項但書：它的效力是制度性的，是一條回應路徑，而不是承諾必定實施的預先承諾，迷你公眾也不是全體公眾。人類引導與前後測問卷結構了受保護的小組；場內軟體處理發言順序、時間與逐字稿，不裁決政策。
+2024 年臺灣深偽詐騙對齊大會——447 位公民，大規模邀請後再從自願報名者中分層抽選，在 Stanford Online Deliberation Platform 上分成 44 組[審議式民調](https://deliberation.stanford.edu/)，採用與集體智慧計畫共同發展的[對齊大會](https://www.cip.org/alignmentassemblies)形式——可以讀作一份公民尺度的參與契約，但書中強調一項但書：它的效力是制度性的，是一條回應路徑，而不是承諾必定實施的預先承諾，迷你公眾也不是全體公眾。前後測問卷與平台自身的引導結構了受保護的小組；場內軟體處理發言順序、時間與逐字稿，不裁決政策。
 
 - **契約。** 大會建議把責任放在能力所在之處：未經數位簽章的冒用廣告若使公民受騙，平台須分擔損失。後來的[《詐欺犯罪危害防制條例》](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080226)（2026 年 1 月 21 日修正）並未照此入法。第 30 條要求平台以數位簽章、快速認證或其他同等安全方法，核實委託刊播者與出資者的身分——不是特定要被冒用名人本人簽名。第 32 條的連帶賠償，附著於平台明知廣告涉詐卻未依通知移除、限制瀏覽或停播時——不是自動及於未經簽章的肖像。
 - **煞車。** 大會建議：平台若未設置能處理求償的在地代表，影片流量每天減速 1%。第 29 條要求未在台設立據點的適用境外平台，指定在台法律代表。第 39 條：未指定、或法律代表怠於告知協助，可處罰鍰；情節重大者，經專家程序後，可為解析／連線限制，或就法律代表協助、下架、停權的重大違規採取流量管理。那不是大會所建議的每日 1% 減速。
@@ -117,7 +117,7 @@ permalink: "/tw/2/"
 
 ### 本力文獻
 
-- Tronto，《[Caring Democracy](https://nyupress.org/9780814770344/caring-democracy/)》（2013），頁 46、169——對 Lasswell 的改寫，以及五種擋箭牌；《[Moral Boundaries](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)》（1993），頁 120–121——特權式不負責。
+- Tronto，《[Caring Democracy](https://nyupress.org/9780814770344/caring-democracy/)》（2013），頁 33、46、169–171——五種擋箭牌、對 Lasswell 的改寫，以及它們的收錄；《[Moral Boundaries](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)》（1993），頁 120–121——特權式不負責。
 - Tronto，[〈Creating Caring Institutions〉](https://doi.org/10.1080/17496535.2010.484259)（2010）——什麼使機構成為關懷的機構：目的、權力、多元。
 - Bovens，[〈Analysing and Assessing Accountability〉](https://doi.org/10.1111/j.1468-0386.2007.00378.x)（2007）——可問責性作為基本單位。
 - Thompson，[〈The Problem of Many Hands〉](https://doi.org/10.2307/1954312)（1980）；Nissenbaum，[〈Accountability in a Computerized Society〉](https://doi.org/10.1007/BF02639315)（1996）——分散性擋箭牌的舊名。

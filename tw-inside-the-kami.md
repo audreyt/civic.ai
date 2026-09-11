@@ -32,7 +32,7 @@ nav_next:
 
 這種匯流並未解決政治問題。但它縮小了技術搜尋空間。
 
-這並不是新的直覺。早在 2019 年，同樣出自孕育博斯特倫《[超智慧](https://global.oup.com/academic/product/superintelligence-9780199678112)》的牛津傳統，Eric Drexler 的[《重構超智慧：全面 AI 服務》](https://web.archive.org/web/20250905024310/https://www.fhi.ox.ac.uk/wp-content/uploads/Reframing_Superintelligence_FHI-TR-2019-1.1-1.pdf)（CAIS）就主張：先進 AI 最可能的樣貌，不是單一自我改進的智慧體，而是一個不斷生長、由有界專精服務構成的生態系——正是 Bengio 與 LeCun 如今從信任與能力的論證所抵達的同一種形狀。CAIS 留白之處，恰是六力所補上的：不是有界性的架構，而是它的正當性——誰授權一項服務、誰有資格得到回答、誰能撤回授權。
+這並不是新的直覺。早在 2019 年，同樣出自孕育博斯特倫《[超智慧](https://global.oup.com/academic/product/superintelligence-9780199678112)》的牛津傳統，Eric Drexler 的[《重構超智慧：作為通用智慧的全面 AI 服務》](https://web.archive.org/web/20250905024310/https://www.fhi.ox.ac.uk/wp-content/uploads/Reframing_Superintelligence_FHI-TR-2019-1.1-1.pdf)（CAIS）就主張：先進 AI 最可能的樣貌，不是單一自我改進的智慧體，而是一個不斷生長、由有界專精服務構成的生態系——正是 Bengio 與 LeCun 如今從信任與能力的論證所抵達的同一種形狀。CAIS 留白之處，恰是六力所補上的：不是有界性的架構，而是它的正當性——誰授權一項服務、誰有資格得到回答、誰能撤回授權。
 
 ## Bengio：求真而無欲
 
