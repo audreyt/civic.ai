@@ -119,7 +119,7 @@ How to make that union operational?
 <noscript><img src="/img/democracy-needs-civic-ai-gilligan.jpg" alt="Carol Gilligan. Quote: 'Radical listening holds the potential for transformation because it starts from a place of not knowing and develops the muscle of curiosity.'" class="overview-image" width="2992" height="1934" loading="lazy" decoding="async"></noscript>
 
 In [Carol Gilligan](https://www.hup.harvard.edu/books/9780674445444)'s fascinating 2023 book, _In a Human Voice_, she said:
-"Radical listening holds the potential for transformation because it starts
+"Radical listening holds a potential for transformation because it starts
 from a place of not knowing and develops the muscle of curiosity."
 
 That is not soft. That is the hardest discipline I know. And it is exactly what
