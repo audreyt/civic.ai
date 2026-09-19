@@ -3902,6 +3902,19 @@ h4[id] {
     scroll-margin-top: 24px;
 }
 
+h4[id^="faq-"] {
+    /* Clear the sticky .faq-filter pill (top: 8px, ~48px tall single-row,
+       ~90px wrapped two-row on narrow screens) on #faq-N anchor jumps. */
+    scroll-margin-top: 96px;
+}
+
+@media (max-width: 640px) {
+    h4[id^="faq-"] {
+        /* Wrapped pill can reach three rows on very narrow screens. */
+        scroll-margin-top: 140px;
+    }
+}
+
 /* ─── ON-THIS-PAGE CONTENTS ─── */
 .page-toc {
     margin: 0 0 2.2em;
