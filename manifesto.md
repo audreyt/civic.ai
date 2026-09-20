@@ -98,7 +98,7 @@ In Japan, 33-year-old AI engineer **Takahiro Anno** was inspired by our Pluralit
 
 He was then tapped to lead the Tokyo 2050 consultation. Based on success in that endeavour, he ran for a seat in the House of Councillors, winning over 2.5% of the national vote. His "[Team Mirai](https://team-mir.ai/)" is now a national party in the Diet.
 
-In California, the **[Engaged California](https://engaged.ca.gov/)** platform (developed with Governor Newsom's team) was intended for deliberation on teen social media use. Then the LA wildfires hit. In response, we pivoted quickly to use AI sensemaking to co-create wildfire recovery plans, which are now being implemented. A subsequent ten-week deliberation engaged over 1,400 state employees, generating more than 2,600 ideas on government efficiency — which informed real executive action. In September 2026 the Governor signed AB 2103, making the programme permanent state law from January 2027.
+In California, the **[Engaged California](https://engaged.ca.gov/)** platform (developed with Governor Newsom's team) was intended for deliberation on teen social media use. Then the LA wildfires hit. In response, we pivoted quickly to use AI sensemaking to co-create wildfire recovery plans, which are now being implemented. A subsequent ten-week deliberation engaged over 1,400 state employees, generating more than 2,600 ideas on government efficiency — which informed real executive action. In September 2026 the Governor signed AB 2103, making Engaged California an official State program from January 2027.
 
 These successes treat deliberation as a civic muscle that needs exercise. But demos alone do not bend the curve. Law and market design must follow.
 
