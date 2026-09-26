@@ -19,6 +19,8 @@
 //   node import-comics.mjs --src DIR [Ch1_A ...] # read PNGs from a local checkout's
 //                                                # comics-en/ instead of GitHub; optionally
 //                                                # only the named pages
+//   node import-comics.mjs --src ../civic-ai-comics/comics-zh-TW --suffix -tw Ch6_B
+//                                                # a translated set: writes pack6-2-tw.*
 //
 // This is a maintenance script, not part of the site build, so `sharp` is
 // deliberately kept out of the project's dependencies (it is a heavy native
@@ -52,7 +54,11 @@ const PAGES = { A: 1, B: 2 }; // upstream page letter -> our page number
 // All upstream pages share a 5749x8000 canvas; we scale every page to the
 // same target height, preserving aspect ratio, to keep the set consistent
 // (this yields 1437x1999, matching the dimensions in the chapter Markdown).
+// The zh-TW canvas is 5742x8000, which the same resize would make 1435 wide,
+// so a page that does not come out 1437 wide is scaled to exactly 1437x1999
+// (the source size the zh-TW pipeline expects for pack*-tw.jpg).
 const TARGET_HEIGHT = 1999;
+const TARGET_WIDTH = 1437;
 const JPEG = { quality: 90, mozjpeg: true, chromaSubsampling: "4:4:4" };
 const AVIF = { quality: 60 };
 
@@ -61,6 +67,8 @@ const check = argv.includes("--check");
 const srcAt = argv.indexOf("--src");
 const SRC_DIR = srcAt >= 0 ? resolve(argv[srcAt + 1]) : null;
 const only = new Set(argv.filter((a) => /^Ch[1-6]_[AB]$/.test(a)));
+const suffixAt = argv.indexOf("--suffix");
+const SUFFIX = suffixAt >= 0 ? argv[suffixAt + 1] : "";
 // Only needed for the actual conversion, so --check stays dependency-free.
 const sharp = check ? null : await loadSharp();
 
@@ -75,14 +83,24 @@ async function fetchPng(name) {
 
 async function importPage(chapter, letter) {
     const srcName = `Ch${chapter}_${letter}.png`;
-    const base = `pack${chapter}-${PAGES[letter]}`;
+    const base = `pack${chapter}-${PAGES[letter]}${SUFFIX}`;
     if (check) {
         console.log(`${srcName} -> ${base}.{jpg,avif}`);
         return;
     }
 
     const png = await fetchPng(srcName);
-    const pipeline = sharp(png).resize({ height: TARGET_HEIGHT });
+    let pipeline = sharp(png).resize({ height: TARGET_HEIGHT });
+    const { info } = await pipeline
+        .clone()
+        .raw()
+        .toBuffer({ resolveWithObject: true });
+    if (info.width !== TARGET_WIDTH)
+        pipeline = sharp(png).resize({
+            width: TARGET_WIDTH,
+            height: TARGET_HEIGHT,
+            fit: "fill",
+        });
 
     const [jpg, avif] = await Promise.all([
         pipeline.clone().jpeg(JPEG).toBuffer(),
