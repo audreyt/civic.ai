@@ -14,7 +14,7 @@ permalink: "/tw/2/"
 
 傾聽而不行動是作秀。行動而無限制是專斷。負責力是兩者之間的橋樑：將認可轉化為有約束力的參與——你可以驗證、質疑、撤銷的公開承諾，但在真正具約束力之前，仍須有權限與補救。
 
-在《[道德邊界](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)》（_[Moral Boundaries](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)_）中，Joan Tronto 將「負責力」提升為關懷實踐中最具政治核心性的階段；在《[關懷民主](https://nyupress.org/9780814770344/caring-democracy/)》（頁 46）中，她重新定義了民主政治本身：不是「誰得到什麼、何時、如何」（Harold Lasswell 1936 年的公式），而是「誰負責關懷什麼、何時、何地、如何。」這個轉變以關係式框架取代了分配式框架——不再問誰在分配競賽中勝出，而是問：誰做出了有約束力的承諾、向誰承諾，以及我們如何得知承諾是否被信守？
+在《[道德邊界](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)》（_[Moral Boundaries](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)_）中，Joan Tronto 將「負責力」提升為關懷實踐中最具政治核心性的階段；在《[關懷民主](https://nyupress.org/9780814770344/caring-democracy/)》（頁 46）中，她重新定義了民主政治本身：不是「誰得到什麼、何時、如何」（Harold Lasswell 1936 年的公式，依 Tronto 的引述），而是「誰負責關懷什麼、何時、何地、如何。」這個轉變以關係式框架取代了分配式框架——不再問誰在分配競賽中勝出，而是問：誰做出了有約束力的承諾、向誰承諾，以及我們如何得知承諾是否被信守？
 
 ### 為何重要
 
