@@ -14,8 +14,11 @@
 //   Ch6_B.png -> img/pack6-2.{jpg,avif}
 //
 // Usage:
-//   node import-comics.mjs          # download + convert all pages
-//   node import-comics.mjs --check  # list what would be done, fetch nothing
+//   node import-comics.mjs                       # download + convert all pages
+//   node import-comics.mjs --check               # list what would be done, fetch nothing
+//   node import-comics.mjs --src DIR [Ch1_A ...] # read PNGs from a local checkout's
+//                                                # comics-en/ instead of GitHub; optionally
+//                                                # only the named pages
 //
 // This is a maintenance script, not part of the site build, so `sharp` is
 // deliberately kept out of the project's dependencies (it is a heavy native
@@ -24,8 +27,8 @@
 // is not already present. Run with `node`, not `bun` — bun currently
 // mis-resolves one of sharp's transitive imports (semver/functions/coerce).
 
-import { writeFile } from "fs/promises";
-import { resolve } from "path";
+import { readFile, writeFile } from "fs/promises";
+import { join, resolve } from "path";
 import { execFileSync } from "child_process";
 
 async function loadSharp() {
@@ -53,11 +56,16 @@ const TARGET_HEIGHT = 1999;
 const JPEG = { quality: 90, mozjpeg: true, chromaSubsampling: "4:4:4" };
 const AVIF = { quality: 60 };
 
-const check = process.argv.includes("--check");
+const argv = process.argv.slice(2);
+const check = argv.includes("--check");
+const srcAt = argv.indexOf("--src");
+const SRC_DIR = srcAt >= 0 ? resolve(argv[srcAt + 1]) : null;
+const only = new Set(argv.filter((a) => /^Ch[1-6]_[AB]$/.test(a)));
 // Only needed for the actual conversion, so --check stays dependency-free.
 const sharp = check ? null : await loadSharp();
 
 async function fetchPng(name) {
+    if (SRC_DIR) return readFile(join(SRC_DIR, name));
     const url = `${BASE_URL}/${name}`;
     const res = await fetch(url);
     if (!res.ok)
@@ -96,7 +104,8 @@ async function importPage(chapter, letter) {
 const jobs = [];
 for (const chapter of CHAPTERS)
     for (const letter of Object.keys(PAGES))
-        jobs.push(importPage(chapter, letter));
+        if (!only.size || only.has(`Ch${chapter}_${letter}`))
+            jobs.push(importPage(chapter, letter));
 await Promise.all(jobs);
 
 console.log(`\nDone — ${check ? "checked" : "wrote"} ${jobs.length} pages.`);
