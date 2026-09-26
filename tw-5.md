@@ -100,7 +100,7 @@ permalink: "/tw/5/"
 - Hirschman，《[Exit, Voice, and Loyalty](https://www.hup.harvard.edu/books/9780674276604)》（1970）——退出作為約束。
 - Weber，《[The Success of Open Source](https://www.hup.harvard.edu/books/9780674018587)》（2004）——反競用性財貨；Benkler，《[The Wealth of Networks](https://yalebooks.yale.edu/book/9780300125771/the-wealth-of-networks/)》（2006）——開架書庫。
 - Soliman 等人，[〈Meronymous Communication〉](https://doi.org/10.1145/3613904.3642241)（CHI 2024）——部分匿名。
-- DiResta，[〈Free Speech Is Not the Same As Free Reach〉](https://www.wired.com/story/free-speech-is-not-the-same-as-free-reach/)（2018）；Lanier、Stanger 與唐鳳，[〈Sunset Section 230〉](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/)（2025）——表達不等於放大。
+- DiResta，[〈Free Speech Is Not the Same As Free Reach〉](https://www.wired.com/story/free-speech-is-not-the-same-as-free-reach/)（2018）；Lanier、Stanger 與唐鳳，[〈Sunset Section 230〉](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/)（2026）——表達不等於放大。
 - Ovadya，《[Bridging-Based Ranking](https://www.belfercenter.org/publication/bridging-based-ranking)》（2022）——公民排序規則。
 - Ostrom，《[Governing the Commons](https://doi.org/10.1017/CBO9780511807763)》（1990）與[〈Beyond Markets and States〉](https://doi.org/10.1257/aer.100.3.641)（2010）——公共資源設計原則與多中心治理。
 - Leibo 等人，[〈Multi-agent Reinforcement Learning in Sequential Social Dilemmas〉](https://arxiv.org/abs/1702.03037)（2017）；Taniguchi 等人，[〈Symbiotic Alignment via Collective Predictive Coding: A Theoretical Framework for Co-Creative Human–AI Ecosystems〉](https://doi.org/10.1162/ARTL.a.475)（2026）；Trivedi 等人，[〈Solipsistic Superintelligence〉](https://arxiv.org/abs/2606.03237)（2026）——理論上的技術讀法，不是田野結果。

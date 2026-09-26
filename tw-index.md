@@ -102,7 +102,7 @@ Monlam 的公開紀錄支持社群扎根的語言工具，不支持對每個模�
 - [〈廢除 Section 230，釋放第一修正案〉](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/)：唐鳳、Jaron Lanier 與 Allison Stanger 主張終結演算法放大的免責保護，同時保護人類言論——這是 Pack 5 核心的觸及而非言論改革。_(Communications of the ACM, 2026 年 1 月)_
 - [〈惡意 AI 群集如何威脅民主〉](https://www.science.org/doi/10.1126/science.adz1697)：唐鳳與 Maria Ressa、Nick Bostrom、Nicholas Christakis 等 18 位研究者共同記錄 LLM 驅動的智慧體群集如何滲透社群、在人口規模上製造假共識。_(Science, 2026)_
 - [〈透過集體預測編碼的共生對齊：共創人機生態系的理論框架〉](https://doi.org/10.1162/ARTL.a.475)：唐鳳與谷口忠大等六位共同作者，提出共生對齊的理論說明——有界智慧體透過集體預測編碼協商共享意義，而不是收斂到單一主導模型。這是 Packs 5 和 6 背後的一種技術讀法，不是已部署的安全證明。_(Artificial Life, 2026)_
-- [〈對話網路〉](https://www.mediatechdemocracy.com/conversation-networks)：唐鳳、Deb Roy 與 Lawrence Lessig 提出公民通訊基礎設施——可互通的應用程式加上由社群引導的仁工智慧——作為關懷六力的技術層。_(McGill Centre for Media, Technology and Democracy, 2025 年 3 月)_
+- [〈對話網路〉](https://www.mediatechdemocracy.com/conversation-networks)：唐鳳、Deb Roy 與 Lawrence Lessig 提出公民通訊基礎設施——可互通的應用程式加上由社群引導的仁工智慧——作為關懷六力的技術層。_(McGill Centre for Media, Technology and Democracy, 2025 年 4 月)_
 - [〈社群出發的設計〉](https://arxiv.org/abs/2502.10834)：唐鳳與 Glen Weyl 等四位共同作者提出以社會結構為核心重建社交平台——獎勵搭橋社群的內容，而非最大化互動。Packs 1 和 5 的技術基礎。_(arXiv, 2025 年 2 月)_
 - [〈美德 AI，共創無限未來〉](/tw/virtuous-ai/)：唐鳳談以公民美德培育 AI、智聯網，以及為何對齊必須是社群驅動的鮮活過程。_（武藏野大學百年校慶）_
 - [〈⿻存在〉](/tw/plurality-being/)：Tenzin Yangtso 從生存邏輯與生命意義——物質與意識——之間的張力出發，主張從開採轉向耕耘。_(2026 年 3 月)_
