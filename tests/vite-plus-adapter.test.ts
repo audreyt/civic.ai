@@ -1,5 +1,6 @@
 import { expect, test, vi } from "vite-plus/test";
 import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 import type { ConfigEnv, Plugin } from "vite";
 import type * as NodeChildProcess from "node:child_process";
 import viteConfig from "../vite.config";
@@ -171,8 +172,7 @@ test("runPagefind defaults to the project root when no directory is given", () =
         calls.push(cwd);
     });
 
-    expect(calls).toHaveLength(1);
-    expect(calls[0]).toMatch(/civic\.ai\/?$/);
+    expect(calls).toEqual([fileURLToPath(new URL("..", import.meta.url))]);
 });
 
 test("runPagefind's default executor runs the local pagefind bin directly, never ambient bunx", () => {

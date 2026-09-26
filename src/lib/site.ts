@@ -107,6 +107,8 @@ export function cssVersion(): string {
     return assetVersion("styles.css");
 }
 
+// Front-matter dates are calendar days: YAML loads `2026-07-12` as UTC midnight.
+// Read them back in UTC, or a build west of Greenwich shows the day before.
 export function formatDateDisplay(
     date: unknown,
     lang: string | undefined
@@ -114,11 +116,12 @@ export function formatDateDisplay(
     if (!date) return "";
     const d = new Date(date as string | number | Date);
     if (lang2(lang) === "zh")
-        return `${d.getFullYear()} 年 ${d.getMonth() + 1} 月 ${d.getDate()} 日`;
+        return `${d.getUTCFullYear()} 年 ${d.getUTCMonth() + 1} 月 ${d.getUTCDate()} 日`;
     return d.toLocaleDateString("en-US", {
         year: "numeric",
         month: "long",
         day: "numeric",
+        timeZone: "UTC",
     });
 }
 

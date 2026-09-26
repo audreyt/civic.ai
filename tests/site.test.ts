@@ -81,10 +81,16 @@ test("cssVersion hashes the root stylesheet", () => {
     expect(cssVersion()).toMatch(/^[a-f0-9]{8}$/);
 });
 
-test("formatDateDisplay renders localized long-form dates", () => {
-    const date = new Date(Date.UTC(2026, 6, 12));
-    expect(formatDateDisplay(date, "en-gb")).toBe("July 12, 2026");
-    expect(formatDateDisplay(date, "zh-tw")).toBe("2026 年 7 月 12 日");
+test("formatDateDisplay renders the UTC calendar day in any build timezone", () => {
+    // Both ends of 12 July UTC: a local-time reader shows 11 July west of
+    // Greenwich for the first and 13 July east of it for the second.
+    for (const date of [
+        new Date(Date.UTC(2026, 6, 12)),
+        new Date(Date.UTC(2026, 6, 12, 23, 59)),
+    ]) {
+        expect(formatDateDisplay(date, "en-gb")).toBe("July 12, 2026");
+        expect(formatDateDisplay(date, "zh-tw")).toBe("2026 年 7 月 12 日");
+    }
 });
 
 test("formatDateDisplay returns an empty string for a falsy date", () => {
