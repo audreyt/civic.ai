@@ -30,7 +30,7 @@ Hosted is not automatically worse or leakier. It is safe if the company behind i
 
 Pick the model that fits your machine.
 
-**For machines with 16 GB RAM or more:** We recommend `ornith:9b`, which is the model used in these steps.
+**For machines with 16 GB RAM or more:** We recommend `ornith-1.5:9b`, which is the model used in these steps.
 
 - **For machines with less than 16 GB RAM:** Take the hosted path described above.
 
@@ -38,7 +38,7 @@ Pick the model that fits your machine.
 
 Your Kami needs a brain that lives on your laptop. That brain comes from a free app called [Ollama](https://ollama.com). Go to their website, download it, and install it like any normal app. Then leave it running — you will pick the actual brain in Step 2.
 
-Our suggested starter brain is `ornith:9b` — the same one Audrey used for her very first Kami. Think of it as the floor, not the ceiling: small enough to work on most laptops, while bigger brains arrive every few months. If you want the newest answer for your machine, check [Artificial Analysis's open-model comparison](https://artificialanalysis.ai/models/open-source), which ranks open brains by cleverness and size — even the very cleverest can now run on a laptop, as [pi-ds4](https://pi.audreyt.org) shows. Whatever you pick in Step 2, nothing else in these steps changes. `ornith:9b` is about a 6 GB download and is happy on a laptop with roughly 16 GB of memory — which many recent laptops have. Older or smaller laptop? Take the hosted path above. The download takes a few minutes.
+Our suggested starter brain is `ornith-1.5:9b` — the same one Audrey used for her very first Kami. Think of it as the floor, not the ceiling: small enough to work on most laptops, while bigger brains arrive every few months. If you want the newest answer for your machine, check [Artificial Analysis's open-model comparison](https://artificialanalysis.ai/models/open-source), which ranks open brains by cleverness and size — even the very cleverest can now run on a laptop, as [pi-ds4](https://pi.audreyt.org) shows. Whatever you pick in Step 2, nothing else in these steps changes. `ornith-1.5:9b` is about a 7 GB download and is happy on a laptop with roughly 16 GB of memory — which many recent laptops have. Older or smaller laptop? Take the hosted path above. The download takes a few minutes.
 
 ## 2. Give it a way to act
 
@@ -46,7 +46,7 @@ A brain on its own just sits there. [OpenClaw](https://docs.openclaw.ai) gives i
 
 Download the desktop app: go to [openclaw.ai quickstart](https://openclaw.ai/#quickstart), open the Apps tab, and download the app for your system (macOS, Windows, or Linux). It sets up everything for you and walks you through each choice.
 
-When the app asks which brain to use, choose **Ollama**, then **Local only**, then **ornith:9b**. If `ornith:9b` is not on the list, finish with whatever it suggests — you can switch to yours inside the app afterwards.
+When the app asks which brain to use, choose **Ollama**, then **Local only**, then **ornith-1.5:9b**. If `ornith-1.5:9b` is not on the list, finish with whatever it suggests — you can switch to yours inside the app afterwards.
 
 If you chose the hosted path described above, choose a hosted brain here instead. Everything else stays the same.
 
