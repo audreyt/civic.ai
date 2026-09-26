@@ -75,7 +75,7 @@ nav_next:
 
 <noscript><img src="/img/democracy-needs-civic-ai-gilligan.jpg" alt="Carol Gilligan 肖像。語錄：'Radical listening holds the potential for transformation because it starts from a place of not knowing and develops the muscle of curiosity.'" class="overview-image" width="2992" height="1934" loading="lazy" decoding="async"></noscript>
 
-[Carol Gilligan](https://www.hup.harvard.edu/books/9780674445444) 在她 2023 年那本精彩的 _In a Human Voice_ 裡寫道：「激進傾聽之所以有轉化的潛力，是因為它從不知開始，並鍛鍊出好奇的肌力。」
+[Carol Gilligan](https://www.politybooks.com/bookdetail?book_slug=in-a-human-voice--9781509556809) 在她 2023 年那本精彩的 _In a Human Voice_ 裡寫道：「激進傾聽之所以有轉化的潛力，是因為它從不知開始，並鍛鍊出好奇的肌力。」
 
 這不是柔軟。這是我所知道最艱難的紀律。而這正是三萬英尺高空上的地神正在做的事：從不知道開始，朝向他者伸手。
 
