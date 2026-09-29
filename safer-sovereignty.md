@@ -87,3 +87,7 @@ Therefore, I would encourage leaders to do the following:
 The assumption that a single global intelligence layer is the answer needs reexamining, especially in fragile or highly regulated environments. The organizations that thrive will not be those that build the thickest walls or the largest central databases. They will be those that treat data as living soil, appoint local stewards to tend it, and measure success by whether trust, coordination, and accountability grow stronger under pressure, not by whether one model can answer every question from every continent.
 
 The resilient enterprise will look less like a single brain and more like a federation of trusted stewards: locally accountable governance roles, each tending its own soil, sharing what it learns, and knowing when to let the next season begin.
+
+---
+
+_Editorial note (September 2026): the text above is the article as published. ROOST is a nonprofit that develops open-source safety tools; Osprey and Coop support human-led investigation and review workflows and can be self-hosted, with policy and data staying local. The public record does not show partners training local models whose threat signals are shared through federated learning, and named use by platforms is not a published deployment count or measured harm reduction. Read the paragraph on ROOST as a design direction, not a description of a running federation._

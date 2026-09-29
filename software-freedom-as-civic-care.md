@@ -279,3 +279,7 @@ A safe AI takeoff must land somewhere. I think it is landing in our existing rel
 I will be wrong about parts of this. The most useful question is the one that shows where this model breaks. If it breaks, you still keep all the pieces, and we can patch them back together.
 
 Thank you. Live long and … prosper.
+
+---
+
+_Editorial note (September 2026): the text above is the talk as delivered. Engaged California's published input, recovery plan and reports document a process, not proof that particular ideas caused particular executive outcomes. AB 2103, signed on 19 September 2026, makes it a statutory programme from 1 January 2027, subject to appropriation. Utah's Digital Choice Act did not all start in 2027: personal-data portability under §13-81-201 took effect on 1 July 2026, and continuous real-time forwarding under H.B. 408 starts on 1 July 2027. ROOST's Osprey and Coop tools can be self-hosted and adapted, with policy and data staying local; its public operating record is not outcome validation, and it does not show a network of locally trained federated models._

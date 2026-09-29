@@ -264,7 +264,8 @@ header nav.site-nav a {
 }
 
 header nav.site-nav a:hover,
-header nav.site-nav a:focus-visible {
+header nav.site-nav a:focus-visible,
+header nav.site-nav a[aria-current="page"] {
     color: #fff;
     border-bottom-color: var(--gold-light);
 }
@@ -384,7 +385,8 @@ header .chapter-date {
 }
 
 .site-header--interior nav.site-nav a:hover,
-.site-header--interior nav.site-nav a:focus-visible {
+.site-header--interior nav.site-nav a:focus-visible,
+.site-header--interior nav.site-nav a[aria-current="page"] {
     color: var(--teal);
     border-bottom-color: var(--teal);
 }
@@ -4940,6 +4942,33 @@ html[data-theme="dark"] .cmap-arc-5 {
     border-radius: 8px;
     box-shadow: var(--shadow-hover);
     padding: 20px 22px 18px;
+}
+
+.search-overlay__close {
+    display: block;
+    min-width: 44px;
+    min-height: 44px;
+    margin: -8px -10px 4px auto;
+    padding: 6px 12px;
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.search-overlay__close:hover,
+.search-overlay__close:focus-visible {
+    color: var(--teal);
+    border-color: var(--teal);
+    background: color-mix(in srgb, var(--teal) 8%, transparent);
+}
+
+.search-overlay__close:focus-visible {
+    outline: 2px solid var(--teal);
+    outline-offset: 2px;
 }
 
 .pagefind-ui__filter-panel-label,

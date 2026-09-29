@@ -19,7 +19,7 @@ next_action:
     arrow: "right"
 ---
 
-<p class="cta-note">New here? Start with <a href="/ai-alignment-cannot-be-top-down/">how Taiwan answered AI scam ads</a>.</p>
+<p class="cta-note">New here? <a href="/#start-here">Start with three steps</a>, or jump to <a href="/#start-today">three moves you can try today</a>.</p>
 
 <p class="fold-tag"><strong>Governance should feel like a daily capability, not just a periodic vote.</strong></p>
 
@@ -40,26 +40,40 @@ Kamis help neighbourhoods, schools, unions, faith groups, cities, and diasporas 
 
 The breakthrough is not smarter chatbots. It is stronger self-government: institutions that show their work, repair harm in public, and carry civic memory across generations. The superintelligence does not need to come. It is already here. It is us — not because a mini-public equals machine superintelligence, but because, under the right institutional conditions, people with tools produce accountable collective intelligence that no central optimiser can legitimately replace.
 
-## Start here
+<h2 id="start-here">Start here</h2>
+
+You need neither the book nor technical training to use this site. Read a page, ask one question of your school, clinic or residents' group, and come back for the next.
+
+**Coming from the book?** Chapters 3–8 are Packs 1–6: [Attentiveness](/1/), [Responsibility](/2/), [Competence](/3/), [Responsiveness](/4/), [Solidarity](/5/) and [Symbiosis](/6/). Chapters 1–2 sit in the [FAQ](/faq/) and [glossary](/glossary/), Chapter 9's cases in [Sources](/sources/#cases), and Chapter 10 in [three moves you can try today](#start-today). Appendix A is the [Kami](/kami/) page, B is [Inside the Kami](/inside-the-kami/), C is the [long-term care essay](/care-ai/), D is [Measures](/measures/), E is the [glossary](/glossary/) and F is [Sources](/sources/).
 
 Just heard about Civic AI? Three steps in.
 
 1. **Get the idea.** Read the [Manifesto](/manifesto/) — the whole argument in Audrey Tang's own words.
 2. **Meet the six principles.** Skim [the 6-Pack](#the-6-pack) below: six plain-language tests for AI a community can actually trust.
-3. **See it work.** ["AI Alignment Cannot Be Top-Down"](/ai-alignment-cannot-be-top-down/) tells how Taiwan answered a wave of AI-enabled scam ads — the framework in the real world.
+3. **Inspect a documented case.** ["AI Alignment Cannot Be Top-Down"](/ai-alignment-cannot-be-top-down/) is Audrey's November 2025 account of how Taiwan answered a wave of AI-enabled scam ads. It is a dated account, so check the current figures in the [case records](/sources/#cases).
 
 Prefer to listen? Take the [6-Pack of Care podcast](/podcast/) or ["Can AI Be Compassionate?"](/compassion-and-ai/) along for a walk.
 Prefer to watch? Audrey and Caroline introduce the framework in ["Reimagining AI Alignment"](/reimagining-ai-alignment/) — a 30-minute fireside chat.
 
-Prefer visuals? Browse [all comics](/comics/) — Nicky Case's illustrated overview and twelve chapter pages.
+Prefer visuals? Browse [all comics](/comics/) — Nicky Case's illustrated overview and twelve comic pages, a problem page and a solution page for each pack.
 
-**Ready to run one?** [Set up your own Kami](/kami/) on your own laptop in three steps — bounded, local, and private.
+**Thinking of running one?** Agree how you will care for it first: who keeps it, what it may touch, and who can switch it off. Then [set up your own Kami](/kami/). How private it is depends on the runtime you choose and how you configure it.
 
 **Ready to listen at scale?** Run [Uncommon Ground](https://github.com/audreyt/uncommon-ground) — the broad-listening recipe from Audrey's talks: a question pool in, a written reply for every questioner out, one self-contained bilingual page as the receipt. See a live closed loop at [audreyt.org/dd](https://audreyt.org/dd) — 266 questions, 18 rooms, answered in writing.
 
 **Already know what you're after?**
 
 <!-- astro:reading-paths -->
+
+<h2 id="start-today">Three moves you can try today</h2>
+
+You can begin on your own device, without a budget or technical role. Anything involving other people's words, data or a shared room still needs their consent. These are household and practical proposals from Chapter 10 of the book, not tested treatments.
+
+1. **Reclaim your attention.** Set your phone and computer displays to 80 percent grayscale with the colour filters already built into your operating system. If colour is the work, as in visual design or accessibility checks, turn it back on, then return to grayscale. Try it and notice whether the screen feels easier to put down; this is a practical suggestion, not a measured clinical effect.
+2. **Reclaim your output.** Ask your AI for a page you could hand to a neighbour instead of a private chat reply. The book's instruction is: _Present fairly all stakeholder viewpoints and the uncommon ground that bridges them, as a simple one-page HTML view._ Read what comes back as a brochure: check each claim against its sources, then save it, print it or pass it across the table. The instruction is a request, not an assurance of accuracy, and it does not cure sycophancy. Get consent before uploading anyone's private material.
+3. **Reclaim the room.** Meet with generous curiosity, keep dissent visible, and respect people's rights. Where someone cannot be present, ask what representation they want and, where needed, arrange a named person with standing to speak and say no for them. Do not ask an AI to invent their view.
+
+For your next shared meeting or action, start with [Pack 1](/1/) to notice who is missing, [Pack 2](/2/) to name who will act, and [Pack 4](/4/) to ask for a repair.
 
 <h2 id="the-6-pack">The 6-Pack</h2>
 
@@ -80,14 +94,14 @@ Six design principles translate care ethics into something institutions can buil
 <li><a href="/sources/"><strong>Sources &amp; Further Reading</strong><span>Where each part of the framework came from, with links: the care-ethics lineage, a documented technology-design precedent, and the scholarship behind each pack.</span></a></li>
 </ul>
 
-## Four proof points
+<h2 id="four-ways-into-the-practice"><span id="four-proof-points" aria-hidden="true"></span>Four ways into the practice</h2>
 
 - **A public-policy case.** ["AI Alignment Cannot Be Top-Down"](/ai-alignment-cannot-be-top-down/) shows how Taiwan used an Alignment Assembly to respond to AI-enabled scam ads.
-- **A technical case.** ["Inside the Kami"](/inside-the-kami/) argues that bounded, specialised systems are easier to govern than a general-purpose governor.
+- **A technical argument.** ["Inside the Kami"](/inside-the-kami/) is a research argument, not proof from a deployment, that bounded, specialised systems are easier to govern than a general-purpose governor.
 - **A civic-practice case.** ["Ciudadanía Digital"](/ciudadania-digital/) and [Podcast: AI and Democracy](/ai-democracy-podcast/) show how this work connects to participation, legitimacy, and everyday public problem-solving.
 - **A long-term care case.** ["Attentiveness in Long-Term Care AI"](/care-ai/) examines how a cross-sector collaboration co-produced a care-centric definition of responsible AI with the people closest to the problem.
 
-The book widens these into seven case studies. They are not seven identical proofs. Five have public operating records of different depths: Taiwan's Alignment Assemblies, Team Mirai in Japan, Engaged California, Monlam AI, and ROOST's open trust-and-safety tools. Two are emerging, and the book is honest about their stage. They are real and named, but they come from unusually prepared soil: civic hackers, responsive public institutions, strong associational life. Treat each as a record of components, not a plug-and-play template — in a new room, start again with who is missing, who has standing, and who can stop the system.
+The book widens these into seven case studies, and [Sources](/sources/#cases) follows each one's public record. They are not seven identical proofs. Five have public operating records of different depths: Taiwan's Alignment Assemblies, Team Mirai in Japan, Engaged California, Monlam AI, and ROOST's open trust-and-safety tools. Two are emerging, and the book is honest about their stage. They are real and named, but they come from unusually prepared soil: civic hackers, responsive public institutions, strong associational life. Treat each as a record of components, not a plug-and-play template — in a new room, start again with who is missing, who has standing, and who can stop the system.
 
 The reply to that objection is not a sixth case from the same soil. It is recurring evidence from elsewhere. [Global Dialogues](https://globaldialogues.ai/) asks a rolling sample across 70 countries, every other month, how people actually live with AI; [Jhilmil](https://www.cip.org/jhilmil) has community organisations in India writing the health evaluations a frontier model must pass. Both come from the [Collective Intelligence Project](https://www.cip.org/), where one of us is a senior research fellow, and [Sources](/sources/) says what each can and cannot support.
 

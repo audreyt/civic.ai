@@ -1,5 +1,55 @@
 [
     {
+        "id": "everyday",
+        "label_en": "Everyday conversations",
+        "label_tw": "日常對話",
+        "steps": [
+            {
+                "url": "/#start-today",
+                "url_tw": "/tw/#start-today",
+                "label_en": "Try a first move",
+                "label_tw": "先試一個動作"
+            },
+            {
+                "url": "/1/",
+                "url_tw": "/tw/1/",
+                "label_en": "Notice who is missing",
+                "label_tw": "留意漏聽了誰"
+            },
+            {
+                "url": "/4/",
+                "url_tw": "/tw/4/",
+                "label_en": "Ask for a repair",
+                "label_tw": "要求修復"
+            }
+        ]
+    },
+    {
+        "id": "care",
+        "label_en": "Care & frontline work",
+        "label_tw": "照護與第一線工作",
+        "steps": [
+            {
+                "url": "/care-ai/",
+                "url_tw": "/tw/care-ai/",
+                "label_en": "Care shaped with its recipients",
+                "label_tw": "與受照顧者共同定義關懷"
+            },
+            {
+                "url": "/2/",
+                "url_tw": "/tw/2/",
+                "label_en": "Name who owes an answer",
+                "label_tw": "點名誰該作答"
+            },
+            {
+                "url": "/kami/#before-you-start",
+                "url_tw": "/tw/kami/#before-you-start",
+                "label_en": "Agree how to keep it",
+                "label_tw": "先議定如何守護"
+            }
+        ]
+    },
+    {
         "id": "policy",
         "label_en": "Policy & governance",
         "label_tw": "政策與治理",

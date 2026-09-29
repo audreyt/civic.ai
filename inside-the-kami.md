@@ -7,7 +7,7 @@ alt_lang_url: "/tw/inside-the-kami"
 permalink: "/inside-the-kami/"
 date: 2026-03-05
 description: "What recent ML research suggests goes inside a bounded Civic AI — and what it cannot provide."
-summary: "Three lines of ML research — Bengio, LeCun and Taniguchi's collective predictive coding — converge on a bounded, specialised Kami that negotiates shared meaning rather than ruling from above. The substrate can stay honest and narrow; legitimacy, pace and justice remain ours. Taniguchi's account is a theoretical framework, not a deployed safety proof."
+summary: "Three lines of ML research — Bengio, LeCun and Taniguchi's collective predictive coding — suggest a bounded, specialised Kami that negotiates shared meaning rather than ruling from above. Honesty and narrow scope are design goals; legitimacy, pace and justice remain ours. These programmes are not deployed care or safety proofs."
 nav_next:
     url: "/"
     text: "Home"
@@ -15,11 +15,13 @@ nav_next:
 
 The 6-Pack describes the governance around a Civic AI. This essay asks a narrower question: what kind of technical substrate makes that governance easier to uphold?
 
+Capability composes: bounding each Kami does not bound what an orchestrator assembles from many. Appendix B of the book therefore requires a named owner and scope for the orchestrator, with a legible per-turn record of which model planned, executed and checked. Composition rights sunset with the Engagement Contract, and oversight must have a way to pause the chain. This is a governance constraint, not a description of an implemented pipeline; observation alone does not guarantee control.
+
 ## In brief
 
 - Recent work from Yoshua Bengio's Scientist AI and the SAI line from LeCun and colleagues points toward bounded, specialised systems rather than one general-purpose governor.
 - A third line of work — Tadahiro Taniguchi and colleagues' _Collective Predictive Coding_ (CPC) — offers a theoretical framework for how those bounded systems can negotiate shared meaning with their human communities, rather than receive it from above. The 2026 _Artificial Life_ paper, _Symbiotic Alignment via Collective Predictive Coding: A Theoretical Framework for Co-Creative Human–AI Ecosystems_, which I co-authored, formalises this as _symbiotic alignment_.
-- These three programmes converge: Bengio shows how the inside can stay honest, SAI shows why the inside should stay narrow, and CPC shows how many such insides can co-construct meaning without a single supervisor.
+- These three programmes suggest a shared shape: Bengio argues for an honest inside, SAI for a narrow one, and CPC proposes how many such systems could co-construct meaning without a single supervisor. These are research arguments, not deployed care or safety proofs.
 - This convergent shape is not new: Eric Drexler's 2019 _Comprehensive AI Services_ (CAIS), from the same Oxford tradition as Bostrom's _Superintelligence_, already reframed advanced AI as an ecology of bounded, specialised services rather than a single agent. What the 6-Pack adds is the civic layer CAIS leaves open.
 - That convergence does not settle politics, but it does narrow the technical search space.
 - The inside still cannot decide legitimacy, standing, pace, or justice. Those remain institutional questions.
@@ -40,6 +42,8 @@ under human authorisation.
 
 That convergence does not settle politics. It does narrow the technical search
 space.
+
+An honest, narrow substrate is a design goal, not a property conferred on a model by citing these programmes.
 
 None of this is a new intuition. In 2019, within the same Oxford tradition that produced Bostrom's _[Superintelligence](https://global.oup.com/academic/product/superintelligence-9780199678112)_, Eric Drexler's [_Reframing Superintelligence: Comprehensive AI Services as General Intelligence_](https://web.archive.org/web/20250905024310/https://www.fhi.ox.ac.uk/wp-content/uploads/Reframing_Superintelligence_FHI-TR-2019-1.1-1.pdf) (CAIS) argued that advanced AI is most plausibly reached not as a single self-improving agent but as a growing ecology of bounded, specialised services — the same shape Bengio and LeCun now arrive at from trust and capability arguments. What CAIS left open is exactly what the 6-Pack supplies: not the architecture of boundedness, but its legitimacy — who authorises a service, who is owed an answer, who can revoke the mandate.
 
@@ -171,7 +175,7 @@ can still be dangerous.
 
 ## What the substrate cannot decide
 
-This is where the limit becomes clear.
+This is where the limit becomes clear. Begin governance with the [human keeping questions](/kami/#before-you-start), before installation or shared uploads.
 
 **It cannot decide standing.** A non-agentic predictor can still be used
 without the consent of the people it affects. Architecture cannot grant the

@@ -143,3 +143,7 @@ Thank you. What gives you hope, Audrey?
 **Caroline Green**: Great. Well, thanks to everybody for joining us, and I hope you have a wonderful day. Thank you, Audrey.
 
 **Audrey Tang**: Thank you. Live long and prosper.
+
+---
+
+_Editorial note (September 2026): the text above is the conversation as recorded. The 2024 Taiwan Alignment Assembly is documented in [Pack 2](/2/) and [Sources](/sources/#cases): 447 attendees in 44 groups on 23 March 2024, stratified on selected demographics among people who had opted in. That makes it a mini-public, not a proven representative sample, and it was a response path while an Executive Yuan bill was already moving, not citizen-authored statute. The later fall in impersonation scam ads is a ministry-reported figure for targeted categories, cited as more than 95% in [Audrey's testimony of 16 December 2025](https://cyberambassador.tw/collaborative-immune-system). It is not a fall to zero, it does not measure all fraud, and it does not show that the assembly alone caused it. On Monlam AI, the public record documents community-led language applications and work on Tibetan-language needs; it does not fully publish ownership, governance, architecture or impact, and it does not show one tiny-model pipeline built from a fixed set of texts. See the [Monlam case](/sources/#cases)._

@@ -31,8 +31,8 @@
         "tier": "diagnosis",
         "term_en": "caring deficit",
         "term_tw": "關懷赤字",
-        "def_en": "Joan Tronto's term for too many demands for care, too few carers, themselves under-cared for. The deficit is a political choice about whose labour is paid, whose needs are recognised, and whose voice counts in allocating resources — at its core, a democratic deficit.",
-        "def_tw": "瓊・特隆托（Joan Tronto）的術語：對關懷的需求太多、照顧者供給不足、照顧者本身也缺乏被照顧。這項赤字是政治選擇——誰的勞動被付酬、誰的需求被承認、誰的聲音在資源配置中算數——其核心是民主赤字。"
+        "def_en": "A term Joan Tronto takes up from other scholars for too many demands for care, too few carers, themselves under-cared for. The deficit is a political choice about whose labour is paid, whose needs are recognised, and whose voice counts in allocating resources — at its core, a democratic deficit.",
+        "def_tw": "瓊・特隆托（Joan Tronto）沿用其他學者的用語：對關懷的需求太多、照顧者供給不足、照顧者本身也缺乏被照顧。這項赤字是政治選擇——誰的勞動被付酬、誰的需求被承認、誰的聲音在資源配置中算數——其核心是民主赤字。"
     },
     {
         "id": "relational-health",
@@ -42,6 +42,38 @@
         "def_en": "A diagnostic category for the quality of relationships Civic AI aims to support — not a slogan, and not a substitute for safety or ethics. Safety prevents bad outcomes; ethics follows principles; health asks whether the relationship can actively flourish. Four relations are in view: people to people (how AI mediates human relationships); people to technology providers (two-way accountability across a power asymmetry); people to AI (trust cannot be built on sycophancy); and AI systems and their operators to one another (what they can share, and how failures travel). Four conditions must be continuously maintained: transparency (what attentiveness needs), agency (responsibility in institutional form), accountability (what competence makes possible), and reciprocity (what responsiveness enables). Relational health is not a property a system either has or lacks.",
         "def_tw": "仁工智慧旨在支撐的關係品質的診斷類別——不是願景用語，也不能取代安全或倫理。安全防止壞結果；倫理遵循原則；健康則問這段關係能否主動蓬勃。四種關係在視野裡：人與人（AI 如何中介人際關係）、人與科技供應商（跨越權力不對稱的雙向問責）、人與 AI（信任無法建立在逢迎上）、AI 系統及其營運者彼此之間（能分享什麼、失敗如何傳播）。四項條件必須持續維持：透明度（覺察力所需）、能動性（負責力的制度形式）、問責（勝任力使之可能）、互惠（回應力使之實現）。關係健康度不是系統有或沒有的單一屬性。",
         "aliases_tw": ["關係健康"]
+    },
+    {
+        "id": "care-washing",
+        "tier": "diagnosis",
+        "term_en": "care-washing",
+        "term_tw": "關懷洗白",
+        "def_en": "The Care Collective's term for borrowing the language of care while leaving practice unchanged or legitimising unethical behaviour. A caring label is not a counterexample; a named obligation backed by resources, an available remedy and people able to require change would be. This framework is not immune to care-washing. See <a href=\"/sources/\">Sources</a>.",
+        "def_tw": "Care Collective 用來批判借用關懷語言、實踐卻未改變，甚至替不道德行為正當化的用語。貼上關懷標籤不能反駁這項批判；具名義務有資源支撐、補救確實可用，而且有人能要求改變，才是反例。這套框架也可能淪為關懷洗白。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。"
+    },
+    {
+        "id": "tacit-knowledge",
+        "tier": "diagnosis",
+        "term_en": "tacit knowledge",
+        "term_tw": "內隱知識",
+        "def_en": "Michael Polanyi's term for knowledge held in practitioners' hands and habits that cannot easily be written into a manual. The Apprentice Model should support this knowledge rather than assume a written record has captured everything. See <a href=\"/3/\">Competence</a> and <a href=\"/sources/\">Sources</a>.",
+        "def_tw": "Michael Polanyi 的用語，指實踐者掌握在雙手與習慣裡、難以完整寫成手冊的知識。學徒模型應支撐這些知識，而非假定書面紀錄已經涵蓋一切。見〈<a href=\"/tw/3/\">勝任力</a>〉及〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。"
+    },
+    {
+        "id": "thick-alignment",
+        "tier": "diagnosis",
+        "term_en": "thick alignment",
+        "term_tw": "厚實對齊",
+        "def_en": "Alondra Nelson's concept of alignment that engages cultural context, power and community-specific needs. It draws on the thick/thin description distinction coined by Gilbert Ryle and developed by Clifford Geertz. The authors extend it to accountable civic procedure: who was heard, who authorised action and who can override. See <a href=\"/sources/\">Sources</a>.",
+        "def_tw": "Alondra Nelson 提出的對齊概念，納入文化脈絡、權力與特定社群的需求。其思想來自 Gilbert Ryle 提出的厚／薄描述區分，再由 Clifford Geertz 發展。作者將它延伸為可問責的公民程序：聽見了誰、誰授權行動、誰能否決。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。"
+    },
+    {
+        "id": "thin-alignment",
+        "tier": "diagnosis",
+        "term_en": "thin alignment",
+        "term_tw": "薄對齊",
+        "def_en": "A narrow approach that concentrates on getting an objective function right while leaving meaning, context and power outside the frame. It is a contrast with <a href=\"/glossary/#thick-alignment\">thick alignment</a>, not a description of all frontier AI research. See <a href=\"/sources/\">Sources</a>.",
+        "def_tw": "將重點放在調好目標函數、卻把意義、脈絡與權力留在框架之外的狹窄取徑。這是與<a href=\"/tw/glossary/#thick-alignment\">厚實對齊</a>的對照，不是對所有前沿 AI 研究的概括。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。"
     },
     {
         "id": "sycophancy",
@@ -66,8 +98,8 @@
         "tier": "architecture",
         "term_en": "6-Pack of Care",
         "term_tw": "關懷六力",
-        "def_en": "A governance architecture translating Joan Tronto's care ethics into six design primitives for AI systems: Attentiveness, Responsibility, Competence, Responsiveness, Solidarity, and Symbiosis. The first four form a feedback loop; the fifth scales care across organisations; the sixth keeps every deployment local, plural, and sunset-ready.",
-        "def_tw": "一套治理架構，將 Joan Tronto 的關懷倫理學轉化為 AI 系統的六項設計要素：覺察力、負責力、勝任力、回應力、團結力、共生力。前四力構成回饋迴圈；第五力將關懷擴展至跨組織；第六力確保每次部署保持在地、多元、可退場。"
+        "def_en": "The authors' adaptation of Joan Tronto's care ethics into six design primitives for AI governance: Attentiveness, Responsibility, Competence, Responsiveness, Solidarity, and Symbiosis. The first four form a feedback loop; the fifth adapts caring with across organisations. Symbiosis is our sixth principle, not a sixth phase proposed by Tronto: deployments should remain local, plural, and sunset-ready. See <a href=\"/sources/\">Sources</a>.",
+        "def_tw": "作者將 Joan Tronto 的關懷倫理學轉化為 AI 治理的六項設計要素：覺察力、負責力、勝任力、回應力、團結力、共生力。前四力構成回饋迴圈；第五力將共同關懷延伸到跨組織協作。共生力是我們提出的第六項原則，不是 Tronto 提出的第六階段：部署應保持在地、多元、可退場。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。"
     },
     {
         "id": "corrective-loop",
@@ -84,6 +116,14 @@
         "term_tw": "地神（Kami）",
         "def_en": "A bounded local AI steward — Knowledge Artefact Management Intelligence — whose purpose is interwoven with the health of a specific place, practice, or network of people. Inspired by the Shinto concept of local guardian spirits, a Kami has no ambition to expand beyond its relational mandate.",
         "def_tw": "一位有界的在地 AI 守護者——Knowledge 知識、Artefact 工藝、Management 管理、Intelligence 智慧——其使命與特定場域、實踐或人際網絡的健康緊密交織。靈感源自神道信仰中的在地守護神概念，地神（Kami）無意超越其關係性使命而向外擴張。"
+    },
+    {
+        "id": "keeping",
+        "tier": "architecture",
+        "term_en": "keeping",
+        "term_tw": "守護",
+        "def_en": "The slow communal work of care, custody and accountable maintenance that turns a working agent into a Kami. It continues after installation through checking notes, recording overrides, funding maintenance and agreeing when the system should end. A setup guide cannot supply this practice. See <a href=\"/kami/#before-you-start\">Before you start</a>.",
+        "def_tw": "透過照顧、保管與可問責的維護，讓能運作的智慧體成為 Kami 的社群慢工。安裝之後仍須核對筆記、記錄否決、支付維護費用，並約定系統何時結束。架設指南不能代替這份實踐。見〈<a href=\"/tw/kami/#before-you-start\">開始之前</a>〉。"
     },
     {
         "id": "alignment-by-process",
@@ -117,6 +157,62 @@
         "term_tw": "有界性",
         "def_en": "The design principle that an AI system's scope, resources, and authority are intentionally limited to the specific relationships it was created to serve — enforced through resource caps, sunset timers, non-expansion pacts, and fresh democratic authority for any scope change. Boundedness is the architectural alternative to the Singleton. The same architectural intuition was set out earlier in Eric Drexler's Comprehensive AI Services (CAIS), a 2019 Future of Humanity Institute report at Oxford that reframed advanced AI as a system of bounded, specialised services rather than a single agent.",
         "def_tw": "一種設計原則，透過資源上限、落日計時器、不擴張協定，以及任何範疇變更都需要新的民主授權，刻意限制 AI 系統的範疇、資源與權力，使其專注於它所設計服務的特定關係。有界性是單一主宰的架構性替代方案。同樣的架構直覺，早已見於 Eric Drexler 的《全面 AI 服務》（Comprehensive AI Services，CAIS）——這份 2019 年牛津大學人類未來研究所（Future of Humanity Institute）的報告，把先進 AI 重新理解為一套有界、專精的服務，而非單一代理者。"
+    },
+    {
+        "id": "brochure",
+        "tier": "design",
+        "term_en": "brochure",
+        "term_tw": "摺頁",
+        "def_en": "A clean, shareable and editable record of civic AI output, linking claims to source inputs and marking disagreement rather than inventing consensus. A group can read and correct it together. It makes the record inspectable, not the model's internal reasoning transparent. See <a href=\"/1/\">Attentiveness</a>.",
+        "def_tw": "仁工智慧產出的清楚、可分享、可編修紀錄，將主張連回來源輸入，標出分歧而不捏造共識。人們可以一起閱讀、一起更正。它讓紀錄可供檢查，不是讓模型的內部推理變得透明。見〈<a href=\"/tw/1/\">覺察力</a>〉。"
+    },
+    {
+        "id": "data-as-soil",
+        "tier": "design",
+        "term_en": "data as soil",
+        "term_tw": "資料即土壤",
+        "def_en": "A restorative metaphor that treats data as a community asset to tend, with models brought into local contexts and governed by the people producing the knowledge. Regeneration is a design commitment, not an automatic property of local AI. See <a href=\"/6/\">Symbiosis</a>.",
+        "def_tw": "將資料視為社群須照料的共同資產的修復性比喻：模型進入在地脈絡，由產生知識的人們治理。再生是設計承諾，不是在地 AI 自動具備的特性。見〈<a href=\"/tw/6/\">共生力</a>〉。"
+    },
+    {
+        "id": "data-as-oil",
+        "tier": "design",
+        "term_en": "data as oil",
+        "term_tw": "資料即石油",
+        "def_en": "The extractive metaphor that treats collective culture, languages and tacit knowledge as resources to drill, refine and lock behind proprietary APIs. The contrast with <a href=\"/glossary/#data-as-soil\">data as soil</a> asks who governs the knowledge and receives its value. See <a href=\"/6/\">Symbiosis</a>.",
+        "def_tw": "把集體文化、語言與內隱知識視為可開採、提煉，再鎖進專有 API 的資源的萃取性比喻。與<a href=\"/tw/glossary/#data-as-soil\">資料即土壤</a>的對照，追問由誰治理知識、誰獲得其價值。見〈<a href=\"/tw/6/\">共生力</a>〉。"
+    },
+    {
+        "id": "two-lanes",
+        "tier": "design",
+        "term_en": "two lanes",
+        "term_tw": "兩條車道",
+        "def_en": "Governance at two speeds: a slow lane sets the Engagement Contract, independent oversight and prefunded remedies; a fast sandbox lane learns within tighter bounds and shorter cycles. The sandbox contains the cost of error, not a route around obligations. See <a href=\"/2/\">Responsibility</a>.",
+        "def_tw": "讓治理以兩種速度運作：慢車道訂立參與契約、獨立監督與預先備妥的補救資金；快車道的沙盒則在更窄界限與更短週期內學習。沙盒是為了控制犯錯的代價，不是繞過義務的捷徑。見〈<a href=\"/tw/2/\">負責力</a>〉。"
+    },
+    {
+        "id": "promise-fidelity",
+        "tier": "design",
+        "term_en": "promise fidelity",
+        "term_tw": "承諾保真度",
+        "def_en": "The authors' proposed public test for responsibility: what share of material obligations are explicitly owned, properly authorised and kept on their published terms? A named owner still needs matching authority and resources. See <a href=\"/measures/#promise-fidelity\">Measures</a>; this is not a validated standard.",
+        "def_tw": "作者為負責力提出的公共檢驗：重要義務中，有多少被明確指派負責、授權正當，並依照公布條件履行？具名負責人仍須握有相稱的權限與資源。見〈<a href=\"/tw/measures/#promise-fidelity\">衡量指標</a>〉；這不是已驗證的標準。"
+    },
+    {
+        "id": "verified-execution-rate",
+        "tier": "design",
+        "term_en": "verified execution rate",
+        "term_tw": "經驗證的執行率",
+        "def_en": "The authors' proposed public test for competence: what share of audited decisions or releases pass guardrails, include a usable trace and stay inside release bounds? A trace supports an audit of the action, not a proof of the model's internal reasoning or safety. See <a href=\"/measures/#verified-execution-rate\">Measures</a>.",
+        "def_tw": "作者為勝任力提出的公共檢驗：被稽核的決策或發版中，有多少通過護欄、具備可用軌跡，並維持在發版界限內？軌跡支撐的是行動稽核，不是模型內部推理或安全的證明。見〈<a href=\"/tw/measures/#verified-execution-rate\">衡量指標</a>〉。"
+    },
+    {
+        "id": "exit-readiness",
+        "tier": "design",
+        "term_en": "exit readiness",
+        "term_tw": "退出就緒度",
+        "def_en": "The authors' proposed public test for symbiosis: could a system hand over or shut down on schedule without rights loss, continuity failure or recentralisation? A handover rehearsal supplies evidence; a clause promising exit alone does not. See <a href=\"/measures/#exit-readiness\">Measures</a>.",
+        "def_tw": "作者為共生力提出的公共檢驗：系統能否按期交接或關閉，而不造成權利流失、服務中斷或再集中化？交接演練提供證據；光有承諾退出的條款還不夠。見〈<a href=\"/tw/measures/#exit-readiness\">衡量指標</a>〉。"
     },
     {
         "id": "sunset",
@@ -198,8 +294,8 @@
         "tier": "design",
         "term_en": "meronymity (selective-disclosure identity)",
         "term_tw": "選擇性揭露身分",
-        "def_en": "An identity design pattern in which a person or AI agent proves a specific role or attribute (for example, \"I am a real person\" or \"I am a licensed care worker\") without revealing their full identity. The word meronymity was coined by Nouran Soliman and colleagues at CHI 2024 for communication that reveals chosen facets of identity, backed by trusted endorsers. Selective disclosure enables accountability without requiring doxxing.",
-        "def_tw": "一種身分設計模式，讓個人或 AI 智慧體能證明特定角色或屬性（例如「我是真實的人」或「我是持有執照的照護工作者」），而無需揭露完整身分。meronymity（部分匿名）一詞由 Nouran Soliman 等人在 CHI 2024 提出，指只揭露自己選定的身分面向、並有可信背書者的溝通方式。選擇性揭露使問責成為可能，同時不要求以肉搜為代價。"
+        "def_en": "An identity design pattern in which a person or AI agent proves a specific role or attribute (for example, \"I am a real person\" or \"I am a licensed care worker\") without revealing their full identity. An agent can prove it answers to a real human or legally constituted steward without exposing that person's address or phone number. The word meronymity was coined by Nouran Soliman and colleagues at CHI 2024 for communication that reveals chosen facets of identity, backed by trusted endorsers. Selective disclosure enables accountability without requiring doxxing. See <a href=\"/5/\">Solidarity</a>.",
+        "def_tw": "一種身分設計模式，讓個人或 AI 智慧體能證明特定角色或屬性（例如「我是真實的人」或「我是持有執照的照護工作者」），而無需揭露完整身分。智慧體可以證明自己向真實的人或依法成立的守護機構負責，不必公開那個人的住址或電話。meronymity（部分匿名）一詞由 Nouran Soliman 等人在 CHI 2024 提出，指只揭露自己選定的身分面向、並有可信背書者的溝通方式。選擇性揭露使問責成為可能，同時不要求以肉搜為代價。見〈<a href=\"/tw/5/\">團結力</a>〉。"
     },
     {
         "id": "accountable-formation",
@@ -235,6 +331,30 @@
         "term_tw": "對齊大會",
         "def_en": "A structured deliberative gathering where people listen across differences and develop informed recommendations. The Collective Intelligence Project developed the term and format, with which Taiwan's Ministry of Digital Affairs ran a pilot in 2023. Taiwan's 2024 anti-scam Assembly invited 200,000 people by SMS, received 1,760 valid responses, and brought 447 participants into 44 groups, stratifying among those who opted in. It used Stanford Deliberative Polling and the Online Deliberation Platform, not Polis. The mini-public produced a public record of recommendations and an institutional response path while an Executive Yuan bill was already moving; it neither stood for the whole population nor enacted the statute.",
         "def_tw": "一種有結構的審議聚會，讓人們跨越差異彼此聆聽，形成知情建議。名稱與形式由集體智慧計畫發展，臺灣數位發展部在 2023 年與其合作試行。臺灣 2024 年反詐騙大會發出 20 萬封簡訊邀請，收到 1,760 份有效回覆，再從自願回覆者中分層抽選，最後有 447 人分成 44 組參與。方法是史丹佛審議式民調，使用 Online Deliberation Platform，而非 Polis。這個小型公眾產出公開建議紀錄，以及行政院法案已在推進時的一條制度回應路徑；它既不等於全體人口，也未自行制定法律。"
+    },
+    {
+        "id": "bridging-map",
+        "tier": "instruments",
+        "term_en": "bridging map",
+        "term_tw": "搭橋地圖",
+        "def_en": "A visual record of where participants agree, disagree or discover that an apparent disagreement dissolves on closer examination. Tools such as Polis can produce one; the map represents those who participated, not people absent from the record. See <a href=\"/1/\">Attentiveness</a>.",
+        "def_tw": "呈現參與者在哪裡同意、在哪裡分歧，以及哪些表面分歧經細看後消解的視覺紀錄。Polis 等工具可以製作這種地圖；它呈現的是參與者，不是紀錄裡缺席的人。見〈<a href=\"/tw/1/\">覺察力</a>〉。"
+    },
+    {
+        "id": "handover-rehearsal",
+        "tier": "instruments",
+        "term_en": "handover rehearsal / exit drill",
+        "term_tw": "交接演練／退場演練",
+        "def_en": "An exercise that tests whether a deployment can migrate, pause, fork, shut down or hand over on schedule without rights loss, service-continuity failure or recentralisation. It supplies practical evidence for <a href=\"/glossary/#exit-readiness\">exit readiness</a>, rather than treating a promised exit clause as proof. See <a href=\"/6/\">Symbiosis</a>.",
+        "def_tw": "實際檢驗部署能否按期遷移、暫停、分支、關閉或交接，而不造成權利流失、服務中斷或再集中化的演練。它為<a href=\"/tw/glossary/#exit-readiness\">退出就緒度</a>提供實際證據，不把承諾退出的條款當作證明。見〈<a href=\"/tw/6/\">共生力</a>〉。"
+    },
+    {
+        "id": "system-weeder",
+        "tier": "instruments",
+        "term_en": "System Weeder",
+        "term_tw": "系統除草人",
+        "def_en": "A maintainer doing the recurring, often invisible work that keeps a deliberation platform or Kami running, from clearing spam to repairing failures. Keeping requires named people, a recurring budget that pays this labour and authority to refuse work that violates the charter without losing a livelihood. Habermolt is the book's recurring example. See <a href=\"/kami/\">Keeping a Kami</a> and <a href=\"/sources/\">Sources</a>.",
+        "def_tw": "持續維持審議平台或 Kami 運作的維護者，從清理垃圾訊息到修復故障，做的往往是看不見的工作。守護需要具名的人、支付這份勞動的經常性預算，以及拒絕違反章程的工作而不失去生計的權力。Habermolt 是書中反覆出現的例子。見〈<a href=\"/tw/kami/\">守護 Kami</a>〉及〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。"
     },
     {
         "id": "sortition",
@@ -283,8 +403,8 @@
         "tier": "instruments",
         "term_en": "participation officer",
         "term_tw": "參與官",
-        "def_en": "The named human answerable for a deployment's civic obligations: the person who keeps the obligation ledger and owns the engagement contract's clock — the one a community can point to when \"who must answer?\" is checked.",
-        "def_tw": "為部署的公民義務具名負責的人：維護義務帳本、看守參與契約的時鐘——當「誰必須作答」被檢驗時，社群能指向的那個人。"
+        "def_en": "The named human answerable for a deployment's civic obligations, keeping the obligation ledger and the engagement contract's clock. The duty needs matching authority and resources: access to relevant logs, power to pause a release and a route to escalate unresolved breaches. A title without those powers is not accountability. See <a href=\"/2/\">Responsibility</a>.",
+        "def_tw": "為部署的公民義務具名負責的人，維護義務帳本、看守參與契約的時鐘。職責須有相稱的權限與資源：能調閱相關紀錄、暫停發版，並將未解決的違約往上提報。只有頭銜、沒有這些權力，不能算問責。見〈<a href=\"/tw/2/\">負責力</a>〉。"
     },
     {
         "id": "obligation-ledger",
@@ -299,8 +419,8 @@
         "tier": "instruments",
         "term_en": "override ledger",
         "term_tw": "否決帳本",
-        "def_en": "A room's plain-text working memory of human overrides: who said \"no\" to the Kami, what changed, and which corrections remain open. It lets the room check whether its governance charter works in practice. Catalogued with the <a href=\"/measures/#named-instruments\">Measures</a> page's named instruments.",
-        "def_tw": "屬於整個房間的純文字工作記憶，記下誰對地神說「不」、因此改變了什麼，以及哪些糾正尚未完成。房間裡的人據此檢查治理章程是否在實際運作。收錄於〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁的具名工具。"
+        "def_en": "A room's plain-text working memory of human overrides: who said \"no\" to the Kami, why, what changed and which corrections remain open. The room keeps the full record privately on agreed terms. Public examples require consent, month-level aggregation, roles rather than names unless explicitly opted in, and removal of identifying details. Clearly labelled teaching examples are different from live evidence. See <a href=\"/kami/\">Keeping a Kami</a> and the <a href=\"/measures/#named-instruments\">named instruments</a>.",
+        "def_tw": "屬於整個房間的純文字工作記憶，記下誰對 Kami 說「不」、理由、因此改變了什麼，以及哪些糾正尚未完成。房間依約私下保留完整紀錄。公開範例須取得同意、至少按月彙整、以角色取代姓名（除非本人明確同意具名），並移除可辨識個人的細節。清楚標示的教學範例與實際證據不同。見〈<a href=\"/tw/kami/\">守護 Kami</a>〉及〈<a href=\"/tw/measures/#具名工具\">具名工具</a>〉。"
     },
     {
         "id": "correction-backlog-board",

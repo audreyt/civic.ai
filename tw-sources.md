@@ -14,9 +14,13 @@ nav_next:
     text: "首頁"
 ---
 
-要求機構公開展示其工作過程的框架，自己也應該如此。關懷六力是由借來的零件組裝而成——四十年的關懷倫理傳統、十五年把關懷倫理應用於機器的文獻，以及政治學、工程與設計領域幾個更古老的觀念——再加上少數屬於我們自己的步驟。這一頁是閱讀的足跡：每一力取用了什麼、來自誰、讀者可以到哪裡查證。書中的參考書目與註釋更完整；此處收錄的是各力頁面直接倚賴的條目。如果我們用了你的想法卻沒有具名，請[提出修正](https://github.com/audreyt/civic.ai/issues)。
+要求機構公開展示其工作過程的框架，自己也應該如此。關懷六力是由借來的零件組裝而成——四十年的關懷倫理傳統、十五年把關懷倫理應用於機器的文獻，以及政治學、工程與設計領域幾個更古老的觀念——再加上少數屬於我們自己的步驟。這是框架與書共同的公開來源線索：我們借用了什麼、來自誰、讀者可以到哪裡查證。不必先讀過任何作品。思想上的借重應和主張一樣，看得見、查得到。如果我們用了你的想法卻沒有具名，請[提出修正](https://github.com/audreyt/civic.ai/issues)。
 
 參考文獻列出作品、版本或出版日期，並盡可能連到出版社、DOI 或穩定典藏。每則說明都交代我們取用了什麼。理論論證、田野研究與計畫自行發布的紀錄，各自能支持的主張並不相同。
+
+### 在對話裡使用來源
+
+打開原文，問它究竟能支持哪一項主張。理論不是試驗，計畫紀錄不是獨立成效研究，證據的時間範圍也很重要。連結不明確時，就把不確定之處記下來，不要借來源的聲望替主張背書。
 
 ### 如何讀這些證據
 
@@ -112,7 +116,7 @@ Aimee van Wynsberghe 的「以關懷為中心的價值敏感設計」是直接�
 - Alfrink, Kars, Ianus Keller, Gerd Kortuem, and Neelke Doorn. ["Contestable AI by Design: Towards a Framework."](https://doi.org/10.1007/s11023-022-09611-z) _Minds and Machines_ 33 (2023): 613–639; and Lyons, Henrietta, Eduardo Velloso, and Tim Miller. ["Conceptualising Contestability: Perspectives on Contesting Algorithmic Decisions."](https://doi.org/10.1145/3449180) _Proceedings of the ACM on Human-Computer Interaction_ 5, CSCW1 (2021).——「可質疑的設計」：申訴按鈕所屬的研究綱領。
 - Citron, Danielle Keats. ["Technological Due Process."](https://openscholarship.wustl.edu/law_lawreview/vol85/iss6/2/) 2008.——見第二力。
 - Sloane, Mona, Emanuel Moss, Olaitan Awomolo, and Laura Forlano. ["Participation Is Not a Design Fix for Machine Learning."](https://doi.org/10.1145/3551624.3555285) _EAAMO_ 2022; and Birhane, Abeba, William Isaac, Vinodkumar Prabhakaran, Mark Díaz, Madeleine Clare Elish, Iason Gabriel, and Shakir Mohamed. ["Power to the People? Opportunities and Challenges for Participatory AI."](https://doi.org/10.1145/3551624.3555290) _EAAMO_ 2022.——參與式 AI、它的勞動問題，以及「參與漂洗」：與關懷漂洗同樣的警告，也是社群評測應獲付酬的理由。
-- Tyler, Tom R. _[Why People Obey the Law](https://press.princeton.edu/books/paperback/9780691126739/why-people-obey-the-law)_. Princeton University Press, 2006（初版 1990 年）；Thibaut, John, and Laurens Walker. _Procedural Justice_. Erlbaum, 1975.——公平、正當性與決策接受度的研究。我們提出的失落後信任指標，是有待檢驗的應用，不保證公平程序一定能換得同意。
+- Tyler, Tom R. _[Why People Obey the Law](https://press.princeton.edu/books/paperback/9780691126739/why-people-obey-the-law)_. Princeton University Press, 2006（初版 1990 年）；Thibaut, John, and Laurens Walker. _Procedural Justice_. Erlbaum, 1975.——公平、正當性與決策接受度的研究。我們提出的失利下的信任指標，是有待檢驗的應用，不保證公平程序一定能換得同意。
 - Douw, Gooske, et al. ["Nurses' Worry or Concern and Early Recognition of Deteriorating Patients on General Wards in Acute Care Hospitals: A Systematic Review."](https://doi.org/10.1186/s13054-015-0950-5) _Critical Care_ 19 (2015): 230.——護理師辨識病人惡化的相關證據；並未記錄我們虛構的病房，也未驗證 AI 學徒。
 - Sendelbach, Sue, and Marjorie Funk. ["Alarm Fatigue: A Patient Safety Concern."](https://doi.org/10.1097/NCI.0b013e3182a903f9) _AACN Advanced Critical Care_ 24, no. 4 (2013): 378–386.——為什麼容易拉下的煞車需要一本帳本。
 - The Collective Intelligence Project. [Weval](https://weval.org/). 2025–.——可運行的共享評測登錄庫；其背後的文獻見下方「集體智慧計畫」一節。
@@ -144,6 +148,10 @@ Aimee van Wynsberghe 的「以關懷為中心的價值敏感設計」是直接�
 
 ### 本框架所加入的對齊對話
 
+- AI Futures Project。《[AI 2040: Plan A](https://ai-2040.com/)》。2026。——書的導論討論的正向情境，不是預測，也不是觀察資料集。
+- Kokotajlo, Daniel, Scott Alexander, Thomas Larsen, Eli Lifland, and Romeo Dean。《[AI 2027](https://ai-2027.com/)》。AI Futures Project，2025；以及 Kokotajlo, Daniel, Eli Lifland, and Brendan Halstead。[〈Q1 2026 Timelines Update〉](https://blog.aifutures.org/p/q1-2026-timelines-update)。AI Futures Project，2026 年 4 月 2 日。——原始情境與後續更新，後者修訂的是個別作者對自動化程式設計者的時間估計，不是共同修訂通用超級智慧的到來日期。
+- Bales, Adam, and Iason Gabriel。[〈Artificial Minds, Human Disagreement: The Political Challenge of AI Consciousness〉](https://doi.org/10.2139/ssrn.6937498)。SSRN，2026 年 6 月 14 日。——主張透過審議與重疊共識處理分歧的政治論證，不是 AI 具有意識的證明。
+- Ord, Toby。《The Precipice: Existential Risk and the Future of Humanity》。Bloomsbury，2020；以及 MacAskill, William。《What We Owe the Future》。Basic Books，2022。——存亡風險與長期主義的論述；書把在地、可答責的制度問題放在這些論述旁邊。
 - Bostrom, Nick. _[Superintelligence: Paths, Dangers, Strategies](https://global.oup.com/academic/product/superintelligence-9780199678112)_. Oxford University Press, 2014; ["Ethical Issues in Advanced Artificial Intelligence."](https://nickbostrom.com/ethics/ai) In _Cognitive, Emotive and Ethical Aspects of Decision Making in Humans and in Artificial Intelligence_, vol. 2, edited by I. Smit et al., 12–17. International Institute of Advanced Studies in Systems Research and Cybernetics, 2003; ["What Is a Singleton?"](https://nickbostrom.com/fut/singleton), _Linguistic and Philosophical Investigations_ 5, no. 2 (2006): 48–54.——前沿風險與迴紋針例子。Singleton 指全球性的決策機構，不一定是單一 AI。
 - Russell, Stuart. _[Human Compatible: Artificial Intelligence and the Problem of Control](https://www.penguinrandomhouse.com/books/566677/human-compatible-by-stuart-russell/)_. Viking, 2019; and Christian, Brian. _[The Alignment Problem: Machine Learning and Human Values](https://wwnorton.com/books/9780393635829)_. Norton, 2020.——控制、學習與人類價值的研究；兩書都沒有把整個問題縮減成固定的目標函數。
 - Narayanan, Arvind, and Sayash Kapoor. ["AI as Normal Technology."](https://knightcolumbia.org/content/ai-as-normal-technology) Knight First Amendment Institute, 15 April 2025；Kapoor, Sayash, Arvind Narayanan, Daniel Kokotajlo, Eli Lifland, and Thomas Larsen. ["Common Ground between AI 2027 & AI as Normal Technology."](https://asteriskmag.substack.com/p/common-ground-between-ai-2027-and) _Asterisk_, 12 November 2025.——兩種對立的預測，在開發者與政府的近期議程上取得共識；關懷六力所問的「系統行動之處，誰有權得到交代」，在兩種情境下都成立。
@@ -156,17 +164,37 @@ Aimee van Wynsberghe 的「以關懷為中心的價值敏感設計」是直接�
 - Simon, Herbert A. ["A Behavioral Model of Rational Choice."](https://doi.org/10.2307/1884852) _Quarterly Journal of Economics_ 69, no. 1 (1955): 99–118; Goodhart, Charles A. E. "Problems of Monetary Management: The U.K. Experience." In _Papers in Monetary Economics_, vol. 1. Reserve Bank of Australia, 1975; Strathern, Marilyn. ["'Improving Ratings': Audit in the British University System."](<https://doi.org/10.1002/(SICI)1234-981X(199707)5:3%3C305::AID-EURO184%3E3.0.CO;2-4>) _European Review_ 5, no. 3 (1997): 305–321; Campbell, Donald T. ["Assessing the Impact of Planned Social Change."](<https://doi.org/10.1016/0149-7189(79)90048-X>) _Evaluation and Program Planning_ 2, no. 1 (1979): 67–90.——滿足即可的原則，以及「指標一旦成為目標就不再是好指標」的三條定律：〈[衡量指標](/tw/measures/)〉所立足的地面。
 - Weyl, E. Glen, Audrey Tang, and the ⿻ Community. _[Plurality: The Future of Collaborative Technology and Democracy](https://www.plurality.net/)_（《多元宇宙》）. 2024.——關懷六力應用於 AI 治理的政治願景。
 
-### 本站倚賴的案例
+<h3 id="cases"><span id="本站倚賴的案例" aria-hidden="true"></span>本站倚賴的案例</h3>
 
 具名的案例在這裡承載的份量，超過任何單篇論文，因此它們自己的紀錄也該留在這條線索上。計畫紀錄記載的是一個機構自述做了什麼，並不因此獨立證明那件事成功了。凡公開紀錄比它被要求支撐的主張更薄之處，條目會直接說明。
 
 - **臺灣。** 數位發展部，[〈「運用 AI 促進資訊完整性」公民審議大會〉](https://moda.gov.tw/major-policies/alignment-assemblies/2024-deliberative-assembly/1521)，2024；史丹佛[審議民主實驗室](https://deliberation.stanford.edu/)；以及[〈數位發展部與國際組織「集體智慧計畫」（CIP）合作〉](https://moda.gov.tw/en/press/press-releases/5243)，2023 年 5 月 27 日.——第二力與〈[AI 對齊不能由上而下](/tw/ai-alignment-cannot-be-top-down/)〉背後的官方紀錄：20 萬份邀請、1,760 份有效回覆、447 位出席者分成 44 組。2023 年的試行與 CIP 合作，2024 年的大會則是與史丹佛實驗室合作的審議式民調：兩個夥伴、兩種方法，相隔一年，不可互換。
+
+    2024 年的出席者從自願報名者中分層組成，不是 Polis 活動。場域軟體管理發言佇列、時間與逐字稿，不判斷政策；大會取得的是制度回應路徑，不是把建議自動變成法律，也不能證明後續成果單由審議造成。
+
 - **日本。** [Team Mirai](https://team-mir.ai/)，2025–.——該黨自己的網站：2024 年東京都知事選舉的結果，以及它所公布的 2026 年 2 月 8 日眾議院比例代表票數與席次。網站自述的數字，不是官方選務機關的資料擷取。
+
+    安野貴博（Takahiro Anno）先前的競選助理，為有界限的東京都知事政見蒐集建議，再透過公開摘要回饋。這是看得見的傾聽管道，不是由 AI 決定政策；競選期間的任務也須與後來的政黨工具區分。
+
 - **加州。** [Engaged California](https://engaged.ca.gov/)；[野火復原行動計畫](https://engaged.ca.gov/lafires-recovery/action-plan/)；[州府員工效率專案](https://engaged.ca.gov/stateemployees/efficiency/)；[全州 AI 與工作提問](https://engaged.ca.gov/ai-impact/)；以及 [AB 2103](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2103).——平台自述的 Altadena 與 Pacific Palisades 審議過程、由此產出的計畫，以及讓這個專案法制化的法律：2026 年 9 月 19 日簽署，2027 年 1 月 1 日生效，仍受撥款限制。這是依「與傷害的距離」加權的自願參與者群體，不是全州的代表性樣本。AI 與工作這一題只引用提問本身：2026 年 9 月時，報告仍在彙整中。
+
+    實際的連結，是從參與者的復原建議走到公開行動計畫。公布讓回應可供檢查，卻不能證明已經落實，或證明復原成效。
+
 - **藏語。** [Monlam AI](https://monlam.ai/)；以及 Monlam, Lobsang，向美國國會及行政當局中國委員會提交的[書面證詞](https://www.cecc.gov/sites/evo-subsites/www.cecc.gov/files/evo-media-document/CECC%20Written%20Statement%20-%20The%20Efforts%20by%20the%20Tibetan%20Diaspora%20to%20Preserve%20its%20Linguistic%20and%20Cultural%20Heritage%20by%20Dr.%20Lobsang%20Monlam.pdf)，2024 年 12 月 5 日.——這些工具，以及證詞中所述的 42 個應用程式，和第一年涵蓋 20 間以上寺院的圖書館計畫。這些是產品與產出；訓練語料、模型架構與正式治理並不在公開紀錄中。
+
+    這是建立語言工具的機構，不是單一微型模型的證據。實際目標是讓藏語知識繼續能以藏語使用；資料集的所有權、授權與同意安排，仍待計畫文件佐證。
+
 - **線上安全。** [ROOST](https://roost.tools).——開源、可自行託管的事件回應與審核工具，截至 2026 年 9 月，Osprey 的產品頁列出 Bluesky、Discord 與 Matrix 為使用者：第五力所指的可重用層。部署數量、審核成效與經過基準測試的損害降幅，並未公布。
+
+    共享軟體能提供在地人類營運者事件調查與審核的能力，不必集中內容治理政策。這些紀錄不能證明聯邦式模型訓練，也不能證明經衡量的損害降幅。
+
 - **無酬照顧者。** [Dedicate](https://dedicate.life).——已上線的助理，呈現由具名照護組織提供的內容，並拒答範圍之外的問題，正是上方 van Wynsberghe 2016 年論文所畫出的邊界。它的觸及範圍、服務目錄規模與內容夥伴名單，並未公布。
+
+    助理的範圍限於英國境內的英格蘭，讓有來源可追的支援更容易找到，並將職責外的問題轉介；它不是開放領域的醫療顧問。觀察到一次離題拒答，只能說明邊界存在，不能證明範圍內的協助品質或實際影響。
+
 - **長者。** 聯合國人權理事會第 58/13 號決議，2025 年 4 月 3 日無異議通過；不限成員名額政府間工作組的[第一次實質會議](https://www.ohchr.org/en/events/events/2026/1st-session-intergovernmental-working-group-human-rights-older-persons-13-17)，2026 年 7 月 13 至 17 日於日內瓦；以及它的[意見徵集](https://www.ohchr.org/en/calls-for-input/2026/call-inputs-general-framework-architecture-and-guiding-principles-legally).——那項傾聽計畫瞄準的條約管道。管道是開的，每年開會兩次；該計畫尚未送件。
+
+    擬議中的傾聽計畫，希望蒐集長者優先關切的事，把可追溯的紀錄帶入聯合國程序；法律仍由各國起草。範圍與治理尚未定案，因此不能宣稱已提交意見，也不能宣稱已影響條約。
 
 ### 集體智慧計畫
 

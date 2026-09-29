@@ -14,9 +14,13 @@ nav_next:
     text: "Home"
 ---
 
-A framework that asks institutions to show their work should show its own. The 6-Pack of Care is an assembly of borrowed parts — a forty-year tradition of care ethics, a fifteen-year literature applying it to machines, and several older ideas from political science, engineering, and design — plus a smaller number of moves that are ours. This page is the reading trail: what each pack took, from whom, and where a reader can check. The book's bibliography and notes are fuller; the entries here are the ones a pack page leans on directly. If we have used your idea without naming you, [file an amendment](https://github.com/audreyt/civic.ai/issues).
+A framework that asks institutions to show their work should show its own. The 6-Pack of Care is an assembly of borrowed parts — a forty-year tradition of care ethics, a fifteen-year literature applying it to machines, and several older ideas from political science, engineering, and design — plus a smaller number of moves that are ours. This is a public source trail for the framework and the book: what we borrowed, from whom, and where a reader can check. No prior reading is required. The debts should be as visible and checkable as the claims. If we have used your idea without naming you, [file an amendment](https://github.com/audreyt/civic.ai/issues).
 
 References identify the work, edition or publication date and a publisher, DOI or stable archive where available. Each annotation says what we draw from it. A theoretical argument, a field study and a project's own account support different kinds of claim.
+
+### Using a source in conversation
+
+Open the original and ask what claim it can actually support. A theory is not a trial, a project record is not an independent outcome study and the evidence window matters. Where the connection is unclear, record that uncertainty rather than borrow the source's prestige.
 
 ### Reading the evidence
 
@@ -144,6 +148,10 @@ A direct precedent is Aimee van Wynsberghe's care-centred value-sensitive design
 
 ### The alignment conversation this joins
 
+- AI Futures Project. _[AI 2040: Plan A](https://ai-2040.com/)_. 2026. — A positive scenario discussed in the book's introduction, not a prediction or an observational dataset.
+- Kokotajlo, Daniel, Scott Alexander, Thomas Larsen, Eli Lifland, and Romeo Dean. _[AI 2027](https://ai-2027.com/)_. AI Futures Project, 2025; and Kokotajlo, Daniel, Eli Lifland, and Brendan Halstead. ["Q1 2026 Timelines Update."](https://blog.aifutures.org/p/q1-2026-timelines-update) AI Futures Project, 2 April 2026. — The original scenario and a later update to individual automated-coder estimates. The update is not a collectively revised date for artificial superintelligence.
+- Bales, Adam, and Iason Gabriel. ["Artificial Minds, Human Disagreement: The Political Challenge of AI Consciousness."](https://doi.org/10.2139/ssrn.6937498) SSRN, 14 June 2026. — A political argument for handling disagreement through deliberation and overlapping consensus, not proof that an AI is conscious.
+- Ord, Toby. _The Precipice: Existential Risk and the Future of Humanity_. Bloomsbury, 2020; and MacAskill, William. _What We Owe the Future_. Basic Books, 2022. — The existential-risk and long-termist arguments beside which the book places its question of local, answerable institutions.
 - Bostrom, Nick. _[Superintelligence: Paths, Dangers, Strategies](https://global.oup.com/academic/product/superintelligence-9780199678112)_. Oxford University Press, 2014; ["Ethical Issues in Advanced Artificial Intelligence."](https://nickbostrom.com/ethics/ai) In _Cognitive, Emotive and Ethical Aspects of Decision Making in Humans and in Artificial Intelligence_, vol. 2, edited by I. Smit et al., 12–17. International Institute of Advanced Studies in Systems Research and Cybernetics, 2003; ["What Is a Singleton?"](https://nickbostrom.com/fut/singleton), _Linguistic and Philosophical Investigations_ 5, no. 2 (2006): 48–54. — Frontier risk and the paperclip example. A singleton is a global decision-making agency, not necessarily one AI.
 - Russell, Stuart. _[Human Compatible: Artificial Intelligence and the Problem of Control](https://www.penguinrandomhouse.com/books/566677/human-compatible-by-stuart-russell/)_. Viking, 2019; and Christian, Brian. _[The Alignment Problem: Machine Learning and Human Values](https://wwnorton.com/books/9780393635829)_. Norton, 2020. — Work on control, learning and human values; neither book reduces the whole problem to a fixed objective function.
 - Narayanan, Arvind, and Sayash Kapoor. ["AI as Normal Technology."](https://knightcolumbia.org/content/ai-as-normal-technology) Knight First Amendment Institute, 15 April 2025; and Kapoor, Sayash, Arvind Narayanan, Daniel Kokotajlo, Eli Lifland, and Thomas Larsen. ["Common Ground between AI 2027 & AI as Normal Technology."](https://asteriskmag.substack.com/p/common-ground-between-ai-2027-and) _Asterisk_, 12 November 2025. — Two opposed forecasts that agree on a near-term agenda for developers and governments; the 6-Pack's question, who is owed an answer where a system acts, holds under either.
@@ -156,17 +164,37 @@ A direct precedent is Aimee van Wynsberghe's care-centred value-sensitive design
 - Simon, Herbert A. ["A Behavioral Model of Rational Choice."](https://doi.org/10.2307/1884852) _Quarterly Journal of Economics_ 69, no. 1 (1955): 99–118; Goodhart, Charles A. E. "Problems of Monetary Management: The U.K. Experience." In _Papers in Monetary Economics_, vol. 1. Reserve Bank of Australia, 1975; Strathern, Marilyn. ["'Improving Ratings': Audit in the British University System."](<https://doi.org/10.1002/(SICI)1234-981X(199707)5:3%3C305::AID-EURO184%3E3.0.CO;2-4>) _European Review_ 5, no. 3 (1997): 305–321; Campbell, Donald T. ["Assessing the Impact of Planned Social Change."](<https://doi.org/10.1016/0149-7189(79)90048-X>) _Evaluation and Program Planning_ 2, no. 1 (1979): 67–90. — Satisficing, and the three laws of why a measure that becomes a target stops measuring: the ground [Measures](/measures/) stands on.
 - Weyl, E. Glen, Audrey Tang, and the ⿻ Community. _[Plurality: The Future of Collaborative Technology and Democracy](https://www.plurality.net/)_. 2024. — The political vision the 6-Pack applies to AI governance.
 
-### The cases this site leans on
+<h3 id="cases"><span id="the-cases-this-site-leans-on" aria-hidden="true"></span>The cases this site leans on</h3>
 
 The named cases carry more weight here than any single paper, so their own records belong in the trail. A project record documents what an institution reports doing; it does not independently establish that the work succeeded. Where the public record is thinner than the claim it is asked to support, the entry says so.
 
 - **Taiwan.** Ministry of Digital Affairs. ["'Utilizing AI to Enhance Information Integrity' Citizens' Deliberative Assembly."](https://moda.gov.tw/en/major-policies/alignment-assemblies/2024-deliberative-assembly/1521) 2024; Stanford [Deliberative Democracy Lab](https://deliberation.stanford.edu/); and ["moda Has Partnered with the Collective Intelligence Project."](https://moda.gov.tw/en/press/press-releases/5243) 27 May 2023. — The official record behind Pack 2 and [AI Alignment Cannot Be Top-Down](/ai-alignment-cannot-be-top-down/): 200,000 invitations, 1,760 valid responses, 447 attendees in 44 groups. The 2023 pilot ran with CIP; the 2024 assembly was a Deliberative Poll with the Stanford lab. Two partners and two methods, a year apart, and not interchangeable.
+
+    The 2024 attendance was stratified among opt-ins, not a Polis exercise. Room software managed queues, speaking time and transcripts rather than judging policy; the assembly secured an institutional response path, not an automatic conversion of recommendations into statute or proof that deliberation alone caused later outcomes.
+
 - **Japan.** [Team Mirai](https://team-mir.ai/). 2025–. — The party's own site: the 2024 Tokyo gubernatorial result, and the proportional-representation votes and lower-house seats it reports for 8 February 2026. Site-reported totals, not an official election-commission extract.
+
+    Takahiro Anno's earlier campaign assistant took suggestions for a bounded gubernatorial platform and returned them through public summaries. That is a visible listening channel, not AI policy-making; distinguish the campaign's task from the party tools that followed.
+
 - **California.** [Engaged California](https://engaged.ca.gov/); the [wildfire-recovery action plan](https://engaged.ca.gov/lafires-recovery/action-plan/); the [state-employee efficiency strand](https://engaged.ca.gov/stateemployees/efficiency/); the [statewide question on AI and work](https://engaged.ca.gov/ai-impact/); and [AB 2103](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2103). — The platform's account of the Altadena and Pacific Palisades deliberation, the plan it produced, and the law that makes the programme statutory: signed 19 September 2026, effective 1 January 2027, subject to appropriation. An opt-in group weighted by proximity to the harm, not a representative sample of the state. The AI-and-work question is cited as asked: its report was still being compiled in September 2026.
+
+    The practical link is from participants' recovery recommendations to a published action plan. Publication makes that response inspectable; it does not establish implementation or prove recovery impact.
+
 - **Tibetan language.** [Monlam AI](https://monlam.ai/); and Monlam, Lobsang. [Written statement](https://www.cecc.gov/sites/evo-subsites/www.cecc.gov/files/evo-media-document/CECC%20Written%20Statement%20-%20The%20Efforts%20by%20the%20Tibetan%20Diaspora%20to%20Preserve%20its%20Linguistic%20and%20Cultural%20Heritage%20by%20Dr.%20Lobsang%20Monlam.pdf) to the US Congressional-Executive Commission on China, 5 December 2024. — The tools, and the testimony reporting 42 applications and a library project across more than 20 monasteries in its first year. Products and outputs; the training corpus, model architecture and formal governance are not in the public record.
+
+    This is an institution building language tools, not evidence for a single tiny model. The practical aim is to keep Tibetan knowledge usable in Tibetan; claims about dataset ownership, licensing and consent still need project documentation.
+
 - **Online safety.** [ROOST](https://roost.tools). — Open-source, self-hostable incident-response and moderation tools, with Osprey's product page naming Bluesky, Discord and Matrix as users as of September 2026: the reusable layer Pack 5 points to. Deployment counts, moderation outcomes and benchmarked reductions in harm are not published.
+
+    Shared software can give local human operators incident-investigation and review capacity without centralising moderation policy. These records do not establish federated model training or measured harm reduction.
+
 - **Unpaid carers.** [Dedicate](https://dedicate.life). — A live assistant that surfaces content supplied by named care organisations and declines what falls outside it, the boundary van Wynsberghe's 2016 paper draws. Its reach, its indexed directory and its content partners are not published.
+
+    Bounded to England within the U.K., the assistant makes attributable support easier to find and redirects questions beyond its remit; it is not an open-domain medical adviser. An observed off-topic refusal shows a boundary, not the quality of in-scope help or real-world impact.
+
 - **Older persons.** UN Human Rights Council resolution 58/13, adopted without a vote on 3 April 2025; the [first substantive session](https://www.ohchr.org/en/events/events/2026/1st-session-intergovernmental-working-group-human-rights-older-persons-13-17) of the open-ended intergovernmental working group, Geneva, 13–17 July 2026; and its [call for inputs](https://www.ohchr.org/en/calls-for-input/2026/call-inputs-general-framework-architecture-and-guiding-principles-legally). — The treaty channel the listening project aims at. The channel is open and meets twice a year; that project has not yet filed into it.
+
+    The proposed listening project would gather older persons' priorities and carry a traceable account into the U.N. process; states would still draft the law. Its scope and governance remain unsettled, so neither a submission nor treaty impact should be claimed.
 
 ### The Collective Intelligence Project
 

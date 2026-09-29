@@ -22,6 +22,10 @@ Start with the map: Packs 1-4 form the care cycle, Pack 5 scales that cycle acro
 
 <!-- astro:concept-map -->
 
+### Start with a question you can ask
+
+You do not need a dashboard to begin. Ask your school, care provider or residents' group: "Who did we miss?", "Who promised to act?" or "What changed after someone said it went wrong?" Follow the relevant pack below and ask to see the record. A bridging map shows whose account was heard; an obligation ledger names a promise and its owner; a repair log records what happened after an appeal.
+
 Each pack then answers a distinct public audit question. To preserve the public promise of one headline public measure per pack, each pack has one headline public measure plus supporting diagnostics.
 
 These six measures are the authors’ proposals for public evaluation, not validated measurement standards. Their definitions and thresholds need testing with the people affected.
@@ -53,7 +57,7 @@ These six measures are the authors’ proposals for public evaluation, not valid
 
 ### Named instruments
 
-The book's Parts List catalogues every instrument a practitioner is asked to build or run. The ones the measures above depend on:
+The packs describe these tools so you can build them, or ask for them, without having read the book. Each supports a public audit question. A completed document alone does not show that care worked.
 
 - **Perspective receipts** (Pack 1) — the acknowledgement each contributor can hold: a receipt that lets every person find and correct how their words were represented in the record — distinct from the civic receipt a decision trace carries for settlement.
 - **Engagement contract** (Pack 2) — a short, legible public document for every significant Kami deployment, recording what the system is supposed to do, who is answerable for it doing that, what happens when it goes wrong, and how the deployment will eventually end; Pack 6 can render the same contract machine-readable so infrastructure can check purpose bounds, consent rules, data-retention limits, portability guarantees, and shutdown procedures. A machine-readable clause is not yet an enforceable shutdown.
@@ -90,7 +94,7 @@ Each headline measure names not only what it rewards but what it must refuse, so
 
 The measures above audit a running deployment. These six questions gate whether a deployment should carry the name at all:
 
-1. **Human standing** (Pack 1) — can affected people prove standing without surrendering unnecessary identity?
+1. **Human standing** (Packs 1, 5) — can affected people prove standing without surrendering unnecessary identity?
 2. **Adversarial load** (Packs 1, 4, 5) — what stops synthetic publics, bots, or paid campaigns from flooding the channel?
 3. **Decision force** (Pack 2) — where does the output bind actual decisions, and where is it only advice?
 4. **Repair path** (Pack 4) — who can appeal, who pays for harm, and where is the repair logged?
@@ -101,4 +105,4 @@ If the answer to any of these is vague, the deployment is not ready. The point i
 
 ### Where the measures come from
 
-The measures are ours; the ground they stand on is not. "Sufficiency, not maximisation" is Herbert Simon's [satisficing](https://doi.org/10.2307/1884852) (1955). The warning that a measure which becomes a target stops measuring has three classic statements — Campbell's law ([1979](<https://doi.org/10.1016/0149-7189(79)90048-X>)), Goodhart's law (1975), and Marilyn Strathern's shorthand for it (1997) — and "what each measure refuses to reward" is written against all three. Trust-under-loss operationalises the procedural-justice finding, from Tom Tyler's _[Why People Obey the Law](https://press.princeton.edu/books/paperback/9780691126739/why-people-obey-the-law)_, that people who lose on the merits still accept a process they judge fair. The uncommon-ground index audits the cross-group signal that Aviv Ovadya's [bridging-based ranking](https://www.belfercenter.org/publication/bridging-based-ranking) uses to rank. Exit readiness is Albert Hirschman's [exit](https://www.hup.harvard.edu/books/9780674276604) turned into a drill. The [Sources](/sources/) page carries the full trail.
+The measures are ours; the ground they stand on is not. "Sufficiency, not maximisation" is Herbert Simon's [satisficing](https://doi.org/10.2307/1884852) (1955). The warning that a measure which becomes a target stops measuring has three classic statements — Campbell's law ([1979](<https://doi.org/10.1016/0149-7189(79)90048-X>)), Goodhart's law (1975), and Marilyn Strathern's shorthand for it (1997) — and "what each measure refuses to reward" is written against all three. We propose trust-under-loss as a deployment test informed by procedural-justice research, including Tom Tyler's _[Why People Obey the Law](https://press.princeton.edu/books/paperback/9780691126739/why-people-obey-the-law)_. That research does not validate this AI measure or guarantee that repair restores trust. The uncommon-ground index audits the cross-group signal that Aviv Ovadya's [bridging-based ranking](https://www.belfercenter.org/publication/bridging-based-ranking) uses to rank. Exit readiness is Albert Hirschman's [exit](https://www.hup.harvard.edu/books/9780674276604) turned into a drill. The [Sources](/sources/) page carries the full trail.

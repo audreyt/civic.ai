@@ -1,8 +1,8 @@
 ---
 layout: default
 title: "Set up your own Kami"
-summary: "A short app setup stands up your own Kami: a bounded, local Civic AI steward that runs on your laptop and answers to the people it serves. Setup is quick; earning a community's trust is the slow work that follows."
-description: "The simplest way to run your own Kami: a bounded, local, private Civic AI steward on your own laptop, in three steps."
+summary: "Start with the people who will keep a Kami answerable, then follow the local or hosted setup. Technical setup may be quick; custody, correction and accountable maintenance continue for as long as the room needs the helper."
+description: "Human keeping questions before a three-step Kami setup, with local and hosted paths, privacy limits and an agreed ending."
 lang: en-gb
 alt_lang_url: "/tw/kami/"
 permalink: "/kami/"
@@ -18,15 +18,36 @@ next_action:
     text: "Bootstrap guide"
 ---
 
-Think of a Kami as a helper with a very small job. It looks after one place — your street, your classroom, your small charity — and answers to the people there. It lives on your own laptop. On the local path, nothing it hears ever leaves your laptop. You can read its notes, correct it, and switch it off whenever you like.
+Think of a Kami as a helper with a very small job. It serves one place — your street, your classroom, your small charity — and answers to the people there. Local inference can run on your laptop, but tools, connectors and synchronisation may send information elsewhere. People must agree and control those routes. You can read its notes, correct it and decide when to stop.
 
-Here is what that looks like in a normal week. The residents' group asks: what did we actually agree at last month's meeting? The Kami reads back the note — it does not guess. A teacher asks: what confused the class most this week? A small charity asks: what did we promise our funders, and when? Each time it answers like a careful neighbour with a perfect memory. No account. No subscription. And the day you switch it off, it forgets everything.
+<h2 id="before-you-start">Before you start</h2>
 
-One honest warning before you start. These steps are the easy part: ten minutes gives you a working Kami. The hard part comes after — earning your community's trust. That takes many people and a long time. We call that work Keeping: looking after the Kami together, checking it, and keeping it answerable. This page can start a Kami. It cannot teach Keeping.
+Before uploading shared material or installing anything for the group, hold a meeting with the affected people. Answer four questions together:
 
-There are two ways to do this, and both end with a Kami that slowly gets to know your place. The local path (Steps 1 to 3 below) is the default. Pick it if your laptop can carry it: everything stays on your machine, so nothing you tell it about your people ever leaves you. The hosted path skips Step 1 — no Ollama, no big download — and you pick a ready-made brain when the app asks in Step 2. Same app, same steps otherwise.
+- **Who keeps it?** Name the people, not just the institution.
+- **What harm can a breach cause?** Name the consequences of a broken obligation, not only a leak.
+- **Who has standing to override?** Name who can say no and make that decision stick.
+- **When does it end or come up for review?** Agree a date and who decides what follows.
 
-Hosted is not automatically worse or leakier. It is safe if the company behind it gives you three straight answers. Ask them before you choose — especially when you are choosing for a whole room, not just yourself. **1. Secrets** — will they promise in writing that your words are never used for training and never kept after they reply? A written rule beats a spoken promise. **2. Strength** — is the brain open-weight? Open brains are now almost as clever as the best closed ones, so private no longer means weak. **3. Freedom** — since the brain is open, can you move your Kami to someone else, or bring it home to your own laptop, whenever you like? Insist on this one: it is what stops your Kami quietly becoming somebody else's property. A company that cannot answer these three has already answered a fourth question: whether to trust them.
+People who cannot attend need named proxies with real authority to override on their behalf. If the room cannot answer these questions, pause. Choosing no AI is legitimate. If the room cannot afford the people, resources and authority needed to keep it answerable, a different tool cannot solve that problem. The people remain the carers; the Kami is a bounded helper.
+
+These questions come from Appendix A of the book. Its archetypes and labelled teaching examples are design aids, not validated product assurances. The [source trail](/sources/) distinguishes proposals from evidence.
+
+Here is what that looks like in a normal week. The residents' group asks: what did we actually agree at last month's meeting? The Kami should read the source note, mark what it cannot find and leave people to check the answer. A teacher asks: what confused the class most this week? A small charity asks: what did we promise our funders, and when? Its memory is only as useful as the notes it can read and the corrections people make. Switching it off is not deletion: humans must review local records, remote copies and backups under the agreed retention terms.
+
+Technical setup may be quick. Earning your community's trust takes many people and a long time. We call that work Keeping: looking after the Kami together, checking it and keeping it answerable. This page helps with setup. It cannot supply Keeping.
+
+There are two ways to do this. The local path (Steps 1 to 3 below) is the default if your laptop can carry it. Keeping inference local does not make connected tools local. The hosted path skips Step 1 — no Ollama, no big download — and you pick a ready-made brain when the app asks in Step 2. Same app, same steps otherwise.
+
+### Check the hosting arrangement
+
+A provider's promises do not establish either privacy or the room's readiness. Before choosing a hosted service, ask for written terms on these points:
+
+- **Data:** What is used for training, what is retained and who can access the records?
+- **Model access:** Are weights available, and what do the licence and service terms permit? Open weights alone do not establish capability or privacy.
+- **Exit:** Can you export the agreed records and move to another provider or your own machine? Check what remains with the provider after departure.
+
+This hosting check is separate from the room's [four keeping questions](#before-you-start). Neither replaces the other.
 
 Pick the model that fits your machine.
 
@@ -38,7 +59,7 @@ Pick the model that fits your machine.
 
 Your Kami needs a brain that lives on your laptop. That brain comes from a free app called [Ollama](https://ollama.com). Go to their website, download it, and install it like any normal app. Then leave it running — you will pick the actual brain in Step 2.
 
-Our suggested starter brain is `ornith-1.5:9b`. Think of it as the floor, not the ceiling: small enough to work on most laptops, while bigger brains arrive every few months. If you want the newest answer for your machine, check [Artificial Analysis's open-model comparison](https://artificialanalysis.ai/models/open-source), which ranks open brains by cleverness and size — even the very cleverest can now run on a laptop, as [pi-ds4](https://pi.audreyt.org) shows. Whatever you pick in Step 2, nothing else in these steps changes. `ornith-1.5:9b` is about a 7 GB download and is happy on a laptop with roughly 16 GB of memory — which many recent laptops have. Older or smaller laptop? Take the hosted path above. The download takes a few minutes.
+Our suggested starter brain remains `ornith-1.5:9b`, the example used in these steps. Hardware requirements, download size and download time vary; check the provider and model documentation before choosing. [Artificial Analysis's open-model comparison](https://artificialanalysis.ai/models/open-source) is a comparison resource, not evidence that a model suits your room or laptop. Whatever you pick in Step 2, nothing else in these steps changes. Older or smaller laptop? Consider the hosted path above after checking its terms.
 
 ## 2. Give it a way to act
 
@@ -94,9 +115,21 @@ Try these with other people around — they work better as group games than solo
 
 Those three notes are plain text. Open IDENTITY.md, USER.md and SOUL.md, read them, change them. This is the moment the Kami becomes yours: you hold the pen — and when a place is shared, you hold it together. If it drifts, correct it. If your group learns something new about what it needs, change the notes.
 
-And you can always end it. When its work is done — or done badly — use the app's backup option to keep a copy of everything (the record described below), then use its uninstall option to remove it from your machine. Small on purpose. Local on purpose. Built to be switched off. Ending well is a little ritual of its own: tell the people who shared it, with a date and a reason. Say who takes over anything still needed. Keep the three notes — plus your group's override ledger (see "Keep it together") — as the story of who it was and how the room shaped it. A Kami that outlives its room turns into a landlord: still running, long after anyone needed it.
+And you can agree to end it. Ending well is a little ritual of its own: tell the people who shared it, with a date and a reason. Say who takes over anything still needed. Decide what to keep from the three notes and your group's override ledger (see "Keep it together"), who may access the archive and for how long. This is the story of who it was and how the room shaped it, not a reason to retain every private conversation. A Kami that outlives its room turns into a landlord: still running, long after anyone needed it.
 
-Hosted path? Check your provider's delete-my-data policy before you uninstall. Uninstalling clears your machine, but the provider may still hold copies of your chats.
+Shutdown does not by itself delete local files, remote copies or backups. On the hosted path, check the provider's data-retention and deletion terms too. Humans must review the record and arrange closure on the room's agreed terms.
+
+### When to pause or retire
+
+Appendix A names five warning signs:
+
+- The room no longer needs the helper.
+- A keeper leaves without a named successor.
+- The room dissolves or its mandate ends.
+- The consequences of breach exceed what the current arrangement can safely hold.
+- The override ledger goes quiet. Investigate whether people still pay attention and feel able to say no; silence may call for a pause or retirement, not celebration.
+
+Agree the handover and privacy arrangements before stopping. Retirement is a human decision, not automatic destruction of the model.
 
 ## The soul your Kami reads
 
@@ -106,19 +139,21 @@ That sentence you said — "read civic.ai" — sends your Kami to [the soul your
 
 A Kami that only you talk to is a private helper, not a community guardian. If a place is shared, the Kami must be shared too.
 
-Before you bring others in, gather the room and answer four questions out loud — with people's names attached, not organisations. Who looks after it? If it leaks, who gets hurt? Who can overrule it? When does it end? If you cannot answer even one, you do not have a Kami yet — you have a chatbot wearing the name. Rough answers are fine. But everyone sharing it should know the questions before you go further.
+Return to the [four questions before you start](#before-you-start) when people join or the room's needs change. Everyone affected should know who can act on those answers.
 
-Keep the three notes where everyone can reach them: a shared folder, a group chat file, even paper on the wall. Then the Kami is not locked inside one laptop, and if that laptop dies, nothing is lost.
+Keep the shared governance notes where the agreed roles can reach them: a shared folder, a group chat file, even paper on the wall. Keep private details within their agreed access limits. A recoverable copy helps the room continue if one laptop fails; check what the copy actually contains.
 
 Change the notes together. Read them aloud at a meeting and edit them as a group, so every change is proposed and agreed — never made by one hand alone.
 
-If your group already trusts each other, you can go one step closer: run one Kami on one machine that stays on — a little server, an office laptop — and connect your group's chat to it. Everyone talks to the same Kami, sees the same conversations, and has a role that limits what they may do. Only do this where trust already exists: anyone who can message the Kami shares its power. Where trust does not exist, run separate Kamis. Sharing a machine never replaces sharing the decisions — the notes, the charter and the ledger below still apply.
+If your group already trusts each other, you can go one step closer: run one Kami on one machine that stays on — a little server, an office laptop — and connect your group's chat to it. People talk to the same Kami, with conversation access limited by agreed roles and scope. Check that permissions actually enforce those limits. Where trust does not exist, run separate Kamis. Sharing a machine never replaces sharing the decisions — the notes, the charter and the ledger below still apply.
 
 Now the limits, said plainly. The Kami has no built-in complaint box and no big red stop button for the group. Complaining, correcting and stopping stay human jobs. A paper override ledger does the trick: each time someone says no to the Kami, write down the date, what it suggested, who said no (their role, not their name), why in their own words, and what changed. No software needed — a clipboard works. Overrides are not failures. They are the room's memory of how the Kami is doing. Note one more thing: the three notes travel, but day-to-day memories live on the machine that runs the Kami. On a solo setup, what the group can keep and recover is the notes — not yet the memories. And when people disagree with each other, no Kami can settle it. That part stays with you.
 
 All of this — many hands questioning one Kami — is the doorway to Keeping. Slow group work no setup page can do for you.
 
-At the first meeting where the Kami is actually running, write a short charter together: a text file, a shared note, even handwriting on paper. Tie it to the four answers — who keeps it, who a leak harms, who can overrule, when it ends. It will not be a finished system of rules. It is a snapshot of what you have agreed so far, and you will rewrite it. Later, those same four answers grow up: first into the [engagement contract](/glossary/#engagement-contract) of Pack 2, and for big deployments Pack 6 turns that contract into code. But the charter itself is a promise between people, not a lock on the machine — the Kami cannot check it by itself.
+The room keeps its full override record on agreed private terms. A public example needs consent from those documented, a consent note, only the necessary detail and at least month-level aggregation. Use roles rather than names unless someone explicitly opts in, and remove identifying details from the reason. People must be able to refuse publication or withdraw consent. Clearly labelled invented teaching examples are allowed, but are not evidence from a live room.
+
+Before installation, write a short charter together: a text file, a shared note, even handwriting on paper. Tie it to the four answers — who keeps it, what a breach could cause, who can overrule, when it ends or is reviewed. It will not be a finished system of rules. It is a snapshot of what you have agreed so far, and you will rewrite it. Later, those same four answers grow up: first into the [engagement contract](/glossary/#engagement-contract) of Pack 2, and for big deployments Pack 6 turns that contract into code. But the charter itself is a promise between people, not a lock on the machine — the Kami cannot check it by itself.
 
 Pick your setup by asking what a leak would cost — not by collecting badges like "local" or "air-gapped". An **ephemeral room** leaks time and goodwill: embarrassing, not dangerous. A **relational room** leaks dignity or private details. A **sovereign room** risks safety, public power, or fair votes. Most rooms are hurt, not helped, by maximum lockdown: costly kit bought to avoid the harder human work of Keeping. A well-kept simple Kami beats a neglected fortress every time.
 
@@ -130,4 +165,4 @@ And some rooms no Kami can fix: staff versus bosses, a split congregation, a mee
 
 These steps give you a bounded helper. They do not give you an institution people trust. That only grows out of Keeping: a community owning its Kami, questioning it, fixing its mistakes, and deciding together when it stops. Ours took exactly that — many hands, over a long time.
 
-So treat these ten minutes as a beginning, and bring others in early. For the why underneath it all, read the [Manifesto](/manifesto/), and [Inside the Kami](/inside-the-kami/) for what makes a small guardian worth trusting. Then start the slow part with the people you share a place with. That is the work that matters, and it is yours.
+Treat setup as a beginning, and bring others in early. For the why underneath it all, read the [Manifesto](/manifesto/), and [Inside the Kami](/inside-the-kami/) for the technical argument and its limits. Then continue the slow part with the people you share a place with. That is the work that matters, and it is yours.
