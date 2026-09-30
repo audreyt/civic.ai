@@ -46,7 +46,7 @@ Carol Gilligan 在《In a Human Voice》（2023）中點出這種修練所鍛鍊
 
 ### 實作上長什麼樣子
 
-- **尋找缺席者。**「我們沒有聽到夜班照護者的聲音——去找到他們。」缺席的聲音本身就是證據。Hélène Landemore 在[耶魯新聞專訪](https://news.yale.edu/2026/02/18/bring-out-shy-people-case-politics-without-politicians)中談及《Politics Without Politicians: The Case for Citizen Rule》（2026）時，借用了 G. K. Chesterton 所說的民主「[快樂女主人](https://www.online-literature.com/chesterton/tremendous-trifles/32/)」考驗：「一切真正的民主，都是（像快樂女主人那樣）把害羞的人請出來的努力」。重點不在於門是否敞開，而在於是否把安靜的人帶進房間。
+- **尋找缺席者。**「我們完全沒聽到夜班照護者的聲音——去找他們。」缺席的聲音本身就是證據。Hélène Landemore 在[耶魯新聞專訪](https://news.yale.edu/2026/02/18/bring-out-shy-people-case-politics-without-politicians)中談及《Politics Without Politicians: The Case for Citizen Rule》（2026）時，借用了 G. K. Chesterton 的民主「[熱情接待者](https://www.online-literature.com/chesterton/tremendous-trifles/32/)」（jolly hostess）考驗：「一切真正的民主，都是（像熱情接待者那樣）把害羞的人請出來的努力」。重點不在於門是否敞開，而在於是否把安靜的人帶進房間。
 
     在《[Democratic Reason: Politics, Collective Intelligence, and the Rule of the Many](https://doi.org/10.1515/9781400845538)》（2013）中，她主張：在適當條件下，認知多樣的集體可以勝過少數人做成的決定。這是關於視角多樣性的條件論證，並不保證迷你公眾代表全體公眾，也不保證每次都更明智。《[Open Democracy: Reinventing Popular Rule for the Twenty-First Century](https://press.princeton.edu/books/hardcover/9780691181998/open-democracy)》（2020）把這套論證發展成開放迷你公眾的主張；隨機或分層抽選是為認知多樣性而設的設計，並非自動的代表性。
 
@@ -71,7 +71,7 @@ Carol Gilligan 在《In a Human Voice》（2023）中點出這種修練所鍛鍊
 - **視角回執。** 讓每個人都能找到和修正他們被代表的方式。
 - **機器可驗證的規則。** 可被軟體自動執行的社群資料規範——正是 Pack 3 所建「政策即程式碼」防護措施引擎的一種用法。
 - **公平排隊。** 優先處理高風險議題和微弱聲音的簡單演算法。
-- **快樂女主人提示詞。** 要求 AI 扮演搭橋主人的治理指令——呈現較安靜群體的聲音、標示代表性不足之處，並指出何處可能跨越分歧——讓覺察力成為結構的一部分，而非偶然。
+- **熱情接待者提示詞。** 要求 AI 扮演搭橋主人的治理指令——呈現較安靜群體的聲音、標示代表性不足之處，並指出何處可能跨越分歧——讓覺察力成為結構的一部分，而非偶然。
 
 <h3 id="一個案例洪水機器人"><span id="一個案例賑災機器人" aria-hidden="true"></span>一個案例：洪水機器人</h3>
 
@@ -116,15 +116,15 @@ Carol Gilligan 在《In a Human Voice》（2023）中點出這種修練所鍛鍊
 - **對團結力（Pack 5）：** 公平的覺察和公開挑戰建立跨群體信任。
 - **對共生力（Pack 6）：** 系統服務特定的地方和時間，將關閉視為成功。
 
-### 結語意象：能說「不」的快樂女主人
+<h3 id="結語意象能說不的快樂女主人">結語意象：仍能說不的熱情接待者</h3>
 
-想像一位快樂的女主人，叫得出每位客人的名字，為他們的行囊騰出空間。她也會穿過房間，找到獨自站在牆邊的人，問出只有他們能回答的問題。這就是覺察力。而因為有些客人試圖抹去其他人，女主人堅守一條底線：好客，但家中必須尊重權利。教 AI 系統覺察——不過早最佳化，並主動好奇還有誰尚未加入對話——我們就能保住更多珍貴之物，也能創造更多可共享之物。一個需求出現了，隨之而來的是義務。一切就從這裡開始。
+想像一位熱情接待者，叫得出每位客人的名字，也替他們的行李留好位置。她還會穿過房間，找到獨自站在牆邊的人，問一個只有對方答得出的問題。這就是覺察力。而因為有些客人想抹去別人，接待者守著一條底線：好客，但這個家必須尊重權利。教我們的系統當熱情接待者——保持覺察、不急著最佳化、主動好奇誰還沒加入對話——我們就能留住更多珍貴的東西，也創造更多可以分享的東西。需求一出現，義務就跟著來。一切就從這裡開始。
 
 ### 本力文獻
 
 - Fisher 與 Tronto，[〈Toward a Feminist Theory of Caring〉](https://experts.umn.edu/en/publications/toward-a-feminist-theory-of-caring/)（1990）；Tronto，《[Moral Boundaries](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)》（1993），頁 105–108、120–121——階段、道德要素與特權式不負責。
 - van Wynsberghe，[〈Designing Robots for Care〉](https://doi.org/10.1007/s11948-011-9343-6)（2013）——把四個階段帶進機器的一項文獻先例。
-- Chesterton，[〈The Travellers in State〉](https://www.online-literature.com/chesterton/tremendous-trifles/32/)（1909），經 Landemore《Politics Without Politicians》（2026）引用，見[耶魯新聞專訪](https://news.yale.edu/2026/02/18/bring-out-shy-people-case-politics-without-politicians)——快樂女主人；Landemore，《[Democratic Reason](https://doi.org/10.1515/9781400845538)》（2013）與《[Open Democracy](https://press.princeton.edu/books/hardcover/9780691181998/open-democracy)》（2020）——條件式認知多樣性論證，而非代表性保證。
+- Chesterton，[〈The Travellers in State〉](https://www.online-literature.com/chesterton/tremendous-trifles/32/)（1909），經 Landemore《Politics Without Politicians》（2026）引用，見[耶魯新聞專訪](https://news.yale.edu/2026/02/18/bring-out-shy-people-case-politics-without-politicians)——熱情接待者；Landemore，《[Democratic Reason](https://doi.org/10.1515/9781400845538)》（2013）與《[Open Democracy](https://press.princeton.edu/books/hardcover/9780691181998/open-democracy)》（2020）——條件式認知多樣性論證，而非代表性保證。
 - Ovadya，《[Bridging-Based Ranking](https://www.belfercenter.org/publication/bridging-based-ranking)》（2022）；Small 等人，[〈Polis〉](https://doi.org/10.6035/recerca.5516)（2021）——搭橋地圖。
 - Arnstein，[〈A Ladder of Citizen Participation〉](https://doi.org/10.1080/01944366908977225)（1969）——傾聽劇場即象徵性參與。
 - Tessler 等人，[〈AI Can Help Humans Find Common Ground〉](https://doi.org/10.1126/science.adq2852)（《Science》，2024）——模型中介者能找出對立群體共同背書陳述的證據。
