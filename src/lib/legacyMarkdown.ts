@@ -58,6 +58,15 @@ export function renderMarkdown(body: string): string {
     return createMarkdownRenderer().render(body);
 }
 
+// The AVIF sibling of a JPEG/PNG public path, when one ships beside it.
+export function avifSibling(
+    src: string,
+    hasFile: (publicPath: string) => boolean
+): string | undefined {
+    const stem = /^(.+)\.(?:jpe?g|png)$/i.exec(src)?.[1];
+    return stem && hasFile(`${stem}.avif`) ? `${stem}.avif` : undefined;
+}
+
 const NOSCRIPT_IMG =
     /<noscript>\s*(<img\b[^>]*?\ssrc="([^"]+)\.(?:jpe?g|png)"[^>]*>)\s*<\/noscript>/gi;
 

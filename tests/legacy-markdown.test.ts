@@ -1,5 +1,6 @@
 import { expect, test } from "vite-plus/test";
 import {
+    avifSibling,
     cjkSlugify,
     nativePictures,
     renderMarkdown,
@@ -100,4 +101,11 @@ test("nativePictures skips renditions an undeclared width cannot rank", () => {
     expect(nativePictures(html, () => true)).toBe(
         '<picture><source srcset="/img/e.avif" type="image/avif"><img src="/img/e.jpg" alt="E"></picture>'
     );
+});
+
+test("avifSibling offers the AVIF beside a JPEG or PNG only when it ships", () => {
+    const has = (publicPath: string) => publicPath === "/img/a.avif";
+    expect(avifSibling("/img/a.jpg", has)).toBe("/img/a.avif");
+    expect(avifSibling("/img/b.png", has)).toBeUndefined();
+    expect(avifSibling("/img/a.svg", has)).toBeUndefined();
 });

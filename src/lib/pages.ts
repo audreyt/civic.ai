@@ -76,6 +76,10 @@ export interface PageRecord {
 const root = process.cwd();
 let pageCache: PageRecord[] | undefined;
 
+export function hasPublicFile(publicPath: string): boolean {
+    return existsSync(join(root, publicPath));
+}
+
 export function isRootContentFile(name: string): boolean {
     if (["README.md", "AGENTS.md", "CLAUDE.md", "DESIGN.md"].includes(name))
         return false;
@@ -158,9 +162,7 @@ function loadPage(sourceName: string): PageRecord {
         ? rawBody
         : sourceName.endsWith(".html")
           ? expanded
-          : nativePictures(renderMarkdown(expanded), (publicPath) =>
-                existsSync(join(root, publicPath))
-            );
+          : nativePictures(renderMarkdown(expanded), hasPublicFile);
     const includeInSitemap =
         !data.exclude_from_sitemap && data.layout !== false;
     return {

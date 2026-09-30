@@ -1262,6 +1262,18 @@ footer a:hover {
 
 /* ─── SKIP LINK ─── */
 /* Visually hidden until focused, then revealed as an overlay. */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
 .skip-link {
     position: absolute;
     top: 8px;

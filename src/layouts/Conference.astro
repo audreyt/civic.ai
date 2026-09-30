@@ -1,6 +1,6 @@
 ---
-import { visibleHtml, type PageRecord } from "../lib/pages";
-import { smartQuotes } from "../lib/legacyMarkdown";
+import { hasPublicFile, visibleHtml, type PageRecord } from "../lib/pages";
+import { avifSibling, smartQuotes } from "../lib/legacyMarkdown";
 import { lang2, site } from "../lib/site";
 import { normalizeSearchLang } from "../lib/search";
 import ClientScripts from "../components/ClientScripts.astro";
@@ -23,6 +23,7 @@ const smart = (value: any, key = ""): any =>
             ? Object.fromEntries(Object.entries(value).map(([k, v]) => [k, smart(v, k)]))
             : value;
 const shown = smart(data);
+const avif = (src: string) => avifSibling(src, hasPublicFile);
 const pagefindIndexed =
     page.includeInSitemap === true &&
     page.data.search_exclude !== true &&
@@ -49,12 +50,13 @@ const eventLd = {"@context":"https://schema.org","@type":"Event",name:`${data.ti
   <div class="conf-hosts">
     {(shown.hosts || []).map((host: any) => (
       <a href={host.url} class="conf-host">
-        <noscript><img src={host.photo.src} alt={host.name} width={host.photo.w} height={host.photo.h} loading="lazy" decoding="async" /></noscript>
+        <picture>{avif(host.photo.src) && <source srcset={avif(host.photo.src)} type="image/avif" />}<img src={host.photo.src} alt="" width={host.photo.w} height={host.photo.h} loading="lazy" decoding="async" /></picture>
         <strong>{host.name}</strong>
         <span>{host.role}</span>
       </a>
     ))}
   </div>
+  {shown.goals && <h2 class="visually-hidden">{zh ? "研討會目標" : "Conference goals"}</h2>}
   <div class="conf-goals">{(shown.goals || []).map((goal: any, i: number) => <div class="conf-goal"><span class="conf-goal-num">{String(i + 1).padStart(2, "0")}</span><h3>{goal.title}</h3><p>{goal.text}</p></div>)}</div>
   {shown.agenda_title && <h2>{shown.agenda_title}</h2>}
   <div class="conf-agenda">
@@ -65,13 +67,13 @@ const eventLd = {"@context":"https://schema.org","@type":"Event",name:`${data.ti
           {slot.photos && (
             <div class="conf-panel-photos">
               {slot.photos.map((p: any) => (
-                <noscript><img src={p.src} alt={p.alt} width={p.w} height={p.h} /></noscript>
+                <picture>{avif(p.src) && <source srcset={avif(p.src)} type="image/avif" />}<img src={p.src} alt={p.alt} width={p.w} height={p.h} loading="lazy" decoding="async" /></picture>
               ))}
             </div>
           )}
           {slot.photo ? (
             <div class="conf-detail-with-photo">
-              <noscript><img src={slot.photo.src} alt={slot.photo.alt} width={slot.photo.w} height={slot.photo.h} /></noscript>
+              <picture>{avif(slot.photo.src) && <source srcset={avif(slot.photo.src)} type="image/avif" />}<img src={slot.photo.src} alt={slot.photo.alt} width={slot.photo.w} height={slot.photo.h} loading="lazy" decoding="async" /></picture>
               <div class="conf-detail-text">
                 <div class="conf-title">{slot.url ? <a href={slot.url}>{slot.title}</a> : slot.title}</div>
                 {slot.speaker && <div class="conf-speaker">{slot.speaker}</div>}
@@ -95,7 +97,7 @@ const eventLd = {"@context":"https://schema.org","@type":"Event",name:`${data.ti
   <div class="conf-packs-condensed">{(shown.packs || []).map((pack: any) => <a href={pack.url}><strong>{pack.num}</strong> {pack.name}</a>)}</div>
   {shown.overview_image && (
     <div class="conf-diagram">
-      <noscript><img src={shown.overview_image.src} alt={shown.overview_image.alt} width={shown.overview_image.w} height={shown.overview_image.h} loading="lazy" decoding="async" /></noscript>
+      <picture>{avif(shown.overview_image.src) && <source srcset={avif(shown.overview_image.src)} type="image/avif" />}<img src={shown.overview_image.src} alt={shown.overview_image.alt} width={shown.overview_image.w} height={shown.overview_image.h} loading="lazy" decoding="async" /></picture>
     </div>
   )}
 </main>
