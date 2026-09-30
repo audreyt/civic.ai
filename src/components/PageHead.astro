@@ -30,7 +30,7 @@ if (location.hostname === "6pack.care") location.replace("https://civic.ai" + lo
 (function(){try{var stored=localStorage.getItem("civic-ai-theme");var systemDark=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;var theme=stored==="light"||stored==="dark"?stored:systemDark?"dark":"light";document.documentElement.dataset.theme=theme;}catch(e){document.documentElement.dataset.theme="light";}})();
 </script>
 <script is:inline>
-document.documentElement.classList.add("fonts-loading");
+document.documentElement.classList.add("js", "fonts-loading");
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#f8f4ed" />

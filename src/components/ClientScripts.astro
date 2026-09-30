@@ -369,8 +369,6 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                     (document.documentElement.lang || "").indexOf("zh") === 0;
                 var details = document.createElement("details");
                 details.className = "page-toc";
-                details.setAttribute("role", "navigation");
-                details.setAttribute("aria-label", zh ? "本頁內容" : "On this page");
                 details.open = window.matchMedia("(min-width: 720px)").matches;
                 var sum = document.createElement("summary");
                 sum.textContent = zh ? "本頁內容" : "On this page";
@@ -387,7 +385,12 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                     li.appendChild(a);
                     ul.appendChild(li);
                 });
-                details.appendChild(ul);
+                // A <details> cannot carry role="navigation"; the landmark
+                // lives on a labelled <nav> inside the native disclosure.
+                var tocNav = document.createElement("nav");
+                tocNav.setAttribute("aria-label", zh ? "本頁內容" : "On this page");
+                tocNav.appendChild(ul);
+                details.appendChild(tocNav);
                 var card = main.querySelector(".in-short");
                 if (card) card.insertAdjacentElement("afterend", details);
                 else main.insertBefore(details, main.firstChild);
@@ -452,7 +455,7 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                 var main = document.getElementById("main");
                 if (!main) return;
                 var heads = Array.prototype.slice.call(
-                    main.querySelectorAll('h4[id^="faq-"][data-faq-category]')
+                    main.querySelectorAll('h3[id^="faq-"][data-faq-category]')
                 );
                 if (!heads.length) return;
 
@@ -511,7 +514,7 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                         node = node.nextElementSibling;
                         if (
                             node &&
-                            node.tagName === "H4" &&
+                            node.tagName === "H3" &&
                             node.id &&
                             node.id.indexOf("faq-") === 0
                         ) {
@@ -554,9 +557,13 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                 });
 
                 function revealHashTarget() {
-                    var id = decodeURIComponent(
-                        (window.location.hash || "").slice(1)
-                    );
+                    var raw = (window.location.hash || "").slice(1);
+                    var id;
+                    try {
+                        id = decodeURIComponent(raw);
+                    } catch (e) {
+                        id = raw;
+                    }
                     if (id.indexOf("faq-") !== 0) return;
                     var target = document.getElementById(id);
                     if (!target || !target.hidden) return;
@@ -633,9 +640,13 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                 });
 
                 function revealHashTarget() {
-                    var id = decodeURIComponent(
-                        (window.location.hash || "").slice(1)
-                    );
+                    var raw = (window.location.hash || "").slice(1);
+                    var id;
+                    try {
+                        id = decodeURIComponent(raw);
+                    } catch (e) {
+                        id = raw;
+                    }
                     if (!id) return;
                     var target = document.getElementById(id);
                     if (!target) return;

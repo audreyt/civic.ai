@@ -1050,7 +1050,12 @@
                 open();
             }
         }
-        if (e.key === "Escape" && isOpen()) {
+        if (
+            e.key === "Escape" &&
+            isOpen() &&
+            !e.isComposing &&
+            e.keyCode !== 229
+        ) {
             e.preventDefault();
             close();
         }

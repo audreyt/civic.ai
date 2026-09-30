@@ -731,6 +731,16 @@ h4 {
     margin-top: 1.8em;
     margin-bottom: 0.4em;
 }
+
+/* FAQ questions are h3 under their h2 group (no skipped level) but keep the
+   compact question size rather than the chapter-section treatment. */
+h3[id^="faq-"] {
+    font-size: 1.05rem;
+    margin-top: 1.8em;
+    margin-bottom: 0.4em;
+    padding-top: 0;
+    border-top: none;
+}
 /* FAQ grouping and filter pills */
 .faq-filter {
     position: sticky;
@@ -964,10 +974,14 @@ body.interview-page main p:has(> strong:first-child) strong:first-child {
     border-radius: 4px;
 }
 
+.audio-section audio:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+}
+
 .audio-section audio {
     width: 100%;
     display: block;
-    outline: none;
 }
 
 .audio-label {
@@ -3834,7 +3848,6 @@ pre code {
     border: 1px solid var(--border);
     border-radius: 6px;
     cursor: pointer;
-    opacity: 0.6;
     transition:
         opacity 0.15s ease,
         color 0.15s ease,
@@ -3964,17 +3977,24 @@ h4[id] {
     scroll-margin-top: 24px;
 }
 
-h4[id^="faq-"] {
+h3[id^="faq-"] {
     /* Clear the sticky .faq-filter pill (top: 8px, ~48px tall single-row,
        ~90px wrapped two-row on narrow screens) on #faq-N anchor jumps. */
     scroll-margin-top: 96px;
 }
 
 @media (max-width: 640px) {
-    h4[id^="faq-"] {
+    h3[id^="faq-"] {
         /* Wrapped pill can reach three rows on very narrow screens. */
         scroll-margin-top: 140px;
     }
+}
+
+/* Theme and search buttons only work with JavaScript; without it they would
+   be dead affordances, so they appear once the head script marks html.js. */
+html:not(.js) .theme-toggle,
+html:not(.js) .search-toggle {
+    display: none;
 }
 
 /* ─── ON-THIS-PAGE CONTENTS ─── */
@@ -4003,7 +4023,7 @@ h4[id^="faq-"] {
     list-style: none;
 }
 .page-toc li {
-    margin: 0.25em 0;
+    margin: 0;
     line-height: 1.4;
 }
 .page-toc__h3 {
@@ -4016,6 +4036,8 @@ h4[id^="faq-"] {
     font-size: 0.9rem;
     text-decoration: none;
     color: var(--text);
+    /* Keep every entry a 24px+ target (WCAG 2.2 target size). */
+    padding-block: 4px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -5854,7 +5876,7 @@ body:has(.site-header--interior) main {
 
     main:not(:has(.cmap, .polis-fullbleed)) .page-toc li,
     :lang(zh) main:not(:has(.cmap, .polis-fullbleed)) .page-toc li {
-        margin: 0.35em 0;
+        margin: 0.1em 0;
         line-height: 1.35;
     }
 
