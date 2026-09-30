@@ -145,7 +145,7 @@ Monlam 的公開紀錄支持社群扎根的語言工具，不支持對每個模�
 
 <a href="https://www.oxford-aiethics.ox.ac.uk/caroline-emmer-de-albuquerque-green">
 
-<noscript><img src="/img/caroline.jpg" alt="Caroline Emmer De Albuquerque Green 博士個人照片" width="2510" height="2510" loading="lazy" decoding="async"/></noscript>
+<noscript><img src="/img/caroline.jpg" alt="Caroline Emmer De Albuquerque Green 博士個人照片" width="512" height="512" loading="lazy" decoding="async"/></noscript>
 
 <p>Caroline Emmer De Albuquerque Green</p>
 

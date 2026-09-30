@@ -95,10 +95,10 @@ test("visibleHtml curls quotes except on Japanese pages", () => {
 test("serves content images as native pictures, not script-revealed noscript", () => {
     const pack = getPageByUrl("/1/").html;
     expect(pack).toContain(
-        '<picture><source srcset="/img/pack1-1.avif" type="image/avif"><img src="/img/pack1-1.jpg"'
+        '<picture><source srcset="/img/pack1-1-720w.avif 720w, /img/pack1-1.avif 1437w" sizes="(max-width: 700px) calc(100vw - 40px), 640px" type="image/avif"><img src="/img/pack1-1.jpg"'
     );
     expect(pack).not.toContain("<noscript><img");
     expect(getPageByUrl("/").html).toContain(
-        '<source srcset="/img/overview-small.avif" type="image/avif"><img src="/img/overview-small.png"'
+        '<source srcset="/img/overview-small-720w.avif 720w, /img/overview-small.avif 1280w" sizes="(max-width: 700px) calc(100vw - 40px), 640px" type="image/avif"><img src="/img/overview-small.png"'
     );
 });

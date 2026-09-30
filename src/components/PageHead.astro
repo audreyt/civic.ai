@@ -30,7 +30,7 @@ if (location.hostname === "6pack.care") location.replace("https://civic.ai" + lo
 (function(){try{var stored=localStorage.getItem("civic-ai-theme");var systemDark=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;var theme=stored==="light"||stored==="dark"?stored:systemDark?"dark":"light";document.documentElement.dataset.theme=theme;}catch(e){document.documentElement.dataset.theme="light";}})();
 </script>
 <script is:inline>
-document.documentElement.classList.add("js", "fonts-loading");
+document.documentElement.classList.add("js");
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#f8f4ed" />
@@ -42,7 +42,6 @@ document.documentElement.classList.add("js", "fonts-loading");
 <link rel="icon" href="/favicon.ico" sizes="any" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href={`/styles.css?v=${version}`} />
-{!import.meta.env.DEV && <link rel="stylesheet" href="/pagefind/pagefind-ui.css" />}
 <link rel="preload" as="font" href={preloadFont} type="font/woff2" crossorigin />
 <link rel="preload" as="font" href="/fonts/lora-normal-latin.woff2" type="font/woff2" crossorigin />
 {ja && <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700&family=M+PLUS+Rounded+1c:wght@400;700;800&family=Mochiy+Pop+One&display=swap" />}

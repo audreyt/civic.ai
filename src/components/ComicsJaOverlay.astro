@@ -93,6 +93,13 @@
         const imgs = () => layers().map(imgFor).filter(Boolean);
         const toJa = (src) =>
             src.replace(/-wordless(\.[a-z0-9]+)(?=($|[?#]))/i, "-ja$1");
+        // A responsive srcset lists narrower renditions first; print uses the
+        // full-size lettered file named by its last (widest) candidate.
+        const toJaSet = (set) => {
+            const widest = set.split(",").pop().trim().split(/\s+/)[0];
+            const ja = toJa(widest);
+            return ja !== widest ? ja : set;
+        };
         // Print swaps every overlay image to its lettered `-ja` variant so
         // the Japanese text prints inline (no live overlay in print CSS —
         // see the `@media print { .ja-ov-layer { display: none } }` rule).
@@ -124,7 +131,7 @@
                 ];
             });
             printState.snapshot.forEach(([el, attr, val]) => {
-                const next = toJa(val);
+                const next = attr === "srcset" ? toJaSet(val) : toJa(val);
                 if (next !== val) el.setAttribute(attr, next);
             });
         };

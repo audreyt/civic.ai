@@ -81,3 +81,23 @@ test("nativePictures leaves non-image noscript blocks alone", () => {
         '<noscript><p>Turn on JavaScript for search.</p></noscript><noscript><img src="/img/c.svg" alt=""></noscript>';
     expect(nativePictures(html, () => true)).toBe(html);
 });
+
+test("nativePictures lists shipped narrower renditions with sizes", () => {
+    const html =
+        '<noscript><img src="/img/d.jpg" alt="D" width="2992" height="1680"></noscript>';
+    const shipped = new Set([
+        "/img/d.avif",
+        "/img/d-720w.avif",
+        "/img/d-1280w.avif",
+    ]);
+    expect(nativePictures(html, (path) => shipped.has(path))).toBe(
+        '<picture><source srcset="/img/d-720w.avif 720w, /img/d-1280w.avif 1280w, /img/d.avif 2992w" sizes="(max-width: 700px) calc(100vw - 40px), 640px" type="image/avif"><img src="/img/d.jpg" alt="D" width="2992" height="1680"></picture>'
+    );
+});
+
+test("nativePictures skips renditions an undeclared width cannot rank", () => {
+    const html = '<noscript><img src="/img/e.jpg" alt="E"></noscript>';
+    expect(nativePictures(html, () => true)).toBe(
+        '<picture><source srcset="/img/e.avif" type="image/avif"><img src="/img/e.jpg" alt="E"></picture>'
+    );
+});

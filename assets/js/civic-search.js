@@ -12,6 +12,21 @@
     var lastFocus = null;
     var lastOverflow = "";
     var closeButton = document.getElementById("search-close");
+
+    // The search UI stylesheet styles only this overlay, so it stays off the
+    // critical rendering path: fetch it once the page has loaded, or on the
+    // first open if that comes sooner.
+    var searchCss = overlay.getAttribute("data-search-css");
+    function ensureSearchCss() {
+        if (!searchCss) return;
+        var link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = searchCss;
+        document.head.appendChild(link);
+        searchCss = null;
+    }
+    if (document.readyState === "complete") ensureSearchCss();
+    else window.addEventListener("load", ensureSearchCss);
     var TABBABLE =
         'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
@@ -913,6 +928,7 @@
     }
 
     function open() {
+        ensureSearchCss();
         if (!isOpen()) {
             lastFocus = document.activeElement;
             lastOverflow = document.body.style.overflow;

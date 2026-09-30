@@ -66,15 +66,30 @@ const NOSCRIPT_IMG =
 // a native <picture> offers the AVIF sibling when one ships, the JPEG/PNG
 // stays the fallback, and the image no longer waits for JavaScript (it is
 // visible to the preload scanner and to readers who browse without scripts).
+// Narrower AVIF renditions shipped beside a full-size image as `x-720w.avif`
+// (and `x-1280w.avif` for very wide sources). Content images sit in the text
+// column: 40px of page padding on phones, a 640px column on wider screens.
+const PICTURE_WIDTHS = [720, 1280];
+const PICTURE_SIZES = "(max-width: 700px) calc(100vw - 40px), 640px";
+
 export function nativePictures(
     html: string,
     hasFile: (publicPath: string) => boolean
 ): string {
     return html.replace(NOSCRIPT_IMG, (_match, img: string, stem: string) => {
         const avif = `${stem}.avif`;
-        return hasFile(avif)
-            ? `<picture><source srcset="${avif}" type="image/avif">${img}</picture>`
-            : img;
+        if (!hasFile(avif)) return img;
+        const width = Number(/\swidth="(\d+)"/.exec(img)?.[1] ?? 0);
+        const smaller = PICTURE_WIDTHS.filter(
+            (w) => w < width && hasFile(`${stem}-${w}w.avif`)
+        );
+        if (!smaller.length)
+            return `<picture><source srcset="${avif}" type="image/avif">${img}</picture>`;
+        const srcset = [
+            ...smaller.map((w) => `${stem}-${w}w.avif ${w}w`),
+            `${avif} ${width}w`,
+        ].join(", ");
+        return `<picture><source srcset="${srcset}" sizes="${PICTURE_SIZES}" type="image/avif">${img}</picture>`;
     });
 }
 

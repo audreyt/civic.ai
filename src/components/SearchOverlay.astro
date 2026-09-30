@@ -17,7 +17,7 @@ const fuseVendor = assetVersion("node_modules/fuse.js/dist/fuse.min.js");
 const askJs = assetVersion("assets/js/civic-ask.js");
 const searchJs = assetVersion("assets/js/civic-search.js");
 ---
-<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" tabindex="-1" aria-label={zh ? "搜尋仁工智慧" : "Search Civic AI"} aria-hidden="true">
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" tabindex="-1" aria-label={zh ? "搜尋仁工智慧" : "Search Civic AI"} aria-hidden="true" data-search-css={import.meta.env.DEV ? undefined : "/pagefind/pagefind-ui.css"}>
   <button type="button" id="search-close" class="search-overlay__close">{zh ? "關閉搜尋" : "Close search"}</button>
   <div class="search-overlay__inner">
     <div id="civic-ask-answer" class="civic-ask-answer" aria-live="polite" hidden></div>
@@ -32,7 +32,7 @@ const searchJs = assetVersion("assets/js/civic-search.js");
     ))}
   </datalist>
 )}
-{usePagefind && !import.meta.env.DEV && <script is:inline src="/pagefind/pagefind-ui.js"></script>}
-{useFuse && <script is:inline src={`/assets/vendor/fuse.min.js?v=${fuseVendor}`} />}
-<script is:inline src={`/assets/js/civic-ask.js?v=${askJs}`} />
-<script is:inline src={`/assets/js/civic-search.js?v=${searchJs}`} />
+{usePagefind && !import.meta.env.DEV && <script is:inline defer src="/pagefind/pagefind-ui.js"></script>}
+{useFuse && <script is:inline defer src={`/assets/vendor/fuse.min.js?v=${fuseVendor}`} />}
+<script is:inline defer src={`/assets/js/civic-ask.js?v=${askJs}`} />
+<script is:inline defer src={`/assets/js/civic-search.js?v=${searchJs}`} />

@@ -137,7 +137,7 @@ Monlam's public record supports community-rooted language tools, not formal coll
 </a></div>
 
 <div><a href="https://www.oxford-aiethics.ox.ac.uk/caroline-emmer-de-albuquerque-green">
-<noscript><img src="/img/caroline.jpg" alt="Photo of Dr Caroline Emmer De Albuquerque Green" width="2510" height="2510" loading="lazy" decoding="async"></noscript>
+<noscript><img src="/img/caroline.jpg" alt="Photo of Dr Caroline Emmer De Albuquerque Green" width="512" height="512" loading="lazy" decoding="async"></noscript>
 <p>Caroline Emmer De Albuquerque Green</p>
 </a></div>
 
