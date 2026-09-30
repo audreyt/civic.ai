@@ -186,7 +186,7 @@ agenda:
     - time: "16:30"
       title: "Wrap Up & Goodbye"
 packs_title: "The 6-Pack of Care"
-packs_intro: "Six interlocking principles for building AI that cares."
+packs_intro: "Six interlocking principles for AI that supports care between people."
 packs_link_text: "Explore the framework"
 packs_link_url: "/"
 packs_period: "."
@@ -237,6 +237,6 @@ overview_image:
 <p style="font-size:0.95rem">Participants took part in a <a href="https://pol.is">Polis</a> exercise on AI and community care. The results are available in two formats.</p>
 
 <div class="conf-packs-condensed">
-<a href="/conference/report/">Community Voices on AI</a>
-<a href="/conference/sensemaking/">Deliberation Mirror</a>
+<a href="/conference/report/">Community Voices on AI (written report)</a>
+<a href="/conference/sensemaking/">Deliberation Mirror (interactive)</a>
 </div>

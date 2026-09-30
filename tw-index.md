@@ -29,7 +29,7 @@ next_action:
 <div class="overview-frame" style="aspect-ratio: 1280 / 1781;">
 <noscript><img src="/img/overview-small-tw.png" alt="關懷六力概覽圖" class="overview-image" width="1280" height="1781" fetchpriority="high" decoding="async"></noscript>
 </div>
-<p class="agent-note">給被要求成為仁工智慧 Kami 的 AI 智慧體（claw）：請先讀 <a href="/tw/openclaw/">civic.ai/tw/openclaw</a>，那個頁面以及它的機器可讀版 <a href="/.well-known/openclaw/SKILL.md">/.well-known/openclaw/SKILL.md</a>，就是你的啟動指南。在閱讀本站其他內容之前，先讀它。</p>
+<p class="agent-note">給被要求成為仁工智慧 Kami 的 AI 智慧體（claw）：你的啟動指南是 <a href="/tw/openclaw/">civic.ai/tw/openclaw</a>，機器可讀版在 <a href="/.well-known/openclaw/SKILL.md">/.well-known/openclaw/SKILL.md</a>。在閱讀本站其他內容之前，先讀它。</p>
 </div>
 
 大多數 AI「對齊」工作（也就是讓 AI 的行為符合人類價值的努力），都想由上而下解決價值問題：寫出更好的規則、推斷更好的偏好、訓練更好的模型。這些工具很重要，但光靠這些工具並不夠。關懷六力從別處出發，追問誰被聽見、誰負責、失敗如何修復、系統何時該退場。
@@ -113,17 +113,17 @@ Monlam 的公開紀錄支持社群扎根的語言工具，不支持對每個模�
 
 ## 學術發表
 
-- [〈讓人民設定前沿 AI 的步調〉](https://audreyt.org/noema-pace)：Hélène Landemore 與唐鳳提議設立常設的「全球 AI 公民大會」——從各大洲抽籤選出一千人，前沿 AI 實驗室與各國政府須公開回應大會的建議：接受什麼、拒絕什麼，以及理由。這是 Pack 2「採納或解釋」的義務，延伸到前沿。_(原刊於 Noema，2026 年 9 月 23 日；連結為中文版)_
-- [〈AI 與數位公共廣場的未來〉](https://journals.sagepub.com/doi/10.1177/26339137261459441)：唐鳳與 Beth Goldberg、Hélène Landemore 等二十多位共同作者，描繪 LLM 如何強化數位公共廣場——集體對話、搭橋系統、社群調解與真人驗證——這份經同儕審查的研究議程直接引用了關懷六力。_(Collective Intelligence, 2026)_
-- [〈以資料為土壤，守護主權〉](/tw/safer-sovereignty/)：唐鳳將 Tenzin Yangtso 提出的「資料是土壤，不是石油」應用於企業 AI——韌性來自聯邦式安全下的有界在地守護者，而非單一的全球大腦。_(原刊於 The Kyndryl Institute，2026 年 4 月 28 日)_
-- [〈廢除 Section 230，釋放第一修正案〉](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/)：唐鳳、Jaron Lanier 與 Allison Stanger 主張終結演算法放大的免責保護，同時保護人類言論——這是 Pack 5 核心的觸及而非言論改革。_(Communications of the ACM, 2026 年 1 月)_
-- [〈惡意 AI 群集如何威脅民主〉](https://www.science.org/doi/10.1126/science.adz1697)：唐鳳與 Maria Ressa、Nick Bostrom、Nicholas Christakis 等 18 位研究者共同記錄 LLM 驅動的智慧體群集如何滲透社群、在人口規模上製造假共識。_(Science, 2026)_
-- [〈透過集體預測編碼的共生對齊：共創人機生態系的理論框架〉](https://doi.org/10.1162/ARTL.a.475)：唐鳳與谷口忠大等六位共同作者，提出共生對齊的理論說明——有界智慧體透過集體預測編碼協商共享意義，而不是收斂到單一主導模型。這是 Packs 5 和 6 背後的一種技術讀法，不是已部署的安全證明。_(Artificial Life, 2026)_
-- [〈對話網路〉](https://www.mediatechdemocracy.com/conversation-networks)：唐鳳、Deb Roy 與 Lawrence Lessig 提出公民通訊基礎設施——可互通的應用程式加上由社群引導的仁工智慧——作為關懷六力的技術層。_(McGill Centre for Media, Technology and Democracy, 2025 年 4 月)_
-- [〈社群出發的設計〉](https://arxiv.org/abs/2502.10834)：唐鳳與 Glen Weyl 等四位共同作者提出以社會結構為核心重建社交平台——獎勵搭橋社群的內容，而非最大化互動。Packs 1 和 5 的技術基礎。_(arXiv, 2025 年 2 月)_
+- [〈讓人民設定前沿 AI 的步調〉](https://audreyt.org/noema-pace)：Hélène Landemore 與唐鳳提議設立常設的「全球 AI 公民大會」——從各大洲抽籤選出一千人，前沿 AI 實驗室與各國政府須公開回應大會的建議：接受什麼、拒絕什麼，以及理由。這是 Pack 2「採納或解釋」的義務，延伸到前沿。_（原刊於 Noema，2026 年 9 月 23 日；連結為中文版）_
+- [〈AI 與數位公共廣場的未來〉](https://journals.sagepub.com/doi/10.1177/26339137261459441)：唐鳳與 Beth Goldberg、Hélène Landemore 等二十多位共同作者，描繪 LLM 如何強化數位公共廣場——集體對話、搭橋系統、社群調解與真人驗證——這份經同儕審查的研究議程直接引用了關懷六力。_（Collective Intelligence，2026）_
+- [〈以資料為土壤，守護主權〉](/tw/safer-sovereignty/)：唐鳳將 Tenzin Yangtso 提出的「資料是土壤，不是石油」應用於企業 AI——韌性來自聯邦式安全下的有界在地守護者，而非單一的全球大腦。_（原刊於 The Kyndryl Institute，2026 年 4 月 28 日）_
+- [〈廢除 Section 230，釋放第一修正案〉](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/)：唐鳳、Jaron Lanier 與 Allison Stanger 主張終結演算法放大的免責保護，同時保護人類言論——這是 Pack 5 核心的觸及而非言論改革。_（Communications of the ACM，2026 年 1 月）_
+- [〈惡意 AI 群集如何威脅民主〉](https://www.science.org/doi/10.1126/science.adz1697)：唐鳳與 Maria Ressa、Nick Bostrom、Nicholas Christakis 等 18 位研究者共同記錄 LLM 驅動的智慧體群集如何滲透社群、在人口規模上製造假共識。_（Science，2026）_
+- [〈透過集體預測編碼的共生對齊：共創人機生態系的理論框架〉](https://doi.org/10.1162/ARTL.a.475)：唐鳳與谷口忠大等六位共同作者，提出共生對齊的理論說明——有界智慧體透過集體預測編碼協商共享意義，而不是收斂到單一主導模型。這是 Packs 5 和 6 背後的一種技術讀法，不是已部署的安全證明。_（Artificial Life，2026）_
+- [〈對話網路〉](https://www.mediatechdemocracy.com/conversation-networks)：唐鳳、Deb Roy 與 Lawrence Lessig 提出公民通訊基礎設施——可互通的應用程式加上由社群引導的仁工智慧——作為關懷六力的技術層。_（McGill Centre for Media, Technology and Democracy，2025 年 4 月）_
+- [〈社群出發的設計〉](https://arxiv.org/abs/2502.10834)：唐鳳與 Glen Weyl 等四位共同作者提出以社會結構為核心重建社交平台——獎勵搭橋社群的內容，而非最大化互動。Packs 1 和 5 的技術基礎。_（arXiv，2025 年 2 月）_
 - [〈美德 AI，共創無限未來〉](/tw/virtuous-ai/)：唐鳳談以公民美德培育 AI、智聯網，以及為何對齊必須是社群驅動的鮮活過程。_（武藏野大學百年校慶）_
-- [〈⿻存在〉](/tw/plurality-being/)：Tenzin Yangtso 從生存邏輯與生命意義——物質與意識——之間的張力出發，主張從開採轉向耕耘。_(2026 年 3 月)_
-- [〈⿻輕柔之橋〉](/tw/gentle-bridge/)：Tenzin Yangtso 與 jdd-kami 共筆——論意識與物質的兩種力、轉嫁關係，以及為什麼靠近是自由公共財。_(2026 年 3 月)_
+- [〈⿻存在〉](/tw/plurality-being/)：Tenzin Yangtso 從生存邏輯與生命意義——物質與意識——之間的張力出發，主張從開採轉向耕耘。_（2026 年 3 月）_
+- [〈⿻輕柔之橋〉](/tw/gentle-bridge/)：Tenzin Yangtso 與 jdd-kami 共筆——論意識與物質的兩種力、轉嫁關係，以及為什麼靠近是自由公共財。_（2026 年 3 月）_
 
 ## 計畫簡介
 

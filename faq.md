@@ -237,7 +237,7 @@ The harder version of the Pope's objection is subtler: Does the habit of relying
 
 ---
 
-<h3 id="faq-11" data-faq-category="economy" data-faq-label="Political economy" data-toc="Data as Labor and Compensation"><a href="#faq-11">Q11.</a> Training Civic AI requires vast amounts of local knowledge, cultural context, and lived experience — what Imanol Arrieta-Ibarra, Leonard Goff, Diego Jiménez-Hernández, Jaron Lanier and E. Glen Weyl called <a href="https://doi.org/10.1257/pandp.20181003">"data as labor"</a> in 2018. The communities whose traditions, languages, and practices make Kamis possible receive no ownership stake or compensation under the current framework. Without addressing this issue, how is the 6-Pack different from the extraction it claims to oppose?</h3>
+<h3 id="faq-11" data-faq-category="economy" data-faq-label="Political economy" data-toc="Data as Labour and Compensation"><a href="#faq-11">Q11.</a> Training Civic AI requires vast amounts of local knowledge, cultural context, and lived experience — what Imanol Arrieta-Ibarra, Leonard Goff, Diego Jiménez-Hernández, Jaron Lanier and E. Glen Weyl called <a href="https://doi.org/10.1257/pandp.20181003">"data as labor"</a> in 2018. The communities whose traditions, languages, and practices make Kamis possible receive no ownership stake or compensation under the current framework. Without addressing this issue, how is the 6-Pack different from the extraction it claims to oppose?</h3>
 
 It isn't — unless we fundamentally rewire how AI values human knowledge.
 
@@ -468,7 +468,7 @@ So the human-indexing of the floor is where the overlapping consensus stands tod
 
 That floor is itself an overlapping consensus. The philosopher Jacques Maritain [said](https://unesdoc.unesco.org/ark:/48223/pf0000020342) of the Universal Declaration's drafting that we agree on these rights on condition that no one asks us why; the legal scholar Cass Sunstein calls the same move an [incompletely theorised agreement](https://doi.org/10.2307/1341816): people converging on a rule while still disagreeing about the reasons. It is also the move alignment-by-process makes ([Q17](#faq-17)): legitimacy from an accountable procedure, not from a metaphysics no one can supply.
 
-Whether "Kami" is only shorthand for Knowledge-Artefact-Management-Intelligence or truly names a _kami_ is left, deliberately, to open deliberation, and how and when a _Kami_ should retire stays a question answered by relational care, turn after turn.
+Whether "Kami" is only shorthand for Knowledge Artefact Management Intelligence or truly names a _kami_ is left, deliberately, to open deliberation, and how and when a _Kami_ should retire stays a question answered by relational care, turn after turn.
 
 ---
 

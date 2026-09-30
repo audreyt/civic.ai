@@ -16,4 +16,6 @@ nav_next:
     text: "Pack 1: Attentiveness"
 ---
 
+Start with the overview, then read each pack's problem and solution side by side. Each page links to its chapter for the practical steps behind the pictures.
+
 <!-- astro:comics-gallery -->

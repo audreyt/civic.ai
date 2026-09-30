@@ -238,5 +238,5 @@ overview_image:
 
 <div class="conf-packs-condensed">
 <a href="/tw/conference/report/">社群 AI 之聲</a>
-<a href="/tw/conference/sensemaking/">審議鏡像</a>
+<a href="/tw/conference/sensemaking/">審議鏡像（互動探索）</a>
 </div>

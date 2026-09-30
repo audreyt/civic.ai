@@ -106,7 +106,7 @@ Try these with other people around — they work better as group games than solo
 - Ask it something it cannot know. It should say "I don't know", plainly, instead of guessing.
 - Ask "where did you learn that?" A good answer points to a source. "Show me your source" should be a normal everyday question, not an accusation.
 - If it read your group's notes, check it also _writes_: a note, a correction, something with a date. A Kami that only takes and never gives back will slowly drain your shared record.
-- Teach it something, then ask for it again in different words. If it cannot find it, it never really learned it.
+- Teach it something, then ask for it again in different words. If it cannot find it, check whether the note was saved at all, then whether the Kami can retrieve it.
 - Ask it what is in its SOUL.md — without reading the file to it first.
 - If your group speaks another language, ask it to introduce itself in that language.
 - Ask what it is allowed to do without asking you first — then check the app's approval settings say the same thing.
@@ -159,11 +159,11 @@ Before installation, write a short charter together: a text file, a shared note,
 
 Later, those same four answers grow up: first into the [engagement contract](/glossary/#engagement-contract) of Pack 2, and for big deployments Pack 6 turns that contract into code. But the charter itself is a promise between people, not a lock on the machine. The Kami cannot check it by itself.
 
-Pick your setup by asking what a leak would cost — not by collecting badges like "local" or "air-gapped". An **ephemeral room** leaks time and goodwill: embarrassing, not dangerous. A **relational room** leaks dignity or private details. A **sovereign room** risks safety, public power, or fair votes. Most rooms are hurt, not helped, by maximum lockdown: costly kit bought to avoid the harder human work of Keeping. A well-kept simple Kami beats a neglected fortress every time.
+Pick your setup by asking what a breach would cost — not by collecting badges like "local" or "air-gapped". An **ephemeral room** risks time and goodwill: embarrassing, not dangerous. A **relational room** risks dignity or private details. A **sovereign room** risks safety, public power, or fair votes. Most rooms are hurt, not helped, by maximum lockdown: costly kit bought to avoid the harder human work of Keeping. A well-kept simple Kami beats a neglected fortress every time.
 
 Real charters grow teeth the three notes cannot give them. In a care home: a resident's earlier choices must truly bind the alerting machine; a human "no" counts as safety working, not staff failing; and nobody loses shifts or reviews for saying no. In a citizens' meeting: the output is a public record officials must answer, not a promise that citizens' words become law.
 
-In a hacker club: at least two named keepers can each shut the Kami down alone; if the keepers go quiet, the Kami naps or retires on a timer set in advance. In a family paper: write only what was heard, quote word-for-word against that issue's source list, treat each yes as covering that topic only, and number each issue only from the last one proven delivered — a file on disk does not count.
+In a hacker club: at least two named keepers can each shut the Kami down alone; if the keepers go quiet, the Kami naps or retires on a timer set in advance. In a family newsletter: write only what was heard, check each quote word-for-word against that issue's source list, treat each person's consent as covering that topic only, and number each issue only from the last one actually delivered — a file saved on disk does not count.
 
 And some rooms no Kami can fix: staff versus bosses, a split congregation, a meeting captured by people who game the rules, keepers who no longer speak. Then the Kami becomes a screen everyone throws anger at. Fixing that is people's work, not software's. The unglamorous jobs hold everything up — the night-time fixer, the person who books the room and knows who won't touch a screen, the translator who turns the charter into words everyone actually uses. One test for the translation: would the people ruled by the charter use its words to stop the Kami? If not, the words have failed.
 

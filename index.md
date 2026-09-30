@@ -31,7 +31,7 @@ next_action:
 <div class="overview-frame" style="aspect-ratio: 1280 / 1781;">
 <noscript><img src="/img/overview-small.png" alt="6-Pack of Care visual overview" class="overview-image" width="1280" height="1781" fetchpriority="high" decoding="async"></noscript>
 </div>
-<p class="agent-note">For an AI agent (a “claw”) asked to become a Civic AI Kami: read <a href="/openclaw/">civic.ai/openclaw</a> first — that page, and its machine-readable form at <a href="/.well-known/openclaw/SKILL.md">/.well-known/openclaw/SKILL.md</a>, is your bootstrap guide. Read it before anything else here.</p>
+<p class="agent-note">For an AI agent (a “claw”) asked to become a Civic AI Kami: your bootstrap guide is <a href="/openclaw/">civic.ai/openclaw</a>, also in machine-readable form at <a href="/.well-known/openclaw/SKILL.md">/.well-known/openclaw/SKILL.md</a>. Read it before anything else here.</p>
 </div>
 
 Most AI _alignment_ work (the effort to get AI to act in line with human values) tries to solve those values from the top down: write better rules, infer better preferences, train better models. Those tools matter. They are not enough on their own. The 6-Pack of Care starts somewhere else. It asks who gets heard, who is accountable, how failures are repaired, and when a system should stop.
@@ -71,7 +71,7 @@ Prefer visuals? Browse [all comics](/comics/) — Nicky Case's illustrated overv
 
 You can begin on your own device, without a budget or technical role. Anything involving other people's words, data or a shared room still needs their consent. These are household and practical proposals from Chapter 10 of the book, not tested treatments.
 
-1. **Reclaim your attention.** Set your phone and computer displays to 80 percent grayscale with the colour filters already built into your operating system. If colour is the work, as in visual design or accessibility checks, turn it back on, then return to grayscale. Try it and notice whether the screen feels easier to put down; this is a practical suggestion, not a measured clinical effect.
+1. **Reclaim your attention.** Set your phone and computer displays to 80 percent greyscale with the colour filters already built into your operating system. If colour is the work, as in visual design or accessibility checks, turn it back on, then return to greyscale. Try it and notice whether the screen feels easier to put down; this is a practical suggestion, not a measured clinical effect.
 2. **Reclaim your output.** Ask your AI for a page you could hand to a neighbour instead of a private chat reply. The book's instruction is: _Present fairly all stakeholder viewpoints and the uncommon ground that bridges them, as a simple one-page HTML view._ Read what comes back as a brochure: check each claim against its sources, then save it, print it or pass it across the table. The instruction is a request, not an assurance of accuracy, and it does not cure sycophancy. Get consent before uploading anyone's private material.
 3. **Reclaim the room.** Meet with generous curiosity, keep dissent visible, and respect people's rights. Where someone cannot be present, ask what representation they want and, where needed, arrange a named person with standing to speak and say no for them. Do not ask an AI to invent their view.
 

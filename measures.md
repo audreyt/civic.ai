@@ -26,7 +26,7 @@ Start with the map: Packs 1-4 form the care cycle, Pack 5 scales that cycle acro
 
 You do not need a dashboard to begin. Ask your school, care provider or residents' group: "Who did we miss?", "Who promised to act?" or "What changed after someone said it went wrong?" Follow the relevant pack below and ask to see the record. A bridging map shows whose account was heard; an obligation ledger names a promise and its owner; a repair log records what happened after an appeal.
 
-Each pack then answers a distinct public audit question. To preserve the public promise of one headline public measure per pack, each pack has one headline public measure plus supporting diagnostics.
+Each pack then answers a distinct public audit question, with one headline public measure plus supporting diagnostics.
 
 These six measures are the authors’ proposals for public evaluation, not validated measurement standards. Their definitions and thresholds need testing with the people affected.
 
@@ -69,7 +69,7 @@ The packs describe these tools so you can build them, or ask for them, without h
 - **Decision trace** (Pack 3) — the per-action record showing which rule fired, which sources were consulted, and what uncertainty the system carried, the operational counterpart that makes the engagement contract live rather than merely written. When a Kami draws on a community's knowledge, the same trace is designed to double as a **civic receipt** (Pack 6), settling value back to the custodians through pre-funded escrow — a design commitment, not yet a running settlement, and distinct from Pack 1's perspective receipts, which let contributors see and correct how they were represented.
 - **The brake (circuit breaker)** (Packs 3-4) — a single, prominent, wired-and-tested control that stops the system now, accessible at the speed of human recognition, so a person can halt a wrong action in the moment rather than only signalling for later.
 - **Override ledger** (Pack 4) — a room's plain-text working memory recording every time a human said "no" to the Kami — evidence that its [governance charter](/kami/) is live and the room still holds standing to correct it.
-- **Correction backlog board** (Pack 4) — a public queue of unresolved corrections with age, ownership, and escalation status, used to prevent hidden correction debt and ensure aging cases are actively reassigned or elevated.
+- **Correction backlog board** (Pack 4) — a public queue of unresolved corrections with age, ownership, and escalation status, used to prevent hidden correction debt and ensure ageing cases are actively reassigned or elevated.
 
 ### What each measure refuses to reward
 

@@ -1238,7 +1238,7 @@
             "path": "manifesto/index.html",
             "lang": "en-gb",
             "title": "6-Pack of Care: A Manifesto — Civic AI",
-            "description": "Speech delivered at Google DeepMind, London.",
+            "description": "Speech delivered at Google DeepMind, London. Editorial notes at the end mark where the evidence has since moved.",
             "canonical": "https://civic.ai/manifesto/",
             "alternates": [
                 {
@@ -2922,7 +2922,7 @@
             "path": "tw/manifesto/index.html",
             "lang": "zh-tw",
             "title": "關懷六力宣言 — 仁工智慧",
-            "description": "於倫敦 Google DeepMind 發表的演講。",
+            "description": "於倫敦 Google DeepMind 發表的演講。文末的編者按，標出演講之後證據與事實的變動。",
             "canonical": "https://civic.ai/tw/manifesto/",
             "alternates": [
                 {

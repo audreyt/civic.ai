@@ -4,7 +4,7 @@ title: "6-Pack of Care: A Manifesto"
 summary: "Instead of letting AI supercharge our conflicts, we can build it as local care infrastructure — small, bounded stewards that help us cooperate across differences. The 6-Pack of Care is a practical way to govern AI at the speed care actually grows."
 author: "Audrey Tang"
 date: 2025-09-01
-description: "Speech delivered at Google DeepMind, London."
+description: "Speech delivered at Google DeepMind, London. Editorial notes at the end mark where the evidence has since moved."
 lang: en-gb
 alt_lang_url: "/tw/manifesto"
 nav_prev:

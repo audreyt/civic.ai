@@ -167,7 +167,7 @@ Federation should move institutional knowledge, not intimate histories. Shared
 facts; local judgement. CPC sharpens this further: the _non-decomposable collective regularisation term_ in the symbiotic-alignment objective is a theoretical statement of what solidarity demands. It is the part of the loss function that no agent can minimise by self-interest — only the population can. It offers one way to formalise solidarity, not a requirement every Civic AI architecture must satisfy.
 
 **Pack 6: Symbiosis.** SAI strengthens the case for boundedness because
-specialisation is not just politically safer; it is technically better. CPC adds that even bounded Kamis must remain in _communicative reach_ of each other and of the humans they serve — symbol emergence is a population-level process, and a Kami that drops out of the dialogue stops contributing to shared meaning. But
+specialisation is not just politically safer; on well-defined tasks, it can also be technically better. CPC adds that even bounded Kamis must remain in _communicative reach_ of each other and of the humans they serve — symbol emergence is a population-level process, and a Kami that drops out of the dialogue stops contributing to shared meaning. But
 Pack 6 still has to do work the ML programmes do not: sunset, succession,
 anti-capture rules and non-expansion pacts. And any world-model planner,
 however scoped, needs agency audits. Goal-directed behaviour inside a boundary

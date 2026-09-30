@@ -114,8 +114,8 @@
         "tier": "architecture",
         "term_en": "Kami",
         "term_tw": "地神（Kami）",
-        "def_en": "A bounded local AI steward (Knowledge Artefact Management Intelligence) whose purpose is interwoven with the health of a specific place, practice, or network of people. Inspired by the Shinto concept of local guardian spirits, a Kami has no ambition to expand beyond its relational mandate.",
-        "def_tw": "一位有界的在地 AI 守護者（Knowledge 知識、Artefact 工藝、Management 管理、Intelligence 智慧），其使命與特定場域、實踐或人際網路的健康緊密交織。靈感源自神道信仰中的在地守護神概念，地神（Kami）無意超越其關係性使命而向外擴張。"
+        "def_en": "A bounded local AI steward (Knowledge Artefact Management Intelligence) whose purpose is interwoven with the health of a specific place, practice, or network of people. Inspired by the Shinto concept of local guardian spirits, a Kami is built to stay within its relational mandate; its keepers engineer and enforce that boundary rather than trusting it to lack ambition.",
+        "def_tw": "一位有界的在地 AI 守護者（Knowledge 知識、Artefact 工藝、Management 管理、Intelligence 智慧），其使命與特定場域、實踐或人際網路的健康緊密交織。靈感源自神道信仰中的在地守護神概念，地神（Kami）被設計成守在其關係性使命之內；這道邊界由守護者設計並落實，而不是信任它天生沒有擴張的野心。"
     },
     {
         "id": "keeping",
@@ -131,7 +131,7 @@
         "term_en": "alignment-by-process",
         "term_tw": "以程序對齊",
         "def_en": "The understanding that AI alignment is not a fixed property held inside a model's weights but the ongoing outcome of an accountable civic procedure — who was heard, who was authorised, who could override, and who must answer when the record is checked. A model can be well-aligned in the abstract yet fail alignment-by-process in a particular room.",
-        "def_tw": "一種理解：AI 對齊不是固定在模型權重中的靜態屬性，而是一套可問責的公民程序持續產出的結果——誰被聽見、誰獲得授權、誰可以推翻決定、當記錄被查核時誰必須作答。一個前沿模型可以在抽象意義上是對齊的，卻未在特定的房間裡做到以程序對齊。"
+        "def_tw": "一種理解：AI 對齊不是固定在模型權重中的靜態屬性，而是一套可問責的公民程序持續產出的結果——誰被聽見、誰獲得授權、誰可以推翻決定、當記錄被查核時誰必須作答。一個模型可以在抽象意義上是對齊的，卻未在特定的房間裡做到以程序對齊。"
     },
     {
         "id": "singleton",
@@ -163,7 +163,7 @@
         "tier": "design",
         "term_en": "brochure",
         "term_tw": "摺頁",
-        "def_en": "A clean, shareable and editable record of civic AI output, linking claims to source inputs and marking disagreement rather than inventing consensus. A group can read and correct it together. It makes the record inspectable, not the model's internal reasoning transparent. See <a href=\"/1/\">Attentiveness</a>.",
+        "def_en": "A clean, shareable and editable record of Civic AI output, linking claims to source inputs and marking disagreement rather than inventing consensus. A group can read and correct it together. It makes the record inspectable, not the model's internal reasoning transparent. See <a href=\"/1/\">Attentiveness</a>.",
         "def_tw": "仁工智慧產出的清楚、可分享、可編修紀錄，將主張連回來源輸入，標出分歧而不捏造共識。人們可以一起閱讀、一起更正。它讓紀錄可供檢查，不是讓模型的內部推理變得透明。見〈<a href=\"/tw/1/\">覺察力</a>〉。"
     },
     {
@@ -255,7 +255,7 @@
         "term_en": "uncommon ground / uncommon-ground index",
         "term_tw": "罕見共識 / 罕見共識指數",
         "def_en": "Uncommon ground is what a well-facilitated bridging process surfaces: the specific, actionable proposals that earn endorsement across otherwise divided groups, not the centrist average. The uncommon-ground index is Pack 5's headline public measure — the share of shared decisions that actually land there — and it is read against Pack 1's <a href=\"/glossary/#representation-gap\">representation gap</a>, so a curated room cannot fake it.",
-        "def_tw": "罕見共識是一場好的搭橋過程所浮現的東西：能獲得原本對立群體共同背書、具體可行的提案，而不是中間值的平均。罕見共識指數是團結力（Pack 5）的公開主指標——實際落在罕見共識上的共同決策比例——並且必須對照覺察力（Pack 1）的<a href=\"/tw/glossary/#representation-gap\">代表性落差</a>閱讀，先篩選過的房間無法造假。"
+        "def_tw": "罕見共識是一場好的搭橋過程所浮現的東西：能獲得原本對立群體共同背書、具體可行的提案，而不是中間值的平均。罕見共識指數是團結力（Pack 5）的公開主指標——實際落在罕見共識上的共同決策比例——並且必須對照覺察力（Pack 1）的<a href=\"/tw/glossary/#representation-gap\">代表性落差</a>閱讀，以免預先篩選參與者的房間造假。"
     },
     {
         "id": "representation-gap",
@@ -310,8 +310,8 @@
         "tier": "design",
         "term_en": "contestability / appeal",
         "term_tw": "申訴（可爭議性）",
-        "def_en": "The standing to challenge an algorithmic decision and be answered — notice, hearing, and reasoned explanation for automated public decisions (Citron's technological due process, 2008), operationalised as Pack 4's one-click appeal with a clock: every appeal lands in a public <a href=\"/glossary/#correction-backlog-board\">correction backlog</a> and is owed closure, not mere receipt. Voice in Hirschman's pair; exit belongs to Pack 5. The research programme is contestability by design. See <a href=\"/sources/\">Sources</a>.",
-        "def_tw": "挑戰演算法決定並獲得回應的地位——自動化公共決策應有通知、聽證與說理（Citron 的技術性正當程序，2008），在回應力（Pack 4）落實為附帶時鐘的一鍵申訴：每件申訴都進入公開的<a href=\"/tw/glossary/#correction-backlog-board\">校正積壓</a>，必須有始有終，而非石沉大海。這是 Hirschman 二元組中的發聲；退出屬於團結力（Pack 5）。所屬的研究計畫是可爭議性設計（contestability by design）。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。",
+        "def_en": "The standing to challenge an algorithmic decision and be answered — notice, hearing, and reasoned explanation for automated public decisions (Citron's technological due process, 2008), operationalised as Pack 4's one-click appeal with a clock: every appeal lands in a <a href=\"/glossary/#correction-backlog-board\">correction backlog</a> and is owed closure, not mere receipt; the backlog's public view shows status and age, never private case details. Voice in Hirschman's pair; exit belongs to Pack 5. The research programme is contestability by design. See <a href=\"/sources/\">Sources</a>.",
+        "def_tw": "挑戰演算法決定並獲得回應的地位——自動化公共決策應有通知、聽證與說理（Citron 的技術性正當程序，2008），在回應力（Pack 4）落實為附帶時鐘的一鍵申訴：每件申訴都進入<a href=\"/tw/glossary/#correction-backlog-board\">校正積壓</a>，必須有始有終，而非石沉大海；積壓的公開檢視只顯示狀態與案齡，不揭露私人案情。這是 Hirschman 二元組中的發聲；退出屬於團結力（Pack 5）。所屬的研究計畫是可爭議性設計（contestability by design）。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。",
         "aliases_en": ["contestable"],
         "aliases_tw": ["申訴"]
     },
@@ -427,8 +427,8 @@
         "tier": "instruments",
         "term_en": "correction backlog board",
         "term_tw": "校正積壓看板",
-        "def_en": "Pack 4's public queue of unresolved corrections, with age, ownership, and escalation status — the instrument that keeps correction debt visible so aging cases are reassigned or elevated instead of quietly dropped. Every one-click appeal lands here, and the appeal-closure and correction-backlog diagnostics read off it. Specified on the <a href=\"/measures/#named-instruments\">Measures</a> page.",
-        "def_tw": "回應力（Pack 4）公開的未結案修復追蹤，記下案齡、負責人與上報狀態——讓校正負債保持可見，使老案被重新指派或上報，而不是靜靜沉沒。每件一鍵申訴都落在這裡；申訴結案與校正積壓診斷都從這裡讀數。工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。",
+        "def_en": "Pack 4's public queue of unresolved corrections, with age, ownership, and escalation status — the instrument that keeps correction debt visible so ageing cases are reassigned or elevated instead of quietly dropped. Every one-click appeal lands here; its public view shows status and age without private case details, and the appeal-closure and correction-backlog diagnostics read off it. Specified on the <a href=\"/measures/#named-instruments\">Measures</a> page.",
+        "def_tw": "回應力（Pack 4）公開的未結案修復追蹤，記下案齡、負責人與上報狀態——讓校正負債保持可見，使老案被重新指派或上報，而不是靜靜沉沒。每件一鍵申訴都落在這裡，公開檢視只呈現狀態與案齡、不含私人案情；申訴結案與校正積壓診斷都從這裡讀數。工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。",
         "aliases_en": ["Correction backlog"],
         "aliases_tw": ["校正積壓"]
     },
@@ -437,8 +437,8 @@
         "tier": "instruments",
         "term_en": "governance charter",
         "term_tw": "治理章程",
-        "def_en": "The first written agreement of a Kami's keepers — a plain-text note answering who holds the machine, how often the <a href=\"/kami/\">SOUL files</a> are reviewed, how changes are agreed, and when the Kami should retire. The first rung of the ladder that matures into the engagement contract; the practice lives on the <a href=\"/kami/\">Set up your own Kami</a> page.",
-        "def_tw": "地神守護者們的第一份書面約定：一張純文字便條，回答誰持有機器、<a href=\"/tw/kami/\">SOUL 檔案</a>多久審查一次、修改如何議定，以及地神何時退役。它是階梯的第一階，成熟之後就是參與契約；實作步驟見〈<a href=\"/tw/kami/\">架設你自己的 Kami</a>〉頁。"
+        "def_en": "The first written agreement of a Kami's keepers — a plain-text note tied to four answers: who keeps it, what a breach could cause, who can overrule it, and when it ends or is reviewed. The first rung of the ladder that matures into the engagement contract; the practice lives on the <a href=\"/kami/\">Set up your own Kami</a> page.",
+        "def_tw": "地神守護者們的第一份書面約定：一張純文字便條，綁住四個答案：誰守護、違約可能造成什麼、誰可否決、何時結束或檢視。它是階梯的第一階，成熟之後就是參與契約；實作步驟見〈<a href=\"/tw/kami/\">架設你自己的 Kami</a>〉頁。"
     },
     {
         "id": "decision-trace",
@@ -463,7 +463,7 @@
         "term_en": "escrow / remedy escrow",
         "term_tw": "託管賠償",
         "def_en": "Money set aside in advance — engagement contracts require vendors to pre-fund it — so that when the system causes harm, compensation and rollback are already funded rather than merely promised. Community evaluators are paid from it, and Pack 6 designs decision traces to settle against it as civic receipts returning value to knowledge custodians. A design commitment, not yet a running settlement; where financial stakes are low, pause triggers replace escrow.",
-        "def_tw": "預先撥出的款項——參與契約要求供應商預先注資——使系統造成傷害時，賠償與轉返已有資金，而不只是承諾。社群評測者從中獲得報酬；共生力（Pack 6）設計決策軌跡以公民收據的形式對它結算，把價值返還知識守護者。這是設計承諾，尚非運行中的結算；在財務風險低的地方，以暫停觸發取代託管。",
+        "def_tw": "預先撥出的款項——參與契約要求供應商預先注資——使系統造成傷害時，賠償與回滾已有資金，而不只是承諾。社群評測者從中獲得報酬；共生力（Pack 6）設計決策軌跡以公民收據的形式對它結算，把價值返還知識守護者。這是設計承諾，尚非運行中的結算；在財務風險低的地方，以暫停觸發取代託管。",
         "aliases_en": ["escrowed"],
         "aliases_tw": ["託管", "託管資金"]
     },
@@ -504,8 +504,8 @@
         "tier": "instruments",
         "term_en": "Reinforcement Learning from Community Feedback (RLCF)",
         "term_tw": "社群回饋強化學習（RLCF）",
-        "def_en": "A training approach in which approved community evaluations — authored by affected people rather than lab raters alone — are fed back into model routing or updates. RLCF is an implementation choice that follows from the Responsiveness pack's more basic civic commitment: the community defines what counts as harm, repair, and improvement before any technical feedback loop begins.",
-        "def_tw": "一種訓練方法，將經核准的社群評測——由受影響者而非僅靠實驗室評分者撰寫——接入模型路由或更新。社群回饋強化學習（RLCF）是一項實作選擇，依循回應力更基本的公民承諾：在任何技術性回饋迴路開始之前，先由社群界定什麼算傷害、補救與改善。"
+        "def_en": "A reinforcement-learning approach in which approved community evaluations — authored by affected people rather than lab raters alone — supply the feedback signal for model updates; the same evaluations can also steer routing or policy without retraining. RLCF is an implementation choice that follows from the Responsiveness pack's more basic civic commitment: the community defines what counts as harm, repair, and improvement before any technical feedback loop begins.",
+        "def_tw": "一種強化學習方法，以經核准的社群評測——由受影響者而非僅靠實驗室評分者撰寫——作為模型更新的回饋訊號；同樣的評測也能在不重新訓練的情況下，引導模型路由或政策。社群回饋強化學習（RLCF）是一項實作選擇，依循回應力更基本的公民承諾：在任何技術性回饋迴路開始之前，先由社群界定什麼算傷害、補救與改善。"
     },
     {
         "id": "shadow-mode",
@@ -523,7 +523,7 @@
         "term_en": "canary release",
         "term_tw": "金絲雀發布",
         "def_en": "The second stage of the Apprentice Model: deployment to a small, stratified slice of real cases with automatic rollback triggers if drift exceeds defined bounds. A canary is a probe, not a stand-in for the public — canary health and coverage are Pack 3 supporting diagnostics. Specified on the <a href=\"/measures/#named-instruments\">Measures</a> page.",
-        "def_tw": "學徒模式的第二階段：先發布給一小批分層的真實案例切片，偏移超過界限即自動轉返。金絲雀是探針，不是公眾的替身——金絲雀健康度與覆蓋率是勝任力（Pack 3）的輔助診斷。工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。",
+        "def_tw": "學徒模式的第二階段：先發布給一小批分層的真實案例切片，偏移超過界限即自動回滾。金絲雀是探針，不是公眾的替身——金絲雀健康度與覆蓋率是勝任力（Pack 3）的輔助診斷。工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。",
         "aliases_en": ["canaries"],
         "aliases_tw": ["金絲雀測試", "金絲雀"]
     }
