@@ -16,7 +16,7 @@ hosts:
       photo: { src: "/img/audrey.jpg", w: 512, h: 512 }
     - name: "Caroline Green"
       url: "https://www.oxford-aiethics.ox.ac.uk/caroline-emmer-de-albuquerque-green"
-      role: "牛津 AI 倫理研究院"
+      role: "牛津 AI 倫理研究所"
       photo: { src: "/img/caroline.jpg", w: 512, h: 512 }
 goals:
     - title: "共識"

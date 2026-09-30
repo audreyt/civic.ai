@@ -5,7 +5,7 @@ lang: zh-tw
 alt_lang_url: "/ai-democracy-podcast/"
 permalink: "/tw/ai-democracy-podcast/"
 date: 2025-08-05
-description: "原始錄音來自牛津 AI 倫理研究院的 Accelerating AI Ethics Podcast。"
+description: "原始錄音來自牛津 AI 倫理研究所的 Accelerating AI Ethics Podcast。"
 meta_description: "唐鳳與 Caroline Green 談數位民主、集體智慧，以及以多元取代奇點的願景：牛津 Accelerating AI Ethics 首集。"
 og_image: "/img/ai-democracy-podcast.jpg"
 nav_next:
@@ -15,7 +15,7 @@ nav_next:
 
 <em>唐鳳與 Caroline Green 博士合錄《AI 倫理加速》首集——錄製於唐鳳擔任牛津加速學人的第一天。五十八分鐘涵蓋數位民主、集體智慧、多元宇宙作為奇點的替代願景，以及為何 AI 倫理必須透過設計內建，而非事後補救。</em>
 
-原始錄音來自牛津 AI 倫理研究院的 [Accelerating AI Ethics](https://podcasts.ox.ac.uk/ai-and-democracy-ambassador-audrey-tang-plurality-practice-transparency-and-collective-intelligence) Podcast。
+原始錄音來自牛津 AI 倫理研究所的 [Accelerating AI Ethics](https://podcasts.ox.ac.uk/ai-and-democracy-ambassador-audrey-tang-plurality-practice-transparency-and-collective-intelligence) Podcast。
 
 ## 摘要
 
@@ -344,7 +344,7 @@ Facebook 應該對那 700 萬美元負責。只有這樣他們才會遵守。另
 
 **唐鳳**：謝謝您。讓我們攜手共創無限未來。
 
-**Caroline Green**：聽眾可以造訪學人計畫網站 [afp.oxford-aiethics.ox.ac.uk](https://afp.oxford-aiethics.ox.ac.uk)，了解更多關於唐鳳的工作以及其他學人的計畫。這裡是牛津 AI 倫理研究院的 Podcast《AI 倫理加速》。如果您喜歡這集節目，請訂閱並分享。下次見。
+**Caroline Green**：聽眾可以造訪學人計畫網站 [afp.oxford-aiethics.ox.ac.uk](https://afp.oxford-aiethics.ox.ac.uk)，了解更多關於唐鳳的工作以及其他學人的計畫。這裡是牛津 AI 倫理研究所的 Podcast《AI 倫理加速》。如果您喜歡這集節目，請訂閱並分享。下次見。
 
 感謝您的收聽。
 
