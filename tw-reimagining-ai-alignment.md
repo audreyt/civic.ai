@@ -21,7 +21,7 @@ nav_next:
 ## 觀看
 
 <div class="video-embed">
-<iframe title="影片：重新想像 AI 對齊" src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/31300d382e14451bfa87219f650c7c40/iframe?defaultTextTrack=zh-Hant&poster=https%3A%2F%2Fcustomer-07bto6bf9uibrlc3.cloudflarestream.com%2F31300d382e14451bfa87219f650c7c40%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D1s" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+<iframe loading="lazy" title="影片：重新想像 AI 對齊" src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/31300d382e14451bfa87219f650c7c40/iframe?defaultTextTrack=zh-Hant&poster=https%3A%2F%2Fcustomer-07bto6bf9uibrlc3.cloudflarestream.com%2F31300d382e14451bfa87219f650c7c40%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D1s" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## 完整逐字稿

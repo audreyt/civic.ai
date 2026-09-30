@@ -31,7 +31,7 @@ nav_next:
 ## 觀看
 
 <div class="video-embed">
-<iframe src="https://iframe.cloudflarestream.com/977f34c1fd03b2285f368ac43554fad6" title="AI 與民主——唐鳳與 Caroline Green" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe loading="lazy" src="https://iframe.cloudflarestream.com/977f34c1fd03b2285f368ac43554fad6" title="AI 與民主——唐鳳與 Caroline Green" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## 完整逐字稿

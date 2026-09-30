@@ -14,7 +14,7 @@ nav_next:
 ---
 
 <div class="video-embed">
-<iframe title="影片：自我實現與關懷" src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/458bf385042b08e95a09a79ce0416ba1/iframe?defaultTextTrack=en" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+<iframe loading="lazy" title="影片：自我實現與關懷" src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/458bf385042b08e95a09a79ce0416ba1/iframe?defaultTextTrack=en" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## 導言與「關懷六力」

@@ -18,7 +18,7 @@ nav_next:
 ---
 
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/fqvdaHWH7a0?start=5" title="我們全民，才是超級智慧 — 唐鳳於 MIT SOLVE 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/fqvdaHWH7a0?start=5" title="我們全民，才是超級智慧 — 唐鳳於 MIT SOLVE 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 謝謝這個會場裡的每一位 Solver。

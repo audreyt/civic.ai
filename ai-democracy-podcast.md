@@ -31,7 +31,7 @@ This earlier conversation supplies the background politics behind the 6-Pack. It
 ## Watch
 
 <div class="video-embed">
-<iframe src="https://iframe.cloudflarestream.com/977f34c1fd03b2285f368ac43554fad6" title="AI and Democracy — Audrey Tang and Caroline Green" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe loading="lazy" src="https://iframe.cloudflarestream.com/977f34c1fd03b2285f368ac43554fad6" title="AI and Democracy — Audrey Tang and Caroline Green" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## Full transcript

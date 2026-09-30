@@ -15,7 +15,7 @@ nav_next:
 Good local time, leaders and change-makers at the University of California, Santa Cruz.
 
 <div class="video-embed">
-<iframe title="Video: ⿻ UCSC: From Polarisation to Co-creation" src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/19f482b81a13ac6db833ce2ffb1bc24a/iframe?defaultTextTrack=en" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+<iframe loading="lazy" title="Video: ⿻ UCSC: From Polarisation to Co-creation" src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/19f482b81a13ac6db833ce2ffb1bc24a/iframe?defaultTextTrack=en" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 Let us begin with a big question. **"What could UCSC be by 2050?"** No need for predictive modelling or even crystal balls. This is an invitation to cast off the yoke of tyrannical predictions and deliberate deeply.

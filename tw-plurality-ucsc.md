@@ -15,7 +15,7 @@ nav_next:
 加州大學聖塔克魯茲分校的各位領袖與改變推動者，各位當地時間好。
 
 <div class="video-embed">
-<iframe title="影片：⿻ UCSC：從極化到共創" src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/19f482b81a13ac6db833ce2ffb1bc24a/iframe?defaultTextTrack=zh-Hant" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+<iframe loading="lazy" title="影片：⿻ UCSC：從極化到共創" src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/19f482b81a13ac6db833ce2ffb1bc24a/iframe?defaultTextTrack=zh-Hant" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 讓我們從一個大哉問開始。**「到了 2050 年，UCSC 可能成為什麼模樣？」** 不需要預測模型，也不需要水晶球。這是一份邀請，請各位卸下專橫預測的枷鎖，做深度審議。
