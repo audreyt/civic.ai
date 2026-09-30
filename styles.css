@@ -951,7 +951,6 @@ body.interview-page main p:has(> strong:first-child) strong:first-child {
 
 /* ─── AUDIO PLAYER ─── */
 .audio-section {
-    clear: both;
     margin: 32px 0;
     padding: 20px 24px;
     background: var(--warm);
