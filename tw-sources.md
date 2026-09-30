@@ -192,7 +192,7 @@ Aimee van Wynsberghe 的「以關懷為中心的價值敏感設計」是直接�
 
     助理的範圍限於英國境內的英格蘭，讓有來源可追的支援更容易找到，並將職責外的問題轉介；它不是開放領域的醫療顧問。觀察到一次離題拒答，只能說明邊界存在，不能證明範圍內的協助品質或實際影響。
 
-- **長者。** 聯合國人權理事會第 58/13 號決議，2025 年 4 月 3 日無異議通過；不限成員名額政府間工作組的[第一次實質會議](https://www.ohchr.org/en/events/events/2026/1st-session-intergovernmental-working-group-human-rights-older-persons-13-17)，2026 年 7 月 13 至 17 日於日內瓦；以及它的[意見徵集](https://www.ohchr.org/en/calls-for-input/2026/call-inputs-general-framework-architecture-and-guiding-principles-legally).——那項傾聽計畫瞄準的條約管道。管道是開的，每年開會兩次；該計畫尚未送件。
+- **長者。** 聯合國人權理事會第 58/13 號決議，2025 年 4 月 3 日無異議通過；不限成員名額政府間工作組的[第一次實質會議](https://www.ohchr.org/en/events/events/2026/1st-session-intergovernmental-working-group-human-rights-older-persons-13-17)，2026 年 7 月 13 至 17 日於日內瓦；以及它的[意見徵集](https://www.ohchr.org/en/calls-for-input/2026/call-inputs-general-framework-architecture-and-guiding-principles-legally).——那項傾聽計畫瞄準的條約管道。
 
     擬議中的傾聽計畫，希望蒐集長者優先關切的事，把可追溯的紀錄帶入聯合國程序；法律仍由各國起草。範圍與治理尚未定案，因此不能宣稱已提交意見，也不能宣稱已影響條約。
 
