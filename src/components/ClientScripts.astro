@@ -67,6 +67,17 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                         localStorage.setItem(storageKey, theme);
                     } catch (e) {}
                 }
+                // Paper is always light: print in the light theme, then restore.
+                var themeBeforePrint = null;
+                window.addEventListener("beforeprint", function () {
+                    themeBeforePrint = document.documentElement.dataset.theme;
+                    document.documentElement.dataset.theme = "light";
+                });
+                window.addEventListener("afterprint", function () {
+                    if (themeBeforePrint)
+                        document.documentElement.dataset.theme = themeBeforePrint;
+                    themeBeforePrint = null;
+                });
                 document.addEventListener("DOMContentLoaded", function () {
                     applyTheme(getTheme());
                     document.addEventListener("click", function (event) {
@@ -314,6 +325,9 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                 var L = zh
                     ? { copy: "複製", done: "已複製" }
                     : { copy: "Copy", done: "Copied" };
+                // No Clipboard API (insecure context, older browser): leave the
+                // block selectable rather than offer a button that cannot work.
+                if (!navigator.clipboard || !navigator.clipboard.writeText) return;
                 document.querySelectorAll("main pre").forEach(function (pre) {
                     if (
                         pre.parentElement &&

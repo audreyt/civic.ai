@@ -6133,3 +6133,38 @@ html[data-theme="dark"] body[data-pack="6"] {
         );
     }
 }
+
+/* ─── PRINT: paper is always light, and citations keep their addresses ───
+   A reader's dark theme must not reach the printer: reset the dark tokens to
+   their light values (the theme script also switches html[data-theme] around
+   beforeprint/afterprint for component rules with fixed dark colours). */
+@media print {
+    /* Outranks both :root[data-theme="dark"] and html[data-theme="dark"]. */
+    html:root[data-theme="dark"] {
+        color-scheme: light;
+        --paper: #faf8f5;
+        --warm: #f4f1ec;
+        --surface: #fff;
+        --card: #f4f1ec;
+        --text: #2c3e50;
+        --muted: #5f6a7d;
+        --heading: #002147;
+        --border: #e0ddd7;
+        --gold: #886d35;
+        --teal: #236f79;
+        --shadow: none;
+        --shadow-hover: none;
+        --accent-teal: #236f79;
+        --accent-blue: #236f79;
+        --gold-text: #7a6128;
+        --cmap-p6-text: #8a3fd4;
+    }
+
+    /* A photocopy cannot follow a link: print external addresses in brackets. */
+    main a[href^="http"]:not(:has(img))::after {
+        content: " [" attr(href) "]";
+        font-size: 0.82em;
+        color: #5f6a7d;
+        overflow-wrap: anywhere;
+    }
+}
