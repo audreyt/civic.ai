@@ -16,8 +16,15 @@ const siteDesc = zh ? site.description_zh || site.description : site.description
 const ogDesc = (page.data.meta_description || page.data.og_description || page.data.description || siteDesc).replace(/<[^>]+>/g, "");
 const thumb = page.data.thumbnail;
 const thumbSrc = typeof thumb === "string" ? thumb : thumb?.src;
-const fallbackImg = zh ? "/img/overview-small-tw.jpg" : "/img/overview-small.jpg";
+// The default share card is 1200x630, the size link previews expect.
+const fallbackImg = zh ? "/img/og-card-tw.jpg" : "/img/og-card.jpg";
 const imagePath = page.data.og_image || thumbSrc || fallbackImg;
+const ogImgAlt =
+    imagePath === fallbackImg
+        ? zh
+            ? "civic.ai 關懷六力，附 Nicky Case 繪製的六力圖解概覽"
+            : "The 6-Pack of Care on civic.ai, with Nicky Case's illustrated overview of the six packs"
+        : undefined;
 const ogImg = imagePath.includes("://") ? imagePath : `${site.url}${imagePath}`;
 const pageTitle = `${page.data.title || site.title}${page.data.subtitle ? ` — ${page.data.subtitle}` : ""}`;
 const version = cssVersion();
@@ -35,7 +42,7 @@ document.documentElement.classList.add("js");
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#f8f4ed" />
 <meta name="color-scheme" content="light dark" />
-<SeoHead page={page} ogType={ogType} ogDesc={ogDesc} ogImg={ogImg} pageTitle={pageTitle} />
+<SeoHead page={page} ogType={ogType} ogDesc={ogDesc} ogImg={ogImg} ogImgAlt={ogImgAlt} pageTitle={pageTitle} />
 {page.data.openclaw_discovery && <link rel="alternate" type="text/markdown" href="/.well-known/openclaw/SKILL.md" title="Civic AI OpenClaw Bootstrap Skill" />}
 <link rel="icon" href="/favicon.ico" sizes="any" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />

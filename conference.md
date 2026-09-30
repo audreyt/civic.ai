@@ -198,6 +198,7 @@ packs:
     - { num: 5, name: "Solidarity", url: "/5/" }
     - { num: 6, name: "Symbiosis", url: "/6/" }
 thumbnail: "/img/overview-small.jpg"
+og_image: "/img/og-card.jpg"
 overview_image:
     src: "/img/overview-small.png"
     alt: "6-Pack of Care visual overview"
