@@ -172,6 +172,24 @@
             ]
         },
         {
+            "path": "404.html",
+            "lang": "en-gb",
+            "title": "This path has been sunset. — Civic AI",
+            "description": "Civic AI is artificial intelligence that answers to the people it affects — the 6-Pack of Care, a research project by Audrey Tang and Caroline Green at the Oxford Institute for Ethics in AI.",
+            "canonical": "",
+            "alternates": [],
+            "ids": [
+                "civic-ask-answer",
+                "civic-ask-history",
+                "main",
+                "search-close",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
+                "search-toggle"
+            ]
+        },
+        {
             "path": "5/index.html",
             "lang": "en-gb",
             "title": "Pack 5: Solidarity — Caring With — Civic AI",
@@ -3016,7 +3034,7 @@
             "path": "tw/outrage-to-overlap/index.html",
             "lang": "zh-tw",
             "title": "從憤怒到交集：仁工智慧與「關懷六力」",
-            "description": "牛津台灣研究系列講座的一場演講：談受「台灣模式」啟發的仁工智慧與「關懷六力」框架，如何在以在地問責與社群需求為界限時，協助強化集體的自我治理。",
+            "description": "牛津臺灣研究系列講座的一場演講：談受「臺灣模式」啟發的仁工智慧與「關懷六力」框架，如何在以在地問責與社群需求為界限時，協助強化集體的自我治理。",
             "canonical": "https://civic.ai/tw/outrage-to-overlap/",
             "alternates": [
                 {
@@ -3551,6 +3569,10 @@
         "fonts/cormorant-italic-latin.woff2",
         "fonts/cormorant-normal-latin-ext.woff2",
         "fonts/cormorant-normal-latin.woff2",
+        "fonts/lora-italic-latin-ext.woff2",
+        "fonts/lora-italic-latin.woff2",
+        "fonts/lora-normal-latin-ext.woff2",
+        "fonts/lora-normal-latin.woff2",
         "fonts/monlam-bodyig-tibetan.woff2",
         "fonts/outfit-latin-ext.woff2",
         "fonts/outfit-latin.woff2",
