@@ -24,7 +24,7 @@ export default defineConfig({
         options: { typeAware: true, typeCheck: true, denyWarnings: true },
     },
     staged: {
-        "**/*": "vp fmt",
+        "**/*": "vp fmt --no-error-on-unmatched-pattern",
         "**/*.md": [
             "bun pangu-format.mjs",
             "bun scripts/check-tw-typography.mjs",
