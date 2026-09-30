@@ -113,6 +113,7 @@ Monlam 的公開紀錄支持社群扎根的語言工具，不支持對每個模�
 
 ## 學術發表
 
+- [〈讓人民設定前沿 AI 的步調〉](https://audreyt.org/noema-pace)：Hélène Landemore 與唐鳳提議設立常設的「全球 AI 公民大會」——從各大洲抽籤選出一千人，前沿 AI 實驗室與各國政府須公開回應大會的建議：接受什麼、拒絕什麼，以及理由。這是 Pack 2「採納或解釋」的義務，延伸到前沿。_(原刊於 Noema，2026 年 9 月 23 日；連結為中文版)_
 - [〈AI 與數位公共廣場的未來〉](https://journals.sagepub.com/doi/10.1177/26339137261459441)：唐鳳與 Beth Goldberg、Hélène Landemore 等二十多位共同作者，描繪 LLM 如何強化數位公共廣場——集體對話、搭橋系統、社群調解與真人驗證——這份經同儕審查的研究議程直接引用了關懷六力。_(Collective Intelligence, 2026)_
 - [〈以資料為土壤，守護主權〉](/tw/safer-sovereignty/)：唐鳳將 Tenzin Yangtso 提出的「資料是土壤，不是石油」應用於企業 AI——韌性來自聯邦式安全下的有界在地守護者，而非單一的全球大腦。_(原刊於 The Kyndryl Institute，2026 年 4 月 28 日)_
 - [〈廢除 Section 230，釋放第一修正案〉](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/)：唐鳳、Jaron Lanier 與 Allison Stanger 主張終結演算法放大的免責保護，同時保護人類言論——這是 Pack 5 核心的觸及而非言論改革。_(Communications of the ACM, 2026 年 1 月)_
