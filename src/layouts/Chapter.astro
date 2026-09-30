@@ -1,5 +1,5 @@
 ---
-import type { ActionLink, PageRecord } from "../lib/pages";
+import { visibleHtml, type ActionLink, type PageRecord } from "../lib/pages";
 import { lang2, site } from "../lib/site";
 import { normalizeSearchLang } from "../lib/search";
 import ClientScripts from "../components/ClientScripts.astro";
@@ -20,6 +20,8 @@ const pagefindIndexed =
     page.data.search_exclude !== true &&
     normalizeSearchLang(page.data.lang) === "en";
 const chapterOrder = site.chapters;
+const packKey = page.url.replace(/^\/tw\//, "").replace(/^\//, "").replace(/\/$/, "");
+const packNumber = /^[1-6]$/.test(packKey) ? packKey : undefined;
 const key = page.url.replace(/^\/tw\//, "").replace(/^\//, "").replace(/\/$/, "");
 const index = chapterOrder.indexOf(key);
 function linkFor(slug: string, direction: "prev" | "next"): ActionLink {
@@ -56,7 +58,7 @@ if (page.data.og_image || page.data.thumbnail) articleLd.image = `${site.url}${p
 <!doctype html>
 <html lang={page.data.lang || "en"}>
   <head><PageHead page={page} ogType="article" preloadFont="/fonts/cormorant-normal-latin.woff2" /></head>
-  <body class={page.data.page_class}>
+  <body class={page.data.page_class} data-pack={packNumber}>
     <a class="skip-link" href="#main">{zh ? "跳至內容" : "Skip to content"}</a>
     <SiteHeader page={page} />
     <SearchOverlay page={page} />
@@ -69,7 +71,7 @@ if (page.data.og_image || page.data.thumbnail) articleLd.image = `${site.url}${p
               "data-pagefind-meta": `section:${page.data.title || page.url}`,
           }
         : {})}
-    ><InShort page={page} />{page.data.audio && <div class="audio-section"><audio controls preload="metadata" title="Narrated in Audrey's own AI voice"><source src={page.data.audio} type="audio/mpeg" /></audio></div>}<Fragment set:html={page.html} /></main>
+    ><InShort page={page} />{page.data.audio && <div class="audio-section"><audio controls preload="metadata" title="Narrated in Audrey's own AI voice"><source src={page.data.audio} type="audio/mpeg" /></audio></div>}<Fragment set:html={visibleHtml(page)} /></main>
     <section class="next-action"><div class="next-action-content">
       {prev && <a href={prev.url} class="next-action-button">{!hasExplicitNav && <span class="button-arrow">←</span>}<span class="button-text">{prev.text}</span></a>}
       {next && <a href={next.url} class="next-action-button"><span class="button-text">{next.text}</span>{!hasExplicitNav && <span class="button-arrow">→</span>}</a>}

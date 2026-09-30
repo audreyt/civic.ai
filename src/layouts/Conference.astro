@@ -1,5 +1,6 @@
 ---
-import type { PageRecord } from "../lib/pages";
+import { visibleHtml, type PageRecord } from "../lib/pages";
+import { smartQuotes } from "../lib/legacyMarkdown";
 import { lang2, site } from "../lib/site";
 import { normalizeSearchLang } from "../lib/search";
 import ClientScripts from "../components/ClientScripts.astro";
@@ -12,6 +13,16 @@ interface Props { page: PageRecord; }
 const { page } = Astro.props;
 const zh = lang2(page.data.lang) === "zh";
 const data = page.data as any;
+const UNTOUCHED_KEYS = new Set(["url", "src", "href", "photo", "alt_lang_url", "permalink"]);
+const smart = (value: any, key = ""): any =>
+    typeof value === "string"
+        ? UNTOUCHED_KEYS.has(key) ? value : smartQuotes(value)
+        : Array.isArray(value)
+          ? value.map((item) => smart(item))
+          : value && typeof value === "object"
+            ? Object.fromEntries(Object.entries(value).map(([k, v]) => [k, smart(v, k)]))
+            : value;
+const shown = smart(data);
 const pagefindIndexed =
     page.includeInSitemap === true &&
     page.data.search_exclude !== true &&
@@ -23,7 +34,7 @@ const eventLd = {"@context":"https://schema.org","@type":"Event",name:`${data.ti
 <head><PageHead page={page} ogType="website" preloadFont="/fonts/outfit-latin.woff2" /></head>
 <body>
 <a class="skip-link" href="#main">{zh ? "跳至內容" : "Skip to content"}</a>
-<SiteHeader page={page} headerTitle={data.subtitle} headerSubtitle={data.title} headerDate={data.date_line} />
+<SiteHeader page={page} headerTitle={shown.subtitle} headerSubtitle={shown.title} headerDate={shown.date_line} />
 <SearchOverlay page={page} />
 <main
   id="main"
@@ -36,7 +47,7 @@ const eventLd = {"@context":"https://schema.org","@type":"Event",name:`${data.ti
     : {})}
 >
   <div class="conf-hosts">
-    {(data.hosts || []).map((host: any) => (
+    {(shown.hosts || []).map((host: any) => (
       <a href={host.url} class="conf-host">
         <noscript><img src={host.photo.src} alt={host.name} width={host.photo.w} height={host.photo.h} loading="lazy" decoding="async" /></noscript>
         <strong>{host.name}</strong>
@@ -44,10 +55,10 @@ const eventLd = {"@context":"https://schema.org","@type":"Event",name:`${data.ti
       </a>
     ))}
   </div>
-  <div class="conf-goals">{(data.goals || []).map((goal: any, i: number) => <div class="conf-goal"><span class="conf-goal-num">{String(i + 1).padStart(2, "0")}</span><h3>{goal.title}</h3><p>{goal.text}</p></div>)}</div>
-  {data.agenda_title && <h2>{data.agenda_title}</h2>}
+  <div class="conf-goals">{(shown.goals || []).map((goal: any, i: number) => <div class="conf-goal"><span class="conf-goal-num">{String(i + 1).padStart(2, "0")}</span><h3>{goal.title}</h3><p>{goal.text}</p></div>)}</div>
+  {shown.agenda_title && <h2>{shown.agenda_title}</h2>}
   <div class="conf-agenda">
-    {(data.agenda || []).map((slot: any) => (
+    {(shown.agenda || []).map((slot: any) => (
       <div class:list={["conf-slot", slot.break && "conf-break"]}>
         <div class="conf-time">{slot.time}</div>
         <div class="conf-detail">
@@ -78,13 +89,13 @@ const eventLd = {"@context":"https://schema.org","@type":"Event",name:`${data.ti
       </div>
     ))}
   </div>
-  <Fragment set:html={page.html} />
-  {data.packs_title && <h2>{data.packs_title}</h2>}
-  {data.packs_intro && <p style="font-size: 0.95rem">{data.packs_intro} <a href={data.packs_link_url}>{data.packs_link_text}</a>{data.packs_period}</p>}
-  <div class="conf-packs-condensed">{(data.packs || []).map((pack: any) => <a href={pack.url}><strong>{pack.num}</strong> {pack.name}</a>)}</div>
-  {data.overview_image && (
+  <Fragment set:html={visibleHtml(page)} />
+  {shown.packs_title && <h2>{shown.packs_title}</h2>}
+  {shown.packs_intro && <p style="font-size: 0.95rem">{shown.packs_intro} <a href={shown.packs_link_url}>{shown.packs_link_text}</a>{shown.packs_period}</p>}
+  <div class="conf-packs-condensed">{(shown.packs || []).map((pack: any) => <a href={pack.url}><strong>{pack.num}</strong> {pack.name}</a>)}</div>
+  {shown.overview_image && (
     <div class="conf-diagram">
-      <noscript><img src={data.overview_image.src} alt={data.overview_image.alt} width={data.overview_image.w} height={data.overview_image.h} loading="lazy" decoding="async" /></noscript>
+      <noscript><img src={shown.overview_image.src} alt={shown.overview_image.alt} width={shown.overview_image.w} height={shown.overview_image.h} loading="lazy" decoding="async" /></noscript>
     </div>
   )}
 </main>

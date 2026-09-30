@@ -18,8 +18,8 @@ const askJs = assetVersion("assets/js/civic-ask.js");
 const searchJs = assetVersion("assets/js/civic-search.js");
 ---
 <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" tabindex="-1" aria-label={zh ? "搜尋仁工智慧" : "Search Civic AI"} aria-hidden="true">
+  <button type="button" id="search-close" class="search-overlay__close">{zh ? "關閉搜尋" : "Close search"}</button>
   <div class="search-overlay__inner">
-    <button type="button" id="search-close" class="search-overlay__close">{zh ? "關閉搜尋" : "Close search"}</button>
     <div id="civic-ask-answer" class="civic-ask-answer" aria-live="polite" hidden></div>
     <div id="civic-ask-history" class="civic-ask-history" hidden></div>
     <div id="search-container"></div>

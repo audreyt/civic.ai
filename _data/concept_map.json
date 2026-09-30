@@ -46,8 +46,8 @@
                 "tw": "退出就緒度"
             }
         },
-        "inkLight": "#7d35bc",
-        "inkDark": "#a753f6"
+        "inkLight": "#8a3fd4",
+        "inkDark": "#b98cf9"
     },
     "packs": [
         {
@@ -55,7 +55,7 @@
             "slug": "1",
             "hue": "#eb573a",
             "inkLight": "#b6422d",
-            "inkDark": "#eb573a",
+            "inkDark": "#f07a60",
             "phase": {
                 "en": "First light",
                 "tw": "曉"

@@ -1437,6 +1437,52 @@ footer a:hover {
     }
 }
 
+/* ─── LORA (SELF-HOSTED; SIL OFL 1.1, Cyreal) ─── */
+@font-face {
+    font-family: "Lora";
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("fonts/lora-normal-latin-ext.woff2") format("woff2");
+    unicode-range:
+        U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+        U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+        U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+    font-family: "Lora";
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("fonts/lora-normal-latin.woff2") format("woff2");
+    unicode-range:
+        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+        U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+        U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: "Lora";
+    font-style: italic;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("fonts/lora-italic-latin-ext.woff2") format("woff2");
+    unicode-range:
+        U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+        U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+        U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+    font-family: "Lora";
+    font-style: italic;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("fonts/lora-italic-latin.woff2") format("woff2");
+    unicode-range:
+        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+        U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+        U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* ─── CORMORANT GARAMOND (SELF-HOSTED) ─── */
 @font-face {
     font-family: "Cormorant Garamond";
@@ -1501,6 +1547,7 @@ footer a:hover {
         background: white;
         color: #1a1a1a;
         font-family: "Cormorant Garamond", "Lora", Georgia, serif;
+        font-variant-numeric: lining-nums proportional-nums;
         font-size: 10.8pt;
         line-height: 1.52;
         text-rendering: optimizeLegibility;
@@ -1581,6 +1628,7 @@ footer a:hover {
         animation: none !important;
         color: white;
         font-family: "Cormorant Garamond", Georgia, serif;
+        font-variant-numeric: lining-nums proportional-nums;
         font-size: 22pt;
         font-weight: 600;
         line-height: 1.12;
@@ -1636,6 +1684,7 @@ footer a:hover {
     /* --- Headings --- */
     h2 {
         font-family: "Cormorant Garamond", Georgia, serif;
+        font-variant-numeric: lining-nums proportional-nums;
         color: #002147;
         border-bottom: 1pt solid #002147;
         padding-bottom: 2mm;
@@ -1643,6 +1692,7 @@ footer a:hover {
 
     h3 {
         font-family: "Cormorant Garamond", Georgia, serif;
+        font-variant-numeric: lining-nums proportional-nums;
         color: #002147;
         border-top-color: #c9a961;
     }
@@ -1710,6 +1760,7 @@ footer a:hover {
     /* Question headings: Oxford blue with gold number accent */
     body.interview-page h4 {
         font-family: "Cormorant Garamond", Georgia, serif;
+        font-variant-numeric: lining-nums proportional-nums;
         font-size: 11.5pt;
         line-height: 1.32;
         font-weight: 700;
@@ -1804,12 +1855,13 @@ footer a:hover {
     @bottom-center {
         content: counter(page);
         font-family: "Cormorant Garamond", Georgia, serif;
+        font-variant-numeric: lining-nums proportional-nums;
         font-size: 8pt;
         color: #002147;
     }
 
     @top-center {
-        content: "Interview with Article Zero";
+        content: "civic.ai";
         font-family: "Outfit", system-ui, sans-serif;
         font-size: 6pt;
         font-weight: 500;
@@ -1870,6 +1922,7 @@ footer a:hover {
     padding: 0 0 0 1.2em;
     border: 0;
     font-family: "Cormorant Garamond", var(--serif);
+    font-variant-numeric: lining-nums proportional-nums;
     font-size: 1.25rem;
     font-style: italic;
     line-height: 1.55;
@@ -1887,6 +1940,7 @@ footer a:hover {
     top: -0.15em;
     left: -0.05em;
     font-family: "Cormorant Garamond", Georgia, serif;
+    font-variant-numeric: lining-nums proportional-nums;
     font-size: 3.5rem;
     font-style: normal;
     line-height: 1;
@@ -1901,6 +1955,7 @@ footer a:hover {
     bottom: -0.5em;
     right: -0.1em;
     font-family: "Cormorant Garamond", Georgia, serif;
+    font-variant-numeric: lining-nums proportional-nums;
     font-size: 3.5rem;
     font-style: normal;
     line-height: 1;
@@ -4921,8 +4976,9 @@ html[data-theme="dark"] .cmap-arc-5 {
     position: fixed;
     inset: 0;
     z-index: 1200;
-    align-items: flex-start;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     padding: 12vh 16px 24px;
     background: color-mix(in srgb, var(--oxford-blue) 72%, transparent);
     backdrop-filter: blur(4px);
@@ -4941,33 +4997,35 @@ html[data-theme="dark"] .cmap-arc-5 {
     border: 1px solid var(--border);
     border-radius: 8px;
     box-shadow: var(--shadow-hover);
-    padding: 20px 22px 18px;
+    padding: 22px;
 }
 
 .search-overlay__close {
     display: block;
-    min-width: 44px;
+    flex: 0 0 auto;
+    width: min(92vw, 680px);
     min-height: 44px;
-    margin: -8px -10px 4px auto;
-    padding: 6px 12px;
-    color: var(--text);
+    margin: 0 0 8px;
+    padding: 6px 4px;
+    color: #f4f1ec;
     font-family: var(--sans);
     font-size: 0.85rem;
+    text-align: right;
     background: transparent;
-    border: 1px solid transparent;
+    border: 0;
     border-radius: 6px;
     cursor: pointer;
 }
 
 .search-overlay__close:hover,
 .search-overlay__close:focus-visible {
-    color: var(--teal);
-    border-color: var(--teal);
-    background: color-mix(in srgb, var(--teal) 8%, transparent);
+    color: #f4f1ec;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 .search-overlay__close:focus-visible {
-    outline: 2px solid var(--teal);
+    outline: 2px solid #f4f1ec;
     outline-offset: 2px;
 }
 
@@ -5399,6 +5457,7 @@ body {
 
 header h1 {
     font-family: var(--display);
+    font-variant-numeric: lining-nums proportional-nums;
     font-weight: 500;
     letter-spacing: -0.015em;
 }
@@ -5424,6 +5483,7 @@ header h1 {
 /* Fold: tagline + lede + CTA + proof strip above the overview poster */
 .fold-tag {
     font-family: var(--display);
+    font-variant-numeric: lining-nums proportional-nums;
     font-size: 1.5rem;
     line-height: 1.3;
     color: var(--heading);
@@ -5646,5 +5706,403 @@ header nav.site-nav a {
 
     .pack-cards {
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ─── AESTHETIC PASS · ROUND 1 ───
+   Text-safe colour variants, line breaking, zh-TW typography, TOC margin rail,
+   title spacing, reading paths, flush filter bars, mobile nav wrap. */
+:root,
+html[data-theme="light"] {
+    --gold-text: #7a6128;
+    --cmap-p6-text: #8a3fd4;
+}
+
+html[data-theme="dark"] {
+    --gold-text: #c9a961;
+    --cmap-p6-text: #b98cf9;
+}
+
+/* Small gold labels use the text-safe gold; --gold stays for rules/borders. */
+.in-short__label,
+.page-toc > summary,
+.audio-label,
+main th,
+h4[data-faq-label]::before,
+body.interview-page main p:has(> strong:first-child) strong:first-child,
+.site-header--interior .chapter-date,
+.polis-eyebrow,
+.polis-section__kicker,
+.polis-side-card__kicker,
+.conf-time,
+.conf-break .conf-detail {
+    color: var(--gold-text);
+}
+
+.cmap-frame-glyph {
+    color: var(--cmap-p6-text);
+}
+
+/* Line breaking */
+main p,
+main li,
+main dd,
+main figcaption,
+.in-short p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+.fold-tag,
+.fold-lede {
+    text-wrap: balance;
+}
+
+/* Traditional Chinese typography */
+html:lang(zh) {
+    --serif:
+        "Monlam Bodyig", "Lora", "Noto Serif TC", "Source Han Serif TC",
+        "Songti TC", "Microsoft JhengHei", serif;
+    --sans:
+        "Monlam Bodyig", "Outfit", "PingFang TC", "Noto Sans TC",
+        "Microsoft JhengHei", sans-serif;
+}
+
+:lang(zh) main {
+    line-break: strict;
+}
+
+:lang(zh) main p,
+:lang(zh) main li,
+:lang(zh) .in-short__body,
+:lang(zh) .in-short__takeaways-list {
+    line-height: 1.9;
+}
+
+/* Home agent note: readable fine print */
+.agent-note {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--muted);
+    opacity: 1;
+}
+
+/* Interior title block sits closer to the first content element */
+.site-header--interior {
+    padding-bottom: 0;
+}
+
+.site-header--interior .site-header__title-block > :last-child {
+    margin-bottom: 0;
+}
+
+body:has(.site-header--interior) main {
+    padding-top: 32px;
+}
+
+@media (max-width: 640px) {
+    body:has(.site-header--interior) main {
+        padding-top: 24px;
+    }
+}
+
+:lang(zh) main .page-toc li {
+    line-height: 1.4;
+}
+
+/* Table of contents: margin rail beside the column on wide screens */
+@media (min-width: 1280px) {
+    main:not(:has(.cmap, .polis-fullbleed)) .page-toc {
+        float: left;
+        width: 220px;
+        margin: 0 0 0 -260px;
+        padding: 0 0 0 14px;
+        position: sticky;
+        top: 24px;
+        max-height: calc(100vh - 48px);
+        overflow-y: auto;
+        background: none;
+        border: 0;
+        border-left: 1px solid var(--border);
+        border-radius: 0;
+    }
+
+    main:not(:has(.cmap, .polis-fullbleed)) .page-toc > summary {
+        list-style: none;
+        cursor: default;
+        pointer-events: none;
+    }
+
+    main:not(:has(.cmap, .polis-fullbleed))
+        .page-toc
+        > summary::-webkit-details-marker {
+        display: none;
+    }
+
+    main:not(:has(.cmap, .polis-fullbleed)) .page-toc ul {
+        margin: 0.6em 0 0;
+        padding-left: 0;
+    }
+
+    main:not(:has(.cmap, .polis-fullbleed)) .page-toc li,
+    :lang(zh) main:not(:has(.cmap, .polis-fullbleed)) .page-toc li {
+        margin: 0.35em 0;
+        line-height: 1.35;
+    }
+
+    main:not(:has(.cmap, .polis-fullbleed)) .page-toc__h3 {
+        padding-left: 0.7em;
+    }
+
+    main:not(:has(.cmap, .polis-fullbleed)) .page-toc__h4 {
+        padding-left: 1.4em;
+    }
+
+    main:not(:has(.cmap, .polis-fullbleed)) .page-toc a {
+        font-size: 0.8rem;
+        color: var(--muted);
+    }
+
+    main:not(:has(.cmap, .polis-fullbleed)) .page-toc a:hover,
+    main:not(:has(.cmap, .polis-fullbleed)) .page-toc a[aria-current="true"] {
+        color: var(--teal);
+    }
+
+    main:not(:has(.cmap, .polis-fullbleed)) .page-toc a[aria-current="true"] {
+        font-weight: 600;
+    }
+}
+
+/* Home reading paths: centred, equal-width, wrapping band */
+.reading-paths {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    width: 100%;
+    max-width: 920px;
+    margin: 0.8em auto 1.5em;
+    position: static;
+    left: auto;
+    transform: none;
+}
+
+.reading-paths > .reading-path {
+    flex: 0 1 280px;
+    min-width: 240px;
+}
+
+@media (max-width: 560px) {
+    .reading-paths > .reading-path {
+        flex: 1 1 100%;
+        min-width: 0;
+        max-width: none;
+    }
+}
+
+/* Sticky filter bars: flush, one row, horizontally scrollable */
+html[data-theme] .faq-filter {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 6px;
+    width: 100%;
+    justify-content: flex-start;
+    top: 0;
+    margin: 0 0 22px;
+    padding: 6px 0;
+    border: 0;
+    border-bottom: 1px solid var(--border);
+    border-radius: 0;
+    background: var(--paper);
+    box-shadow: none;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-snap-type: x proximity;
+}
+
+.faq-filter::-webkit-scrollbar {
+    display: none;
+}
+
+.faq-filter button {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    white-space: nowrap;
+}
+
+.faq-filter button:hover,
+.faq-filter button:focus-visible,
+.faq-filter button[aria-pressed="true"] {
+    transform: none;
+}
+
+/* Mobile site navigation wraps instead of hiding links off-screen */
+@media (max-width: 480px) {
+    header nav.site-nav {
+        flex-wrap: wrap;
+        overflow: visible;
+        scroll-snap-type: none;
+        padding-bottom: 0;
+        gap: 2px 14px;
+        justify-content: flex-start;
+    }
+
+    .site-header--home nav.site-nav {
+        justify-content: center;
+    }
+
+    .site-header__nav {
+        overflow: visible;
+    }
+
+    .site-header--interior nav.site-nav {
+        flex-wrap: wrap;
+        width: auto;
+        min-width: 0;
+        max-width: 100%;
+        padding-bottom: 0;
+        gap: 2px 14px;
+    }
+
+    header nav.site-nav a {
+        min-height: 40px;
+    }
+}
+
+html[data-theme="dark"] .polis-label-disagree {
+    color: #f07a60;
+}
+
+/* 404: plain blocks, EN then TW */
+.not-found[lang="zh-TW"] {
+    --serif:
+        "Monlam Bodyig", "Lora", "Noto Serif TC", "Source Han Serif TC",
+        "Songti TC", "Microsoft JhengHei", serif;
+    --sans:
+        "Monlam Bodyig", "Outfit", "PingFang TC", "Noto Sans TC",
+        "Microsoft JhengHei", sans-serif;
+}
+
+.not-found + .not-found {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+}
+
+.not-found__title {
+    margin: 0 0 0.5em;
+    font-family: "Cormorant Garamond", var(--serif);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--heading);
+    text-wrap: balance;
+}
+
+:lang(zh) main .not-found__title {
+    line-height: 1.2;
+}
+
+.not-found__links {
+    font-family: var(--sans);
+    font-size: 0.95rem;
+}
+
+/* ─── PRINT: header breathing room and plates that fit ─── */
+@media print {
+    header.site-header--interior {
+        padding-bottom: 22px;
+    }
+
+    main img {
+        display: block;
+        max-height: 150mm;
+        width: auto;
+        max-width: 100%;
+        margin-inline: auto;
+        break-inside: avoid;
+    }
+
+    main :has(> img),
+    main figure,
+    main picture {
+        break-inside: avoid;
+    }
+
+    /* The overview poster keeps its own aspect: no reserved screen frame, no
+       stretched width, and a height that fits under the home masthead. */
+    main .overview-frame {
+        aspect-ratio: auto !important;
+        height: auto;
+    }
+
+    main .overview-frame > img,
+    main .overview-frame .overview-image {
+        width: auto;
+        max-width: 100%;
+        max-height: 130mm;
+        margin-inline: auto;
+    }
+
+    main > p.cta-note:first-of-type {
+        margin-top: 6mm;
+    }
+
+    /* Interactive controls have no place on paper. */
+    .faq-filter,
+    .copy-btn {
+        display: none !important;
+    }
+}
+
+/* ─── PACK HUE WAYFINDING (pack pages only; decoration, never text) ─── */
+body[data-pack="1"] {
+    --pack-rule: #eb573a;
+}
+body[data-pack="2"] {
+    --pack-rule: #f09344;
+}
+body[data-pack="3"] {
+    --pack-rule: #d4b21c;
+}
+body[data-pack="4"] {
+    --pack-rule: #5fae4a;
+}
+body[data-pack="5"] {
+    --pack-rule: #6197f8;
+}
+body[data-pack="6"] {
+    --pack-rule: #a753f6;
+}
+html[data-theme="dark"] body[data-pack="3"] {
+    --pack-rule: #f9dd55;
+}
+html[data-theme="dark"] body[data-pack="4"] {
+    --pack-rule: #7cc967;
+}
+html[data-theme="dark"] body[data-pack="6"] {
+    --pack-rule: #b98cf9;
+}
+
+@media screen {
+    body[data-pack] main h2 {
+        border-bottom-color: var(--pack-rule);
+    }
+
+    body[data-pack] .in-short {
+        border-left-color: var(--pack-rule);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    body[data-pack] main:not(:has(.cmap, .polis-fullbleed)) .page-toc {
+        border-left-color: color-mix(
+            in srgb,
+            var(--pack-rule) 40%,
+            transparent
+        );
     }
 }

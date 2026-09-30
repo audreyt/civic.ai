@@ -37,15 +37,14 @@ document.documentElement.classList.add("fonts-loading");
 <meta name="color-scheme" content="light dark" />
 <SeoHead page={page} ogType={ogType} ogDesc={ogDesc} ogImg={ogImg} pageTitle={pageTitle} />
 {page.data.openclaw_discovery && <link rel="alternate" type="text/markdown" href="/.well-known/openclaw/SKILL.md" title="Civic AI OpenClaw Bootstrap Skill" />}
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+{ja && <link rel="preconnect" href="https://fonts.googleapis.com" />}
+{ja && <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />}
 <link rel="icon" href="/favicon.ico" sizes="any" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href={`/styles.css?v=${version}`} />
 {!import.meta.env.DEV && <link rel="stylesheet" href="/pagefind/pagefind-ui.css" />}
 <link rel="preload" as="font" href={preloadFont} type="font/woff2" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" />
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" /></noscript>
+<link rel="preload" as="font" href="/fonts/lora-normal-latin.woff2" type="font/woff2" crossorigin />
 {ja && <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700&family=M+PLUS+Rounded+1c:wght@400;700;800&family=Mochiy+Pop+One&display=swap" />}
 <script is:inline>
 function __imgProbe(s){return new Promise(function(r){var i=new Image();i.onload=function(){r(i.width>0)};i.onerror=function(){r(!1)};i.src=s})}window.__avif=__imgProbe('/img/probe.avif');window.__userMoved=false;function __markMoved(){window.__userMoved=true}window.addEventListener('wheel',__markMoved,{passive:true,once:true});window.addEventListener('touchmove',__markMoved,{passive:true,once:true});window.addEventListener('keydown',__markMoved,{once:true});

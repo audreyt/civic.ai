@@ -1,5 +1,5 @@
 import { expect, test } from "vite-plus/test";
-import { getPageByUrl, getSitemapPages } from "../src/lib/pages";
+import { getPageByUrl, getSitemapPages, visibleHtml } from "../src/lib/pages";
 
 test("loads canonical root pages", () => {
     expect(getPageByUrl("/").sourceName).toBe("index.md");
@@ -79,4 +79,15 @@ test("normalizes front-matter action and navigation links", () => {
 
     expect(indexPage.data.alt_lang_url).toBe("/tw/");
     expect(getPageByUrl("/1/").data.alt_lang_url).toBe("/tw/1/");
+});
+
+test("visibleHtml curls quotes except on Japanese pages", () => {
+    const en = getPageByUrl("/glossary/");
+    expect(visibleHtml(en)).not.toMatch(/>[^<]*'[^<]*</);
+    const ja = {
+        ...en,
+        data: { ...en.data, lang: "ja" as const },
+        html: '<p>"x"</p>',
+    };
+    expect(visibleHtml(ja)).toBe('<p>"x"</p>');
 });

@@ -1,13 +1,14 @@
 ---
 import type { PageRecord } from "../lib/pages";
+import { smartQuotes } from "../lib/legacyMarkdown";
 import { glossary, lang2 } from "../lib/site";
 interface Props { page: PageRecord; }
 const { page } = Astro.props;
 const zh = lang2(page.data.lang) === "zh";
 const glossaryPayload = (glossary as any[]).map((entry) => ({
-    t: zh ? entry.term_tw : entry.term_en,
+    t: smartQuotes(zh ? entry.term_tw : entry.term_en),
     id: entry.id,
-    alt: zh ? (entry.aliases_tw ?? []) : (entry.aliases_en ?? []),
+    alt: (zh ? (entry.aliases_tw ?? []) : (entry.aliases_en ?? [])).map((a: string) => smartQuotes(a)),
 }));
 const glossaryBase = zh ? "/tw/glossary/" : "/glossary/";
 ---
@@ -412,6 +413,58 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                 var card = main.querySelector(".in-short");
                 if (card) card.insertAdjacentElement("afterend", details);
                 else main.insertBefore(details, main.firstChild);
+
+                var rail = window.matchMedia("(min-width: 1280px)");
+                var noRail = !!main.querySelector(".cmap, .polis-fullbleed");
+                var savedOpen = details.open;
+                var railOn = false;
+                function syncRail() {
+                    if (rail.matches && !noRail) {
+                        if (!railOn) {
+                            savedOpen = details.open;
+                            railOn = true;
+                        }
+                        details.open = true;
+                    } else if (railOn) {
+                        railOn = false;
+                        details.open = savedOpen;
+                    }
+                }
+                syncRail();
+                if (rail.addEventListener) rail.addEventListener("change", syncRail);
+                sum.addEventListener("click", function (event) {
+                    if (rail.matches && !noRail) event.preventDefault();
+                });
+
+                if ("IntersectionObserver" in window) {
+                    var links = {};
+                    heads.forEach(function (h) {
+                        links[h.id] = details.querySelector(
+                            'a[href="#' + (window.CSS && CSS.escape ? CSS.escape(h.id) : h.id) + '"]'
+                        );
+                    });
+                    var activeId = "";
+                    var updateActive = function () {
+                        var limit = window.innerHeight * 0.3;
+                        var current = "";
+                        for (var i = 0; i < heads.length; i++) {
+                            if (heads[i].getBoundingClientRect().top <= limit)
+                                current = heads[i].id;
+                            else break;
+                        }
+                        if (current === activeId) return;
+                        if (activeId && links[activeId])
+                            links[activeId].removeAttribute("aria-current");
+                        activeId = current;
+                        if (activeId && links[activeId])
+                            links[activeId].setAttribute("aria-current", "true");
+                    };
+                    var spy = new IntersectionObserver(updateActive, { threshold: [0, 1] });
+                    heads.forEach(function (h) {
+                        spy.observe(h);
+                    });
+                    updateActive();
+                }
             })();
         </script>
         <script>

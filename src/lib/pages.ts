@@ -1,7 +1,7 @@
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { extname, join } from "node:path";
 import matter from "gray-matter";
-import { renderMarkdown } from "./legacyMarkdown";
+import { renderMarkdown, smartQuotes } from "./legacyMarkdown";
 import { expandShortcodes } from "./shortcodes";
 import { normalizeUrl } from "./site";
 
@@ -30,6 +30,7 @@ export interface PageFrontmatter {
     alt_lang_url?: string;
     exclude_from_sitemap?: boolean;
     search_exclude?: boolean;
+    noindex?: boolean;
     page_class?: string;
     author?: string;
     date?: string | Date;
@@ -171,6 +172,10 @@ function loadPage(sourceName: string): PageRecord {
         includeInSitemap,
         isRawHtmlDocument,
     };
+}
+
+export function visibleHtml(page: PageRecord): string {
+    return page.data.lang === "ja" ? page.html : smartQuotes(page.html);
 }
 
 export function loadPages(): PageRecord[] {

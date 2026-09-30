@@ -1,5 +1,9 @@
 import { expect, test } from "vite-plus/test";
-import { cjkSlugify, renderMarkdown } from "../src/lib/legacyMarkdown";
+import {
+    cjkSlugify,
+    renderMarkdown,
+    smartQuotes,
+} from "../src/lib/legacyMarkdown";
 
 test("renders emphasis closed after CJK punctuation", () => {
     const html = renderMarkdown("經驗法則：_先搭橋，再決策。_ 若屬緊急損害。");
@@ -26,4 +30,31 @@ test("scanDelims patch handles delimiters at the very start and end of a line", 
     // exercise the CJK-adjacency patch's out-of-bounds fallbacks.
     const html = renderMarkdown("*hi*");
     expect(html).toContain("<em>hi</em>");
+});
+
+test("typographer converts apostrophes and quotes but no other replacements", () => {
+    const html = renderMarkdown(
+        'People\'s "quoted" words (c) a -- b... `it\'s "raw"`'
+    );
+    expect(html).toContain("People\u2019s \u201Cquoted\u201D words");
+    expect(html).toContain("(c) a -- b...");
+    expect(html).toContain("<code>it's &quot;raw&quot;</code>");
+});
+
+test("smartQuotes converts text nodes only and leaves markup alone", () => {
+    expect(smartQuotes("\"Hello,\" she said. It's 'fine'.")).toBe(
+        "\u201CHello,\u201D she said. It\u2019s \u2018fine\u2019."
+    );
+    expect(smartQuotes('<a href="x">"y"</a>')).toBe(
+        '<a href="x">\u201Cy\u201D</a>'
+    );
+});
+
+test("smartQuotes skips code, comments and entity-encoded quotes", () => {
+    expect(
+        smartQuotes('<code>"a"</code> "b" <!-- "c" --> &quot;d&quot; it&#39;s')
+    ).toBe(
+        '<code>"a"</code> \u201Cb\u201D <!-- "c" --> \u201Cd\u201D it\u2019s'
+    );
+    expect(smartQuotes("<em>'x'</em>")).toBe("<em>\u2018x\u2019</em>");
 });

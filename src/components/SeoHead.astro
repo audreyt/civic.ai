@@ -19,8 +19,8 @@ const canonical = `${site.url}${page.url}`;
 ---
 <title>{fullTitle}</title>
 <meta name="description" content={ogDesc} />
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-<link rel="canonical" href={canonical} />
+<meta name="robots" content={page.data.noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
+{!page.data.noindex && <link rel="canonical" href={canonical} />}
 {alt && <link rel="alternate" hreflang={zh ? "zh-Hant" : "en"} href={canonical} />}
 {alt && <link rel="alternate" hreflang={zh ? "en" : "zh-Hant"} href={`${site.url}${alt}`} />}
 {alt && <link rel="alternate" hreflang="x-default" href={zh ? `${site.url}${alt}` : canonical} />}
