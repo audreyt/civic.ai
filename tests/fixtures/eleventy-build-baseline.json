@@ -358,7 +358,7 @@
             "path": "ai-democracy-podcast/index.html",
             "lang": "en-gb",
             "title": "Podcast: AI and Democracy — Civic AI",
-            "description": "Originally recorded for Accelerating AI Ethics, University of Oxford Institute for Ethics in AI.",
+            "description": "Audrey Tang and Caroline Green on digital democracy, collective intelligence and plurality over singularity: the first Accelerating AI Ethics episode.",
             "canonical": "https://civic.ai/ai-democracy-podcast/",
             "alternates": [
                 {
@@ -431,7 +431,7 @@
             "path": "care-ai/index.html",
             "lang": "en-gb",
             "title": "Attentiveness in Long-Term Care AI — Civic AI",
-            "description": "Who decides what ",
+            "description": "Who decides what 'good care' means when a chatbot is involved?",
             "canonical": "https://civic.ai/care-ai/",
             "alternates": [
                 {
@@ -473,7 +473,7 @@
             "path": "ciudadania-digital/index.html",
             "lang": "en-gb",
             "title": "Ciudadanía Digital — Civic AI",
-            "description": "Keynote on global leadership marking Tecnológico de Monterrey",
+            "description": "Keynote on global leadership marking Tecnológico de Monterrey's 50 years of presence in Mexico City.",
             "canonical": "https://civic.ai/ciudadania-digital/",
             "alternates": [
                 {
@@ -567,6 +567,10 @@
                     "href": "https://civic.ai/comics/"
                 },
                 {
+                    "hreflang": "ja",
+                    "href": "https://civic.ai/ja/comics/"
+                },
+                {
                     "hreflang": "x-default",
                     "href": "https://civic.ai/comics/"
                 },
@@ -602,7 +606,7 @@
             "path": "compassion-and-ai/index.html",
             "lang": "en-gb",
             "title": "Podcast: Can AI Be Compassionate? — Civic AI",
-            "description": "Originally recorded for Accelerating AI Ethics, University of Oxford Institute for Ethics in AI.",
+            "description": "Caroline Green and Geshe Lodoe Sangpo ask whether AI can ever be truly compassionate, drawing on the Buddhist ethics of interdependence and equality.",
             "canonical": "https://civic.ai/compassion-and-ai/",
             "alternates": [
                 {
@@ -1145,7 +1149,24 @@
             "title": "ケアの6パック コミック — Civic AI",
             "description": "「ケアの6パック（6-Pack of Care）」の全コミックを閲覧。概要図へのワンクリックで各章に飛べます。",
             "canonical": "https://civic.ai/ja/comics/",
-            "alternates": [],
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/comics/"
+                },
+                {
+                    "hreflang": "ja",
+                    "href": "https://civic.ai/ja/comics/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/comics/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/comics/"
+                }
+            ],
             "ids": [
                 "civic-ask-answer",
                 "civic-ask-history",
@@ -1473,7 +1494,7 @@
             "path": "podcast/index.html",
             "lang": "en-gb",
             "title": "Podcast: The 6-Pack of Care — Civic AI",
-            "description": "Originally recorded for Accelerating AI Ethics, University of Oxford Institute for Ethics in AI.",
+            "description": "Audrey Tang and Caroline Green walk through all six packs of the 6-Pack of Care, from attentiveness to symbiosis, on Oxford's Accelerating AI Ethics podcast.",
             "canonical": "https://civic.ai/podcast/",
             "alternates": [
                 {
@@ -1678,7 +1699,7 @@
             "path": "sources/index.html",
             "lang": "en-gb",
             "title": "Sources & Further Reading — Civic AI",
-            "description": "Where the 6-Pack of Care comes from: the care-ethics lineage from Fisher and Tronto to van Wynsberghe",
+            "description": "Where the 6-Pack of Care comes from: the care-ethics lineage from Fisher and Tronto to van Wynsberghe's care-centred design, and the sources behind each pack, with links.",
             "canonical": "https://civic.ai/sources/",
             "alternates": [
                 {
@@ -2067,7 +2088,7 @@
             "path": "tw/ai-democracy-podcast/index.html",
             "lang": "zh-tw",
             "title": "Podcast：AI 與民主 — 仁工智慧",
-            "description": "原始錄音來自牛津 AI 倫理研究院的 Accelerating AI Ethics Podcast。",
+            "description": "唐鳳與 Caroline Green 談數位民主、集體智慧，以及以多元取代奇點的願景：牛津 Accelerating AI Ethics 首集。",
             "canonical": "https://civic.ai/tw/ai-democracy-podcast/",
             "alternates": [
                 {
@@ -2276,6 +2297,10 @@
                     "href": "https://civic.ai/comics/"
                 },
                 {
+                    "hreflang": "ja",
+                    "href": "https://civic.ai/ja/comics/"
+                },
+                {
                     "hreflang": "x-default",
                     "href": "https://civic.ai/comics/"
                 },
@@ -2311,7 +2336,7 @@
             "path": "tw/compassion-and-ai/index.html",
             "lang": "zh-tw",
             "title": "Podcast：AI 能有「慈悲心」嗎？ — 仁工智慧",
-            "description": "原始錄音來自牛津 AI 倫理研究院的 Accelerating AI Ethics Podcast。",
+            "description": "Caroline Green 與格西洛朵桑波從佛教的緣起與平等觀出發，追問 AI 能否真正具有慈悲心。",
             "canonical": "https://civic.ai/tw/compassion-and-ai/",
             "alternates": [
                 {
@@ -3153,7 +3178,7 @@
             "path": "tw/podcast/index.html",
             "lang": "zh-tw",
             "title": "Podcast：關懷六力 — 仁工智慧",
-            "description": "原始錄音來自牛津 AI 倫理研究院的 Accelerating AI Ethics Podcast。",
+            "description": "唐鳳與 Caroline Green 在牛津 Accelerating AI Ethics Podcast 逐一介紹關懷六力，從覺察力到共生力。",
             "canonical": "https://civic.ai/tw/podcast/",
             "alternates": [
                 {
@@ -3516,7 +3541,7 @@
             "path": "we-the-people-are-truly-the-superintelligence/index.html",
             "lang": "en-gb",
             "title": "SOLVE at MIT 2026 — Keynote Speech & Fireside Conversation — Civic AI",
-            "description": "Audrey Tang",
+            "description": "Audrey Tang's SOLVE at MIT 2026 keynote: why we, the people — not a single model — are the real superintelligence, and how Civic AI keeps it that way.",
             "canonical": "https://civic.ai/we-the-people-are-truly-the-superintelligence/",
             "alternates": [
                 {

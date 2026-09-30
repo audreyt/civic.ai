@@ -6,6 +6,7 @@ alt_lang_url: "/tw/ai-democracy-podcast/"
 permalink: "/ai-democracy-podcast/"
 date: 2025-08-05
 description: "Originally recorded for Accelerating AI Ethics, University of Oxford Institute for Ethics in AI."
+meta_description: "Audrey Tang and Caroline Green on digital democracy, collective intelligence and plurality over singularity: the first Accelerating AI Ethics episode."
 og_image: "/img/ai-democracy-podcast.jpg"
 nav_next:
     url: "/"

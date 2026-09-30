@@ -14,7 +14,7 @@ nav_next:
 ---
 
 <div class="video-embed">
-<iframe src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/a94bd40b528be58688e1c8b61b12d0b1/iframe?defaultTextTrack=en" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+<iframe title="Video: AI With Us, Not Without Us" src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/a94bd40b528be58688e1c8b61b12d0b1/iframe?defaultTextTrack=en" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## The Mainstream AI Vision & Its Discontents

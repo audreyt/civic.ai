@@ -7,6 +7,7 @@ alt_lang_url: "/compassion-and-ai/"
 permalink: "/tw/compassion-and-ai/"
 date: 2026-03-13
 description: "原始錄音來自牛津 AI 倫理研究院的 Accelerating AI Ethics Podcast。"
+meta_description: "Caroline Green 與格西洛朵桑波從佛教的緣起與平等觀出發，追問 AI 能否真正具有慈悲心。"
 nav_next:
     url: "/tw/"
     text: "首頁"

@@ -7,6 +7,7 @@ alt_lang_url: "/tw/compassion-and-ai/"
 permalink: "/compassion-and-ai/"
 date: 2026-03-13
 description: "Originally recorded for Accelerating AI Ethics, University of Oxford Institute for Ethics in AI."
+meta_description: "Caroline Green and Geshe Lodoe Sangpo ask whether AI can ever be truly compassionate, drawing on the Buddhist ethics of interdependence and equality."
 nav_next:
     url: "/"
     text: "Home"

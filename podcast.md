@@ -6,6 +6,7 @@ alt_lang_url: "/tw/podcast/"
 permalink: "/podcast/"
 date: 2025-09-05
 description: "Originally recorded for Accelerating AI Ethics, University of Oxford Institute for Ethics in AI."
+meta_description: "Audrey Tang and Caroline Green walk through all six packs of the 6-Pack of Care, from attentiveness to symbiosis, on Oxford's Accelerating AI Ethics podcast."
 nav_next:
     url: "/"
     text: "Home"

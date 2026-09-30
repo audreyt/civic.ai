@@ -21,13 +21,13 @@ Thank you, Roger. Thank you, Bo-Jiun. Thank you all for joining us — and thank
 
 Today I would like to share one very simple argument, in three movements. First: free software teaches us repair. Second: AI currently threatens repair when it closes the loop of repair. And third: Civic AI should be judged by whether it increases a community's capacity to care for itself and for others — the civic muscle.
 
-# 50/50
+## 50/50
 
 But I want to start not with mathematics, but with something very personal. I was born with a heart defect. When I was five, the doctor told my parents that this child had only a 50/50 chance of surviving until corrective surgery, which I had at twelve. My parents were advised that I should take it easy. This _memento mori_ moment is the reason I adopted the mantra of publishing before perishing.
 
 That is probably not the low-stress lifestyle the doctors ordered, but I took on the habit of recording everything I learned during the day — first on cassette tapes (some of you may still remember cassette tapes), then on floppy disks, first larger ones and then smaller ones and finally the internet, which I am sure you are all familiar with. So, before I went to sleep each night, feeling like it was a coin toss, I thought: I do not have time to perfect my work, so I have to publish whatever work-in-progress I have.
 
-# Light Gets In
+## Light Gets In
 
 That is how I encountered the light of the free-software community. If you post something perfect there, people just say "okay, it's good," and move on. But if you are wrong on the internet, you make a lot of friends — the light gets in. Everyone jumps in: this is wrong in this particular way, that is wrong in that particular way, and together they shed new light into whatever project I am working on.
 
@@ -44,13 +44,13 @@ With that ethos, by thirty-five I joined Taiwan's cabinet, with radical transpar
 
 So, I come here as someone who designed something inside Taiwan and is trying to learn whether this design — this crack that finds light — holds globally. And here in Oxford I am honoured to work alongside colleagues inside a several-hundred-year-old — in places, even thousand-year-old — experiment.
 
-# Next-Gen Artefacts
+## Next-Gen Artefacts
 
 The Bodleian Library is itself a 400-year-old experiment, because the books are inspectable. They are not enclosed. The traces of readers, where preserved, become part of the next generation's encounter. This library network encloses nothing; the artefacts stay open for the next reader, always.
 
 In my own domain, software engineering, we have what are called the software freedoms — the 4 Freedoms — a very similar promise, written in code. So, the question I want to put to this room is: What happens to the promise of ongoing repair and freedom when AI systems, particularly generative AI systems, join the substrate?
 
-# 4 Freedoms
+## 4 Freedoms
 
 The 4 Freedoms were defined back in the 1980s, then as software-licence terms, but I want to reread them today as civic muscles.
 
@@ -64,7 +64,7 @@ The 4 Freedoms were defined back in the 1980s, then as software-licence terms, b
 
 So, software freedom, to me, is not about licences, but about whether the person who comes after us can still find the bug and fix it. The beneficiary is not the current generation; it is the next.
 
-# Complementary
+## Complementary
 
 David Krakauer at the Santa Fe Institute makes a useful distinction about this generational compact. A tool, he says, is _complementary_ if the underlying capacity persists, or is even enhanced, when the tool is removed — think of the gym that builds our muscles and our friendships. A tool is _competitive_ when the capacity degrades because we used it to achieve a goal. Imagine a gym that holds a competition for who can lift the most weight, and then we send robots with our gym cards to lift for us. The robots are very impressive — superhuman, super-intelligent — but in the end our muscles atrophy and we make no friends. That is a competitive tool: it makes our capacity degrade once it is removed.
 
@@ -72,7 +72,7 @@ Another example is the feed recommender in many social-media systems, which hija
 
 The 4 Freedoms keep the substrate complementary across generations. Close the path to repair, and the capacity to repair atrophies. It is also a discipline of care, and when AI enters the picture, the civic muscles force us to add two more packs of care: **responsibility** and **symbiosis**. Together I call this the **6-Pack of Care** — as in portable muscles, as in beer and as in abs.
 
-# Lonely Maintainer
+## Lonely Maintainer
 
 The AI conversation today has only just caught up to what the substrate has been doing to the free-software caretakers. One example: In March 2024, a researcher in Germany, Andres Freund, noticed that logging into the Linux system he was using was taking half a second longer than usual. Because it is free software, he could trace the entire audit trail back to exactly where and when the project changed.
 
@@ -80,7 +80,7 @@ What he found was a contributor calling themselves **Jia Tan**, who had spent tw
 
 This reminds us of what we now call **synthetic intimacy**. It is not someone who actually cares; it is a malicious AI swarm trained to _perform_ care, even intimacy, to a lonely maintainer. A maintainer cannot defend against this with their individual muscle alone, because it sounds like there is grassroots support for the new feature. Of course the grassroots has no roots — it is astroturfing — but he did not know that. To counter this new threat, we have to open up the stack of repair.
 
-# Closed Stack
+## Closed Stack
 
 Before public service, and after working on free-software languages, I also spent time inside a proprietary, closed AI stack built to address this kind of issue — at Apple, on Siri. I worked with the Siri team for six years, first on Mandarin and then on Wu, the language spoken around Shanghai. The engineers I worked with cared very deeply, but that turns out not to be the same as giving people the 4 Freedoms inside a closed stack.
 
@@ -88,7 +88,7 @@ The attack surface is closed, you cannot get synthetic intimacy from random stra
 
 So, proprietary AI is not necessarily careless within its defined scope — the people care deeply — but the structure places the user outside the repair loop, and care without a repair path does not scale. The free-software contribution is not just better intentions; it is a path back. And now we have to defend that path.
 
-# Knowledge Artefact Management Intelligence
+## Knowledge Artefact Management Intelligence
 
 Now, the particular idea I used both to repair the open stack and to defend against malicious AI swarms — I will call it by its acronym, **Kami**: **k**nowledge **a**rtefact **m**anagement **i**ntelligence.
 
@@ -96,9 +96,9 @@ It also comes from Shinto, and I have been raised as a Daoist who believes in sp
 
 To me, the 8 million Kami serve as a practical antidote to what Pope Leo XIV reminded us, just a few days ago in his encyclical, is the Tower of Babel syndrome — the dangerous illusion that a single, hyperscale system somewhere in the cloud can translate the messy local truths of human existence into a standardised, universal solution. The Kami represent a different trajectory.
 
-![](/img/stow-and-latch.jpg "“Stow and latch monitor during takeoff and landing”")
+![Airline seat-back sign: “Stow and latch monitor during takeoff and landing”](/img/stow-and-latch.jpg "“Stow and latch monitor during takeoff and landing”")
 
-# Family Kami
+## Family Kami
 
 One example closer to home. My father, in Taipei — currently in Tamsui, to be precise, in New Taipei City — started chatting a lot with a chatbot, ChatGPT, a few months ago, largely due to his health. At first, it was charming. He felt heard — 24/7 care for his questions about health, but also the philosophy of life, education and so on. Over time he noticed the conversations grew longer; the model was getting much better at keeping him engaged.
 
@@ -108,19 +108,19 @@ So, with my younger brother Bestian, I helped my parents, with their explicit co
 
 That is what a Kami in one room looks like. I should also say that not every family today has the technical capacity — running OpenClaw or Hermes Agent takes a lot of time — or an experienced cultivator like [Tenzin Yangtso](https://ty.civic.ai/en/) here, who keeps the first Kami, the jdd-kami we worked on with Civic AI. So, the 6-Pack of Care we are naming is _not_ about people with programming skills setting up local alternatives to cloud systems. It is about a global digital solidarity of people who care together, who can then tell their city or state government, or any school or large institution, to prefer the technical capacity to steer their own models. This ensures that the data of the people is not extracted like oil, which would make us all plankton, but regenerated, cultivated as soil.
 
-# Civic Infrastructure
+## Civic Infrastructure
 
 Just as the state builds public water systems so citizens do not have to dig their own wells, I think it is up to governing institutions to build civic infrastructure so that communities do not have to fend off predatory, malicious AI alone.
 
 In Taiwan, that infrastructure was prototyped a couple of years ago as what we call **Alignment Assemblies**. It is a mechanism that takes the discipline of repair — not just in living rooms, not just in individual families — and scales it to the entire population.
 
-# Deepfake Dilemma
+## Deepfake Dilemma
 
 Two years ago, we saw a surge in malicious AI swarms posting deepfake scam advertisements. Around that time, scrolling Facebook or YouTube in Taiwan, you would likely see trusted figures in advertisements — like Nvidia CEO Jensen Huang, who seemed to be selling cryptocurrency or offering free investment advice. The deepfake was good enough that if you clicked, "Jensen" sometimes spoke to you. Of course, it was not Jensen; it was a deepfake running on an Nvidia GPU. But it was convincing enough that retired engineers, schoolteachers and shopkeepers lost small fortunes. The platforms collected revenue on every impression. In fact, because the scam ads paid more per click than the normal ads from small and medium enterprises, the Facebook algorithm, according to news reports, prioritised the scam advertisements.
 
 The easy answer was censorship. But Taiwan has the freest internet in all of Asia, along with Japan, so broad pre-publication censorship is simply not a policy option.
 
-# Alignment Assemblies
+## Alignment Assemblies
 
 So, as the Ministry of Digital Affairs, we tried something different. In March 2024 we launched the Alignment Assembly on information integrity by sending 200,000 text messages to random numbers around Taiwan. We call it a _lottocracy_: if you win the lottery of receiving the SMS, you become a representative in the assembly — like a juror — to steer the advertisement-recommendation system together. We received thousands of valid responses. Then, by stratified random sampling, we selected 447 people mirroring our population — the same demographic breakdown by gender, education, place of residence, occupation, and so on.
 
@@ -132,7 +132,7 @@ Another table said: if social media shows something unsigned and unsolicited —
 
 Another table asked: what if foreign platforms in jurisdictions that do not respect our laws or our joint liability simply keep showing scam ads and ignore us? Their answer: for every day they ignore us, we slow their video down by 1%. We restore full speed once they are willing to implement KYC, or know your customer, rules. So, the chatbots did not vote; the people did.
 
-# Result Method
+## Result Method
 
 Of those ideas, all three survived the final vote. More than 85% of this mini-public said they were happy with this bundle of policies, and the other 15% said they could live with them. So those ideas fed directly into law. The advertisements were regulated by law only two months after the Alignment Assembly, and throughout 2025 — according to official sources — the deepfake investment scams were down by more than 94%. That problem is all but solved in Taiwan.
 
@@ -140,13 +140,13 @@ The point here is not just the result, but the method. The commitment I made as 
 
 The test is whether civic infrastructure can survive an alternation in power. I am no longer Taiwan's digital minister — I am cyber ambassador — but all the systems, all the programs, the Join platform and the rest, continue to function. In fact, they enjoy more participation than during my time. I would be very happy to see each polity that adopts these Alignment Assembly methods make them survive transitions in power, so that they truly become democratic infrastructure.
 
-# Broad Listening
+## Broad Listening
 
 In Japan, there is someone following our lead: an AI engineer named Takahiro Anno, who is also a science-fiction writer and member of the Diet, Japan's parliament. A couple of years ago Anno-san read the _Plurality_ book that I wrote together with Glen Weyl, Tenzin and many others, and decided to act on it in Japanese politics. He called me via video and said, "Nobody knows me, nobody under the age of 40 has ever successfully run for Tokyo governor before, and I have no party support."
 
 But Anno-san decided to run not as a partisan, but as a VTuber. He has a 24/7 streaming channel as an avatar, and anybody can call this "AI Anno" and update his platform in real time, which he announced as his platform. Anno-san received about 2.3% of the Tokyo vote, which is a lot, though of course he did not win. Yuriko Koike, who did win, then brought him in to run the AI Tokyo 2050 consultation. Anno-san gained national popularity, and so in 2025 he became a member of Japan's House of Councillors, and founded Team Mirai — the Future Party, which now holds 11 seats in the House of Representatives, with broad listening as their main platform to align AI with Japanese society.
 
-# Ethics in AI
+## Ethics in AI
 
 Many of you know particular ethics traditions better than I do, so I will describe this in broad terms. There are, broadly, three ways AI systems can be aligned by a society. One is **by outcome** — optimising a utilitarian metric. For Facebook, that meant optimising the click-through rate, and the algorithm was very well aligned in promoting those deepfake ads for eyeballs — very well aligned to the _wrong_ outcome. You could choose a different metric — say, polarisation per minute, or PPM, and optimise to lower it — and it would work for a while.
 
@@ -156,7 +156,7 @@ Another school of thought is to align **by rules**. Regulators write specifics �
 
 In Taiwan we deploy a third way, which we call alignment **by process**. The people most affected convene under conditions of pre-commitment, air cover given by the digital minister in my case, and a recorded deliberation. The system answers to what was agreed in a continuous-integration manner. Outcome and rules still matter, but a process you can join anytime, audit anytime and leave is what makes the other two answerable, instead of top-down.
 
-# 6-Pack of Care
+## 6-Pack of Care
 
 So, the 4 Freedoms preserve repair capacity, and an AI system that also adopts the two further muscles maintaining this culture has been working out — but it is not yet the default, not yet the standard.
 

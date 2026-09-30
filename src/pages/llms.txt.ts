@@ -1,4 +1,5 @@
-import { openclawBootstrap, site } from "../lib/site";
+import { getSitemapPages } from "../lib/pages";
+import { lang2, openclawBootstrap, site } from "../lib/site";
 
 export function GET() {
     const lines = [
@@ -18,6 +19,16 @@ export function GET() {
         ),
         "",
     ];
+    const pages = getSitemapPages();
+    const listing = (zh: boolean) =>
+        pages
+            .filter((page) => (lang2(page.data.lang) === "zh") === zh)
+            .map(
+                (page) =>
+                    `- ${page.data.title || page.url}: ${site.url}${page.url}`
+            );
+    lines.push("All pages (English):", ...listing(false), "");
+    lines.push("全部頁面（華文）:", ...listing(true), "");
     return new Response(lines.join("\n"), {
         headers: { "Content-Type": "text/plain; charset=utf-8" },
     });

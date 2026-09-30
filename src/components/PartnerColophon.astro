@@ -2,7 +2,7 @@
 import { lang2 } from "../lib/site";
 const zh = lang2(Astro.props.lang) === "zh";
 ---
-<section class="partner-colophon" aria-label={zh ? "合作機構" : "Institutional partners"}>
+<section class="partner-colophon" role="contentinfo" aria-label={zh ? "合作機構" : "Institutional partners"}>
   <div class="partner-colophon__marks">
     <a href="https://www.oxford-aiethics.ox.ac.uk/"><img class="partner-logo partner-logo--oxford" width="100" height="100" src="/img/oxford-logo-light.svg" alt={zh ? "牛津 AI 倫理研究院" : "Oxford Institute for Ethics in AI"} loading="lazy" decoding="async" /></a>
     <a href="https://afp.oxford-aiethics.ox.ac.uk/"><img class="partner-logo partner-logo--afp" width="246" height="100" src="/img/afp-logo-light.svg" alt={zh ? "加速哲人計畫" : "Accelerator Fellowship Programme"} loading="lazy" decoding="async" /></a>

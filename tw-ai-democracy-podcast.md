@@ -6,6 +6,7 @@ alt_lang_url: "/ai-democracy-podcast/"
 permalink: "/tw/ai-democracy-podcast/"
 date: 2025-08-05
 description: "原始錄音來自牛津 AI 倫理研究院的 Accelerating AI Ethics Podcast。"
+meta_description: "唐鳳與 Caroline Green 談數位民主、集體智慧，以及以多元取代奇點的願景：牛津 Accelerating AI Ethics 首集。"
 og_image: "/img/ai-democracy-podcast.jpg"
 nav_next:
     url: "/tw/"

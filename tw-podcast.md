@@ -6,6 +6,7 @@ alt_lang_url: "/podcast/"
 permalink: "/tw/podcast/"
 date: 2025-09-05
 description: "原始錄音來自牛津 AI 倫理研究院的 Accelerating AI Ethics Podcast。"
+meta_description: "唐鳳與 Caroline Green 在牛津 Accelerating AI Ethics Podcast 逐一介紹關懷六力，從覺察力到共生力。"
 nav_next:
     url: "/tw/"
     text: "首頁"

@@ -14,7 +14,7 @@ nav_next:
 ---
 
 <div class="video-embed">
-<iframe src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/a94bd40b528be58688e1c8b61b12d0b1/iframe?defaultTextTrack=en" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+<iframe title="影片：AI 與我們同在，而非取代我們" src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/a94bd40b528be58688e1c8b61b12d0b1/iframe?defaultTextTrack=en" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## 主流 AI 願景及其不安

@@ -12,7 +12,7 @@ nav_next:
     text: "首頁"
 ---
 
-### 摘要
+## 摘要
 
 - **以結果對齊**為參與度或利潤最佳化，即使那會放大深偽詐騙廣告。
 - **以程序對齊**邀請受影響的人共同導向系統，取代自上而下的禁止。
@@ -21,7 +21,7 @@ nav_next:
 ## 觀看
 
 <div class="video-embed">
-<iframe src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/31300d382e14451bfa87219f650c7c40/iframe?defaultTextTrack=zh-Hant&poster=https%3A%2F%2Fcustomer-07bto6bf9uibrlc3.cloudflarestream.com%2F31300d382e14451bfa87219f650c7c40%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D1s" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+<iframe title="影片：重新想像 AI 對齊" src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/31300d382e14451bfa87219f650c7c40/iframe?defaultTextTrack=zh-Hant&poster=https%3A%2F%2Fcustomer-07bto6bf9uibrlc3.cloudflarestream.com%2F31300d382e14451bfa87219f650c7c40%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D1s" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## 完整逐字稿

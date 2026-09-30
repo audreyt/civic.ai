@@ -33,6 +33,18 @@ const websiteLd = {
     ],
     publisher: { "@type": "Organization", name: "Oxford Institute for Ethics in AI", url: "https://www.oxford-aiethics.ox.ac.uk/", logo: { "@type": "ImageObject", url: `${site.url}/img/oxford-logo.svg` } },
 };
+const isHome = page.url === "/" || page.url === "/tw/";
+const pageLd = isHome
+    ? null
+    : {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: page.data.title,
+          description: page.data.meta_description || page.data.description,
+          url: `${site.url}${page.url}`,
+          inLanguage: page.data.lang === "ja" ? "ja" : zh ? "zh-Hant" : "en-GB",
+          isPartOf: { "@type": "WebSite", name: site.title, url: site.url },
+      };
 ---
 <!doctype html>
 <html lang={page.data.lang || "en"}>
@@ -57,6 +69,7 @@ const websiteLd = {
     </div></section>}
     {page.url === "/" || page.url === "/tw/" ? <Footer lang={page.data.lang} /> : <PartnerColophon lang={page.data.lang} />}
     <script is:inline type="application/ld+json" set:html={JSON.stringify(websiteLd)}></script>
+    {pageLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(pageLd)}></script>}
     <ClientScripts page={page} />
   </body>
 </html>

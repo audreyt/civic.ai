@@ -34,7 +34,7 @@ I am here to say that out loud. And then to discuss with you about what we do ne
 
 ---
 
-# Ancestorial Room
+## Ancestorial Room
 
 We are sitting inside a four-hundred-year-old experiment in being a good enough ancestor.
 
@@ -48,7 +48,7 @@ The question we are here to ask is what happens to that promise now that AI join
 
 ---
 
-# Four Freedoms
+## Four Freedoms
 
 Stallman set up the FSF in 1985; the Free Software Definition followed in 1986; the familiar numbering into freedoms 0 through 3 settled later. Many of you can recite them. I want to read them again, as muscles rather than as licences.
 
@@ -70,7 +70,7 @@ The four freedoms are how we keep the substrate complementary across generations
 
 ---
 
-# Lonely Maintainer
+## Lonely Maintainer
 
 I maintain many projects. At one time I maintained more than a hundred projects on the Comprehensive Perl Archive Network, or CPAN. And it is quite lonely, actually, doing most of the maintenance work. And this is now expanding to an untoward degree.
 
@@ -92,7 +92,7 @@ We knew this. The AI conversation has not yet caught up.
 
 ---
 
-# Pugs.hs: the Commit Bit
+## Pugs.hs: the Commit Bit
 
 In early 2005, I figured out a way to solve the loneliness problem, at least for myself. I sat down with Benjamin Pierce's _Types and Programming Languages_, hit the chapter-three exercise — "pick a small language, any language, and implement it as a toy" — and picked Perl 6, the language with the longest vapourware reputation in existence. Larry Wall, the author of Perl 1 through Perl 5, had been drafting the specification as plaintext files, on and off, for years. Nobody had managed to really implement and run it.
 
@@ -118,7 +118,7 @@ I learned then, and I am still learning now, that the four freedoms taken to thi
 
 ---
 
-# Inside the Closed Stack
+## Inside the Closed Stack
 
 After Pugs, and before government, I also worked for six years with a team within Apple called Cloud Service Localization. I was helping with Mandarin language coverage in Siri, and with language families spoken around Shanghai — the Wu language. The engineers I worked with at Apple really did care. They cared deeply. They cared more about whether the system understood a grandmother in Taipei correctly than any product manager required them to. They cared about _it just works_ — it does not need any setup at all.
 
@@ -132,7 +132,7 @@ I used to be very diplomatic about this distinction. But I will just say it, bec
 
 ---
 
-# `@antirez` and `pi.audreyt.org`
+## `@antirez` and `pi.audreyt.org`
 
 Last week, I started working with Salvatore Sanfilippo — @antirez, the original author of Redis — on a small thing called DwarfStar 4 (DS4).
 
@@ -154,7 +154,7 @@ Because of the time-zone difference, I wake up to a summary of what he asked the
 
 ---
 
-# 447
+## 447
 
 We have been talking about a small scale: a few people discussing health and education in a family; a few people making an assistant on their laptop to triage free software maintainership.
 
@@ -186,7 +186,7 @@ This is what free software can do for the world when the substrate is open.
 
 ---
 
-# Tim Sees Code
+## Tim Sees Code
 
 But right now, that very substrate is facing extraction. While Taiwan was proving what free software can do for democracy at scale, this very substrate we rely on is being strip-mined.
 
@@ -206,7 +206,7 @@ The frontier is whether our community can put forward an answer concrete enough 
 
 ---
 
-# Civic AI, New Frontier
+## Civic AI, New Frontier
 
 Stefano Maffulli, former Executive Director of the Open Source Initiative, calls this _the final frontier of copyleft_. Laura sent me his piece. He is right that it is the next domain. I would call it a new frontier — just to be diplomatic; there may be new frontiers after this.
 
@@ -242,7 +242,7 @@ That is what software freedom looks like in 2026.
 
 ---
 
-# `Kami.civic.ai`
+## `Kami.civic.ai`
 
 What I have just described works in three layers. The _legal layer_: the enforceability of the four freedoms in court. ROOST.tools is the _application layer_ — decentralised, open-source infrastructure that smaller communities can actually deploy. The third layer is the one I want to name now: the _governance layer_. Bounded stewardship.
 
@@ -266,7 +266,7 @@ The right to refuse is the freedom you cannot remove from a downstream community
 
 ---
 
-# Good Enough Ancestor
+## Good Enough Ancestor
 
 I will end where I began.
 

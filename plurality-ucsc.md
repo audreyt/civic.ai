@@ -7,7 +7,6 @@ alt_lang_url: "/tw/plurality-ucsc"
 permalink: "/plurality-ucsc/"
 date: 2026-05-10
 description: "Speech on Civic AI and democratic renewal delivered at the University of California, Santa Cruz."
-og_image: "/img/plurality-ucsc.jpg"
 nav_next:
     url: "/"
     text: "Home"
@@ -16,7 +15,7 @@ nav_next:
 Good local time, leaders and change-makers at the University of California, Santa Cruz.
 
 <div class="video-embed">
-<iframe src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/19f482b81a13ac6db833ce2ffb1bc24a/iframe?defaultTextTrack=en" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+<iframe title="Video: ⿻ UCSC: From Polarisation to Co-creation" src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/19f482b81a13ac6db833ce2ffb1bc24a/iframe?defaultTextTrack=en" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 Let us begin with a big question. **"What could UCSC be by 2050?"** No need for predictive modelling or even crystal balls. This is an invitation to cast off the yoke of tyrannical predictions and deliberate deeply.
