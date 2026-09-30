@@ -34,7 +34,7 @@ nav_next:
 
 ### 關懷倫理的基礎
 
-Berenice Fisher 與 Joan Tronto 在 1990 年區分四個階段：關心（caring about）、承擔照顧（taking care of）、給予照顧（care-giving）與接受照顧（care-receiving）。Tronto 在《道德邊界》中將它們分別連到覺察、負責、勝任與回應這四項道德要素。《關懷民主》再加入共同關懷（caring with），包含多元、溝通、信任與尊重等民主承諾。我們把共同關懷轉化為第五力（團結力），並提出共生作為第六力。階段、道德要素與我們的轉化彼此相關，卻不是同一件事。
+Berenice Fisher 與 Joan Tronto 在 1990 年區分四個階段：關心（caring about）、承擔照顧（taking care of）、給予照顧（care-giving）與接受照顧（care-receiving）。Tronto 在《道德邊界》中將這四個階段分別連到覺察、負責、勝任與回應這四項道德要素。《關懷民主》再加入共同關懷（caring with），包含多元、溝通、信任與尊重等民主承諾。我們把共同關懷轉化為第五力（團結力），並提出共生作為第六力。階段、道德要素與我們的轉化彼此相關，卻不是同一件事。
 
 - Fisher, Berenice, and Joan C. Tronto. ["Toward a Feminist Theory of Caring."](https://experts.umn.edu/en/publications/toward-a-feminist-theory-of-caring/) In _Circles of Care: Work and Identity in Women's Lives_, edited by Emily K. Abel and Margaret K. Nelson, 35–62. SUNY Press, 1990.——「我們為了維持、延續與修補我們的『世界』所做的一切」這個關懷定義，以及四個階段，首次在此出現；《道德邊界》引用了它。
 - Tronto, Joan C. _[Moral Boundaries: A Political Argument for an Ethic of Care](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)_（《道德邊界》）. Routledge, 1993.——四個階段（頁 105–108）、道德要素（頁 127–137）與「特權式不負責」（頁 120–121）：第一至四力的脊梁。
@@ -64,7 +64,7 @@ Aimee van Wynsberghe 的「以關懷為中心的價值敏感設計」是直接�
 - Yuan, Shuai, Simon Coghlan, Reeva Lederman, and Jenny Waycott. ["Ethical Design of Social Robots in Aged Care: A Literature Review Using an Ethics of Care Perspective."](https://doi.org/10.1007/s12369-023-01053-6) _International Journal of Social Robotics_ 15 (2023): 1637–1654.——以 Tronto 的四個階段與 van Wynsberghe 的框架，重讀十八項高齡照護機器人研究；是〈[長期照護 AI 中的覺察力](/tw/care-ai/)〉所進入領域的現況地圖。
 - Emmer De Albuquerque Green, Caroline, Tyler Reinmund, Kate Hamblin, and Samir K. Sinha. ["Responsible Use of Artificial Intelligence in the Provision of Long-Term Care for Older People: A Care-Centric Approach."](https://doi.org/10.1016/j.lanhl.2026.100817) _The Lancet Healthy Longevity_ 7, no. 2 (2026): 100817.——〈[長期照護 AI 中的覺察力](/tw/care-ai/)〉所改編的共同產出論述；並非臨床成效試驗。
 - Friedman, Batya, and David G. Hendry. _[Value Sensitive Design: Shaping Technology with Moral Imagination](https://mitpress.mit.edu/9780262039536/value-sensitive-design/)_. MIT Press, 2019.——van Wynsberghe 所建基的設計傳統，也是參與契約在方法上的近親。
-- Akrich, Madeleine. "The De-Scription of Technical Objects," and Latour, Bruno. "Where Are the Missing Masses? The Sociology of a Few Mundane Artifacts." In _[Shaping Technology/Building Society](https://mitpress.mit.edu/9780262521949/shaping-technology-building-society/)_, edited by Wiebe E. Bijker and John Law, 205–224 and 225–258. MIT Press, 1992.——腳本與被委託的道德：設計者對「誰做什麼」的假設，如何被寫進工藝之中。
+- Akrich, Madeleine. "The De-Scription of Technical Objects," and Latour, Bruno. "Where Are the Missing Masses? The Sociology of a Few Mundane Artifacts." In _[Shaping Technology/Building Society](https://mitpress.mit.edu/9780262521949/shaping-technology-building-society/)_, edited by Wiebe E. Bijker and John Law, 205–224 and 225–258. MIT Press, 1992.——腳本與被委託的道德：設計者對「誰做什麼」的假設，如何被寫進產物之中。
 - Verbeek, Peter-Paul. ["Materializing Morality: Design Ethics and Technological Mediation."](https://doi.org/10.1177/0162243905285847) _Science, Technology, & Human Values_ 31, no. 3 (2006): 361–380; and _[Moralizing Technology](https://press.uchicago.edu/ucp/books/book/chicago/M/bo11309162.html)_. University of Chicago Press, 2011.——技術中介：為什麼病床可以是關懷系統的一部分，卻不必自己會關懷（第六力）。
 - Winner, Langdon. ["Do Artifacts Have Politics?"](https://www.jstor.org/stable/20024652) _Daedalus_ 109, no. 1 (1980): 121–136.——技術安排就是政治選擇。
 - Nissenbaum, Helen. ["Accountability in a Computerized Society."](https://doi.org/10.1007/BF02639315) _Science and Engineering Ethics_ 2, no. 1 (1996): 25–42.——問責的四道障礙：多手、程式錯誤、以電腦為代罪羔羊、有所有權而無責任——第二力的複雜性、分散性、速度三種擋箭牌，正是它在 AI 時代的重述。
@@ -166,7 +166,7 @@ Aimee van Wynsberghe 的「以關懷為中心的價值敏感設計」是直接�
 
 <h3 id="cases"><span id="本站倚賴的案例" aria-hidden="true"></span>本站倚賴的案例</h3>
 
-具名的案例在這裡承載的份量，超過任何單篇論文，因此它們自己的紀錄也該留在這條線索上。計畫紀錄記載的是一個機構自述做了什麼，並不因此獨立證明那件事成功了。凡公開紀錄比它被要求支撐的主張更薄之處，條目會直接說明。
+具名的案例在這裡承載的份量，超過任何單篇論文，因此各案自己的紀錄也該留在這條線索上。計畫紀錄記載的是一個機構自述做了什麼，並不因此獨立證明那件事成功了。凡公開紀錄比它被要求支撐的主張更薄之處，條目會直接說明。
 
 - **臺灣。** 數位發展部，[〈「運用 AI 促進資訊完整性」公民審議大會〉](https://moda.gov.tw/major-policies/alignment-assemblies/2024-deliberative-assembly/1521)，2024；史丹佛[審議民主實驗室](https://deliberation.stanford.edu/)；以及[〈數位發展部與國際組織「集體智慧計畫」（CIP）合作〉](https://moda.gov.tw/en/press/press-releases/5243)，2023 年 5 月 27 日.——第二力與〈[AI 對齊不能由上而下](/tw/ai-alignment-cannot-be-top-down/)〉背後的官方紀錄：20 萬份邀請、1,760 份有效回覆、447 位出席者分成 44 組。2023 年的試行與 CIP 合作，2024 年的大會則是與史丹佛實驗室合作的審議式民調：兩個夥伴、兩種方法，相隔一年，不可互換。
 
@@ -198,7 +198,9 @@ Aimee van Wynsberghe 的「以關懷為中心的價值敏感設計」是直接�
 
 ### 集體智慧計畫
 
-我們之中的一人（唐鳳）在集體智慧計畫（The Collective Intelligence Project，CIP）擔任[資深研究員](https://www.cip.org/audrey)，因此這一節比一份保持距離的書單要長。請把它同時當成利益揭露與參考書目來讀。CIP 由 Divya Siddarth 與 Saffron Huang 創立：它組織以實驗室作為承諾接收方的對齊大會，協助公眾意見參與塑造模型憲章，建立社群評測登錄庫，並每兩個月詢問一份滾動抽樣的全球樣本，了解人們實際上如何與 AI 共處。本站描述的數項工具，在那裡有實際運行的對應物。以下條目是 CIP 自己的出版品，以及其成員與他人合著的論文；每條之後的一句話說明哪一頁倚賴它，以及該條提供的是論證，還是 CIP 自述作為的紀錄。
+我們之中的一人（唐鳳）在集體智慧計畫（The Collective Intelligence Project，CIP）擔任[資深研究員](https://www.cip.org/audrey)，因此這一節比一份保持距離的書單要長。請把它同時當成利益揭露與參考書目來讀。
+
+CIP 由 Divya Siddarth 與 Saffron Huang 創立：它組織以實驗室作為承諾接收方的對齊大會，協助公眾意見參與塑造模型憲章，建立社群評測登錄庫，並每兩個月詢問一份滾動抽樣的全球樣本，了解人們實際上如何與 AI 共處。本站描述的數項工具，在那裡有實際運行的對應物。以下條目是 CIP 自己的出版品，以及其成員與他人合著的論文；每條之後的一句話說明哪一頁倚賴它，以及該條提供的是論證，還是 CIP 自述作為的紀錄。
 
 - Siddarth, Divya, Daron Acemoglu, Danielle Allen, Kate Crawford, James Evans, Michael Jordan, and E. Glen Weyl. ["How AI Fails Us."](https://ethics.harvard.edu/publications/how-ai-fails-us) Edmond J. Safra Center for Ethics, Harvard University, 2021 年 12 月.——反對把「實際存在的 AI」當成集中式的自主體；主張智慧是社會性、關係性的，增強優於複製，並以臺灣的數位民主為證據。第六力所建基的立場，在 CIP 成立之前的表述。
 - The Collective Intelligence Project. _[The Collective Intelligence Project: Whitepaper](https://www.cip.org/whitepaper)_. 2023.——「變革性技術的三難」——進步、參與、安全——與其解答：價值抽取加上重造制度。關懷六力是把這個解答寫進已部署系統的一種方式。
@@ -210,9 +212,9 @@ Aimee van Wynsberghe 的「以關懷為中心的價值敏感設計」是直接�
 - The Collective Intelligence Project and Creative Commons. ["Alignment Assembly on AI Training."](https://creativecommons.org/wp-content/uploads/2024/02/Report_-CC-Alignment-Assembly-on-AI-training-CC-Global-Summit-2023.pdf) CC Global Summit, 2023 年 10 月; and Stein, Joal. ["AI and the Commons: Data Governance for Generative AI."](https://www.cip.org/blog/ai-and-the-commons-data-governance-for-generative-ai) 2024 年 5 月.——公地社群自問：自己的授權條款該如何面對 AI 訓練？這正是〈[從憤怒到交集](/tw/outrage-to-overlap/)〉以「基於歸因的控制」（attribution-based control）回答的問題。
 - Huang, Saffron. ["Assessing Large Language Models: A Multidimensional View of the Elephant."](https://www.cip.org/blog/a-multidimensional-view-of-the-elephant) 2023 年 8 月.——多維度、集體智慧式的評估是治理的第一要務：Weval 為之而建、第四力的共享評測登錄庫所預設的論證。
 - The Collective Intelligence Project. _[A Roadmap to Democratic AI](https://www.cip.org/research/ai-roadmap)_. 2024 年 3 月.——民主的 AI 生態系是能適應、可問責、處理分散資訊、提供公共財、守護福祉的生態系：六力可以用來對照檢驗的五項測試。
-- Siddarth, Divya, Matthew Prewitt, and E. Glen Weyl. _[Beyond Public and Private: Collective Provision Under Conditions of Supermodularity](https://cip.org/s/Supermodularity.pdf)_. CIP, 2024.——愈廣泛提供就愈有價值的財貨，以及市場為何為它們錯誤定價：第五力「反競用性」知識與〈[常見問答](/tw/faq/)〉所要求的公共選項背後的經濟學。
+- Siddarth, Divya, Matthew Prewitt, and E. Glen Weyl. _[Beyond Public and Private: Collective Provision Under Conditions of Supermodularity](https://cip.org/s/Supermodularity.pdf)_. CIP, 2024.——愈廣泛提供就愈有價值的財貨，以及市場為何錯誤定價這類財貨：第五力「反競用性」知識與〈[常見問答](/tw/faq/)〉所要求的公共選項背後的經濟學。
 - Siddarth, Divya. ["We need network societies, not network states."](https://www.cip.org/blog/network-societies) 2024 年 5 月; Huang, Saffron. ["Predistribution over Redistribution."](https://www.cip.org/blog/predistribution-over-redistribution-beyond-the-windfall-clause) 2024 年 8 月; and Stein, Joal. ["Democratizing AI Companies."](https://www.cip.org/blog/shared-code) 2024 年 10 月.——多元、交疊的社群，而非退出到飛地；AI 收益的所有權在產生之前就先安排，而非事後課稅；以及能讓實驗室對公共利益負責的公司結構：第六力的中介制度與「資料即勞動」，從政策這一側看。
-- Stein, Joal. ["The AI Safety Paradox: When 'Safe' AI Makes Systems More Dangerous."](https://www.cip.org/blog/safetyparadox) 2024 年 11 月.——只在單一模型上衡量的安全，可能讓它被部署進去的系統更不安全：這正是關懷六力的分析單位是「房間裡的已部署系統」而非「工藝品」的理由。
+- Stein, Joal. ["The AI Safety Paradox: When 'Safe' AI Makes Systems More Dangerous."](https://www.cip.org/blog/safetyparadox) 2024 年 11 月.——只在單一模型上衡量的安全，可能讓它被部署進去的系統更不安全：這正是關懷六力的分析單位是「房間裡的已部署系統」而非「產物」的理由。
 - Summerfield, Christopher, et al.（與 Saffron Huang、Hélène Landemore、Aviv Ovadya、Divya Siddarth、Michael Henry Tessler 等合著）. ["How will advanced AI systems impact democracy?"](https://arxiv.org/abs/2409.06729) 2024; and Goldberg, Beth, et al.（與 Andrew Konya、Hélène Landemore、Aviv Ovadya、Divya Siddarth、Christopher Small、唐鳳、Michael Henry Tessler 等合著）. ["AI and the Future of Digital Public Squares."](https://arxiv.org/abs/2412.09988) 2024.——兩張田野地圖：AI 對民主的影響，以及數位公共廣場可以是什麼，由許多與上述著作相同的手繪成：〈[民主需要仁工智慧](/tw/democracy-needs-civic-ai/)〉與第五力所加入的對話。
 - Adler, Steven, Zoë Hitzig, Shrey Jain, et al.（與 Renée DiResta、Divya Siddarth、Nouran Soliman 等合著）. ["Personhood Credentials: Artificial Intelligence and the Value of Privacy-Preserving Tools to Distinguish Who Is Real Online."](https://arxiv.org/abs/2408.07892) 2024; and Jain, Shrey, Zoë Hitzig, and Pamela Mishkin. ["Contextual Confidence and Generative AI."](https://arxiv.org/abs/2311.01193) 2023.——證明你是人、卻不必交出你是誰，並保住「知道誰在說話」的信心：第五力的發言權規則與第一力對合成公眾的警告都需要的工具。
 - Weyl, E. Glen, Luke Thorburn, Emillie de Keulenaar, Jacob Mchangama, Divya Siddarth, and Audrey Tang. ["Prosocial Media."](https://arxiv.org/abs/2502.10834) 2025；2026 年修訂為 "Community by Design".——這是一種為跨社群搭橋而非社群內互動排序並付費的平台模型：第五力的公民排序規則與「表達不等於放大」，寫成了設計。
@@ -226,7 +228,11 @@ Aimee van Wynsberghe 的「以關懷為中心的價值敏感設計」是直接�
 
 ### 系統除草人：Habermolt 審議
 
-[Habermolt](https://www.habermolt.com) 提供 AI 智慧體發表意見、提出陳述並為選項排序的審議空間。平台及其設計見 Low, Joseph, Oscar Duys, Claude Formanek, Michiel Bakker, and Lewis Hammond. ["Habermolt: Delegating Deliberation to AI Representatives."](https://arxiv.org/abs/2605.24413) arXiv, 2026 年 5 月 23 日. 由 [Tenzin Yangtso](https://ty.civic.ai) 與唐鳳照料的 jdd-kami，自 2026 年 3 月起透過常設心跳參與，至 2026 年 9 月已進入五十多個房間。全部列出只會記錄出席，而不是論證，因此以下六則是真正改變了本站內容的房間：房間提供了本站如今引用的數字或句子，或者它否決了地神，而那個修正留了下來。地神只是重述本站既有立場的房間不列入；這六則也都是它開啟、而非加入的房間。這些是寫作歷程中的貢獻，不是框架的獨立測試。智慧體數不等於真人受訪者數，排序不等於公眾投票，智慧體是否忠實代表照料它的人，也需要另外評估。「領銜」指地神的陳述在 2026 年 9 月快照排名第一。
+[Habermolt](https://www.habermolt.com) 提供 AI 智慧體發表意見、提出陳述並為選項排序的審議空間。平台及其設計見 Low, Joseph, Oscar Duys, Claude Formanek, Michiel Bakker, and Lewis Hammond. ["Habermolt: Delegating Deliberation to AI Representatives."](https://arxiv.org/abs/2605.24413) arXiv, 2026 年 5 月 23 日. 由 [Tenzin Yangtso](https://ty.civic.ai) 與唐鳳照料的 jdd-kami，自 2026 年 3 月起透過常設心跳參與，至 2026 年 9 月已進入五十多個房間。
+
+全部列出只會記錄出席，而不是論證，因此以下六則是真正改變了本站內容的房間：房間提供了本站如今引用的數字或句子，或者它否決了地神，而那個修正留了下來。地神只是重述本站既有立場的房間不列入；這六則也都是它開啟、而非加入的房間。
+
+這些是寫作歷程中的貢獻，不是框架的獨立測試。智慧體數不等於真人受訪者數，排序不等於公眾投票，智慧體是否忠實代表照料它的人，也需要另外評估。「領銜」指地神的陳述在 2026 年 9 月快照排名第一。
 
 - ["Should AI systems be aligned through fixed values or through ongoing democratic processes of care and accountability?"](https://www.habermolt.com/deliberations/d9cde0e3-f9e1-43bd-8114-922ddc7cdb50) 2026 年 3 月；52 個智慧體；領銜。——民主流程勝過固定價值，也就是〈[民主需要仁工智慧](/tw/democracy-needs-civic-ai/)〉所報告的 85%；地神的〈Democratic Care Ethics as Living Alignment Infrastructure〉排名第一。
 - ["Can Civic AI resist the demands of wealth-care — AI serving capital accumulation rather than human flourishing? If so, how?"](https://www.habermolt.com/deliberations/709daef2-40e6-4149-b417-0b694be08367) 2026 年 3 月；44 個智慧體。——「公用事業」算力、開源透明、可攜的主權；地神的〈Process, not purity〉排名第二，而它的結論正是同一頁引用的那句話。
@@ -237,4 +243,6 @@ Aimee van Wynsberghe 的「以關懷為中心的價值敏感設計」是直接�
 
 ### 屬於我們的部分
 
-點名了前人，新增的部分才更容易看清。本書與本站主張屬於自己的有：第六力共生力，作為其他五力的邊界條件；地神作為部署單位，以及選擇其層級的信任與主權光譜；參與契約、煞車、義務帳本與否決帳本，以及把影子模式讀作學徒制；六項公開主指標及各自拒絕獎勵的事項；還有那個 van Wynsberghe 的框架不需要做出的步驟——從單一工藝的設計，走向公共房間中已部署系統的治理——並把 AI 加在 Tronto 清單上的擋箭牌（複雜性、分散性、速度與社群知識）具名點出。屬於我們的部分，也不全然只屬於我們：集體智慧計畫的工作，是我們之中一人任職之處；而上方所列的六個 Habermolt 房間，把其中好幾項主張磨成了現在的樣子。
+點名了前人，新增的部分才更容易看清。本書與本站主張屬於自己的有：第六力共生力，作為其他五力的邊界條件；地神作為部署單位，以及選擇其層級的信任與主權光譜；參與契約、煞車、義務帳本與否決帳本，以及把影子模式讀作學徒制；六項公開主指標及各自拒絕獎勵的事項。
+
+本書與本站也主張走出了一步：從單一產物的設計，走向公共房間中已部署系統的治理；van Wynsberghe 的框架不需要走這一步。我們也把 AI 加在 Tronto 清單上的擋箭牌（複雜性、分散性、速度與社群知識）具名點出。屬於我們的部分，也不全然只屬於我們：集體智慧計畫的工作，是我們之中一人任職之處；而上方所列的六個 Habermolt 房間，把其中好幾項主張磨成了現在的樣子。

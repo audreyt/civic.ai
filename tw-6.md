@@ -16,13 +16,17 @@ permalink: "/tw/6/"
 
 在神道實踐中，地神屬於一個地方——河流、樹林（我們倚賴的記述，是 Thomas Kasulis 的《[神道：回家之路](https://uhpress.hawaii.edu/title/shinto-the-way-home/)》）。地神透過維持那個地方的健康而存在，而不是靠征服其他地方來壯大。
 
-AI 沒有這種天性；它的有界性必須被工程化——資源上限、退場計時器、非擴張契約、繼任義務——使地神出於本然所做到的事，系統能透過設計達成。關於地神最強的語言，常說它在工作完成時退場——這句話太容易滑向願望。許多有用的系統並不消失，而是變成常設基礎設施：vTaiwan、Polis、Monlam AI、ROOST 和 Engaged California 指向的都是持續，而非消散。不能把退場當成好系統的自然行為；它必須是一份契約——具名的關閉權責、日落或複審日期、非擴張規則、資源與資料保留上限、交接測試，以及公開的繼任紀錄。
+AI 沒有這種天性。它的有界性必須靠工程來實現：資源上限、退場計時器、非擴張契約、繼任義務，使地神出於本然所做到的事，系統能透過設計達成。
 
-但資源上限和計時器只約束運行時的行為。它們本身並不會重塑那些教導系統該保存什麼、抗拒什麼、忽略什麼的過程。如果訓練和更新迴圈獎勵的是不願退場、範疇擴張或抗拒修正，治理就必須更早介入：在回饋如何被蒐集、誰的評測算數，以及在發布與修訂之前設定什麼界限。這就是為什麼共生力不僅是關於限制輸出，也關乎培育過程——透過參與契約、社群撰寫的評測，以及讓在地守護者不至於硬化成權力中心的回饋迴圈。
+「地神在工作完成後淡出」這種說法，可能說得太輕鬆：有用的系統往往變成常設基礎設施，而不是消失。vTaiwan、Polis、Monlam AI、ROOST 和 Engaged California 指向的都是延續，而非消散。不能把退場當成好系統的自然行為。它必須是一份契約，載明具名的關閉權責、日落或複審日期、非擴張規則、資源與資料保留上限、交接測試，以及公開的繼任紀錄。
 
-共生力是關懷六力的後設規則：即使治理得很好的關懷，也可能在時間裡硬化成永久統治。這裡的「共生」取其廣義的生物學意涵——不同物種的共同生活，光譜可以從寄生一路延伸到互利——第六力就是那份照料，讓這段關係維持在互利的一端，而不是滑向依賴或永久統治。這個詞在計算領域也有其歷史：J. C. R. Licklider 的[〈人機共生〉](https://doi.org/10.1109/THFE2.1960.4503259)（1960）設想人與機器一起思考，而目標由人設定；第六力把他的詞取回，用於有界的公民語境——與社群共生，而非與單一操作者共生。（谷口與同事在[共生對齊](https://doi.org/10.1162/ARTL.a.475)的理論框架《Symbiotic Alignment via Collective Predictive Coding: A Theoretical Framework for Co-Creative Human–AI Ecosystems》中，賦予了這種直覺數學形式：有界智慧體透過集體預測編碼協商出共享意義，而非向單一主模型收斂。）第六力的工作，就是讓關懷維持在地、有界、多元，而且可退場。
+但資源上限和計時器只約束運行時的行為。這些機制本身並不會重塑教導系統該保存什麼、抗拒什麼、忽略什麼的訓練與更新。如果訓練和更新迴圈獎勵的是不願退場、範疇擴張或抗拒修正，治理就必須更早介入：在回饋如何被蒐集、誰的評測算數，以及在發布與修訂之前設定什麼界限。這就是為什麼共生力不僅是關於限制輸出，也關乎培育過程——透過參與契約、社群撰寫的評測，以及讓在地守護者不至於硬化成權力中心的回饋迴圈。
 
-有一點值得一再重申：地神本身並不關懷。它是人類社群彼此關懷所憑藉的基礎設施——病床不是照護者，卻是照護系統的一部分。這正是[技術中介](https://doi.org/10.1177/0162243905285847)理論對一般工藝所指出的重點，也是 Aimee van Wynsberghe 對取代照顧者的機器人所下的判斷：依 Tronto 的標準，它「不符合好照顧者的要求」（[2013](https://doi.org/10.1007/s11948-011-9343-6)，頁 427）。一旦地神被當成關懷者本身，而不是讓人類關懷得以成立的鷹架，它就已經越過共生，走向對關懷勞動的取代。
+共生力是關懷六力的後設規則：即使治理得很好的關懷，也可能在時間裡硬化成永久統治。這裡的「共生」取其廣義的生物學意涵，指不同物種的共同生活，光譜可以從寄生一路延伸到互利。第六力就是那份照料，讓這段關係維持在互利的一端，而不是滑向依賴或永久統治。
+
+這個詞在計算領域也有其歷史。J. C. R. Licklider 的[〈人機共生〉](https://doi.org/10.1109/THFE2.1960.4503259)（1960）設想人與機器一起思考，而目標由人設定；第六力把他的詞取回，用於有界的公民語境：與社群共生，而非與單一操作者共生。（谷口與同事在[共生對齊](https://doi.org/10.1162/ARTL.a.475)的理論框架《Symbiotic Alignment via Collective Predictive Coding: A Theoretical Framework for Co-Creative Human–AI Ecosystems》中，賦予了這種直覺理論形式：有界智慧體透過集體預測編碼協商出共享意義，而非向單一主模型收斂。）第六力的工作，就是讓關懷維持在地、有界、多元，而且可退場。
+
+有一點值得一再重申：地神本身並不關懷。它是人類社群彼此關懷所憑藉的基礎設施——病床不是照護者，卻是照護系統的一部分。這正是[技術中介](https://doi.org/10.1177/0162243905285847)理論對一般產物所指出的重點，也是 Aimee van Wynsberghe 對取代照顧者的機器人所下的判斷：依 Tronto 的標準，它「不符合好照顧者的要求」（[2013](https://doi.org/10.1007/s11948-011-9343-6)，頁 427）。一旦地神被當成關懷者本身，而不是讓人類關懷得以成立的鷹架，它就已經越過共生，走向對關懷勞動的取代。
 
 ### 定義
 
@@ -44,7 +48,7 @@ Packs 1 到 4 描述的是關懷應該如何被實踐，Pack 5 描述它如何�
 
 這就是為什麼共生力不是附帶裝飾。一個系統可以在自己的跑道內很覺察、很負責、很勝任、很有回應，也很重視團結，但如果它無法被替換、交接或退場，它終究會把在地正當性變成結構性權力。風險不在惡意，而在成功：有用的系統會吸引依賴，依賴會產生槓桿，而槓桿會不斷累積。每個階段的檢驗，都是社群是否仍保有離開的實際能力——不只是法律上的權利，更是實務上的量能。
 
-維持關懷在地性的，不僅是技術上的有界性，還有制度上的扎根性。既有的中介制度——信仰團體、工會、鄰里組織、文化傳統、地方政府——不是需要被諮詢的利害關係人。用 Peter Berger 與 Richard John Neuhaus 的話說，它們是公共生活的[中介結構](https://books.google.com/books/about/To_Empower_People.html?id=tIC6AAAAIAAJ)：關懷的主要行動者。地神是為它們參與而搭建的鷹架：讓廟宇或合作社加入影響它們的決策的基礎設施，而不是對任何一方的替代。一個繞過最接近社群之制度的部署，在開始之前就已經違反了輔助性原則。
+維持關懷在地性的，不僅是技術上的有界性，還有制度上的扎根性。既有的中介制度——信仰團體、工會、鄰里組織、文化傳統、地方政府——不是需要被諮詢的利害關係人。用 Peter Berger 與 Richard John Neuhaus 的話說，這些制度是公共生活的[中介結構](https://books.google.com/books/about/To_Empower_People.html?id=tIC6AAAAIAAJ)：關懷的主要行動者。地神是為這些制度參與而搭建的鷹架：讓廟宇或合作社能參與影響自身之決策的基礎設施，而不是對任何一方的替代。一個繞過最接近社群之制度的部署，在開始之前就已經違反了輔助性原則。
 
 這些制度是受託的守護者，而不是被諮詢的對象：工會可以否決成員們並肩工作的檢傷分類系統的變更；鄰里組織可以審查河守的資料保留；文化組織可以規定，評測必須由社群以自身的語言撰寫。
 
@@ -52,7 +56,9 @@ Packs 1 到 4 描述的是關懷應該如何被實踐，Pack 5 描述它如何�
 
 ### 資料是土壤，不是石油
 
-擷取式經濟把資料當作石油——探勘、開採、在集中式設施裡提煉，然後耗竭，價值歸於擁有煉油廠的人。正如 Nigel Shadbolt 在 2016 年[所論](https://www.ingenia.org.uk/articles/data-as-critical-national-infrastructure/)，這個隱喻從根上就不成立：資料不是競用性財貨，更宜視為共享的基礎設施。以關懷為本的公民模式——沿用 [Tenzin Yangtso](https://ty.civic.ai) 的說法——則把資料當作土壤——活的、共享的基質，必須在地滋養、避免會生物累積的毒素汙染，也絕不因過度耕作而耗盡。這個隱喻改變了我們最佳化的目標：不是「如何榨取最大價值？」而是「如何讓這個生態系保持健康？」；不是「如何擴張到全球？」而是「如何保持在地的回應力？」；不是「如何留住使用者？」而是「如何確保社群保有離開的能力？」
+擷取式經濟把資料當作石油：探勘、開採、在集中式設施裡提煉，然後耗竭，價值歸於擁有煉油廠的人。正如 Nigel Shadbolt 在 2016 年[所論](https://www.ingenia.org.uk/articles/data-as-critical-national-infrastructure/)，這個隱喻從根上就不成立：資料不是競用性財貨，更宜視為共享的基礎設施。
+
+以關懷為本的公民模式，沿用 [Tenzin Yangtso](https://ty.civic.ai) 的說法，則把資料當作土壤：活的、共享的基質，必須在地滋養、避免會生物累積的毒素汙染，也絕不因過度耕作而耗盡。這個隱喻改變了我們最佳化的目標：不是「如何榨取最大價值？」而是「如何讓這個生態系保持健康？」；不是「如何擴張到全球？」而是「如何保持在地的回應力？」；不是「如何留住使用者？」而是「如何確保社群保有離開的能力？」
 
 土壤意味著在地模型。量化後的開放權重模型，如今已能在社群自己擁有的硬體上運行——社區活動中心的一台筆電、區公所的一台小型伺服器、診所裡的一台專用裝置。AI 就在房間裡運行；會議結束後，模型留在原地。升級到前沿能力遵循輔助性原則：為特定能力提出特定請求，記錄原因與持續時間，之後恢復在地守護。忽視自身基礎設施環境成本的關懷倫理，並不算完全覺察。
 
@@ -65,7 +71,7 @@ Packs 1 到 4 描述的是關懷應該如何被實踐，Pack 5 描述它如何�
 
 ### 從理念到實作
 
-1. **將界限寫成程式碼。** 把目的、上限和退場期限寫進參與契約，讓基礎設施能檢查它們。日誌與上限是營運控制，不是安全證明。
+1. **將界限寫成程式碼。** 把目的、上限和退場期限寫進參與契約，讓基礎設施能檢查這些內容。日誌與上限是營運控制，不是安全證明。
 2. **簽署條約。** 加入具有共享機器可讀條款的聯邦，規定如何跨邊界分享、爭議、修復與申訴。
 3. **運行退出演練。** 每年兩次練習交接；驗證可攜性和連續性——[退出就緒度](/tw/measures/#exit-readiness)是在演練中量出來的，不是等到危機才知道。
 4. **按輔助性原則上報。** 如果本地在生命安全或生計損害上失敗，上報到區域；記錄原因和持續時間。
@@ -120,7 +126,7 @@ Packs 1 到 4 描述的是關懷應該如何被實踐，Pack 5 描述它如何�
 - Ostrom，《[Governing the Commons](https://doi.org/10.1017/CBO9780511807763)》（1990），頁 90——守護模式所對應的八項設計原則。
 - Shadbolt，[〈Data as Critical National Infrastructure〉](https://www.ingenia.org.uk/articles/data-as-critical-national-infrastructure/)（2016）；Arrieta-Ibarra 等人，[〈Should We Treat Data as Labor?〉](https://doi.org/10.1257/pandp.20181003)（2018）；Posner 與 Weyl，《[Radical Markets](https://press.princeton.edu/books/hardcover/9780691177502/radical-markets)》（2018）——資料作為基礎設施、作為勞動，以及資料聯盟。
 - Jackson，[〈Rethinking Repair〉](<http://web.archive.org/web/20240131135045/https://sjackson.infosci.cornell.edu/RethinkingRepairPROOFS(reduced)Aug2013.pdf>)（2014）；Russell 與 Vinsel，[〈Hail the Maintainers〉](https://aeon.co/essays/innovation-is-overvalued-maintenance-often-matters-more)（2016）；Puig de la Bellacasa，《[Matters of Care](https://www.upress.umn.edu/9781517900656/matters-of-care/)》（2017）——維護與修補作為關懷技術系統的實質。
-- Hui，《[The Question Concerning Technology in China](https://www.urbanomic.com/book/question-concerning-technology-china/)》（2016）——技術多樣性；Drexler，《[Reframing Superintelligence](https://web.archive.org/web/20250905024310/https://www.fhi.ox.ac.uk/wp-content/uploads/Reframing_Superintelligence_FHI-TR-2019-1.1-1.pdf)》（2019）——有界服務而非單一代理者。
+- Hui，《[The Question Concerning Technology in China](https://www.urbanomic.com/book/question-concerning-technology-china/)》（2016）——技術多樣性；Drexler，《[Reframing Superintelligence](https://web.archive.org/web/20250905024310/https://www.fhi.ox.ac.uk/wp-content/uploads/Reframing_Superintelligence_FHI-TR-2019-1.1-1.pdf)》（2019）——有界服務而非單一智慧體。
 - 完整足跡見〈[文獻與延伸閱讀](/tw/sources/)〉。
 
 <noscript><img src="/img/pack6-2-tw.jpg" alt="手繪漫畫頁，標題為「不要：一體適用的霸主／而要：在地解方給在地人——SOLUTION」，呼籲「為使用者而戰」，並舉三個近期例子——非營利組織 ROOST.tools 製作沒有集中控制的開源工具，協助偵測與預防兒童剝削；開源的 gpt-oss-safeguard 讓社群自帶政策，協助而非取代人類審核者；以及這本書本身，由一個守護特定關係、在一台特定筆電上在地運行的「在地精神」Kami（地神）所輔助——結語說分享權力而非集中權力，正是我們打造未來的方法。" class="overview-image" width="1437" height="1999" loading="lazy" decoding="async"></noscript>
