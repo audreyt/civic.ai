@@ -20,7 +20,7 @@ permalink: "/tw/5/"
 
 先問：「我們離開時，能保住所依靠的人際關係和紀錄嗎？」在要求大家使用某套系統之前，請實際使用的人試著匯出資料，並交接給另一個服務。跨群體合作需要彼此的約定，光用同一套軟體還不夠。
 
-在 Joan Tronto 的《[關懷民主](https://nyupress.org/9780814770344/caring-democracy/)》（頁 23）中，第五階段「共同關懷」要求：關懷必須與對正義、平等和所有人自由的民主承諾保持一致——這個階段的道德品質，多元、溝通、信任與尊重，她取自 Selma Sevenhuijsen 的《[Citizenship and the Ethics of Care](https://www.routledge.com/Citizenship-and-the-Ethics-of-Care-Feminist-Considerations-on-Justice-Morality-and-Politics/Sevenhuijsen/p/book/9780415170826)》。在仁工智慧裡，團結力提出的是一個結構性問題：這個生態系統的規則，究竟讓合作更容易被實踐，還是反而讓支配更容易？
+在 Joan Tronto 的《[關懷民主](https://nyupress.org/9780814770344/caring-democracy/)》（頁 23）中，第五階段「共同關懷」要求：關懷需求，以及滿足這些需求的方式，必須與民主對正義、平等、人人自由的承諾一致——這個階段的道德品質是多元、溝通、信任與尊重，她取自 Selma Sevenhuijsen 的《[Citizenship and the Ethics of Care](https://www.routledge.com/Citizenship-and-the-Ethics-of-Care-Feminist-Considerations-on-Justice-Morality-and-Politics/Sevenhuijsen/p/book/9780415170826)》。在仁工智慧裡，團結力提出的是一個結構性問題：這個生態系統的規則，究竟讓合作更容易被實踐，還是反而讓支配更容易？
 
 這個問題也有一種技術上的讀法。[Leibo 及其同事](https://arxiv.org/abs/1702.03037)在 2017 年研究序列社會困境的模擬：各自領取獎勵的智慧體可能合作，也可能背叛，取決於賽局與能力。Trivedi 及其同事的《[唯我超智慧不太可能具備合作性](https://arxiv.org/abs/2606.03237)》探討：在相互依存的行動者之間，單邊最佳化為何可能失敗。Taniguchi 及其同事提出另一種目標：加入任何單一智慧體都無法獨力滿足的集體項。這是團結的一種理論表述，並不證明各自領取獎勵的系統必然極化，也不證明公民合作非得採用這個特定項。
 
@@ -46,9 +46,9 @@ permalink: "/tw/5/"
 
 卡內基（Carnegie）在美國資助了[超過 1,600 座公共圖書館](https://guides.loc.gov/chronicling-america-carnegie-libraries)。這些圖書館之所以促進民主，靠的不是建築本身，而是開架書庫：讀者親自在書架間瀏覽，而不是央求館員代為取書。把能力鎖在專有 API 後面的垂直 AI 平台，重演的正是閉架模式；開放權重模型、開放協定與共享評測登錄庫，則是開架書庫的當代對應——這種基礎設施把社群當成有能力的行動者，而不是只能依平台條款受服務的消費者。
 
-知識與石油不同，是「反競用性」（anti-rival）的資源。這是 Steven Weber 在《開源的成功》中所創的[詞](https://www.hup.harvard.edu/books/9780674018587)：使用讓它更豐饒，而不是更耗竭。開放協定也是如此：eduroam 每多一所機構加入，就對每位成員更有價值，而沒有任何參與者能獨佔這份增益。配備了團結力的生態系統，也以同樣的方式運作：當一座城市採用選擇性揭露的證明，其他每座城市都能以趨近於零的邊際成本採用同一套標準。
+知識與石油不同，是「反競用性」（anti-rival）的資源。這是 Steven Weber 在《開源的成功》中所創的[詞](https://www.hup.harvard.edu/books/9780674018587)：使用讓它更豐饒，而不是更耗竭。開放協定也是如此：eduroam 每多一所機構加入，就對每位成員更有價值，而沒有任何參與者能獨佔這份增益。有了團結力的生態系統，也是這樣運作：當一座城市採用選擇性揭露的證明，其他每座城市都能以趨近於零的邊際成本採用同一套標準。
 
-這一切都不會自然湧現，需要把法律當作基礎設施：「互通性即公共財」的立法，猶他州的《數位選擇法》是已生效的可攜性成文法，尚不是 2027 年的持續轉送義務。團結力，正是個人關懷循環接上公地的地方。它借鑒 Elinor Ostrom 對持久公地的設計原則，以及她後來對[多中心](https://doi.org/10.1257/aer.100.3.641)治理的論述：許多決策中心彼此重疊，沒有任何一個凌駕其餘。
+這一切都不會自己出現，需要把法律當作基礎設施，也就是立下「互通性是公共財」的法律。猶他州的《數位選擇法》是已經生效的可攜性法律，但還不是 2027 年才開始的持續轉送義務。團結力，正是個人關懷循環接上公地的地方。它借鑒 Elinor Ostrom 對持久公地的設計原則，以及她後來對[多中心](https://doi.org/10.1257/aer.100.3.641)治理的論述：許多決策中心彼此重疊，沒有任何一個凌駕其餘。
 
 ### 實際上長什麼樣子
 
@@ -120,4 +120,4 @@ permalink: "/tw/5/"
 - 猶他州 H.B. 418，[《數位選擇法》](https://le.utah.gov/~2025/bills/static/HB0418.html)（2025），現為 [§§13-81-201 與 13-81-202](https://le.utah.gov/xcode/Title13/Chapter81/13-81.html)（2026 年 7 月 1 日生效；2027 年 7 月 1 日由後法取代）；[H.B. 408](https://le.utah.gov/Session/2026/bills/enrolled/HB0408.pdf)（2026）——可攜性已生效；持續即時轉送自 2027 年 7 月 1 日起。
 - 完整足跡見〈[文獻與延伸閱讀](/tw/sources/)〉。
 
-<noscript><img src="/img/pack5-2-tw.jpg" alt="手繪漫畫頁，標題為「NOT：相互保證毀滅／BUT：盡可能雙贏——SOLUTION」：在每個「什麼」背後追問更深的「為什麼」，再打造一個同時滿足雙方的新「什麼」——兩位廚師發現一人要果皮做利口酒、一人要果肉榨汁，於是雙方百分之百滿足、毫無浪費；台灣也曾用 pol.is 平台把分歧的辯論化為雙贏——包括迎進科學家與藝術家的就業金卡——示範更好的討論如何幫助大家共贏。" class="overview-image" width="1437" height="1999" loading="lazy" decoding="async"></noscript>
+<noscript><img src="/img/pack5-2-tw.jpg" alt="手繪漫畫頁，標題為「NOT：相互保證毀滅／BUT：盡可能雙贏——SOLUTION」：在每個「什麼」背後追問更深的「為什麼」，再打造一個同時滿足雙方的新「什麼」——兩位廚師發現一人要果皮做利口酒、一人要果肉榨汁，於是雙方百分之百滿足、毫無浪費；臺灣也曾用 pol.is 平台把分歧的辯論化為雙贏——包括迎進科學家與藝術家的就業金卡——示範更好的討論如何幫助大家共贏。" class="overview-image" width="1437" height="1999" loading="lazy" decoding="async"></noscript>
