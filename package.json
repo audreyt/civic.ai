@@ -39,6 +39,7 @@
         "worker:typecheck": "cd worker && bun run typecheck",
         "worker:test": "cd worker && bun run test",
         "import-comics": "bun import-comics.mjs",
+        "fonts:ja": "bun scripts/fetch-ja-fonts.mjs",
         "en": "bun scripts/review-set.mjs en",
         "tw": "bun scripts/review-set.mjs tw",
         "ci": "vp check && vp test && vp run sensemaker:test && vp run sensemaker:verify && vp build && vp run check-links && vp run check:hybrid && vp run check:astro-output && vp run check:search && vp run check:parity && vp run worker:typecheck && vp run worker:test"
