@@ -58,6 +58,26 @@ export function renderMarkdown(body: string): string {
     return createMarkdownRenderer().render(body);
 }
 
+const NOSCRIPT_IMG =
+    /<noscript>\s*(<img\b[^>]*?\ssrc="([^"]+)\.(?:jpe?g|png)"[^>]*>)\s*<\/noscript>/gi;
+
+// Content images are authored as `<noscript><img src="x.jpg"></noscript>`, a
+// leftover from a client-side AVIF swap. Resolve them at build time instead:
+// a native <picture> offers the AVIF sibling when one ships, the JPEG/PNG
+// stays the fallback, and the image no longer waits for JavaScript (it is
+// visible to the preload scanner and to readers who browse without scripts).
+export function nativePictures(
+    html: string,
+    hasFile: (publicPath: string) => boolean
+): string {
+    return html.replace(NOSCRIPT_IMG, (_match, img: string, stem: string) => {
+        const avif = `${stem}.avif`;
+        return hasFile(avif)
+            ? `<picture><source srcset="${avif}" type="image/avif">${img}</picture>`
+            : img;
+    });
+}
+
 const SMART_QUOTE_SKIP = new Set([
     "code",
     "pre",

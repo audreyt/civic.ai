@@ -1,6 +1,7 @@
 import { expect, test } from "vite-plus/test";
 import {
     cjkSlugify,
+    nativePictures,
     renderMarkdown,
     smartQuotes,
 } from "../src/lib/legacyMarkdown";
@@ -57,4 +58,26 @@ test("smartQuotes skips code, comments and entity-encoded quotes", () => {
         '<code>"a"</code> \u201Cb\u201D <!-- "c" --> \u201Cd\u201D it\u2019s'
     );
     expect(smartQuotes("<em>'x'</em>")).toBe("<em>\u2018x\u2019</em>");
+});
+
+test("nativePictures offers a shipped AVIF sibling through <picture>", () => {
+    const html =
+        '<p><noscript><img src="/img/a.jpg" alt="A" width="10" height="20" loading="lazy" decoding="async"></noscript></p>';
+    expect(nativePictures(html, (path) => path === "/img/a.avif")).toBe(
+        '<p><picture><source srcset="/img/a.avif" type="image/avif"><img src="/img/a.jpg" alt="A" width="10" height="20" loading="lazy" decoding="async"></picture></p>'
+    );
+});
+
+test("nativePictures unwraps to a bare <img> when no AVIF ships", () => {
+    const html =
+        '<a href="/x/"><noscript>\n<img src="/img/b.png" alt="B" />\n</noscript></a>';
+    expect(nativePictures(html, () => false)).toBe(
+        '<a href="/x/"><img src="/img/b.png" alt="B" /></a>'
+    );
+});
+
+test("nativePictures leaves non-image noscript blocks alone", () => {
+    const html =
+        '<noscript><p>Turn on JavaScript for search.</p></noscript><noscript><img src="/img/c.svg" alt=""></noscript>';
+    expect(nativePictures(html, () => true)).toBe(html);
 });

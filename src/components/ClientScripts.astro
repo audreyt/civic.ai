@@ -304,28 +304,6 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                 if (target) target.scrollIntoView();
             }
             window.addEventListener("load", jumpToHash);
-            (window.__avif || Promise.resolve(false)).then(function (ok) {
-                document.querySelectorAll("noscript").forEach(function (ns) {
-                    var html = ns.textContent;
-                    if (html.indexOf("<img ") === -1) return;
-                    if (ok) {
-                        html = html.replace(/\.(jpg|png)(?=["'\s])/g, ".avif");
-                        html = html.replace(/\sloading=["']lazy["']/gi, "");
-                        html = html.replace(/\sdecoding=["']async["']/gi, "");
-                    }
-                    var tmp = document.createElement("div");
-                    tmp.innerHTML = html;
-                    var img = tmp.querySelector("img");
-                    if (img) {
-                        if (ok) {
-                            img.removeAttribute("loading");
-                            img.removeAttribute("decoding");
-                        }
-                        ns.parentNode.insertBefore(img, ns);
-                    }
-                });
-                jumpToHash();
-            });
         </script>
         <script>
 // @ts-nocheck

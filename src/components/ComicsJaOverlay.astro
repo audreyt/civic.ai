@@ -101,22 +101,31 @@
         // afterprint, Firefox relies on the matchMedia listener, and
         // browsers that fire both would otherwise call enter/exit twice.
         // printState guards that reentrancy AND (more importantly) captures
-        // each image's literal pre-print `src` — including the async AVIF
-        // src rewrite in ClientScripts.astro — so exit restores exactly
-        // what was on screen rather than recomputing a "-wordless" guess
-        // that would clobber a `.avif` extension or any src not currently
-        // wordless.
+        // each image's literal pre-print `src` and its <picture> sources'
+        // `srcset`, so exit restores exactly what was on screen rather than
+        // recomputing a "-wordless" guess that would clobber a `.avif`
+        // extension or any src not currently wordless.
         const printState = { active: false, snapshot: null };
         const enterPrint = () => {
             if (printState.active) return;
             printState.active = true;
-            printState.snapshot = imgs().map((img) => [
-                img,
-                img.getAttribute("src") || "",
-            ]);
-            printState.snapshot.forEach(([img, src]) => {
-                const next = toJa(src);
-                if (next !== src) img.setAttribute("src", next);
+            // A <picture>'s <source srcset> outranks the <img src>, so the
+            // lettered variant has to replace both to reach the page.
+            printState.snapshot = imgs().flatMap((img) => {
+                const pic = img.closest("picture");
+                const sources = pic ? [...pic.querySelectorAll("source")] : [];
+                return [
+                    [img, "src", img.getAttribute("src") || ""],
+                    ...sources.map((s) => [
+                        s,
+                        "srcset",
+                        s.getAttribute("srcset") || "",
+                    ]),
+                ];
+            });
+            printState.snapshot.forEach(([el, attr, val]) => {
+                const next = toJa(val);
+                if (next !== val) el.setAttribute(attr, next);
             });
         };
         const exitPrint = () => {
@@ -124,7 +133,7 @@
             printState.active = false;
             const snapshot = printState.snapshot || [];
             printState.snapshot = null;
-            snapshot.forEach(([img, src]) => img.setAttribute("src", src));
+            snapshot.forEach(([el, attr, val]) => el.setAttribute(attr, val));
         };
         const preloadJa = () => {
             imgs().forEach((img) => {

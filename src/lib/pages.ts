@@ -1,7 +1,7 @@
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { extname, join } from "node:path";
 import matter from "gray-matter";
-import { renderMarkdown, smartQuotes } from "./legacyMarkdown";
+import { nativePictures, renderMarkdown, smartQuotes } from "./legacyMarkdown";
 import { expandShortcodes } from "./shortcodes";
 import { normalizeUrl } from "./site";
 
@@ -158,7 +158,9 @@ function loadPage(sourceName: string): PageRecord {
         ? rawBody
         : sourceName.endsWith(".html")
           ? expanded
-          : renderMarkdown(expanded);
+          : nativePictures(renderMarkdown(expanded), (publicPath) =>
+                existsSync(join(root, publicPath))
+            );
     const includeInSitemap =
         !data.exclude_from_sitemap && data.layout !== false;
     return {

@@ -654,6 +654,12 @@ main img {
     border-radius: 4px;
 }
 
+/* Build-time <picture> wrappers add no box of their own, so every image rule
+   written for a bare <img> still lays it out the same way. */
+main picture {
+    display: contents;
+}
+
 main article {
     max-width: 900px;
     margin: 0 auto;
