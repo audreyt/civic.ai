@@ -23,7 +23,7 @@ const date = (iso: string) => new Date(iso).toLocaleDateString(zh ? "zh-TW" : "e
 <details class="record-trace record-zone" data-pagefind-ignore>
   <summary class="record-trace__summary">
     <CivicBug class="record-trace__mark" />
-    <h2 class="record-trace__heading">{zh ? "記 · 紀錄" : "記 · The Trace"}</h2>
+    <h2 class="record-trace__heading">{zh ? "紀錄" : "The Trace"}</h2>
     {amended && <span class="record-trace__hint">{zh ? "修訂 " : "Amended "}<time datetime={amended.amendedDate}>{amended.amendedDate.slice(0, 10)}</time></span>}
   </summary>
   <div class="record-trace__inner">
