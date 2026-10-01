@@ -15,7 +15,7 @@ test("postbuild publishes failed evals and exact final HTML bytes without reject
     try {
         mkdirSync(join(scratch, "dist"));
         const html =
-            '<html lang="en"><body><div data-record-evals="trace" data-record-lang="en">Not yet evaluated</div><a href="/missing/">Broken</a></body></html>';
+            '<html lang="en"><body><div data-record-evals="trace" data-record-lang="en"></div><a href="/missing/">Broken</a></body></html>';
         writeFileSync(join(scratch, "dist/404.html"), html);
         const result = spawnSync(
             "bun",
@@ -36,7 +36,6 @@ test("postbuild publishes failed evals and exact final HTML bytes without reject
         );
         expect(published).toContain("record-eval--fail");
         expect(published).toContain('href="/evals.json"');
-        expect(published).not.toContain("Not yet evaluated");
     } finally {
         rmSync(scratch, { recursive: true });
     }

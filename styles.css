@@ -539,10 +539,15 @@ html[data-theme="dark"] .theme-toggle__sun {
     margin-left: 0;
 }
 
+/* The colophon draws its own box rather than relying on the bare section
+   rule, so it looks the same on pages that do not load this whole sheet. */
 .partner-colophon {
     position: relative;
     padding: 24px 32px 28px;
     text-align: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
 }
 
 .partner-colophon::before {
@@ -637,6 +642,8 @@ main {
     padding: 48px 32px;
     font-family: var(--serif);
     font-size: 1.125rem;
+    /* A bare URL or very long word breaks rather than widening the page. */
+    overflow-wrap: break-word;
 }
 
 main img {
@@ -940,14 +947,33 @@ em {
     display: block;
 }
 
-/* ─── TRANSCRIPT SPEAKER TURNS ───
-   Only transcripts (page_class: transcript-page) rule off each speaker's turn.
-   Elsewhere a bold lead-in is a run-in head, and a rule above every one
-   chopped prose and lists into slabs. */
-.transcript-page main p:has(> strong:first-child) {
+/* ─── BOLD LEAD-INS ───
+   A paragraph or loose bullet that opens in bold starts a new unit (a
+   question, a risk and its fix, a speaker's turn): a hairline and air above
+   each keep the units apart. Straight under a heading the heading already
+   separates, so a second rule there would only double it. */
+main p:has(> strong:first-child) {
     border-top: 1px solid var(--border);
     padding-top: 1.4rem;
     margin-top: 1.6rem;
+}
+
+main :is(h2, h3, h4) + p:has(> strong:first-child),
+main
+    :is(h2, h3, h4)
+    + :is(ul, ol)
+    > li:first-child
+    > p:first-child:has(> strong:first-child) {
+    border-top: 0;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+/* Eval slots are filled by the last build step; until then they say nothing. */
+[data-record-evals]:empty,
+.record-trace__evals:has([data-record-evals]:empty),
+.record-ledger__evals:has(> [data-record-evals]:empty) {
+    display: none;
 }
 
 /* ─── VIDEO EMBED ─── */
@@ -2271,6 +2297,10 @@ footer a:hover {
 
 .conf-detail {
     flex: 1;
+    /* A flex item keeps its min-content width by default; let it shrink so a
+       320px phone does not scroll sideways. */
+    min-width: 0;
+    overflow-wrap: break-word;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 4px;
@@ -2790,7 +2820,7 @@ html[data-theme="dark"] main td {
     border-bottom-color: rgba(255, 255, 255, 0.06);
 }
 
-html[data-theme="dark"] .transcript-page main p:has(> strong:first-child) {
+html[data-theme="dark"] main p:has(> strong:first-child) {
     border-top-color: rgba(255, 255, 255, 0.08);
 }
 
@@ -3978,6 +4008,9 @@ html:not(.js) .search-toggle {
     list-style: none;
 }
 .page-toc li {
+    /* flow-root keeps each entry's 4px margins from collapsing into its
+       neighbour's, so entries stay 8px apart. */
+    display: flow-root;
     margin: 0;
     line-height: 1.4;
 }
@@ -3985,8 +4018,11 @@ html:not(.js) .search-toggle {
     font-size: 0.9rem;
     text-decoration: none;
     color: var(--text);
-    /* Keep every entry a 24px+ target (WCAG 2.2 target size). */
-    padding-block: 4px;
+    /* Keep every entry a 24px+ target (WCAG 2.2 target size). The spacing is
+       margin, not padding: overflow on a line-clamped box clips at the padding
+       edge, so bottom padding showed the top of the clamped third line. */
+    min-height: 24px;
+    margin-block: 4px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -5282,6 +5318,43 @@ header h1 {
     }
 }
 
+/* Phones: the interior masthead carries the bilingual wordmark and three
+   tools on one row. The empty middle track no longer spends two gaps, and when
+   the row is still too short (the Chinese pages' "English" toggle is wider
+   than "華文") the two names stack, equal, beside the mark instead of pushing
+   the tools off the screen. */
+@media (max-width: 480px) {
+    .site-header__bar {
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        column-gap: 10px;
+    }
+
+    .site-header__tools {
+        grid-column: 2;
+    }
+
+    .site-wordmark {
+        position: relative;
+        flex-wrap: wrap;
+        row-gap: 0;
+        min-width: 0;
+        padding-inline-start: 25px;
+        white-space: normal;
+    }
+
+    .site-wordmark .site-mark {
+        position: absolute;
+        inset-inline-start: 0;
+        top: 50%;
+        translate: 0 -50%;
+    }
+
+    .site-wordmark__sep {
+        display: none;
+    }
+}
+
 .site-header--home .header-cta-row {
     display: flex;
     flex-wrap: wrap;
@@ -6244,13 +6317,18 @@ html[data-theme="dark"] .record-zone .record-eval--fail {
 }
 
 @media screen and (min-width: 1200px) {
-    main:not(:has(.cmap, .polis-fullbleed)) .record-chip {
+    /* The chip hangs in the right gutter beside the reading column. The
+       comics gallery fills the page width, leaving no gutter to hang in, and
+       the hang never reaches past the viewport edge on any page. */
+    body:not(.comics-page)
+        main:not(:has(.cmap, .polis-fullbleed))
+        .record-chip {
         display: grid;
         float: right;
         position: sticky;
         top: 1.5rem;
         width: 10rem;
-        margin: 0 -16rem 0 0;
+        margin: 0 max(-16rem, calc((100% - 100vw) / 2 + 1.5rem)) 0 0;
         padding-inline-start: 0.75rem;
         border-inline-start: 1px solid var(--rule, #ddd9cb);
         gap: 0.5rem;

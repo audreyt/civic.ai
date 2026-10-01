@@ -24,7 +24,7 @@ const date = (iso: string) => new Date(iso).toLocaleDateString(zh ? "zh-TW" : "e
   <summary class="record-trace__summary">
     <CivicBug class="record-trace__mark" />
     <h2 class="record-trace__heading">{zh ? "記 · 紀錄" : "記 · The Trace"}</h2>
-    <span class="record-trace__hint">{zh ? "守護者、修訂、來源、評測" : "Stewards, amendments, sources, evals"}</span>
+    {amended && <span class="record-trace__hint">{zh ? "修訂 " : "Amended "}<time datetime={amended.amendedDate}>{amended.amendedDate.slice(0, 10)}</time></span>}
   </summary>
   <div class="record-trace__inner">
     <dl class="record-trace__rows">
@@ -42,7 +42,7 @@ const date = (iso: string) => new Date(iso).toLocaleDateString(zh ? "zh-TW" : "e
       </div>
       <div class="record-trace__row record-trace__evals">
         <dt>{zh ? "評測" : "Evals"}</dt>
-        <dd><div data-record-evals="trace" data-record-lang={zh ? "zh" : "en"}>{zh ? "尚未評測" : "Not yet evaluated"}</div></dd>
+        <dd><div data-record-evals="trace" data-record-lang={zh ? "zh" : "en"}></div></dd>
       </div>
       <div class="record-trace__row record-trace__contest">
         <dt>{zh ? "異議" : "Contest"}</dt>

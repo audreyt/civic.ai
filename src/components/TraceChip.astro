@@ -7,10 +7,8 @@ const { page } = Astro.props;
 const zh = lang2(page.data.lang) === "zh";
 const amended = record.summary(recordSources(page));
 const ledger = zh ? "/tw/ledger/" : "/ledger/";
-const amend = `https://github.com/audreyt/civic.ai/issues/new?title=${encodeURIComponent(`Amendment proposed: ${page.url}`)}`;
 ---
 <aside class="record-chip record-zone" aria-label={zh ? "本頁紀錄" : "Page record"} data-pagefind-ignore>
   {amended && <a href={ledger}>{zh ? "修訂 " : "Amended "}<time datetime={amended.amendedDate}>{amended.amendedDate.slice(0, 10)}</time></a>}
-  <div data-record-evals="chip" data-record-lang={zh ? "zh" : "en"}>{zh ? "尚未評測" : "Not yet evaluated"}</div>
-  <a href={amend}>{zh ? "提出修正" : "File an amendment"}</a>
+  <div data-record-evals="chip" data-record-lang={zh ? "zh" : "en"}></div>
 </aside>

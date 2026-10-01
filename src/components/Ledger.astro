@@ -17,8 +17,10 @@ for (const amendment of amendments) {
 <div class="record-ledger record-zone">
   <p>{zh ? "這是本站自己的修訂紀錄。每筆來自 Git 提交，包含首次發布；日期採 UTC。紀錄描述已提交的來源，不推測未提交的編輯。" : "This is the site's own amendment record. Each entry is a Git commit, including first publication; dates use UTC. The record describes committed sources, not uncommitted edits."}</p>
   <p><a href="/feed.xml">{zh ? "訂閱修訂紀錄（Atom）" : "Subscribe to amendments (Atom)"}</a></p>
-  <h2>{zh ? "本站評測" : "Site evaluations"}</h2>
-  <div data-record-evals="board" data-record-lang={zh ? "zh" : "en"}>{zh ? "尚未評測" : "Not yet evaluated"}</div>
+  <section class="record-ledger__evals">
+    <h2>{zh ? "本站評測" : "Site evaluations"}</h2>
+    <div data-record-evals="board" data-record-lang={zh ? "zh" : "en"}></div>
+  </section>
   {!record.complete && <p>{zh ? "Git 歷史缺失或不完整，暫不顯示修訂紀錄。" : "Git history is missing or shallow; amendment records are omitted."}</p>}
   {[...months].map(([month, entries]) => <section class="record-ledger__month">
     <h2>{month}</h2>
