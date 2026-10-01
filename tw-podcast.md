@@ -1,5 +1,6 @@
 ---
 layout: chapter
+page_class: transcript-page
 title: "Podcast：關懷六力"
 lang: zh-tw
 alt_lang_url: "/podcast/"

@@ -1,5 +1,6 @@
 ---
 layout: chapter
+page_class: transcript-page
 title: "從憤怒到交集：仁工智慧與「關懷六力」"
 author: "唐鳳"
 lang: zh-tw

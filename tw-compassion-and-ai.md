@@ -1,5 +1,6 @@
 ---
 layout: chapter
+page_class: transcript-page
 title: "Podcast：AI 能有「慈悲心」嗎？"
 author: "Caroline Emmer De Albuquerque Green、格西洛朵桑波"
 lang: zh-tw

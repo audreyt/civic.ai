@@ -940,8 +940,11 @@ em {
     display: block;
 }
 
-/* ─── TRANSCRIPT SPEAKER TURNS ─── */
-main p:has(> strong:first-child) {
+/* ─── TRANSCRIPT SPEAKER TURNS ───
+   Only transcripts (page_class: transcript-page) rule off each speaker's turn.
+   Elsewhere a bold lead-in is a run-in head, and a rule above every one
+   chopped prose and lists into slabs. */
+.transcript-page main p:has(> strong:first-child) {
     border-top: 1px solid var(--border);
     padding-top: 1.4rem;
     margin-top: 1.6rem;
@@ -1132,11 +1135,14 @@ header .next-action-button:hover {
 }
 
 /* ─── FOOTER ─── */
+/* The closing band bookends the Oxford-blue home masthead and stays dark in
+   both themes. It cannot sit on --ink: Lantern turns --ink cream, which left
+   pale text on a pale band. */
 footer {
     text-align: center;
     padding: 48px 32px;
-    background: var(--ink);
-    color: rgba(255, 255, 255, 0.55);
+    background: var(--oxford);
+    color: color-mix(in srgb, #fbfaf4 82%, var(--oxford));
     margin-top: 0;
     font-size: 0.85em;
     line-height: 1.8;
@@ -1762,14 +1768,14 @@ footer a:hover {
     }
 
     /* --- Interview page specifics --- */
-    body.interview-page main > * {
+    body.transcript-page main > * {
         max-width: 34em;
         margin-left: auto;
         margin-right: auto;
     }
 
     /* Method note: styled as formal abstract */
-    body.interview-page .method-note {
+    body.transcript-page .method-note {
         margin: 0 auto 7mm;
         padding: 3mm 4mm 3.5mm;
         border: 0.4pt solid #bbb4a8;
@@ -1781,11 +1787,11 @@ footer a:hover {
         color: var(--soil);
     }
 
-    body.interview-page .method-note p {
+    body.transcript-page .method-note p {
         margin: 1mm 0;
     }
 
-    body.interview-page .method-note a[href^="http"] {
+    body.transcript-page .method-note a[href^="http"] {
         text-decoration: underline;
         text-decoration-thickness: 0.4pt;
         text-underline-offset: 1.5pt;
@@ -1793,7 +1799,7 @@ footer a:hover {
     }
 
     /* Question headings: Oxford blue with gold number accent */
-    body.interview-page h4 {
+    body.transcript-page h4 {
         font-family: var(--prose);
         font-variant-numeric: lining-nums proportional-nums;
         font-size: 11.5pt;
@@ -1807,27 +1813,27 @@ footer a:hover {
     }
 
     /* Style Q1, Q2 etc. labels */
-    body.interview-page h4 a[href^="#q"] {
+    body.transcript-page h4 a[href^="#q"] {
         color: var(--harvest);
         font-weight: 700;
         margin-right: 0.2em;
     }
 
-    body.interview-page h4 + p,
-    body.interview-page h4 + p + p {
+    body.transcript-page h4 + p,
+    body.transcript-page h4 + p + p {
         break-before: avoid-page;
         page-break-before: avoid;
     }
 
     /* Speaker turn separators */
-    body.interview-page main p:has(> strong:first-child) {
+    body.transcript-page main p:has(> strong:first-child) {
         border-top: 0.35pt solid #d4cfc7;
         padding-top: 4mm;
         margin-top: 5mm;
     }
 
     /* Speaker labels: Oxford blue small-caps */
-    body.interview-page main p:has(> strong:first-child) strong:first-child {
+    body.transcript-page main p:has(> strong:first-child) strong:first-child {
         display: inline-block;
         margin-right: 0.5em;
         font-family: var(--sans);
@@ -1839,7 +1845,7 @@ footer a:hover {
     }
 
     /* Endorsement / Qualification / Correction labels: differentiated */
-    body.interview-page
+    body.transcript-page
         main
         p:has(> strong:first-child:not(:only-child))
         strong:first-child {
@@ -1866,7 +1872,7 @@ footer a:hover {
     }
 
     /* --- Footer imprint on last page --- */
-    body.interview-page main::after {
+    body.transcript-page main::after {
         content: "© 2025 Audrey Tang & Caroline Green · Oxford Institute for Ethics in AI · University of Oxford";
         display: block;
         max-width: 34em;
@@ -2784,7 +2790,7 @@ html[data-theme="dark"] main td {
     border-bottom-color: rgba(255, 255, 255, 0.06);
 }
 
-html[data-theme="dark"] main p:has(> strong:first-child) {
+html[data-theme="dark"] .transcript-page main p:has(> strong:first-child) {
     border-top-color: rgba(255, 255, 255, 0.08);
 }
 

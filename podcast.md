@@ -1,5 +1,6 @@
 ---
 layout: chapter
+page_class: transcript-page
 title: "Podcast: The 6-Pack of Care"
 lang: en-gb
 alt_lang_url: "/tw/podcast/"

@@ -1,5 +1,6 @@
 ---
 layout: chapter
+page_class: transcript-page
 title: "Podcast: Can AI Be Compassionate?"
 author: "Caroline Emmer De Albuquerque Green and Geshe Lodoe Sangpo"
 lang: en-gb

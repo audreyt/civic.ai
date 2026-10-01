@@ -1,5 +1,6 @@
 ---
 layout: chapter
+page_class: transcript-page
 title: "Outrage to Overlap: Civic AI & 6-Pack of Care"
 author: "Audrey Tang"
 lang: en-gb
