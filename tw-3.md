@@ -8,7 +8,7 @@ alt_lang_url: "/3"
 permalink: "/tw/3/"
 ---
 
-<noscript><img src="/img/pack3-1-tw.jpg" alt="手繪漫畫頁，標題為「COMPETENCE——PROBLEM」，描繪左右我們生活的演算法如何從可理解走向難以理解：先是簡單的平均評分，接著是只有工程師勉強看懂的分數與對數公式，最後是糾結的機器學習圖示，旁邊一個小角色與一個灰色框，框中寫著「要成為如此浩瀚的心智，連祂自己都再也說不出自己真正的名字」。" class="overview-image" width="1437" height="1999" loading="lazy" decoding="async"></noscript>
+<noscript><img src="/img/pack3-1-tw.jpg" alt="手繪漫畫頁，標題為「COMPETENCE——PROBLEM」，描繪左右我們生活的演算法如何從可理解走向難以理解：先是簡單的平均評分，接著是只有工程師勉強看懂的分數與對數公式，最後是糾結的機器學習圖示，旁邊一個小角色與一個灰色框，框中寫著「要成為如此浩瀚的心智，連祂自己都再也說不出自己真正的名字」。" class="overview-image" width="1437" height="1999" fetchpriority="high" decoding="async"></noscript>
 
 一座橋是否堪用，不看藍圖畫得多漂亮，而看它能否承受負荷——卡車駛過、風吹來、檢查員檢查螺栓時，都依然撐得住。
 

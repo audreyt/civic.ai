@@ -8,7 +8,7 @@ alt_lang_url: "/5"
 permalink: "/tw/5/"
 ---
 
-<noscript><img src="/img/pack5-1-tw.jpg" alt="手繪漫畫頁，標題為「團結力——PROBLEM」：當大家想要不同的東西，我們往往陷入「負和」或「零和」思維——兩位廚師都想要同一顆橘子，他們可以爭奪而兩敗俱傷（負和），或平分但仍假設一方所得即另一方所失（零和）；下方是一張輸贏對照圖。" class="overview-image" width="1437" height="1999" loading="lazy" decoding="async"></noscript>
+<noscript><img src="/img/pack5-1-tw.jpg" alt="手繪漫畫頁，標題為「團結力——PROBLEM」：當大家想要不同的東西，我們往往陷入「負和」或「零和」思維——兩位廚師都想要同一顆橘子，他們可以爭奪而兩敗俱傷（負和），或平分但仍假設一方所得即另一方所失（零和）；下方是一張輸贏對照圖。" class="overview-image" width="1437" height="1999" fetchpriority="high" decoding="async"></noscript>
 
 當大家想要不同的東西，反射動作是把它當成一場要贏的戰爭，或一塊要分的餅。但多數僵局只是表面上的零和：往每個立場底下的需求看去，往往能找到一個讓所有人都滿意的更大選項。團結力就是找出這些雙贏的修練——從長遠來看，是打造一個讓合作之舉同時也是最省力之舉的生態系統。
 

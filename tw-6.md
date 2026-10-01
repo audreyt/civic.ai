@@ -8,7 +8,7 @@ alt_lang_url: "/6"
 permalink: "/tw/6/"
 ---
 
-<noscript><img src="/img/pack6-1-tw.jpg" alt="手繪漫畫頁，標題為「共生力——PROBLEM」，寫著「別把整個社會放進同一個籃子」：卡通動物先是全擠進一個紫色籃子，接著籃子破裂散落，說明把現代文化、新聞與政治都交給少數幾家跨國平台會造成「單點故障」——而且就算平台不出事，一體適用的「成功」也會抹平由信仰、地方社群等構成的厚實中間層；下方排著一列灰色人形。" class="overview-image" width="1437" height="1999" loading="lazy" decoding="async"></noscript>
+<noscript><img src="/img/pack6-1-tw.jpg" alt="手繪漫畫頁，標題為「共生力——PROBLEM」，寫著「別把整個社會放進同一個籃子」：卡通動物先是全擠進一個紫色籃子，接著籃子破裂散落，說明把現代文化、新聞與政治都交給少數幾家跨國平台會造成「單點故障」——而且就算平台不出事，一體適用的「成功」也會抹平由信仰、地方社群等構成的厚實中間層；下方排著一列灰色人形。" class="overview-image" width="1437" height="1999" fetchpriority="high" decoding="async"></noscript>
 
 ### 從身邊開始
 

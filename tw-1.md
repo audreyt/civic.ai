@@ -8,7 +8,7 @@ alt_lang_url: "/1"
 permalink: "/tw/1/"
 ---
 
-<noscript><img src="/img/pack1-1-tw.jpg" alt="手繪漫畫頁，標題為「ATTENTIVENESS——PROBLEM」：一隻平靜的兔子勾選寫著「bad guy／worse guy／no chance of winning」的選票，旁邊是一片紅色混亂、怪物般人物的叫罵戰場，說明公民只能偶爾投票或在網路上互罵；下方三個小圖示分別代表凸顯彼此認同的事實與價值、在分歧處保持建設性，以及找出真正全新的解方。" class="overview-image" width="1437" height="1999" loading="lazy" decoding="async"></noscript>
+<noscript><img src="/img/pack1-1-tw.jpg" alt="手繪漫畫頁，標題為「ATTENTIVENESS——PROBLEM」：一隻平靜的兔子勾選寫著「bad guy／worse guy／no chance of winning」的選票，旁邊是一片紅色混亂、怪物般人物的叫罵戰場，說明公民只能偶爾投票或在網路上互罵；下方三個小圖示分別代表凸顯彼此認同的事實與價值、在分歧處保持建設性，以及找出真正全新的解方。" class="overview-image" width="1437" height="1999" fetchpriority="high" decoding="async"></noscript>
 
 在斑馬線前，駕駛為孩子減速——沒有人會停下來先解完方程式再行動。一個需求出現了，隨之而來的是義務。這就是覺察力。
 

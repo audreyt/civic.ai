@@ -134,9 +134,11 @@ export function renderMarkdown(body: string, url = ""): string {
             typeof md.renderer.rules.paragraph_close
         > = (tokens, index, options, _env, renderer) => {
             const number = numbers.get(index);
+            // The visible "¶ N" stays inside the accessible name (WCAG 2.5.3,
+            // label in name); the longer description is visually hidden.
             return (
                 (number
-                    ? `<a class="record-paragraph__link" href="#p${number}" aria-label="${url.startsWith("/tw/") ? `第 ${number} 段的永久連結` : `Permalink to paragraph ${number}`}">¶ ${number}</a>`
+                    ? `<a class="record-paragraph__link" href="#p${number}" data-pagefind-ignore>¶ ${number}<span class="visually-hidden">${url.startsWith("/tw/") ? `（第 ${number} 段的永久連結）` : ` (permalink to paragraph ${number})`}</span></a>`
                     : "") + renderer.renderToken(tokens, index, options)
             );
         };

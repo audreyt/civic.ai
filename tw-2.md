@@ -8,7 +8,7 @@ alt_lang_url: "/2"
 permalink: "/tw/2/"
 ---
 
-<noscript><img src="/img/pack2-1-tw.jpg" alt="手繪漫畫頁，標題為「RESPONSIBILITY——PROBLEM」：一群卡通動物擠在一起、各自喊出推卸責任的藉口，例如「我只是賣顧客要買的東西」與「我只是聽命行事」，下方寫著「沒有人負責時，就沒有人負責」，並以說明文字記述臺灣 2024 年臉書深偽詐騙案，引用平台卸責的回應「是演算法推送給你的」。" class="overview-image" width="1437" height="1999" loading="lazy" decoding="async"></noscript>
+<noscript><img src="/img/pack2-1-tw.jpg" alt="手繪漫畫頁，標題為「RESPONSIBILITY——PROBLEM」：一群卡通動物擠在一起、各自喊出推卸責任的藉口，例如「我只是賣顧客要買的東西」與「我只是聽命行事」，下方寫著「沒有人負責時，就沒有人負責」，並以說明文字記述臺灣 2024 年臉書深偽詐騙案，引用平台卸責的回應「是演算法推送給你的」。" class="overview-image" width="1437" height="1999" fetchpriority="high" decoding="async"></noscript>
 
 你的鄰居敲門：「你那塊地上的樹正在壓裂共用的牆。」負責任的回應不是「感謝您的回饋」，而是：誰來檢查、何時檢查、如果風險高會怎麼做、修復失敗如何申訴，以及若修復延遲你該承擔什麼。
 

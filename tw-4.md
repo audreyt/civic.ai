@@ -8,7 +8,7 @@ alt_lang_url: "/4"
 permalink: "/tw/4/"
 ---
 
-<noscript><img src="/img/pack4-1-tw.jpg" alt="手繪漫畫頁，標題為「RESPONSIVENESS——PROBLEM」：一隻拿著羅盤的兔子說明社會需要指標來判斷前進方向，但這些指標往往是壞掉的；成對的圖表對比上揚的「平均收入」與真實情況——上層階級大幅上升、下層階級卻停滯——並以一張對照表把點擊對應到標題黨、留言對應到激怒式論戰、使用者好評對應到諂媚的聊天機器人。" class="overview-image" width="1437" height="1999" loading="lazy" decoding="async"></noscript>
+<noscript><img src="/img/pack4-1-tw.jpg" alt="手繪漫畫頁，標題為「RESPONSIVENESS——PROBLEM」：一隻拿著羅盤的兔子說明社會需要指標來判斷前進方向，但這些指標往往是壞掉的；成對的圖表對比上揚的「平均收入」與真實情況——上層階級大幅上升、下層階級卻停滯——並以一張對照表把點擊對應到標題黨、留言對應到激怒式論戰、使用者好評對應到諂媚的聊天機器人。" class="overview-image" width="1437" height="1999" fetchpriority="high" decoding="async"></noscript>
 
 診所公布營業時間；病人到達時門卻鎖著。有回應力的診所會道歉、公布原因、更新營業時間，並在下次以簡訊通知人們。修復成為系統的一部分。
 
