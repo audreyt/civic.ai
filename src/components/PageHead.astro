@@ -53,6 +53,17 @@ document.documentElement.classList.add("js");
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(settle);
     else window.addEventListener("load", settle);
 })();
+// iOS Lockdown Mode stops decoding AVIF yet still picks a <picture>'s
+// type="image/avif" source, so the image breaks. When an image inside a
+// <picture> fails, drop its sources: the browser re-selects and loads the
+// JPEG/PNG <img src> fallback. Image errors do not bubble, hence capture.
+document.addEventListener("error", function (event) {
+    var img = event.target;
+    var picture = img && img.tagName === "IMG" ? img.parentNode : null;
+    if (!picture || picture.tagName !== "PICTURE") return;
+    var sources = picture.querySelectorAll("source");
+    for (var i = 0; i < sources.length; i++) picture.removeChild(sources[i]);
+}, true);
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#f8f4ed" />
