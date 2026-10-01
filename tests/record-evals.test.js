@@ -90,6 +90,22 @@ test("checks locked glossary terms in both source data and the matching rendered
     expect(evaluateTerms(canon.slice(1), glossaryHtml).pass).toBe(false);
 });
 
+test("reads the locked label from a glossary entry paired with its English term", () => {
+    const paired = canon
+        .map(
+            (entry) =>
+                `<dt id="${entry.id}"><span class="glossary-term">${entry.term_tw}</span><span class="glossary-term-pair" lang="en-GB">Term</span></dt><dd>Definition</dd>`
+        )
+        .join("");
+    expect(evaluateTerms(canon, paired).pass).toBe(true);
+    expect(evaluateTerms(canon, paired.replace("否決帳本", "wrong")).pass).toBe(
+        false
+    );
+    expect(
+        evaluateTerms(canon, paired.replace('id="kami"', 'id="other"')).pass
+    ).toBe(false);
+});
+
 const alt = (lang, url) =>
     `<link rel="alternate" hreflang="${lang}" href="https://civic.ai${url}">`;
 const twins = [

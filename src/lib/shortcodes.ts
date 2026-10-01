@@ -333,8 +333,10 @@ export function renderGlossaryList(lang: string | undefined): string {
             const dts = tierEntries
                 .map((entry) => {
                     const term = zh ? entry.term_tw : entry.term_en;
+                    const pairedTerm = zh ? entry.term_en : entry.term_tw;
+                    const pairedLang = zh ? "en-GB" : "zh-TW";
                     const definition = zh ? entry.def_tw : entry.def_en;
-                    return `<dt id="${escapeAttr(entry.id)}">${escapeHtml(term)}</dt><dd>${definition}</dd>`;
+                    return `<dt id="${escapeAttr(entry.id)}"><span class="glossary-term">${escapeHtml(term)}</span><span class="glossary-term-pair" lang="${pairedLang}">${escapeHtml(pairedTerm)}</span></dt><dd>${definition}</dd>`;
                 })
                 .join("");
 

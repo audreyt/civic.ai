@@ -6631,6 +6631,26 @@ html[data-theme="dark"] .record-zone .record-eval--fail {
 
 /* ─── lane G: paired glossary entries ─── */
 
+.glossary-list dt {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2em 0.55em;
+    align-items: baseline;
+}
+
+.glossary-term {
+    font-family: var(--prose);
+    font-size: 1.08em;
+}
+
+.glossary-term-pair {
+    color: var(--soil);
+    font-family: var(--machine);
+    font-size: 0.78em;
+    font-weight: 400;
+    overflow-wrap: anywhere;
+}
+
 /* ─── end lane G ─── */
 
 /* ─── lane H: Your Kami's own trace ─── */

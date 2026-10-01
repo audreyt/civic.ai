@@ -326,7 +326,9 @@ test("renderGlossaryList renders untiered mock entries in instruments tier", () 
     expect(html).toContain('<h2 id="glossary-architecture">Architecture</h2>');
     expect(html).toContain('<h2 id="glossary-design">Design</h2>');
     expect(html).toContain('<h2 id="glossary-instruments">Instruments</h2>');
-    expect(html).toContain('<dt id="">Term EN</dt><dd>Definition EN</dd>');
+    expect(html).toContain(
+        '<dt id=""><span class="glossary-term">Term EN</span><span class="glossary-term-pair" lang="zh-TW">詞彙</span></dt><dd>Definition EN</dd>'
+    );
 
     const twHtml = renderGlossaryList("zh-tw");
     expect(twHtml).toContain(
@@ -336,5 +338,7 @@ test("renderGlossaryList renders untiered mock entries in instruments tier", () 
     expect(twHtml).toContain('<h2 id="glossary-architecture">架構</h2>');
     expect(twHtml).toContain('<h2 id="glossary-design">設計</h2>');
     expect(twHtml).toContain('<h2 id="glossary-instruments">工具</h2>');
-    expect(twHtml).toContain('<dt id="">詞彙</dt><dd>定義</dd>');
+    expect(twHtml).toContain(
+        '<dt id=""><span class="glossary-term">詞彙</span><span class="glossary-term-pair" lang="en-GB">Term EN</span></dt><dd>定義</dd>'
+    );
 });

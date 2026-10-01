@@ -6,6 +6,20 @@ export function escapeRecord(value) {
         .replaceAll('"', "&quot;");
 }
 
+// A glossary <dt> holds either the bare label or the label followed by its
+// other-language pair; the locked label is the first part in both cases.
+function glossaryLabel(id, html) {
+    const inner =
+        new RegExp(`<dt\\b[^>]*id=["']${id}["'][^>]*>([\\s\\S]*?)</dt>`).exec(
+            html
+        )?.[1] ?? "";
+    return (
+        /^<span class="glossary-term">([\s\S]*?)<\/span><span class="glossary-term-pair"/.exec(
+            inner
+        )?.[1] ?? inner
+    );
+}
+
 export function evaluateTerms(glossary, html) {
     const canon = {
         "civic-ai": "仁工智慧",
@@ -20,10 +34,7 @@ export function evaluateTerms(glossary, html) {
         pass:
             glossary.some(
                 (entry) => entry.id === id && entry.term_tw === term
-            ) &&
-            new RegExp(
-                `<dt\\b[^>]*id=["']${id}["'][^>]*>([\\s\\S]*?)</dt>`
-            ).exec(html)?.[1] === escapeRecord(term),
+            ) && glossaryLabel(id, html) === escapeRecord(term),
     }));
     return {
         pass: detail.every((row) => row.pass),
