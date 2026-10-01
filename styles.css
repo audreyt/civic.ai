@@ -161,6 +161,22 @@ html[data-theme="dark"].fonts-unavailable {
 }
 
 /* ─── LINKS ─── */
+/* Visited links shift towards soil, and external links carry a small
+   machinery-voiced arrow (DESIGN.md §11.2). */
+main a:visited {
+    color: color-mix(in srgb, var(--moss) 72%, var(--soil));
+}
+
+main a[href^="http"]:not([href^="https://civic.ai"]):not(:has(img))::after {
+    content: "\2197";
+    display: inline-block;
+    margin-left: 0.12em;
+    font-family: var(--machine);
+    font-size: 0.7em;
+    line-height: 1;
+    text-decoration: none;
+}
+
 a {
     color: var(--teal);
     text-decoration: underline;
@@ -190,14 +206,14 @@ a:hover {
     border-bottom-color: var(--gold);
 }
 .gloss:focus-visible {
-    outline: 2px solid var(--gold-light);
+    outline: 2px solid var(--moss);
     outline-offset: 2px;
 }
 
 /* ─── HEADER ─── */
 header {
     background: var(--oxford-blue);
-    color: white;
+    color: #fbfaf4;
     padding: 56px 32px 48px;
     text-align: center;
     position: relative;
@@ -251,7 +267,7 @@ header img.oxford-logo:hover {
 }
 
 .lang-toggle:hover {
-    color: white;
+    color: #fbfaf4;
     border-color: var(--gold-light);
     background: rgba(255, 255, 255, 0.08);
 }
@@ -286,7 +302,7 @@ header nav.site-nav a {
 header nav.site-nav a:hover,
 header nav.site-nav a:focus-visible,
 header nav.site-nav a[aria-current="page"] {
-    color: #fff;
+    color: #fbfaf4;
     border-bottom-color: var(--gold-light);
 }
 
@@ -312,7 +328,7 @@ header p {
 }
 
 header a {
-    color: white;
+    color: #fbfaf4;
     text-decoration: none;
 }
 
@@ -802,12 +818,12 @@ h3[id^="faq-"] {
 .faq-filter button:focus-visible,
 .faq-filter button[aria-pressed="true"] {
     background: var(--oxford-blue);
-    color: #fff;
+    color: #fbfaf4;
     transform: translateY(-1px);
 }
 
 .faq-filter button:focus-visible {
-    outline: 2px solid var(--gold-light);
+    outline: 2px solid var(--moss);
     outline-offset: 3px;
 }
 
@@ -1001,7 +1017,7 @@ body.interview-page main p:has(> strong:first-child) strong:first-child {
 }
 
 .audio-section audio:focus-visible {
-    outline: 2px solid var(--gold);
+    outline: 2px solid var(--moss);
     outline-offset: 3px;
 }
 
@@ -1125,7 +1141,7 @@ p + .figure-caption {
 /* ─── NEXT ACTION / NAVIGATION ─── */
 .next-action {
     background: var(--oxford-blue);
-    color: white;
+    color: #fbfaf4;
     padding: 48px 24px;
     margin: 0;
     text-align: center;
@@ -1156,7 +1172,7 @@ p + .figure-caption {
     font-family: var(--serif);
     font-size: 2em;
     margin: 0 0 16px 0;
-    color: white;
+    color: #fbfaf4;
     border-bottom: none;
 }
 
@@ -1171,7 +1187,7 @@ p + .figure-caption {
     align-items: center;
     gap: 10px;
     background: transparent;
-    color: white;
+    color: #fbfaf4;
     text-decoration: none;
     padding: 14px 28px;
     border-radius: 3px;
@@ -1185,7 +1201,7 @@ p + .figure-caption {
 
 .next-action-button:hover {
     background: rgba(255, 255, 255, 0.1);
-    color: white;
+    color: #fbfaf4;
     border-color: var(--gold-light);
 }
 
@@ -1205,7 +1221,7 @@ p + .figure-caption {
 /* Header manifesto button — override for use inside header */
 header .next-action-button {
     background: transparent;
-    color: white;
+    color: #fbfaf4;
     border: 1px solid rgba(255, 255, 255, 0.35);
     padding: 10px 24px;
     font-size: 0.85em;
@@ -1241,7 +1257,7 @@ footer a {
 }
 
 footer a:hover {
-    color: white;
+    color: #fbfaf4;
     text-decoration: underline;
     text-underline-offset: 3px;
 }
@@ -1318,7 +1334,7 @@ footer a:hover {
     overflow: visible;
     clip: auto;
     background: var(--oxford-blue);
-    color: #fff;
+    color: #fbfaf4;
     border-radius: 8px;
     outline: 2px solid var(--gold-light);
     outline-offset: 2px;
@@ -1664,7 +1680,7 @@ footer a:hover {
     /* --- Header: Oxford blue title band --- */
     header {
         background: #002147 !important;
-        color: white;
+        color: #fbfaf4;
         padding: 14mm 12mm 11mm;
         margin: 0 -18mm 0;
         width: calc(100% + 36mm);
@@ -1693,13 +1709,13 @@ footer a:hover {
     }
 
     header > .site-header__title-block h1 {
-        color: white;
+        color: #fbfaf4;
     }
 
     header h1 {
         opacity: 1 !important;
         animation: none !important;
-        color: white;
+        color: #fbfaf4;
         font-family: "Cormorant Garamond", Georgia, serif;
         font-variant-numeric: lining-nums proportional-nums;
         font-size: 22pt;
@@ -3060,7 +3076,7 @@ html[data-theme="dark"] .audio-section {
 .polis-pill-nav a:focus-visible,
 .polis-pill-nav a.is-active {
     background: var(--oxford-blue);
-    color: #fff;
+    color: #fbfaf4;
     transform: translateY(-1px);
 }
 
@@ -3068,7 +3084,7 @@ html[data-theme="dark"] .audio-section {
 .polis-statement-card:focus-visible,
 .polis-participant-card:focus-visible,
 .polis-point:focus-visible {
-    outline: 2px solid var(--gold-light);
+    outline: 2px solid var(--moss);
     outline-offset: 3px;
 }
 
@@ -3238,7 +3254,7 @@ html[data-theme="dark"] .audio-section {
     justify-content: center;
     padding: 8px 12px;
     background: var(--oxford-blue);
-    color: #fff;
+    color: #fbfaf4;
 }
 
 .polis-status-pill {
@@ -3731,7 +3747,7 @@ html[data-theme="dark"] .polis-pill-nav a:hover,
 html[data-theme="dark"] .polis-pill-nav a:focus-visible,
 html[data-theme="dark"] .polis-pill-nav a.is-active {
     background: var(--teal);
-    color: #fff;
+    color: #fbfaf4;
 }
 
 html[data-theme="dark"] .polis-consensus-card,
@@ -3839,10 +3855,11 @@ html[data-theme="dark"] .polis-status-pill {
     position: relative;
 }
 
+/* Terminal copy-boxes are machinery: squared, hairline, mono (DESIGN.md §11.8) */
 pre {
     background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-machine);
     padding: 0.85rem 1rem;
     margin: 1.1rem 0;
     overflow-x: auto;
@@ -3850,9 +3867,7 @@ pre {
 }
 
 pre code {
-    font-family:
-        ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono",
-        monospace;
+    font-family: var(--machine);
     font-size: 0.82rem;
     line-height: 1.6;
     color: var(--text);
@@ -3865,17 +3880,14 @@ pre code {
     position: absolute;
     top: 0.45rem;
     right: 0.45rem;
-    font-family:
-        system-ui,
-        -apple-system,
-        sans-serif;
+    font-family: var(--machine);
     font-size: 0.68rem;
     line-height: 1;
     padding: 0.3em 0.6em;
     color: var(--muted);
     background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 6px;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-machine);
     cursor: pointer;
     transition:
         opacity 0.15s ease,
@@ -3894,6 +3906,14 @@ pre code {
     opacity: 1;
     color: var(--teal);
     border-color: var(--teal);
+}
+
+/* Phones: long prompts wrap rather than scroll sideways; Copy still copies them whole. */
+@media (max-width: 600px) {
+    pre code {
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+    }
 }
 
 /* Agent bootstrap directive: fine print tucked under the hero; present and machine-readable */
@@ -5612,19 +5632,19 @@ header h1 {
 .cta-button--primary {
     background: var(--oxford-blue);
     border-color: var(--oxford-blue);
-    color: #fff;
+    color: #fbfaf4;
 }
 
 .cta-button--primary:hover {
     background: var(--teal);
     border-color: var(--teal);
-    color: #fff;
+    color: #fbfaf4;
 }
 
 html[data-theme="dark"] .cta-button--primary {
     background: var(--teal);
     border-color: var(--teal);
-    color: #fff;
+    color: #fbfaf4;
 }
 
 html[data-theme="dark"] .cta-button--primary:hover {
@@ -6222,10 +6242,10 @@ html[data-theme="dark"] body[data-pack="6"] {
     }
 
     /* A photocopy cannot follow a link: print external addresses in brackets. */
-    main a[href^="http"]:not(:has(img))::after {
+    main a[href^="http"]:not([href^="https://civic.ai"]):not(:has(img))::after {
         content: " [" attr(href) "]";
         font-size: 0.82em;
-        color: #5f6a7d;
+        color: var(--soil);
         overflow-wrap: anywhere;
     }
 }
