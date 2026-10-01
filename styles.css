@@ -6410,6 +6410,36 @@ html[data-theme="dark"] .record-zone .record-eval--fail {
     display: none;
 }
 
+/* Copy link is an icon button: a chain that becomes a check once copied. */
+.faq-copy-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.faq-copy-link__icon {
+    width: 1rem;
+    height: 1rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.faq-copy-link__check,
+.faq-copy-link.is-copied .faq-copy-link__chain {
+    display: none;
+}
+
+.faq-copy-link.is-copied .faq-copy-link__check {
+    display: inline;
+}
+
 .faq-copy-link:hover,
 .faq-copy-link:focus-visible,
 .faq-disclosure:hover,

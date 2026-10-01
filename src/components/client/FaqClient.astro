@@ -13,8 +13,13 @@
 
             var zh = (document.documentElement.lang || "").indexOf("zh") === 0;
             var L = zh
-                ? { copy: "複製連結", copied: "已複製", show: "展開回答", hide: "收合回答" }
-                : { copy: "Copy link", copied: "Copied", show: "Show answer", hide: "Hide answer" };
+                ? { copy: "複製這題的連結", copied: "已複製", show: "展開回答", hide: "收合回答" }
+                : { copy: "Copy link to this question", copied: "Copied", show: "Show answer", hide: "Hide answer" };
+            // A link icon, and the check it turns into once the link is copied.
+            var ICON =
+                '<svg class="faq-copy-link__icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false">' +
+                '<path class="faq-copy-link__chain" d="M6.6 9.4a2.9 2.9 0 0 0 4.1 0l2-2a2.9 2.9 0 0 0-4.1-4.1l-.9.9M9.4 6.6a2.9 2.9 0 0 0-4.1 0l-2 2a2.9 2.9 0 0 0 4.1 4.1l.9-.9"/>' +
+                '<path class="faq-copy-link__check" d="M3.5 8.5l3 3 6-7"/></svg>';
             var live = document.createElement("p");
             live.className = "faq-live";
             live.setAttribute("aria-live", "polite");
@@ -57,10 +62,16 @@
                 var copyButton = document.createElement("button");
                 copyButton.type = "button";
                 copyButton.className = "faq-copy-link";
-                copyButton.textContent = L.copy;
+                copyButton.setAttribute("aria-label", L.copy);
+                copyButton.title = L.copy;
+                copyButton.innerHTML = ICON;
                 copyButton.addEventListener("click", function () {
                     var text = location.origin + location.pathname + "#" + heading.id;
-                    copy(text).then(function () { live.textContent = L.copied; }, function () {});
+                    copy(text).then(function () {
+                        live.textContent = L.copied;
+                        copyButton.classList.add("is-copied");
+                        setTimeout(function () { copyButton.classList.remove("is-copied"); }, 1600);
+                    }, function () {});
                 });
                 heading.appendChild(copyButton);
 
