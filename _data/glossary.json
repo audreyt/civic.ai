@@ -122,6 +122,7 @@
         "tier": "architecture",
         "term_en": "keeping",
         "term_tw": "守護",
+        "gloss_auto": false,
         "def_en": "The slow communal work of care, custody and accountable maintenance that turns a working agent into a Kami. It continues after installation through checking notes, recording overrides, funding maintenance and agreeing when the system should end. A setup guide cannot supply this practice. See <a href=\"/kami/#before-you-start\">Before you start</a>.",
         "def_tw": "透過照顧、保管與可問責的維護，讓能運作的智慧體成為 Kami 的社群慢工。安裝之後仍須核對筆記、記錄否決、支付維護費用，並約定系統何時結束。架設指南不能代替這份實踐。見〈<a href=\"/tw/kami/#before-you-start\">開始之前</a>〉。"
     },
@@ -222,7 +223,8 @@
         "def_en": "An expiry date set in advance, after which a deployment's mandate must be actively renewed or it ends — with succession, handover rehearsal, and <a href=\"/measures/#exit-readiness\">exit readiness</a> as its measure. Pack 6 makes sunsets the structural answer to Robert Michels's iron law of oligarchy: stewards that cannot contemplate their own ending become masters. Boundedness limits what a system may do; sunset limits how long it may do it.",
         "def_tw": "預先設定的到期日——到期之後，部署的授權必須重新取得，否則即告結束——以傳承、交接演練與<a href=\"/tw/measures/#exit-readiness\">退出就緒度</a>為衡量。共生力（Pack 6）以落日作為對 Robert Michels 寡頭鐵律的結構性回答：不能想像自己終結的管家，終將成為主人。有界性限制系統可以做什麼；落日限制它可以做多久。",
         "aliases_en": ["Sunset"],
-        "aliases_tw": ["落日計時器", "可退場", "退場", "落日"]
+        "aliases_tw": ["落日計時器", "可退場", "退場", "落日"],
+        "gloss_skip_tw": ["230 條款退場"]
     },
     {
         "id": "corrigibility",
@@ -271,7 +273,8 @@
         "term_en": "bridging / bridging-based ranking",
         "term_tw": "搭橋 / 搭橋式排序",
         "def_en": "An algorithmic approach, named by Aviv Ovadya in 2022, that rewards content earning cross-group endorsement rather than raw engagement. Platforms using bridging-based ranking — such as X's Community Notes — surface ideas that appeal to otherwise opposed clusters, making overlap rather than outrage the path to algorithmic reach. The 6-Pack's uncommon-ground index (Pack 5) descends from this literature: the same cross-group co-endorsement signal, audited at the level of shared decisions rather than used to rank a feed.",
-        "def_tw": "一種由 Aviv Ovadya 在 2022 年命名的演算法方法，獎勵獲得跨群體認可的內容，而非單純的互動量。採用搭橋式排序的平台——如 X 平台的社群備註——浮現能同時打動對立群體的想法，使重疊而非憤怒成為演算法觸及的路徑。關懷六力的罕見共識指數（Pack 5）正是承接這支文獻：同樣的跨群體共同背書訊號，不用於排序資訊流，而是在共同決策的層級接受稽核。"
+        "def_tw": "一種由 Aviv Ovadya 在 2022 年命名的演算法方法，獎勵獲得跨群體認可的內容，而非單純的互動量。採用搭橋式排序的平台——如 X 平台的社群備註——浮現能同時打動對立群體的想法，使重疊而非憤怒成為演算法觸及的路徑。關懷六力的罕見共識指數（Pack 5）正是承接這支文獻：同樣的跨群體共同背書訊號，不用於排序資訊流，而是在共同決策的層級接受稽核。",
+        "gloss_skip_en": ["bridging ancient wisdom"]
     },
     {
         "id": "federation",
@@ -313,7 +316,8 @@
         "def_en": "The standing to challenge an algorithmic decision and be answered — notice, hearing, and reasoned explanation for automated public decisions (Citron's technological due process, 2008), operationalised as Pack 4's one-click appeal with a clock: every appeal lands in a <a href=\"/glossary/#correction-backlog-board\">correction backlog</a> and is owed closure, not mere receipt; the backlog's public view shows status and age, never private case details. Voice in Hirschman's pair; exit belongs to Pack 5. The research programme is contestability by design. See <a href=\"/sources/\">Sources</a>.",
         "def_tw": "挑戰演算法決定並獲得回應的地位——自動化公共決策應有通知、聽證與說理（Citron 的技術性正當程序，2008），在回應力（Pack 4）落實為附有計時的一鍵申訴：每件申訴都進入<a href=\"/tw/glossary/#correction-backlog-board\">校正積壓</a>，必須有始有終，而非石沉大海；積壓的公開檢視只顯示狀態與案齡，不揭露私人案情。這是 Hirschman 二元組中的發聲；退出屬於團結力（Pack 5）。所屬的研究計畫是可爭議性設計（contestability by design）。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。",
         "aliases_en": ["contestable"],
-        "aliases_tw": ["申訴"]
+        "aliases_tw": ["申訴"],
+        "gloss_skip_en": ["see the appeal"]
     },
     {
         "id": "trust-under-loss",
@@ -455,7 +459,13 @@
         "term_tw": "煞車",
         "def_en": "A single, prominent, wired-and-tested control that stops the system now — accessible at the speed of human recognition, so a person can halt a wrong action in the moment rather than only signal for later. The engineering pattern is Fowler's circuit breaker (2014); the care application adds the pause-on-ambiguity rule and the ledger, because a brake that is easy to pull needs an answer to alarm fatigue: every pull is logged and attributed. Specified on the <a href=\"/measures/#named-instruments\">Measures</a> page.",
         "def_tw": "單一、醒目、已接線且經過測試的控制——讓人一察覺問題就能操作，使人能在當下叫停錯誤的行動，而不只是為日後留下訊號。工程模式是 Fowler 的斷路器（2014）；關懷的應用加上了有疑即停（pause-on-ambiguity）的規則與帳本，因為容易操作的煞車也必須處理警示疲勞：每次拉下都要記錄，並註明由誰操作。工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。",
-        "aliases_tw": ["斷路器"]
+        "aliases_tw": ["斷路器"],
+        "gloss_skip_en": [
+            "hit the brakes",
+            "the brake and never the gas pedal",
+            "slam the brake"
+        ],
+        "gloss_skip_tw": ["踩煞車", "投資煞車", "踩死煞車"]
     },
     {
         "id": "remedy-escrow",
@@ -515,7 +525,8 @@
         "def_en": "The first stage of the Apprentice Model: the system sees real inputs and proposes real actions but does not act, its proposals compared against the human or prior system so divergences can be studied before trust is granted. Shadow mode, then canary release, then guarded full rollout — apprenticeship as legitimate peripheral participation (Lave and Wenger, 1991), read as the mechanism by which a room grants a system real work. Specified on the <a href=\"/measures/#named-instruments\">Measures</a> page.",
         "def_tw": "學徒模式的第一階段：系統看見真實輸入、提出真實行動方案，但不執行；它的提案與人類或舊系統對照，使分歧在給予信任之前被研究。先用影子模式，再金絲雀發布，最後在防護措施下全面上線——學徒制即正當的邊緣性參與（Lave 與 Wenger，1991），可理解為場域中的人授予系統實質工作的機制。工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。",
         "aliases_en": ["apprentice", "apprenticeship"],
-        "aliases_tw": ["學徒模式"]
+        "aliases_tw": ["學徒模式"],
+        "gloss_skip_en": ["about apprenticeship"]
     },
     {
         "id": "canary-release",

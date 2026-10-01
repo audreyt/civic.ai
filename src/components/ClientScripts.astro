@@ -10,11 +10,16 @@ import ReadingPositionClient from "./client/ReadingPositionClient.astro";
 interface Props { page: PageRecord; }
 const { page } = Astro.props;
 const zh = lang2(page.data.lang) === "zh";
-const glossaryPayload = (glossary as any[]).map((entry) => ({
-    t: smartQuotes(zh ? entry.term_tw : entry.term_en),
-    id: entry.id,
-    alt: (zh ? (entry.aliases_tw ?? []) : (entry.aliases_en ?? [])).map((a: string) => smartQuotes(a)),
-}));
+// An entry whose word is everyday language (gloss_auto: false) is never
+// glossed automatically; authored links still reach it.
+const glossaryPayload = (glossary as any[])
+    .filter((entry) => entry.gloss_auto !== false)
+    .map((entry) => ({
+        t: smartQuotes(zh ? entry.term_tw : entry.term_en),
+        id: entry.id,
+        alt: (zh ? (entry.aliases_tw ?? []) : (entry.aliases_en ?? [])).map((a: string) => smartQuotes(a)),
+        skip: (zh ? (entry.gloss_skip_tw ?? []) : (entry.gloss_skip_en ?? [])).map((s: string) => smartQuotes(s)),
+    }));
 const glossaryBase = zh ? "/tw/glossary/" : "/glossary/";
 ---
 <script is:inline define:vars={{ glossaryPayload, glossaryBase }}>
@@ -133,6 +138,12 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                     //      e.g. "decision trace" also tries "decision traces"
                     //   5. De-duplicate; drop any candidate shorter than 2 chars.
                     //   6. Sort entries longest-candidate-first so longer terms win over substrings.
+                    //
+                    // A match is passed over when it sits inside one of the entry's
+                    // everyday phrases (gloss_skip_en / gloss_skip_tw, e.g. "hit the
+                    // brakes") or inside a longer term of another entry ("bridging" in
+                    // "bridging map"). At the matched position the entry's longest
+                    // candidate is linked, so "bridging-based ranking" is not cut short.
 
                     function buildCandidates(raw) {
                         var seen = {};
@@ -195,10 +206,66 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                         for (var ci = 0; ci < candidates.length; ci++) {
                             if (candidates[ci].length > maxLen) maxLen = candidates[ci].length;
                         }
-                        entries.push({ candidates: candidates, maxLen: maxLen, id: g[i].id });
+                        entries.push({ candidates: candidates, maxLen: maxLen, id: g[i].id, skip: g[i].skip || [] });
                     }
                     // Longest-candidate-first so longer terms win over substrings
                     entries.sort(function (a, b) { return b.maxLen - a.maxLen; });
+
+                    // Phrases a candidate must not be linked inside: the entry's own
+                    // everyday phrases, then longer terms of other entries.
+                    function blockersFor(entry, mf) {
+                        var out = [];
+                        for (var bi = 0; bi < entry.skip.length; bi++) {
+                            if (entry.skip[bi].indexOf(mf) !== -1) out.push(entry.skip[bi]);
+                        }
+                        for (var oi = 0; oi < entries.length; oi++) {
+                            if (entries[oi] === entry) continue;
+                            var oc = entries[oi].candidates;
+                            for (var ok = 0; ok < oc.length; ok++) {
+                                if (oc[ok].length > mf.length && oc[ok].indexOf(mf) !== -1) out.push(oc[ok]);
+                            }
+                        }
+                        return out;
+                    }
+
+                    function insideBlocker(text, idx, len, blockers) {
+                        for (var bi = 0; bi < blockers.length; bi++) {
+                            var b = blockers[bi];
+                            var p = text.indexOf(b, Math.max(0, idx + len - b.length));
+                            while (p !== -1 && p <= idx) {
+                                if (p + b.length >= idx + len) return true;
+                                p = text.indexOf(b, p + 1);
+                            }
+                        }
+                        return false;
+                    }
+
+                    function wordEndsAt(text, end) {
+                        return isCJK || end === text.length || !/[A-Za-z0-9_]/.test(text.charAt(end));
+                    }
+
+                    // First position in text where mf matches outside every blocker, or -1.
+                    function findMatch(text, mf, blockers) {
+                        if (isCJK) {
+                            var from = 0;
+                            var at;
+                            while ((at = text.indexOf(mf, from)) !== -1) {
+                                if (!insideBlocker(text, at, mf.length, blockers)) return at;
+                                from = at + 1;
+                            }
+                            return -1;
+                        }
+                        // word-boundary, case-sensitive
+                        var pattern = "(^|[^A-Za-z0-9_])" + mf.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "(?=[^A-Za-z0-9_]|$)";
+                        var re = new RegExp(pattern, "g");
+                        var m;
+                        while ((m = re.exec(text))) {
+                            var start = m.index + m[1].length;
+                            if (!insideBlocker(text, start, mf.length, blockers)) return start;
+                            re.lastIndex = start + 1;
+                        }
+                        return -1;
+                    }
 
                     // Ancestors to skip text nodes under
                     var SKIP_TAGS = { H1:1, H2:1, H3:1, H4:1, H5:1, H6:1, A:1, CODE:1, PRE:1, BUTTON:1, DT:1, DD:1 };
@@ -237,6 +304,7 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                         var didLink = false;
                         for (var ci2 = 0; ci2 < entry.candidates.length && !didLink; ci2++) {
                             var mf = entry.candidates[ci2];
+                            var blockers = blockersFor(entry, mf);
 
                             for (var ti = 0; ti < textNodes.length && !didLink; ti++) {
                                 var node = textNodes[ti];
@@ -245,18 +313,17 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                                 var text = node.nodeValue;
                                 if (!text) continue;
 
-                                var idx;
-                                if (isCJK) {
-                                    idx = text.indexOf(mf);
-                                } else {
-                                    // word-boundary, case-sensitive
-                                    var pattern = "(^|[^A-Za-z0-9_])" + mf.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "(?=[^A-Za-z0-9_]|$)";
-                                    var re = new RegExp(pattern);
-                                    var m = re.exec(text);
-                                    idx = m ? m.index + m[1].length : -1;
-                                }
-
+                                var idx = findMatch(text, mf, blockers);
                                 if (idx < 0) continue;
+
+                                // Link the longest of the entry's forms that starts here.
+                                var len = mf.length;
+                                for (var li = 0; li < entry.candidates.length; li++) {
+                                    var lc = entry.candidates[li];
+                                    if (lc.length > len && text.substr(idx, lc.length) === lc && wordEndsAt(text, idx + lc.length)) {
+                                        len = lc.length;
+                                    }
+                                }
 
                                 // ── Split and wrap ────────────────────────────────────────────
                                 // When idx > 0: node splits into prefix (node) + rest (matchNode).
@@ -268,7 +335,7 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                                 } else {
                                     matchNode = node;
                                 }
-                                var suffixNode = matchNode.splitText(mf.length);
+                                var suffixNode = matchNode.splitText(len);
 
                                 var a = document.createElement("a");
                                 a.className = "gloss";

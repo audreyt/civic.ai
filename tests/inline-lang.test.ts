@@ -196,7 +196,22 @@ test("a glossary term the first-use glosser matches is never split by a label", 
         term_tw: string;
         aliases_tw?: string[];
         aliases_en?: string[];
+        gloss_skip_tw?: string[];
+        gloss_skip_en?: string[];
     }>) {
+        // An everyday phrase the glosser passes over must stay in one text node.
+        for (const phrase of entry.gloss_skip_tw ?? []) {
+            checked++;
+            expect(
+                annotateInlineLang(`<p>前 ${phrase} 後</p>`, "zh-tw")
+            ).toContain(phrase);
+        }
+        for (const phrase of entry.gloss_skip_en ?? []) {
+            checked++;
+            expect(annotateInlineLang(`<p>${phrase}</p>`, "en-gb")).toBe(
+                `<p>${phrase}</p>`
+            );
+        }
         for (const raw of [entry.term_tw, ...(entry.aliases_tw ?? [])]) {
             expect(
                 annotateInlineLang(`<p>前 ${raw} 後</p>`, "zh-tw")
