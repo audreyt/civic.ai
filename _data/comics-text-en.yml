@@ -1,0 +1,1031 @@
+# The English lettering of Nicky Case's comics, as the site shows it.
+#
+# Source for scripts/comics-vector.mjs, which fits each box to the print
+# masters of https://github.com/ncase/civic-ai-comics and writes img/*.svg.
+# The schema follows that repository's compact text spec
+# (translation-assets/zh-TW.yml): coordinates are pixels of the 5749 x 8000
+# print canvas, boxes are listed in reading order, and `emphasis` spans pick
+# out text by `text` (and `occurrence`) or by `start`/`end`.
+#
+#   type: text (default)  typeset in `role`; becomes live SVG text
+#         lettering       drawn by hand; traced to outlines, its words
+#                         carried as invisible text over the drawing
+#   role: hand (Patrick Hand, default) | hand_sc (Patrick Hand SC) | anton
+#   box:  [x0, y0, x1, y1] enclosing the box's ink and nothing else
+#   font: optional size override in canvas pixels
+#   emphasis: [{ text, italic: true }] for the synthetic-oblique words
+#
+# Where the site's images carry later copy edits than the masters, the text
+# here follows the site.
+schema: 1
+pages:
+    Overview:
+        boxes:
+            - id: listen-title
+              role: anton
+              box: [960, 288, 2368, 772]
+              text: |-
+                  ACTUALLY
+                  LISTEN TO PEOPLE
+            - id: listen
+              box: [740, 1892, 2508, 2316]
+              text: |-
+                  not: only the popular/powerful
+                  but: small underdogs too
+            - id: promises-title
+              role: anton
+              box: [3492, 304, 4756, 788]
+              text: |-
+                  ACTUALLY
+                  KEEP PROMISES
+            - id: promises
+              box: [3156, 1804, 5060, 2360]
+              text: |-
+                  not: vague ideals, soon abandoned
+                  but: specific commitments,
+                  with teeth
+            - id: process-title
+              role: anton
+              box: [1128, 2769, 2157, 3208]
+              text: |-
+                  WE CHECK
+                  THE PROCESS
+            - id: process
+              box: [900, 4216, 2344, 4824]
+              text: |-
+                  not: “just trust us lol”
+                  but: transparency & fast
+                  community feedback
+            - id: results-title
+              role: anton
+              box: [3600, 2756, 4640, 3240]
+              text: |-
+                  WE CHECK
+                  THE RESULTS
+            - id: results
+              box: [3200, 4160, 5020, 4896]
+              text: |-
+                  not: metrics that don’t measure
+                  what we value
+                  but: metrics designed by
+                  & for us
+            - id: win-win-title
+              role: anton
+              box: [1148, 5228, 2176, 5712]
+              text: |-
+                  AS WIN-WIN
+                  AS POSSIBLE
+            - id: win-win
+              box: [676, 6728, 2600, 7284]
+              text: |-
+                  not: mutually assured destruction
+                  but: deals where all sides
+                  are better off
+            - id: local-title
+              role: anton
+              box: [3596, 5228, 4628, 5712]
+              text: |-
+                  AS LOCAL
+                  AS POSSIBLE
+            - id: local-not
+              box: [3168, 6700, 5052, 6870]
+              text: "not: a one-size-fits-all Overlord"
+            - id: local-but
+              box: [3168, 6875, 5052, 7372]
+              text: |-
+                  but: a variety of solutions
+                  by & for a variety
+                  of folks
+    Ch1_A:
+        boxes:
+            - id: title
+              type: lettering
+              box: [1100, 150, 5650, 950]
+              text: ATTENTIVENESS
+            - id: problem-label
+              type: lettering
+              box: [350, 1350, 1760, 1800]
+              text: "PROBLEM:"
+            - id: problem
+              box: [1800, 1370, 5420, 2090]
+              text: |-
+                  Government needs to listen to the needs of the
+                  governed. But right now, the two most common
+                  ways citizens engage with politics are…
+            - id: ballot-caption
+              box: [540, 2300, 2320, 2740]
+              text: |-
+                  A single multiple-choice
+                  question every few years,
+            - id: and-or
+              type: lettering
+              box: [2490, 2420, 2940, 2810]
+              text: and/or
+            - id: shouting-caption
+              box: [3060, 2230, 5320, 2890]
+              text: |-
+                  A free-for-all screaming match
+                  on news & social media, where
+                  the most outrageous win.
+            - id: ballot
+              type: lettering
+              box: [1460, 3170, 2530, 4520]
+              text: |-
+                  I VOTE FOR:
+                  bad guy
+                  worse guy
+                  no chance
+                  of winning
+            - id: neighbours
+              box: [400, 5110, 5430, 5790]
+              text: |-
+                  Talking face to face with neighbours is still great, but you’re limited to
+                  “just” your local bubble, not all citizens. So, can we design a process that
+                  scales to all citizens, that also…
+              emphasis: [{ text: all, occurrence: 2, italic: true }]
+            - id: agree
+              box: [460, 7160, 2040, 7600]
+              text: |-
+                  Highlights facts &
+                  values where we agree,
+              emphasis: [{ text: "agree,", italic: true }]
+            - id: disagree
+              box: [2150, 7160, 3770, 7600]
+              text: |-
+                  Lets us be constructive
+                  where we disagree,
+              emphasis: [{ text: "disagree,", italic: true }]
+            - id: invent
+              box: [3930, 7160, 5300, 7600]
+              text: |-
+                  And helps us invent
+                  new solutions?
+              emphasis: [{ text: new, italic: true }]
+    Ch1_B:
+        boxes:
+            - id: header-not
+              role: hand_sc
+              box: [320, 250, 3880, 540]
+              text: "not: only the powerful"
+            - id: header-ampersand
+              role: hand_sc
+              box: [3920, 240, 4150, 520]
+              text: "&"
+            - id: header-popular
+              role: hand_sc
+              box: [4220, 250, 5440, 540]
+              text: popular
+            - id: header-but
+              role: hand_sc
+              box: [320, 640, 5440, 910]
+              text: "but: voices from every community"
+            - id: solution-label
+              type: lettering
+              box: [320, 1312, 1776, 1792]
+              text: "SOLUTION:"
+            - id: assemblies
+              box: [2708, 1364, 5384, 2688]
+              text: |-
+                  Citizens’ assemblies are like juries —
+                  a representative sample of citizens
+                  get together, and talk things through.
+                  Assemblies are usually expensive to
+                  run but civic tech can let us run more
+                  assemblies, for more decisions!
+            - id: polis
+              box: [2596, 2812, 5332, 3252]
+              text: |-
+                  Consider how Taiwan used pol.is to
+                  decide if/how to let Uber enter Taiwan:
+              emphasis: [{ text: pol.is, italic: true }]
+            - id: toxic-ego
+              box: [276, 3544, 2044, 4876]
+              text: |-
+                  To avoid the toxic ego of
+                  social media, pol.is has
+                  no “share” or even
+                  “reply” button. People
+                  share ideas, others vote
+                  Agree/Disagree/Unsure:
+            - id: safety
+              role: hand_sc
+              box: [916, 5096, 1636, 5420]
+              text: |-
+                  safety is
+                  #1 priority
+            - id: groups
+              box: [2128, 3552, 3720, 4044]
+              text: |-
+                  From this data, we see
+                  what groups form...
+            - id: riders
+              role: hand_sc
+              box: [2384, 4456, 2896, 4680]
+              text: Riders
+            - id: taxis
+              role: hand_sc
+              box: [3172, 4528, 3548, 4712]
+              text: Taxis
+            - id: drivers
+              role: hand_sc
+              box: [2884, 5136, 3488, 5364]
+              text: Drivers
+            - id: bridge
+              box: [3852, 3552, 5408, 4196]
+              text: |-
+                  …and highlight the
+                  ideas that best bridge
+                  the divides!
+            - id: ubers
+              role: hand_sc
+              box: [3936, 4416, 5312, 4808]
+              text: |-
+                  Ubers must display
+                  car & driver ID
+            - id: this-way
+              box: [3120, 5860, 5440, 6740]
+              text: |-
+                  This way, we use tech not to
+                  replace our voice but to enhance
+                  our voice! A digital facilitator,
+                  to help us agree and disagree
+              emphasis:
+                  [
+                      { text: not, italic: true },
+                      { text: enhance, italic: true },
+                      { text: and, italic: true },
+                  ]
+            - id: this-way-end
+              box: [3800, 6745, 5440, 7188]
+              text: |-
+                  better, to solve our
+                  problems, together.
+    Ch2_A:
+        boxes:
+            - id: title
+              type: lettering
+              box: [1144, 160, 5636, 984]
+              text: RESPONSIBILITY
+            - id: problem-label
+              type: lettering
+              box: [336, 1332, 1748, 1816]
+              text: "PROBLEM:"
+            - id: problem
+              box: [1928, 1340, 5320, 2112]
+              text: |-
+                  Great projects often need great numbers of
+                  people… but great numbers of people often
+                  leads to great amounts of shifting blame.
+            - id: no-one-underlines
+              type: lettering
+              box: [1440, 2398, 3770, 2452]
+              text: ""
+            - id: no-one
+              box: [688, 2190, 3110, 2480]
+              text: When no one is responsible,
+              emphasis: [{ text: one, italic: true }]
+            - id: no-one-italic
+              box: [3130, 2200, 3790, 2470]
+              text: no one
+              emphasis: [{ text: no one, italic: true }]
+            - id: no-one-end
+              box: [3800, 2190, 5070, 2480]
+              text: is responsible.
+            - id: scribble-art
+              type: lettering
+              box: [2440, 2700, 2972, 2820]
+              text: ""
+            - id: buying
+              type: lettering
+              box: [1724, 2932, 2844, 3568]
+              text: |-
+                  I’m just buying
+                  what I can afford
+                  with my wages!
+            - id: paying
+              type: lettering
+              box: [4040, 3124, 5180, 4084]
+              text: |-
+                  I’m just paying
+                  workers the wages
+                  set by the
+                  market!
+            - id: selling
+              type: lettering
+              box: [564, 3620, 1732, 4448]
+              text: |-
+                  I’m just selling on
+                  the market what
+                  the customers
+                  buy!
+            - id: a
+              box: [4104, 4212, 4240, 4368]
+              text: a
+            - id: giving
+              type: lettering
+              box: [3920, 4644, 4948, 5300]
+              text: |-
+                  I’m just giving
+                  the voters what
+                  they want.
+            - id: voting
+              type: lettering
+              box: [1040, 4808, 1996, 5536]
+              text: |-
+                  I’m just voting
+                  for the lesser
+                  of the evils!
+            - id: example
+              box: [420, 6096, 5324, 7256]
+              text: |-
+                  For example: in 2024, Taiwan’s Facebook feeds were flooded with AI-
+                  generated scams. Realistic deepfake videos of Jensen Huang -- the
+                  Taiwanese CEO of Nvidia -- tricked people out of millions of dollars.
+                  Facebook’s response? “We didn’t come up with that advertisement; it is
+                  our algorithm pushing to you.” No responsibility assumed.
+              emphasis:
+                  [
+                      {
+                          text: "“We didn’t come up with that advertisement; it is",
+                          italic: true,
+                      },
+                      { text: our algorithm pushing to you.”, italic: true },
+                  ]
+            - id: following-orders
+              box: [848, 7284, 4912, 7620]
+              text: "“I’m just following orders/incentives/everyone else.”"
+    Ch2_B:
+        boxes:
+            - id: header
+              role: hand_sc
+              box: [990, 255, 4750, 895]
+              text: |-
+                  not: vague promises
+                  but: exact commitments
+            - id: solution-label
+              type: lettering
+              box: [320, 1312, 1780, 1792]
+              text: "SOLUTION:"
+            - id: solution
+              box: [1900, 1332, 5280, 1875]
+              text: |-
+                  We need auditable engagement contracts.
+                  For each task in a project, we assign:
+            - id: who-label
+              type: lettering
+              box: [1840, 2200, 3035, 2735]
+              text: WHO
+            - id: who
+              box: [3245, 2085, 5210, 2735]
+              text: |-
+                  WHO is the one person
+                  (or few people) responsible
+                  for this task?
+            - id: what-label
+              type: lettering
+              box: [1830, 2935, 3010, 3270]
+              text: WHAT
+            - id: what
+              box: [3250, 2900, 4810, 3185]
+              text: WHAT should they do?
+            - id: when-label
+              type: lettering
+              box: [1830, 3415, 2990, 3815]
+              text: WHEN
+            - id: when
+              box: [3230, 3330, 4945, 3610]
+              text: WHEN should they do it?
+            - id: why-label
+              type: lettering
+              box: [1825, 4000, 3020, 4545]
+              text: WHY
+            - id: why
+              box: [3230, 3750, 5320, 4665]
+              text: |-
+                  WHY do it?  Remembering the
+                  purpose keeps the task
+                  meaningful and lets the
+                  person responsible decide…
+            - id: how-label
+              type: lettering
+              box: [1820, 5060, 3040, 5600]
+              text: HOW
+            - id: how
+              box: [3360, 4775, 4985, 6115]
+              text: |-
+                  HOW to do it should be
+                  left up to the person.
+                  This way, we can have
+                  responsibility, without
+                  micromanaging. Keep
+                  human autonomy!
+              emphasis: [{ text: without, italic: true }]
+            - id: taiwan
+              box: [405, 6180, 5265, 7305]
+              text: |-
+                  Back to the Taiwan deepfake case: a citizens’ assembly took
+                  responsibility to brainstorm laws that 85+% of citizens approve of,
+                  to balance avoiding scams with avoiding censorship. These laws put
+                  fair but specific responsibilities on the advertisers & platform.
+                  The result: within a year, deepfake scams fell by 94%!
+            - id: both
+              box: [915, 7330, 4825, 7650]
+              text: That’s how we get both responsibility and autonomy!
+              emphasis: [{ text: and, italic: true }]
+    Ch3_A:
+        boxes:
+            - id: title
+              type: lettering
+              box: [1120, 200, 5625, 965]
+              text: COMPETENCE
+            - id: problem-label
+              type: lettering
+              box: [335, 1330, 1750, 1812]
+              text: "PROBLEM:"
+            - id: problem
+              box: [1840, 1310, 5010, 1990]
+              text: |-
+                  In modern countries, the internet is where
+                  much of life happens: culture, news, politics,
+                  buying goods & services, making friends.
+              emphasis: [{ text: is, occurrence: 1, italic: true }]
+            - id: thus
+              box: [385, 2010, 5330, 2510]
+              text: |-
+                  Thus: the algorithms that run the internet are the algorithms that run
+                  our lives.  At first, these “algorithms” were simple:
+              emphasis: [{ text: lives, italic: true }]
+            - id: posts
+              type: lettering
+              box: [4075, 2695, 5180, 3390]
+              text: |-
+                  Posts, from
+                  newest to
+                  oldest!
+            - id: then
+              box: [385, 3820, 5150, 4320]
+              text: |-
+                  Then, to cut through noise, our algorithms got more complex. Users
+                  couldn’t understand them, but coders could… mostly.
+            - id: its-the
+              type: lettering
+              box: [3975, 4365, 5340, 5290]
+              text: |-
+                  It’s… the
+                  log of net upvotes,
+                  discounted by time
+                  … I think.
+            - id: reddit
+              box: [1065, 5265, 2840, 5485]
+              text: "* this was reddit’s algorithm in 2008!"
+            - id: now
+              box: [390, 5690, 5280, 6190]
+              text: |-
+                  But now, in the age of machine learning -- where programs are grown,
+                  not designed -- nobody understands the algorithms that run our lives.
+              emphasis:
+                  [
+                      { text: "grown,", italic: true },
+                      { text: nobody, italic: true },
+                  ]
+            - id: enlightenment
+              role: oswald
+              box: [3865, 6375, 5295, 7545]
+              text: |-
+                  Enlightenment is not
+                  self-awareness but self-
+                  unawareness. To be a
+                  mind so vast, even It can
+                  no longer speak Its own
+                  true name.
+    Ch3_B:
+        boxes:
+            - id: header
+              role: hand_sc
+              box: [205, 240, 5555, 890]
+              text: |-
+                  not: “just trust us lol”
+                  but: everyone can check the process
+            - id: solution-label
+              type: lettering
+              box: [320, 1312, 1780, 1792]
+              text: "SOLUTION:"
+            - id: solution
+              box: [1888, 1368, 5032, 1940]
+              text: |-
+                  The algorithms that affect everyone
+                  should be inspectable by everyone!
+              emphasis: [{ text: by, italic: true }]
+            - id: community-notes
+              box: [585, 2012, 5225, 2980]
+              text: |-
+                  Consider Community Notes on X (formerly Birdwatch on Twitter).
+                  It works by highlighting where people who usually disagree agree.
+                  So far, it’s the only major “fact-checking” platform that has net-
+                  positive ratings across the American political spectrum!
+              emphasis:
+                  [
+                      {
+                          text: highlighting where people who usually disagree agree.,
+                          italic: true,
+                      },
+                      { text: across, italic: true },
+                  ]
+            - id: inputs
+              box: [468, 3148, 2185, 4260]
+              text: |-
+                  In part, it’s because
+                  anyone can check any
+                  part of the algorithm.
+                  Users can see all inputs
+                  (user-submitted notes)
+            - id: code
+              box: [468, 4548, 2020, 5465]
+              text: |-
+                  Users can check the
+                  notes are analysed
+                  correctly (the code is
+                  made free & public)
+            - id: my-code
+              type: lettering
+              box: [4830, 4580, 5220, 4905]
+              text: |-
+                  MY
+                  CODE:
+            - id: output
+              box: [468, 5736, 2032, 6865]
+              text: |-
+                  And finally, users can
+                  check the output: the
+                  highlighted notes are,
+                  indeed, where people
+                  who disagree agree.
+            - id: process
+              box: [528, 7104, 4836, 7596]
+              text: |-
+                  Community Notes is just one of many examples! The point is:
+                  to “trust the process”, we must be able to check the process.
+              emphasis: [{ text: check, occurrence: 1, italic: true }]
+    Ch4_A:
+        boxes:
+            - id: title
+              type: lettering
+              box: [1125, 180, 5620, 990]
+              text: RESPONSIVENESS
+            - id: problem-label
+              type: lettering
+              box: [340, 1335, 1745, 1812]
+              text: "PROBLEM:"
+            - id: problem
+              box: [2490, 1530, 5400, 2895]
+              text: |-
+                  Like how navigators need a
+                  compass, society needs a way
+                  to measure where we're going.
+                  So, we use metrics! But alas,
+                  metrics are often broken.
+            - id: average-income
+              box: [360, 3335, 2275, 4035]
+              text: |-
+                  For example, policymakers
+                  may say that “average
+                  income” is up…
+            - id: upper-lower
+              box: [2420, 3330, 5430, 4030]
+              text: |-
+                  …but “average” hides the fact that income
+                  is way up for the upper classes, while
+                  stalling or falling for the lower classes.
+              emphasis: [{ text: average, italic: true }]
+            - id: likewise
+              box: [2995, 5550, 5130, 6620]
+              text: |-
+                  Likewise, the algorithms & AIs
+                  that run modern media -- and
+                  thus run modern culture &
+                  politics -- use metrics with
+                  famous failures.
+            - id: metric-header
+              box: [695, 5690, 1425, 5980]
+              text: Metric
+            - id: failure-header
+              box: [1790, 5675, 2565, 5960]
+              text: Failure
+            - id: clicks
+              box: [950, 6215, 1435, 6405]
+              text: clicks
+            - id: clickbait
+              box: [1822, 6165, 2440, 6360]
+              text: clickbait
+            - id: comments
+              box: [900, 6645, 1545, 6840]
+              text: comments
+            - id: rage-bait
+              box: [1830, 6560, 2595, 6905]
+              text: |-
+                  rage-bait
+                  flame wars
+            - id: user-approval
+              box: [920, 7078, 1540, 7430]
+              text: |-
+                  user
+                  approval
+            - id: sycophantic
+              type: lettering
+              box: [1815, 7022, 2600, 7345]
+              text: |-
+                  sycophantic
+                  chatbots
+            - id: etc
+              type: lettering
+              box: [2600, 7300, 2940, 7536]
+              text: etc
+            - id: how-measure
+              box: [3160, 6760, 5370, 7465]
+              text: |-
+                  So how can we measure what we
+                  value -- our “compass” --
+                  without being mislead?
+    Ch4_B:
+        boxes:
+            - id: header
+              role: hand_sc
+              box: [470, 225, 5275, 920]
+              text: |-
+                  not: metrics that mislead us
+                  but: metrics made by us, for us
+            - id: solution-label
+              type: lettering
+              box: [325, 1315, 1775, 1790]
+              text: "SOLUTION:"
+            - id: solution
+              box: [272, 1915, 2895, 2885]
+              text: |-
+                  1. Measure what we actually
+                  care about.
+                  2. Measure it in multiple ways.
+                  3. Re-evaluate metrics often.
+              emphasis:
+                  [
+                      { text: actually, italic: true },
+                      { text: multiple, italic: true },
+                  ]
+            - id: weval
+              box: [325, 3370, 1755, 4755]
+              text: |-
+                  Consider Weval.org,
+                  a collection of
+                  evaluations for
+                  AI chatbots,
+                  designed by & for
+                  the public!
+              emphasis: [{ text: "Weval.org,", italic: true }]
+            - id: industry
+              box: [325, 4905, 1800, 7435]
+              text: |-
+                  While industry
+                  mostly tracks AI
+                  capabilities, Weval
+                  measures what
+                  people value:
+                  - honesty
+                  - cultural fluency
+                  - conflict resolution
+                  - mental health
+                  best practices
+                  …and so on!
+            - id: each-value
+              box: [4065, 3400, 5435, 4310]
+              text: |-
+                  Each value is
+                  measured in many
+                  different ways, for
+                  robustness.
+            - id: feedback
+              box: [4195, 4555, 5455, 5072]
+              font: 191.4
+              text: |-
+                  And there's a
+                  feedback loop: we
+            - id: evaluate
+              box: [4195, 5076, 5455, 5500]
+              text: |-
+                  evaluate the
+                  evaluations,
+              emphasis:
+                  [
+                      { text: evaluate the, italic: true },
+                      { text: "evaluations,", italic: true },
+                  ]
+            - id: improve
+              box: [4195, 5520, 5455, 5790]
+              text: "& improve them."
+            - id: by-us
+              box: [2300, 5690, 2660, 6265]
+              text: |-
+                  BY
+                  US
+            - id: for-us
+              box: [2960, 5690, 3440, 6265]
+              text: |-
+                  FOR
+                  US
+            - id: compasses
+              box: [3935, 6050, 5440, 7025]
+              text: |-
+                  This is how we can
+                  design value-based
+                  “compasses” to guide
+                  our technology!
+    Ch5_A:
+        boxes:
+            - id: title
+              type: lettering
+              box: [1170, 165, 5655, 1000]
+              text: SOLIDARITY
+            - id: problem-label
+              type: lettering
+              box: [340, 1335, 1745, 1808]
+              text: "PROBLEM:"
+            - id: problem
+              box: [1860, 1350, 5395, 1878]
+              text: |-
+                  Whenever folks want different things, we tend
+                  towards “negative-sum” or “zero-sum” thinking.
+            - id: two-chefs
+              box: [340, 1972, 2820, 2484]
+              text: |-
+                  What does that mean? Imagine
+                  two chefs who both want an orange:
+            - id: fight
+              box: [2964, 1972, 5256, 2484]
+              text: |-
+                  They could fight over it. And be
+                  both worse off: “negative-sum”.
+              emphasis: [{ text: both, italic: true }]
+            - id: split
+              box: [380, 4416, 2816, 5524]
+              text: |-
+                  Better to split the orange equally,
+                  but that still assumes my gain is
+                  your loss. If I get more orange,
+                  you get less, and vice versa. Gains
+                  add to zero: “zero-sum”.
+              emphasis: [{ text: still, italic: true }]
+            - id: both-gain
+              box: [2972, 4404, 5388, 5572]
+              text: |-
+                  But can we both gain? That is,
+                  “positive-sum”? It may not always
+                  be possible, but it'd be a shame to
+                  miss the opportunity. So, how to
+                  aim for “as win-win as possible” ?
+              emphasis:
+                  [
+                      { text: both, italic: true },
+                      { text: as win-win as possible, italic: true },
+                  ]
+            - id: i-win
+              box: [4170, 5694, 4466, 5866]
+              text: i win
+            - id: you-win
+              box: [4858, 6250, 5302, 6466]
+              text: you win
+            - id: you-lose
+              box: [3082, 6574, 3574, 6802]
+              text: you lose
+            - id: i-lose
+              box: [3742, 7054, 4086, 7234]
+              text: i lose
+            - id: footnote
+              box: [696, 7448, 5396, 7700]
+              text: "* This orange story grew from Follett (1925), Fisher & Ury (1981), and Covey (1989)."
+    Ch5_B:
+        boxes:
+            - id: header-not
+              role: hand_sc
+              box: [280, 256, 5532, 590]
+              text: "not: mutually assured destruction"
+            - id: header-but
+              role: hand_sc
+              box: [280, 600, 5532, 920]
+              text: "but: as win-win as possible"
+            - id: solution-label
+              type: lettering
+              box: [320, 1312, 1780, 1792]
+              text: "SOLUTION:"
+            - id: solution
+              box: [1880, 1300, 5284, 2004]
+              text: |-
+                  Take a step back. Behind the WHAT you want, ask
+                  yourselves: WHY do you want it? Then: can you
+                  create a new WHAT that fulfils both your WHYs?
+              emphasis: [{ text: both, italic: true }]
+            - id: example
+              box: [376, 2028, 2788, 2520]
+              text: |-
+                  For example, maybe our two chefs
+                  say to each other...
+            - id: liqueur-bubble
+              box: [1060, 2728, 1864, 3080]
+              text: |-
+                  I need to make
+                  orange liqueur.
+            - id: juice-bubble
+              box: [1280, 3256, 1964, 3612]
+              text: |-
+                  Oh! I need
+                  orange juice.
+            - id: realise
+              box: [2976, 2028, 5392, 2520]
+              text: |-
+                  ...and they realise, they can both
+                  get 100% of their needs, no waste!
+            - id: peels-label
+              box: [3676, 2680, 4388, 3066]
+              text: |-
+                  peels & zest
+                  for liqueur
+            - id: pulp-label
+              box: [4160, 3070, 4652, 3448]
+              text: |-
+                  pulp for
+                  juice
+            - id: time-zone
+              box: [380, 4392, 2788, 5548]
+              text: |-
+                  Yes, that’s contrived, but win-wins
+                  can often be found in real life! A
+                  few years back, Taiwan had an
+                  angry debate about whether to
+                  change its time zone:
+            - id: change
+              box: [552, 5732, 1084, 6616]
+              text: |-
+                  CHANGE:
+                  to make
+                  Taiwan
+                  more
+                  unique
+            - id: keep
+              box: [1904, 5720, 2736, 6604]
+              text: |-
+                  KEEP:
+                  because time
+                  zone change is
+                  economically
+                  costly
+            - id: gold-card
+              box: [2956, 4424, 5392, 5492]
+              text: |-
+                  But with the help of pol.is and
+                  participation officers, folks found
+                  a new WHAT to fulfil mutual WHYs:
+                  the Gold Card residency, to bring
+                  scientists & artists to Taiwan.
+              emphasis: [{ text: pol.is, italic: true }]
+            - id: for
+              box: [3348, 5804, 3592, 5988]
+              text: for
+            - id: uniqueness
+              box: [3084, 6068, 3856, 6248]
+              text: UNIQUENESS
+            - id: and
+              type: lettering
+              box: [3324, 6308, 3680, 6612]
+              text: and
+            - id: economics
+              box: [3116, 6660, 3832, 6840]
+              text: ECONOMICS
+            - id: question-marks
+              box: [3352, 6932, 3588, 7116]
+              text: "???"
+            - id: welcome-sign
+              type: lettering
+              box: [4276, 5832, 5140, 6324]
+              text: |-
+                  welcome,
+                  Creators!
+            - id: closing
+              tracking: false
+              box: [1052, 7404, 4908, 7712]
+              text: That’s how better discussion can help us get to win-win!
+              emphasis: [{ text: That’s, italic: true }]
+    Ch6_A:
+        boxes:
+            - id: title
+              type: lettering
+              box: [1204, 176, 5620, 980]
+              text: SYMBIOSIS
+            - id: problem-label
+              type: lettering
+              box: [336, 1332, 1748, 1820]
+              text: "PROBLEM:"
+            - id: problem
+              tracking: false
+              box: [1852, 1400, 5316, 1768]
+              text: Don’t put all your society in one basket.
+            - id: platforms
+              box: [452, 2004, 2750, 2920]
+              text: |-
+                  Our modern culture & news &
+                  politics all go through a handful
+                  of platforms run by a few
+                  multinational companies.
+            - id: single-point
+              box: [2992, 2004, 5240, 2916]
+              text: |-
+                  But this creates a single point
+                  of failure! Whether by accident
+                  or deliberate greed, these
+                  platforms can fail us.
+            - id: success
+              box: [484, 5468, 5312, 6140]
+              text: |-
+                  And even when centralised platforms don’t fail ,“success” is still bad:
+                  a bland, one-size-fits-all culture, with no “thick middle layer” of
+                  churches, local communities, and so on.
+              emphasis: [{ text: still, italic: true }]
+    Ch6_B:
+        boxes:
+            - id: header-not
+              role: hand_sc
+              box: [188, 260, 5576, 590]
+              text: "not: one-size-fits-all overlord"
+            - id: header-but
+              role: hand_sc
+              box: [188, 600, 5576, 912]
+              text: "but: local solutions for local folks"
+            - id: solution-label
+              type: lettering
+              box: [320, 1312, 1780, 1792]
+              text: "SOLUTION:"
+            - id: solution
+              box: [1864, 1356, 5440, 1888]
+              text: |-
+                  Fight for the users! Demand tech that defends
+                  local autonomy. Here are 3 recent examples…
+              emphasis: [{ text: local, italic: true }]
+            - id: roost
+              box: [2496, 2032, 5268, 3560]
+              text: |-
+                  “Think about the children” is the most
+                  common excuse for authoritarians to
+                  extend their reach. But ROOST.tools
+                  is a nonprofit that makes open-source
+                  tools -- no centralised control! -- to
+                  help orgs detect & prevent child abuse
+                  on their platforms.
+              emphasis: [{ text: ROOST.tools, italic: true }]
+            - id: safeguard
+              box: [372, 3880, 3332, 4988]
+              text: |-
+                  gpt-oss-safeguard is an open-source
+                  AI that lets you bring your own policy.
+                  Tell it your community’s rules & values,
+                  and it can assist (not replace) human
+                  moderators in defending your community!
+              emphasis: [{ text: gpt-oss-safeguard, italic: true }]
+            - id: constitution
+              type: lettering
+              box: [4236, 4160, 4592, 4728]
+              text: |-
+                  Con
+                  stitu
+                  tion
+            - id: kami
+              ligatures: true
+              box: [2880, 5536, 5008, 6620]
+              text: |-
+                  And finally, this book itself
+                  benefited from a “local spirit” Kami:
+                  not corp-slop on the cloud, but a Kami
+                  stewarding one specific relationship,
+                  locally run on one specific laptop.
+              emphasis:
+                  - { text: book itself, italic: true }
+                  - { text: "one specific relationship,", italic: true }
+                  - { text: one specific laptop., italic: true }
+            - id: book-cover
+              type: lettering
+              box: [1364, 5788, 1764, 6264]
+              text: |-
+                  CIVIC.AI
+                  HOW TO KEEP AI
+                  IN THE LOOP OF
+                  HUMAN COMMUNITY
+                  & FLOURISHING
+            - id: principle
+              box: [552, 6716, 5148, 7381]
+              text: |-
+                  This principle, along with all the
+                  other principles in this book,
+                  are how we can build a future that does not concentrate power
+              emphasis: [{ text: concentrate, italic: true }]
+            - id: principle-end
+              box: [552, 7381, 2900, 7620]
+              text: but shares power among people.
+              emphasis: [{ text: shares, italic: true }]
+            - id: prosper
+              box: [3300, 7381, 4950, 7620]
+              text: Live long and prosper!

@@ -95,12 +95,42 @@ test("visibleHtml curls quotes except on Japanese pages", () => {
 });
 
 test("serves content images as native pictures, not script-revealed noscript", () => {
+    const essay = getPageByUrl("/ai-alignment-cannot-be-top-down/").html;
+    expect(essay).toContain(
+        '<picture><source srcset="/img/gpt-value-correlation-720w.avif 720w, /img/gpt-value-correlation.avif 1600w" sizes="(max-width: 700px) calc(100vw - 40px), 640px" type="image/avif"><img src="/img/gpt-value-correlation.jpg"'
+    );
+    expect(essay).not.toContain("<noscript><img");
+});
+
+test("serves the comics as vector plates: art, traced lettering, live text", () => {
     const pack = getPageByUrl("/1/").html;
     expect(pack).toContain(
-        '<picture><source srcset="/img/pack1-1-720w.avif 720w, /img/pack1-1.avif 1437w" sizes="(max-width: 700px) calc(100vw - 40px), 640px" type="image/avif"><img src="/img/pack1-1.jpg"'
+        '<span class="comic comic--lettered overview-image" style="aspect-ratio: 1437 / 1999; --comic-ar: 1437 / 1999; --comic-lettered: url(/img/pack1-1.jpg);"><picture><source srcset="/img/pack1-1-wordless-720w.avif 720w, /img/pack1-1-wordless.avif 1437w, /img/pack1-1-wordless-2874w.avif 2874w"'
+    );
+    expect(pack).toContain(
+        '<img class="comic-lettering" src="/img/pack1-1-lettering.svg" alt=""'
+    );
+    expect(pack).toContain(
+        '<svg class="comic-text" viewBox="0 0 5749 8000" preserveAspectRatio="none" lang="en-GB" role="group" aria-label="Comic text"'
+    );
+    // the words read on across the per-word spans the fitter places
+    const words = pack
+        .slice(pack.indexOf('<svg class="comic-text"'))
+        .replace(/<[^>]+>/g, "")
+        .replaceAll("&#32;", " ");
+    expect(words).toContain(
+        "Government needs to listen to the needs of the governed. But right now,"
     );
     expect(pack).not.toContain("<noscript><img");
-    expect(getPageByUrl("/").html).toContain(
-        '<source srcset="/img/overview-small-720w.avif 720w, /img/overview-small.avif 1280w" sizes="(max-width: 700px) calc(100vw - 40px), 640px" type="image/avif"><img src="/img/overview-small.png"'
+    // straight quotes stay straight inside the drawn lettering
+    expect(visibleHtml(getPageByUrl("/1/"))).toContain(
+        "still great, but you're&#32;</tspan>"
     );
+    expect(getPageByUrl("/").html).toContain(
+        '<source srcset="/img/overview-small-wordless-720w.avif 720w, /img/overview-small-wordless.avif 1280w, /img/overview-small-wordless-2560w.avif 2560w"'
+    );
+    const tw = getPageByUrl("/tw/1/").html;
+    expect(tw).toContain('<img class="comic-art" src="/img/pack1-1-tw.jpg"');
+    expect(tw).toContain('aria-label="漫畫文字"');
+    expect(tw).not.toContain("comic-lettering");
 });

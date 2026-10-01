@@ -31,6 +31,17 @@ function visit(path) {
             const boldGlyphs = new Set();
             function collect(node, bold = false) {
                 if (["script", "style"].includes(node.tagName)) return;
+                // Comic text layers set their own faces (src/lib/comicVector.ts):
+                // the Mandarin one is invisible system-font text over the
+                // pre-rendered lettering and needs no Noto Serif TC glyphs.
+                if (
+                    (node.attrs ?? []).some(
+                        (attr) =>
+                            attr.name === "data-font-subset" &&
+                            attr.value === "skip"
+                    )
+                )
+                    return;
                 const heavy =
                     bold ||
                     /^(?:h[1-6]|strong|b|th|dt|button|nav|header|footer)$/.test(

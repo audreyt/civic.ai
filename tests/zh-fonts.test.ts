@@ -23,7 +23,7 @@ test("offline subsets cover decoded Han and deduplicate identical page sets", ()
     mkdirSync(join(dir, "tw/a"), { recursive: true });
     mkdirSync(join(dir, "tw/b"), { recursive: true });
     const html =
-        '<html lang="zh-Hant"><head></head><body><h1>仁</h1><p>智慧&#x3002;<strong>工</strong></p><script>龍</script></body></html>';
+        '<html lang="zh-Hant"><head></head><body><h1>仁</h1><p>智慧&#x3002;<strong>工</strong></p><script>龍</script><svg data-font-subset="skip"><text>鳳</text></svg></body></html>';
     writeFileSync(join(dir, "tw/a/index.html"), html);
     writeFileSync(join(dir, "tw/b/index.html"), html);
     writeFileSync(
@@ -49,7 +49,8 @@ test("offline subsets cover decoded Han and deduplicate identical page sets", ()
         (page: { path: string }) => page.path === "/tw/b/"
     );
 
-    // Then actual WOFF2 cmaps cover text/entities, but not script source.
+    // Then actual WOFF2 cmaps cover text/entities, but not script source
+    // or skipped layers.
     expect(report.pages).toHaveLength(3);
     expect(a.files).toEqual(b.files);
     const regular = new Set<number>();
@@ -64,6 +65,8 @@ test("offline subsets cover decoded Han and deduplicate identical page sets", ()
     expect(regular.has(0x3002)).toBe(true);
     expect(regular.has(0x667a)).toBe(true);
     expect(regular.has(0x9f8d)).toBe(false);
+    // a comic's invisible text layer (data-font-subset="skip") needs no glyphs
+    expect(regular.has(0x9cf3)).toBe(false);
     expect(heavy.has(0x4ec1)).toBe(true);
     expect(heavy.has(0x5de5)).toBe(true);
     expect(a.bytes).toBe(

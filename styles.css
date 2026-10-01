@@ -2477,6 +2477,126 @@ body.comics-page main {
     }
 }
 
+/* ─── VECTOR COMIC PLATES ───
+   scripts/comics-vector.mjs rebuilds each English comic page from Nicky
+   Case's print masters: the wordless art (a responsive raster), his hand
+   lettering traced to outlines (.comic-lettering, an SVG image), and the
+   typeset words as live SVG text in the comics' own faces (.comic-text),
+   sharp at any zoom and selectable. Mandarin plates keep the jf 蘭陽
+   lettering pre-rendered (§6.2) with the words as invisible, selectable
+   text over it. The faces are exact OFL subsets of the comic text; `block`,
+   not `swap`, because the words are part of the drawing and a stand-in
+   face would mis-draw the page for a moment. */
+@font-face {
+    font-family: "Patrick Hand";
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url("/fonts/patrick-hand-comics.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Patrick Hand SC";
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url("/fonts/patrick-hand-sc-comics.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Anton";
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url("/fonts/anton-comics.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url("/fonts/oswald-comics.woff2") format("woff2");
+}
+
+.comic {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.comic .comic-art {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 0;
+}
+
+.comic > .comic-lettering,
+.comic > .comic-text {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+}
+
+.comic > .comic-lettering {
+    pointer-events: none;
+}
+
+.comic-text text {
+    white-space: pre;
+    font-variant-ligatures: none;
+}
+
+/* Text laid invisibly over drawn lettering stays invisible when selected:
+   Chromium paints a selection without the fill-opacity, so only the
+   highlight should show. */
+.comic-text text[fill-opacity="0"]::selection,
+.comic-text text[fill-opacity="0"] tspan::selection,
+.fonts-unavailable .comic--lettered .comic-text ::selection {
+    fill: transparent;
+}
+
+/* Web fonts blocked (iOS Lockdown Mode, PageHead.astro): show the lettered
+   raster rather than the words in a stand-in face; the text stays
+   selectable over it. */
+.fonts-unavailable .comic--lettered {
+    background: var(--comic-lettered) center / 100% 100% no-repeat;
+}
+
+.fonts-unavailable .comic--lettered .comic-art,
+.fonts-unavailable .comic--lettered > .comic-lettering {
+    opacity: 0;
+}
+
+.fonts-unavailable .comic--lettered .comic-text text {
+    fill-opacity: 0;
+}
+
+@media print {
+    main .comic {
+        width: min(100%, calc(150mm * var(--comic-ar)));
+        margin-inline: auto;
+        break-inside: avoid;
+    }
+
+    main .overview-frame .comic {
+        width: min(100%, calc(130mm * var(--comic-ar)));
+        max-height: none;
+    }
+
+    main .comic .comic-art {
+        width: 100%;
+        max-height: none;
+    }
+}
+
 /* ─── JA COMICS OVERLAY ─── */
 .comics-page-link,
 .comics-overview-link {

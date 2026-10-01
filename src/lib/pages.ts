@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { extname, join } from "node:path";
 import matter from "gray-matter";
+import { vectorComics } from "./comicVector";
 import { nativePictures, renderMarkdown, smartQuotes } from "./legacyMarkdown";
 import { expandShortcodes } from "./shortcodes";
 import { transformFaq } from "./faqTransform";
@@ -88,6 +89,10 @@ export function hasPublicFile(publicPath: string): boolean {
     return existsSync(join(root, publicPath));
 }
 
+export function readPublicFile(publicPath: string): string {
+    return readFileSync(join(root, publicPath), "utf8");
+}
+
 export function isRootContentFile(name: string): boolean {
     if (["README.md", "AGENTS.md", "CLAUDE.md", "DESIGN.md"].includes(name))
         return false;
@@ -173,7 +178,11 @@ function loadPage(sourceName: string): PageRecord {
           : annotateInlineLang(
                 transformFaq(
                     nativePictures(
-                        renderMarkdown(expanded, url),
+                        vectorComics(
+                            renderMarkdown(expanded, url),
+                            hasPublicFile,
+                            readPublicFile
+                        ),
                         hasPublicFile
                     ),
                     url

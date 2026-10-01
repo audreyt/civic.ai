@@ -101,7 +101,7 @@ export function renderComicsGallery(lang: string | undefined): string {
     // Each plate's long-form alt text, readable on phones where the drawn type
     // is too small, plus the full-size image (DESIGN.md §10, Comics).
     const describe = (alt: string, src: string) =>
-        `<details class="comics-alt"><summary>${zh ? "閱讀文字描述" : "Read the description"}</summary><p>${escapeHtml(alt)}</p><p><a href="${escapeAttr(src)}">${zh ? "開啟原尺寸圖片" : "Open the full-size image"}</a></p></details>`;
+        `<details class="comics-alt"><summary>${zh ? "閱讀文字描述" : "Read the description"}</summary><p>${escapeHtml(alt)}</p><p><a href="${escapeAttr(src)}" data-comic-full>${zh ? "開啟原尺寸圖片" : "Open the full-size image"}</a></p></details>`;
     const pages = comics.packs
         .flatMap((pack) =>
             pack.pages.map((page) => {

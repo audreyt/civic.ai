@@ -22,6 +22,9 @@
 //   node import-comics.mjs --src ../civic-ai-comics/comics-zh-TW --suffix -tw Ch6_B
 //                                                # a translated set: writes pack6-2-tw.*
 //
+// After re-importing, rebuild the vector plates from the same checkout:
+// `vp run comics:vector -- --src ../civic-ai-comics` (scripts/comics-vector.mjs).
+//
 // This is a maintenance script, not part of the site build, so `sharp` is
 // deliberately kept out of the project's dependencies (it is a heavy native
 // package that would otherwise be installed on every deploy). We load it on

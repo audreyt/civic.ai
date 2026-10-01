@@ -1,0 +1,895 @@
+# The Mandarin lettering of Nicky Case's comics, as the site shows it.
+#
+# Imported from translation-assets/zh-TW.yml in
+# https://github.com/ncase/civic-ai-comics (the editable zh-TW pipeline's
+# compact source): each box keeps its id, type, render box (pixels of the
+# 5742 x 8000 canvas) and text. Edits the site has made since are applied
+# here, so this file matches img/*-tw.jpg. Ch4_A's metrics table is split
+# into its cells (upstream b006_body), as the English spec splits it. Boxes
+# that missed or overlapped their lettering are moved onto it (Ch1_A b002 and
+# b006, Ch2_B b004, Ch4_B b006, Ch5_B's chef labels). Labels drawn into the
+# Mandarin art that upstream does not list (Ch5_B's time-zone debate, Ch6_B's
+# 章程 scroll) are added, as the English spec has them.
+#
+# scripts/comics-vector.mjs lays this text over the pre-rendered lettering as
+# an invisible, selectable layer (jf 蘭陽 may not ship as a font, DESIGN.md
+# §6.2); lines are read from the ink, so wrapping here need not match.
+schema: 1
+pages:
+    Overview:
+        boxes:
+            - id: b001_title
+              type: title
+              box: [964, 284, 2394, 791]
+              font: 235
+              text: |-
+                  真的傾聽
+                  人們想說的話
+            - id: b002_body
+              box: [845, 1923, 2537, 2387]
+              font: 100
+              text: |-
+                  不是：只聽受歡迎／有權勢的人
+                  而是：也聽見小眾與弱勢的聲音
+            - id: b003_title
+              type: title
+              box: [3458, 302, 4746, 809]
+              font: 216
+              text: |-
+                  真的承諾
+                  人們在乎的事
+            - id: b004_body
+              box: [3348, 1923, 5040, 2387]
+              font: 100
+              text: |-
+                  不是：空泛理想，說說就算
+                  而是：具體承諾、有力量的約定
+            - id: b005_title
+              type: title
+              box: [1094, 2756, 2188, 3242]
+              font: 203
+              text: "人們檢核「過程」"
+            - id: b006_body
+              box: [845, 4275, 2537, 4739]
+              font: 88
+              text: |-
+                  不是：「相信我們就好啦（笑）」
+                  而是：可見透明與快速社群反饋
+            - id: b007_title
+              type: title
+              box: [3586, 2756, 4647, 3251]
+              font: 207
+              text: "人們檢核「結果」"
+            - id: b008_body
+              box: [3271, 4275, 4963, 4739]
+              font: 96
+              text: |-
+                  不是：與我們價值無關的那些指標
+                  而是：我們設計、服務我們的指標
+            - id: b009_title
+              type: title
+              box: [1134, 5272, 2186, 5722]
+              font: 265
+              text: "儘量雙贏"
+            - id: b010_body
+              box: [945, 6753, 2637, 7217]
+              font: 104
+              text: |-
+                  不是：保證玉石俱焚
+                  而是：讓每一邊都更好的協議
+            - id: b011_title
+              type: title
+              box: [3582, 5272, 4634, 5722]
+              font: 265
+              text: "儘量在地"
+            - id: b012_body
+              box: [3348, 6753, 5040, 7217]
+              font: 102
+              text: |-
+                  不是：一體適用的中央霸主
+                  而是：多元社群打造的多樣解方
+    Ch1_A:
+        boxes:
+            - id: b001_title
+              type: title
+              box: [2200, 139, 4477, 932]
+              font: 735
+              text: "覺察力"
+            - id: b002_title
+              type: title
+              box: [334, 1159, 1780, 1869]
+              font: 440
+              text: "問題："
+            - id: b003_body
+              box: [1825, 1210, 5316, 1969]
+              font: 208
+              text: "政府需要聽取人民的需求。但目前，公民參與政治最常見的兩種方式是……"
+            - id: b004_body
+              box: [630, 2273, 2198, 2770]
+              font: 196
+              text: |-
+                  每隔幾年投一次
+                  單選題，
+            - id: b005_body
+              box: [1437, 3146, 2553, 3437]
+              font: 224
+              text: "我投票給："
+            - id: b006_body
+              type: list
+              box: [1437, 3560, 2553, 4539]
+              font: 150
+              text: |-
+                  ○ 壞人
+                  ○ 更壞的人
+                  ○ 毫無勝算的人
+            - id: b007_body
+              box: [2501, 2398, 2914, 2844]
+              font: 158
+              text: |-
+                  且
+                  /
+                  或
+            - id: b008_body
+              box: [3037, 2206, 5252, 2915]
+              font: 185
+              text: |-
+                  在新聞和社群媒體上
+                  無所不用其極的叫罵混戰，
+                  誰最聳動誰就贏。
+            - id: b009_body
+              box: [530, 5089, 5176, 5815]
+              font: 179
+              text: |-
+                  與鄰居面對面交流固然很好，但你只能觸及「自己」位列的在地
+                  同溫層，而非所有公民。那麼，我們可否設計一個能擴展到
+                  所有公民的流程，而且還可以……
+            - id: b010_body
+              box: [436, 7130, 2059, 7629]
+              font: 181
+              text: |-
+                  凸顯我們意見一致的
+                  事實與價值，
+            - id: b011_body
+              box: [2226, 7102, 3892, 7601]
+              font: 167
+              text: |-
+                  讓我們在意見分歧之處
+                  保持建設性，
+            - id: b012_body
+              box: [4125, 7113, 5545, 7555]
+              font: 174
+              text: |-
+                  並幫助我們
+                  創造出新的解方？
+    Ch1_B:
+        boxes:
+            - id: b001_title
+              type: title
+              box: [983, 153, 4872, 497]
+              font: 300
+              text: "不只是有權有勢者"
+            - id: b002_title
+              type: title
+              box: [983, 581, 4872, 945]
+              font: 300
+              text: "而是每個社群的聲音"
+            - id: b003_title
+              type: title
+              box: [308, 1322, 1619, 1803]
+              font: 439
+              text: "解方："
+            - id: b004_body
+              box: [2721, 1566, 5606, 2914]
+              font: 145
+              text: |-
+                  公民大會就像陪審團——
+                  找一群具代表性的公民樣本齊聚一堂，
+                  把事情好好談清楚。舉辦大會通常成本
+                  很高，但公民科技能讓我們舉辦更多場
+                  大會，做出更多決策！
+            - id: b005_body
+              box: [269, 3104, 5424, 3551]
+              font: 160
+              text: "想想看台灣如何用 pol.is 來決定要不要、以及如何讓 Uber 進入台灣："
+            - id: b006_body
+              box: [274, 3622, 2047, 4964]
+              font: 137
+              text: "為了避免社群媒體那種有毒的自我膨脹，pol.is 沒有「分享」鈕，連「回覆」按鈕都沒有。人們分享想法，其他人則用投票表示同意/不同意/不確定："
+            - id: b007_body
+              box: [2129, 3633, 3809, 4157]
+              font: 125
+              text: "從這些資料中，我們看見形成了哪些群體……"
+            - id: b008_body
+              box: [3843, 3632, 5405, 4282]
+              font: 196
+              text: "……並凸顯出最能跨越分歧的想法！"
+            - id: ch1_b_safety_priority_label
+              box: [739, 5078, 1812, 5502]
+              font: 112
+              text: |-
+                  安全是
+                  第一優先
+            - id: ch1_b_passenger_label
+              box: [2154, 4238, 3128, 4831]
+              font: 155
+              text: "乘客"
+            - id: ch1_b_taxi_label
+              box: [2939, 4318, 3762, 4912]
+              font: 108
+              text: "計程車"
+            - id: ch1_b_driver_label
+              box: [2558, 4820, 3750, 5664]
+              font: 150
+              text: "司機"
+            - id: ch1_b_uber_requirement_label
+              box: [3806, 4320, 5398, 4884]
+              font: 106
+              text: |-
+                  Uber 必須出示車輛
+                  與駕駛證件
+            - id: b014_body
+              box: [3061, 5659, 5660, 6909]
+              font: 121
+              text: |-
+                  這樣一來，我們用科技不是「取代」
+                  我們發聲，而是「增強」我們發聲！
+
+                  數位引導者，幫助我們更好地求同、
+                  也更好地存異，一起解決我們共同的
+                  問題。
+    Ch2_A:
+        boxes:
+            - id: b001_title
+              type: title
+              box: [2148, 147, 4506, 964]
+              font: 757
+              text: "負責力"
+            - id: b002_title
+              type: title
+              box: [324, 1320, 1638, 1830]
+              font: 440
+              text: "問題："
+            - id: b003_body
+              box: [1850, 1227, 5113, 1986]
+              font: 204
+              text: |-
+                  偉大的計畫往往需要眾多人手……但
+                  眾多人手通常導致大量的責任推卸。
+            - id: b004_body
+              box: [1037, 1996, 4955, 2496]
+              font: 280
+              text: "當沒有人負責，就沒有人負責。"
+            - id: b005_body
+              box: [460, 3459, 1869, 4492]
+              font: 165
+              text: |-
+                  我只是在市場
+                  上賣顧客要買
+                  的東西！
+            - id: b006_body
+              box: [1686, 2860, 2977, 3700]
+              font: 165
+              text: |-
+                  我只是用薪水
+                  買我買得起的
+                  東西！
+            - id: b007_body
+              box: [3882, 3051, 5297, 4236]
+              font: 165
+              text: |-
+                  我只是付給
+                  工人由市場
+                  決定的工資！
+            - id: b008_body
+              box: [1035, 4805, 1998, 5540]
+              font: 165
+              text: |-
+                  我只是投給
+                  比較不爛的
+                  那個！
+            - id: b009_body
+              box: [3961, 4642, 4995, 5228]
+              font: 165
+              text: |-
+                  我只是給選民
+                  他們想要的。
+            - id: b010_body
+              box: [696, 6011, 5274, 7130]
+              font: 169
+              text: |-
+                  舉例來說：2024 年，台灣的臉書動態充斥著 AI 生成的詐騙。
+                  輝達（Nvidia）台灣裔執行長黃仁勳的擬真深偽影片，騙走了人
+                  們數百萬美元。臉書的回應？「那則廣告不是我們做的；是我
+                  們的演算法把它推送給你的。」毫無責任可言。
+            - id: b011_body
+              box: [1113, 7111, 4880, 7602]
+              font: 222
+              text: "我只是聽命令／隨誘因／跟著大家走。"
+    Ch2_B:
+        boxes:
+            - id: b001_title
+              type: title
+              box: [1713, 259, 4021, 919]
+              font: 306
+              text: |-
+                  不要模糊的承諾
+                  而要明確的承諾
+            - id: b002_title
+              type: title
+              box: [308, 1301, 1684, 1803]
+              font: 461
+              text: "解方："
+            - id: b003_body
+              box: [1888, 1319, 5163, 1876]
+              font: 193
+              text: "我們需要可稽核的「參與契約」。針對專案中的每項任務，我們都指派："
+            - id: b004_body
+              box: [1765, 2000, 3200, 4550]
+              font: 394
+              text: |-
+                  誰
+                  做什麼
+                  何時
+                  為何
+            - id: b005_title
+              type: title
+              box: [1807, 5054, 3046, 5614]
+              font: 400
+              text: "如何"
+            - id: b006_body
+              box: [3322, 2273, 5353, 2927]
+              font: 150
+              text: |-
+                  「誰」?
+                  是負責這項任務的
+                  那個人（或少數幾人）?
+            - id: b007_body
+              box: [3326, 2988, 4888, 3275]
+              font: 174
+              text: "他們該「做什麼」?"
+            - id: b008_body
+              box: [3332, 3345, 5049, 3631]
+              font: 191
+              text: "他們該「何時」做 ?"
+            - id: b009_body
+              box: [3356, 3700, 5451, 4579]
+              font: 164
+              text: |-
+                  「為何」要做 ?
+                  記住目的，能讓任務保有意  
+                  義，也讓負責的人能自行決 
+                  定……
+            - id: b010_body
+              box: [3296, 4647, 5510, 6121]
+              font: 150
+              text: |-
+                  「如何」去做 ?
+                  應該交給負責的人決定。
+                  這樣一來，我們既能
+                  落實責任，又不必事事微觀 
+                  理。保留人的自主！
+            - id: b011_body
+              box: [542, 6184, 5072, 7301]
+              font: 156
+              text: "回到台灣的深偽案例：一場公民大會承擔起責任，集思廣益制定出 85% 以上公民都認同的法律，在避免詐騙與避免審查之間取得平衡。這些法律對廣告商與平臺課以公平卻明確的責任。結果：一年之內，深偽詐騙就下降了 94%！"
+            - id: b012_body
+              box: [986, 7179, 4648, 7651]
+              font: 216
+              text: "這就是我們如何同時兼顧責任與自主！"
+    Ch3_A:
+        boxes:
+            - id: b001_title
+              type: title
+              box: [2240, 211, 4445, 952]
+              font: 687
+              text: "勝任力"
+            - id: b002_title
+              type: title
+              box: [324, 1320, 1638, 1830]
+              font: 440
+              text: "問題："
+            - id: b003_body
+              box: [1749, 1228, 5427, 2049]
+              font: 155
+              text: "在現代國家，網際網路就是生活發生之處：文化、新聞、政治、購買商品與服務、結交朋友。"
+            - id: b004_body
+              box: [530, 2065, 5100, 2704]
+              font: 183
+              text: |-
+                  因此：運行網路的演算法，就是運行我們生活的演算法。
+                  起初，這些「演算法」很簡單：
+            - id: b005_body
+              box: [4123, 2694, 5236, 3390]
+              font: 140
+              text: "貼文，從最新排到最舊！"
+            - id: b006_body
+              box: [502, 3817, 4927, 4324]
+              font: 192
+              text: |-
+                  後來，為了過濾雜訊，我們的演算法變得更複雜了。
+                  使用者看不懂，但寫程式的人懂……大致上。
+            - id: b007_body
+              box: [1061, 5261, 2841, 5487]
+              font: 90
+              text: "* 這是 reddit 在 2008 年的演算法！"
+            - id: b008_body
+              box: [3982, 4386, 5629, 5320]
+              font: 158
+              text: |-
+                  這是……淨讚數的
+                  對數，再依時間
+                  折扣……我想
+                  是吧。
+            - id: b009_body
+              box: [518, 5685, 5112, 6194]
+              font: 170
+              text: "但如今，在機器學習的時代——程式是長出來的，不是設計出來的——再也沒有人理解運行我們生活的演算法。"
+            - id: b010_body
+              box: [3854, 6372, 5294, 7549]
+              font: 132
+              text: |-
+                  覺悟並非自我覺察，
+                  而是自我不察。
+                  要成為一個如此浩瀚
+                  的心智，連它自己都
+                  再也說不出自己真正
+                  的名字。
+    Ch3_B:
+        boxes:
+            - id: b001_title
+              type: title
+              box: [954, 156, 4893, 500]
+              font: 285
+              text: "不要「相信我們就好啦」"
+            - id: b002_title
+              type: title
+              box: [954, 573, 4893, 937]
+              font: 285
+              text: "而要人人都能檢查流程"
+            - id: b003_title
+              type: title
+              box: [391, 1218, 1766, 1720]
+              font: 461
+              text: "解方："
+            - id: b004_body
+              box: [1822, 1270, 5454, 1850]
+              font: 228
+              text: "這些影響每個人的演算法，應該人人都能檢視！"
+            - id: b005_body
+              box: [460, 1948, 5385, 3282]
+              font: 140
+              text: |-
+                  想想 X 上的 Community Notes（前身是 Twitter 的 Birdwatch）。
+                  它的運作方式，是凸顯出通常意見相左的人都認同之處。
+                  目前為止，它是唯一在美國政治光譜上各方都獲得淨正面評價的主要「事實查核」平台！
+            - id: b006_body
+              box: [462, 3168, 2222, 4287]
+              font: 160
+              text: |-
+                  一部分的原因，是任何人都能檢查演算法的任一環節。使用者能看見所有輸入：
+                  使用者提交的註記。
+            - id: b007_body
+              box: [462, 4470, 2354, 5379]
+              font: 178
+              text: |-
+                  使用者能檢查註記是否被正確分析：
+                  程式碼開放公開。
+            - id: b008_body
+              box: [462, 5599, 2354, 6697]
+              font: 143
+              text: |-
+                  最後，使用者能檢查：
+                  被凸顯出的註記，的確都是意見相左的人都認同之處。
+            - id: b009_body
+              box: [618, 7101, 4636, 7600]
+              font: 184
+              text: "Community Notes 只是眾多範例之一！重點在於：若要「信任流程」，我們就必須能夠檢查流程。"
+    Ch4_A:
+        boxes:
+            - id: b001_title
+              type: title
+              box: [2188, 168, 4509, 1004]
+              font: 774
+              text: "回應力"
+            - id: b002_title
+              type: title
+              box: [324, 1193, 1731, 1747]
+              font: 471
+              text: "問題："
+            - id: b003_body
+              box: [2480, 1564, 5383, 2814]
+              font: 194
+              text: "就像航海者需要羅盤，社會也需要一種方法來衡量我們前進的方向。所以，我們使用指標！但可惜，指標往往會失靈。"
+            - id: b004_body
+              box: [355, 3339, 2447, 4047]
+              font: 185
+              text: "舉例來說，決策者也許會說「平均收入」上升了……"
+            - id: b005_body
+              box: [2855, 3321, 5806, 4041]
+              font: 188
+              text: |-
+                  但「平均」掩蓋了一個事實：
+                  上層階級收入大幅上升，
+                  下層階級……卻停滯甚至下降。
+            - id: b006_metric
+              type: table
+              box: [800, 5650, 1500, 6000]
+              font: 150
+              text: "指標"
+            - id: b006_failure
+              type: table
+              box: [1750, 5650, 2550, 6000]
+              font: 150
+              text: "失靈"
+            - id: b006_clicks
+              type: table
+              box: [1000, 6150, 1500, 6450]
+              font: 150
+              text: "點擊"
+            - id: b006_clickbait
+              type: table
+              box: [1800, 6150, 2500, 6450]
+              font: 150
+              text: "標題黨"
+            - id: b006_comments
+              type: table
+              box: [1000, 6650, 1450, 6950]
+              font: 150
+              text: "留言"
+            - id: b006_flame_wars
+              type: table
+              box: [1780, 6650, 2650, 6980]
+              font: 150
+              text: "激怒式論戰"
+            - id: b006_user_approval
+              type: table
+              box: [820, 7100, 1610, 7400]
+              font: 150
+              text: "使用者好評"
+            - id: b006_sycophancy
+              type: table
+              box: [1760, 7000, 2500, 7420]
+              font: 150
+              text: |-
+                  諂媚的
+                  聊天機器人
+            - id: b007_body
+              box: [3134, 5387, 5384, 6606]
+              font: 150
+              text: |-
+                  同樣地，那些運行在現代媒體又
+                  因此運行現代文化與政治的
+                  「演算法與 AI」，所用的指標
+                  都有著那所謂惡名昭彰的失靈。
+            - id: b008_body
+              box: [3121, 6657, 5332, 7366]
+              font: 185
+              text: "那我們該如何衡量我們所重視的——我們的「羅盤」——而不被誤導？"
+            - id: ch4_a_table_etc_bubble
+              box: [2460, 7286, 3023, 7530]
+              font: 90
+              text: "之類"
+    Ch4_B:
+        boxes:
+            - id: b001_title
+              type: title
+              box: [852, 153, 4891, 497]
+              font: 300
+              text: "不是：誤導我們的指標"
+            - id: b002_title
+              type: title
+              box: [482, 573, 5340, 967]
+              font: 295
+              text: "而是：由我們、為我們而做的指標"
+            - id: b003_title
+              type: title
+              box: [308, 1301, 1759, 1803]
+              font: 467
+              text: "解方："
+            - id: b004_body
+              type: list
+              box: [268, 1911, 2847, 2887]
+              font: 214
+              text: |-
+                  1. 衡量我們真正在乎的事。
+                  2. 用多種方式衡量。
+                  3. 經常重新評估指標。
+            - id: b005_body
+              box: [319, 3397, 1756, 4715]
+              font: 180
+              text: |-
+                  想想：
+                  為 AI 聊天機器人
+                  打造的評測集合，
+                  由公眾設計、
+                  為公眾而做！
+                  (比如Weval.org，
+                  我們需要更多 ...)
+            - id: b006_body
+              box: [300, 5060, 1700, 5700]
+              font: 197
+              text: |-
+                  產業多半追蹤
+                  AI 的能力，而
+                  羅盤衡量的是
+            - id: b007_body
+              box: [333, 5732, 2009, 7666]
+              font: 178
+              text: |-
+                  人們所重視的 ——
+                  誠實、文化流暢度、
+                  衝突調解、
+                  心理健康最佳實務…
+                  諸如此類！
+            - id: b008_body
+              box: [3913, 3359, 5652, 4253]
+              font: 173
+              text: |-
+                  每項價值都以多種
+                  不同方式衡量，以
+                  求穩健。
+            - id: b009_body
+              box: [3913, 4566, 5733, 5807]
+              font: 212
+              text: |-
+                  而且有回饋循環：
+                  由公民評估，這些評測
+                  可以被加以改進。
+            - id: b010_body
+              box: [3879, 6050, 5576, 6940]
+              font: 169
+              text: |-
+                  這就是我們設計了
+                  以價值為本的「羅盤」來引導科技的方法！
+    Ch5_A:
+        boxes:
+            - id: b001_title
+              type: title
+              box: [2216, 152, 4580, 1012]
+              font: 791
+              text: "團結力"
+            - id: b002_title
+              type: title
+              box: [324, 1320, 1638, 1830]
+              font: 440
+              text: "問題："
+            - id: b003_body
+              box: [1805, 1346, 5140, 1882]
+              font: 185
+              text: "每當大家想要不同的東西，我們往往陷入：「負和」或「零和」思維。"
+            - id: b004_body
+              box: [431, 1989, 2763, 2507]
+              font: 156
+              text: "這是什麼意思？想像兩位都想要一顆橘子的廚師 ——"
+            - id: b005_body
+              box: [3022, 1974, 5314, 2492]
+              font: 191
+              text: "他們可以為之爭鬥，結果兩敗俱傷：「負和」。"
+            - id: b006_body
+              box: [378, 4581, 2817, 5584]
+              font: 174
+              text: "平分橘子比較好，但這仍假設我的所得是你的所失：收益加總為零：「零和」。"
+            - id: b007_body
+              box: [2963, 4545, 5371, 5619]
+              font: 138
+              text: |-
+                  但他們能雙方都獲益嗎？也就是
+                  「正和」? 這也許不總是辦得到，
+                  但錯失良機就太可惜了。那麼，
+                  該如何盡可能追求「雙贏」呢 ?
+            - id: b008_body
+              type: references
+              box: [894, 7443, 5236, 7703]
+              font: 103
+              text: "*這個橘子故事源自 Follett (1925)、Fisher & Ury (1981) 與 Covey (1989)"
+            - id: ch5_a_axis_i_win
+              box: [3599, 5573, 4142, 5817]
+              font: 95
+              text: "我贏"
+            - id: ch5_a_axis_you_win
+              box: [4817, 6173, 5390, 6417]
+              font: 95
+              text: "你贏"
+            - id: ch5_a_axis_you_lose
+              box: [2999, 6463, 3573, 6717]
+              font: 95
+              text: "你輸"
+            - id: ch5_a_axis_i_lose
+              box: [3599, 7073, 4142, 7317]
+              font: 95
+              text: "我輸"
+    Ch5_B:
+        boxes:
+            - id: b001_title
+              type: title
+              box: [852, 153, 4891, 497]
+              font: 300
+              text: "不要相互保證毀滅"
+            - id: b002_title
+              type: title
+              box: [1002, 573, 4741, 942]
+              font: 310
+              text: "而要盡可能雙贏"
+            - id: b003_title
+              type: title
+              box: [308, 1301, 1683, 1803]
+              font: 461
+              text: "解方："
+            - id: b004_body
+              box: [1919, 1332, 5563, 2226]
+              font: 150
+              text: |-
+                  退一步想。在你想要「做什麼」背後，
+                  問問自己：你「為何」想要它？
+                  接著：你能不能創造一個同時滿足
+                  雙方「為何」的、新的「做什麼」？
+            - id: b005_body
+              box: [345, 2276, 2666, 2530]
+              font: 145
+              text: "舉例來說，也許我們的兩位主廚會對彼此說……"
+            - id: b006_body
+              box: [2582, 2236, 5763, 2571]
+              font: 145
+              text: "…而他們發現，雙方都能100% 滿足需求，毫無浪費！"
+            - id: b007_body
+              box: [416, 4434, 2728, 5576]
+              font: 142
+              text: "沒錯，這例子有點刻意，但雙贏在現實生活中其實常常找得到！幾年前，台灣曾為了是否更改時區而激烈辯論："
+            - id: ch5_b_change
+              box: [500, 5740, 1500, 6180]
+              font: 140
+              text: |-
+                  更改：讓台灣
+                  更具獨特性
+            - id: ch5_b_keep
+              box: [1900, 5740, 2740, 6540]
+              font: 140
+              text: |-
+                  維持：因為
+                  更改時區的
+                  經濟成本
+                  太高
+            - id: b008_body
+              box: [2949, 4435, 5395, 5491]
+              font: 163
+              text: "但在 pol.is 與參與官的協助下，大家找到了能同時滿足雙方「為何」的新「做什麼」：就業金卡，把科學家與藝術家帶進台灣。"
+            - id: ch5_b_both
+              box: [3100, 5720, 3870, 5990]
+              font: 160
+              text: "同時兼顧"
+            - id: ch5_b_uniqueness
+              box: [3150, 6030, 3800, 6290]
+              font: 160
+              text: "獨特性"
+            - id: ch5_b_and
+              box: [3340, 6330, 3620, 6580]
+              font: 110
+              text: "與"
+            - id: ch5_b_economics
+              box: [3130, 6630, 3830, 6890]
+              font: 160
+              text: "經濟 ???"
+            - id: b009_body
+              box: [1194, 7359, 4832, 7677]
+              font: 182
+              text: "更好的討論，就是這樣幫助我們達成雙贏的！"
+            - id: ch5_b_welcome_creator
+              box: [4060, 5723, 5273, 6367]
+              font: 150
+              text: |-
+                  歡迎，
+                  創作者！
+            - id: ch5_b_chef_speech_left
+              box: [894, 2582, 2066, 3136]
+              font: 124
+              text: |-
+                  我需要做
+                  橙酒。
+            - id: ch5_b_chef_speech_right
+              box: [950, 3138, 2312, 3692]
+              font: 120
+              text: |-
+                  噢！我需要
+                  柳橙汁。
+            - id: ch5_b_chef_peel_label
+              box: [3392, 2583, 4240, 3070]
+              font: 112
+              text: |-
+                  果皮與皮屑
+                  做利口酒
+            - id: ch5_b_chef_juice_label
+              box: [4240, 3075, 4689, 3514]
+              font: 112
+              text: |-
+                  果肉
+                  榨汁
+    Ch6_A:
+        boxes:
+            - id: b001_title
+              type: title
+              box: [2208, 188, 4540, 991]
+              font: 744
+              text: "共生力"
+            - id: b002_title
+              type: title
+              box: [324, 1320, 1638, 1830]
+              font: 440
+              text: "問題："
+            - id: b003_body
+              box: [1565, 1400, 5654, 1844]
+              font: 260
+              text: "別把整個社會放進同一個籃子。"
+            - id: b004_body
+              box: [447, 2000, 2943, 2920]
+              font: 179
+              text: "我們現代的文化、新聞與政治，全都經過少數幾家跨國公司經營的平台流淌。"
+            - id: b005_body
+              box: [3108, 1991, 5446, 2920]
+              font: 167
+              text: "但這造成了「單點故障」！無論是出於意外，還是蓄意的貪婪，這些平台都可能讓我們失望。"
+            - id: b006_body
+              box: [459, 5467, 5468, 6124]
+              font: 150
+              text: "而就算這些中心化平台不出事，「成功」仍然糟糕：一種平淡、一體適用的文化，欠缺由信仰、地方社群等構成的「厚實中間層」。"
+    Ch6_B:
+        boxes:
+            - id: b001_title
+              type: title
+              box: [452, 153, 5291, 517]
+              font: 300
+              text: "不要：一體適用的霸主"
+            - id: b002_title
+              type: title
+              box: [452, 573, 5291, 957]
+              font: 300
+              text: "而要：在地解方給在地人"
+            - id: b003_title
+              type: title
+              box: [391, 1301, 1767, 1803]
+              font: 461
+              text: "解方："
+            - id: b004_body
+              box: [1780, 1326, 5121, 1861]
+              font: 176
+              text: "為使用者而戰！要求能捍衛在地自主的科技。這裡有三個近期的例子……"
+            - id: b005_body
+              box: [2488, 2064, 5184, 3600]
+              font: 167
+              text: |-
+                  「為了孩子著想」是威權者擴張勢力最常見的藉口。
+
+                  ROOST.tools 是一個非營利組織，製作開源工具——沒有集中式的控制——協助各機構在自家平台上偵測與預防兒童剝削。
+            - id: b006_body
+              box: [353, 3769, 3343, 5003]
+              font: 150
+              text: |-
+                  gpt-oss-safeguard 是一套開源 AI，讓你
+                  自帶政策。把你社群的規則與價值告訴
+                  它，它就能協助（而非取代）人類審核
+                  者，一同守護你的社群！
+            - id: ch6_b_constitution
+              box: [4280, 4170, 4540, 4700]
+              font: 170
+              text: |-
+                  章
+                  程
+            - id: b007_body
+              box: [2836, 5213, 5537, 6347]
+              font: 120
+              text: |-
+                  最後，這本書本身也受惠於一個「在地精神」
+                  的 Kami（地神）：不是雲端上的大公司廢料，
+                  而是一個守護特定關係、在一台特定筆電上
+                  在地運行的 Kami（地神）。
+            - id: b008_body
+              box: [2829, 6390, 5170, 6669]
+              font: 122
+              text: "這個原則，連同本書中所有其他原則，"
+            - id: b009_body
+              box: [2854, 6582, 5536, 7129]
+              font: 110
+              text: "「正是我們打造一個不集中權力、而是讓人們共享權力之未來的方法。」"
+            - id: b010_body
+              box: [2999, 7273, 5340, 7577]
+              font: 116
+              text: "生生不息，繁榮昌盛！"

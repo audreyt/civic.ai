@@ -40,6 +40,7 @@
         "worker:typecheck": "cd worker && bun run typecheck",
         "worker:test": "cd worker && bun run test",
         "import-comics": "bun import-comics.mjs",
+        "comics:vector": "bun scripts/comics-vector.mjs",
         "fonts:ja": "bun scripts/fetch-ja-fonts.mjs",
         "fonts:latin": "bun scripts/fetch-latin-fonts.mjs",
         "fonts:zh": "bun scripts/fetch-zh-fonts.mjs",

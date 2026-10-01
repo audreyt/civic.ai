@@ -150,11 +150,13 @@ export function nativePictures(
     });
 }
 
+// Comic lettering (inline SVG) keeps the quote glyphs the drawings show.
 const SMART_QUOTE_SKIP = new Set([
     "code",
     "pre",
     "script",
     "style",
+    "svg",
     "textarea",
 ]);
 const OPENER_CONTEXT = /[\s([{\u2013\u2014\u201C\u2018-]/;

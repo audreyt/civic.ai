@@ -15,8 +15,18 @@ The browser and production build make no font requests to third parties.
   and `sensemaker/{generated,source}/`.
   Only the resulting WOFF2 files and licence/manifest in `fonts/src/` belong
   in the repository; the full upstream TTF is never written to disk.
+- `vp run comics:vector -- --src ../civic-ai-comics` (see
+  `scripts/comics-vector.mjs`) cuts `patrick-hand-comics.woff2`,
+  `patrick-hand-sc-comics.woff2`, `anton-comics.woff2` and `oswald-comics.woff2` from the OFL
+  copies in Nicky Case's `design-resources/fonts`, retaining exactly the
+  characters of `_data/comics-text-en.yml` (with the plain twins of its
+  typographic quotes, dashes and ellipses). Their licences ship beside them
+  as `OFL-PatrickHand.txt`, `OFL-PatrickHandSC.txt`, `OFL-Anton.txt` and
+  `OFL-Oswald.txt`.
 
-The maintenance scripts need a network connection. Neither runs in CI.
+The maintenance scripts need a network connection, except the comics one,
+which needs a local checkout of the comics repository instead. None runs in
+CI.
 Re-run the Chinese fetch after adding glyphs: the build warns with the
 actual missing characters rather than silently claiming font coverage.
 
