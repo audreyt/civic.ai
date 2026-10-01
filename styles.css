@@ -4122,588 +4122,14 @@ html:not(.js) .search-toggle {
     padding-left: 0;
     line-height: 1.6;
 }
-/* ─── CONCEPT MAP · THE DAY WHEEL ───
-   Build-time sundial + station manifest rendered by src/lib/conceptMap.ts
-   from _data/concept_map.json. Zero client JS; everything below is
-   progressive enhancement over plain readable HTML. */
-
-.cmap {
-    --cmap-p6: #a753f6;
-    margin-block: 1.5rem;
-}
-
-.cmap
-    :is(
-        .cmap-station,
-        .cmap-chip,
-        .cmap-field-chip,
-        .cmap-badge,
-        .cmap-frame-title
-    ) {
-    --ink: var(--ink-l);
-}
-
-html[data-theme="dark"]
-    .cmap
-    :is(
-        .cmap-station,
-        .cmap-chip,
-        .cmap-field-chip,
-        .cmap-badge,
-        .cmap-frame-title
-    ) {
-    --ink: var(--ink-d);
-}
-
-html[data-theme="dark"] .cmap {
-    --cmap-p6: #a753f6;
-}
-
-/* ── the membrane frame: Pack 6 drawn as what it is ── */
-
-.cmap-frame {
-    position: relative;
-    border: 2px solid var(--cmap-p6);
-    border-radius: 12px;
-    padding: 1.1rem 1.1rem 0.9rem;
-}
-
-.cmap-frame-title {
-    display: inline-block;
-    font-weight: 700;
-    font-size: 0.95rem;
-    color: var(--ink);
-    text-decoration: none;
-    background: var(--paper);
-    padding-inline: 0.55em;
-}
-
-.cmap-frame-title:hover {
-    text-decoration: underline;
-}
-
-.cmap-frame-chips {
-    list-style: none;
-    margin: 0.6rem 0;
-    padding: 0;
-    display: grid;
-    gap: 0.4rem;
-}
-
-.cmap-frame-chip {
-    display: flex;
-    align-items: baseline;
-    gap: 0.45em;
-    font-size: 0.78rem;
-    color: var(--text);
-    background: var(--paper);
-    padding-inline: 0.45em;
-}
-
-.cmap-frame-glyph {
-    color: var(--cmap-p6);
-    font-weight: 700;
-}
-
-.cmap-frame-chip--measure a {
-    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-    font-size: 0.78rem;
-    color: var(--text);
-    text-decoration: none;
-}
-
-.cmap-frame-chip--measure a:hover {
-    text-decoration: underline;
-}
-
-/* ── dial + walk ── */
-
-.cmap-dial {
-    margin: 0 auto;
-    max-width: 440px;
-}
-
-.cmap-dial-frame {
-    position: relative;
-}
-
-.cmap-dial-svg {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.cmap-rim {
-    fill: none;
-    stroke: var(--cmap-p6);
-    stroke-width: 2.5;
-}
-
-.cmap-horizon {
-    stroke: var(--border);
-    stroke-width: 1.5;
-    stroke-dasharray: 2 7;
-}
-
-.cmap-arc {
-    fill: none;
-    stroke-width: 14;
-    stroke-linecap: round;
-    opacity: 0.92;
-}
-
-.cmap-cycle-arrow {
-    fill: var(--muted);
-}
-
-.cmap-chord {
-    stroke: var(--muted);
-    stroke-width: 2;
-    opacity: 0;
-}
-
-.cmap-chord--dashed {
-    stroke-dasharray: 4 5;
-}
-
-.cmap-chip {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35em;
-    font-size: 0.72rem;
-    font-weight: 700;
-    line-height: 1.1;
-    color: var(--ink);
-    background: var(--surface);
-    border: 1.5px solid var(--hue);
-    border-radius: 999px;
-    padding: 0.28em 0.7em;
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-.cmap-field-dock {
-    margin-top: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.35rem;
-}
-
-.cmap-field-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35em;
-    color: var(--ink);
-    background: var(--surface);
-    border: 1.5px solid var(--hue);
-    border-radius: 999px;
-    padding: 0.28em 0.7em;
-    font-size: 0.72rem;
-    font-weight: 700;
-    line-height: 1.1;
-    text-align: center;
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-.cmap-field-note {
-    margin: 0;
-    max-width: 13rem;
-    color: var(--muted);
-    font-size: 0.72rem;
-    font-weight: 600;
-    line-height: 1.2;
-    text-align: center;
-}
-
-.cmap-chip:hover,
-.cmap-field-chip:hover {
-    background: color-mix(in srgb, var(--hue) 12%, var(--surface));
-}
-
-/* ── stations: the readable manifest ── */
-
-.cmap-zone {
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    border: 0;
-    margin: 1.5rem 0 0.6rem;
-    padding: 0;
-}
-
-.cmap-walk > .cmap-zone:first-child {
-    margin-top: 0;
-}
-
-.cmap-station {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-top: 3px solid var(--hue);
-    border-radius: 6px;
-    padding: 0.85rem 1.05rem 0.95rem;
-    scroll-margin-top: 5rem;
-}
-
-.cmap-station-title {
-    margin: 0.15rem 0 0.35rem;
-    font-family: var(--serif);
-    font-size: 1.18rem;
-    border: 0;
-    padding: 0;
-}
-
-.cmap-station-title a {
-    color: var(--heading);
-    text-decoration: none;
-}
-
-.cmap-station-title a:hover {
-    text-decoration: underline;
-}
-
-.cmap-measure {
-    margin: 0;
-}
-
-.cmap-measure a {
-    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-    font-size: 0.8rem;
-    color: var(--text);
-    text-decoration: none;
-}
-
-.cmap-measure a:hover {
-    text-decoration: underline;
-}
-
-.cmap-measure-tag {
-    display: inline-block;
-    font-size: 0.66rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--muted);
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    padding: 0 0.5em;
-    margin-right: 0.55em;
-}
-
-.cmap-sends {
-    list-style: none;
-    margin: 0.55rem 0 0;
-    padding: 0;
-    display: grid;
-    gap: 0.35rem;
-}
-
-.cmap-send {
-    display: flex;
-    align-items: baseline;
-    gap: 0.55em;
-    font-size: 0.85rem;
-    color: var(--text);
-}
-
-.cmap-badge {
-    flex: none;
-    display: inline-block;
-    color: var(--ink);
-    font-size: 1.35em;
-    font-weight: 700;
-    line-height: 1;
-    text-decoration: none;
-}
-
-.cmap-badge-glyph {
-    display: inline-block;
-    color: var(--ink);
-}
-
-.cmap-badge:hover {
-    background: color-mix(in srgb, var(--hue) 12%, transparent);
-}
-
-.cmap-send--dashed .cmap-badge {
-    border: 1.5px dashed var(--ink);
-    border-radius: 999px;
-    padding: 0.06em;
-}
-
-.cmap-hand {
-    display: flex;
-    align-items: baseline;
-    gap: 0.6em;
-    margin: 0.6rem 0 0.85rem;
-    padding-left: 1.05rem;
-    font-size: 0.85rem;
-    color: var(--muted);
-}
-
-.cmap-hand-glyph {
-    font-weight: 700;
-}
-
-.cmap-hand--night {
-    border-block: 1px dashed var(--border);
-    padding-block: 0.5rem;
-}
-
-.cmap-loop {
-    margin-left: auto;
-    font-size: 0.8rem;
-    color: var(--muted);
-    white-space: nowrap;
-}
-
-.cmap-guard {
-    margin: 1.3rem 0 0.8rem;
-    border: 1px dashed var(--border);
-    border-radius: 6px;
-    padding: 0.6rem 0.9rem;
-    font-size: 0.8rem;
-    line-height: 1.55;
-    color: var(--muted);
-}
-
-.cmap-legend {
-    margin: 0.9rem auto 0;
-    max-width: 680px;
-    text-align: center;
-    font-size: 0.8rem;
-}
-
-.cmap-legend a {
-    color: var(--muted);
-}
-
-.cmap-legend a:hover {
-    color: var(--heading);
-}
-
-/* ── mobile: walking the day (dawn→sunset rail) ── */
-
-@media (max-width: 719px) {
-    .cmap-walk {
-        position: relative;
-        padding-left: 14px;
-    }
-
-    .cmap-walk::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        width: 3px;
-        border-radius: 2px;
-        /* Discrete pack segments, not a blended gradient (DESIGN.md §5.4) */
-        background: linear-gradient(
-            180deg,
-            var(--pack-1) 0 16.66%,
-            var(--pack-2) 16.66% 33.33%,
-            var(--pack-3) 33.33% 50%,
-            var(--pack-4) 50% 66.66%,
-            var(--pack-5) 66.66% 83.33%,
-            var(--pack-6) 83.33% 100%
-        );
-    }
-
-    .cmap-dial {
-        margin-bottom: 1.2rem;
-    }
-}
-
-@media (max-width: 479px) {
-    .cmap-chip--cycle {
-        padding: 0.3em 0.55em;
-    }
-
-    .cmap-chip--cycle .cmap-chip-name {
-        font-size: 0;
-    }
-
-    .cmap-chip--cycle .cmap-chip-name::before {
-        content: attr(data-short);
-        font-size: 0.72rem;
-    }
-}
-
-/* ── desktop: sticky dial beside the walk, full-bleed frame ── */
-
-@media (min-width: 720px) {
-    .cmap {
-        margin-inline: calc(50% - 50vw);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-inline: 24px;
-    }
-
-    .cmap-frame {
-        width: min(100%, 1120px);
-        padding: 0 2rem 1.2rem;
-    }
-
-    .cmap-frame-title {
-        position: absolute;
-        top: 0;
-        left: 1.6rem;
-        transform: translateY(-50%);
-    }
-
-    .cmap-body {
-        display: grid;
-        grid-template-columns: minmax(260px, 34%) 1fr;
-        gap: 1.6rem 2.2rem;
-        align-items: start;
-        margin-top: 1.4rem;
-    }
-
-    .cmap-dial {
-        position: sticky;
-        top: 1.5rem;
-        max-width: none;
-    }
-
-    .cmap-guard {
-        margin-bottom: 1.1rem;
-    }
-}
-
-/* frame chips straddle the border only when there is room for one row */
-@media (min-width: 1000px) {
-    .cmap-frame-chips {
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        gap: 0.5rem 1.2rem;
-        padding-inline: 2rem;
-        pointer-events: none;
-    }
-
-    .cmap-frame-chips a {
-        pointer-events: auto;
-    }
-
-    .cmap-frame-chips--top {
-        top: 0;
-        transform: translateY(-50%);
-        padding-left: 18rem;
-    }
-
-    .cmap-frame-chips--bottom {
-        bottom: 0;
-        transform: translateY(50%);
-        justify-content: space-between;
-        padding-right: 3rem;
-    }
-
-    .cmap-frame-chip {
-        pointer-events: auto;
-    }
-}
-
-/* ── hover/focus illumination: ask a pack what it sends ── */
-
-.cmap:has(#st-p1:is(:hover, :focus-within)) .cmap-arc-1,
-.cmap:has(.cmap-chip-1:is(:hover, :focus-visible)) .cmap-arc-1,
-.cmap:has(#st-p2:is(:hover, :focus-within)) .cmap-arc-2,
-.cmap:has(.cmap-chip-2:is(:hover, :focus-visible)) .cmap-arc-2,
-.cmap:has(#st-p3:is(:hover, :focus-within)) .cmap-arc-3,
-.cmap:has(.cmap-chip-3:is(:hover, :focus-visible)) .cmap-arc-3,
-.cmap:has(#st-p4:is(:hover, :focus-within)) .cmap-arc-4,
-.cmap:has(.cmap-chip-4:is(:hover, :focus-visible)) .cmap-arc-4 {
-    stroke-width: 20;
-    opacity: 1;
-}
-
-.cmap:has(.cmap-chip-1:is(:hover, :focus-visible)) .cmap-chord-1-3,
-.cmap:has(.cmap-chip-3:is(:hover, :focus-visible)) .cmap-chord-1-3,
-.cmap:has(#st-p1:is(:hover, :focus-within)) .cmap-chord-1-3,
-.cmap:has(#st-p3:is(:hover, :focus-within)) .cmap-chord-1-3,
-.cmap:has(.cmap-chip-2:is(:hover, :focus-visible)) .cmap-chord-2-4,
-.cmap:has(.cmap-chip-4:is(:hover, :focus-visible)) .cmap-chord-2-4,
-.cmap:has(#st-p2:is(:hover, :focus-within)) .cmap-chord-2-4,
-.cmap:has(#st-p4:is(:hover, :focus-within)) .cmap-chord-2-4 {
-    opacity: 0.9;
-}
-
-.cmap:has(.cmap-chip-1:is(:hover, :focus-visible)) #st-p1,
-.cmap:has(.cmap-chip-2:is(:hover, :focus-visible)) #st-p2,
-.cmap:has(.cmap-chip-3:is(:hover, :focus-visible)) #st-p3,
-.cmap:has(.cmap-chip-4:is(:hover, :focus-visible)) #st-p4,
-.cmap:has(.cmap-chip-5:is(:hover, :focus-visible)) #st-p5 {
-    border-color: var(--hue);
-    box-shadow: var(--shadow);
-}
-
-/* keyboard fallback: entering the dial by Tab wakes it, independent of
-   engines whose :has(:focus…) invalidation skips SVG-internal targets */
-.cmap-dial-frame:focus-within .cmap-chord {
-    opacity: 0.55;
-}
-
-.cmap-dial-frame:focus-within .cmap-arc {
-    opacity: 1;
-}
-
-/* ── dark scheme: lantern-tuned strokes ── */
-
-html[data-theme="dark"] .cmap-arc-1 {
-    stroke: #eb573a;
-}
-
-html[data-theme="dark"] .cmap-arc-2 {
-    stroke: #f09344;
-}
-
-html[data-theme="dark"] .cmap-arc-3 {
-    stroke: #f9dd55;
-}
-
-html[data-theme="dark"] .cmap-arc-4 {
-    stroke: #7cc967;
-}
 
 /* ── motion: only ever confirms something the reader did ── */
 
 @media (prefers-reduced-motion: no-preference) {
-    .cmap-arc {
-        transition:
-            stroke-width 0.2s ease,
-            opacity 0.2s ease;
-    }
-
-    .cmap-chord {
-        transition: opacity 0.2s ease;
-    }
-
-    .cmap-dial {
-        view-transition-name: cmap-dial;
-    }
-
-    .cmap-frame {
-        view-transition-name: cmap-frame;
-    }
-
     /* the compass fills as you walk the day (Chromium+; others keep the
        fully lit dial) */
     @media (min-width: 720px) {
         @supports (animation-timeline: view()) {
-            .cmap {
-                timeline-scope: --st1, --st2, --st3, --st4, --st5;
-            }
-
             #st-p1 {
                 view-timeline-name: --st1;
             }
@@ -4723,40 +4149,7 @@ html[data-theme="dark"] .cmap-arc-4 {
             #st-p5 {
                 view-timeline-name: --st5;
             }
-
-            .cmap-arc {
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
-                animation: cmap-fill linear both;
-                animation-range: entry 0% cover 45%;
-            }
-
-            .cmap-arc-1 {
-                animation-timeline: --st1;
-            }
-
-            .cmap-arc-2 {
-                animation-timeline: --st2;
-            }
-
-            .cmap-arc-3 {
-                animation-timeline: --st3;
-            }
-
-            .cmap-arc-4 {
-                animation-timeline: --st4;
-            }
-
-            .cmap-arc-5 {
-                animation-timeline: --st5;
-            }
         }
-    }
-}
-
-@keyframes cmap-fill {
-    to {
-        stroke-dashoffset: 0;
     }
 }
 
@@ -5557,12 +4950,10 @@ header nav.site-nav a {
 :root,
 html[data-theme="light"] {
     --gold-text: #7a6128;
-    --cmap-p6-text: #8a3fd4;
 }
 
 html[data-theme="dark"] {
     --gold-text: var(--harvest);
-    --cmap-p6-text: #b98cf9;
 }
 
 /* Small gold labels use the text-safe gold; --gold stays for rules/borders. */
@@ -5578,10 +4969,6 @@ h4[data-faq-label]::before,
 .conf-time,
 .conf-break .conf-detail {
     color: var(--gold-text);
-}
-
-.cmap-frame-glyph {
-    color: var(--cmap-p6-text);
 }
 
 /* Line breaking */
@@ -5976,7 +5363,6 @@ html[data-theme="dark"] body[data-pack="6"] {
         --shadow: none;
         --shadow-hover: none;
         --gold-text: #7a6128;
-        --cmap-p6-text: #8a3fd4;
     }
 
     /* A photocopy cannot follow a link: print external addresses in brackets. */
@@ -6401,12 +5787,6 @@ html[data-theme="dark"] .record-zone .record-eval--fail {
 
 /* Logged, measured and executable text speaks in the machinery voice. */
 :not(pre) > code,
-.cmap-zone,
-.cmap-chip,
-.cmap-field-chip,
-.cmap-measure-tag,
-.cmap-frame-chip--measure a,
-.cmap-measure a,
 .polis-stat__value {
     font-family: var(--machine);
 }
@@ -6445,5 +5825,292 @@ html[data-theme="dark"] .record-zone .record-eval--fail {
 
     body:has(.site-header--interior) main {
         padding-top: 0;
+    }
+}
+
+/* ─── MEASURES MAP ───
+   Three zones read top to bottom: the four-pack care cycle (a loop of cards on
+   wide screens, a sequence on phones), the field between organisations, and
+   Pack 6, whose outline frames the whole map because it bounds every
+   deployment in time. Every relation is written in words; a pack's hue only
+   says which pack it is. */
+.cmap {
+    margin: 1.5rem 0 2rem;
+}
+
+.cmap-frame {
+    padding: 1rem 0.875rem;
+    border: 2px solid var(--pack-6);
+}
+
+.cmap-zone + .cmap-zone {
+    margin-top: 1.5rem;
+}
+
+.cmap-zone-title {
+    margin: 0 0 0.75rem;
+    padding: 0;
+    border: 0;
+    font-family: var(--machine);
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    color: var(--soil);
+}
+
+.cmap-card {
+    min-width: 0;
+    padding: 0.875rem 1rem 1rem;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-top: 4px solid var(--hue);
+    border-radius: var(--radius-machine);
+    scroll-margin-top: 1rem;
+}
+
+.cmap-card-title {
+    margin: 0 0 0.625rem;
+    padding: 0;
+    border: 0;
+    font-family: var(--prose);
+    font-size: 1.3125rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.cmap-card-title a {
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.cmap-card-title a:hover,
+.cmap-card-title a:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+}
+
+.cmap-measure,
+.cmap-hand,
+.cmap-guard,
+.cmap-legend {
+    margin: 0;
+}
+
+.cmap-label,
+.cmap-rel {
+    display: block;
+    font-family: var(--machine);
+    font-size: 0.875rem;
+    line-height: 1.45;
+    color: var(--soil);
+}
+
+.cmap-measure a,
+.cmap-cargo {
+    font-family: var(--prose);
+    font-size: 1.125rem;
+    line-height: 1.45;
+}
+
+.cmap-cargo {
+    display: block;
+    color: var(--ink);
+}
+
+.cmap-rels {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0.875rem 0 0;
+    padding: 0.875rem 0 0;
+    list-style: none;
+    border-top: 1px solid var(--rule);
+}
+
+.cmap-rels li {
+    margin: 0;
+    padding: 0;
+}
+
+/* A pack named inside a relation reads as prose, not as a machine label, and
+   carries its hue as a dot. */
+.cmap-pack {
+    font-family: var(--prose);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: var(--ink);
+}
+
+.cmap-pack::before {
+    content: "";
+    display: inline-block;
+    width: 0.625em;
+    height: 0.625em;
+    margin-inline: 0.2em 0.3em;
+    border-radius: 50%;
+    background: var(--hue);
+}
+
+.cmap-cycle {
+    display: grid;
+}
+
+/* The handoff between two cycle cards, and what passes along it. */
+.cmap-hand {
+    position: relative;
+    padding: 0.625rem 0 0.625rem 2.25rem;
+}
+
+.cmap-hand::before {
+    content: "↓" / "";
+    position: absolute;
+    top: 0.5rem;
+    left: 0.625rem;
+    font-family: var(--machine);
+    font-size: 1.375rem;
+    line-height: 1.2;
+    color: var(--ink);
+}
+
+.cmap-hand--4::before {
+    content: "↺" / "";
+}
+
+.cmap-back {
+    display: inline-block;
+    margin-top: 0.25rem;
+    font-family: var(--machine);
+    font-size: 0.875rem;
+}
+
+.cmap-guard {
+    margin-top: 0.875rem;
+    padding-top: 0.875rem;
+    border-top: 1px solid var(--rule);
+    font-family: var(--prose);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    color: var(--soil);
+}
+
+.cmap-legend {
+    margin-top: 0.875rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+@media (min-width: 64rem) {
+    .cmap {
+        width: min(68rem, calc(100vw - 4rem));
+        margin-inline: calc((100% - min(68rem, calc(100vw - 4rem))) / 2);
+    }
+
+    .cmap-frame {
+        padding: 1.5rem;
+    }
+
+    /* Drawn as the loop it is: 1 → 2, down to 3, back across to 4, up to 1. */
+    .cmap-cycle {
+        grid-template-columns: minmax(0, 1fr) 11rem minmax(0, 1fr);
+        grid-template-areas:
+            "p1 h1 p2"
+            "h4 .  h2"
+            "p4 h3 p3";
+        gap: 0.5rem 0.75rem;
+        align-items: center;
+    }
+
+    .cmap-step {
+        align-self: stretch;
+    }
+
+    .cmap-step--1 {
+        grid-area: p1;
+    }
+
+    .cmap-step--2 {
+        grid-area: p2;
+    }
+
+    .cmap-step--3 {
+        grid-area: p3;
+    }
+
+    .cmap-step--4 {
+        grid-area: p4;
+    }
+
+    .cmap-hand {
+        padding: 0.375rem 0.5rem;
+        text-align: center;
+    }
+
+    .cmap-hand::before {
+        position: static;
+        display: block;
+        font-size: 1.75rem;
+    }
+
+    .cmap-hand--1 {
+        grid-area: h1;
+    }
+
+    .cmap-hand--1::before {
+        content: "→" / "";
+    }
+
+    .cmap-hand--2 {
+        grid-area: h2;
+    }
+
+    .cmap-hand--3 {
+        grid-area: h3;
+    }
+
+    .cmap-hand--3::before {
+        content: "←" / "";
+    }
+
+    .cmap-hand--4 {
+        grid-area: h4;
+    }
+
+    .cmap-hand--4::before {
+        content: "↑" / "";
+    }
+
+    /* The upward arrow already closes the loop on screen. */
+    .cmap-back {
+        display: none;
+    }
+
+    .cmap-zone--field .cmap-rels {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .cmap-zone--boundary .cmap-rels {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media print {
+    .cmap {
+        width: auto;
+        margin-inline: 0;
+    }
+
+    .cmap-frame {
+        padding: 3mm;
+        border-width: 1pt;
+    }
+
+    .cmap-card {
+        background: none;
+        break-inside: avoid;
+    }
+
+    .cmap-hand {
+        break-after: avoid;
     }
 }

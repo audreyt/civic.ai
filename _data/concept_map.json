@@ -8,11 +8,11 @@
         "tw": "關懷循環——第一至四力"
     },
     "fieldLabel": {
-        "en": "The field between deployments",
+        "en": "The field between organisations",
         "tw": "組織之間的場域"
     },
     "measureLabel": {
-        "en": "headline measure",
+        "en": "Headline measure",
         "tw": "公開主指標"
     },
     "handsLabel": {
@@ -23,21 +23,29 @@
         "en": "back to Pack 1",
         "tw": "回到覺察力"
     },
+    "alsoTemplate": {
+        "en": "Also hands {pack}",
+        "tw": "也交給{pack}"
+    },
+    "fromTemplate": {
+        "en": "From {pack}",
+        "tw": "來自{pack}"
+    },
+    "toTemplate": {
+        "en": "To {pack}",
+        "tw": "交給{pack}"
+    },
+    "bothTemplate": {
+        "en": "Both ways with {pack}",
+        "tw": "與{pack}雙向"
+    },
     "membrane": {
         "num": 6,
         "slug": "6",
         "hue": "#a753f6",
-        "phase": {
-            "en": "Sunset",
-            "tw": "落"
-        },
         "title": {
             "en": "Pack 6 · Symbiosis — the boundary in time",
             "tw": "六 · 共生力——時間的邊界"
-        },
-        "chip": {
-            "en": "6 · Symbiosis",
-            "tw": "六 · 共生力"
         },
         "measure": {
             "anchor": "exit-readiness",
@@ -45,25 +53,13 @@
                 "en": "Exit readiness",
                 "tw": "退出就緒度"
             }
-        },
-        "inkLight": "#8a3fd4",
-        "inkDark": "#b98cf9"
+        }
     },
     "packs": [
         {
             "num": 1,
             "slug": "1",
             "hue": "#eb573a",
-            "inkLight": "#b6422d",
-            "inkDark": "#f07a60",
-            "phase": {
-                "en": "First light",
-                "tw": "曉"
-            },
-            "chip": {
-                "en": "1 · Attentiveness",
-                "tw": "一 · 覺察力"
-            },
             "title": {
                 "en": "Pack 1 · Attentiveness",
                 "tw": "一 · 覺察力"
@@ -80,16 +76,6 @@
             "num": 2,
             "slug": "2",
             "hue": "#f09344",
-            "inkLight": "#9a5a22",
-            "inkDark": "#f09344",
-            "phase": {
-                "en": "Morning",
-                "tw": "朝"
-            },
-            "chip": {
-                "en": "2 · Responsibility",
-                "tw": "二 · 負責力"
-            },
             "title": {
                 "en": "Pack 2 · Responsibility",
                 "tw": "二 · 負責力"
@@ -106,16 +92,6 @@
             "num": 3,
             "slug": "3",
             "hue": "#f9dd55",
-            "inkLight": "#7a6918",
-            "inkDark": "#f9dd55",
-            "phase": {
-                "en": "Noon",
-                "tw": "午"
-            },
-            "chip": {
-                "en": "3 · Competence",
-                "tw": "三 · 勝任力"
-            },
             "title": {
                 "en": "Pack 3 · Competence",
                 "tw": "三 · 勝任力"
@@ -132,16 +108,6 @@
             "num": 4,
             "slug": "4",
             "hue": "#7cc967",
-            "inkLight": "#4f7f42",
-            "inkDark": "#7cc967",
-            "phase": {
-                "en": "Afternoon rain",
-                "tw": "霖"
-            },
-            "chip": {
-                "en": "4 · Responsiveness",
-                "tw": "四 · 回應力"
-            },
             "title": {
                 "en": "Pack 4 · Responsiveness",
                 "tw": "四 · 回應力"
@@ -158,16 +124,6 @@
             "num": 5,
             "slug": "5",
             "hue": "#6197f8",
-            "inkLight": "#3f6fbf",
-            "inkDark": "#6197f8",
-            "phase": {
-                "en": "Dusk",
-                "tw": "暮"
-            },
-            "chip": {
-                "en": "5 · Solidarity",
-                "tw": "五 · 團結力"
-            },
             "title": {
                 "en": "Pack 5 · Solidarity",
                 "tw": "五 · 團結力"
@@ -213,7 +169,6 @@
             "from": 4,
             "to": 1,
             "kind": "cycle",
-            "night": true,
             "cargo": {
                 "en": "new needs restart the cycle",
                 "tw": "新需求重啟循環"
@@ -232,7 +187,6 @@
             "from": 1,
             "to": 3,
             "kind": "chord",
-            "dashed": true,
             "cargo": {
                 "en": "caution areas become safe-to-fail trials",
                 "tw": "高風險區成為安全試錯的試驗"
@@ -269,7 +223,6 @@
             "from": 5,
             "to": 6,
             "kind": "membrane",
-            "edge": "bottom",
             "cargo": {
                 "en": "treaties, IDs, portability make symbiosis feasible",
                 "tw": "條約、身分與可攜性使共生可行"
@@ -279,7 +232,6 @@
             "from": 3,
             "to": 6,
             "kind": "membrane",
-            "edge": "bottom",
             "cargo": {
                 "en": "competent, responsive systems earn stewardship",
                 "tw": "勝任且有回應的系統才能贏得管理權"
@@ -289,7 +241,6 @@
             "from": 6,
             "to": 1,
             "kind": "membrane",
-            "edge": "top",
             "cargo": {
                 "en": "retired systems gift maps, evals, records",
                 "tw": "退役的系統將地圖、評測與紀錄贈予公地"
@@ -299,12 +250,11 @@
             "from": 6,
             "to": 2,
             "kind": "membrane",
-            "edge": "top",
-            "both": true,
             "cargo": {
                 "en": "bounds and sunsets are contractual",
                 "tw": "界限與退場期限是契約性的"
-            }
+            },
+            "both": true
         }
     ],
     "guard": {
