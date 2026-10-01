@@ -1,6 +1,7 @@
 ---
 layout: chapter
 title: "關懷六力宣言"
+summary_display: false
 summary: "與其任由 AI 激化我們的衝突，不如把它打造成在地的關懷基礎設施——小而有界的守護者，幫助我們跨越分歧、攜手合作。「關懷六力」是一套務實的方法，讓我們以關懷實際生長的速度來治理 AI。"
 author: "唐鳳"
 date: 2025-09-01

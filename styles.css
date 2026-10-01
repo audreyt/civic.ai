@@ -2564,6 +2564,32 @@ body.comics-page main {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
+.comics-alt {
+    padding: 0 12px 10px;
+    background: var(--warm);
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    text-align: center;
+}
+
+.comics-alt summary {
+    padding: 6px 0;
+    color: var(--teal);
+    cursor: pointer;
+}
+
+.comics-alt p {
+    margin: 0.6em 0;
+    color: var(--text);
+    font-size: 0.92rem;
+    line-height: 1.55;
+    text-align: left;
+}
+
+.comics-overview .comics-alt {
+    background: none;
+}
+
 .comics-gallery .next-action-button {
     align-self: center;
     margin: 8px 0 12px;
@@ -5999,6 +6025,17 @@ html[data-theme] .faq-filter {
 .faq-filter button:focus-visible,
 .faq-filter button[aria-pressed="true"] {
     transform: none;
+}
+
+/* Phones: wrap the categories so none hide off-screen; a wrapped bar is too
+   tall to stay pinned over the answers. */
+@media (max-width: 480px) {
+    html[data-theme] .faq-filter {
+        position: static;
+        flex-wrap: wrap;
+        overflow-x: visible;
+        scroll-snap-type: none;
+    }
 }
 
 /* Mobile site navigation wraps instead of hiding links off-screen */

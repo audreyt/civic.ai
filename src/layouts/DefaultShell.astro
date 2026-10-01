@@ -67,7 +67,7 @@ const pageLd = isHome
       {page.data.prev_action && <a href={page.data.prev_action.url} class="next-action-button"><span class="button-arrow">←</span><span class="button-text">{page.data.prev_action.text}</span></a>}
       {page.data.next_action && <a href={page.data.next_action.url} class="next-action-button"><span class="button-text">{page.data.next_action.text}</span><span class="button-arrow">→</span></a>}
     </div></section>}
-    {page.url === "/" || page.url === "/tw/" ? <Footer lang={page.data.lang} /> : <PartnerColophon lang={page.data.lang} />}
+    {page.url === "/" || page.url === "/tw/" ? <Footer lang={page.data.lang} /> : <PartnerColophon lang={page.data.lang} url={page.url} />}
     <script is:inline type="application/ld+json" set:html={JSON.stringify(websiteLd)}></script>
     {pageLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(pageLd)}></script>}
     <ClientScripts page={page} />

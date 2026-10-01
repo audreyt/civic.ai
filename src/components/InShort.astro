@@ -5,7 +5,8 @@ import { createMarkdownRenderer, smartQuotes } from "../lib/legacyMarkdown";
 interface Props { page: PageRecord; }
 const { page } = Astro.props;
 const zh = lang2(page.data.lang) === "zh";
-const summary = page.data.summary?.trim() ? smartQuotes(page.data.summary.trim()) : undefined;
+// summary_display: false keeps the summary for metadata but renders no card (the manifesto, DESIGN.md §10).
+const summary = page.data.summary_display !== false && page.data.summary?.trim() ? smartQuotes(page.data.summary.trim()) : undefined;
 const summaryLabel = page.data.summary_label?.trim() || (zh ? "簡單講" : "In short");
 const summaryAnchor = page.data.summary_anchor?.trim() || undefined;
 const keyTakeaways = Array.isArray(page.data.key_takeaways)

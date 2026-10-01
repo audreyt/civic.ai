@@ -3,13 +3,13 @@
     "overview": {
         "en": {
             "src": "/img/overview-small.jpg",
-            "alt": "6-Pack of Care visual overview",
+            "alt": "Hand-drawn overview by Nicky Case: six coloured cans seen from above, one per pack. Red, 'Actually listen to people': not only the popular/powerful, but small underdogs too. Orange, 'Actually keep promises': not vague ideals, soon abandoned, but specific commitments, with teeth. Yellow, 'We check the process': not 'just trust us lol', but transparency and fast community feedback. Green, 'We check the results': not metrics that don't measure what we value, but metrics designed by and for us. Blue, 'As win-win as possible': not mutually assured destruction, but deals where all sides are better off. Purple, 'As local as possible': not a one-size-fits-all Overlord, but a variety of solutions by and for a variety of folks. Below, two characters toast with a six-pack of cans.",
             "width": 1280,
             "height": 1781
         },
         "tw": {
             "src": "/img/overview-small-tw.jpg",
-            "alt": "關懷六力概覽圖",
+            "alt": "Nicky Case 手繪的關懷六力概覽：由上往下看的六罐飲料，每罐代表一力。紅罐「真的傾聽人們想說的話」：不是只聽受歡迎／有權勢的人，而是也聽見小眾與弱勢的聲音。橘罐「真的承諾人們在乎的事」：不是空泛理想、說說就算，而是具體承諾、有力量的約定。黃罐「人們檢核『過程』」：不是「相信我們就好啦（笑）」，而是可見透明與快速社群反饋。綠罐「人們檢核『結果』」：不是與我們價值無關的那些指標，而是我們設計、服務我們的指標。藍罐「儘量雙贏」：不是保證玉石俱焚，而是讓每一邊都更好的協議。紫罐「儘量在地」：不是一體適用的中央霸主，而是多元社群打造的多樣解方。下方兩個角色舉起六罐裝互相乾杯。",
             "width": 1280,
             "height": 1781
         }
@@ -28,16 +28,16 @@
                     "id": "1",
                     "type": { "en": "Problem", "tw": "問題", "ja": "問題点" },
                     "alt": {
-                        "en": "Attentiveness — Problem (comic page)",
-                        "tw": "覺察力——問題（漫畫頁）"
+                        "en": "Hand-lettered comic page headed 'ATTENTIVENESS — PROBLEM': a calm rabbit ticks a multiple-choice ballot reading 'bad guy / worse guy / no chance of winning' beside a red, chaotic screaming match of monstrous figures, illustrating that citizens get only an occasional vote or an online shouting match; three small icons below stand for finding facts and values where we agree, being constructive where we disagree, and finding truly new solutions.",
+                        "tw": "手繪漫畫頁，標題為「ATTENTIVENESS——PROBLEM」：一隻平靜的兔子勾選寫著「bad guy／worse guy／no chance of winning」的選票，旁邊是一片紅色混亂、怪物般人物的叫罵戰場，說明公民只能偶爾投票或在網路上互罵；下方三個小圖示分別代表凸顯彼此認同的事實與價值、在分歧處保持建設性，以及找出真正全新的解方。"
                     }
                 },
                 {
                     "id": "2",
                     "type": { "en": "Solution", "tw": "解方", "ja": "解決策" },
                     "alt": {
-                        "en": "Attentiveness — Solution (comic page)",
-                        "tw": "覺察力——解方（漫畫頁）"
+                        "en": "Hand-lettered comic page headed 'NOT: only the powerful and popular, BUT: voices from every community — SOLUTION': diverse animal-headed citizens sit round a table as a citizens' assembly, with notes explaining that the Polis platform has no 'share' or 'reply' button and lets people vote Agree / Disagree / Unsure to surface the ideas that best bridge divides, so technology enhances rather than replaces our voice; a crowd of small figures and a large hand-drawn heart sit below.",
+                        "tw": "手繪漫畫頁，標題為「NOT：only the powerful and popular／BUT：voices from every community——SOLUTION」：多元的動物擬人角色圍坐圓桌如同公民大會，旁註說明 Polis 平台沒有「分享」或「回覆」按鈕，讓人們以同意／不同意／不確定投票，凸顯最能跨越分歧的想法，使科技增強而非取代我們的發聲；下方是一群小角色與一顆大大的手繪愛心。"
                     }
                 }
             ]
@@ -55,16 +55,16 @@
                     "id": "1",
                     "type": { "en": "Problem", "tw": "問題", "ja": "問題点" },
                     "alt": {
-                        "en": "Responsibility — Problem (comic page)",
-                        "tw": "負責力——問題（漫畫頁）"
+                        "en": "Hand-drawn comic page headed 'RESPONSIBILITY — PROBLEM': a huddle of cartoon animals each shout a blame-shifting excuse such as 'I'm just selling what the customers buy' and 'I'm just following orders', under the line 'When no one is responsible, no one is responsible', with a caption on Taiwan's 2024 Facebook deepfake scams quoting the platform's deflection, 'it's an algorithm pushing to you'.",
+                        "tw": "手繪漫畫頁，標題為「RESPONSIBILITY——PROBLEM」：一群卡通動物擠在一起、各自喊出推卸責任的藉口，例如「我只是賣顧客要買的東西」與「我只是聽命行事」，下方寫著「沒有人負責時，就沒有人負責」，並以說明文字記述臺灣 2024 年臉書深偽詐騙案，引用平台卸責的回應「是演算法推送給你的」。"
                     }
                 },
                 {
                     "id": "2",
                     "type": { "en": "Solution", "tw": "解方", "ja": "解決策" },
                     "alt": {
-                        "en": "Responsibility — Solution (comic page)",
-                        "tw": "負責力——解方（漫畫頁）"
+                        "en": "Hand-drawn comic page headed 'NOT: vague promises, BUT: exact commitments — SOLUTION': a thoughtful cat clutching an orange heart looks up at a stacked column of questions — WHO, WHAT, WHEN, WHY, HOW — beside text proposing auditable engagement contracts that name the specific person responsible while leaving the method to them, closing with the note that a Taiwan citizens' assembly earned over 85% deliberant support for its recommendations and targeted deepfake-scam categories fell by more than 94% within a year.",
+                        "tw": "手繪漫畫頁，標題為「NOT：vague promises／BUT：exact commitments——SOLUTION」：一隻若有所思、抱著橘色愛心的貓抬頭望向一疊大字問題——WHO、WHAT、WHEN、WHY、HOW——旁邊文字提出可稽核的「參與契約」，指定具體負責的人、但把做法交由其自行決定，結尾說明臺灣公民大會的建議獲得逾 85% 與會公民支持，一年內目標類別的深偽詐騙下降超過 94%。"
                     }
                 }
             ]
@@ -82,16 +82,16 @@
                     "id": "1",
                     "type": { "en": "Problem", "tw": "問題", "ja": "問題点" },
                     "alt": {
-                        "en": "Competence — Problem (comic page)",
-                        "tw": "勝任力——問題（漫畫頁）"
+                        "en": "Hand-lettered comic page titled 'COMPETENCE — PROBLEM' tracing how the algorithms that run our lives grew from understandable to opaque: a simple average rating, then a dense fraction-and-logarithm formula only coders could follow, and finally a tangled machine-learning diagram beside a small figure and a grey box reading 'To become a mind so vast, even It can no longer speak Its own true name'.",
+                        "tw": "手繪漫畫頁，標題為「COMPETENCE——PROBLEM」，描繪左右我們生活的演算法如何從可理解走向難以理解：先是簡單的平均評分，接著是只有工程師勉強看懂的分數與對數公式，最後是糾結的機器學習圖示，旁邊一個小角色與一個灰色框，框中寫著「要成為如此浩瀚的心智，連祂自己都再也說不出自己真正的名字」。"
                     }
                 },
                 {
                     "id": "2",
                     "type": { "en": "Solution", "tw": "解方", "ja": "解決策" },
                     "alt": {
-                        "en": "Competence — Solution (comic page)",
-                        "tw": "勝任力——解方（漫畫頁）"
+                        "en": "Hand-lettered comic page headed 'NOT: just trust us lol, BUT: everyone can check the process — SOLUTION': algorithms that affect everyone should be inspectable by everyone, illustrated with Community Notes on X (formerly Birdwatch) and three animal figures checking the inputs, the free and public code (a checklist marked 'MY CODE') and the output, closing 'to trust the process, we must be able to check the process'.",
+                        "tw": "手繪漫畫頁，標題為「NOT：just trust us lol／BUT：everyone can check the process——SOLUTION」：影響每個人的演算法應讓每個人都能檢視，並以 X 上的 Community Notes（前身為 Birdwatch）為例，三隻動物角色分別檢核輸入、自由且公開的程式碼（標示「MY CODE」的清單）以及輸出，結語為「要『信任流程』，我們得能夠檢查流程」。"
                     }
                 }
             ]
@@ -109,16 +109,16 @@
                     "id": "1",
                     "type": { "en": "Problem", "tw": "問題", "ja": "問題点" },
                     "alt": {
-                        "en": "Responsiveness — Problem (comic page)",
-                        "tw": "回應力——問題（漫畫頁）"
+                        "en": "Hand-lettered comic page headed 'RESPONSIVENESS — PROBLEM': a rabbit holding a compass explains that society needs metrics to know where it is going but those metrics are often broken; paired charts contrast a rising 'average income' with the reality that income soars for the upper class while stalling for the lower class, and a table maps clicks to clickbait, comments to rage-bait flame wars, and user approval to sycophantic chatbots.",
+                        "tw": "手繪漫畫頁，標題為「RESPONSIVENESS——PROBLEM」：一隻拿著羅盤的兔子說明社會需要指標來判斷前進方向，但這些指標往往是壞掉的；成對的圖表對比上揚的「平均收入」與真實情況——上層階級大幅上升、下層階級卻停滯——並以一張對照表把點擊對應到標題黨、留言對應到激怒式論戰、使用者好評對應到諂媚的聊天機器人。"
                     }
                 },
                 {
                     "id": "2",
                     "type": { "en": "Solution", "tw": "解方", "ja": "解決策" },
                     "alt": {
-                        "en": "Responsiveness — Solution (comic page)",
-                        "tw": "回應力——解方（漫畫頁）"
+                        "en": "Hand-lettered comic page headed 'NOT: metrics that mislead us, BUT: metrics made by us, for us — SOLUTION': three steps — measure what we actually care about, measure it in multiple ways, and re-evaluate metrics often — illustrated with Weval.org, a public collection of AI-chatbot evaluations measuring values like honesty, cultural fluency, conflict resolution and mental-health best practices, with green 'BY US' and 'FOR US' arrows rising above a crowd of animal characters.",
+                        "tw": "手繪漫畫頁，標題為「NOT：metrics that mislead us／BUT：metrics made by us, for us——SOLUTION」：列出三步驟——衡量我們真正在乎的事、用多種方式衡量、經常重新評估指標——並以 Weval.org 為例，那是一個公開的 AI 聊天機器人評估集合，衡量誠實、文化流暢度、衝突調解與心理健康最佳實務等價值，綠色的「BY US」與「FOR US」箭頭從一群動物角色上方升起。"
                     }
                 }
             ]
@@ -136,16 +136,16 @@
                     "id": "1",
                     "type": { "en": "Problem", "tw": "問題", "ja": "問題点" },
                     "alt": {
-                        "en": "Solidarity — Problem (comic page)",
-                        "tw": "團結力——問題（漫畫頁）"
+                        "en": "Hand-lettered comic page headed 'SOLIDARITY — PROBLEM': when people want different things we slip into negative-sum or zero-sum thinking — two chefs both want one orange, so they could fight over it and both end up worse off (negative-sum), or split it equally, which still assumes one side's gain is the other's loss (zero-sum); a win-lose diagram sits below.",
+                        "tw": "手繪漫畫頁，標題為「團結力——PROBLEM」：當大家想要不同的東西，我們往往陷入「負和」或「零和」思維——兩位廚師都想要同一顆橘子，他們可以爭奪而兩敗俱傷（負和），或平分但仍假設一方所得即另一方所失（零和）；下方是一張輸贏對照圖。"
                     }
                 },
                 {
                     "id": "2",
                     "type": { "en": "Solution", "tw": "解方", "ja": "解決策" },
                     "alt": {
-                        "en": "Solidarity — Solution (comic page)",
-                        "tw": "團結力——解方（漫畫頁）"
+                        "en": "Hand-lettered comic page headed 'NOT: mutually assured destruction, BUT: as win-win as possible — SOLUTION': look behind each what to the deeper why, then craft a new what that satisfies both sides — the two chefs discover one needs the orange peel for liqueur and the other the juice, so both are fully satisfied with no waste; and Taiwan used the pol.is platform to turn divisive debates into win-wins — including the Employment Gold Card that welcomed scientists and artists, showing how better conversations help everyone gain.",
+                        "tw": "手繪漫畫頁，標題為「NOT：相互保證毀滅／BUT：盡可能雙贏——SOLUTION」：在每個「什麼」背後追問更深的「為什麼」，再打造一個同時滿足雙方的新「什麼」——兩位廚師發現一人要果皮做利口酒、一人要果肉榨汁，於是雙方百分之百滿足、毫無浪費；臺灣也曾用 pol.is 平台把分歧的辯論化為雙贏——包括迎進科學家與藝術家的就業金卡——示範更好的討論如何幫助大家共贏。"
                     }
                 }
             ]
@@ -163,16 +163,16 @@
                     "id": "1",
                     "type": { "en": "Problem", "tw": "問題", "ja": "問題点" },
                     "alt": {
-                        "en": "Symbiosis — Problem (comic page)",
-                        "tw": "共生力——問題（漫畫頁）"
+                        "en": "Hand-lettered comic page headed 'SYMBIOSIS — PROBLEM' reading 'Don't put all your society in one basket': cartoon animals are packed into a single purple basket that then breaks apart, illustrating how routing modern culture, news and politics through a handful of multinational platforms creates a single point of failure — and how, even when those platforms do not fail, a bland one-size-fits-all 'success' flattens the thick middle layer of churches, local communities and the like; a row of grey figures stands below.",
+                        "tw": "手繪漫畫頁，標題為「共生力——PROBLEM」，寫著「別把整個社會放進同一個籃子」：卡通動物先是全擠進一個紫色籃子，接著籃子破裂散落，說明把現代文化、新聞與政治都交給少數幾家跨國平台會造成「單點故障」——而且就算平台不出事，一體適用的「成功」也會抹平由信仰、地方社群等構成的厚實中間層；下方排著一列灰色人形。"
                     }
                 },
                 {
                     "id": "2",
                     "type": { "en": "Solution", "tw": "解方", "ja": "解決策" },
                     "alt": {
-                        "en": "Symbiosis — Solution (comic page)",
-                        "tw": "共生力——解方（漫畫頁）"
+                        "en": "Hand-lettered comic page headed 'NOT: a one-size-fits-all overlord, BUT: local solutions for local folks — SOLUTION' urging 'fight for the users', with three recent examples — the nonprofit ROOST.tools making open-source, un-centralised tools to detect and prevent child abuse; the open-source gpt-oss-safeguard that lets a community bring its own policy so it assists rather than replaces human moderators; and this book itself, made with a bounded local-spirit Kami fine-tuned to steward one specific relationship and run on one specific laptop — closing that sharing power, not concentrating it, is how we build the future.",
+                        "tw": "手繪漫畫頁，標題為「不要：一體適用的霸主／而要：在地解方給在地人——SOLUTION」，呼籲「為使用者而戰」，並舉三個近期例子——非營利組織 ROOST.tools 製作沒有集中控制的開源工具，協助偵測與預防兒童剝削；開源的 gpt-oss-safeguard 讓社群自帶政策，協助而非取代人類審核者；以及這本書本身，由一個守護特定關係、在一台特定筆電上在地運行的「在地精神」Kami（地神）所輔助——結語說分享權力而非集中權力，正是我們打造未來的方法。"
                     }
                 }
             ]

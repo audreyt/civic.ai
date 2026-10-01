@@ -1,6 +1,7 @@
 ---
 layout: chapter
 title: "6-Pack of Care: A Manifesto"
+summary_display: false
 summary: "Instead of letting AI supercharge our conflicts, we can build it as local care infrastructure — small, bounded stewards that help us cooperate across differences. The 6-Pack of Care is a practical way to govern AI at the speed care actually grows."
 author: "Audrey Tang"
 date: 2025-09-01

@@ -98,20 +98,24 @@ export function renderComicsGallery(lang: string | undefined): string {
     const caption = zh
         ? `<p class="figure-caption"><strong>概覽圖。</strong>六力一覽，由 Nicky Case 繪製。</p>`
         : `<p class="figure-caption"><strong>Overview.</strong> All six packs at a glance, illustrated by Nicky Case.</p>`;
+    // Each plate's long-form alt text, readable on phones where the drawn type
+    // is too small, plus the full-size image (DESIGN.md §10, Comics).
+    const describe = (alt: string, src: string) =>
+        `<details class="comics-alt"><summary>${zh ? "閱讀文字描述" : "Read the description"}</summary><p>${escapeHtml(alt)}</p><p><a href="${escapeAttr(src)}">${zh ? "開啟原尺寸圖片" : "Open the full-size image"}</a></p></details>`;
     const pages = comics.packs
         .flatMap((pack) =>
             pack.pages.map((page) => {
                 const img = zh
                     ? `/img/pack${pack.num}-${page.id}-tw.jpg`
                     : `/img/pack${pack.num}-${page.id}.jpg`;
-                return `<a href="${base}${pack.slug}/" class="comics-page-link" id="pack-${pack.num}-${page.id}"><noscript><img src="${escapeAttr(img)}" alt="${escapeAttr(page.alt[key])}" width="1437" height="1999" loading="lazy" decoding="async" /></noscript><span class="comics-page-label"><span class="comics-page-pack">${escapeHtml(pack.title[key])}</span><span class="comics-page-type">${escapeHtml(page.type[key])}</span></span></a>`;
+                return `<div class="comics-cell"><a href="${base}${pack.slug}/" class="comics-page-link" id="pack-${pack.num}-${page.id}"><noscript><img src="${escapeAttr(img)}" alt="${escapeAttr(page.alt[key])}" width="1437" height="1999" loading="lazy" decoding="async" /></noscript><span class="comics-page-label"><span class="comics-page-pack">${escapeHtml(pack.title[key])}</span><span class="comics-page-type">${escapeHtml(page.type[key])}</span></span></a>${describe(page.alt[key], img)}</div>`;
             })
         )
         .join("");
     const credit = zh
         ? `插圖由 <a href="https://ncase.me">Nicky Case</a> 繪製（CC0）。<a href="${escapeAttr(comics.source_repo)}">原始檔案</a>見 GitHub。`
         : `Illustrated by <a href="https://ncase.me">Nicky Case</a> (CC0). <a href="${escapeAttr(comics.source_repo)}">Source files</a> on GitHub.`;
-    return `<div class="comics-gallery"><section class="comics-overview"><a href="${base}#the-6-pack" class="comics-overview-link"><noscript><img src="${escapeAttr(overview.src)}" alt="${escapeAttr(overview.alt)}" class="overview-image" width="${overview.width}" height="${overview.height}" loading="lazy" decoding="async" /></noscript></a>${caption}</section><div class="comics-grid">${pages}</div><p class="comics-credit">${credit}</p></div>`;
+    return `<div class="comics-gallery"><section class="comics-overview"><a href="${base}#the-6-pack" class="comics-overview-link"><noscript><img src="${escapeAttr(overview.src)}" alt="${escapeAttr(overview.alt)}" class="overview-image" width="${overview.width}" height="${overview.height}" loading="lazy" decoding="async" /></noscript></a>${caption}${describe(overview.alt, overview.src)}</section><div class="comics-grid">${pages}</div><p class="comics-credit">${credit}</p></div>`;
 }
 
 // Builds the three polygons (background clip, left float, right float) that

@@ -20,6 +20,7 @@ export interface PageFrontmatter {
     description?: string;
     meta_description?: string;
     summary?: string;
+    summary_display?: boolean;
     summary_label?: string;
     summary_anchor?: string;
     key_takeaways?: string[];

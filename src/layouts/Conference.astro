@@ -101,7 +101,7 @@ const eventLd = {"@context":"https://schema.org","@type":"Event",name:`${data.ti
     </div>
   )}
 </main>
-<PartnerColophon lang={page.data.lang} />
+<PartnerColophon lang={page.data.lang} url={page.url} />
 <script is:inline type="application/ld+json" set:html={JSON.stringify(eventLd)}></script>
 <ClientScripts page={page} />
 </body>

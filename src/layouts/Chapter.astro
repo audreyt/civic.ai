@@ -1,5 +1,5 @@
 ---
-import { visibleHtml, type ActionLink, type PageRecord } from "../lib/pages";
+import { getPageByUrl, visibleHtml, type ActionLink, type PageRecord } from "../lib/pages";
 import { lang2, site } from "../lib/site";
 import { normalizeSearchLang } from "../lib/search";
 import ClientScripts from "../components/ClientScripts.astro";
@@ -24,16 +24,16 @@ const packKey = page.url.replace(/^\/tw\//, "").replace(/^\//, "").replace(/\/$/
 const packNumber = /^[1-6]$/.test(packKey) ? packKey : undefined;
 const key = page.url.replace(/^\/tw\//, "").replace(/^\//, "").replace(/\/$/, "");
 const index = chapterOrder.indexOf(key);
-function linkFor(slug: string, direction: "prev" | "next"): ActionLink {
-    const prefix = zh ? "/tw" : "";
-    const label = zh ? (direction === "prev" ? "上一章" : "下一章") : (direction === "prev" ? "Previous" : "Next");
-    return { url: `${prefix}/${slug}/`, text: label };
+// Cycle nav names where it leads ("Pack 2: Responsibility"), not just "Next" (DESIGN.md §9).
+function linkFor(slug: string): ActionLink {
+    const url = `${zh ? "/tw" : ""}/${slug}/`;
+    return { url, text: (getPageByUrl(url).data.title ?? slug).split(/ — |——/)[0] };
 }
 const previousSlug = index > 0 ? chapterOrder[index - 1] : undefined;
 const nextSlug = index >= 0 && index < chapterOrder.length - 1 ? chapterOrder[index + 1] : undefined;
 const hasExplicitNav = Boolean(page.data.nav_prev || page.data.nav_next);
-const prev = page.data.nav_prev || (!hasExplicitNav && previousSlug ? linkFor(previousSlug, "prev") : !hasExplicitNav ? { url: zh ? "/tw/" : "/", text: zh ? "首頁" : "Home" } : undefined);
-const next = page.data.nav_next || (!hasExplicitNav && nextSlug ? linkFor(nextSlug, "next") : undefined);
+const prev = page.data.nav_prev || (!hasExplicitNav && previousSlug ? linkFor(previousSlug) : !hasExplicitNav ? { url: zh ? "/tw/" : "/", text: zh ? "首頁" : "Home" } : undefined);
+const next = page.data.nav_next || (!hasExplicitNav && nextSlug ? linkFor(nextSlug) : undefined);
 const authors = page.data.author
     ? [{ "@type": "Person", name: page.data.author }]
     : [
@@ -77,7 +77,7 @@ if (ldImage) articleLd.image = ldImage.includes("://") ? ldImage : `${site.url}$
       {prev && <a href={prev.url} class="next-action-button">{!hasExplicitNav && <span class="button-arrow">←</span>}<span class="button-text">{prev.text}</span></a>}
       {next && <a href={next.url} class="next-action-button"><span class="button-text">{next.text}</span>{!hasExplicitNav && <span class="button-arrow">→</span>}</a>}
     </div></section>
-    <PartnerColophon lang={page.data.lang} />
+    <PartnerColophon lang={page.data.lang} url={page.url} />
     <script is:inline type="application/ld+json" set:html={JSON.stringify(articleLd)}></script>
     <ClientScripts page={page} />
     {isJaComics && <ComicsJaOverlay />}
