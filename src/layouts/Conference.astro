@@ -8,6 +8,8 @@ import PageHead from "../components/PageHead.astro";
 import PartnerColophon from "../components/PartnerColophon.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import SearchOverlay from "../components/SearchOverlay.astro";
+import Trace from "../components/Trace.astro";
+import { record, recordSources } from "../lib/record";
 
 interface Props { page: PageRecord; }
 const { page } = Astro.props;
@@ -29,6 +31,7 @@ const pagefindIndexed =
     page.data.search_exclude !== true &&
     normalizeSearchLang(page.data.lang) === "en";
 const eventLd = {"@context":"https://schema.org","@type":"Event",name:`${data.title} — ${data.subtitle}`,url:`${site.url}${page.url}`,description:data.meta_description||data.description,startDate:"2026-03-25",eventStatus:"https://schema.org/EventScheduled",eventAttendanceMode:"https://schema.org/OfflineEventAttendanceMode",image:data.og_image?`${site.url}${data.og_image}`:`${site.url}/img/overview-small.jpg`,location:{"@type":"Place",name:"Rhodes House",address:{"@type":"PostalAddress",streetAddress:"South Park Road",addressLocality:"Oxford",addressCountry:"GB"}},organizer:{"@type":"Organization",name:"Oxford Institute for Ethics in AI",url:"https://www.oxford-aiethics.ox.ac.uk/"}};
+const pageLd = { "@context": "https://schema.org", "@type": "WebPage", url: `${site.url}${page.url}`, name: data.title, dateModified: record.summary(recordSources(page))?.amendedDate };
 ---
 <!doctype html>
 <html lang={page.data.lang || "en"}>
@@ -101,7 +104,9 @@ const eventLd = {"@context":"https://schema.org","@type":"Event",name:`${data.ti
     </div>
   )}
 </main>
+<Trace page={page} />
 <PartnerColophon lang={page.data.lang} url={page.url} />
+<script is:inline type="application/ld+json" set:html={JSON.stringify(pageLd)}></script>
 <script is:inline type="application/ld+json" set:html={JSON.stringify(eventLd)}></script>
 <ClientScripts page={page} />
 </body>

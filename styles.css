@@ -6251,3 +6251,386 @@ html[data-theme="dark"] body[data-pack="6"] {
         overflow-wrap: anywhere;
     }
 }
+
+/* ─── THE RECORD: Trace, ledger, ¶ (DESIGN.md §7.2, §8, §10) ─── */
+.record-zone,
+.record-paragraph__link {
+    font-family: var(--machine, "IBM Plex Mono", ui-monospace, monospace);
+    font-variant-numeric: tabular-nums;
+    color: var(--ink, #211d16);
+    border-radius: 0;
+}
+
+.record-trace {
+    width: 100%;
+    margin-block: 3rem 0;
+    border-block: 1px solid var(--rule, #ddd9cb);
+    background: var(--surface, #fbfaf4);
+}
+
+.record-trace__inner {
+    position: relative;
+    max-width: 64rem;
+    margin-inline: auto;
+    padding: 1.5rem 1.25rem;
+}
+
+.record-trace .record-trace__heading {
+    margin: 0 0 1.5rem;
+    padding: 0 0 0.75rem;
+    border: 0;
+    border-bottom: 1px solid var(--rule, #ddd9cb);
+    font: inherit;
+    font-size: 0.875rem;
+    text-align: right;
+    letter-spacing: 0.08em;
+    color: var(--soil, #5a5142);
+}
+
+.record-seal {
+    position: absolute;
+    inset-block-start: 4.5rem;
+    inset-inline-end: 1.25rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    color: var(--cinnabar, #b4351f);
+}
+
+.record-trace__rows {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.record-trace__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.25rem;
+    padding-block: 0.75rem;
+    border-bottom: 1px solid var(--rule, #ddd9cb);
+}
+
+.record-trace__row:last-child {
+    border-bottom: 0;
+}
+
+.record-trace__row dt {
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--soil, #5a5142);
+}
+
+.record-trace__row dd {
+    min-width: 0;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.record-trace__stewards dd {
+    padding-inline-end: 4.25rem;
+}
+
+.record-secondary,
+.record-history-note,
+.record-eval-built {
+    color: var(--soil, #5a5142);
+}
+
+.record-history-note {
+    margin: 0.75rem 0 0;
+    font-size: 0.75rem;
+}
+
+.record-zone a {
+    color: var(--moss, #33603e);
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+}
+
+.record-zone a:focus-visible,
+.record-paragraph__link:focus-visible {
+    outline: 2px solid var(--moss, #33603e);
+    outline-offset: 3px;
+}
+
+.record-zone .record-contest {
+    color: var(--cinnabar, #b4351f);
+}
+
+.record-eval-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem 1rem;
+}
+
+.record-eval {
+    font-size: 0.8rem;
+}
+
+.record-zone .record-eval--fail {
+    color: #80601b;
+}
+
+.record-eval-built {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
+    overflow-wrap: anywhere;
+}
+
+.record-print-url {
+    display: none;
+}
+
+.record-chip {
+    display: none;
+}
+
+.record-ledger {
+    min-width: 0;
+}
+
+.record-ledger h2 {
+    font-family: inherit;
+    font-size: 1.2rem;
+    color: var(--ink, #211d16);
+    border-color: var(--rule, #ddd9cb);
+}
+
+.record-ledger__month {
+    margin: 2rem 0 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+}
+
+.record-ledger p {
+    font-family: inherit;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.record-eval-board {
+    display: grid;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    border: 1px solid var(--rule, #ddd9cb);
+    border-radius: 0;
+    background: var(--surface, #fbfaf4);
+}
+
+.record-eval-board > li {
+    margin: 0;
+    padding: 1rem;
+    border-bottom: 1px solid var(--rule, #ddd9cb);
+}
+
+.record-eval-board > li:last-child {
+    border-bottom: 0;
+}
+
+.record-eval-board strong {
+    color: inherit;
+    font-family: inherit;
+}
+
+.record-eval-board p {
+    margin: 0.5rem 0 0;
+    font-size: 0.75rem;
+    color: var(--soil, #5a5142);
+}
+
+.record-ledger__entries {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.record-ledger__entries > li {
+    display: grid;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--rule, #ddd9cb);
+    font: 0.8rem/1.6 var(--machine, "IBM Plex Mono", ui-monospace, monospace);
+    overflow-wrap: anywhere;
+}
+
+.record-ledger__entries time {
+    color: var(--soil, #5a5142);
+}
+
+.record-ledger__pages {
+    line-height: 1.8;
+}
+
+.record-zone .record-ledger__summary a {
+    color: inherit;
+}
+
+.record-paragraph {
+    position: relative;
+    scroll-margin-top: 1rem;
+}
+
+.record-paragraph__link {
+    position: absolute;
+    inset-inline-end: 0;
+    inset-block-start: -1.2rem;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.7rem;
+    line-height: 1.5;
+    color: var(--soil, #5a5142);
+    background: var(--surface, #fbfaf4);
+    text-decoration: none;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.record-paragraph:hover > .record-paragraph__link,
+.record-paragraph:focus-within > .record-paragraph__link,
+.record-paragraph:target > .record-paragraph__link {
+    opacity: 1;
+}
+
+html[data-theme="dark"] .record-zone {
+    --ink: #eae4d4;
+    --surface: #20242c;
+    --soil: #a89f8d;
+    --moss: #8fb79a;
+    --cinnabar: #e06844;
+    --rule: #343945;
+}
+
+html[data-theme="dark"] .record-paragraph__link {
+    color: var(--soil, #a89f8d);
+    background: var(--surface, #20242c);
+}
+
+html[data-theme="dark"] .record-zone .record-eval--fail {
+    color: #c8a25c;
+}
+
+@media (min-width: 720px) {
+    .record-trace__inner {
+        padding: 2rem;
+    }
+
+    .record-seal {
+        inset-block-start: 5rem;
+        inset-inline-end: 2rem;
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .record-trace__row {
+        grid-template-columns: 7rem minmax(0, 1fr);
+        gap: 1rem;
+    }
+
+    .record-trace__stewards dd {
+        padding-inline-end: 5rem;
+    }
+
+    .record-ledger__entries > li {
+        grid-template-columns: 6rem minmax(0, 1fr);
+        column-gap: 1rem;
+    }
+
+    .record-ledger__summary {
+        grid-column: 2;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main:not(:has(.cmap, .polis-fullbleed)) .record-chip {
+        display: grid;
+        float: right;
+        position: sticky;
+        top: 1.5rem;
+        width: 10rem;
+        margin: 0 -16rem 0 0;
+        padding-inline-start: 0.75rem;
+        border-inline-start: 1px solid var(--rule, #ddd9cb);
+        gap: 0.5rem;
+        font-size: 0.7rem;
+        line-height: 1.5;
+    }
+
+    .record-paragraph > .record-paragraph__link {
+        inset-inline-start: calc(100% + 1rem);
+        inset-inline-end: auto;
+        inset-block-start: 0;
+        width: 4rem;
+        background: none;
+        opacity: 1;
+    }
+}
+
+@media print {
+    .record-trace,
+    html[data-theme="dark"] .record-trace {
+        --ink: #211d16;
+        --surface: #fbfaf4;
+        --soil: #5a5142;
+        --moss: #5a5142;
+        --rule: #5a5142;
+        display: block !important;
+        margin: 1.5rem 0;
+        border: 1px solid var(--soil, #5a5142);
+        background: none;
+        break-inside: avoid;
+    }
+
+    .record-trace__inner {
+        padding: 0.75rem;
+    }
+
+    .record-trace__heading,
+    .record-seal,
+    .record-trace__evals,
+    .record-trace__contest,
+    .record-trace__twin,
+    .record-edit,
+    .record-trace__amended a {
+        display: none !important;
+    }
+
+    .record-trace__row {
+        display: block;
+        padding-block: 0.25rem;
+        border: 0;
+        font-size: 9pt;
+    }
+
+    .record-trace__row dt {
+        display: inline;
+        margin-inline-end: 0.5rem;
+    }
+
+    .record-trace__row dd {
+        display: inline;
+        padding: 0;
+    }
+
+    .record-print-url {
+        display: block;
+        overflow-wrap: anywhere;
+    }
+
+    .record-paragraph > .record-paragraph__link {
+        position: static;
+        display: inline;
+        margin-inline-start: 0.5rem;
+        padding: 0;
+        color: #5a5142;
+        background: none;
+        opacity: 1;
+        font-size: 0.7em;
+    }
+}

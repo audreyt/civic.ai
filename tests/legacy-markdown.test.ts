@@ -109,3 +109,48 @@ test("avifSibling offers the AVIF beside a JPEG or PNG only when it ships", () =
     expect(avifSibling("/img/b.png", has)).toBeUndefined();
     expect(avifSibling("/img/a.svg", has)).toBeUndefined();
 });
+
+test.each([
+    "/manifesto/",
+    "/1/",
+    "/2/",
+    "/3/",
+    "/4/",
+    "/5/",
+    "/6/",
+    "/measures/",
+    "/faq/",
+    "/tw/manifesto/",
+    "/tw/1/",
+    "/tw/2/",
+    "/tw/3/",
+    "/tw/4/",
+    "/tw/5/",
+    "/tw/6/",
+    "/tw/measures/",
+    "/tw/faq/",
+])("numbers canonical prose by core page URL: %s", (url) => {
+    const body = "First paragraph.\n\nSecond **paragraph**.";
+    const html = renderMarkdown(body, url);
+    expect(html.match(/id="p\d+"/g)).toEqual(['id="p1"', 'id="p2"']);
+    expect(html).toContain('href="#p2"');
+    expect(renderMarkdown(body, url)).toBe(html);
+});
+
+test("does not number non-core prose or generated HTML, media, quotes, controls and footnotes", () => {
+    const body = `Prose.[^note]\n\n<div class="card"><p>Generated</p><button>Control</button></div>\n\n![Image](a.png)\n\n- List item\n\n> Quotation\n\n[^note]: A footnote.\n`;
+    expect(renderMarkdown(body, "/kami/")).not.toContain('id="p1"');
+    expect(
+        renderMarkdown(body, "/1/").match(/data-record-paragraph=/g)
+    ).toHaveLength(1);
+});
+
+test("reserves existing raw and generated heading IDs when allocating paragraph anchors", () => {
+    const html = renderMarkdown(
+        '<h2 id="p1">Existing</h2>\n\n## p2\n\nProse.',
+        "/faq/"
+    );
+    expect(html.match(/id="p1"/g)).toHaveLength(1);
+    expect(html.match(/id="p2"/g)).toHaveLength(1);
+    expect(html).toContain('href="#p3"');
+});

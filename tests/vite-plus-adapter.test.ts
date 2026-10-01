@@ -221,6 +221,7 @@ test("Astro build bridge's default post-build step minifies then indexes via loc
         "bun",
         "bun",
         join(process.cwd(), "node_modules", ".bin", "pagefind"),
+        "bun",
     ]);
     expect(execFileSyncMock.mock.calls[0]?.[1]).toEqual([
         "scripts/minify-html.mjs",
@@ -229,6 +230,9 @@ test("Astro build bridge's default post-build step minifies then indexes via loc
         "scripts/subset-zh-fonts.mjs",
     ]);
     expect(execFileSyncMock.mock.calls[2]?.[1]).toEqual(["--site", "dist"]);
+    expect(execFileSyncMock.mock.calls[3]?.[1]).toEqual([
+        "scripts/evaluate-record.mjs",
+    ]);
     expect(
         execFileSyncMock.mock.calls
             .flat(2)

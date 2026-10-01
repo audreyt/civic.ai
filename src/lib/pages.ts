@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import { nativePictures, renderMarkdown, smartQuotes } from "./legacyMarkdown";
 import { expandShortcodes } from "./shortcodes";
 import { normalizeUrl } from "./site";
+import { generatedPages } from "./recordPages";
 
 export type LayoutName = "default" | "chapter" | "conference";
 
@@ -60,6 +61,10 @@ export interface PageFrontmatter {
     packs?: unknown[];
     overview_image?: { src: string; alt: string; w: number; h: number };
     ui_locale?: "en" | "tw";
+    stewards?: string[];
+    steward_email?: string;
+    polis_url?: string;
+    record_sources?: string[];
 }
 
 export interface PageRecord {
@@ -163,7 +168,7 @@ function loadPage(sourceName: string): PageRecord {
         ? rawBody
         : sourceName.endsWith(".html")
           ? expanded
-          : nativePictures(renderMarkdown(expanded), hasPublicFile);
+          : nativePictures(renderMarkdown(expanded, url), hasPublicFile);
     const includeInSitemap =
         !data.exclude_from_sitemap && data.layout !== false;
     return {
@@ -188,6 +193,7 @@ export function loadPages(): PageRecord[] {
     pageCache = readdirSync(root)
         .filter(isRootContentFile)
         .map(loadPage)
+        .concat(generatedPages)
         .sort((a, b) => a.url.localeCompare(b.url));
     return pageCache;
 }
@@ -208,6 +214,7 @@ export function getDynamicPagePaths(): Array<{
         "/tw/",
         "/conference/sensemaking/",
         "/tw/conference/sensemaking/",
+        "/404.html",
     ]);
     return loadPages()
         .filter((page) => !explicit.has(page.url))

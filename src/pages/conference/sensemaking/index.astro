@@ -2,29 +2,10 @@
 import PolisCareReport from "../../../components/PolisCareReport.astro";
 import DefaultShell from "../../../layouts/DefaultShell.astro";
 import { getPolisCareDeliberation } from "../../../lib/polis";
-import type { PageRecord } from "../../../lib/pages";
+import { getPageByUrl } from "../../../lib/pages";
 
 const report = await getPolisCareDeliberation();
-const page: PageRecord = {
-  sourcePath: "synthetic:conference/sensemaking",
-  sourceName: "conference/sensemaking",
-  url: "/conference/sensemaking/",
-  slug: "conference/sensemaking",
-  data: {
-    layout: "default",
-    title: "Polis Deliberation Mirror",
-    header_title: "Polis Deliberation Mirror",
-    description: "A Habermolt-inspired deliberation page rebuilt from Polis export files.",
-    lang: "en-gb",
-    alt_lang_url: "/tw/conference/sensemaking/",
-    permalink: "/conference/sensemaking/",
-    search_exclude: true,
-  },
-  rawBody: "",
-  html: "",
-  includeInSitemap: true,
-  isRawHtmlDocument: false,
-};
+const page = getPageByUrl("/conference/sensemaking/");
 ---
 <DefaultShell page={page}>
   <PolisCareReport uiLocale="en" report={report} />

@@ -1,25 +1,7 @@
 ---
 import DefaultShell from "../layouts/DefaultShell.astro";
-import type { PageRecord } from "../lib/pages";
-
-const page: PageRecord = {
-  sourcePath: "synthetic:404",
-  sourceName: "404",
-  url: "/404.html",
-  slug: "404",
-  data: {
-    layout: "default",
-    title: "This path has been sunset.",
-    lang: "en-gb",
-    permalink: "/404.html",
-    search_exclude: true,
-    noindex: true,
-  },
-  rawBody: "",
-  html: "",
-  includeInSitemap: false,
-  isRawHtmlDocument: false,
-};
+import { getPageByUrl } from "../lib/pages";
+const page = getPageByUrl("/404.html");
 ---
 <DefaultShell page={page}>
   <div class="not-found" lang="en-GB">

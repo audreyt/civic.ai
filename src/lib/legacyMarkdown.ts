@@ -54,8 +54,62 @@ export function createMarkdownRenderer(): MarkdownIt {
     return md;
 }
 
-export function renderMarkdown(body: string): string {
-    return createMarkdownRenderer().render(body);
+export function renderMarkdown(body: string, url = ""): string {
+    const md = createMarkdownRenderer();
+    if (/^\/(?:tw\/)?(?:manifesto|[1-6]|measures|faq)\/$/.test(url)) {
+        const numbers = new Map<number, number>();
+        // Number top-level Markdown prose, not raw HTML cards, hidden list
+        // paragraphs, footnotes, blockquotes or image-only blocks. Ordinals are
+        // deterministic for an edition; git supplies the edition's provenance.
+        md.core.ruler.push("record_paragraphs", (state) => {
+            const used = new Set(
+                [...body.matchAll(/\bid=["'](p\d+)["']/g)].map((m) => m[1])
+            );
+            for (const token of state.tokens) {
+                const id = token.attrGet("id");
+                if (id) used.add(id);
+            }
+            let number = 0;
+            for (const [index, token] of state.tokens.entries()) {
+                if (
+                    token.type !== "paragraph_open" ||
+                    token.hidden ||
+                    token.level !== 0 ||
+                    token.attrGet("id")
+                )
+                    continue;
+                const inline = state.tokens[index + 1];
+                if (
+                    !inline?.children?.some(
+                        (child) => child.type === "text" && child.content.trim()
+                    )
+                )
+                    continue;
+                do {
+                    number++;
+                } while (used.has(`p${number}`));
+                token.attrSet("id", `p${number}`);
+                token.attrSet("class", "record-paragraph");
+                token.attrSet("data-record-paragraph", String(number));
+                numbers.set(index + 2, number);
+            }
+        });
+        md.renderer.rules.paragraph_close = (
+            tokens,
+            index,
+            options,
+            _env,
+            renderer
+        ) => {
+            const number = numbers.get(index);
+            return (
+                (number
+                    ? `<a class="record-paragraph__link" href="#p${number}" aria-label="${url.startsWith("/tw/") ? `第 ${number} 段的永久連結` : `Permalink to paragraph ${number}`}">¶ ${number}</a>`
+                    : "") + renderer.renderToken(tokens, index, options)
+            );
+        };
+    }
+    return md.render(body);
 }
 
 // The AVIF sibling of a JPEG/PNG public path, when one ships beside it.

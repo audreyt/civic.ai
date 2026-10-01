@@ -30,11 +30,10 @@ import { readFileSync, globSync } from "fs";
 import { spawnSync } from "child_process";
 import { resolve, dirname, join } from "path";
 import { fileURLToPath } from "url";
+import { reviewPairs } from "./lib/review-pairs.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, "..");
-
-const META = new Set(["README.md", "CLAUDE.md", "AGENTS.md", "DESIGN.md"]);
 
 function parseExclusions() {
     const path = join(here, "review-set.md");
@@ -71,24 +70,20 @@ function base(name) {
     return m ? m[0] : "";
 }
 
-const enAll = globSync("*.md", { cwd: root })
-    .filter((f) => !f.startsWith("tw-") && !f.startsWith("ja-"))
-    .filter((f) => !META.has(f))
-    .sort();
-const twAll = globSync("tw-*.md", { cwd: root }).sort();
-const twSet = new Set(twAll);
+const pairs = reviewPairs(globSync("*.md", { cwd: root }));
+const enAll = pairs.en;
 const enSet = new Set(enAll);
 
 const excludeRaw = parseExclusions();
 const excludeBase = new Set([...excludeRaw].map(base));
 
-const pairedEnAll = enAll.filter((f) => twSet.has("tw-" + f));
-const pairedTwAll = twAll.filter((f) => enSet.has(f.slice(3)));
+const pairedEnAll = pairs.pairedEn;
+const pairedTwAll = pairs.pairedTw;
 const pairedEn = pairedEnAll.filter((f) => !excludeBase.has(f));
 const pairedTw = pairedTwAll.filter((f) => !excludeBase.has(f.slice(3)));
 
-const orphanEn = enAll.filter((f) => !twSet.has("tw-" + f));
-const orphanTw = twAll.filter((f) => !enSet.has(f.slice(3)));
+const orphanEn = pairs.orphanEn;
+const orphanTw = pairs.orphanTw;
 // An exclude entry pointing at a non-paired page is itself drift.
 const staleExclude = [...excludeBase].filter((f) => !enSet.has(f));
 

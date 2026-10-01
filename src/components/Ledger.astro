@@ -1,0 +1,33 @@
+---
+import { loadPages, type PageRecord } from "../lib/pages";
+import { record } from "../lib/record";
+import { lang2 } from "../lib/site";
+interface Props { page: PageRecord; }
+const { page } = Astro.props;
+const zh = lang2(page.data.lang) === "zh";
+const amendments = record.amendments(loadPages());
+const months = new Map<string, typeof amendments>();
+for (const amendment of amendments) {
+  const month = amendment.date.slice(0, 7);
+  const entries = months.get(month) ?? [];
+  entries.push(amendment);
+  months.set(month, entries);
+}
+---
+<div class="record-ledger record-zone">
+  <p>{zh ? "這是本站自己的修訂紀錄。每筆來自 Git 提交，包含首次發布；日期採 UTC。紀錄描述已提交的來源，不推測未提交的編輯。" : "This is the site's own amendment record. Each entry is a Git commit, including first publication; dates use UTC. The record describes committed sources, not uncommitted edits."}</p>
+  <p><a href="/feed.xml">{zh ? "訂閱修訂紀錄（Atom）" : "Subscribe to amendments (Atom)"}</a></p>
+  <h2>{zh ? "本站評測" : "Site evaluations"}</h2>
+  <div data-record-evals="board" data-record-lang={zh ? "zh" : "en"}>{zh ? "尚未評測" : "Not yet evaluated"}</div>
+  {!record.complete && <p>{zh ? "Git 歷史缺失或不完整，暫不顯示修訂紀錄。" : "Git history is missing or shallow; amendment records are omitted."}</p>}
+  {[...months].map(([month, entries]) => <section class="record-ledger__month">
+    <h2>{month}</h2>
+    <ol class="record-ledger__entries">
+      {entries.map((entry) => <li>
+        <time datetime={entry.date}>{entry.date.slice(0, 10)}</time>
+        <span class="record-ledger__pages">{entry.pages.map((touched, i) => <>{i > 0 && " · "}<a href={touched.url}>{touched.url}</a></>)}</span>
+        <span class="record-ledger__summary"><a href={`https://github.com/audreyt/civic.ai/commit/${entry.id}`}>{entry.subject}</a></span>
+      </li>)}
+    </ol>
+  </section>)}
+</div>

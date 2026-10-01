@@ -2,29 +2,10 @@
 import PolisCareReport from "../../../../components/PolisCareReport.astro";
 import DefaultShell from "../../../../layouts/DefaultShell.astro";
 import { getPolisCareDeliberation } from "../../../../lib/polis";
-import type { PageRecord } from "../../../../lib/pages";
+import { getPageByUrl } from "../../../../lib/pages";
 
 const report = await getPolisCareDeliberation();
-const page: PageRecord = {
-  sourcePath: "synthetic:tw/conference/sensemaking",
-  sourceName: "tw/conference/sensemaking",
-  url: "/tw/conference/sensemaking/",
-  slug: "tw/conference/sensemaking",
-  data: {
-    layout: "default",
-    title: "Polis 審議鏡像",
-    header_title: "Polis 審議鏡像",
-    description: "用 Polis 匯出檔重建、接近 Habermolt 風格的審議頁面。",
-    lang: "zh-Hant",
-    alt_lang_url: "/conference/sensemaking/",
-    permalink: "/tw/conference/sensemaking/",
-    search_exclude: true,
-  },
-  rawBody: "",
-  html: "",
-  includeInSitemap: true,
-  isRawHtmlDocument: false,
-};
+const page = getPageByUrl("/tw/conference/sensemaking/");
 ---
 <DefaultShell page={page}>
   <PolisCareReport uiLocale="tw" report={report} />
