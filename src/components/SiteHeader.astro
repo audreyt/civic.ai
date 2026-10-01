@@ -41,6 +41,7 @@ const description = page.data.description ? smartQuotes(page.data.description) :
       <div class="site-header__title-block">
         <PackEyebrow page={page} />
         <h1>{displayTitle}{displaySubtitle && <span>{displaySubtitle}</span>}</h1>
+        <PackEyebrow page={page} part="question" />
         {headerDate ? <p class="chapter-date">{headerDate}</p> : page.data.date ? <p class="chapter-date">{formatDateDisplay(page.data.date, page.data.lang)}</p> : null}
         {page.data.author && <p class="chapter-date">{page.data.author}</p>}
         {description && <p set:html={description} />}

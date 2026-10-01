@@ -6310,7 +6310,90 @@ html[data-theme="dark"] .record-zone .record-eval--fail {
 /* ─── end lane B ─── */
 
 /* ─── lane C: pack eyebrows, governing questions, tool cards ─── */
+/* Eyebrow: machinery voice, ink-soil text, hue only as a short rule. */
+.pack-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 0.9rem;
+    font-family: var(--machine);
+    font-size: 0.75rem;
+    line-height: 1.5;
+    letter-spacing: 0.06em;
+    color: var(--soil);
+}
 
+.pack-eyebrow__mark {
+    flex: none;
+    width: 1.5rem;
+    height: 3px;
+    background: var(--pack-rule, var(--oxford-rule));
+}
+
+/* Governing question: human voice standfirst. */
+.site-header__title-block .pack-question {
+    max-width: 38rem;
+    margin: 0.9rem 0 0;
+    font-family: var(--prose);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: var(--ink);
+}
+
+/* Buildable tools: a grid of machinery cards, keyed on the heading id. */
+:is(#buildable-tools, #可立即建置的工具, #今天就能做的工具) + ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr));
+    gap: 1rem;
+    margin: 1.2rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+:is(#buildable-tools, #可立即建置的工具, #今天就能做的工具) + ul > li {
+    margin: 0;
+    padding: 0.9rem 1rem 2.3rem 1.1rem;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-inline-start: 4px solid var(--pack-rule, var(--rule));
+    border-radius: 0;
+    font-family: var(--prose);
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+:is(#buildable-tools, #可立即建置的工具, #今天就能做的工具)
+    + ul
+    > li
+    > strong:first-child {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-family: var(--machine);
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--ink);
+}
+
+/* One hairline per card: a loose lead-in paragraph must not add its own. */
+:is(#buildable-tools, #可立即建置的工具, #今天就能做的工具) + ul > li > p {
+    margin: 0;
+    padding: 0;
+    border-top: 0;
+}
+
+/* The ¶ permalink lives inside the card at every width. */
+:is(#buildable-tools, #可立即建置的工具, #今天就能做的工具)
+    + ul
+    > li
+    > .record-paragraph__link {
+    inset-block: auto 0.35rem;
+    inset-inline: auto 0.5rem;
+    width: auto;
+    background: none;
+    opacity: 1;
+    color: var(--soil);
+}
 /* ─── end lane C ─── */
 
 /* ─── lane D: home constellation ─── */
