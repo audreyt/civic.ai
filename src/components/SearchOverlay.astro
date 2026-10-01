@@ -16,6 +16,20 @@ const suggestions = getSearchSuggestions(searchLang);
 const fuseVendor = assetVersion("node_modules/fuse.js/dist/fuse.min.js");
 const askJs = assetVersion("assets/js/civic-ask.js");
 const searchJs = assetVersion("assets/js/civic-search.js");
+
+// Search is an enhancement behind a button, so its bundles stay off every page
+// load: this bootstrap fetches them in order on the first search intent (toggle
+// click or Cmd/Ctrl-K), then replays that intent once they are live.
+const searchBundles = [
+    ...(usePagefind && !import.meta.env.DEV ? ["/pagefind/pagefind-ui.js"] : []),
+    ...(useFuse ? [`/assets/vendor/fuse.min.js?v=${fuseVendor}`] : []),
+    `/assets/js/civic-ask.js?v=${askJs}`,
+    `/assets/js/civic-search.js?v=${searchJs}`,
+];
+const searchBoot = "(function () {\n    var S = __BUNDLES__;\n    var overlay = document.getElementById(\"search-overlay\");\n    if (!overlay) return;\n    var toggles = [].slice.call(document.querySelectorAll(\".search-toggle\"));\n    var booted = false;\n    function ready() {\n        toggles.forEach(function (b) { b.removeEventListener(\"click\", boot); });\n        document.removeEventListener(\"keydown\", onKey);\n        if (toggles[0]) toggles[0].click();\n    }\n    function boot() {\n        if (booted) return;\n        booted = true;\n        var last = null;\n        S.forEach(function (src) {\n            var s = document.createElement(\"script\");\n            s.src = src;\n            s.async = false;\n            last = s;\n            document.head.appendChild(s);\n        });\n        if (last) last.onload = last.onerror = ready; else ready();\n    }\n    function onKey(e) {\n        if ((e.metaKey || e.ctrlKey) && e.key === \"k\") { e.preventDefault(); boot(); }\n    }\n    toggles.forEach(function (b) { b.addEventListener(\"click\", boot); });\n    document.addEventListener(\"keydown\", onKey);\n})();".replace(
+    "__BUNDLES__",
+    JSON.stringify(searchBundles)
+);
 ---
 <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" tabindex="-1" aria-label={zh ? "搜尋仁工智慧" : "Search Civic AI"} aria-hidden="true" data-search-css={import.meta.env.DEV ? undefined : "/pagefind/pagefind-ui.css"}>
   <button type="button" id="search-close" class="search-overlay__close">{zh ? "關閉搜尋" : "Close search"}</button>
@@ -32,7 +46,4 @@ const searchJs = assetVersion("assets/js/civic-search.js");
     ))}
   </datalist>
 )}
-{usePagefind && !import.meta.env.DEV && <script is:inline defer src="/pagefind/pagefind-ui.js"></script>}
-{useFuse && <script is:inline defer src={`/assets/vendor/fuse.min.js?v=${fuseVendor}`} />}
-<script is:inline defer src={`/assets/js/civic-ask.js?v=${askJs}`} />
-<script is:inline defer src={`/assets/js/civic-search.js?v=${searchJs}`} />
+<script is:inline set:html={searchBoot} />
