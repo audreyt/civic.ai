@@ -1,3 +1,100 @@
 ---
-// FaqClient (DESIGN.md §21): no client script until it is built.
 ---
+
+<script is:inline>
+    // @ts-nocheck
+    (function () {
+        try {
+            var main = document.getElementById("main");
+            if (!main || main.getAttribute("data-faq-controls") === "ready") return;
+            var headings = main.querySelectorAll('h3[id^="faq-"]');
+            if (!headings.length) return;
+            main.setAttribute("data-faq-controls", "ready");
+
+            var zh = (document.documentElement.lang || "").indexOf("zh") === 0;
+            var L = zh
+                ? { copy: "複製連結", copied: "已複製", show: "展開回答", hide: "收合回答" }
+                : { copy: "Copy link", copied: "Copied", show: "Show answer", hide: "Hide answer" };
+            var live = document.createElement("p");
+            live.className = "faq-live";
+            live.setAttribute("aria-live", "polite");
+            live.setAttribute("aria-atomic", "true");
+            main.insertBefore(live, headings[0]);
+            var narrow = window.matchMedia("(max-width: 719px)");
+
+            function copy(text) {
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    return navigator.clipboard.writeText(text);
+                }
+                var area = document.createElement("textarea");
+                area.value = text;
+                area.setAttribute("readonly", "");
+                area.style.position = "fixed";
+                area.style.opacity = "0";
+                document.body.appendChild(area);
+                area.select();
+                var copied = document.execCommand("copy");
+                document.body.removeChild(area);
+                return copied ? Promise.resolve() : Promise.reject(new Error("Copy failed"));
+            }
+
+            function questionForHash() {
+                var id = (window.location.hash || "").slice(1);
+                try { id = decodeURIComponent(id); } catch (e) {}
+                return id.indexOf("faq-") === 0 ? id : "";
+            }
+
+            function setExpanded(entry, expanded) {
+                entry.toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
+                entry.toggle.textContent = expanded ? L.hide : L.show;
+                entry.answer.hidden = narrow.matches ? !expanded : false;
+            }
+
+            var entries = [];
+            Array.prototype.forEach.call(headings, function (heading) {
+                var answer = document.getElementById(heading.id + "-answer");
+                if (!answer) return;
+                var copyButton = document.createElement("button");
+                copyButton.type = "button";
+                copyButton.className = "faq-copy-link";
+                copyButton.textContent = L.copy;
+                copyButton.addEventListener("click", function () {
+                    var text = location.origin + location.pathname + "#" + heading.id;
+                    copy(text).then(function () { live.textContent = L.copied; }, function () {});
+                });
+                heading.appendChild(copyButton);
+
+                var toggle = document.createElement("button");
+                toggle.type = "button";
+                toggle.className = "faq-disclosure";
+                toggle.setAttribute("aria-controls", answer.id);
+                heading.appendChild(toggle);
+                var entry = { heading: heading, answer: answer, toggle: toggle };
+                toggle.addEventListener("click", function () {
+                    if (!narrow.matches) return;
+                    setExpanded(entry, toggle.getAttribute("aria-expanded") !== "true");
+                });
+                entries.push(entry);
+            });
+
+            function applyViewport() {
+                var target = questionForHash();
+                entries.forEach(function (entry) {
+                    setExpanded(entry, narrow.matches && entry.heading.id === target);
+                });
+            }
+            function revealHash() {
+                if (!narrow.matches) return;
+                var target = questionForHash();
+                entries.forEach(function (entry) {
+                    if (entry.heading.id === target) setExpanded(entry, true);
+                });
+            }
+            narrow.addEventListener("change", applyViewport);
+            window.addEventListener("hashchange", revealHash);
+            applyViewport();
+        } catch (e) {
+            // The authored FAQ remains completely readable without enhancement.
+        }
+    })();
+</script>

@@ -6568,6 +6568,64 @@ html[data-theme="dark"] .record-zone .record-eval--fail {
 /* ─── end lane E ─── */
 
 /* ─── lane F: FAQ question controls ─── */
+.faq-answer {
+    margin-block: 0 2rem;
+}
+
+.faq-contest {
+    margin-top: 1.25rem;
+    font-family: var(--machine);
+    font-size: 0.8125rem;
+}
+
+.faq-contest a {
+    color: var(--cinnabar);
+}
+
+.faq-copy-link,
+.faq-disclosure {
+    margin-inline-start: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--rule);
+    border-radius: 0;
+    background: var(--surface);
+    color: var(--moss);
+    font-family: var(--machine);
+    font-size: 0.75rem;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.faq-disclosure {
+    display: none;
+}
+
+.faq-copy-link:hover,
+.faq-copy-link:focus-visible,
+.faq-disclosure:hover,
+.faq-disclosure:focus-visible {
+    outline: 2px solid var(--moss);
+    outline-offset: 3px;
+}
+
+.faq-live {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+@media (max-width: 719px) {
+    .faq-disclosure {
+        display: inline-block;
+    }
+
+    .faq-answer[hidden] {
+        display: none;
+    }
+}
 
 /* ─── end lane F ─── */
 

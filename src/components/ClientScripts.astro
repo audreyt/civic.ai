@@ -527,20 +527,8 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                 }
 
                 var entries = heads.map(function (head) {
-                    var nodes = [];
-                    var node = head;
-                    while (node) {
-                        nodes.push(node);
-                        node = node.nextElementSibling;
-                        if (
-                            node &&
-                            node.tagName === "H3" &&
-                            node.id &&
-                            node.id.indexOf("faq-") === 0
-                        ) {
-                            break;
-                        }
-                    }
+                    var answer = document.getElementById(head.id + "-answer");
+                    var nodes = answer ? [head, answer] : [head];
                     return {
                         category: head.getAttribute("data-faq-category"),
                         nodes: nodes,
