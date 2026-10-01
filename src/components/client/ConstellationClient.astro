@@ -1,3 +1,50 @@
 ---
-// ConstellationClient (DESIGN.md §21): no client script until it is built.
+// ConstellationClient (DESIGN.md §21): arrival of the Ring of Six on the home
+// masthead. Six field lights travel into the ring (~900 ms, ease-out), once per
+// browser session; every other load, and reduced motion, shows the settled ring.
+// The drift of the field is switched on here so that without JavaScript the
+// whole layer is static.
 ---
+<script is:inline>
+(function () {
+    try {
+        var layer = document.querySelector("[data-constellation]");
+        if (!layer || layer.getAttribute("data-ready")) return;
+        layer.setAttribute("data-ready", "1");
+        var reduce =
+            window.matchMedia &&
+            window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (reduce) return;
+        layer.setAttribute("data-drift", "1");
+
+        var key = "civic-constellation-seen";
+        var seen = false;
+        try {
+            seen = sessionStorage.getItem(key) === "1";
+        } catch (e) {
+            seen = true;
+        }
+        if (seen) return;
+        try {
+            sessionStorage.setItem(key, "1");
+        } catch (e) {}
+
+        var dots = layer.querySelectorAll(".home-constellation__ring circle");
+        var from = layer.querySelectorAll(".home-constellation__field .t");
+        if (!dots.length || !from.length || !dots[0].animate) return;
+        for (var i = 0; i < dots.length; i++) {
+            var src = from[i % from.length].getBoundingClientRect();
+            var dst = dots[i].getBoundingClientRect();
+            var dx = src.left + src.width / 2 - (dst.left + dst.width / 2);
+            var dy = src.top + src.height / 2 - (dst.top + dst.height / 2);
+            dots[i].animate(
+                [
+                    { transform: "translate(" + dx + "px," + dy + "px) scale(0.3)", opacity: 0.5 },
+                    { transform: "translate(0,0) scale(1)", opacity: 1 }
+                ],
+                { duration: 900, easing: "cubic-bezier(0.22, 1, 0.36, 1)", fill: "backwards" }
+            );
+        }
+    } catch (e) {}
+})();
+</script>

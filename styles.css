@@ -6398,6 +6398,100 @@ html[data-theme="dark"] .record-zone .record-eval--fail {
 
 /* ─── lane D: home constellation ─── */
 
+/* A quiet field of lights behind the masthead. The layer sits between the
+   Oxford ground and the header's content (the header becomes its own stacking
+   context so z-index: -1 stops there), never takes a pointer, and paints inside
+   the header only: no layout shift, no overflow. */
+.site-header--home {
+    isolation: isolate;
+}
+
+.home-constellation {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    contain: paint;
+    pointer-events: none;
+}
+
+.home-constellation__field {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: var(--gold-light);
+}
+
+.home-constellation__field circle {
+    opacity: 0.5;
+}
+
+.home-constellation__field .a {
+    opacity: 0.62;
+}
+
+.home-constellation__field .b {
+    opacity: 0.42;
+}
+
+.home-constellation__field .c {
+    opacity: 0.28;
+}
+
+/* Lights behind the title and description: barely there. */
+.home-constellation__field .e {
+    opacity: 0.12;
+}
+
+/* The six travellers are the lights that become the ring; the ring itself is
+   already in the markup, so they stay unlit. */
+.home-constellation__field .t {
+    opacity: 0;
+}
+
+.home-constellation__ring {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    width: 64px;
+    height: 64px;
+    overflow: visible;
+}
+
+.home-constellation__ring circle {
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+@media (min-width: 900px) {
+    .home-constellation__ring {
+        left: max(28px, calc(50% - 560px));
+    }
+}
+
+/* The drift is switched on by script and only for people who have not asked
+   for stillness: tens of seconds, a few pixels. */
+@media (prefers-reduced-motion: no-preference) {
+    .home-constellation[data-drift] .home-constellation__field {
+        animation: constellation-drift 90s ease-in-out infinite alternate;
+    }
+}
+
+@keyframes constellation-drift {
+    from {
+        transform: translate(-4px, 3px);
+    }
+
+    to {
+        transform: translate(4px, -3px);
+    }
+}
+
+@media print {
+    .home-constellation {
+        display: none;
+    }
+}
+
 /* ─── end lane D ─── */
 
 /* ─── lane E: Measures instrument cards ─── */
