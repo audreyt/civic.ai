@@ -19,6 +19,7 @@
     },
     "scripts": {
         "prepare": "vp config",
+        "anchors": "bun scripts/anchors.mjs",
         "sync:public": "bun scripts/sync-public.mjs",
         "polis:refresh": "bun scripts/refresh-polis-care-snapshot.mjs",
         "sensemaker:extract": "cd sensemaker && bun src/cli.mjs extract",

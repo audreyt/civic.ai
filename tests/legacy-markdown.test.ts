@@ -132,8 +132,8 @@ test.each([
 ])("numbers canonical prose by core page URL: %s", (url) => {
     const body = "First paragraph.\n\nSecond **paragraph**.";
     const html = renderMarkdown(body, url);
-    expect(html.match(/id="p\d+"/g)).toEqual(['id="p1"', 'id="p2"']);
-    expect(html).toContain('href="#p2"');
+    expect(html.match(/id="p\d+[a-z]*"/g)).toEqual(['id="p0a"', 'id="p0b"']);
+    expect(html).toContain('href="#p0b"');
     expect(renderMarkdown(body, url)).toBe(html);
 });
 
@@ -150,11 +150,11 @@ test("numbers each bullet, nested ones included, but not quoted or empty bullets
         "- Risk\n  - The fix\n-\n\n> - Quoted\n",
         "/1/"
     );
-    expect(html.match(/<li id="p\d+"/g)).toEqual([
-        '<li id="p1"',
-        '<li id="p2"',
+    expect(html.match(/<li id="p\d+[a-z]*"/g)).toEqual([
+        '<li id="p0a"',
+        '<li id="p0b"',
     ]);
-    expect(html).toContain('href="#p2"');
+    expect(html).toContain('href="#p0b"');
 });
 
 test("reserves existing raw and generated heading IDs when allocating paragraph anchors", () => {
@@ -164,5 +164,5 @@ test("reserves existing raw and generated heading IDs when allocating paragraph 
     );
     expect(html.match(/id="p1"/g)).toHaveLength(1);
     expect(html.match(/id="p2"/g)).toHaveLength(1);
-    expect(html).toContain('href="#p3"');
+    expect(html).toContain('href="#p0a"');
 });

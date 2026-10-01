@@ -1,6 +1,16 @@
 import MarkdownIt from "markdown-it";
 import anchor from "markdown-it-anchor";
 import footnote from "markdown-it-footnote";
+import anchorData from "../../_data/anchors.json";
+import {
+    assignAnchors,
+    RECORD_URL,
+    recordUnits,
+    reservedAnchors,
+    type AnchorLedger,
+} from "./anchors";
+
+const anchorLedger: AnchorLedger = anchorData;
 
 const CJK =
     /[\u2E80-\u9FFF\uF900-\uFAFF\uFE30-\uFE4F\uFF00-\uFFEF\u3000-\u303F\u3040-\u309F\u30A0-\u30FF]/;
@@ -56,78 +66,26 @@ export function createMarkdownRenderer(): MarkdownIt {
 
 export function renderMarkdown(body: string, url = ""): string {
     const md = createMarkdownRenderer();
-    if (/^\/(?:tw\/)?(?:manifesto|[1-6]|measures|faq)\/$/.test(url)) {
-        const numbers = new Map<number, number>();
-        // Number top-level Markdown prose, not raw HTML cards, hidden list
-        // paragraphs, footnotes, blockquotes or image-only blocks. Ordinals are
-        // deterministic for an edition; git supplies the edition's provenance.
+    if (RECORD_URL.test(url)) {
+        const numbers = new Map<number, string>();
+        // The shared selector preserves the existing citable-unit contract;
+        // the committed ledger supplies identities across subsequent edits.
         md.core.ruler.push("record_paragraphs", (state) => {
-            const used = new Set(
-                [...body.matchAll(/\bid=["'](p\d+)["']/g)].map((m) => m[1])
+            const units = recordUnits(state.tokens);
+            const assigned = assignAnchors(
+                units.map((unit) => unit.text),
+                anchorLedger[url],
+                reservedAnchors(body, state.tokens)
             );
-            for (const token of state.tokens) {
-                const id = token.attrGet("id");
-                if (id) used.add(id);
-            }
-            let number = 0;
-            const next = () => {
-                do {
-                    number++;
-                } while (used.has(`p${number}`));
-                return number;
-            };
-            // Bullets are citable units too, nested ones included, and share
-            // the paragraphs' sequence. Bullets inside a quotation are the
-            // quoted author's, and an empty bullet has nothing to cite.
-            let quoteDepth = 0;
-            const items: number[] = [];
-            for (const [index, token] of state.tokens.entries()) {
-                if (token.type === "blockquote_open") quoteDepth++;
-                if (token.type === "blockquote_close") quoteDepth--;
-                if (token.type === "list_item_open") {
-                    const inline =
-                        state.tokens[index + 1]?.type === "paragraph_open"
-                            ? state.tokens[index + 2]
-                            : undefined;
-                    const cited =
-                        !quoteDepth &&
-                        inline?.children?.some(
-                            (child) =>
-                                child.type === "text" && child.content.trim()
-                        );
-                    const n = cited ? next() : 0;
-                    if (n) {
-                        token.attrSet("id", `p${n}`);
-                        token.attrSet("class", "record-paragraph");
-                        token.attrSet("data-record-paragraph", String(n));
-                    }
-                    items.push(n);
-                    continue;
+            for (const [index, anchorUnit] of assigned.units.entries()) {
+                for (const unit of units.slice(index, index + 1)) {
+                    const token = unit.token;
+                    const label = anchorUnit.id.slice(1);
+                    token.attrSet("id", anchorUnit.id);
+                    token.attrSet("class", "record-paragraph");
+                    token.attrSet("data-record-paragraph", label);
+                    numbers.set(unit.close, label);
                 }
-                if (token.type === "list_item_close") {
-                    const n = items.pop();
-                    if (n) numbers.set(index, n);
-                    continue;
-                }
-                if (
-                    token.type !== "paragraph_open" ||
-                    token.hidden ||
-                    token.level !== 0 ||
-                    token.attrGet("id")
-                )
-                    continue;
-                const inline = state.tokens[index + 1];
-                if (
-                    !inline?.children?.some(
-                        (child) => child.type === "text" && child.content.trim()
-                    )
-                )
-                    continue;
-                next();
-                token.attrSet("id", `p${number}`);
-                token.attrSet("class", "record-paragraph");
-                token.attrSet("data-record-paragraph", String(number));
-                numbers.set(index + 2, number);
             }
         });
         const closeWithLink: NonNullable<
