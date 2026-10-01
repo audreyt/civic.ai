@@ -58,7 +58,7 @@ if (ldImage) articleLd.image = ldImage.includes("://") ? ldImage : `${site.url}$
 ---
 <!doctype html>
 <html lang={page.data.lang || "en"}>
-  <head><PageHead page={page} ogType="article" preloadFont="/fonts/cormorant-normal-latin.woff2" /></head>
+  <head><PageHead page={page} ogType="article" /></head>
   <body class={page.data.page_class} data-pack={packNumber}>
     <a class="skip-link" href="#main">{zh ? "跳至內容" : "Skip to content"}</a>
     <SiteHeader page={page} />

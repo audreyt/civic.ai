@@ -112,6 +112,7 @@ export function runPagefind(
 
 function runPostBuild(): void {
     runBun(["scripts/minify-html.mjs"]);
+    runBun(["scripts/subset-zh-fonts.mjs"]);
     runPagefind();
 }
 

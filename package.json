@@ -40,6 +40,9 @@
         "worker:test": "cd worker && bun run test",
         "import-comics": "bun import-comics.mjs",
         "fonts:ja": "bun scripts/fetch-ja-fonts.mjs",
+        "fonts:latin": "bun scripts/fetch-latin-fonts.mjs",
+        "fonts:zh": "bun scripts/fetch-zh-fonts.mjs",
+        "fonts:subset": "bun scripts/subset-zh-fonts.mjs",
         "en": "bun scripts/review-set.mjs en",
         "tw": "bun scripts/review-set.mjs tw",
         "ci": "vp check && vp test && vp run sensemaker:test && vp run sensemaker:verify && vp build && vp run check-links && vp run check:hybrid && vp run check:astro-output && vp run check:search && vp run check:parity && vp run worker:typecheck && vp run worker:test"
@@ -58,6 +61,10 @@
         "nunjucks": "^3.2.4"
     },
     "devDependencies": {
+        "subset-font": "2.5.0",
+        "fontkit": "2.0.4",
+        "@types/fontkit": "2.0.8",
+        "parse5": "7.3.0",
         "@vitest/coverage-v8": "4.1.10",
         "@wllama/wllama": "3.5.1",
         "fuse.js": "^6.6.2",

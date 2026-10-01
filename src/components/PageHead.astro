@@ -6,10 +6,9 @@ import SeoHead from "./SeoHead.astro";
 interface Props {
     page: PageRecord;
     ogType: "website" | "article";
-    preloadFont: string;
 }
 
-const { page, ogType, preloadFont } = Astro.props;
+const { page, ogType } = Astro.props;
 const zh = lang2(page.data.lang) === "zh";
 const ja = page.data.lang === "ja";
 const siteDesc = zh ? site.description_zh || site.description : site.description;
@@ -47,8 +46,8 @@ document.documentElement.classList.add("js");
 <link rel="icon" href="/favicon.ico" sizes="any" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href={`/styles.css?v=${version}`} />
-<link rel="preload" as="font" href={preloadFont} type="font/woff2" crossorigin />
-<link rel="preload" as="font" href="/fonts/lora-normal-latin.woff2" type="font/woff2" crossorigin />
+<link rel="preload" as="font" href="/fonts/literata-normal-latin.woff2" type="font/woff2" crossorigin />
+<link rel="preload" as="font" href="/fonts/ibm-plex-mono-400-latin.woff2" type="font/woff2" crossorigin />
 <script is:inline>
 window.__userMoved=false;function __markMoved(){window.__userMoved=true}window.addEventListener('wheel',__markMoved,{passive:true,once:true});window.addEventListener('touchmove',__markMoved,{passive:true,once:true});window.addEventListener('keydown',__markMoved,{once:true});
 </script>

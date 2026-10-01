@@ -10,29 +10,6 @@
     unicode-range: U+0F00-0FFF;
 }
 
-@font-face {
-    font-family: "Outfit";
-    font-style: normal;
-    font-weight: 300 600;
-    font-display: swap;
-    src: url("fonts/outfit-latin-ext.woff2") format("woff2");
-    unicode-range:
-        U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
-        U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
-        U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-    font-family: "Outfit";
-    font-style: normal;
-    font-weight: 300 600;
-    font-display: swap;
-    src: url("fonts/outfit-latin.woff2") format("woff2");
-    unicode-range:
-        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
-        U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
-        U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
 /* ─── CUSTOM PROPERTIES ───
    The design charter's tokens (DESIGN.md §5 Soil & Daylight, §6 Two Voices,
    §13 Lantern). The older names further down are aliases, kept so every
@@ -142,15 +119,15 @@ body {
 }
 
 /* Web fonts blocked (e.g. iOS Lockdown Mode): the system fallback is much
-   thinner than Outfit at the same weight, so lift the body copy to a more
-   readable weight and drop the antialiasing that renders SF lighter still. */
+   thinner than the machinery face at the same weight, so lift the body copy to
+   a more readable weight and drop the antialiasing that renders SF lighter. */
 html.fonts-unavailable body {
     font-weight: 450;
     -webkit-font-smoothing: auto;
 }
 
 html.fonts-unavailable {
-    --muted: #4c576a;
+    --muted: color-mix(in srgb, var(--soil) 78%, var(--ink));
 }
 
 html[data-theme="dark"].fonts-unavailable {
@@ -1505,96 +1482,8 @@ footer a:hover {
 }
 
 /* ─── LORA (SELF-HOSTED; SIL OFL 1.1, Cyreal) ─── */
-@font-face {
-    font-family: "Lora";
-    font-style: normal;
-    font-weight: 400 700;
-    font-display: swap;
-    src: url("fonts/lora-normal-latin-ext.woff2") format("woff2");
-    unicode-range:
-        U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
-        U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
-        U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-    font-family: "Lora";
-    font-style: normal;
-    font-weight: 400 700;
-    font-display: swap;
-    src: url("fonts/lora-normal-latin.woff2") format("woff2");
-    unicode-range:
-        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
-        U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
-        U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
-    font-family: "Lora";
-    font-style: italic;
-    font-weight: 400 700;
-    font-display: swap;
-    src: url("fonts/lora-italic-latin-ext.woff2") format("woff2");
-    unicode-range:
-        U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
-        U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
-        U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-    font-family: "Lora";
-    font-style: italic;
-    font-weight: 400 700;
-    font-display: swap;
-    src: url("fonts/lora-italic-latin.woff2") format("woff2");
-    unicode-range:
-        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
-        U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
-        U+2212, U+2215, U+FEFF, U+FFFD;
-}
 
 /* ─── CORMORANT GARAMOND (SELF-HOSTED) ─── */
-@font-face {
-    font-family: "Cormorant Garamond";
-    font-style: normal;
-    font-weight: 300 700;
-    font-display: swap;
-    src: url("fonts/cormorant-normal-latin-ext.woff2") format("woff2");
-    unicode-range:
-        U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
-        U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
-        U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-    font-family: "Cormorant Garamond";
-    font-style: normal;
-    font-weight: 300 700;
-    font-display: swap;
-    src: url("fonts/cormorant-normal-latin.woff2") format("woff2");
-    unicode-range:
-        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
-        U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
-        U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
-    font-family: "Cormorant Garamond";
-    font-style: italic;
-    font-weight: 300 700;
-    font-display: swap;
-    src: url("fonts/cormorant-italic-latin-ext.woff2") format("woff2");
-    unicode-range:
-        U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
-        U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
-        U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-    font-family: "Cormorant Garamond";
-    font-style: italic;
-    font-weight: 300 700;
-    font-display: swap;
-    src: url("fonts/cormorant-italic-latin.woff2") format("woff2");
-    unicode-range:
-        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
-        U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
-        U+2212, U+2215, U+FEFF, U+FFFD;
-}
 
 /* Japanese comic overlays (/ja/comics/): exact glyph subsets of the overlay text, regenerated by `vp run fonts:ja`. */
 @font-face {
@@ -1619,6 +1508,118 @@ footer a:hover {
     src: url("/fonts/zen-maru-gothic-ja-500.woff2") format("woff2");
 }
 
+/* Charter Latin faces: regenerated by `vp run fonts:latin`. */
+@font-face {
+    font-family: "IBM Plex Mono";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/ibm-plex-mono-400-latin-ext.woff2") format("woff2");
+    unicode-range:
+        U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+        U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+        U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+    font-family: "IBM Plex Mono";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/ibm-plex-mono-400-latin.woff2") format("woff2");
+    unicode-range:
+        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+        U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+        U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: "IBM Plex Mono";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("/fonts/ibm-plex-mono-500-latin-ext.woff2") format("woff2");
+    unicode-range:
+        U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+        U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+        U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+    font-family: "IBM Plex Mono";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("/fonts/ibm-plex-mono-500-latin.woff2") format("woff2");
+    unicode-range:
+        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+        U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+        U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: "IBM Plex Mono";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("/fonts/ibm-plex-mono-600-latin-ext.woff2") format("woff2");
+    unicode-range:
+        U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+        U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+        U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+    font-family: "IBM Plex Mono";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("/fonts/ibm-plex-mono-600-latin.woff2") format("woff2");
+    unicode-range:
+        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+        U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+        U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: "Literata";
+    font-style: italic;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("/fonts/literata-italic-latin-ext.woff2") format("woff2");
+    unicode-range:
+        U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+        U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+        U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+    font-family: "Literata";
+    font-style: italic;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("/fonts/literata-italic-latin.woff2") format("woff2");
+    unicode-range:
+        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+        U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+        U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: "Literata";
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("/fonts/literata-normal-latin-ext.woff2") format("woff2");
+    unicode-range:
+        U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+        U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+        U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+    font-family: "Literata";
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("/fonts/literata-normal-latin.woff2") format("woff2");
+    unicode-range:
+        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+        U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+        U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* ─── PRINT: OXFORD ACADEMIC TREATMENT ─── */
 @media print {
     /* --- Reset & hide non-print elements --- */
@@ -1636,7 +1637,7 @@ footer a:hover {
     body {
         background: white;
         color: #1a1a1a;
-        font-family: "Cormorant Garamond", "Lora", Georgia, serif;
+        font-family: var(--prose);
         font-variant-numeric: lining-nums proportional-nums;
         font-size: 10.8pt;
         line-height: 1.52;
@@ -1717,7 +1718,7 @@ footer a:hover {
         opacity: 1 !important;
         animation: none !important;
         color: #fbfaf4;
-        font-family: "Cormorant Garamond", Georgia, serif;
+        font-family: var(--prose);
         font-variant-numeric: lining-nums proportional-nums;
         font-size: 22pt;
         font-weight: 600;
@@ -1773,7 +1774,7 @@ footer a:hover {
 
     /* --- Headings --- */
     h2 {
-        font-family: "Cormorant Garamond", Georgia, serif;
+        font-family: var(--prose);
         font-variant-numeric: lining-nums proportional-nums;
         color: #002147;
         border-bottom: 1pt solid #002147;
@@ -1781,7 +1782,7 @@ footer a:hover {
     }
 
     h3 {
-        font-family: "Cormorant Garamond", Georgia, serif;
+        font-family: var(--prose);
         font-variant-numeric: lining-nums proportional-nums;
         color: #002147;
         border-top-color: #c9a961;
@@ -1849,7 +1850,7 @@ footer a:hover {
 
     /* Question headings: Oxford blue with gold number accent */
     body.interview-page h4 {
-        font-family: "Cormorant Garamond", Georgia, serif;
+        font-family: var(--prose);
         font-variant-numeric: lining-nums proportional-nums;
         font-size: 11.5pt;
         line-height: 1.32;
@@ -1944,7 +1945,7 @@ footer a:hover {
 
     @bottom-center {
         content: counter(page);
-        font-family: "Cormorant Garamond", Georgia, serif;
+        font-family: var(--prose);
         font-variant-numeric: lining-nums proportional-nums;
         font-size: 8pt;
         color: #002147;
@@ -1952,7 +1953,7 @@ footer a:hover {
 
     @top-center {
         content: "civic.ai";
-        font-family: "Outfit", system-ui, sans-serif;
+        font-family: var(--machine);
         font-size: 6pt;
         font-weight: 500;
         letter-spacing: 0.14em;
@@ -2011,7 +2012,7 @@ footer a:hover {
     margin: 0;
     padding: 0 0 0 1.2em;
     border: 0;
-    font-family: "Cormorant Garamond", var(--serif);
+    font-family: var(--prose);
     font-variant-numeric: lining-nums proportional-nums;
     font-size: 1.25rem;
     font-style: italic;
@@ -2029,7 +2030,7 @@ footer a:hover {
     position: absolute;
     top: -0.15em;
     left: -0.05em;
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: var(--prose);
     font-variant-numeric: lining-nums proportional-nums;
     font-size: 3.5rem;
     font-style: normal;
@@ -2044,7 +2045,7 @@ footer a:hover {
     position: absolute;
     bottom: -0.5em;
     right: -0.1em;
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: var(--prose);
     font-variant-numeric: lining-nums proportional-nums;
     font-size: 3.5rem;
     font-style: normal;
@@ -5864,10 +5865,10 @@ h4,
 /* Traditional Chinese typography */
 html:lang(zh) {
     --serif:
-        "Monlam Bodyig", "Lora", "Noto Serif TC", "Source Han Serif TC",
+        "Literata", "Monlam Bodyig", "Noto Serif TC", "Source Han Serif TC",
         "Songti TC", "Microsoft JhengHei", serif;
     --sans:
-        "Monlam Bodyig", "Outfit", "PingFang TC", "Noto Sans TC",
+        "IBM Plex Mono", "Monlam Bodyig", "PingFang TC", "Noto Sans TC",
         "Microsoft JhengHei", sans-serif;
 }
 
@@ -6090,10 +6091,10 @@ html[data-theme="dark"] .polis-label-disagree {
 /* 404: plain blocks, EN then TW */
 .not-found[lang="zh-TW"] {
     --serif:
-        "Monlam Bodyig", "Lora", "Noto Serif TC", "Source Han Serif TC",
+        "Literata", "Monlam Bodyig", "Noto Serif TC", "Source Han Serif TC",
         "Songti TC", "Microsoft JhengHei", serif;
     --sans:
-        "Monlam Bodyig", "Outfit", "PingFang TC", "Noto Sans TC",
+        "IBM Plex Mono", "Monlam Bodyig", "PingFang TC", "Noto Sans TC",
         "Microsoft JhengHei", sans-serif;
 }
 
@@ -6105,7 +6106,7 @@ html[data-theme="dark"] .polis-label-disagree {
 
 .not-found__title {
     margin: 0 0 0.5em;
-    font-family: "Cormorant Garamond", var(--serif);
+    font-family: var(--prose);
     font-size: clamp(1.8rem, 4vw, 2.6rem);
     font-weight: 500;
     line-height: 1.2;
