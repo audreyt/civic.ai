@@ -438,7 +438,7 @@
         "term_en": "governance charter",
         "term_tw": "治理章程",
         "def_en": "The first written agreement of a Kami's keepers — a plain-text note tied to four answers: who keeps it, what a breach could cause, who can overrule it, and when it ends or is reviewed. The first rung of the ladder that matures into the engagement contract; the practice lives on the <a href=\"/kami/\">Set up your own Kami</a> page.",
-        "def_tw": "地神守護者們的第一份書面約定：一張純文字便條，綁住四個答案：誰守護、違約可能造成什麼、誰可否決、何時結束或檢視。它是階梯的第一階，成熟之後就是參與契約；實作步驟見〈<a href=\"/tw/kami/\">架設你自己的 Kami</a>〉頁。"
+        "def_tw": "地神守護者們的第一份書面約定：一張純文字便條，綁住四個答案——誰守護、違約可能造成什麼、誰可否決、何時結束或檢視。它是階梯的第一階，成熟之後就是參與契約；實作步驟見〈<a href=\"/tw/kami/\">架設你自己的 Kami</a>〉頁。"
     },
     {
         "id": "decision-trace",
