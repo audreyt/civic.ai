@@ -319,6 +319,8 @@ Solidarity includes readers on old phones and thin connections. Budgets are targ
 
 The margin notes' definitions (`/glossary-notes.json`, about 32 KB uncompressed) are fetched after load, when the browser is idle, and only on pages with glossed terms; like the search bundles they sit outside the initial JS budget.
 
+The shipped stylesheet is `styles.css` without its comments (`scripts/sync-public.mjs`); the source keeps them for editors, and the comments are about a quarter of its gzip weight.
+
 Image weights need a separate check: some shipped fallback images exceed 250 KB. Han subsetting is the hard problem and gets real engineering. An offline post-build pass parses the HTML and subsets Noto Serif TC at weights 400 and 600 with `subset-font`. Pages share a common-glyph face and download content-hashed deltas; the font report records bytes and missing glyphs. The pass runs after minification and before search indexing and eval injection. If a page's subset exceeds budget, the eval board says so.
 
 ## 16. The machine door

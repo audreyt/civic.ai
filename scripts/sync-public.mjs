@@ -1,6 +1,14 @@
 #!/usr/bin/env node
-import { cpSync, existsSync, mkdirSync, rmSync } from "node:fs";
+import {
+    cpSync,
+    existsSync,
+    mkdirSync,
+    readFileSync,
+    rmSync,
+    writeFileSync,
+} from "node:fs";
 import { basename, join, resolve } from "node:path";
+import { stripCssComments } from "./lib/css.mjs";
 
 const PASSTHROUGH = [
     "img",
@@ -34,6 +42,12 @@ for (const source of PASSTHROUGH) {
             src !== fontSrcDir && !src.startsWith(fontSrcDir + "/"),
     });
 }
+
+// The shipped stylesheet drops its comments; styles.css itself keeps them.
+writeFileSync(
+    join(outDir, "styles.css"),
+    stripCssComments(readFileSync(join(root, "styles.css"), "utf8"))
+);
 
 const fuseFrom = join(root, "node_modules/fuse.js/dist/fuse.min.js");
 if (!existsSync(fuseFrom))
