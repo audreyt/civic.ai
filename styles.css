@@ -877,7 +877,7 @@ em {
 :lang(zh) em,
 :lang(zh) blockquote {
     font-style: normal;
-    font-family: "Kaiti TC", "DFKai-SB", "BiauKai", "STKaiti", cursive;
+    font-family: "Civic Kai", var(--prose);
 }
 
 /* ─── LEAD & CALLOUT ─── */
@@ -2229,7 +2229,7 @@ footer a:hover {
 }
 
 .conf-goal p {
-    font-size: 0.92rem;
+    font-size: 1.125rem;
     color: var(--muted);
     margin: 0;
     line-height: 1.6;
@@ -2842,7 +2842,7 @@ html[data-theme="dark"] .faq-filter button:hover,
 html[data-theme="dark"] .faq-filter button:focus-visible,
 html[data-theme="dark"] .faq-filter button[aria-pressed="true"] {
     background: var(--teal);
-    color: var(--ink);
+    color: var(--field);
 }
 
 html[data-theme="dark"] .polis-bar-disagree {
@@ -3190,14 +3190,14 @@ html[data-theme="dark"] .audio-section {
     justify-content: center;
     padding: 8px 12px;
     background: var(--oxford-blue);
-    color: var(--surface);
+    color: #fbfaf4;
 }
 
 .polis-status-pill {
     margin: 0 0 10px;
     padding: 9px 14px;
     background: color-mix(in srgb, var(--status-color) 12%, white);
-    color: var(--status-color);
+    color: var(--ink);
 }
 
 .polis-metric-pair {
@@ -3742,7 +3742,7 @@ html[data-theme="dark"] .polis-badge {
 
 html[data-theme="dark"] .polis-badge--warm {
     background: rgba(231, 76, 60, 0.12);
-    color: #e74c3c;
+    color: var(--ink);
 }
 
 html[data-theme="dark"] .polis-plot {
@@ -3900,7 +3900,7 @@ pre code {
 .in-short__body {
     margin: 0;
     font-family: var(--prose);
-    font-size: 0.98rem;
+    font-size: 1.125rem;
     line-height: 1.6;
     color: var(--text);
 }
@@ -4079,7 +4079,7 @@ html:not(.js) .search-toggle {
 .reading-path__steps {
     margin: 0;
     padding-left: 1.2em;
-    font-size: 0.9rem;
+    font-size: 1.125rem;
 }
 .reading-path__steps li {
     margin: 0.3em 0;
@@ -5384,7 +5384,7 @@ header h1 {
 }
 
 .fold-lede {
-    font-size: 1.05rem;
+    font-size: 1.125rem;
     margin: 0.6em 0;
 }
 
@@ -5502,7 +5502,7 @@ header nav.site-nav a {
 }
 
 .pack-cards span {
-    font-size: 0.95rem;
+    font-size: 1.125rem;
     color: var(--muted);
 }
 
@@ -5607,9 +5607,7 @@ html:lang(zh) {
     --serif:
         "Literata", "Monlam Bodyig", "Noto Serif TC", "Source Han Serif TC",
         "Songti TC", "Microsoft JhengHei", serif;
-    --sans:
-        "IBM Plex Mono", "Monlam Bodyig", "PingFang TC", "Noto Sans TC",
-        "Microsoft JhengHei", sans-serif;
+    --sans: var(--machine);
 }
 
 :lang(zh) main {
@@ -5833,9 +5831,7 @@ html[data-theme="dark"] .polis-label-disagree {
     --serif:
         "Literata", "Monlam Bodyig", "Noto Serif TC", "Source Han Serif TC",
         "Songti TC", "Microsoft JhengHei", serif;
-    --sans:
-        "IBM Plex Mono", "Monlam Bodyig", "PingFang TC", "Noto Sans TC",
-        "Microsoft JhengHei", sans-serif;
+    --sans: var(--machine);
 }
 
 .not-found + .not-found {
@@ -6410,5 +6406,67 @@ html[data-theme="dark"] .record-zone .record-eval--fail {
         background: none;
         opacity: 1;
         font-size: 0.7em;
+    }
+}
+
+/* ─── STYLESHEET AUDIT FIXES ─── */
+/* Chinese emphasis keeps its brush face, but only for Han: a Latin title
+   inside Chinese emphasis stays in Literata instead of falling into Kaiti. */
+@font-face {
+    font-family: "Civic Kai";
+    src:
+        local("Kaiti TC"), local("STKaitiTC-Regular"), local("STKaiti"),
+        local("DFKai-SB"), local("BiauKai"), local("KaiTi");
+    unicode-range:
+        U+2E80-2FDF, U+3000-303F, U+3100-312F, U+31A0-31BF, U+3400-4DBF,
+        U+4E00-9FFF, U+F900-FAFF, U+FF00-FFEF, U+20000-2FA1F;
+}
+
+/* Logged, measured and executable text speaks in the machinery voice. */
+:not(pre) > code,
+.cmap-zone,
+.cmap-chip,
+.cmap-field-chip,
+.cmap-measure-tag,
+.cmap-frame-chip--measure a,
+.cmap-measure a,
+.polis-stat__value {
+    font-family: var(--machine);
+}
+
+/* Grounds that stay Oxford blue in both themes need Lantern's light moss, or
+   hover and focus turn dark green on navy (2.07:1). */
+.site-header--home,
+.skip-link,
+.search-overlay__close {
+    --moss: #8fb79a;
+    --teal: var(--moss);
+}
+
+.skip-link:focus-visible,
+.search-overlay__close:focus-visible,
+.search-overlay .pagefind-ui .civic-search__submit:focus-visible,
+.search-overlay .pagefind-ui__search-input:focus-visible {
+    outline: 2px solid var(--moss);
+    outline-offset: 2px;
+}
+
+/* Later screen passes were not media-scoped and overrode print typography. */
+@media print {
+    body {
+        background: transparent;
+        line-height: 1.52;
+    }
+
+    header h1,
+    .site-header--home h1 {
+        font-size: 22pt;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+        line-height: 1.12;
+    }
+
+    body:has(.site-header--interior) main {
+        padding-top: 0;
     }
 }
