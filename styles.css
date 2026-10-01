@@ -6790,10 +6790,6 @@ html[data-theme="dark"] .record-zone .record-eval--fail {
     color: var(--ink);
 }
 
-.mn-terms span {
-    display: block;
-}
-
 .mn-text {
     margin: 0;
 }

@@ -57,16 +57,7 @@
 
         function glossBody(item) {
             var frag = document.createDocumentFragment();
-            var terms = el("p", "mn-terms");
-            var tw = el("span", "", item.n.term_tw);
-            tw.setAttribute("lang", "zh-TW");
-            var en = el("span", "", item.n.term_en);
-            en.setAttribute("lang", "en-GB");
-            var first = zh ? tw : en;
-            var second = zh ? en : tw;
-            terms.appendChild(first);
-            terms.appendChild(second);
-            frag.appendChild(terms);
+            frag.appendChild(el("p", "mn-terms", zh ? item.n.term_tw : item.n.term_en));
             frag.appendChild(el("p", "mn-text", item.n.note));
             var more = el("a", "mn-more", S.full);
             more.href = base + "#" + item.id;
