@@ -6495,7 +6495,76 @@ html[data-theme="dark"] .record-zone .record-eval--fail {
 /* ─── end lane D ─── */
 
 /* ─── lane E: Measures instrument cards ─── */
-
+.instrument-card {
+    --card-hue: var(--rule);
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem 1rem 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--card-hue);
+    border-radius: var(--radius-machine);
+}
+.instrument-card[data-pack="1"] {
+    --card-hue: var(--pack-1);
+}
+.instrument-card[data-pack="2"] {
+    --card-hue: var(--pack-2);
+}
+.instrument-card[data-pack="3"] {
+    --card-hue: var(--pack-3);
+}
+.instrument-card[data-pack="4"] {
+    --card-hue: var(--pack-4);
+}
+.instrument-card[data-pack="5"] {
+    --card-hue: var(--pack-5);
+}
+.instrument-card[data-pack="6"] {
+    --card-hue: var(--pack-6);
+}
+.instrument-card > p {
+    margin-top: 0;
+}
+.instrument-card > p > span[id] {
+    display: inline-block;
+    scroll-margin-top: 2rem;
+}
+.instrument-card__specs {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem 1.5rem;
+    margin: 1rem 0 0;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--rule);
+}
+.instrument-card__specs > div {
+    min-width: 0;
+}
+.instrument-card__specs dt {
+    margin: 0 0 0.125rem;
+    font-family: var(--machine);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--soil);
+}
+.instrument-card__specs dd {
+    margin: 0;
+    font-family: var(--prose);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    font-variant-numeric: tabular-nums;
+    overflow-wrap: anywhere;
+}
+@media (min-width: 900px) {
+    .instrument-card__specs {
+        grid-template-columns: 1fr 1fr;
+    }
+    .instrument-card__specs > div:nth-child(2),
+    .instrument-card__specs > div:nth-child(3) {
+        grid-column: 1 / -1;
+    }
+}
 /* ─── end lane E ─── */
 
 /* ─── lane F: FAQ question controls ─── */

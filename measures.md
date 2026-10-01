@@ -34,17 +34,89 @@ These six measures are the authors’ proposals for public evaluation, not valid
 
 ### Headline public measures
 
+<div class="instrument-card" data-pack="1">
+
 <span id="representation-gap">**Representation gap**</span> — the Attentiveness measure: Which materially affected groups are still missing or badly under-represented in the record?
+
+<dl class="instrument-card__specs">
+<div><dt>Traditional Mandarin name</dt><dd>代表性落差</dd></div>
+<div><dt>Diagnostics</dt><dd>Coverage of affected people; voice equity between least-heard and most-heard groups.</dd></div>
+<div><dt>Refuses</dt><dd>Counts only when the least-heard groups gain real standing in the record, never when a gap narrows by averaging dissenters into the middle.</dd></div>
+<div><dt>Threshold</dt><dd>Defined by each deployment context — "good enough" for that community.</dd></div>
+<div><dt>Read as</dt><dd>A public test, not a totalising score.</dd></div>
+</dl>
+
+</div>
+
+<div class="instrument-card" data-pack="2">
 
 <span id="promise-fidelity">**Promise fidelity**</span> — the Responsibility measure: What share of material obligations are explicitly owned, properly authorised, and kept on their published terms?
 
+<dl class="instrument-card__specs">
+<div><dt>Traditional Mandarin name</dt><dd>承諾保真度</dd></div>
+<div><dt>Diagnostics</dt><dd>Named-owner coverage; authority-match rate; adopt-or-explain rate.</dd></div>
+<div><dt>Refuses</dt><dd>Rewards promises that are owned and honoured, never promises that are merely well-worded, so a high score requires authority and funding that match the duty rather than language that gestures at it.</dd></div>
+<div><dt>Threshold</dt><dd>Defined by each deployment context — "good enough" for that community.</dd></div>
+<div><dt>Read as</dt><dd>A public test, not a totalising score.</dd></div>
+</dl>
+
+</div>
+
+<div class="instrument-card" data-pack="3">
+
 <span id="verified-execution-rate">**Verified execution rate**</span> — the Competence measure: What share of audited decisions or releases pass guardrails, include a usable trace, and stay inside release bounds?
+
+<dl class="instrument-card__specs">
+<div><dt>Traditional Mandarin name</dt><dd>經驗證的執行率</dd></div>
+<div><dt>Diagnostics</dt><dd>Guardrail integrity; trace completeness; canary health; audit overturn rate.</dd></div>
+<div><dt>Refuses</dt><dd>Rises only when traces are reconstructable by an independent auditor and canaries cover the cases they claim to cover, never when the system passes on easy cases and calls the ceremony proof.</dd></div>
+<div><dt>Threshold</dt><dd>Defined by each deployment context — "good enough" for that community.</dd></div>
+<div><dt>Read as</dt><dd>A public test, not a totalising score.</dd></div>
+</dl>
+
+</div>
+
+<div class="instrument-card" data-pack="4">
 
 <span id="trust-under-loss">**Trust-under-loss**</span> — the Responsiveness measure: After a bad outcome and attempted repair, do affected people report that the system became more trustworthy rather than less?
 
+<dl class="instrument-card__specs">
+<div><dt>Traditional Mandarin name</dt><dd>失利下的信任</dd></div>
+<div><dt>Diagnostics</dt><dd>Appeal closure time; repair completion rate; correction throughput ratio; correction backlog depth and age; harm recurrence within 90 days.</dd></div>
+<div><dt>Refuses</dt><dd>Counts only when tied to accountable identity and corroborated by an independent signal — a return to the service, a withdrawn appeal, a third party who can attest — never a sentiment a campaign can manufacture, since self-reported trust after a repair can be astroturfed by the very actor who caused the harm.</dd></div>
+<div><dt>Threshold</dt><dd>Defined by each deployment context — "good enough" for that community.</dd></div>
+<div><dt>Read as</dt><dd>A public test, not a totalising score.</dd></div>
+</dl>
+
+</div>
+
+<div class="instrument-card" data-pack="5">
+
 <span id="uncommon-ground-index">**Uncommon-ground index**</span> — the Solidarity measure: Are shared decisions showing real cross-group participation and co-endorsement, rather than separate silos?
 
+<dl class="instrument-card__specs">
+<div><dt>Traditional Mandarin name</dt><dd>罕見共識指數</dd></div>
+<div><dt>Diagnostics</dt><dd>Portability success rate; accountable-identity coverage; federation participation — the structural conditions that keep co-action freely given rather than captive.</dd></div>
+<div><dt>Refuses</dt><dd>Rewards groups that listen across lines, never groups that fall silent, and never a room curated into agreement — the index is read against Pack 1's representation gap, because the cheapest way to raise co-endorsement is to exclude whoever would withhold it.</dd></div>
+<div><dt>Threshold</dt><dd>Defined by each deployment context — "good enough" for that community.</dd></div>
+<div><dt>Read as</dt><dd>A public test, not a totalising score.</dd></div>
+</dl>
+
+</div>
+
+<div class="instrument-card" data-pack="6">
+
 <span id="exit-readiness">**Exit readiness**</span> — the Symbiosis measure: Could this system hand over or shut down on schedule without rights loss, continuity failure, or recentralisation?
+
+<dl class="instrument-card__specs">
+<div><dt>Traditional Mandarin name</dt><dd>退出就緒度</dd></div>
+<div><dt>Diagnostics</dt><dd>Scope compliance; sunset compliance; ecology diversity; handover rehearsal pass rate.</dd></div>
+<div><dt>Refuses</dt><dd>Counts only when a system can hand off or shut down on schedule without rights loss, continuity failure, or recentralisation, never when exit exists only on paper.</dd></div>
+<div><dt>Threshold</dt><dd>Defined by each deployment context — "good enough" for that community.</dd></div>
+<div><dt>Read as</dt><dd>A public test, not a totalising score.</dd></div>
+</dl>
+
+</div>
 
 ### Supporting diagnostics
 
@@ -59,17 +131,17 @@ These six measures are the authors’ proposals for public evaluation, not valid
 
 The packs describe these tools so you can build them, or ask for them, without having read the book. Each supports a public audit question. A completed document alone does not show that care worked.
 
-- **Perspective receipts** (Pack 1) — the acknowledgement each contributor can hold: a receipt that lets every person find and correct how their words were represented in the record — distinct from the civic receipt a decision trace carries for settlement.
-- **Engagement contract** (Pack 2) — a short, legible public document for every significant Kami deployment, recording what the system is supposed to do, who is answerable for it doing that, what happens when it goes wrong, and how the deployment will eventually end; Pack 6 can render the same contract machine-readable so infrastructure can check purpose bounds, consent rules, data-retention limits, portability guarantees, and shutdown procedures. A machine-readable clause is not yet an enforceable shutdown.
-- **Adopt-or-explain** (Pack 2) — the rule that when an Alignment Assembly produces a recommendation, the team either integrates it into the system's behaviour or publishes a reasoned explanation of why not, with the remedy offered instead.
-- **Obligation ledger** (Pack 2) — a public, weekly, digitally signed record of what the deployment has committed to deliver and whether it is meeting those commitments, kept by a named Participation Officer.
-- **Shadow mode** (Pack 3) — the first stage of the Apprentice Model: the system sees real inputs and proposes real actions but does not act, its proposals compared against the human or prior system so divergences can be studied before trust is granted.
-- **Canary release** (Pack 3) — the second stage: deployment to a small, stratified slice of real cases with automatic rollback triggers if drift exceeds defined bounds. A canary is a probe, not a stand-in for the public.
-- **Shared eval registry** (Packs 3-4) — a public, Wikipedia-like registry of versioned, community-authored evaluations: affected people write the tests for harm and repair (Pack 4), and passing them becomes a release gate (Pack 3). [Weval](https://weval.org/), built by the [Collective Intelligence Project](https://www.cip.org/), is the working example, and one of us (Audrey) is a senior research fellow there.
-- **Decision trace** (Pack 3) — the per-action record showing which rule fired, which sources were consulted, and what uncertainty the system carried, the operational counterpart that makes the engagement contract live rather than merely written. When a Kami draws on a community's knowledge, the same trace is designed to double as a **civic receipt** (Pack 6), settling value back to the custodians through pre-funded escrow — a design commitment, not yet a running settlement, and distinct from Pack 1's perspective receipts, which let contributors see and correct how they were represented.
-- **The brake (circuit breaker)** (Packs 3-4) — a single, prominent, wired-and-tested control that stops the system now, accessible at the speed of human recognition, so a person can halt a wrong action in the moment rather than only signalling for later.
-- **Override ledger** (Pack 4) — a room's plain-text working memory recording every time a human said "no" to the Kami — evidence that its [governance charter](/kami/) is live and the room still holds standing to correct it.
-- **Correction backlog board** (Pack 4) — a public queue of unresolved corrections with age, ownership, and escalation status, used to prevent hidden correction debt and ensure ageing cases are actively reassigned or elevated.
+- <span id="perspective-receipts">**Perspective receipts**</span> (Pack 1) — the acknowledgement each contributor can hold: a receipt that lets every person find and correct how their words were represented in the record — distinct from the civic receipt a decision trace carries for settlement.
+- <span id="engagement-contract">**Engagement contract**</span> (Pack 2) — a short, legible public document for every significant Kami deployment, recording what the system is supposed to do, who is answerable for it doing that, what happens when it goes wrong, and how the deployment will eventually end; Pack 6 can render the same contract machine-readable so infrastructure can check purpose bounds, consent rules, data-retention limits, portability guarantees, and shutdown procedures. A machine-readable clause is not yet an enforceable shutdown.
+- <span id="adopt-or-explain">**Adopt-or-explain**</span> (Pack 2) — the rule that when an Alignment Assembly produces a recommendation, the team either integrates it into the system's behaviour or publishes a reasoned explanation of why not, with the remedy offered instead.
+- <span id="obligation-ledger">**Obligation ledger**</span> (Pack 2) — a public, weekly, digitally signed record of what the deployment has committed to deliver and whether it is meeting those commitments, kept by a named Participation Officer.
+- <span id="shadow-mode">**Shadow mode**</span> (Pack 3) — the first stage of the Apprentice Model: the system sees real inputs and proposes real actions but does not act, its proposals compared against the human or prior system so divergences can be studied before trust is granted.
+- <span id="canary-release">**Canary release**</span> (Pack 3) — the second stage: deployment to a small, stratified slice of real cases with automatic rollback triggers if drift exceeds defined bounds. A canary is a probe, not a stand-in for the public.
+- <span id="shared-eval-registry">**Shared eval registry**</span> (Packs 3-4) — a public, Wikipedia-like registry of versioned, community-authored evaluations: affected people write the tests for harm and repair (Pack 4), and passing them becomes a release gate (Pack 3). [Weval](https://weval.org/), built by the [Collective Intelligence Project](https://www.cip.org/), is the working example, and one of us (Audrey) is a senior research fellow there.
+- <span id="decision-trace">**Decision trace**</span> (Pack 3) — the per-action record showing which rule fired, which sources were consulted, and what uncertainty the system carried, the operational counterpart that makes the engagement contract live rather than merely written. When a Kami draws on a community's knowledge, the same trace is designed to double as a **civic receipt** (Pack 6), settling value back to the custodians through pre-funded escrow — a design commitment, not yet a running settlement, and distinct from Pack 1's perspective receipts, which let contributors see and correct how they were represented.
+- <span id="brake">**The brake (circuit breaker)**</span> (Packs 3-4) — a single, prominent, wired-and-tested control that stops the system now, accessible at the speed of human recognition, so a person can halt a wrong action in the moment rather than only signalling for later.
+- <span id="override-ledger">**Override ledger**</span> (Pack 4) — a room's plain-text working memory recording every time a human said "no" to the Kami — evidence that its [governance charter](/kami/) is live and the room still holds standing to correct it.
+- <span id="correction-backlog-board">**Correction backlog board**</span> (Pack 4) — a public queue of unresolved corrections with age, ownership, and escalation status, used to prevent hidden correction debt and ensure ageing cases are actively reassigned or elevated.
 
 ### What each measure refuses to reward
 
