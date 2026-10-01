@@ -6,7 +6,8 @@ function jollyHostessListItem(html: string): string {
     const idx = html.search(marker);
     if (idx < 0)
         throw new Error("Jolly-hostess buildable-tools line not found");
-    const start = html.lastIndexOf("<li>", idx);
+    // Bullets on core pages carry ¶ attributes, so match the tag, not "<li>".
+    const start = html.lastIndexOf("<li", idx);
     const end = html.indexOf("</li>", idx);
     if (start < 0 || end < 0) {
         throw new Error("Jolly-hostess list item bounds not found");

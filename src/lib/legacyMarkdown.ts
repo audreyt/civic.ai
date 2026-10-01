@@ -70,7 +70,45 @@ export function renderMarkdown(body: string, url = ""): string {
                 if (id) used.add(id);
             }
             let number = 0;
+            const next = () => {
+                do {
+                    number++;
+                } while (used.has(`p${number}`));
+                return number;
+            };
+            // Bullets are citable units too, nested ones included, and share
+            // the paragraphs' sequence. Bullets inside a quotation are the
+            // quoted author's, and an empty bullet has nothing to cite.
+            let quoteDepth = 0;
+            const items: number[] = [];
             for (const [index, token] of state.tokens.entries()) {
+                if (token.type === "blockquote_open") quoteDepth++;
+                if (token.type === "blockquote_close") quoteDepth--;
+                if (token.type === "list_item_open") {
+                    const inline =
+                        state.tokens[index + 1]?.type === "paragraph_open"
+                            ? state.tokens[index + 2]
+                            : undefined;
+                    const cited =
+                        !quoteDepth &&
+                        inline?.children?.some(
+                            (child) =>
+                                child.type === "text" && child.content.trim()
+                        );
+                    const n = cited ? next() : 0;
+                    if (n) {
+                        token.attrSet("id", `p${n}`);
+                        token.attrSet("class", "record-paragraph");
+                        token.attrSet("data-record-paragraph", String(n));
+                    }
+                    items.push(n);
+                    continue;
+                }
+                if (token.type === "list_item_close") {
+                    const n = items.pop();
+                    if (n) numbers.set(index, n);
+                    continue;
+                }
                 if (
                     token.type !== "paragraph_open" ||
                     token.hidden ||
@@ -85,22 +123,16 @@ export function renderMarkdown(body: string, url = ""): string {
                     )
                 )
                     continue;
-                do {
-                    number++;
-                } while (used.has(`p${number}`));
+                next();
                 token.attrSet("id", `p${number}`);
                 token.attrSet("class", "record-paragraph");
                 token.attrSet("data-record-paragraph", String(number));
                 numbers.set(index + 2, number);
             }
         });
-        md.renderer.rules.paragraph_close = (
-            tokens,
-            index,
-            options,
-            _env,
-            renderer
-        ) => {
+        const closeWithLink: NonNullable<
+            typeof md.renderer.rules.paragraph_close
+        > = (tokens, index, options, _env, renderer) => {
             const number = numbers.get(index);
             return (
                 (number
@@ -108,6 +140,8 @@ export function renderMarkdown(body: string, url = ""): string {
                     : "") + renderer.renderToken(tokens, index, options)
             );
         };
+        md.renderer.rules.paragraph_close = closeWithLink;
+        md.renderer.rules.list_item_close = closeWithLink;
     }
     return md.render(body);
 }

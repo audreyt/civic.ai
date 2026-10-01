@@ -137,12 +137,24 @@ test.each([
     expect(renderMarkdown(body, url)).toBe(html);
 });
 
-test("does not number non-core prose or generated HTML, media, quotes, controls and footnotes", () => {
+test("does not number non-core prose or generated HTML, media, quotes, controls and footnotes, but numbers bullets", () => {
     const body = `Prose.[^note]\n\n<div class="card"><p>Generated</p><button>Control</button></div>\n\n![Image](a.png)\n\n- List item\n\n> Quotation\n\n[^note]: A footnote.\n`;
     expect(renderMarkdown(body, "/kami/")).not.toContain('id="p1"');
     expect(
         renderMarkdown(body, "/1/").match(/data-record-paragraph=/g)
-    ).toHaveLength(1);
+    ).toHaveLength(2);
+});
+
+test("numbers each bullet, nested ones included, but not quoted or empty bullets", () => {
+    const html = renderMarkdown(
+        "- Risk\n  - The fix\n-\n\n> - Quoted\n",
+        "/1/"
+    );
+    expect(html.match(/<li id="p\d+"/g)).toEqual([
+        '<li id="p1"',
+        '<li id="p2"',
+    ]);
+    expect(html).toContain('href="#p2"');
 });
 
 test("reserves existing raw and generated heading IDs when allocating paragraph anchors", () => {
