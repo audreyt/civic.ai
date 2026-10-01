@@ -167,6 +167,23 @@ In a hacker club: at least two named keepers can each shut the Kami down alone; 
 
 And some rooms no Kami can fix: staff versus bosses, a split congregation, a meeting captured by people who game the rules, keepers who no longer speak. Then the Kami becomes a screen everyone throws anger at. Fixing that is people's work, not software's. The unglamorous jobs hold everything up — the night-time fixer, the person who books the room and knows who won't touch a screen, the translator who turns the charter into words everyone actually uses. One test for the translation: would the people ruled by the charter use its words to stop the Kami? If not, the words have failed.
 
+## Your Kami's own trace
+
+Every page here ends in a folded record called the Trace. This is the record your Kami should keep from day one, in the same spirit: short, dated, and open to anyone in the room. Each row below comes from something this page already asks of you.
+
+<figure class="kami-trace">
+<dl>
+<div class="kami-trace__row"><dt>Keepers</dt><dd>Mele Tupou and Dev Anand, jointly. Successor: Ruth Okafor, named <time datetime="2026-03-03">3 Mar 2026</time>.</dd></div>
+<div class="kami-trace__row"><dt>Scope</dt><dd>May draft the weekly rota and answer questions from the pantry notes. Asks first before it messages anyone, spends money or shares a name.</dd></div>
+<div class="kami-trace__row"><dt>Memory</dt><dd>SOUL.md · IDENTITY.md · USER.md, read aloud and agreed at the meeting on <time datetime="2026-09-28">28 Sep 2026</time>.</dd></div>
+<div class="kami-trace__row"><dt>Checks</dt><dd><ul><li><time datetime="2026-09-14">14 Sep</time> · asked about a delivery that never happened; it said "I don't know".</li><li><time datetime="2026-09-21">21 Sep</time> · asked where it learned the opening hours; it pointed to the 7 Sep minutes.</li><li><time datetime="2026-09-28">28 Sep</time> · it wrote back a correction to the rota, with the date.</li></ul></dd></div>
+<div class="kami-trace__row"><dt>Overrides</dt><dd><ul><li><time datetime="2026-09-09">9 Sep</time> · volunteer coordinator · said no to a draft message to donors · messages now need both keepers' sign-off.</li><li><time datetime="2026-09-23">23 Sep</time> · shift lead · said no to a rota that ignored school pick-ups · it now asks about pick-ups first.</li></ul></dd></div>
+<div class="kami-trace__row"><dt>Contest</dt><dd>Anyone in the room can say no at the clipboard by the door, or to either keeper. A correction goes into the ledger the same day.</dd></div>
+<div class="kami-trace__row"><dt>Sunset</dt><dd>Review on <time datetime="2027-03-01">1 Mar 2027</time>. It watches for a quiet ledger (nothing logged for three months) and for a keeper leaving without a successor. If it ends, Ruth takes over unfinished jobs. The archive keeps the three notes and the ledger for 12 months, readable by the keepers only.</dd></div>
+</dl>
+<figcaption>Example — a fictional room: the Elm Street community pantry.</figcaption>
+</figure>
+
 ## What a webpage cannot teach
 
 These steps give you a bounded helper. They do not give you an institution people trust. That only grows out of Keeping: a community owning its Kami, questioning it, fixing its mistakes, and deciding together when it stops. Ours took exactly that — many hands, over a long time.

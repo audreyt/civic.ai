@@ -6508,6 +6508,101 @@ html[data-theme="dark"] .record-zone .record-eval--fail {
 
 /* ─── lane H: Your Kami's own trace ─── */
 
+.kami-trace {
+    margin: 2rem 0;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-machine);
+    background: var(--surface);
+    color: var(--ink);
+}
+
+.kami-trace dl {
+    margin: 0;
+    padding: 0 1rem;
+}
+
+.kami-trace__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.25rem;
+    padding-block: 0.75rem;
+    border-bottom: 1px solid var(--rule);
+}
+
+.kami-trace__row:last-child {
+    border-bottom: 0;
+}
+
+.kami-trace__row dt {
+    font-family: var(--machine);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--soil);
+}
+
+.kami-trace__row dd {
+    min-width: 0;
+    margin: 0;
+    font-family: var(--prose);
+    font-size: 1rem;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+}
+
+.kami-trace__row ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.kami-trace__row li {
+    margin: 0;
+    padding: 0;
+}
+
+.kami-trace__row li + li {
+    margin-top: 0.4rem;
+}
+
+.kami-trace time {
+    font-family: var(--machine);
+    font-size: 0.875em;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.kami-trace figcaption {
+    padding: 0.6rem 1rem;
+    border-top: 1px solid var(--rule);
+    font-family: var(--machine);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    color: var(--soil);
+}
+
+@media (min-width: 720px) {
+    .kami-trace dl {
+        padding-inline: 1.5rem;
+    }
+
+    .kami-trace__row {
+        grid-template-columns: 7rem minmax(0, 1fr);
+        gap: 1rem;
+    }
+
+    .kami-trace figcaption {
+        padding-inline: 1.5rem;
+    }
+}
+
+@media print {
+    .kami-trace {
+        break-inside: avoid;
+    }
+}
+
 /* ─── end lane H ─── */
 
 /* ─── lane I: margin notes: glosses and footnotes ─── */
