@@ -99,7 +99,7 @@ Carol Gilligan 在《In a Human Voice》（2023）中點出這種修練鍛鍊的
     - **修復方案：** 將事實與價值觀分開，維護基本權利，拒絕虛假對等。
 - **合成公眾灌爆。** 最難的失敗模式不是冷漠，而是大規模的假參與。在加州，南海岸空氣品質管理區（South Coast AQMD）的瓦斯設備規則制定，收到超過 20,000 則反對意見，這些意見是透過一個宣傳 AI 工具的倡議平台送出的。[_Los Angeles Times_](https://www.latimes.com/environment/story/2026-02-17/ai-powered-campaign-may-have-killed-key-vote-on-air-quality) 與 [Patrick Sisson 在《Planning》](https://www.planning.org/planning/2026/jun/your-online-public-engagement-is-under-attack-from-ai/) 的報導都把這件事描述成警訊：平台生成的意見可以稀釋真實社群聲音。
 
-    資料來源描述的是小樣本：有回覆的五位寄件者中，三位表示自己沒有寫過那些意見；管理區董事會以 7 比 5 否決了提案。這既不證明那些信件是 AI 寫的，也不證明這波灌入決定了投票結果。加州 [SB 1159](https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB1159) 針對的是同一個缺口：2026 年 8 月的定稿（enrolled）條文，將把 AI 系統排除在「公眾成員」之外，同時容許自然人以一般人的量使用輔助工具。
+    資料來源描述的是小樣本：有回覆的五位寄件者中，三位表示自己沒有寫過那些意見；管理區董事會以 7 比 5 否決了提案。這既不證明那些信件是 AI 寫的，也不證明這波灌入決定了投票結果。加州 [SB 1159](https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB1159) 已於 2026 年 9 月簽署成為法律，針對的是同一個缺口：它把 AI 系統排除在「公眾成員」之外，同時容許自然人以一般人的量使用輔助工具。
     - **修復方案：** 來源證明、速率限制、可問責的參與資格、選擇性揭露身分（團結力 Pack 5），以及能區分表達與放大的稽核軌跡——發言權屬於人類；被演算法倍增的權利不屬於任何人。
 
 - **被權力劫持。** 監督機制往往向最不希望受到審查的人靠攏。

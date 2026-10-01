@@ -32,7 +32,7 @@ permalink: "/tw/5/"
     猶他州的《數位選擇法》（H.B. 418，2025；現為第 13-81 章）已要求提供可攜的個人資料副本，含社交圖譜（[§13-81-201](https://le.utah.gov/xcode/Title13/Chapter81/13-81-S201.html)，2026 年 7 月 1 日生效），以技術可行、實務可使用為限。現行互通性文本是[同步共享](https://le.utah.gov/xcode/Title13/Chapter81/13-81-S202.html)（§13-81-202），並排除推論與排序系統。H.B. 408（2026）自 2027 年 7 月 1 日起改為持續即時轉送。
 
 - **[聯邦](/tw/glossary/#federation)勝於單體。** 分享威脅情報，但不要造出單一瓶頸。本地政策留在本地，防禦能力則能跨機構累積。
-- **表達不等於放大。** 推薦系統的問責是公民義務——正如 Renée DiResta 在 2018 年所說，[言論自由不等於觸及自由](https://www.wired.com/story/free-speech-is-not-the-same-as-free-reach/)，也是《[讓第 230 條落日](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/)》一文的論點。在公民脈絡裡，排序應獎勵跨群體的理由交換與共同解題，而不是只獎勵最快煽動某一群集的內容。加州 [SB 1159](https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB1159) 的 2026 年 8 月送交州長版本，擬將 AI 系統排除於「公眾成員」的參與資格之外，同時允許人們以一般人的發言量使用輔助工具。公民管道中的發言資格屬於人類，可透過選擇性揭露證明而不必曝光身分；被演算法倍增的聲量，不因此取得人的參與資格。
+- **表達不等於放大。** 推薦系統的問責是公民義務——正如 Renée DiResta 在 2018 年所說，[言論自由不等於觸及自由](https://www.wired.com/story/free-speech-is-not-the-same-as-free-reach/)，也是《[讓第 230 條落日](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/)》一文的論點。在公民脈絡裡，排序應獎勵跨群體的理由交換與共同解題，而不是只獎勵最快煽動某一群集的內容。加州 [SB 1159](https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB1159) 已於 2026 年 9 月簽署成為法律，將 AI 系統排除於「公眾成員」的參與資格之外，同時允許人們以一般人的發言量使用輔助工具。公民管道中的發言資格屬於人類，可透過選擇性揭露證明而不必曝光身分；被演算法倍增的聲量，不因此取得人的參與資格。
 
 ### 為什麼重要
 
