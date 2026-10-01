@@ -1,3 +1,370 @@
 ---
-// MarginNotesClient (DESIGN.md §21): no client script until it is built.
+// MarginNotesClient (DESIGN.md §21): glossary notes and footnotes, one layout engine.
 ---
+<script is:inline>
+(function () {
+    try {
+        if (window.__marginNotes) return;
+        window.__marginNotes = true;
+        var main = document.getElementById("main");
+        if (!main) return;
+        var zh = document.documentElement.lang.indexOf("zh") === 0;
+        var base = zh ? "/tw/glossary/" : "/glossary/";
+        var S = zh
+            ? { full: "完整詞條 →", close: "關閉", endnote: "前往註腳 →", notes: "邊註", term: "詞條" }
+            : { full: "Full entry →", close: "Close", endnote: "Go to the endnote →", notes: "Margin notes", term: "Glossary entry" };
+        var WIDE = "(min-width: 1360px)";
+        var mq = window.matchMedia(WIDE);
+        var notes = null;
+        var layer = null;
+        var pop = null;
+        var popLink = null;
+        var shown = [];
+        var disclosures = [];
+        var wide = false;
+        var frame = 0;
+
+        function el(tag, cls, text) {
+            var n = document.createElement(tag);
+            if (cls) n.className = cls;
+            if (text) n.textContent = text;
+            return n;
+        }
+
+        function isWide() {
+            return (
+                mq.matches &&
+                !main.querySelector(".cmap, .polis-fullbleed") &&
+                main.getBoundingClientRect().width <= 720
+            );
+        }
+
+        function collect() {
+            var out = [];
+            var gl = main.querySelectorAll("a.gloss[data-gloss]");
+            for (var i = 0; i < gl.length; i++) {
+                var gid = gl[i].getAttribute("data-gloss");
+                if (notes && notes[gid]) out.push({ kind: "gloss", a: gl[i], id: gid, n: notes[gid] });
+            }
+            var fr = main.querySelectorAll("sup.footnote-ref > a[href^='#fn']");
+            for (var j = 0; j < fr.length; j++) {
+                var fid = fr[j].getAttribute("href").slice(1);
+                var li = document.getElementById(fid);
+                if (li) out.push({ kind: "fn", a: fr[j], id: fid, li: li, num: fr[j].textContent });
+            }
+            return out;
+        }
+
+        function glossBody(item) {
+            var frag = document.createDocumentFragment();
+            var terms = el("p", "mn-terms");
+            var tw = el("span", "", item.n.term_tw);
+            tw.setAttribute("lang", "zh-TW");
+            var en = el("span", "", item.n.term_en);
+            en.setAttribute("lang", "en-GB");
+            var first = zh ? tw : en;
+            var second = zh ? en : tw;
+            terms.appendChild(first);
+            terms.appendChild(second);
+            frag.appendChild(terms);
+            frag.appendChild(el("p", "mn-text", item.n.note));
+            var more = el("a", "mn-more", S.full);
+            more.href = base + "#" + item.id;
+            var wrap = el("p", "mn-foot");
+            wrap.appendChild(more);
+            frag.appendChild(wrap);
+            return frag;
+        }
+
+        function footBody(item) {
+            var clone = item.li.cloneNode(true);
+            var back = clone.querySelectorAll(".footnote-backref");
+            for (var i = 0; i < back.length; i++) back[i].parentNode.removeChild(back[i]);
+            var ids = clone.querySelectorAll("[id]");
+            for (var k = 0; k < ids.length; k++) ids[k].removeAttribute("id");
+            clone.removeAttribute("id");
+            var frag = document.createDocumentFragment();
+            frag.appendChild(el("p", "mn-terms", item.num));
+            var text = el("div", "mn-text");
+            while (clone.firstChild) text.appendChild(clone.firstChild);
+            frag.appendChild(text);
+            return frag;
+        }
+
+        function anchorRect(a) {
+            var rects = a.getClientRects();
+            return rects.length ? rects[0] : null;
+        }
+
+        function layout() {
+            frame = 0;
+            if (wide && layer) {
+                var rem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+                var mr = main.getBoundingClientRect();
+                var pad = parseFloat(getComputedStyle(main).paddingRight) || 0;
+                var left = mr.right - pad + 4.5 * rem;
+                var marks = main.querySelectorAll(".record-paragraph__link");
+                for (var q = 0; q < marks.length; q++) {
+                    var mk = marks[q].getBoundingClientRect();
+                    if (mk.width) left = Math.max(left, mk.right + rem);
+                }
+                left += window.pageXOffset;
+                var bottom = -Infinity;
+                shown.sort(function (x, y) {
+                    var rx = anchorRect(x.a);
+                    var ry = anchorRect(y.a);
+                    return (rx ? rx.top : 0) - (ry ? ry.top : 0);
+                });
+                for (var i = 0; i < shown.length; i++) {
+                    var r = anchorRect(shown[i].a);
+                    var node = shown[i].node;
+                    if (!r) {
+                        node.hidden = true;
+                        continue;
+                    }
+                    node.hidden = false;
+                    var top = Math.max(r.top + window.pageYOffset, bottom + 0.75 * rem);
+                    node.style.left = left + "px";
+                    node.style.top = top + "px";
+                    bottom = top + node.offsetHeight;
+                }
+            }
+            if (!wide && popLink && pop && !pop.hidden) placePop();
+        }
+
+        function schedule() {
+            if (!frame) frame = window.requestAnimationFrame(layout);
+        }
+
+        function teardown() {
+            closePop(false);
+            if (layer && layer.parentNode) layer.parentNode.removeChild(layer);
+            layer = null;
+            shown = [];
+            for (var i = 0; i < disclosures.length; i++) {
+                var d = disclosures[i];
+                if (d.parentNode) d.parentNode.removeChild(d);
+            }
+            disclosures = [];
+            var blocks = main.querySelectorAll("*");
+            for (var b = 0; b < blocks.length; b++) if (blocks[b].__mnLast) blocks[b].__mnLast = null;
+            var ctl = main.querySelectorAll("[aria-controls^='mn-']");
+            for (var c = 0; c < ctl.length; c++) {
+                ctl[c].removeAttribute("aria-controls");
+                ctl[c].removeAttribute("aria-expanded");
+            }
+        }
+
+        function buildWide(items) {
+            layer = el("aside", "margin-notes");
+            layer.setAttribute("aria-label", S.notes);
+            layer.setAttribute("data-pagefind-ignore", "");
+            for (var i = 0; i < items.length; i++) {
+                var item = items[i];
+                var node = el("div", "margin-note margin-note--" + item.kind);
+                node.appendChild(item.kind === "gloss" ? glossBody(item) : footBody(item));
+                layer.appendChild(node);
+                shown.push({ a: item.a, node: node });
+            }
+            document.body.appendChild(layer);
+        }
+
+        function buildNarrow(items) {
+            var n = 0;
+            for (var i = 0; i < items.length; i++) {
+                var item = items[i];
+                if (item.kind === "gloss") {
+                    item.a.setAttribute("aria-expanded", "false");
+                    item.a.setAttribute("aria-controls", "mn-pop");
+                    continue;
+                }
+                n += 1;
+                var d = el("div", "margin-disclosure");
+                d.id = "mn-fn-" + n;
+                d.hidden = true;
+                d.appendChild(footBody(item));
+                var wrap = el("p", "mn-foot");
+                var go = el("a", "mn-more", S.endnote);
+                go.href = "#" + item.id;
+                wrap.appendChild(go);
+                d.appendChild(wrap);
+                var block = item.a.closest("p, li, blockquote, h1, h2, h3, h4, h5, h6") || item.a.parentNode;
+                if (block.tagName === "LI") {
+                    block.appendChild(d);
+                } else {
+                    var after = block.__mnLast || block;
+                    after.parentNode.insertBefore(d, after.nextSibling);
+                    block.__mnLast = d;
+                }
+                disclosures.push(d);
+                item.a.setAttribute("aria-expanded", "false");
+                item.a.setAttribute("aria-controls", d.id);
+                item.a.__mnDisc = d;
+            }
+        }
+
+        function ensurePop() {
+            if (pop) return;
+            pop = el("div", "margin-pop");
+            pop.id = "mn-pop";
+            pop.hidden = true;
+            pop.setAttribute("role", "dialog");
+            pop.setAttribute("tabindex", "-1");
+            pop.setAttribute("data-pagefind-ignore", "");
+            document.body.appendChild(pop);
+        }
+
+        function placePop() {
+            var r = popLink.getBoundingClientRect();
+            var room = document.documentElement.clientWidth;
+            var left = Math.min(Math.max(r.left, 8), Math.max(8, room - pop.offsetWidth - 8));
+            pop.style.left = left + window.pageXOffset + "px";
+            pop.style.top = r.bottom + window.pageYOffset + 8 + "px";
+        }
+
+        function openPop(a, item) {
+            ensurePop();
+            closePop(false);
+            pop.textContent = "";
+            pop.setAttribute("aria-label", S.term + ": " + (zh ? item.n.term_tw : item.n.term_en));
+            pop.appendChild(glossBody(item));
+            var x = el("button", "mn-close", "×");
+            x.type = "button";
+            x.setAttribute("aria-label", S.close);
+            pop.insertBefore(x, pop.firstChild);
+            pop.hidden = false;
+            popLink = a;
+            a.setAttribute("aria-expanded", "true");
+            placePop();
+            pop.focus();
+        }
+
+        function closePop(refocus) {
+            if (!pop || pop.hidden) return;
+            pop.hidden = true;
+            if (popLink) {
+                popLink.setAttribute("aria-expanded", "false");
+                if (refocus) popLink.focus();
+            }
+            popLink = null;
+        }
+
+        function toggleDisc(a, refocus) {
+            var d = a.__mnDisc;
+            if (!d) return;
+            var open = d.hidden;
+            d.hidden = !open;
+            a.setAttribute("aria-expanded", open ? "true" : "false");
+            if (!open && refocus) a.focus();
+        }
+
+        function setup() {
+            var was = [];
+            for (var w = 0; w < disclosures.length; w++) {
+                var wd = disclosures[w];
+                var wr = main.querySelector("[aria-controls='" + wd.id + "']");
+                if (!wd.hidden && wr) was.push(wr.getAttribute("href"));
+            }
+            teardown();
+            wide = isWide();
+            var items = collect();
+            if (wide) buildWide(items);
+            else buildNarrow(items);
+            for (var k = 0; k < items.length; k++) {
+                if (items[k].a.__mnDisc && was.indexOf(items[k].a.getAttribute("href")) > -1) toggleDisc(items[k].a, false);
+            }
+            layout();
+        }
+
+        function findItem(a) {
+            var items = collect();
+            for (var i = 0; i < items.length; i++) if (items[i].a === a) return items[i];
+            return null;
+        }
+
+        document.addEventListener("click", function (e) {
+            try {
+                var t = e.target;
+                if (!t || !t.closest) return;
+                if (e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+                if (pop && !pop.hidden && pop.contains(t)) {
+                    if (t.closest(".mn-close")) closePop(true);
+                    return;
+                }
+                var g = t.closest("a.gloss[data-gloss]");
+                var f = t.closest("sup.footnote-ref > a");
+                if (!wide && g && g.getAttribute("aria-controls") === "mn-pop") {
+                    e.preventDefault();
+                    if (popLink === g) {
+                        closePop(false);
+                        return;
+                    }
+                    var item = findItem(g);
+                    if (item) openPop(g, item);
+                    return;
+                }
+                if (!wide && f && f.__mnDisc) {
+                    e.preventDefault();
+                    toggleDisc(f, false);
+                    return;
+                }
+                closePop(false);
+            } catch (err) {}
+        });
+
+        document.addEventListener("keydown", function (e) {
+            try {
+                if (e.key !== "Escape") return;
+                if (pop && !pop.hidden) {
+                    closePop(true);
+                    return;
+                }
+                var active = document.activeElement;
+                for (var i = 0; i < disclosures.length; i++) {
+                    var d = disclosures[i];
+                    if (d.hidden) continue;
+                    var ref = main.querySelector("[aria-controls='" + d.id + "']");
+                    toggleDisc(ref, active === ref || d.contains(active));
+                }
+            } catch (err) {}
+        });
+
+        function onMode() {
+            setup();
+        }
+        if (mq.addEventListener) mq.addEventListener("change", onMode);
+        else if (mq.addListener) mq.addListener(onMode);
+        window.addEventListener("resize", function () {
+            var now = isWide();
+            if (now !== wide) setup();
+            else schedule();
+        });
+        if (window.ResizeObserver) new ResizeObserver(schedule).observe(main);
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(schedule);
+
+        function start() {
+            setup();
+            if (!main.querySelector("a.gloss[data-gloss]")) return;
+            var run = function () {
+                fetch("/glossary-notes.json", { credentials: "same-origin" })
+                    .then(function (r) {
+                        return r.ok ? r.json() : null;
+                    })
+                    .then(function (j) {
+                        if (!j) return;
+                        notes = j[zh ? "tw" : "en"] || null;
+                        if (notes) setup();
+                    })
+                    .catch(function () {});
+            };
+            if (window.requestIdleCallback) window.requestIdleCallback(run, { timeout: 2000 });
+            else window.setTimeout(run, 300);
+        }
+
+        if (document.readyState === "complete") start();
+        else window.addEventListener("load", start);
+    } catch (e) {
+        // Degrade silently: links and endnotes already work without this script.
+    }
+})();
+</script>

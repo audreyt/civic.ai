@@ -6733,7 +6733,131 @@ html[data-theme="dark"] .record-zone .record-eval--fail {
 /* ─── end lane H ─── */
 
 /* ─── lane I: margin notes: glosses and footnotes ─── */
+/* Wide screens (min-width 1360px): the column is 680px, the ¶ links take about
+   5rem beyond it, and a 15rem note then still clears the viewport edge. */
+.margin-notes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+}
 
+.margin-note {
+    position: absolute;
+    box-sizing: border-box;
+    width: 15rem;
+    margin: 0;
+    padding: 0 0 0 0.75rem;
+    border-inline-start: 1px solid var(--rule);
+    font-family: var(--prose);
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    color: var(--soil);
+}
+
+.margin-note[hidden],
+.margin-pop[hidden],
+.margin-disclosure[hidden] {
+    display: none;
+}
+
+.mn-terms {
+    margin: 0 0 0.25rem;
+    font-family: var(--machine);
+    font-size: 0.7rem;
+    line-height: 1.5;
+    color: var(--ink);
+}
+
+.mn-terms span {
+    display: block;
+}
+
+.mn-text {
+    margin: 0;
+}
+
+.mn-text p {
+    margin: 0;
+}
+
+.mn-text p + p {
+    margin-top: 0.5rem;
+}
+
+.mn-foot {
+    margin: 0.375rem 0 0;
+    font-family: var(--machine);
+    font-size: 0.7rem;
+    line-height: 1.5;
+}
+
+.mn-more {
+    color: var(--moss);
+    text-underline-offset: 0.2em;
+}
+
+.mn-more:focus-visible,
+.mn-close:focus-visible,
+.margin-pop:focus-visible {
+    outline: 2px solid var(--moss);
+    outline-offset: 3px;
+}
+
+.margin-pop {
+    position: absolute;
+    z-index: 40;
+    box-sizing: border-box;
+    width: min(20rem, calc(100vw - 1rem));
+    padding: 0.75rem 2.75rem 0.75rem 0.875rem;
+    background: var(--surface);
+    color: var(--soil);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-prose);
+    font-family: var(--prose);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+}
+
+.mn-close {
+    position: absolute;
+    top: 0;
+    inset-inline-end: 0;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--soil);
+    font-family: var(--machine);
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.margin-disclosure {
+    margin: 0.5rem 0 1.25rem;
+    padding: 0.625rem 0.875rem;
+    background: var(--surface);
+    border-inline-start: 2px solid var(--moss);
+    font-family: var(--prose);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--soil);
+}
+
+.gloss[aria-expanded="true"] {
+    border-bottom-style: solid;
+}
+
+@media print {
+    .margin-notes,
+    .margin-pop,
+    .margin-disclosure {
+        display: none;
+    }
+}
 /* ─── end lane I ─── */
 
 /* ─── lane J: walking player ─── */

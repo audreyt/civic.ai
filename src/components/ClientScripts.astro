@@ -274,6 +274,7 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                                 var a = document.createElement("a");
                                 a.className = "gloss";
                                 a.href = base + "#" + entry.id;
+                                a.setAttribute("data-gloss", entry.id);
 
                                 matchNode.parentNode.insertBefore(a, matchNode);
                                 a.appendChild(matchNode);
