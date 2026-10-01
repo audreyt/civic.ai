@@ -28,7 +28,7 @@ goals:
 agenda_title: "議程"
 agenda:
     - time: "09:45"
-      title: "歡迎致詞與定調今日"
+      title: "歡迎致詞與為今日議程定調"
       speaker: "Caroline Green——斷裂、健全人性與關係性福祉"
       photo: { src: "/img/caroline.jpg", alt: "Caroline Green", w: 512, h: 512 }
     - time: "10:05"
@@ -104,7 +104,7 @@ agenda:
           - { src: "/img/caroline.jpg", alt: "Caroline Green", w: 512, h: 512 }
           - { src: "/img/audrey.jpg", alt: "唐鳳", w: 512, h: 512 }
     - time: "14:10"
-      title: "影片：AI 與我們同在，而非取代我們"
+      title: "影片：AI 與我們同在，而非撇開我們"
       url: "/tw/ai-with-us/"
       speaker: "Vitalik Buterin"
       photo:

@@ -1,6 +1,6 @@
 ---
 layout: chapter
-title: "社群 AI 之聲"
+title: "社群談 AI 的聲音"
 description: "2026 仁工智慧研討會 Polis 集體感知報告——牛津大學羅德樓"
 lang: zh-tw
 alt_lang_url: "/conference/report"

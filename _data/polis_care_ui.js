@@ -176,7 +176,7 @@ export default {
         },
         participants: {
             kicker: "參與者地圖",
-            title: "匿名投票群塊與參與者",
+            title: "匿名投票群體與參與者",
             description:
                 "若 Polis 有提供分群，參與者就以該分群上色。這張地圖是輕量級的投票模式投影，不是語意嵌入。",
             ribbonTitle: "分群分布",
