@@ -17,8 +17,16 @@ import io, json, os, re, subprocess, sys, tempfile, time, requests
 
 API_KEY  = os.environ.get("ELEVENLABS_API_KEY", "")
 VOICE_ID = os.environ.get("ELEVENLABS_VOICE_ID", "0YIItGwEClgeMtCdHyV1")
-MODEL    = "eleven_turbo_v2"
+MODEL    = "eleven_turbo_v2"   # default; override with --model
 FORMAT   = "mp3_44100_128"
+
+# Per-request character ceilings the API reports for each model. A model not
+# listed keeps the historical 25,000-character chunks (unchanged default).
+DEFAULT_MAX_CHARS = 25000
+MODEL_MAX_CHARS = {
+    "eleven_v4":       9800,   # API limit 10,000; keep a margin for the seam
+    "eleven_v4_turbo": 9800,
+}
 
 VOICE_SETTINGS = {
     "stability": 0.99,
@@ -266,11 +274,12 @@ def transform(text: str) -> str:
 
 # ── Synthesis ─────────────────────────────────────────────────────────────────
 
-def synthesise_chunk(text: str, out_path: str) -> None:
+
+def synthesise_chunk(text: str, out_path: str, model: str = MODEL) -> None:
     url = f"https://api.elevenlabs.io/v1/text-to-speech/{VOICE_ID}?output_format={FORMAT}"
     r = requests.post(url,
         headers={"xi-api-key": API_KEY, "Content-Type": "application/json"},
-        json={"text": text, "model_id": MODEL, "voice_settings": VOICE_SETTINGS},
+        json={"text": text, "model_id": model, "voice_settings": VOICE_SETTINGS},
         timeout=300,
     )
     if r.status_code != 200:
@@ -279,11 +288,12 @@ def synthesise_chunk(text: str, out_path: str) -> None:
         f.write(r.content)
 
 
-def synthesise(text: str, out_path: str) -> None:
+def synthesise(text: str, out_path: str, model: str = MODEL) -> None:
     if not API_KEY:
         sys.exit("Error: ELEVENLABS_API_KEY not set")
 
-    max_chars = 25000
+    max_chars = MODEL_MAX_CHARS.get(model, DEFAULT_MAX_CHARS)
+    print(f"Model: {model}  (chunks of at most {max_chars:,} characters)")
     print(f"Characters: {len(text):,}")
 
     # Split text into paragraphs
@@ -326,7 +336,7 @@ def synthesise(text: str, out_path: str) -> None:
     print(f"Split into {len(chunks)} chunks for synthesis")
 
     if len(chunks) == 1:
-        synthesise_chunk(chunks[0], out_path)
+        synthesise_chunk(chunks[0], out_path, model)
     else:
         # Synthesize each chunk to a temp file, then concat
         tmpdir = tempfile.mkdtemp(prefix="tts_synth_")
@@ -337,7 +347,7 @@ def synthesise(text: str, out_path: str) -> None:
             for i, chunk in enumerate(chunks):
                 part_path = os.path.join(tmpdir, f"part_{i:03d}.mp3")
                 print(f"Synthesising chunk {i+1}/{len(chunks)} ({len(chunk):,} chars)...")
-                synthesise_chunk(chunk, part_path)
+                synthesise_chunk(chunk, part_path, model)
                 parts.append(part_path)
             
             # Concatenate
@@ -432,13 +442,28 @@ def normalize_loudness(mp3_path: str) -> None:
 # ── CLI ───────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    if len(sys.argv) < 3:
-        print(f"Usage: {sys.argv[0]} <input.md> <output.mp3> [--dry-run]")
+    argv  = sys.argv[1:]
+    model = MODEL
+    rest  = []
+    i = 0
+    while i < len(argv):
+        if argv[i] == "--model" and i + 1 < len(argv):
+            model = argv[i + 1]
+            i += 2
+        elif argv[i].startswith("--model="):
+            model = argv[i].split("=", 1)[1]
+            i += 1
+        else:
+            rest.append(argv[i])
+            i += 1
+    positional = [a for a in rest if not a.startswith("--")]
+    if len(positional) < 2:
+        print(f"Usage: {sys.argv[0]} <input.md> <output.mp3> [--model MODEL_ID] [--dry-run]")
         sys.exit(1)
 
-    in_path  = sys.argv[1]
-    out_path = sys.argv[2]
-    dry_run  = "--dry-run" in sys.argv
+    in_path  = positional[0]
+    out_path = positional[1]
+    dry_run  = "--dry-run" in rest
 
     with open(in_path) as f:
         raw = f.read()
@@ -449,5 +474,5 @@ if __name__ == "__main__":
         print(text)
         sys.exit(0)
 
-    synthesise(text, out_path)
+    synthesise(text, out_path, model)
     normalize_loudness(out_path)
