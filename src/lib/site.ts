@@ -117,7 +117,8 @@ export function formatDateDisplay(
     const d = new Date(date as string | number | Date);
     if (lang2(lang) === "zh")
         return `${d.getUTCFullYear()} 年 ${d.getUTCMonth() + 1} 月 ${d.getUTCDate()} 日`;
-    return d.toLocaleDateString("en-US", {
+    // British English: 12 July 2026.
+    return d.toLocaleDateString("en-GB", {
         year: "numeric",
         month: "long",
         day: "numeric",

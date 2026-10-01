@@ -20,7 +20,7 @@ const description = page.data.description ? smartQuotes(page.data.description) :
     <>
       <HeaderTools lang={page.data.lang} altLangUrl={page.data.alt_lang_url} />
       <SiteLogos lang={page.data.lang} />
-      <h1><span style="white-space: nowrap">{displayTitle}</span>{displaySubtitle && <><span style="font-weight: 300">-</span><span style="white-space: nowrap">{displaySubtitle}</span></>}</h1>
+      <h1><span class="title-keep">{displayTitle}</span>{displaySubtitle && <><span style="font-weight: 300">-</span><span class="title-keep">{displaySubtitle}</span></>}</h1>
       {description && <p set:html={description} />}
       {page.data.manifesto_link && <div class="header-cta-row"><a href={page.data.manifesto_link} class="next-action-button"><span class="button-text">{page.data.manifesto_text}</span></a><a href={zh ? "/tw/kami/" : "/kami/"} class="next-action-button"><span class="button-text">{zh ? "架設 Kami" : "Set up Kami"}</span></a></div>}
       <SiteNav lang={page.data.lang} />

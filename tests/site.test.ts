@@ -88,7 +88,7 @@ test("formatDateDisplay renders the UTC calendar day in any build timezone", () 
         new Date(Date.UTC(2026, 6, 12)),
         new Date(Date.UTC(2026, 6, 12, 23, 59)),
     ]) {
-        expect(formatDateDisplay(date, "en-gb")).toBe("July 12, 2026");
+        expect(formatDateDisplay(date, "en-gb")).toBe("12 July 2026");
         expect(formatDateDisplay(date, "zh-tw")).toBe("2026 年 7 月 12 日");
     }
 });
