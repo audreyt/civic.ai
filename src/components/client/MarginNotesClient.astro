@@ -101,6 +101,7 @@
                 }
                 left += window.pageXOffset;
                 var bottom = -Infinity;
+                var placed = [];
                 shown.sort(function (x, y) {
                     var rx = anchorRect(x.a);
                     var ry = anchorRect(y.a);
@@ -118,6 +119,20 @@
                     node.style.left = left + "px";
                     node.style.top = top + "px";
                     bottom = top + node.offsetHeight;
+                    placed.push(node);
+                }
+                // Notes stop at the foot of the text: if the stack runs past the
+                // bottom of the column, slide the trailing notes up just enough,
+                // keeping their order and gaps.
+                var limit = mr.bottom + window.pageYOffset - 0.75 * rem;
+                for (var j = placed.length - 1; j >= 0; j--) {
+                    var t = parseFloat(placed[j].style.top);
+                    var maxTop = limit - placed[j].offsetHeight;
+                    if (t > maxTop) {
+                        t = maxTop;
+                        placed[j].style.top = t + "px";
+                    }
+                    limit = t - 0.75 * rem;
                 }
             }
             if (!wide && popLink && pop && !pop.hidden) placePop();

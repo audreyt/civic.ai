@@ -2689,22 +2689,8 @@ body.comics-page main {
     background: none;
 }
 
-.comics-gallery .next-action-button {
-    align-self: center;
-    margin: 8px 0 12px;
-    color: var(--heading);
-    border-color: var(--border);
-}
-
-.comics-gallery .next-action-button:hover {
-    color: var(--heading);
-    background: var(--warm);
-    border-color: var(--gold-light);
-}
-
 @media print {
     .ja-ov-layer,
-    .comics-gallery .next-action-button,
     .comics-gallery .comics-page-label {
         display: none !important;
     }
