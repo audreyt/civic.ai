@@ -1,3 +1,53 @@
 ---
-// Day Compass in the interior masthead (DESIGN.md §21): renders nothing until it is built.
+// Day Compass (DESIGN.md §21): a ring of six pack dots in the interior masthead.
+// Each dot links to its pack; on a pack page the current dot is filled and
+// DayCompassClient adds a reading-progress arc around it.
+import type { PageRecord } from "../lib/pages";
+import { lang2, packs } from "../lib/site";
+
+interface Props { page: PageRecord; }
+const { page } = Astro.props;
+const zh = lang2(page.data.lang) === "zh";
+const base = zh ? "/tw" : "";
+const match = /^(?:\/tw)?\/([1-6])\/$/.exec(page.url);
+const current = match ? Number(match[1]) : 0;
+const VIEW = 32;
+const RING = 11;
+const dots = packs.map((pack, i) => {
+    const angle = ((-90 + i * 60) * Math.PI) / 180;
+    const x = Number((VIEW / 2 + RING * Math.cos(angle)).toFixed(2));
+    const y = Number((VIEW / 2 + RING * Math.sin(angle)).toFixed(2));
+    return {
+        num: pack.num,
+        x,
+        y,
+        left: `${((x / VIEW) * 100).toFixed(2)}%`,
+        top: `${((y / VIEW) * 100).toFixed(2)}%`,
+        href: `${base}/${pack.num}/`,
+        label: zh
+            ? `${pack.ordinal_zh}：${pack.name_zh}・${pack.phase_zh}`
+            : `Pack ${pack.num}: ${pack.name_en} · ${pack.phase_en}`,
+    };
+});
+const here = dots.find((d) => d.num === current);
+const navLabel = zh ? "日光羅盤：六力" : "Day compass: the six packs";
+const overviewHref = `${base}/#the-6-pack`;
+const overviewLabel = zh ? "關懷六力總覽" : "The 6-Pack overview";
 ---
+<nav class="day-compass" data-day-compass aria-label={navLabel}>
+  <div class="day-compass__ring">
+    <svg class="day-compass__svg" viewBox={`0 0 ${VIEW} ${VIEW}`} aria-hidden="true" focusable="false">
+      <circle class="day-compass__orbit" cx={VIEW / 2} cy={VIEW / 2} r={RING} />
+      {dots.map((d) => (
+        <circle class:list={["day-compass__dot", { "is-current": d.num === current }]} data-pack={d.num} cx={d.x} cy={d.y} r="3.4" />
+      ))}
+      {here && (
+        <circle class="day-compass__arc" data-pack={here.num} data-circ="35.19" cx={here.x} cy={here.y} r="5.6" transform={`rotate(-90 ${here.x} ${here.y})`} />
+      )}
+    </svg>
+    <a class="day-compass__hub" href={overviewHref}><span class="visually-hidden">{overviewLabel}</span></a>
+    {dots.map((d) => (
+      <a class="day-compass__hit" data-pack={d.num} href={d.href} style={`left:${d.left};top:${d.top}`} aria-current={d.num === current ? "page" : undefined}><span class="visually-hidden">{d.label}</span></a>
+    ))}
+  </div>
+</nav>

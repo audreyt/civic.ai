@@ -6123,6 +6123,190 @@ html[data-theme="dark"] .record-zone .record-eval--fail {
 
 /* ─── lane B: Day Compass and chapter nav phases ─── */
 
+/* Pack hues are wayfinding only: they colour dots, never text or a ground. */
+.day-compass [data-pack="1"],
+.path-compass [data-pack="1"] {
+    --hue: var(--pack-1);
+}
+.day-compass [data-pack="2"],
+.path-compass [data-pack="2"] {
+    --hue: var(--pack-2);
+}
+.day-compass [data-pack="3"],
+.path-compass [data-pack="3"] {
+    --hue: var(--pack-3);
+}
+.day-compass [data-pack="4"],
+.path-compass [data-pack="4"] {
+    --hue: var(--pack-4);
+}
+.day-compass [data-pack="5"],
+.path-compass [data-pack="5"] {
+    --hue: var(--pack-5);
+}
+.day-compass [data-pack="6"],
+.path-compass [data-pack="6"] {
+    --hue: var(--pack-6);
+}
+
+.day-compass {
+    display: flex;
+    grid-column: 2;
+    grid-row: 1;
+    align-items: center;
+    justify-self: start;
+    min-width: 0;
+}
+
+.day-compass__ring {
+    position: relative;
+    flex: 0 0 auto;
+    width: 30px;
+    height: 30px;
+}
+
+.day-compass__svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.day-compass__orbit {
+    fill: none;
+    stroke: var(--soil);
+    stroke-width: 0.9;
+    opacity: 0.55;
+}
+
+.day-compass__dot {
+    fill: var(--field);
+    stroke: var(--hue);
+    stroke-width: 1.6;
+}
+
+.day-compass__dot.is-current {
+    fill: var(--hue);
+}
+
+/* The progress arc exists only once the script has run (and motion is welcome). */
+.day-compass__arc {
+    display: none;
+    fill: none;
+    stroke: var(--hue);
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-dasharray: 35.19;
+    stroke-dashoffset: 35.19;
+}
+
+.day-compass--live .day-compass__arc {
+    display: inline;
+    transition: stroke-dashoffset 120ms linear;
+}
+
+/* Each dot's link is a 24px target centred on the dot; the hub is the 6-Pack overview. */
+.day-compass__hit,
+.day-compass__hub {
+    position: absolute;
+    translate: -50% -50%;
+    border-radius: 50%;
+}
+
+.day-compass__hit {
+    width: 24px;
+    height: 24px;
+}
+
+.day-compass__hub {
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    width: 16px;
+    height: 16px;
+}
+
+.day-compass__hub::after {
+    content: "";
+    position: absolute;
+    inset: 5px;
+    border: 1px solid var(--soil);
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+.day-compass__hit:focus-visible,
+.day-compass__hub:focus-visible {
+    z-index: 3;
+    outline: 2px solid var(--moss);
+    outline-offset: 3px;
+}
+
+/* Narrow screens: the tools keep the first row, the compass takes its own. */
+@media (max-width: 480px) {
+    .day-compass {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .site-header__bar:has(.day-compass) .site-header__nav {
+        grid-row: 3;
+    }
+}
+
+/* Chapter navigation: day phase in the machinery voice, and Pack 4's loop home. */
+.chapter-nav__phase {
+    font-family: var(--machine);
+    font-size: 0.85em;
+    letter-spacing: 0;
+    opacity: 0.8;
+}
+
+.chapter-nav__onward {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+}
+
+.chapter-nav__loop {
+    border-style: dashed;
+}
+
+/* Once the nav is a row, the previous link centres against Pack 4's stacked pair. */
+@media (min-width: 720px) {
+    .next-action-content:has(.chapter-nav__onward) {
+        align-items: center;
+    }
+}
+
+/* Reading-path compass: a quiet six-dot mark beside each stop. */
+.path-compass {
+    width: 16px;
+    height: 16px;
+    margin-inline-end: 0.4em;
+    vertical-align: -2px;
+}
+
+.path-compass__dot {
+    fill: none;
+    stroke: var(--soil);
+    stroke-width: 0.9;
+    opacity: 0.65;
+}
+
+.path-compass__dot.is-on {
+    fill: var(--hue);
+    stroke: var(--hue);
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .day-compass--live .day-compass__arc {
+        transition: none;
+    }
+}
+
 /* ─── end lane B ─── */
 
 /* ─── lane C: pack eyebrows, governing questions, tool cards ─── */

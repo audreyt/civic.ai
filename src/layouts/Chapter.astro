@@ -1,6 +1,6 @@
 ---
 import { getPageByUrl, visibleHtml, type ActionLink, type PageRecord } from "../lib/pages";
-import { lang2, site } from "../lib/site";
+import { lang2, packs, site } from "../lib/site";
 import { normalizeSearchLang } from "../lib/search";
 import ClientScripts from "../components/ClientScripts.astro";
 import ComicsJaOverlay from "../components/ComicsJaOverlay.astro";
@@ -28,15 +28,31 @@ const packNumber = /^[1-6]$/.test(packKey) ? packKey : undefined;
 const key = page.url.replace(/^\/tw\//, "").replace(/^\//, "").replace(/\/$/, "");
 const index = chapterOrder.indexOf(key);
 // Cycle nav names where it leads ("Pack 2: Responsibility"), not just "Next" (DESIGN.md §9).
-function linkFor(slug: string): ActionLink {
+// A pack destination also carries its day phase in the machinery voice ("· Noon" / "・午").
+type NavLink = ActionLink & { phase?: string };
+function phaseFor(pack?: (typeof packs)[number]): string | undefined {
+    return pack ? (zh ? `・${pack.phase_zh}` : `· ${pack.phase_en}`) : undefined;
+}
+function linkFor(slug: string): NavLink {
     const url = `${zh ? "/tw" : ""}/${slug}/`;
-    return { url, text: (getPageByUrl(url).data.title ?? slug).split(/ — |——/)[0] };
+    const pack = /^[1-6]$/.test(slug) ? packs[Number(slug) - 1] : undefined;
+    return { url, text: (getPageByUrl(url).data.title ?? slug).split(/ — |——/)[0], phase: phaseFor(pack) };
 }
 const previousSlug = index > 0 ? chapterOrder[index - 1] : undefined;
 const nextSlug = index >= 0 && index < chapterOrder.length - 1 ? chapterOrder[index + 1] : undefined;
 const hasExplicitNav = Boolean(page.data.nav_prev || page.data.nav_next);
 const prev = page.data.nav_prev || (!hasExplicitNav && previousSlug ? linkFor(previousSlug) : !hasExplicitNav ? { url: zh ? "/tw/" : "/", text: zh ? "首頁" : "Home" } : undefined);
-const next = page.data.nav_next || (!hasExplicitNav && nextSlug ? linkFor(nextSlug) : undefined);
+const next: NavLink | undefined = page.data.nav_next || (!hasExplicitNav && nextSlug ? linkFor(nextSlug) : undefined);
+// Pack 4 closes the day: besides Pack 5 it loops back to Pack 1 (first light).
+const first = packs[0];
+const loop: NavLink | undefined = !hasExplicitNav && packNumber === "4"
+    ? {
+          url: `${zh ? "/tw" : ""}/1/`,
+          text: zh ? `回到${first.ordinal_zh}：${first.name_zh}` : `Back to Pack 1: ${first.name_en}`,
+          phase: phaseFor(first),
+      }
+    : undefined;
+const phaseGap = zh ? "" : " ";
 const authors = page.data.author
     ? [{ "@type": "Person", name: page.data.author }]
     : [
@@ -78,8 +94,15 @@ if (ldImage) articleLd.image = ldImage.includes("://") ? ldImage : `${site.url}$
         : {})}
     ><InShort page={page} /><WalkingPlayer page={page} /><Fragment set:html={visibleHtml(page)} /></main>
     <section class="next-action"><div class="next-action-content">
-      {prev && <a href={prev.url} class="next-action-button">{!hasExplicitNav && <span class="button-arrow">←</span>}<span class="button-text">{prev.text}</span></a>}
-      {next && <a href={next.url} class="next-action-button"><span class="button-text">{next.text}</span>{!hasExplicitNav && <span class="button-arrow">→</span>}</a>}
+      {prev && <a href={prev.url} class="next-action-button">{!hasExplicitNav && <span class="button-arrow">←</span>}<span class="button-text">{prev.text}{prev.phase && <>{phaseGap}<span class="chapter-nav__phase">{prev.phase}</span></>}</span></a>}
+      {loop ? (
+        <div class="chapter-nav__onward">
+          {next && <a href={next.url} class="next-action-button"><span class="button-text">{next.text}{next.phase && <>{phaseGap}<span class="chapter-nav__phase">{next.phase}</span></>}</span><span class="button-arrow">→</span></a>}
+          <a href={loop.url} class="next-action-button chapter-nav__loop"><span class="button-arrow" aria-hidden="true">↺</span><span class="button-text">{loop.text}{phaseGap}<span class="chapter-nav__phase">{loop.phase}</span></span></a>
+        </div>
+      ) : (
+        next && <a href={next.url} class="next-action-button"><span class="button-text">{next.text}{next.phase && <>{phaseGap}<span class="chapter-nav__phase">{next.phase}</span></>}</span>{!hasExplicitNav && <span class="button-arrow">→</span>}</a>
+      )}
     </div></section>
     <Trace page={page} />
     <PartnerColophon lang={page.data.lang} url={page.url} />
