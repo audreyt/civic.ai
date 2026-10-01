@@ -188,9 +188,9 @@ function renderOverlayFrame(frame: ComicsOverlayFrame): string {
     const text = escapeHtml(frame.text).replace(/\n/g, "&#10;");
     if (frame.shapeOn && frame.sL && frame.sR && frame.sD) {
         const { clip, left, right } = shapePolys(frame.sL, frame.sR, frame.sD);
-        return `<div class="ov shaped" tabindex="0"${labelAttr} style="${base}background:${background};text-align:${frame.align};line-height:1.3;-webkit-clip-path:${clip};clip-path:${clip};"><span style="float:left;width:50%;height:100%;shape-outside:${left};"></span><span style="float:right;width:50%;height:100%;shape-outside:${right};"></span><span class="shaped-text">${text}</span></div>`;
+        return `<div class="ov shaped"${labelAttr} style="${base}background:${background};text-align:${frame.align};line-height:1.3;-webkit-clip-path:${clip};clip-path:${clip};"><span style="float:left;width:50%;height:100%;shape-outside:${left};"></span><span style="float:right;width:50%;height:100%;shape-outside:${right};"></span><span class="shaped-text">${text}</span></div>`;
     }
-    return `<div class="ov rect" tabindex="0"${labelAttr} style="${base}background:${background};"><span style="text-align:${frame.align}">${text}</span></div>`;
+    return `<div class="ov rect"${labelAttr} style="${base}background:${background};"><span style="text-align:${frame.align}">${text}</span></div>`;
 }
 
 function renderOverlayLayer(key: string, arVar?: string): string {

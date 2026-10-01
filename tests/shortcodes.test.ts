@@ -327,6 +327,29 @@ test("expandShortcodes exercises the zh-lang branch of all site shortcodes", () 
     expect(result).toBe("Body with no legacy shortcodes 這是中文內容。");
 });
 
+test("expandShortcodes renders the Japanese gallery overlays with authored readings and crop backgrounds", () => {
+    const result = expandShortcodes(
+        { sourcePath: "ja-comics.md", data: { lang: "ja" } },
+        "<!-- astro:comics-gallery-ja -->"
+    );
+
+    // An authored `aria` reading replaces the visible text in the label;
+    // frames without one fall back to their visible text.
+    expect(result).toContain('aria-label="Baked bg reading"');
+    expect(result).toContain('aria-label="Contain bg text"');
+    // A baked crop uses its precomputed position/size; without one the
+    // background falls back to a whole-image contain.
+    expect(result).toContain(
+        "background:url('/img/pack1-a-wordless.jpg') 8.00% 30.00% / 218.00% 2600.00% no-repeat white;"
+    );
+    expect(result).toContain(
+        "background:url('/img/pack1-a-wordless.jpg') center center / contain no-repeat white;"
+    );
+    // Overlays sit inside the page links, so they must not add tab stops.
+    expect(result).not.toContain("tabindex");
+    expect(result).not.toContain("画像を保存");
+});
+
 test("asciifySkill converts smart punctuation to ASCII and strips remaining non-ASCII", () => {
     const input =
         "Hello\u2014world " + // em dash -> --
