@@ -2,6 +2,7 @@
 import { loadPages, type PageRecord } from "../lib/pages";
 import { record, recordSources } from "../lib/record";
 import { lang2, site } from "../lib/site";
+import CivicBug from "./CivicBug.astro";
 
 interface Props { page: PageRecord; }
 const { page } = Astro.props;
@@ -16,18 +17,16 @@ const address = page.data.steward_email ?? "au@civic.ai";
 const polis = page.data.polis_url ?? /https:\/\/pol\.is\/[a-zA-Z0-9]+(?=["')\s<]|$)/.exec(page.rawBody)?.[0];
 const date = (iso: string) => new Date(iso).toLocaleDateString(zh ? "zh-TW" : "en-GB", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" });
 ---
-<section class="record-trace record-zone" aria-label={zh ? "記 · 紀錄" : "The Trace"} data-pagefind-ignore>
-  <div class="record-trace__inner">
+<!-- The record folds away under the site-mark: readers who want the
+     stewards, amendments, sources and evals open it; the page ends quietly for
+     everyone else. Print opens it (see the script below and the print CSS). -->
+<details class="record-trace record-zone" data-pagefind-ignore>
+  <summary class="record-trace__summary">
+    <CivicBug class="record-trace__mark" />
     <h2 class="record-trace__heading">{zh ? "記 · 紀錄" : "記 · The Trace"}</h2>
-    <!-- Hand-drawn seal geometry: the bent human figure 人 beside two bars 二.
-         These are strokes authored for this chop, not outlines from a font. -->
-    <svg class="record-seal" viewBox="0 0 80 80" role="img" aria-label={zh ? "仁字篆印" : "Ren seal: humaneness"} width="80" height="80">
-      <rect x="3" y="3" width="74" height="74" fill="currentColor" />
-      <g fill="none" stroke="var(--surface, #fbfaf4)" stroke-width="5" stroke-linecap="square" stroke-linejoin="round">
-        <path d="M10 10H70V70H10Z" stroke-width="2" />
-        <path d="M34 18C34 31 28 40 18 48M31 32C30 44 31 53 35 62M47 25C53 24 58 24 64 25M44 55C51 53 59 53 66 55" />
-      </g>
-    </svg>
+    <span class="record-trace__hint">{zh ? "守護者、修訂、來源、評測" : "Stewards, amendments, sources, evals"}</span>
+  </summary>
+  <div class="record-trace__inner">
     <dl class="record-trace__rows">
       <div class="record-trace__row record-trace__stewards">
         <dt>{zh ? "守護者" : "Stewards"}</dt>
@@ -56,4 +55,9 @@ const date = (iso: string) => new Date(iso).toLocaleDateString(zh ? "zh-TW" : "e
     </dl>
     {!amended && <p class="record-history-note">{zh ? "完整來源歷史不可用；修訂日期與次數省略。" : "Complete source history unavailable; amendment date and count omitted."} <a href={ledger}>{zh ? "修訂紀錄" : "Amendment ledger"}</a></p>}
   </div>
-</section>
+</details>
+<script is:inline>
+window.addEventListener("beforeprint", function () {
+    document.querySelectorAll("details.record-trace").forEach(function (d) { d.open = true; });
+});
+</script>

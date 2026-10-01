@@ -5939,28 +5939,68 @@ html[data-theme="dark"] body[data-pack="6"] {
     position: relative;
     max-width: 64rem;
     margin-inline: auto;
-    padding: 1.5rem 1.25rem;
+    padding: 0.5rem 1.25rem 1.5rem;
+}
+
+/* The site-mark is the Trace's handle: it turns as the record opens. */
+.record-trace__summary {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem 0.6rem;
+    max-width: 64rem;
+    margin-inline: auto;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    list-style: none;
+    font-family: var(--machine);
+}
+
+.record-trace__summary::-webkit-details-marker {
+    display: none;
+}
+
+.record-trace__mark {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex: 0 0 auto;
+    color: var(--harvest);
+    transition: transform 0.2s ease;
+}
+
+.record-trace[open] .record-trace__mark {
+    transform: rotate(180deg);
 }
 
 .record-trace .record-trace__heading {
-    margin: 0 0 1.5rem;
-    padding: 0 0 0.75rem;
+    margin: 0;
+    padding: 0;
     border: 0;
-    border-bottom: 1px solid var(--rule, #ddd9cb);
     font: inherit;
     font-size: 0.875rem;
-    text-align: right;
     letter-spacing: 0.08em;
+    color: var(--ink, #211d16);
+}
+
+.record-trace__hint {
+    margin-inline-start: auto;
+    font-size: 0.75rem;
     color: var(--soil, #5a5142);
 }
 
-.record-seal {
-    position: absolute;
-    inset-block-start: 4.5rem;
-    inset-inline-end: 1.25rem;
-    width: 3.5rem;
-    height: 3.5rem;
-    color: var(--cinnabar, #b4351f);
+.record-trace__summary:hover .record-trace__heading {
+    color: var(--moss, #33603e);
+}
+
+.record-trace__summary:focus-visible {
+    outline: 2px solid var(--moss, #33603e);
+    outline-offset: -2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .record-trace__mark {
+        transition: none;
+    }
 }
 
 .record-trace__rows {
@@ -5993,10 +6033,6 @@ html[data-theme="dark"] body[data-pack="6"] {
     min-width: 0;
     margin: 0;
     overflow-wrap: anywhere;
-}
-
-.record-trace__stewards dd {
-    padding-inline-end: 4.25rem;
 }
 
 .record-secondary,
@@ -6185,23 +6221,16 @@ html[data-theme="dark"] .record-zone .record-eval--fail {
 
 @media (min-width: 720px) {
     .record-trace__inner {
-        padding: 2rem;
+        padding: 0.5rem 2rem 2rem;
     }
 
-    .record-seal {
-        inset-block-start: 5rem;
-        inset-inline-end: 2rem;
-        width: 4rem;
-        height: 4rem;
+    .record-trace__summary {
+        padding-inline: 2rem;
     }
 
     .record-trace__row {
         grid-template-columns: 7rem minmax(0, 1fr);
         gap: 1rem;
-    }
-
-    .record-trace__stewards dd {
-        padding-inline-end: 5rem;
     }
 
     .record-ledger__entries > li {
@@ -6258,8 +6287,12 @@ html[data-theme="dark"] .record-zone .record-eval--fail {
         padding: 0.75rem;
     }
 
-    .record-trace__heading,
-    .record-seal,
+    /* Paper always gets the full record, never the folded summary. */
+    .record-trace::details-content {
+        content-visibility: visible;
+    }
+
+    .record-trace__summary,
     .record-trace__evals,
     .record-trace__contest,
     .record-trace__twin,
