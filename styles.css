@@ -45,7 +45,8 @@
     --soil: #5a5142;
     --moss: #33603e;
     --cinnabar: #b4351f;
-    --harvest: #96762f;
+    /* Dark enough for small labels on paper: 5.19 on field, 5.63 on surface */
+    --harvest: #7a6128;
     --rule: #ddd9cb;
     --oxford: #002147;
     /* The 2px provenance rule framing interior pages (DESIGN.md §7.1) */
@@ -6231,7 +6232,7 @@ html[data-theme="dark"] body[data-pack="6"] {
         --soil: #5a5142;
         --moss: #33603e;
         --cinnabar: #b4351f;
-        --harvest: #96762f;
+        --harvest: #7a6128;
         --rule: #ddd9cb;
         --warm: #eae8dc;
         --gold-light: #c8a25c;
