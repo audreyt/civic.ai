@@ -6388,16 +6388,6 @@ html[data-theme="dark"] .record-zone .record-eval--fail {
     margin-block: 0 2rem;
 }
 
-.faq-contest {
-    margin-top: 1.25rem;
-    font-family: var(--machine);
-    font-size: 0.8125rem;
-}
-
-.faq-contest a {
-    color: var(--cinnabar);
-}
-
 .faq-copy-link,
 .faq-disclosure {
     margin-inline-start: 0.5rem;

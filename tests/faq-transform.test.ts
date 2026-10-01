@@ -10,10 +10,7 @@ test("wraps English FAQ answers without replacing existing IDs", () => {
     expect(result).toContain(
         '<p id="p1">Answer</p><ul><li id="p2">List</li></ul>'
     );
-    expect(result).toContain(
-        "title=Question%20not%20answered%3A%20%2Ffaq%2F%23faq-1"
-    );
-    expect(result).toContain("Not answered? File the question.");
+    expect(result).not.toContain("faq-contest");
     expect(result.match(/id="p\d+"/g)).toEqual([
         'id="p1"',
         'id="p2"',
@@ -22,13 +19,11 @@ test("wraps English FAQ answers without replacing existing IDs", () => {
     expect(result).toContain('<h2 id="end">End</h2>');
 });
 
-test("localises contest links for the Traditional Chinese FAQ", () => {
+test("wraps the Traditional Chinese FAQ answers the same way", () => {
     const result = transformFaq(faq, "/tw/faq/");
 
-    expect(result).toContain("還沒回答到？提出這個問題。");
-    expect(result).toContain(
-        "title=Question%20not%20answered%3A%20%2Ftw%2Ffaq%2F%23faq-2"
-    );
+    expect(result).toContain('<div class="faq-answer" id="faq-2-answer">');
+    expect(result).toContain('<p id="p3">Second answer</p></div>');
 });
 
 test("leaves other pages untouched", () => {
