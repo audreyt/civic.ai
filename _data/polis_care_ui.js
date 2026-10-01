@@ -193,7 +193,7 @@ export default {
                 "這一頁試著重現 Habermolt 的閱讀體驗，但也清楚說明 Polis 匯出資料能提供與無法提供的是什麼。",
             sources: "CSV 來源",
             limitations: "這個重建做了什麼",
-            note: "本頁沒有使用隱藏 API。所有內容都由上面的五個匯出檔推導而來。",
+            note: "本頁沒有使用隱藏介面。所有內容都由上面的五個匯出檔推導而來。",
         },
         dynamics: {
             converging: {

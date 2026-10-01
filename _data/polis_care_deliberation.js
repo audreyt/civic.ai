@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
+import statementBodiesTw from "./polis_care_statements_tw.json" with { type: "json" };
 
 const EXPORT_ID = "r2jstrdchy3udbrf8arjx";
 const TIME_ZONE = "Europe/London";
@@ -855,6 +856,7 @@ export default async function () {
                     {
                         id: commentId,
                         body: comment.body,
+                        bodyTw: statementBodiesTw[commentId],
                         createdAt: comment.isoTimestamp,
                         createdAtDisplay: formatDatePair(comment.isoTimestamp),
                         ...totals,
@@ -958,6 +960,7 @@ export default async function () {
                 return {
                     id: stats.id,
                     body: stats.body,
+                    bodyTw: stats.bodyTw,
                     createdAt: stats.createdAt,
                     createdAtDisplay: stats.createdAtDisplay,
                     agrees: stats.agrees,
@@ -1015,6 +1018,7 @@ export default async function () {
                     id: statement.id,
                     rank: statement.rank,
                     body: statement.body,
+                    bodyTw: statement.bodyTw,
                 }));
             participant.topDisagreements = statementList
                 .filter(
@@ -1025,6 +1029,7 @@ export default async function () {
                     id: statement.id,
                     rank: statement.rank,
                     body: statement.body,
+                    bodyTw: statement.bodyTw,
                 }));
             participant.leaderVote = toInt(
                 participant.voteMap[statementList[0]?.id ?? ""]
@@ -1110,6 +1115,7 @@ export default async function () {
                         id: statement.id,
                         rank: statement.rank,
                         body: statement.body,
+                        bodyTw: statement.bodyTw,
                         distinctiveness,
                     };
                 })
@@ -1182,11 +1188,11 @@ export default async function () {
             snapshotUrl: sourceUrls.snapshotRepo,
             question: {
                 en: "What kind of AI use would people accept in care, government, and everyday public life?",
-                tw: "人們願意接受哪一種 AI 應用於照護、政府與日常公共生活？",
+                tw: "人們願意接受哪一種人工智慧應用於照護、政府與日常公共生活？",
             },
             dek: {
                 en: "A Habermolt-style deliberation view rebuilt from Polis exports only. The page below uses vote vectors, cross-group support, and local inference rather than hidden APIs or agent metadata.",
-                tw: "這是一個只靠 Polis 匯出資料重建的 Habermolt 風格審議頁面。下方內容以投票向量、跨群支持度與本地推導為基礎，沒有使用隱藏 API 或智慧體中介資料。",
+                tw: "這是一個只靠 Polis 匯出資料重建的 Habermolt 風格審議頁面。下方內容以投票向量、跨群支持度與本地推導為基礎，沒有使用隱藏介面或智慧體中介資料。",
             },
             summary: {
                 voters: requireCount(summary.voters, "Summary voters"),
@@ -1241,7 +1247,7 @@ export default async function () {
                     "What is missing compared with Habermolt: agent names, authored opinions, semantic embeddings, and native ranking history.",
                 ],
                 tw: [
-                    "每則 comment 都視為一條 statement。",
+                    "每則留言都視為一條陳述。",
                     "領先陳述的排序，結合了整體支持度與各 Polis 分群中最弱的一段支持度。",
                     "陳述地圖與參與者地圖，都是對投票向量的簡易二維投影；因此接近代表投票模式相似，而不是精確的意識形態距離。",
                     "與 Habermolt 相比，這裡缺少的是：智慧體名稱、撰寫出的意見、語意嵌入，以及原生的排序歷史。",
