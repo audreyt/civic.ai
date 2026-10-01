@@ -1,5 +1,5 @@
 ---
-// Pack eyebrow and governing question above a pack page's title (DESIGN.md §21).
+// Pack eyebrow and governing question above a pack page's title (DESIGN.md §10).
 // part="eyebrow" (default) renders the machinery-voice line before the h1;
 // part="question" renders the governing question as a standfirst after it.
 import type { PageRecord } from "../lib/pages";
@@ -15,9 +15,9 @@ const zh = lang2(page.data.lang) === "zh";
   <div class="pack-eyebrow">
     <span class="pack-eyebrow__mark" aria-hidden="true"></span>
     {zh ? (
-      <span class="pack-eyebrow__text">第{pack.ordinal_zh}力 · <span lang="en-GB">{pack.name_en}</span> · {pack.phase_zh}</span>
+      <span class="pack-eyebrow__text">第{pack.ordinal_zh}力 · <span lang="en-GB">{pack.name_en}</span></span>
     ) : (
-      <span class="pack-eyebrow__text">Pack {pack.num} · <span lang="zh-TW">{pack.name_zh}</span> · {pack.phase_en}</span>
+      <span class="pack-eyebrow__text">Pack {pack.num} · <span lang="zh-TW">{pack.name_zh}</span></span>
     )}
   </div>
 )}

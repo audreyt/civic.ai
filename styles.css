@@ -6127,16 +6127,9 @@ html[data-theme="dark"] .record-zone .record-eval--fail {
 
 /* ─── end lane A ─── */
 
-/* ─── lane B: chapter nav day phases ─── */
+/* ─── lane B: chapter nav loop ─── */
 
-/* Chapter navigation: day phase in the machinery voice, and Pack 4's loop home. */
-.chapter-nav__phase {
-    font-family: var(--machine);
-    font-size: 0.85em;
-    letter-spacing: 0;
-    opacity: 0.8;
-}
-
+/* Chapter navigation: Pack 4's loop home. */
 .chapter-nav__onward {
     display: flex;
     flex-direction: column;
