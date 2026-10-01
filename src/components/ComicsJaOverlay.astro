@@ -100,6 +100,35 @@
             const ja = toJa(widest);
             return ja !== widest ? ja : set;
         };
+        // Base panel art follows the document language: the original
+        // Japanese shows the lettered `-ja` art (text baked in) under the
+        // overlays; any live translation swaps back to `-wordless` so the
+        // (translated) overlay text is what reads. The lettered art ships
+        // only at full size, so each <picture> source keeps its wordless
+        // srcset in data-wordless-srcset to restore it. Skipped mid-print so
+        // the enterPrint/exitPrint snapshot stays authoritative.
+        const toWordless = (src) =>
+            src.replace(/-ja(\.[a-z0-9]+)(?=($|[?#]))/i, "-wordless$1");
+        const syncImgLang = () => {
+            if (printState.active) return;
+            const ja = isJa();
+            imgs().forEach((img) => {
+                const src = img.getAttribute("src") || "";
+                const next = ja ? toJa(src) : toWordless(src);
+                if (next !== src) img.setAttribute("src", next);
+                const pic = img.closest("picture");
+                if (!pic) return;
+                pic.querySelectorAll("source").forEach((s) => {
+                    const set = s.getAttribute("srcset") || "";
+                    if (!s.dataset.wordlessSrcset)
+                        s.dataset.wordlessSrcset = set;
+                    const want = ja
+                        ? toJaSet(s.dataset.wordlessSrcset)
+                        : s.dataset.wordlessSrcset;
+                    if (want !== set) s.setAttribute("srcset", want);
+                });
+            });
+        };
         // Print swaps every overlay image to its lettered `-ja` variant so
         // the Japanese text prints inline (no live overlay in print CSS —
         // see the `@media print { .ja-ov-layer { display: none } }` rule).
@@ -183,6 +212,7 @@
         const apply = () => {
             stopObs();
             restoreFs();
+            syncImgLang();
             fitAll();
             startObs();
         };
