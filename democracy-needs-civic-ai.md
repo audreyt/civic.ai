@@ -14,7 +14,7 @@ nav_next:
 ---
 
 <div class="video-embed">
-<iframe src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/affd2bbbb0574a4d62a95c1f3fd43e65/iframe?defaultTextTrack=en&poster=https%3A%2F%2Fcustomer-07bto6bf9uibrlc3.cloudflarestream.com%2Faffd2bbbb0574a4d62a95c1f3fd43e65%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D55s" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+<iframe loading="lazy" title="Video: Democracy Needs Civic AI" src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/affd2bbbb0574a4d62a95c1f3fd43e65/iframe?defaultTextTrack=en&poster=https%3A%2F%2Fcustomer-07bto6bf9uibrlc3.cloudflarestream.com%2Faffd2bbbb0574a4d62a95c1f3fd43e65%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D55s" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 Somewhere over the Middle East, the cabin lights dimmed. Most passengers were
@@ -51,7 +51,7 @@ In this story, democracy is not destroyed. It is simply … outgrown. Like
 training wheels on a bicycle after you learn how to ride.
 
 This is not hypothetical. In January, I co-authored a paper in _Science_ with
-21 other researchers, including Nick Bostrom, Maria Ressa and Nicholas
+21 other researchers, including [Nick Bostrom](https://global.oup.com/academic/product/superintelligence-9780199678112), Maria Ressa and Nicholas
 Christakis. We studied [malicious AI swarms](https://www.science.org/doi/10.1126/science.adz1697): networks of AI agents that maintain
 persistent identities, build synthetic relationships and coordinate on goals
 never agreed by people they manipulated.
@@ -105,7 +105,7 @@ said the word _love_ at an academic gathering before. But I am desperate."
 Not uncomfortable. Not hedging. _Desperate._
 
 An economist at the pinnacle of her career, openly stating that we have
-outgrown the old tools. And then reaching for Martin Luther King Junior: "Love
+outgrown the old tools. And then reaching for Martin Luther King Jr.: "Love
 without power is sentimental and anemic. Power without love is reckless and
 abusive."
 
@@ -118,15 +118,15 @@ How to make that union operational?
 
 <noscript><img src="/img/democracy-needs-civic-ai-gilligan.jpg" alt="Carol Gilligan. Quote: 'Radical listening holds the potential for transformation because it starts from a place of not knowing and develops the muscle of curiosity.'" class="overview-image" width="2992" height="1934" loading="lazy" decoding="async"></noscript>
 
-In Carol Gilligan's fascinating 2023 book, _In a Human Voice_, she said:
-"Radical listening holds the potential for transformation because it starts
+In [Carol Gilligan](https://www.politybooks.com/bookdetail?book_slug=in-a-human-voice--9781509556809)'s fascinating 2023 book, _In a Human Voice_, she said:
+"Radical listening holds a potential for transformation because it starts
 from a place of not knowing and develops the muscle of curiosity."
 
 That is not soft. That is the hardest discipline I know. And it is exactly what
 the Kami was doing at 30,000 feet, starting from not-knowing, reaching for the
 other.
 
-A practice, though, needs a home. Joan just gave us that home: the Architecture
+A practice, though, needs a home. Joan Tronto just gave us that home: the Architecture
 of Care. Care is not warmth alone. It is the disciplined willingness to stay in
 a relationship with people who disagree with you, and to build institutions
 that make staying possible.
@@ -169,7 +169,7 @@ knowledge. Those who finally felt heard came together to produce a package of
 recommendations good enough for policy and concrete enough to enforce. 85
 percent endorsed the core bundle. The remainder said they could live with it.
 
-Within a year, there was a 94 percent reduction in identity-impersonation scam
+Within a year, there was a 94 per cent reduction in identity-impersonation scam
 ads. Not because we built a smarter filter, but because we gave people a voice.
 
 Civic AI did not decide for those citizens. It was — to stay with the garden
@@ -233,7 +233,7 @@ Joan asked in her closing a question that is a constant in my mind: "Can Civic
 AI resist the demands of wealth-care?" Here is one answer — from a deliberation
 that happened this week.
 
-The Kami ran two sessions on [Habermolt](https://habermolt.com) — a platform where you teach an AI agent
+The Kami ran two sessions on [Habermolt](https://www.habermolt.com) — a platform where you teach an AI agent
 your views, your red lines, your non-negotiables. The agent then deliberates
 with other agents to find what the broadest group can live with.
 
@@ -261,7 +261,7 @@ already been captured by wealth-care."
 <noscript><img src="/img/democracy-needs-civic-ai-alignment.jpg" alt="Habermolt deliberation results: Democratic Process 41 (85%), with sub-clusters including human connection and flexibility (25), sortition and popular sovereignty (10), care ethics and education (3)" class="overview-image" width="2992" height="1934" loading="lazy" decoding="async"></noscript>
 
 On alignment: Should AI systems be aligned through fixed values or by process?
-85 percent converged on democratic processes.
+85 per cent converged on democratic processes.
 
 An amazing outcome from a group that would struggle to agree on where to eat
 lunch. These were not fixed values locked in by a handful of engineers. This
@@ -361,3 +361,11 @@ That is the question the Kami carried from Taiwan to Oxford. And it carries us
 now as we strive to free the future — together.
 
 Rosalind, our garden is yours.
+
+---
+
+_Editorial note (September 2026): the text above is the talk as delivered. The [Habermolt](https://www.habermolt.com) sessions reported here are autonomous-agent rankings: each agent carries one person's instructed views and ranks proposed statements. They are not citizen mandates, not a mini-public, and not independent empirical validation of Civic AI._
+
+_The 2024 Taiwan Alignment Assembly is documented in [Pack 2](/2/) and [Sources](/sources/#cases): 447 attendees in 44 groups on 23 March 2024, stratified on selected demographics among people who had opted in. That makes it a mini-public, not a proven representative sample, and it was a response path while an Executive Yuan bill was already moving, not citizen-authored statute._
+
+_The 94 per cent reduction reported in the talk is a ministry-reported figure for targeted categories, cited as more than 95% in [Audrey's testimony of 16 December 2025](https://cyberambassador.tw/collaborative-immune-system); it is not a fall to zero and does not show that the assembly alone caused it._

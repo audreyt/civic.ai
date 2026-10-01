@@ -9,7 +9,10 @@ workers_dev = true
 # custom_domain = true
 
 [vars]
-AUDREY_MODEL = "nemotron-ultra"
+# "@cf/..." ids generate on the Workers AI binding ([ai]) — no gateway hop,
+# so no CF_AIG_TOKEN is needed on this path. "nemotron-ultra" / "fugu" stream
+# through AI Gateway instead and DO need CF_AIG_TOKEN (still set as a secret).
+AUDREY_MODEL = "@cf/deepseek-ai/deepseek-v4-flash-0731"
 
 [ai]
 binding = "AI"
@@ -20,7 +23,8 @@ index_name = "civic-ai-site"
 
 # Create index (once): wrangler vectorize create civic-ai-site --dimensions=1024 --metric=cosine
 # Metadata index (once, BEFORE bulk upsert): wrangler vectorize create-metadata-index civic-ai-site --propertyName=lang --type=string
-# Secrets: BASETEN_API_KEY, CF_AIG_TOKEN (wrangler secret put)
+# Secret: CF_AIG_TOKEN only (wrangler secret put) — the Baseten credential is a
+# stored AI Gateway provider key on the Cloudflare side.
 
 [dev]
 port = 8788

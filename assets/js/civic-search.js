@@ -9,6 +9,26 @@
     var activeIdx = -1;
     var input = null;
     var suppressHide = false;
+    var lastFocus = null;
+    var lastOverflow = "";
+    var closeButton = document.getElementById("search-close");
+
+    // The search UI stylesheet styles only this overlay, so it stays off the
+    // critical rendering path: fetch it once the page has loaded, or on the
+    // first open if that comes sooner.
+    var searchCss = overlay.getAttribute("data-search-css");
+    function ensureSearchCss() {
+        if (!searchCss) return;
+        var link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = searchCss;
+        document.head.appendChild(link);
+        searchCss = null;
+    }
+    if (document.readyState === "complete") ensureSearchCss();
+    else window.addEventListener("load", ensureSearchCss);
+    var TABBABLE =
+        'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
     // Build suggestions array from datalist, then remove it
     var datalist = document.getElementById("search-suggestions");
@@ -903,10 +923,20 @@
 
     // ── Open / Close ──
 
+    function isOpen() {
+        return overlay.classList.contains("active");
+    }
+
     function open() {
+        ensureSearchCss();
+        if (!isOpen()) {
+            lastFocus = document.activeElement;
+            lastOverflow = document.body.style.overflow;
+        }
         overlay.classList.add("active");
-        overlay.setAttribute("aria-hidden", "false");
+        overlay.removeAttribute("aria-hidden");
         document.body.style.overflow = "hidden";
+        if (closeButton) closeButton.focus();
 
         if (useFuse) {
             if (!fuseSearchInput) {
@@ -924,6 +954,7 @@
                 loadFuseIndex();
             }
             setTimeout(function () {
+                if (!isOpen()) return;
                 if (fuseSearchInput) fuseSearchInput.focus();
             }, 50);
         } else {
@@ -931,6 +962,7 @@
                 initPagefind();
             }
             setTimeout(function () {
+                if (!isOpen()) return;
                 input = container.querySelector("input");
                 if (input && suggestions.length && !dropdown) {
                     initDropdown();
@@ -964,15 +996,60 @@
     }
 
     function close() {
+        if (!isOpen()) return;
+        var target = lastFocus;
+        var overflow = lastOverflow;
+        lastFocus = null;
+        lastOverflow = "";
+        if (target instanceof HTMLElement && target.isConnected) {
+            target.focus();
+        }
         overlay.classList.remove("active");
         overlay.setAttribute("aria-hidden", "true");
-        document.body.style.overflow = "";
+        document.body.style.overflow = overflow;
         if (dropdown) dropdown.hidden = true;
+        activeIdx = -1;
+    }
+
+    function tabbableItems() {
+        return Array.prototype.filter.call(
+            overlay.querySelectorAll(TABBABLE),
+            function (el) {
+                if (el.disabled || el.tabIndex < 0) return false;
+                if (el.getClientRects().length === 0) return false;
+                var visibility = window.getComputedStyle(el).visibility;
+                return visibility !== "hidden" && visibility !== "collapse";
+            }
+        );
+    }
+
+    function trapTab(e) {
+        var items = tabbableItems();
+        if (!items.length) {
+            e.preventDefault();
+            overlay.focus();
+            return;
+        }
+        var first = items[0];
+        var last = items[items.length - 1];
+        var current = document.activeElement;
+        if (!overlay.contains(current) || current === overlay) {
+            e.preventDefault();
+            (e.shiftKey ? last : first).focus();
+        } else if (e.shiftKey && current === first) {
+            e.preventDefault();
+            last.focus();
+        } else if (!e.shiftKey && current === last) {
+            e.preventDefault();
+            first.focus();
+        }
     }
 
     document.querySelectorAll(".search-toggle").forEach(function (btn) {
         btn.addEventListener("click", open);
     });
+
+    if (closeButton) closeButton.addEventListener("click", close);
 
     overlay.addEventListener("click", function (e) {
         if (e.target === overlay) close();
@@ -989,8 +1066,15 @@
                 open();
             }
         }
-        if (e.key === "Escape" && overlay.classList.contains("active")) {
+        if (
+            e.key === "Escape" &&
+            isOpen() &&
+            !e.isComposing &&
+            e.keyCode !== 229
+        ) {
+            e.preventDefault();
             close();
         }
+        if (e.key === "Tab" && isOpen()) trapTab(e);
     });
 })();

@@ -16,7 +16,7 @@ nav_next:
 _Diplomatic time runs in years. Algorithmic time runs in milliseconds. AI crisis diplomacy must close that gap._
 
 <div class="video-embed">
-<iframe src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/ab007fba825037b007039c2e647bf5f4/iframe?defaultTextTrack=en" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+<iframe loading="lazy" title="Video: Treat AI Safety Like Civil Defence" src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/ab007fba825037b007039c2e647bf5f4/iframe?defaultTextTrack=en" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 Good local time. I am Audrey Tang, Taiwan's cyber ambassador, first digital minister, and 2025 Right Livelihood Laureate. My heartfelt thanks to AI Safety Asia for staging this important conversation at the India AI Impact Summit.
@@ -29,7 +29,7 @@ These crises are not on the horizon. They are unfolding now. Deepfake videos fea
 
 We have seen what algorithmic time does to markets — the 2010 flash crash, where U.S. markets plunged and recovered in minutes. We can see what it does to trust — Europol has warned that organised crime is using AI-driven impersonation to scale fraud and evade detection across jurisdictions.
 
-And here is the shift that changes everything. AI is no longer just a tool. It is a participant. NIST's most recent guidance describes AI agent systems as capable of planning and taking autonomous actions that affect real-world systems, as OpenClaw recently demonstrated. Once incidents become agentic, response cannot depend on heroic improvisation. It requires institutionalised, cross-border mechanisms.
+And here is the shift that changes everything. AI is no longer just a tool. It is a participant. NIST's most recent guidance describes AI agent systems as capable of planning and taking autonomous actions that affect real-world systems — behaviour that tools like OpenClaw have recently demonstrated. Once incidents become agentic, response cannot depend on heroic improvisation. It requires institutionalised, cross-border mechanisms.
 
 ## Three building blocks for AI crisis diplomacy
 
@@ -37,11 +37,11 @@ So what does AI crisis diplomacy look like? Three building blocks and one region
 
 ### Trust: a whitelist for public integrity
 
-Taiwan's 111 government SMS is a dedicated short-code for official messages, so citizens can instantly verify what is real — a blue checkmark for public communication. Every message shows the agency's name and the last three digits of your phone number: proof that the sender knows who you are and the network guarantees who they are. When people trust the channel, phishing and impersonation lose steam. Every country needs its own version — a low-friction, verifiable trust channel that works even in crisis.
+Taiwan's 111 government SMS is a dedicated short code for official messages, so citizens can instantly verify what is real — a blue checkmark for public communication. Every message shows the agency's name and the last three digits of your phone number: proof that the sender knows who you are and the network guarantees who they are. When people trust the channel, phishing and impersonation lose steam. Every country needs its own version — a low-friction, verifiable trust channel that works even in crisis.
 
 ### Consensus: AI that listens at scale
 
-Tools like Polis simplify interaction to agree or disagree, removing reply threads that amplify emotions. They surface bridging statements — ideas that people with opposing views still find reasonable — and make them visible. The vTaiwan process combines this with in-person dialogue, transforming polarised issues into workable policy. Tools like Talk to the City push the scale of listening further, with auditability at the core: every theme traces back to original participant statements, so society can verify whether the summary is faithful. In crisis diplomacy, legitimacy comes from speed and verifiability.
+Tools like [Polis](https://pol.is) simplify interaction to agree or disagree, removing reply threads that amplify emotions. They surface bridging statements — ideas that people with opposing views still find reasonable — and make them visible. The vTaiwan process combines this with in-person dialogue, transforming polarised issues into workable policy. Tools like Talk to the City push the scale of listening further, with auditability at the core: every theme traces back to original participant statements, so society can verify whether the summary is faithful. In crisis diplomacy, legitimacy comes from speed and verifiability.
 
 ### Safety: AI incidents as civil defence
 

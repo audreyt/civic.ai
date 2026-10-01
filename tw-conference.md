@@ -5,8 +5,8 @@ permalink: /tw/conference/
 title: "打開關懷六力"
 meta_description: "2026 年 3 月 25 日於牛津 Rhodes House 舉行的仁工智慧研討會——唐鳳、Caroline Green、Joan Tronto、Rosalind Picard、Iason Gabriel 等，談關懷倫理與 AI 對齊。"
 subtitle: "仁工智慧研討會 2026"
-date_line: "2026 年 3 月 25 日 — Rhodes House, Oxford"
-og_description: "2026 年 3 月 25 日 — Rhodes House, Oxford"
+date_line: "2026 年 3 月 25 日——Rhodes House, Oxford"
+og_description: "2026 年 3 月 25 日——Rhodes House, Oxford"
 alt_lang_url: "/conference/"
 alt_lang_label: "English"
 hosts:
@@ -16,7 +16,7 @@ hosts:
       photo: { src: "/img/audrey.jpg", w: 512, h: 512 }
     - name: "Caroline Green"
       url: "https://www.oxford-aiethics.ox.ac.uk/caroline-emmer-de-albuquerque-green"
-      role: "牛津 AI 倫理研究院"
+      role: "牛津 AI 倫理研究所"
       photo: { src: "/img/caroline.jpg", w: 512, h: 512 }
 goals:
     - title: "共識"
@@ -24,11 +24,11 @@ goals:
     - title: "安全空間"
       text: "一個能夠公開提出困難問題、不確定性和挑戰的場所。"
     - title: "實質影響"
-      text: "當天成果將直接納入《仁工智慧》書籍計畫。"
-agenda_title: "議程草案"
+      text: "當天成果直接納入《仁工智慧》書籍計畫。"
+agenda_title: "議程"
 agenda:
     - time: "09:45"
-      title: "歡迎致詞與定調今日"
+      title: "歡迎致詞與為今日議程定調"
       speaker: "Caroline Green——斷裂、健全人性與關係性福祉"
       photo: { src: "/img/caroline.jpg", alt: "Caroline Green", w: 512, h: 512 }
     - time: "10:05"
@@ -104,7 +104,7 @@ agenda:
           - { src: "/img/caroline.jpg", alt: "Caroline Green", w: 512, h: 512 }
           - { src: "/img/audrey.jpg", alt: "唐鳳", w: 512, h: 512 }
     - time: "14:10"
-      title: "影片：AI 與我們同在，而非取代我們"
+      title: "影片：AI 與我們同在，而非撇開我們"
       url: "/tw/ai-with-us/"
       speaker: "Vitalik Buterin"
       photo:
@@ -186,7 +186,7 @@ agenda:
     - time: "16:30"
       title: "結束與道別"
 packs_title: "關懷六力"
-packs_intro: "六項環環相扣的關懷設計原則。"
+packs_intro: "六項環環相扣的支持人與人之間關懷的 AI 設計原則。"
 packs_link_text: "探索框架"
 packs_link_url: "/tw/"
 packs_period: "。"
@@ -198,6 +198,7 @@ packs:
     - { num: 5, name: "團結力", url: "/tw/5/" }
     - { num: 6, name: "共生力", url: "/tw/6/" }
 thumbnail: "/img/overview-small-tw.jpg"
+og_image: "/img/og-card-tw.jpg"
 overview_image:
     src: "/img/overview-small-tw.png"
     alt: "關懷六力概覽圖"
@@ -205,14 +206,14 @@ overview_image:
     h: 1781
 ---
 
-<div class="conf-quotes-pair">
+<div class="conf-quotes-pair" id="quotes-pair">
 <figure class="conf-quote">
     <div class="conf-quote-portrait">
         <a href="https://www.gyalwarinpoche.com/news/3-13"><img src="/img/his-holiness-dalai-lama.jpg" alt="第十四世達賴喇嘛回答 Tenzin Yangtso 的提問" title="第十四世達賴喇嘛回答 Tenzin Yangtso 的提問" width="512" height="512" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:50%;border:2px solid var(--border);box-shadow:0 10px 24px rgba(15,25,35,.12)" /></a>
     </div>
     <div class="conf-quote-copy">
         <blockquote>
-            <p>歸根結底，AI 是這個世界的一種工具。無論它發展到多麼先進的高度，都永遠無法取代人類心智那種瞬息萬變的能力，以及無窮無盡的思維潛能。</p>
+            <p>歸根結底，AI 是這個世界的一種工具。無論它發展到多麼先進的高度，都永遠無法取代人類心智那種瞬息萬變的能力，以及無窮無盡的感知能力。</p>
             <p>生命並非孤立自存，而是源於相互依存的緣起；因此，我們運用這些工具的目的不應是為了『控制』，而是為了改善人與人之間的關係。科技中真正的慈悲，應如同一座橋樑，消除我們之間的隔閡與無知。</p>
         </blockquote>
         <figcaption>——第十四世達賴喇嘛</figcaption>
@@ -237,6 +238,6 @@ overview_image:
 <p style="font-size:0.95rem">與會者參與了一場以 AI 與社區關懷為主題的 <a href="https://pol.is">Polis</a> 集體感知練習，結果以兩種格式呈現。</p>
 
 <div class="conf-packs-condensed">
-<a href="/tw/conference/report/">社群 AI 之聲</a>
-<a href="/tw/conference/sensemaking/">審議鏡像</a>
+<a href="/tw/conference/report/">社群談 AI 的聲音（書面報告）</a>
+<a href="/tw/conference/sensemaking/">審議鏡像（互動探索）</a>
 </div>

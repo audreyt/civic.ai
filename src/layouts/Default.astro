@@ -1,7 +1,8 @@
 ---
-import type { PageRecord } from "../lib/pages";
+import { visibleHtml, type PageRecord } from "../lib/pages";
 import DefaultShell from "./DefaultShell.astro";
+import Ledger from "../components/Ledger.astro";
 interface Props { page: PageRecord; }
 const { page } = Astro.props;
 ---
-<DefaultShell page={page}><Fragment set:html={page.html} /></DefaultShell>
+<DefaultShell page={page}>{page.data.page_class === "ledger-page" ? <Ledger page={page} /> : <Fragment set:html={visibleHtml(page)} />}</DefaultShell>

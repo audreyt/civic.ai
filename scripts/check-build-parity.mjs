@@ -29,6 +29,9 @@ function shouldIgnoreBuildFile(path) {
     return (
         path.startsWith("_astro/") ||
         path.startsWith("pagefind/") ||
+        // Per-page Han subsets are content-hashed: their names change whenever
+        // the page's glyph set does, so they cannot be a fixed requirement.
+        path.startsWith("fonts/zh/") ||
         path.endsWith(".DS_Store") ||
         path.includes("/.DS_Store")
     );
@@ -46,7 +49,8 @@ function decodeHtml(value) {
 
 function attr(html, regex) {
     const match = html.match(regex);
-    return match ? decodeHtml(match[1]) : "";
+    // A value may be double- or single-quoted; take whichever group matched.
+    return match ? decodeHtml(match[1] ?? match[2] ?? "") : "";
 }
 
 function snapshotHtml(file) {
@@ -66,7 +70,7 @@ function snapshotHtml(file) {
         title: attr(html, /<title>([\s\S]*?)<\/title>/i).trim(),
         description: attr(
             html,
-            /<meta\b(?=[^>]*\bname=["']description["'])(?=[^>]*\bcontent=["']([^"']*)["'])[^>]*>/i
+            /<meta\b(?=[^>]*\bname=["']description["'])(?=[^>]*\bcontent=(?:"([^"]*)"|'([^']*)'))[^>]*>/i
         ),
         canonical: attr(
             html,

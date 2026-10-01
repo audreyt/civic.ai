@@ -1,9 +1,12 @@
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { extname, join } from "node:path";
 import matter from "gray-matter";
-import { renderMarkdown } from "./legacyMarkdown";
+import { nativePictures, renderMarkdown, smartQuotes } from "./legacyMarkdown";
 import { expandShortcodes } from "./shortcodes";
+import { transformFaq } from "./faqTransform";
+import { annotateInlineLang } from "./inlineLang";
 import { normalizeUrl } from "./site";
+import { generatedPages } from "./recordPages";
 
 export type LayoutName = "default" | "chapter" | "conference";
 
@@ -20,6 +23,7 @@ export interface PageFrontmatter {
     description?: string;
     meta_description?: string;
     summary?: string;
+    summary_display?: boolean;
     summary_label?: string;
     summary_anchor?: string;
     key_takeaways?: string[];
@@ -30,6 +34,7 @@ export interface PageFrontmatter {
     alt_lang_url?: string;
     exclude_from_sitemap?: boolean;
     search_exclude?: boolean;
+    noindex?: boolean;
     page_class?: string;
     author?: string;
     date?: string | Date;
@@ -58,6 +63,10 @@ export interface PageFrontmatter {
     packs?: unknown[];
     overview_image?: { src: string; alt: string; w: number; h: number };
     ui_locale?: "en" | "tw";
+    stewards?: string[];
+    steward_email?: string;
+    polis_url?: string;
+    record_sources?: string[];
 }
 
 export interface PageRecord {
@@ -74,6 +83,10 @@ export interface PageRecord {
 
 const root = process.cwd();
 let pageCache: PageRecord[] | undefined;
+
+export function hasPublicFile(publicPath: string): boolean {
+    return existsSync(join(root, publicPath));
+}
 
 export function isRootContentFile(name: string): boolean {
     if (["README.md", "AGENTS.md", "CLAUDE.md", "DESIGN.md"].includes(name))
@@ -147,6 +160,9 @@ function loadPage(sourceName: string): PageRecord {
     normalizeUrlFields(data.agenda);
     normalizeUrlFields(data.hosts);
     const url = deriveUrl(sourceName, data);
+    // Intentional asymmetry: only the English sensemaker is emitted as a
+    // standalone document. Its Mandarin twin goes through the normal
+    // shortcode/markdown branch and renders inside the site chrome.
     const isRawHtmlDocument = sourceName === "sensemaker.html";
     const rawBody = parsed.content;
     const expanded = expandShortcodes({ sourcePath, data }, rawBody);
@@ -154,7 +170,16 @@ function loadPage(sourceName: string): PageRecord {
         ? rawBody
         : sourceName.endsWith(".html")
           ? expanded
-          : renderMarkdown(expanded);
+          : annotateInlineLang(
+                transformFaq(
+                    nativePictures(
+                        renderMarkdown(expanded, url),
+                        hasPublicFile
+                    ),
+                    url
+                ),
+                data.lang
+            );
     const includeInSitemap =
         !data.exclude_from_sitemap && data.layout !== false;
     return {
@@ -170,11 +195,16 @@ function loadPage(sourceName: string): PageRecord {
     };
 }
 
+export function visibleHtml(page: PageRecord): string {
+    return page.data.lang === "ja" ? page.html : smartQuotes(page.html);
+}
+
 export function loadPages(): PageRecord[] {
     if (pageCache) return pageCache;
     pageCache = readdirSync(root)
         .filter(isRootContentFile)
         .map(loadPage)
+        .concat(generatedPages)
         .sort((a, b) => a.url.localeCompare(b.url));
     return pageCache;
 }
@@ -195,6 +225,7 @@ export function getDynamicPagePaths(): Array<{
         "/tw/",
         "/conference/sensemaking/",
         "/tw/conference/sensemaking/",
+        "/404.html",
     ]);
     return loadPages()
         .filter((page) => !explicit.has(page.url))

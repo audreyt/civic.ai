@@ -3,7 +3,7 @@
 TTS synthesis script for civic.ai
 Usage: python3 scripts/tts_synth.py manifesto.md audio/manifesto.mp3
 
-Reads a Markdown file, transforms it to clean spoken English,
+Reads Markdown as spoken English (default) or Mandarin (--lang zh),
 then synthesises via ElevenLabs and writes an MP3.
 
 Requires:
@@ -17,8 +17,16 @@ import io, json, os, re, subprocess, sys, tempfile, time, requests
 
 API_KEY  = os.environ.get("ELEVENLABS_API_KEY", "")
 VOICE_ID = os.environ.get("ELEVENLABS_VOICE_ID", "0YIItGwEClgeMtCdHyV1")
-MODEL    = "eleven_turbo_v2"
+MODEL    = "eleven_turbo_v2"   # default; override with --model
 FORMAT   = "mp3_44100_128"
+
+# Per-request character ceilings the API reports for each model. A model not
+# listed keeps the historical 25,000-character chunks (unchanged default).
+DEFAULT_MAX_CHARS = 25000
+MODEL_MAX_CHARS = {
+    "eleven_v4":       9800,   # API limit 10,000; keep a margin for the seam
+    "eleven_v4_turbo": 9800,
+}
 
 VOICE_SETTINGS = {
     "stability": 0.99,
@@ -264,13 +272,40 @@ def transform(text: str) -> str:
     return text.strip()
 
 
+def transform_zh(text: str) -> str:
+    """Strip publishing markup while retaining Mandarin and Latin names."""
+    text = re.sub(r"^---.*?---\s*", "", text, flags=re.DOTALL)
+    text = re.sub(r"<!--.*?-->", "", text, flags=re.DOTALL)
+    text = re.sub(r"<[^>]+>", "", text)
+    text = re.sub(r"^\[\^[^\]]+\]:.*(?:\n[ \t]+.*)*", "", text, flags=re.MULTILINE)
+    text = re.sub(r"\[\^[^\]]+\]", "", text)
+    text = re.sub(r"!\[[^\]]*\]\([^)]+\)", "", text)
+    text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)
+    text = re.sub(r"^\s{0,3}(?:#{1,6}\s+|>\s*|\d+\.\s+|[-*]\s+)", "", text,
+                  flags=re.MULTILINE)
+    text = re.sub(r"^\s*(?:---+|\*\*\*+)\s*$", "", text, flags=re.MULTILINE)
+    text = re.sub(r"\{[^}]*\}", "", text)  # heading IDs / paragraph anchors
+    text = re.sub(r"[⿻¶*`_~]", "", text)
+    text = re.sub(r"[\U0001F000-\U0001FFFF\uFE00-\uFE0F]", "", text)
+    text = text.replace("——", "，").replace("→", "，").replace("≠", "不等於")
+    text = text.replace("§", "第").replace("vs.", "與")
+    text = re.sub(r"\+(\d+)", r"正\1", text)
+    text = re.sub(r"([\d,]+(?:\.\d+)?)%", r"百分之\1", text)
+    # Keep digits and Latin terms for the multilingual model's contextual
+    # pronunciation, rather than applying the English number/abbreviation rules.
+    text = re.sub(r"[ \t]+", " ", text)
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    return text.strip()
+
+
 # ── Synthesis ─────────────────────────────────────────────────────────────────
 
-def synthesise_chunk(text: str, out_path: str) -> None:
+
+def synthesise_chunk(text: str, out_path: str, model: str = MODEL) -> None:
     url = f"https://api.elevenlabs.io/v1/text-to-speech/{VOICE_ID}?output_format={FORMAT}"
     r = requests.post(url,
         headers={"xi-api-key": API_KEY, "Content-Type": "application/json"},
-        json={"text": text, "model_id": MODEL, "voice_settings": VOICE_SETTINGS},
+        json={"text": text, "model_id": model, "voice_settings": VOICE_SETTINGS},
         timeout=300,
     )
     if r.status_code != 200:
@@ -279,11 +314,16 @@ def synthesise_chunk(text: str, out_path: str) -> None:
         f.write(r.content)
 
 
-def synthesise(text: str, out_path: str) -> None:
+def synthesise(text: str, out_path: str, model: str = MODEL, lang: str = "en") -> None:
     if not API_KEY:
         sys.exit("Error: ELEVENLABS_API_KEY not set")
 
-    max_chars = 25000
+    max_chars = MODEL_MAX_CHARS.get(model, DEFAULT_MAX_CHARS)
+    # Han characters carry more speech than English characters. Smaller requests
+    # keep Mandarin narration within the API request's 300-second timeout.
+    if lang == "zh":
+        max_chars = min(max_chars, 2000)
+    print(f"Model: {model}  (chunks of at most {max_chars:,} characters)")
     print(f"Characters: {len(text):,}")
 
     # Split text into paragraphs
@@ -326,7 +366,7 @@ def synthesise(text: str, out_path: str) -> None:
     print(f"Split into {len(chunks)} chunks for synthesis")
 
     if len(chunks) == 1:
-        synthesise_chunk(chunks[0], out_path)
+        synthesise_chunk(chunks[0], out_path, model)
     else:
         # Synthesize each chunk to a temp file, then concat
         tmpdir = tempfile.mkdtemp(prefix="tts_synth_")
@@ -337,7 +377,7 @@ def synthesise(text: str, out_path: str) -> None:
             for i, chunk in enumerate(chunks):
                 part_path = os.path.join(tmpdir, f"part_{i:03d}.mp3")
                 print(f"Synthesising chunk {i+1}/{len(chunks)} ({len(chunk):,} chars)...")
-                synthesise_chunk(chunk, part_path)
+                synthesise_chunk(chunk, part_path, model)
                 parts.append(part_path)
             
             # Concatenate
@@ -432,22 +472,43 @@ def normalize_loudness(mp3_path: str) -> None:
 # ── CLI ───────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    if len(sys.argv) < 3:
-        print(f"Usage: {sys.argv[0]} <input.md> <output.mp3> [--dry-run]")
+    argv  = sys.argv[1:]
+    model = MODEL
+    lang = "en"
+    rest  = []
+    i = 0
+    while i < len(argv):
+        if argv[i] == "--model" and i + 1 < len(argv):
+            model = argv[i + 1]
+            i += 2
+        elif argv[i].startswith("--model="):
+            model = argv[i].split("=", 1)[1]
+            i += 1
+        elif argv[i] == "--lang" and i + 1 < len(argv):
+            lang = argv[i + 1]
+            i += 2
+        else:
+            rest.append(argv[i])
+            i += 1
+    positional = [a for a in rest if not a.startswith("--")]
+    if len(positional) < 2:
+        print(f"Usage: {sys.argv[0]} <input.md> <output.mp3> [--model MODEL_ID] [--lang en|zh] [--dry-run]")
         sys.exit(1)
 
-    in_path  = sys.argv[1]
-    out_path = sys.argv[2]
-    dry_run  = "--dry-run" in sys.argv
+    in_path  = positional[0]
+    out_path = positional[1]
+    dry_run  = "--dry-run" in rest
 
     with open(in_path) as f:
         raw = f.read()
 
-    text = transform(raw)
+    if lang not in ("en", "zh"):
+        sys.exit("Error: --lang must be en or zh")
+    text = transform_zh(raw) if lang == "zh" else transform(raw)
 
     if dry_run:
         print(text)
         sys.exit(0)
 
-    synthesise(text, out_path)
+    synthesise(text, out_path, model, lang)
     normalize_loudness(out_path)

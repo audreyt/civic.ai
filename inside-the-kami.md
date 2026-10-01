@@ -7,7 +7,7 @@ alt_lang_url: "/tw/inside-the-kami"
 permalink: "/inside-the-kami/"
 date: 2026-03-05
 description: "What recent ML research suggests goes inside a bounded Civic AI — and what it cannot provide."
-summary: "Three lines of ML research — Bengio, LeCun and Taniguchi's collective predictive coding — converge on a bounded, specialised Kami that negotiates shared meaning rather than ruling from above. The substrate can stay honest and narrow; legitimacy, pace and justice remain ours."
+summary: "Three lines of ML research — Bengio, LeCun and Taniguchi's collective predictive coding — suggest a bounded, specialised Kami that negotiates shared meaning rather than ruling from above. Honesty and narrow scope are design goals; legitimacy, pace and justice remain ours. These programmes are not deployed care or safety proofs."
 nav_next:
     url: "/"
     text: "Home"
@@ -15,11 +15,13 @@ nav_next:
 
 The 6-Pack describes the governance around a Civic AI. This essay asks a narrower question: what kind of technical substrate makes that governance easier to uphold?
 
+Capability composes: bounding each Kami does not bound what an orchestrator assembles from many. Appendix B of the book therefore requires a named owner and scope for the orchestrator, with a legible per-turn record of which model planned, executed and checked. Composition rights sunset with the Engagement Contract, and oversight must have a way to pause the chain. This is a governance constraint, not a description of an implemented pipeline; observation alone does not guarantee control.
+
 ## In brief
 
 - Recent work from Yoshua Bengio's Scientist AI and the SAI line from LeCun and colleagues points toward bounded, specialised systems rather than one general-purpose governor.
-- A third line of work — Tadahiro Taniguchi and colleagues' _Collective Predictive Coding_ (CPC) — supplies the missing mathematics for how those bounded systems can negotiate shared meaning with their human communities, rather than receive it from above. The 2026 _Artificial Life_ paper, which I co-authored, formalises this as _symbiotic alignment_.
-- These three programmes converge: Bengio shows how the inside can stay honest, SAI shows why the inside should stay narrow, and CPC shows how many such insides can co-construct meaning without a single supervisor.
+- A third line of work — Tadahiro Taniguchi and colleagues' _Collective Predictive Coding_ (CPC) — offers a theoretical framework for how those bounded systems can negotiate shared meaning with their human communities, rather than receive it from above. The 2026 _Artificial Life_ paper, _Symbiotic Alignment via Collective Predictive Coding: A Theoretical Framework for Co-Creative Human–AI Ecosystems_, which I co-authored, formalises this as _symbiotic alignment_.
+- These three programmes suggest a shared shape: Bengio argues for an honest inside, SAI for a narrow one, and CPC proposes how many such systems could co-construct meaning without a single supervisor. These are research arguments, not deployed care or safety proofs.
 - This convergent shape is not new: Eric Drexler's 2019 _Comprehensive AI Services_ (CAIS), from the same Oxford tradition as Bostrom's _Superintelligence_, already reframed advanced AI as an ecology of bounded, specialised services rather than a single agent. What the 6-Pack adds is the civic layer CAIS leaves open.
 - That convergence does not settle politics, but it does narrow the technical search space.
 - The inside still cannot decide legitimacy, standing, pace, or justice. Those remain institutional questions.
@@ -29,10 +31,10 @@ The 6-Pack describes the governance around a Civic AI. This essay asks a narrowe
 The 6-Pack is deliberately technology-agnostic. Its governance should
 outlast any one model family. But technology-agnostic is not
 technology-indifferent. A deceptive model turns oversight into permanent
-combat. A general-purpose optimiser strains every boundary. An opaque
+combat. A general-purpose optimiser strains every boundary — and a system built to treat the world as a fixed, external source of feedback is, on the argument in [Solipsistic Superintelligence is Unlikely to be Cooperative](https://arxiv.org/abs/2606.03237), unlikely to cooperate with anyone once deployed. An opaque
 system makes Pack 3 impossible to verify.
 
-Two recent ML programmes — Yoshua Bengio's [Scientist AI](https://lawzero.org/)
+Two recent ML programmes — Yoshua Bengio's [Scientist AI](https://lawzero.org/en)
 and the [Superhuman Adaptable Intelligence](https://arxiv.org/abs/2602.23643)
 (SAI) agenda from LeCun and colleagues — converge on a useful design lesson: the best substrate for Civic AI is
 not a universal agent. It is a bounded, specialised system whose action remains
@@ -41,7 +43,9 @@ under human authorisation.
 That convergence does not settle politics. It does narrow the technical search
 space.
 
-None of this is a new intuition. In 2019, within the same Oxford tradition that produced Bostrom's _Superintelligence_, Eric Drexler's [_Reframing Superintelligence: Comprehensive AI Services_](https://web.archive.org/web/20250905024310/https://www.fhi.ox.ac.uk/wp-content/uploads/Reframing_Superintelligence_FHI-TR-2019-1.1-1.pdf) (CAIS) argued that advanced AI is most plausibly reached not as a single self-improving agent but as a growing ecology of bounded, specialised services — the same shape Bengio and LeCun now arrive at from trust and capability arguments. What CAIS left open is exactly what the 6-Pack supplies: not the architecture of boundedness, but its legitimacy — who authorises a service, who is owed an answer, who can revoke the mandate.
+An honest, narrow substrate is a design goal, not a property conferred on a model by citing these programmes.
+
+None of this is a new intuition. In 2019, within the same Oxford tradition that produced Bostrom's _[Superintelligence](https://global.oup.com/academic/product/superintelligence-9780199678112)_, Eric Drexler's [_Reframing Superintelligence: Comprehensive AI Services as General Intelligence_](https://web.archive.org/web/20250905024310/https://www.fhi.ox.ac.uk/wp-content/uploads/Reframing_Superintelligence_FHI-TR-2019-1.1-1.pdf) (CAIS) argued that advanced AI is most plausibly reached not as a single self-improving agent but as a growing ecology of bounded, specialised services — the same shape Bengio and LeCun now arrive at from trust and capability arguments. What CAIS left open is exactly what the 6-Pack supplies: not the architecture of boundedness, but its legitimacy — who authorises a service, who is owed an answer, who can revoke the mandate.
 
 ## Bengio: truth without appetite
 
@@ -78,7 +82,7 @@ where governance belongs.
 The SAI programme of LeCun and colleagues attacks a different myth: that the right goal is one
 general intelligence good at everything.
 
-Its case is mathematical before it is political. The No Free Lunch theorem — a
+Its case is mathematical before it is political. The [No Free Lunch theorem](https://doi.org/10.1109/4235.585893) — a
 formal result in machine learning — says no single algorithm dominates every
 class of problem. Multi-task systems suffer
 negative transfer when tasks compete for the same representational capacity.
@@ -98,9 +102,9 @@ smarter AI requires one system to do everything.
 
 ## Taniguchi: meaning by negotiation, not by decree
 
-A third programme, less prominent in the Western AI-safety conversation but load-bearing for Civic AI, comes from Tadahiro Taniguchi and colleagues' _Collective Predictive Coding_ (CPC). Its 2026 _Artificial Life_ paper, which I co-authored, frames the next step beyond Bengio's epistemic honesty and SAI's specialisation: how should a community of bounded, specialised systems and their human counterparts negotiate the shared meanings — words, norms, categories, agreements — that make coordination possible at all?
+A third programme, less prominent in the Western AI-safety conversation but load-bearing for Civic AI, comes from Tadahiro Taniguchi and colleagues' _Collective Predictive Coding_ (CPC). Its 2026 _Artificial Life_ paper, _Symbiotic Alignment via Collective Predictive Coding: A Theoretical Framework for Co-Creative Human–AI Ecosystems_, which I co-authored, frames the next step beyond Bengio's epistemic honesty and SAI's specialisation: how should a community of bounded, specialised systems and their human counterparts negotiate the shared meanings — words, norms, categories, agreements — that make coordination possible at all?
 
-The dominant alignment paradigm answers this top-down. A supervisor — a single human, a model card, a reinforcement-learning-from-human-feedback (RLHF) preference dataset — holds a privileged "ground-truth" distribution, and every other system is taught to converge on it. The paper calls this _hierarchical alignment_, and is precise about its political cost: alignment becomes the imposition of one community's values on all others, which is exactly the singleton condition the 6-Pack is built to refuse.
+The dominant alignment paradigm answers this top-down. A supervisor — a single human, a model card, a reinforcement-learning-from-human-feedback ([RLHF](https://arxiv.org/abs/2203.02155)) preference dataset — holds a privileged "ground-truth" distribution, and every other system is taught to converge on it. The paper calls this _hierarchical alignment_, and is precise about its political cost: alignment becomes the imposition of one community's values on all others, which is exactly the singleton condition the 6-Pack is built to refuse.
 
 CPC offers a different formulation: _symbiotic alignment_. Treat the population of agents — humans and AIs together — as a _symbol-emergence system_. Each agent has its own internal states and its own observations of the world, and the group as a whole maintains a shared communicative variable — language, norms, categories, a Polis cluster label, a deliberation outcome. The total collective free energy of the system — a single measure of how badly, taken together, the agents' predictions fit the world and each other — splits into two parts:
 
@@ -113,7 +117,7 @@ Crucially, this negotiation does not require a central coordinator. The paper sh
 
 Finally, CPC reframes _plurality_ as a multimodal collective posterior. When a society is genuinely divided, the distribution has multiple peaks — each peak a locally coherent worldview separated from the others by high-energy "barriers" of distrust and partial observation. Bridging tools like Polis do not force these peaks to collapse into a single average; they search for low-energy paths between them, communicative variables that lower the barriers without erasing the modes. This is the formal counterpart of uncommon ground ([Pack 1](/1/)).
 
-CPC is a research agenda, not a finished engineering recipe. But it does something the 6-Pack needed and could not provide for itself: it gives the relational vocabulary of care a mathematical shape that engineers, regulators and procurement officers can argue about. Solidarity stops being a sentiment and becomes a non-decomposable term in an objective function. Plurality stops being a slogan and becomes a multimodal distribution worth preserving. Deliberation stops being a hopeful procedure and becomes a decentralised Bayesian inference whose convergence guarantees are now sketched on the page.
+CPC is a research agenda, not a finished engineering recipe. It gives the relational vocabulary of care a mathematical shape that engineers, regulators and procurement officers can argue about. Solidarity can be written as a non-decomposable term in an objective function. Plurality can be treated as a multimodal distribution worth preserving. Deliberation can be read as a sketched decentralised Bayesian inference. Those are theoretical correspondences, not convergence guarantees in the field.
 
 ## The shared design lesson
 
@@ -126,7 +130,7 @@ they point toward the same Civic AI shape.
 - **Specialisation beats generality** (LeCun) — Each Kami should have a narrow mandate.
 - **Modular systems beat monoliths** (Bengio + LeCun) — Civic AI should be composable, replaceable and federated.
 - **Action is the danger point** (Bengio) — Authorise tools and interventions in governance, not inside opaque weights.
-- **Non-decomposable collective regularisation** (CPC; Taniguchi et al., 2026) — Solidarity becomes a machine-enforceable primitive: a term in the loss that no agent can minimise alone.
+- **Non-decomposable collective regularisation** (CPC; Taniguchi et al., 2026) — Solidarity as a proposed term in the loss that no agent can minimise alone, not a machine-enforceable primitive already in production.
 - **Decentralised Bayesian inference via MHNG** (CPC) — Bounded local Kamis can co-construct shared meaning through peer-to-peer dialogue, without ceding sovereignty to a central server.
 - **Multimodal collective posterior distribution** (CPC) — Plurality becomes a maths problem: diverse worldviews can be mapped, bridged and preserved without flattening.
 
@@ -147,7 +151,7 @@ adopt-or-explain duties.
 **Pack 3: Competence.** Better-calibrated uncertainty makes decision traces
 more honest. A trace that says "0.92 likely" should mean what it says. But
 Pack 3 is broader than prediction quality. Sandboxing, least power, data
-minimalism and graduated release remain operational duties. CPC contributes one further competence claim: an apprentice that learns through accept/reject turn-taking with its cultivator — the Apprentice Model of shadow mode, canary and general release — is performing an approximate Bayesian inference whose convergence is now mathematically characterised. Apprenticeship is no longer a metaphor for shadow-mode deployment; it is a recognised algorithm with known limits.
+minimalism and graduated release remain operational duties. CPC offers one further analogy: an apprentice that learns through accept/reject turn-taking with its cultivator — the Apprentice Model of shadow mode, canary and general release — can be read as approximate Bayesian inference. Apprenticeship remains a civic practice; the maths is a correspondence, not a proof that shadow-mode deployment has known convergence limits in the field.
 
 **Pack 4: Responsiveness.** A truth-tracking model gives cleaner failure
 analysis: was the factual judgement wrong, was uncertainty miscalibrated or was
@@ -160,10 +164,10 @@ how we probe the hardest case in Bengio's framework: "unknown." And in CPC terms
 federation. Kamis can share provenance, schemas, eval results and verified
 factual claims without flattening local context into one global authority.
 Federation should move institutional knowledge, not intimate histories. Shared
-facts; local judgement. CPC sharpens this further: the _non-decomposable collective regularisation term_ in the symbiotic-alignment objective is the mathematical statement of what solidarity demands. It is the part of the loss function that no agent can minimise by self-interest — only the population can. A Civic AI architecture that omits it is not just politically lonely; it is technically incomplete.
+facts; local judgement. CPC sharpens this further: the _non-decomposable collective regularisation term_ in the symbiotic-alignment objective is a theoretical statement of what solidarity demands. It is the part of the loss function that no agent can minimise by self-interest — only the population can. It offers one way to formalise solidarity, not a requirement every Civic AI architecture must satisfy.
 
 **Pack 6: Symbiosis.** SAI strengthens the case for boundedness because
-specialisation is not just politically safer; it is technically better. CPC adds that even bounded Kamis must remain in _communicative reach_ of each other and of the humans they serve — symbol emergence is a population-level process, and a Kami that drops out of the dialogue stops contributing to shared meaning. But
+specialisation is not just politically safer; on well-defined tasks, it can also be technically better. CPC adds that even bounded Kamis must remain in _communicative reach_ of each other and of the humans they serve — symbol emergence is a population-level process, and a Kami that drops out of the dialogue stops contributing to shared meaning. But
 Pack 6 still has to do work the ML programmes do not: sunset, succession,
 anti-capture rules and non-expansion pacts. And any world-model planner,
 however scoped, needs agency audits. Goal-directed behaviour inside a boundary
@@ -171,7 +175,7 @@ can still be dangerous.
 
 ## What the substrate cannot decide
 
-This is where the limit becomes clear.
+This is where the limit becomes clear. Begin governance with the [human keeping questions](/kami/#before-you-start), before installation or shared uploads.
 
 **It cannot decide standing.** A non-agentic predictor can still be used
 without the consent of the people it affects. Architecture cannot grant the
@@ -211,8 +215,8 @@ It is not the only possible substrate. It is simply the strongest one now in
 view. Bengio helps explain how the inside can stay honest. LeCun helps explain
 why the inside should stay narrow. Taniguchi's collective predictive coding helps explain how _many_ such insides can negotiate shared meaning without a master variable above them. The 6-Pack explains how that whole arrangement remains answerable to the people around it.
 
-If the previous decade of AI research was dominated by the question _how do we align one powerful model to one fixed ground truth?_, the work assembled here points to a different question: _how do many bounded models and the human communities they serve co-construct ground truth, again and again, in accountable rooms?_ That second question is the one the 6-Pack was always asking. The arrival of a maths that can describe it changes the conversation we can have with engineers and regulators, not because the maths replaces politics but because it gives the politics terms it can stand on.
+If the previous decade of AI research was dominated by the question _how do we align one powerful model to one fixed ground truth?_, the work assembled here points to a different question: _how do many bounded models and the human communities they serve co-construct ground truth, again and again, in accountable rooms?_ That second question is the one the 6-Pack was always asking. A theoretical maths that can describe it changes the conversation we can have with engineers and regulators, not because the maths replaces politics but because it gives the politics terms it can stand on.
 
 The field is getting clearer about what belongs inside a Kami. The more
 important question — who gets to authorise it, limit it and retire it — is
-still, irreducibly, ours.
+still, irreducibly, ours. That question, too, has a literature: Seth Lazar's [democratic duties of explanation](https://arxiv.org/abs/2208.08628) and Kate Vredenburgh's [right to explanation](https://doi.org/10.1111/jopp.12262) ask, in political philosophy's terms, who is owed an account of why a system did what it did. The [Sources](/sources/) page places this essay's substrate arguments beside them.

@@ -12,7 +12,7 @@ nav_next:
     text: "Home"
 ---
 
-<div style="padding:56.25% 0 0 0;position:relative;margin-bottom:2em"><iframe src="https://embed.vhx.tv/videos/3949343?autoplay=1&color=002249&vimeo=1" style="position:absolute;top:0;left:0;width:100%;height:100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+<div style="padding:56.25% 0 0 0;position:relative;margin-bottom:2em"><iframe loading="lazy" title="Video: Ciudadanía Digital" src="https://embed.vhx.tv/videos/3949343?autoplay=1&color=002249&vimeo=1" style="position:absolute;top:0;left:0;width:100%;height:100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
 
 Thank you, Paulina. And thank you for 50 years.
 
@@ -62,13 +62,13 @@ Around the same time, social media platforms shifted from subscription-based fee
 
 ## Polis
 
-We discovered a tool called Polis — open-source, with one crucial design choice: no reply button. No retweet button. You cannot attack someone else's statement. You can only agree, disagree or pass. There is nowhere for trolls to grow.
+We discovered a tool called [Polis](https://pol.is) — open-source, with one crucial design choice: no reply button. No retweet button. You cannot attack someone else's statement. You can only agree, disagree or pass. There is nowhere for trolls to grow.
 
 On social media, outrage goes viral. On Polis, overlap goes viral — because the only way your statement spreads is if people who disagree on everything else still endorse yours.
 
 When Uber arrived in Taiwan in 2015, taxi drivers pushed back hard. They fought with each other not only on social media but also on the street. Our solution? Thousands of citizens took the issue to Polis. Within weeks, they agreed on concrete measures that became legislation. The bridge was there all along. It just needed a tool that rewarded building it.
 
-Over the following decade, trust in Taiwan's government rose from 9 percent in 2014 to over 70 percent by 2020 — not because we designed the perfect system, but because we kept listening. We kept publishing. We kept sharing the work before it was finished.
+Over the following decade, trust in Taiwan's government rose from 9 per cent in 2014 to over 70 per cent by 2020 — not because we designed the perfect system, but because we kept listening. We kept publishing. We kept sharing the work before it was finished.
 
 ## ¿Quién Decide?
 
@@ -148,11 +148,11 @@ One group said: Display all ads on social media with a large disclosure label �
 
 Another said: if a platform posts an unsigned scam ad and someone loses money, the platform shares the liability.
 
-Yet another said: we do not ban non-compliant platforms — we slow connection speed by 1 percent for every day they refuse to comply.
+Yet another said: we do not ban non-compliant platforms — we slow connection speed by 1 per cent for every day they refuse to comply.
 
-We used a sovereign AI model called TAIDE — the Trustworthy AI Dialogue Engine, collectively tuned by the Taiwanese people — to weave the proposals from all 44 rooms into a coherent package. A total of 85 percent of the assembly agreed. The other 15 percent said they could live with it. Multiparty legislative support followed. Within a year, impersonation advertisements fell by 94 percent.
+We used a sovereign AI model called TAIDE — the Trustworthy AI Dialogue Engine, collectively tuned by the Taiwanese people — to weave the proposals from all 44 rooms into a coherent package. A total of 85 per cent of the assembly agreed. The other 15 per cent said they could live with it. Multiparty legislative support followed. Within a year, impersonation advertisements fell by 94 per cent.
 
-When every party sees that 85 percent of a representative mini-public voted on something synthesised by a trusted sovereign model, no party wants to offend the 85 percent. That is what I mean by "AI in the loop of humanity," rather than humans in the loop of AI.
+When every party sees that 85 per cent of a representative mini-public voted on something synthesised by a trusted sovereign model, no party wants to offend the 85 per cent. That is what I mean by "AI in the loop of humanity," rather than humans in the loop of AI.
 
 ## Solo Constructores
 
@@ -228,7 +228,7 @@ _Question: In what ways would you imagine the exercise of digital citizenship?_
 
 Citizenship is a set of freedoms — expression, association, movement. If you are a citizen of a city, you have the right to move to another city within the same country. But on many platforms, that freedom does not exist. If you leave X.com for Bluesky or Mastodon, your entire community resets to zero. That is not freedom of movement. It is what some in Silicon Valley call techno-feudalism.
 
-We worked with the state of Utah on this. They passed a law that says, starting this July, if you want to move from one social network to another, your community goes with you — new followers, posts, replies all flow to the new network. It is like telephone number portability: if you cannot keep your number, the old provider wins by default. With portability, there is competition to the top, not to the bottom. More interoperability and freedom of movement are the key to unlocking digital citizenship.
+We worked with the state of Utah on this. They passed a law that says, from July 2027, if you want to move from one social network to another, your community goes with you — your data and social graph move to the new network, and the old one must keep sharing your new activity with it in real time. It is like telephone number portability: if you cannot keep your number, the old provider wins by default. With portability, there is competition to the top, not to the bottom. More interoperability and freedom of movement are the key to unlocking digital citizenship.
 
 **Automating Education**
 
@@ -240,7 +240,9 @@ What happens between people — listening deeply, real conversation — cannot b
 
 _Question: Do you think we can achieve empathy across all countries?_
 
-Empathy requires a kind of social translation. We worked with the Napolitan Institute in the US to convene a mini-public of over 2,000 people — five from each congressional district — and ask them about freedom, equality, and the personal experiences behind their beliefs. Many Americans suffer from an illusion of polarisation: they assume that people who care about climate justice and people who care about biblical creation care have nothing in common, when in fact they care about the same things through different social experience. We deployed what is called a Habermas machine — an AI model that translates between those frames, rendering climate-justice language into biblical verse and vice versa. With this, more than 96 percent of participants agreed on fundamental values. Even the most divisive issue, affirmative action, reached almost 70 percent agreement. The US is not as polarised as it believes. Empathy does not require speaking another tribe's language — but it does require social-translation tools that make the overlap visible.
+Empathy requires a kind of social translation. We worked with the Napolitan Institute in the US to convene a mini-public of over 2,000 people — five from each congressional district — and ask them about freedom, equality, and the personal experiences behind their beliefs. Many Americans suffer from an illusion of polarisation: they assume that people who care about climate justice and people who care about biblical creation care have nothing in common, when in fact they care about the same things through different social experience.
+
+We deployed what is called a Habermas machine — an AI model that translates between those frames, rendering climate-justice language into biblical verse and vice versa. With this, more than 96 per cent of participants agreed on fundamental values. Even the most divisive issue, affirmative action, reached almost 70 per cent agreement. The US is not as polarised as it believes. Empathy does not require speaking another tribe's language — but it does require social-translation tools that make the overlap visible.
 
 **Satisficing, Not Optimising**
 
@@ -256,7 +258,7 @@ What we practise is not optimisation but satisficing: meeting a threshold across
 
 _Question: In Mexico many people have lost faith in democracy because they see the government as corrupt. From your perspective, how do we solve this?_
 
-In Taiwan in 2014 the president had only 9 percent approval. The opposition was also deeply divided — half wanted to "free China," the other half wanted to be free from China. The Sunflower Movement didn't just protest; it built bridges by finding uncommon common ground: we want to counter authoritarianism without becoming more authoritarian ourselves.
+In Taiwan in 2014 the president had only 9 per cent approval. The opposition was also deeply divided — half wanted to "free China," the other half wanted to be free from China. The Sunflower Movement didn't just protest; it built bridges by finding uncommon common ground: we want to counter authoritarianism without becoming more authoritarian ourselves.
 
 My suggestion: don't just protest. Design better systems — perhaps with distributed ledgers, local AI models for auditing, or civic tech — so that honesty becomes the dominant strategy (incentive compatibility). Study mechanism design. Test your ideas in your local community first. Before long you become a bridge builder and move from anti-corruption to pro-transparency.
 
@@ -269,3 +271,11 @@ Waging peace requires as much strategy, cunning, and logistics as waging war —
 At MIT's Center for Constructive Communication, researchers faced a campus where students on opposing sides of the Israeli-Palestinian conflict could not hold face-to-face conversations. So each group deliberated among themselves, and then the best statements from both sides were woven into an audio medley using what is called meronymity — partial anonymity. The voices are altered enough that you cannot identify the speaker, but you can still hear the prosody, the emotion. When both groups heard the medley, they depolarised significantly.
 
 War dominates our conversations, our social media, our news. But I invite you to put your genius, your cunning, your talent into waging peace.
+
+---
+
+_Editorial note (September 2026): the text above is the talk as delivered. The 2024 Taiwan Alignment Assembly is documented in [Pack 2](/2/) and [Sources](/sources/#cases): 447 attendees in 44 groups on 23 March 2024, stratified on selected demographics among people who had opted in. That makes it a mini-public, not a proven representative sample, and it was a response path while an Executive Yuan bill was already moving, not citizen-authored statute. The talk's "statistically representative" describes that stratification, not proven representativeness._
+
+_The room software handled queues, speaking time and transcripts; the public record does not show a model deciding the policy synthesis, and human judgment and the survey process mattered. The talk's 94 per cent is the ministry-reported figure for targeted categories; it is cited elsewhere as more than 95% in [Audrey's testimony of 16 December 2025](https://cyberambassador.tw/collaborative-immune-system). It does not measure all fraud, and it does not show that the assembly alone caused it._
+
+_Utah's portability duty under §13-81-201 took effect on 1 July 2026, while continuous real-time forwarding under H.B. 408 starts on 1 July 2027, so "from July 2027" covers only the second._

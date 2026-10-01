@@ -1,13 +1,12 @@
 ---
 layout: chapter
-title: "⿻ UCSC: From Polarization to Co-creation"
+title: "⿻ UCSC: From Polarisation to Co-creation"
 author: "Audrey Tang"
 lang: en-gb
 alt_lang_url: "/tw/plurality-ucsc"
 permalink: "/plurality-ucsc/"
 date: 2026-05-10
 description: "Speech on Civic AI and democratic renewal delivered at the University of California, Santa Cruz."
-og_image: "/img/plurality-ucsc.jpg"
 nav_next:
     url: "/"
     text: "Home"
@@ -16,20 +15,20 @@ nav_next:
 Good local time, leaders and change-makers at the University of California, Santa Cruz.
 
 <div class="video-embed">
-<iframe src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/19f482b81a13ac6db833ce2ffb1bc24a/iframe?defaultTextTrack=en" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+<iframe loading="lazy" title="Video: ⿻ UCSC: From Polarisation to Co-creation" src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/19f482b81a13ac6db833ce2ffb1bc24a/iframe?defaultTextTrack=en" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 Let us begin with a big question. **"What could UCSC be by 2050?"** No need for predictive modelling or even crystal balls. This is an invitation to cast off the yoke of tyrannical predictions and deliberate deeply.
 
 Because, if anyone tells you the future of education, democracy or the planet is inevitable, please reject. Or better still, smile and move on. The future is not something we forecast from above. It is something we learn to co-create and forge as one.
 
-For me, this is the essence of **Plurality**: Collaborative diversity turning polarization into fuel. If we let it erupt like a volcano, the lava of division consumes everything in its path. But if we build a geothermal engine, that same pressure becomes momentum for democratic renewal. The design question is: Do our tools amplify outrage, or do they amplify overlap?
+For me, this is the essence of **Plurality**: Collaborative diversity turning polarisation into fuel. If we let it erupt like a volcano, the lava of division consumes everything in its path. But if we build a geothermal engine, that same pressure becomes momentum for democratic renewal. The design question is: Do our tools amplify outrage, or do they amplify overlap?
 
-This is why what you are doing with [Polis](http://pol.is/), World Cafe, Open Space and listening partners matters.
+This is why what you are doing with [Polis](https://pol.is/), World Café, Open Space and listening partners matters.
 
-A [Polis](http://pol.is/) conversation is a **group selfie** of a community. It lets a campus see itself and hear itself, not just as loud individual voices, but as patterns of care, concern, imagination and uncommon ground.
+A [Polis](https://pol.is/) conversation is a **group selfie** of a community. It lets a campus see itself and hear itself, not just as loud individual voices, but as patterns of care, concern, imagination and uncommon ground.
 
-That is very different from the usual social media space, where the highest polarization per minute, or PPM, often wins. There, the feed is a wildfire. It feels hot, but there is no relational nutrition. We see the shadows of others, but not the people themselves. There is no engagement, empathy nor understanding.
+That is very different from the usual social media space, where the highest polarisation per minute, or PPM, often wins. There, the feed is a wildfire. It feels hot, but there is no relational nutrition. We see the shadows of others, but not the people themselves. There is no engagement, empathy nor understanding.
 
 What you are making here can be the inverse of that: a **campfire**.
 
@@ -49,7 +48,7 @@ Because data should be our Kami-tilled **soil, not tech-drilled oil**.
 
 If we treat people's words as oil, we extract them, refine them, and burn them for someone else's purpose. But if we treat them as soil, we tend the relationships, obligations, and histories that make new life possible. A citizens' report can then become compost for the next season of campus life, not a final answer handed down from above.
 
-This is also where the **fork and merge** matters. Students, staff, faculty, alumni, community partners: you can fork new possibilities. New rituals, new curriculums, new ways of learning, governing, caring for land, and caring for one another. And then the institution can merge back what works, so the campus itself evolves.
+This is also where the **fork and merge** matters. Students, staff, faculty, alumni, community partners: you can fork new possibilities. New rituals, new curricula, new ways of learning, governing, caring for land, and caring for one another. And then the institution can merge back what works, so the campus itself evolves.
 
 Fork without merge is just exit into many beautiful small gardens.
 
@@ -63,10 +62,10 @@ That is what Right Livelihood means to me in this moment: Building institutions 
 
 No democracy is an island, not even Taiwan. And no campus is an island, not even one as enlightened as UCSC. That is why universities can become places where democracy is practiced, not only studied.
 
-So, please, use these gatherings to design a bigger, more welcoming table. Turn polarization into co-creation. Turn data into soil. Turn wildfires into campfires. Turn today's conversations into the civic muscles that future generations can inherit, strengthen and pass down.
+So, please, use these gatherings to design a bigger, more welcoming table. Turn polarisation into co-creation. Turn data into soil. Turn wildfires into campfires. Turn today's conversations into the civic muscles that future generations can inherit, strengthen and pass down.
 
 And always keep this guiding thought in mind: We the people are truly the superintelligence.
 
 Let us co-create, collaborate and free the future — together.
 
-Thank you. Live long and … prosper!🖖
+Thank you. Live long and … prosper! 🖖

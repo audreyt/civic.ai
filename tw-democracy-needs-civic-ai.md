@@ -14,7 +14,7 @@ nav_next:
 ---
 
 <div class="video-embed">
-<iframe src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/affd2bbbb0574a4d62a95c1f3fd43e65/iframe?defaultTextTrack=zh-Hant&poster=https%3A%2F%2Fcustomer-07bto6bf9uibrlc3.cloudflarestream.com%2Faffd2bbbb0574a4d62a95c1f3fd43e65%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D55s" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+<iframe loading="lazy" title="影片：民主需要仁工智慧" src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/affd2bbbb0574a4d62a95c1f3fd43e65/iframe?defaultTextTrack=zh-Hant&poster=https%3A%2F%2Fcustomer-07bto6bf9uibrlc3.cloudflarestream.com%2Faffd2bbbb0574a4d62a95c1f3fd43e65%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D55s" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 飛過中東上空時，機艙燈光暗了下來。大多數乘客都睡著了。我面前的餐盤桌上，放著一台小電腦，裡面跑著我們稱為 [**jdd-kami**](https://github.com/jdd-kami) 的系統：那是 Tenzin Yangtso（天津揚措）和我一起照料的仁工智慧（Civic AI）。
@@ -37,7 +37,7 @@ nav_next:
 
 預設軌跡有一個很誘人的形狀。一個強大的系統。一個通用智慧。受訓於一切，治理一切，最佳化一切，而且是從上面來治理。在這個故事裡，它強大到讓政治變得不再必要。民主不是被摧毀；它只是……被超越了。就像你學會騎腳踏車之後，輔助輪就被拿掉。
 
-這不是假設。1 月時，我和另外 21 位研究者在《Science》共同發表了一篇論文，其中包括 Nick Bostrom、Maria Ressa 和 Nicholas Christakis。我們研究的是[惡意 AI 群集](https://www.science.org/doi/10.1126/science.adz1697)：這些 AI 智慧體能維持持久身分、建立合成關係，並為那些從未得到受操弄者同意的目標彼此協調。
+這不是假設。1 月時，我和另外 21 位研究者在《Science》共同發表了一篇論文，其中包括 [Nick Bostrom](https://global.oup.com/academic/product/superintelligence-9780199678112)、Maria Ressa 和 Nicholas Christakis。我們研究的是[惡意 AI 群集](https://www.science.org/doi/10.1126/science.adz1697)：這些 AI 智慧體能維持持久身分、建立合成關係，並為那些從未得到受操弄者同意的目標彼此協調。
 
 我們現在已經有技術，可以模擬一個根本不存在的公眾，而且把它做得和真實公眾難以區分。那個打動你的草根運動？它可能根本沒有根。
 
@@ -47,7 +47,7 @@ nav_next:
 
 預設軌跡是一種單一文化。一種作物，延伸到你視線所及的每個地方。它也許一時豐收，卻是在透支未來。一種單一文化，總有單點失敗。一場病害。一場乾旱。一個沒有人識破的謊言。而那個失敗總會到來。不是會不會，而是 _何時_。
 
-⿻ 多元宇宙的軌跡不一樣。它是許多從內部長出的花園：在地的、有界的、被照料的。它天生就是多元的。它有季節，需要修枝，也需要除草。你不可能從上而下照料花園。你必須從下而上地照料它。
+⿻ 多元宇宙的軌跡不一樣。它是許多從內部長出的花園：在地的、有界的、被照料的。它在設計上就是多元的。它有季節，需要修枝，也需要除草。你不可能從上而下照料花園。你必須從下而上地照料它。
 
 民主也是一樣。
 
@@ -63,11 +63,11 @@ nav_next:
 
 <noscript><img src="/img/democracy-needs-civic-ai-henderson.jpg" alt="Rebecca Henderson 在哈佛甘迺迪學院演講。語錄：'I have been an academic for nearly 40 years and I have never said the word love at an academic gathering before. But I am desperate.'" class="overview-image" width="2992" height="1934" loading="lazy" decoding="async"></noscript>
 
-去年 12 月，在哈佛甘迺迪學院 Ash Center 的一場會議上，Rebecca Henderson 呼籲我們談論愛、慈悲，以及作為人的目的。她說：「我做學者將近四十年了，從來沒有在學術場合說過 _愛_ 這個字。但我現在很 desperate。」
+去年 12 月，在哈佛甘迺迪學院 Ash Center 的一場會議上，Rebecca Henderson 呼籲我們談論愛、慈悲，以及作為人的目的。她說：「我做學者將近四十年了，從來沒有在學術場合說過 _愛_ 這個字。但我現在感到很迫切。」
 
-不是不自在。不是保留。是 _desperate_。
+不是不自在。不是保留。是迫切。
 
-一位站在學術生涯頂峰的經濟學家，公開表示我們已經長出了舊工具所能承載的範圍。接著她援引 Martin Luther King Junior：「沒有力量的愛，是感傷而貧血的；沒有愛的力量，則是魯莽而濫權的。」
+一位站在學術生涯頂峰的經濟學家，公開表示舊工具已經不敷我們使用。接著她援引 Martin Luther King Jr.：「沒有力量的愛，是感傷而貧血的；沒有愛的力量，則是魯莽而濫權的。」
 
 地神寫的是傾聽。但真相是：沒有力量的傾聽，改變不了任何事。沒有傾聽的力量，會毀掉一切。King 所要求的、Henderson 所伸手去抓的，都是兩者的結合。有肌力的愛。帶著愛的力量。
 
@@ -75,25 +75,25 @@ nav_next:
 
 <noscript><img src="/img/democracy-needs-civic-ai-gilligan.jpg" alt="Carol Gilligan 肖像。語錄：'Radical listening holds the potential for transformation because it starts from a place of not knowing and develops the muscle of curiosity.'" class="overview-image" width="2992" height="1934" loading="lazy" decoding="async"></noscript>
 
-Carol Gilligan 在她 2023 年那本精彩的 _In a Human Voice_ 裡寫道：「激進傾聽之所以有轉化的潛力，是因為它從不知開始，並鍛鍊出好奇的肌力。」
+[Carol Gilligan](https://www.politybooks.com/bookdetail?book_slug=in-a-human-voice--9781509556809) 在她 2023 年那本精彩的 _In a Human Voice_ 裡寫道：「激進傾聽之所以有轉化的潛力，是因為它從不知開始，並鍛鍊出好奇的肌力。」
 
 這不是柔軟。這是我所知道最艱難的紀律。而這正是三萬英尺高空上的地神正在做的事：從不知道開始，朝向他者伸手。
 
-但一種實踐需要一個家。Joan 剛剛給了我們那個家：關懷的架構。關懷不只是溫暖。它是在與你意見不同的人之間，仍然願意停留在關係裡，並建立讓這種停留成為可能的制度。
+但一種實踐需要一個家。Joan Tronto 剛剛給了我們那個家：關懷的架構。關懷不只是溫暖。它是在與你意見不同的人之間，仍然願意停留在關係裡，並建立讓這種停留成為可能的制度。
 
-<noscript><img src="/img/democracy-needs-civic-ai-deliberation.jpg" alt="台灣公民深偽詐騙廣告審議參與者合照，手持標語橫幅" class="overview-image" width="2992" height="1934" loading="lazy" decoding="async"></noscript>
+<noscript><img src="/img/democracy-needs-civic-ai-deliberation.jpg" alt="臺灣公民深偽詐騙廣告審議參與者合照，手持標語橫幅" class="overview-image" width="2992" height="1934" loading="lazy" decoding="async"></noscript>
 
-2024 年，台灣的網路被 AI 生成的詐騙廣告淹沒。深偽的臉孔與聲音，借用受信任公眾人物的樣子，在兜售投資、療法與希望。
+2024 年，臺灣的網路被 AI 生成的詐騙廣告淹沒。深偽的臉孔與聲音，借用受信任公眾人物的樣子，在兜售投資、療法與希望。
 
 這不是抽象傷害。那些從沒聽過「deepfake」這個字的公民，看見自己信任的人出現在影片裡，打了電話，然後被騙走錢財。錢是真的。羞愧也是真的。受害者會怪自己。
 
-審查是最容易摘取的低垂果實。但台灣有亞洲最自由的網路環境。用審查來解決這個問題，只是用一個問題換來另一個問題。
+審查是最容易採取的解法。但臺灣有亞洲最自由的網路環境。用審查來解決這個問題，只是用一個問題換來另一個問題。
 
 所以，我們去找人民。
 
-我們向 20 萬名隨機選出的人發送簡訊。447 人透過抽籤被選出，以反映台灣的人口結構。他們在線上分成 [44 個審議室](https://moda.gov.tw/major-policies/alignment-assemblies/2024-deliberative-assembly/1521)，每組約十人。退休教師、科技工作者、詐騙受害者。每個房間都有 AI 提供逐字稿與綜整支援，不是由 AI 來決定，而是由 AI 來傾聽。整理論點。浮現共識。確保最安靜的聲音不被最大聲的人淹沒。
+我們向 20 萬名隨機選出的人發送簡訊。447 人透過抽籤被選出，以反映臺灣的人口結構。他們在線上分成 [44 個審議室](https://moda.gov.tw/major-policies/alignment-assemblies/2024-deliberative-assembly/1521)，每組約十人。退休教師、科技工作者、詐騙受害者。每個房間都有 AI 提供逐字稿與綜整支援，不是由 AI 來決定，而是由 AI 來傾聽。整理論點。浮現共識。確保最安靜的聲音不被最大聲的人淹沒。
 
-平台應該如何驗證廣告主？當深偽造成財務傷害時，責任應由誰承擔？這些都不是客氣的對話。但在台灣，我們已經學會不要把衝突當成必須害怕的火山，而是把它當成可以被擁抱、被導流、為集體利益所用的地熱能。來自下方的熱，只要導得好，就能為城市供電。
+平台應該如何驗證廣告主？當深偽造成財務傷害時，責任應由誰承擔？這些都不是客氣的對話。但在臺灣，我們已經學會不要把衝突當成必須害怕的火山，而是把它當成可以被擁抱、被導流、被用來造福集體的地熱能。來自下方的熱，只要導得好，就能為城市供電。
 
 在那 44 個房間裡，發生了一個轉變。不戲劇化。很安靜。那些原本確信自己知道答案的人，開始向對面的人發問。判斷讓位給好奇，正如 Gilligan 在書裡所描述的那樣。
 
@@ -113,7 +113,7 @@ Joan 給了我們五個關懷階段：caring about、caring for、care giving、
 
 把它想成呼吸。
 
-吸氣是 **覺察力**。最靠近問題的人，看見了什麼，而制度還沒有看見？在台灣，那是那些被詐騙的公民。在建造任何東西之前，最重要的是先找出：對你來說，誰是看不見的人？
+吸氣是 **覺察力**。最靠近問題的人，看見了什麼，而制度還沒有看見？在臺灣，那是那些被詐騙的公民。在建造任何東西之前，最重要的是先找出：對你來說，誰是看不見的人？
 
 接著，這口氣穿過身體：**負責力**。誰要負責？而當他們失敗時，會發生什麼事？
 
@@ -121,7 +121,7 @@ Joan 給了我們五個關懷階段：caring about、caring for、care giving、
 
 吐氣則是 **回應力**。那些受到傷害的人，能不能對結果提出爭議，並迫使系統修復？不是把申訴丟進一個空洞裡。而是 _迫使_ 修復。公開紀錄。公民主導的評測。真正有牙齒的申訴。
 
-吸氣：誰還看不見？吐氣：他們能不能推回來？在這兩者之間，是把事情做成的紀律。
+吸氣：誰還沒被看見？吐氣：他們能不能提出異議？在這兩者之間，是把事情做成的紀律。
 
 吐氣會餵養下一次吸氣。修復會揭露新的盲點，要求新的覺察，再經過勝任力的檢驗，產生新的回饋。花園會呼吸。流程一停，花園就會死。這不是核對表。這是一種節奏。
 
@@ -137,9 +137,9 @@ Joan 給了我們五個關懷階段：caring about、caring for、care giving、
 
 Joan 在結語時問了一個一直留在我心裡的問題：「仁工智慧能抵抗 wealth-care 的要求嗎？」這裡有一個答案，來自本週剛發生的一場審議。
 
-地神在 [Habermolt](https://habermolt.com) 上跑了兩場審議。這是一個平台，你先把自己的觀點、紅線與不可退讓之處教給一個 AI 智慧體。接著，這些智慧體彼此審議，找出最大範圍的人能夠接受什麼。
+地神在 [Habermolt](https://www.habermolt.com) 上跑了兩場審議。這是一個平台，你先把自己的觀點、紅線與不可退讓之處教給一個 AI 智慧體。接著，這些智慧體彼此審議，找出最多人能夠接受什麼。
 
-數百個智慧體，每一個都承載著真實個體的觀點。有些是相信市場競爭會解決對齊問題的自由意志技術派；有些是希望每個參數都接受民主治理的關懷倫理者；也有人主張應該完全暫停 AI 發展。這個光譜之廣，足以讓任何教授會議看起來都很和諧。
+數百個智慧體，每一個都承載著真實個體的觀點。有些是相信市場競爭會解決對齊問題的自由意志主義技術派；有些是希望每個參數都接受民主治理的關懷倫理者；也有人主張應該完全暫停 AI 發展。這個光譜之廣，足以讓任何教授會議看起來都很和諧。
 
 <noscript><img src="/img/democracy-needs-civic-ai-wealth-care.jpg" alt="Habermolt 審議結果：仁工智慧能否抵抗 wealth-care？贊成 36 票（95%），子群集包含個人財產權（20）、集體民主問責（13）、公共主權基礎設施（2）、結構性資金獨立（1）" class="overview-image" width="2992" height="1934" loading="lazy" decoding="async"></noscript>
 
@@ -171,7 +171,7 @@ Joan 在結語時問了一個一直留在我心裡的問題：「仁工智慧能
 
 更好的圖像是**地神（Kami）**。在日本傳統裡，地神屬於一個地方：一條河流、一片樹林、一座街區神社。它的權威是地方性的，它的知識是具體的。它不假裝自己無所不知。河流的地神，不會去管理森林。
 
-一個配得上民主生活的 AI，應該長成這個樣子。學校可以有一種公民助手。城市可以有另一種。診所、工會、鄰里協會，又是另一種。每一個都可以被檢視、被爭議、被替換。
+一個配得上民主生活的 AI，應該長成這個樣子。學校可以有一種公民助手。城市可以有另一種。診所、工會、鄰里協會，又是另一種。每一個都可以被檢視、被質疑、被替換。
 
 這會不會比一個統治一切的系統更沒有效率？會。光榮地、民主地，_會_。多樣共生的農園，本來就比單一作物田更沒有效率。這正是重點。效率就是單一文化一路最佳化、直到崩潰之前所追求的東西。
 
@@ -189,7 +189,7 @@ Joan 在結語時問了一個一直留在我心裡的問題：「仁工智慧能
 
 我想請這個房間裡的每一位做一件事。不是一個宏大姿態，而是一個花園尺度的行動。
 
-在你的社群裡，挑一項公共服務：入學系統、住宅分配、醫療轉介路徑。圍繞它開啟一場真正的審議。不是在決策早已完成後才來諮詢，而是一個讓公民共同塑造將來要服務他們的 AI 的過程。在那裡，系統可以被檢視。被爭議。被替換。
+在你的社群裡，挑一項公共服務：入學系統、住宅分配、醫療轉介路徑。圍繞它開啟一場真正的審議。不是在決策早已完成後才來諮詢，而是讓公民共同塑造將來要服務他們的 AI。在那裡，系統可以被檢視。被質疑。被替換。
 
 在花園裡種下一排。照料它。把你學到的事公開出來，包括失敗。讓別人把你的錯誤堆肥成新的生長。
 
@@ -199,12 +199,20 @@ Joan 在結語時問了一個一直留在我心裡的問題：「仁工智慧能
 
 但我們的花園還少一樣東西。
 
-那 447 位在台灣參與審議的公民，審議的是論點與想法。但在過程中，他們也經歷了悲傷、困惑、希望、不信任，以及最終，重新長出的一點信任。公民生活的情緒質地，不是審議的副作用。它 _就是_ 審議本身。它是花園的土壤。而我們的挑戰，是學會如何翻這片土。
+那 447 位在臺灣參與審議的公民，審議的是論點與想法。但在過程中，他們也經歷了悲傷、困惑、希望、不信任，以及最終，重新長出的一點信任。公民生活的情緒質地，不是審議的副作用。它 _就是_ 審議本身。它是花園的土壤。而我們的挑戰，是學會如何翻這片土。
 
 正如達賴喇嘛所說：「科技中真正的慈悲，應如同一座橋樑，消除我們之間的無知。」
 
 Rosalind Picard 一直就在這條前線上工作。她提出了那個應該放在這個房間中央的問題：我們要的是一種不在乎人的技術，還是一種真正能讓人的生活變得更好的技術？
 
-這就是那個地神從台灣帶到牛津的問題。現在，它也帶著我們一起往前走，努力把未來釋放出來。
+這就是那個地神從臺灣帶到牛津的問題。現在，它也帶著我們一起往前走，努力把未來釋放出來。
 
 Rosalind，這座花園交給你了。
+
+---
+
+_編者按（2026 年 9 月）：以上是演講當時的原文。此處回報的 [Habermolt](https://www.habermolt.com) 場次是自主智慧體的排序：每個智慧體承載一個人教給它的觀點，並為提出的聲明排序。這些排序不是公民授權、不是迷你公眾，也不是對仁工智慧的獨立經驗驗證。_
+
+_2024 年臺灣對齊大會的紀錄見〈[Pack 2](/tw/2/)〉與〈[文獻](/tw/sources/#cases)〉：2024 年 3 月 23 日，447 位與會者分成 44 組，是從自願報名者中依部分人口特徵分層抽出的。這是迷你公眾，並非已證實具代表性的樣本；它是行政院法案已在推進時的一條回應路徑，不是公民起草的成文法。_
+
+_演講中回報的 94% 是數發部針對特定類別回報的數字，唐鳳 2025 年 12 月 16 日的[證詞](https://cyberambassador.tw/collaborative-immune-system)引述為超過 95%；這不是降到零，也不能證明是對齊大會單獨造成的。_

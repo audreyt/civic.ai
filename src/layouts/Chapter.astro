@@ -1,6 +1,6 @@
 ---
-import type { ActionLink, PageRecord } from "../lib/pages";
-import { lang2, site } from "../lib/site";
+import { getPageByUrl, visibleHtml, type ActionLink, type PageRecord } from "../lib/pages";
+import { lang2, packs, site } from "../lib/site";
 import { normalizeSearchLang } from "../lib/search";
 import ClientScripts from "../components/ClientScripts.astro";
 import ComicsJaOverlay from "../components/ComicsJaOverlay.astro";
@@ -9,6 +9,9 @@ import PageHead from "../components/PageHead.astro";
 import PartnerColophon from "../components/PartnerColophon.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import SearchOverlay from "../components/SearchOverlay.astro";
+import Trace from "../components/Trace.astro";
+import WalkingPlayer from "../components/WalkingPlayer.astro";
+import { record, recordSources } from "../lib/record";
 
 interface Props { page: PageRecord; }
 const { page } = Astro.props;
@@ -20,22 +23,33 @@ const pagefindIndexed =
     page.data.search_exclude !== true &&
     normalizeSearchLang(page.data.lang) === "en";
 const chapterOrder = site.chapters;
+const packKey = page.url.replace(/^\/tw\//, "").replace(/^\//, "").replace(/\/$/, "");
+const packNumber = /^[1-6]$/.test(packKey) ? packKey : undefined;
 const key = page.url.replace(/^\/tw\//, "").replace(/^\//, "").replace(/\/$/, "");
 const index = chapterOrder.indexOf(key);
-function linkFor(slug: string, direction: "prev" | "next"): ActionLink {
-    const prefix = zh ? "/tw" : "";
-    const label = zh ? (direction === "prev" ? "上一章" : "下一章") : (direction === "prev" ? "Previous" : "Next");
-    return { url: `${prefix}/${slug}/`, text: label };
+// Cycle nav names where it leads ("Pack 2: Responsibility"), not just "Next" (DESIGN.md §9).
+type NavLink = ActionLink;
+function linkFor(slug: string): NavLink {
+    const url = `${zh ? "/tw" : ""}/${slug}/`;
+    return { url, text: (getPageByUrl(url).data.title ?? slug).split(/ — |——/)[0] };
 }
 const previousSlug = index > 0 ? chapterOrder[index - 1] : undefined;
 const nextSlug = index >= 0 && index < chapterOrder.length - 1 ? chapterOrder[index + 1] : undefined;
 const hasExplicitNav = Boolean(page.data.nav_prev || page.data.nav_next);
-const prev = page.data.nav_prev || (!hasExplicitNav && previousSlug ? linkFor(previousSlug, "prev") : !hasExplicitNav ? { url: zh ? "/tw/" : "/", text: zh ? "首頁" : "Home" } : undefined);
-const next = page.data.nav_next || (!hasExplicitNav && nextSlug ? linkFor(nextSlug, "next") : undefined);
+const prev = page.data.nav_prev || (!hasExplicitNav && previousSlug ? linkFor(previousSlug) : !hasExplicitNav ? { url: zh ? "/tw/" : "/", text: zh ? "首頁" : "Home" } : undefined);
+const next: NavLink | undefined = page.data.nav_next || (!hasExplicitNav && nextSlug ? linkFor(nextSlug) : undefined);
+// Pack 4 closes the care cycle: besides Pack 5 it links back to Pack 1.
+const first = packs[0];
+const loop: NavLink | undefined = !hasExplicitNav && packNumber === "4"
+    ? {
+          url: `${zh ? "/tw" : ""}/1/`,
+          text: zh ? `回到${first.ordinal_zh}：${first.name_zh}` : `Back to Pack 1: ${first.name_en}`,
+      }
+    : undefined;
 const authors = page.data.author
     ? [{ "@type": "Person", name: page.data.author }]
     : [
-          { "@type": "Person", name: "Audrey Tang", url: "https://audreyt.org", sameAs: ["https://en.wikipedia.org/wiki/Audrey_Tang", "https://www.wikidata.org/wiki/Q181916"] },
+          { "@type": "Person", name: "Audrey Tang", url: "https://audreyt.org", sameAs: ["https://en.wikipedia.org/wiki/Audrey_Tang", "https://www.wikidata.org/wiki/Q15025"] },
           { "@type": "Person", name: "Caroline Green", url: "https://www.oxford-aiethics.ox.ac.uk/caroline-emmer-de-albuquerque-green" },
       ];
 const articleLd: Record<string, unknown> = {
@@ -45,18 +59,20 @@ const articleLd: Record<string, unknown> = {
     description: page.data.meta_description || page.data.summary || page.data.description,
     url: `${site.url}${page.url}`,
     mainEntityOfPage: `${site.url}${page.url}`,
-    inLanguage: zh ? "zh-Hant" : "en-GB",
+    inLanguage: page.data.lang === "ja" ? "ja" : zh ? "zh-Hant" : "en-GB",
     author: authors,
     publisher: { "@type": "Organization", name: "Oxford Institute for Ethics in AI", url: "https://www.oxford-aiethics.ox.ac.uk/", logo: { "@type": "ImageObject", url: `${site.url}/img/oxford-logo.svg` } },
     isPartOf: { "@type": "WebSite", name: "Civic AI", url: site.url },
 };
 if (page.data.date) articleLd.datePublished = page.data.date;
-if (page.data.og_image || page.data.thumbnail) articleLd.image = `${site.url}${page.data.og_image || page.data.thumbnail}`;
+articleLd.dateModified = record.summary(recordSources(page))?.amendedDate;
+const ldImage = page.data.og_image || page.data.thumbnail;
+if (ldImage) articleLd.image = ldImage.includes("://") ? ldImage : `${site.url}${ldImage}`;
 ---
 <!doctype html>
 <html lang={page.data.lang || "en"}>
-  <head><PageHead page={page} ogType="article" preloadFont="/fonts/cormorant-normal-latin.woff2" /></head>
-  <body class={page.data.page_class}>
+  <head><PageHead page={page} ogType="article" /></head>
+  <body class={page.data.page_class} data-pack={packNumber}>
     <a class="skip-link" href="#main">{zh ? "跳至內容" : "Skip to content"}</a>
     <SiteHeader page={page} />
     <SearchOverlay page={page} />
@@ -69,12 +85,20 @@ if (page.data.og_image || page.data.thumbnail) articleLd.image = `${site.url}${p
               "data-pagefind-meta": `section:${page.data.title || page.url}`,
           }
         : {})}
-    ><InShort page={page} />{page.data.audio && <div class="audio-section"><audio controls preload="metadata" title="Narrated in Audrey's own AI voice"><source src={page.data.audio} type="audio/mpeg" /></audio></div>}<Fragment set:html={page.html} /></main>
+    ><InShort page={page} /><WalkingPlayer page={page} /><Fragment set:html={visibleHtml(page)} /></main>
     <section class="next-action"><div class="next-action-content">
       {prev && <a href={prev.url} class="next-action-button">{!hasExplicitNav && <span class="button-arrow">←</span>}<span class="button-text">{prev.text}</span></a>}
-      {next && <a href={next.url} class="next-action-button"><span class="button-text">{next.text}</span>{!hasExplicitNav && <span class="button-arrow">→</span>}</a>}
+      {loop ? (
+        <div class="chapter-nav__onward">
+          {next && <a href={next.url} class="next-action-button"><span class="button-text">{next.text}</span><span class="button-arrow">→</span></a>}
+          <a href={loop.url} class="next-action-button chapter-nav__loop"><span class="button-arrow" aria-hidden="true">↺</span><span class="button-text">{loop.text}</span></a>
+        </div>
+      ) : (
+        next && <a href={next.url} class="next-action-button"><span class="button-text">{next.text}</span>{!hasExplicitNav && <span class="button-arrow">→</span>}</a>
+      )}
     </div></section>
-    <PartnerColophon lang={page.data.lang} />
+    <Trace page={page} />
+    <PartnerColophon lang={page.data.lang} url={page.url} />
     <script is:inline type="application/ld+json" set:html={JSON.stringify(articleLd)}></script>
     <ClientScripts page={page} />
     {isJaComics && <ComicsJaOverlay />}

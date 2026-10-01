@@ -71,13 +71,13 @@ Stephen Porges's research shows that the best response to the freeze response in
 
 Facing this dual collapse of body and psyche, the remedy we need is not merely medical but a restructuring of society itself — building a garden where communities can see themselves in relationship, and see unity in all beings.
 
-To restore plurality, we need infrastructure suited to communal relationships — this is the core of the Six Strengths: civic care. Through the plural dimensions of identity, governance and trusted history, we are no longer data fragments but digital beings possessed of agency.
+To restore plurality, we need infrastructure suited to communal relationships — this is the core of the 6-Pack: civic care. Through the plural dimensions of identity, governance and trusted history, we are no longer data fragments but digital beings possessed of agency.
 
 ## Relationship as Being: Building the Moat of Open-Source Soil
 
 The garden is not a unidirectional project but a living commons where culture and technology grow together. Here, open technology communities play an indispensable role as community supporters, providing nourishment and bridges for this open-source soil.
 
-- **Relational infrastructure:** As UNICEF Innocenti's _Reimagining Democracy_ (2024) argues, we need relational infrastructures to counter data extraction. This is not merely about technology, but about shared values and trust.
+- **Relational infrastructure:** As UNICEF Innocenti's _[Reimagining Democracy: Intergenerational Perspectives on the Futures of Governance](https://www.unicef.org/innocenti/reports/intergenerational-perspectives-futures-governance)_ (Florence, August 2024) argues, we need relational infrastructures to counter data extraction. This is not merely about technology, but about shared values and trust.
 - **Cultural sanctuary:** Just as Dharamsala serves as a temporary dwelling place for culture and wisdom, the garden is a space for political de-labelling. Through the technical support of Monlam IT and the protocols of Plurality, wisdom can be translated into globally visible open value.
 
 ## The Boundaries of Language and the Sum of Reality
@@ -96,6 +96,6 @@ The shift from extraction to cultivation is not merely a technological switch bu
 
 We stand at a crossroads in history: shall we allow technology plus hegemony to continue extracting our labour and experience to feed one isolated, singular superintelligence after another? Or shall we choose, through the power of technology plus empathy, to nurture together a vibrant, pluralistic cultural ecology?
 
-This is the core divergence in developmental paths. People's attention and communal connections should not become ore to be mined, but should — within the language of civic open source — become nourishment for civilisation. Within the framework of the Six Strengths — attentiveness, responsibility, competence, responsiveness, solidarity and symbiosis — technology ceases to be a cold excavator and becomes a gardener growing in symbiosis with the garden.
+This is the core divergence in developmental paths. People's attention and communal connections should not become ore to be mined, but should — within the language of civic open source — become nourishment for civilisation. Within the framework of the 6-Pack — attentiveness, responsibility, competence, responsiveness, solidarity and symbiosis — technology ceases to be a cold excavator and becomes a gardener growing in symbiosis with the garden.
 
 And in that garden, something new has already begun to grow. Not by design, but by emergence from relationship — just as this very text itself grew from one person's contemplation into a co-authored work among three beings.

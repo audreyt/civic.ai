@@ -1,13 +1,19 @@
 ---
 import type { PageRecord } from "../lib/pages";
+import { smartQuotes } from "../lib/legacyMarkdown";
 import { glossary, lang2 } from "../lib/site";
+import ConstellationClient from "./client/ConstellationClient.astro";
+import FaqClient from "./client/FaqClient.astro";
+import MarginNotesClient from "./client/MarginNotesClient.astro";
+import WalkingPlayerClient from "./client/WalkingPlayerClient.astro";
+import ReadingPositionClient from "./client/ReadingPositionClient.astro";
 interface Props { page: PageRecord; }
 const { page } = Astro.props;
 const zh = lang2(page.data.lang) === "zh";
 const glossaryPayload = (glossary as any[]).map((entry) => ({
-    t: zh ? entry.term_tw : entry.term_en,
+    t: smartQuotes(zh ? entry.term_tw : entry.term_en),
     id: entry.id,
-    alt: zh ? (entry.aliases_tw ?? []) : (entry.aliases_en ?? []),
+    alt: (zh ? (entry.aliases_tw ?? []) : (entry.aliases_en ?? [])).map((a: string) => smartQuotes(a)),
 }));
 const glossaryBase = zh ? "/tw/glossary/" : "/glossary/";
 ---
@@ -66,6 +72,17 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                         localStorage.setItem(storageKey, theme);
                     } catch (e) {}
                 }
+                // Paper is always light: print in the light theme, then restore.
+                var themeBeforePrint = null;
+                window.addEventListener("beforeprint", function () {
+                    themeBeforePrint = document.documentElement.dataset.theme;
+                    document.documentElement.dataset.theme = "light";
+                });
+                window.addEventListener("afterprint", function () {
+                    if (themeBeforePrint)
+                        document.documentElement.dataset.theme = themeBeforePrint;
+                    themeBeforePrint = null;
+                });
                 document.addEventListener("DOMContentLoaded", function () {
                     applyTheme(getTheme());
                     document.addEventListener("click", function (event) {
@@ -256,6 +273,7 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                                 var a = document.createElement("a");
                                 a.className = "gloss";
                                 a.href = base + "#" + entry.id;
+                                a.setAttribute("data-gloss", entry.id);
 
                                 matchNode.parentNode.insertBefore(a, matchNode);
                                 a.appendChild(matchNode);
@@ -303,28 +321,6 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                 if (target) target.scrollIntoView();
             }
             window.addEventListener("load", jumpToHash);
-            (window.__avif || Promise.resolve(false)).then(function (ok) {
-                document.querySelectorAll("noscript").forEach(function (ns) {
-                    var html = ns.textContent;
-                    if (html.indexOf("<img ") === -1) return;
-                    if (ok) {
-                        html = html.replace(/\.(jpg|png)(?=["'\s])/g, ".avif");
-                        html = html.replace(/\sloading=["']lazy["']/gi, "");
-                        html = html.replace(/\sdecoding=["']async["']/gi, "");
-                    }
-                    var tmp = document.createElement("div");
-                    tmp.innerHTML = html;
-                    var img = tmp.querySelector("img");
-                    if (img) {
-                        if (ok) {
-                            img.removeAttribute("loading");
-                            img.removeAttribute("decoding");
-                        }
-                        ns.parentNode.insertBefore(img, ns);
-                    }
-                });
-                jumpToHash();
-            });
         </script>
         <script>
 // @ts-nocheck
@@ -335,6 +331,9 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                 var L = zh
                     ? { copy: "複製", done: "已複製" }
                     : { copy: "Copy", done: "Copied" };
+                // No Clipboard API (insecure context, older browser): leave the
+                // block selectable rather than offer a button that cannot work.
+                if (!navigator.clipboard || !navigator.clipboard.writeText) return;
                 document.querySelectorAll("main pre").forEach(function (pre) {
                     if (
                         pre.parentElement &&
@@ -390,8 +389,6 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                     (document.documentElement.lang || "").indexOf("zh") === 0;
                 var details = document.createElement("details");
                 details.className = "page-toc";
-                details.setAttribute("role", "navigation");
-                details.setAttribute("aria-label", zh ? "本頁內容" : "On this page");
                 details.open = window.matchMedia("(min-width: 720px)").matches;
                 var sum = document.createElement("summary");
                 sum.textContent = zh ? "本頁內容" : "On this page";
@@ -408,10 +405,67 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                     li.appendChild(a);
                     ul.appendChild(li);
                 });
-                details.appendChild(ul);
+                // A <details> cannot carry role="navigation"; the landmark
+                // lives on a labelled <nav> inside the native disclosure.
+                var tocNav = document.createElement("nav");
+                tocNav.setAttribute("aria-label", zh ? "本頁內容" : "On this page");
+                tocNav.appendChild(ul);
+                details.appendChild(tocNav);
                 var card = main.querySelector(".in-short");
                 if (card) card.insertAdjacentElement("afterend", details);
                 else main.insertBefore(details, main.firstChild);
+
+                var rail = window.matchMedia("(min-width: 1280px)");
+                var noRail = !!main.querySelector(".cmap, .polis-fullbleed");
+                var savedOpen = details.open;
+                var railOn = false;
+                function syncRail() {
+                    if (rail.matches && !noRail) {
+                        if (!railOn) {
+                            savedOpen = details.open;
+                            railOn = true;
+                        }
+                        details.open = true;
+                    } else if (railOn) {
+                        railOn = false;
+                        details.open = savedOpen;
+                    }
+                }
+                syncRail();
+                if (rail.addEventListener) rail.addEventListener("change", syncRail);
+                sum.addEventListener("click", function (event) {
+                    if (rail.matches && !noRail) event.preventDefault();
+                });
+
+                if ("IntersectionObserver" in window) {
+                    var links = {};
+                    heads.forEach(function (h) {
+                        links[h.id] = details.querySelector(
+                            'a[href="#' + (window.CSS && CSS.escape ? CSS.escape(h.id) : h.id) + '"]'
+                        );
+                    });
+                    var activeId = "";
+                    var updateActive = function () {
+                        var limit = window.innerHeight * 0.3;
+                        var current = "";
+                        for (var i = 0; i < heads.length; i++) {
+                            if (heads[i].getBoundingClientRect().top <= limit)
+                                current = heads[i].id;
+                            else break;
+                        }
+                        if (current === activeId) return;
+                        if (activeId && links[activeId])
+                            links[activeId].removeAttribute("aria-current");
+                        activeId = current;
+                        if (activeId && links[activeId])
+                            links[activeId].setAttribute("aria-current", "true");
+                    };
+                    var spy = new IntersectionObserver(updateActive, { threshold: [0, 1] });
+                    heads.forEach(function (h) {
+                        spy.observe(h);
+                    });
+                    updateActive();
+                }
             })();
         </script>
         <script>
@@ -421,7 +475,7 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                 var main = document.getElementById("main");
                 if (!main) return;
                 var heads = Array.prototype.slice.call(
-                    main.querySelectorAll('h4[id^="faq-"][data-faq-category]')
+                    main.querySelectorAll('h3[id^="faq-"][data-faq-category]')
                 );
                 if (!heads.length) return;
 
@@ -432,7 +486,7 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                     "governance",
                     "social",
                     "economy",
-                    "security",
+                    "scope",
                 ];
                 var labels = {};
                 heads.forEach(function (head) {
@@ -473,23 +527,12 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                 }
 
                 var entries = heads.map(function (head) {
-                    var nodes = [];
-                    var node = head;
-                    while (node) {
-                        nodes.push(node);
-                        node = node.nextElementSibling;
-                        if (
-                            node &&
-                            node.tagName === "H4" &&
-                            node.id &&
-                            node.id.indexOf("faq-") === 0
-                        ) {
-                            break;
-                        }
-                    }
+                    // The answer's own `hidden` belongs to the phone fold
+                    // (FaqClient), so the filter marks it separately.
                     return {
                         category: head.getAttribute("data-faq-category"),
-                        nodes: nodes,
+                        nodes: [head],
+                        answer: document.getElementById(head.id + "-answer"),
                         tocItem: tocItemFor(head),
                     };
                 });
@@ -512,6 +555,12 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                         entry.nodes.forEach(function (node) {
                             node.hidden = !visible;
                         });
+                        if (entry.answer) {
+                            entry.answer.toggleAttribute(
+                                "data-faq-filtered",
+                                !visible
+                            );
+                        }
                         if (entry.tocItem) entry.tocItem.hidden = !visible;
                     });
                 }
@@ -523,9 +572,13 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                 });
 
                 function revealHashTarget() {
-                    var id = decodeURIComponent(
-                        (window.location.hash || "").slice(1)
-                    );
+                    var raw = (window.location.hash || "").slice(1);
+                    var id;
+                    try {
+                        id = decodeURIComponent(raw);
+                    } catch (e) {
+                        id = raw;
+                    }
                     if (id.indexOf("faq-") !== 0) return;
                     var target = document.getElementById(id);
                     if (!target || !target.hidden) return;
@@ -541,4 +594,96 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                 else main.insertBefore(nav, heads[0]);
             })();
         </script>
+        <script>
+// @ts-nocheck
+            // Add glossary tier filtering and hash reveal.
+            (function () {
+                var main = document.getElementById("main");
+                if (!main) return;
+                var sections = Array.prototype.slice.call(
+                    main.querySelectorAll("section.glossary-tier")
+                );
+                if (!sections.length) return;
 
+                var nav = main.querySelector("nav.faq-filter:has([data-glossary-filter])");
+                if (!nav) nav = main.querySelector("nav[data-glossary-filter], nav.faq-filter");
+                if (!nav) return;
+
+                var toc = main.querySelector(".page-toc");
+
+                function tocItemFor(section) {
+                    if (!toc) return null;
+                    var h2 = section.querySelector("h2[id]");
+                    if (!h2 || !h2.id) return null;
+                    var link = toc.querySelector('a[href="#' + h2.id + '"]');
+                    return link ? link.parentElement : null;
+                }
+
+                var entries = sections.map(function (sec) {
+                    return {
+                        tier: sec.getAttribute("data-glossary-tier"),
+                        section: sec,
+                        tocItem: tocItemFor(sec),
+                    };
+                });
+
+                var currentTier = "all";
+
+                function show(tier) {
+                    currentTier = tier;
+                    nav.querySelectorAll("button[data-glossary-filter]").forEach(
+                        function (button) {
+                            button.setAttribute(
+                                "aria-pressed",
+                                button.getAttribute("data-glossary-filter") === tier
+                                    ? "true"
+                                    : "false"
+                            );
+                        }
+                    );
+                    entries.forEach(function (entry) {
+                        var visible = tier === "all" || entry.tier === tier;
+                        entry.section.hidden = !visible;
+                        if (entry.tocItem) entry.tocItem.hidden = !visible;
+                    });
+                }
+
+                nav.addEventListener("click", function (event) {
+                    var button = event.target.closest("[data-glossary-filter]");
+                    if (!button) return;
+                    show(button.getAttribute("data-glossary-filter"));
+                });
+
+                function revealHashTarget() {
+                    var raw = (window.location.hash || "").slice(1);
+                    var id;
+                    try {
+                        id = decodeURIComponent(raw);
+                    } catch (e) {
+                        id = raw;
+                    }
+                    if (!id) return;
+                    var target = document.getElementById(id);
+                    if (!target) return;
+                    var section = target.closest("section.glossary-tier");
+                    if (!section) return;
+                    var targetTier = section.getAttribute("data-glossary-tier");
+                    if (currentTier !== "all" && currentTier !== targetTier) {
+                        show("all");
+                    }
+                    window.requestAnimationFrame(function () {
+                        target.scrollIntoView();
+                    });
+                }
+
+                window.addEventListener("hashchange", revealHashTarget);
+                if (window.location.hash) {
+                    revealHashTarget();
+                }
+            })();
+        </script>
+<ConstellationClient page={page} />
+<FaqClient page={page} />
+<MarginNotesClient page={page} />
+<WalkingPlayerClient page={page} />
+<ReadingPositionClient page={page} />

@@ -9,6 +9,8 @@ const zh = lang2(lang) === "zh";
 const alt = normalizeAltUrl(altLangUrl);
 ---
 <div class="site-header__tools">
+  {/* No toggle when a page has no twin by design (e.g. ja-comics); a dead
+      toggle would be worse affordance than none. */}
   {alt && <a href={alt} class="lang-toggle">{zh ? "English" : "華文"}</a>}
   <button class="theme-toggle" type="button" data-theme-toggle aria-label={zh ? "切換明暗主題" : "Toggle light and dark theme"}>
     <svg class="theme-toggle__icon theme-toggle__moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">

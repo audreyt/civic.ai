@@ -1,0 +1,109 @@
+---
+// ReadingPositionClient (DESIGN.md §21): the masthead language link opens the
+// twin page at the same place in the text. Without JS it is a plain link.
+---
+<script is:inline>
+(function () {
+  try {
+    if (window.__readingPositionBound) return;
+    window.__readingPositionBound = true;
+    var KEY = "civic-ai-reading-position";
+    var LINE = 80;
+    var MAX_AGE = 5 * 60 * 1000;
+
+    function main() { return document.getElementById("main"); }
+    function heads() {
+      var m = main();
+      return m ? Array.prototype.slice.call(m.querySelectorAll("h2, h3")) : [];
+    }
+    function paras() {
+      var m = main();
+      return m ? Array.prototype.slice.call(m.querySelectorAll("[data-record-paragraph]")) : [];
+    }
+    function absTop(el) { return el.getBoundingClientRect().top + window.pageYOffset; }
+    function lastAbove(list, line) {
+      var idx = -1;
+      for (var i = 0; i < list.length; i++) {
+        if (absTop(list[i]) <= line) idx = i; else break;
+      }
+      return idx;
+    }
+    function maxScroll() {
+      return Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+    }
+    function norm(url) {
+      try {
+        var u = new URL(url, location.href);
+        return u.origin + u.pathname.replace(/index\.html$/, "");
+      } catch (e) { return ""; }
+    }
+
+    function save(link) {
+      var hs = heads(), ps = paras();
+      var line = window.pageYOffset + LINE;
+      var h = lastAbove(hs, line);
+      var offset = 0;
+      if (h >= 0) {
+        var top = absTop(hs[h]);
+        var end = h + 1 < hs.length ? absTop(hs[h + 1]) : (main().getBoundingClientRect().bottom + window.pageYOffset);
+        offset = end > top ? Math.max(0, Math.min(1, (line - top) / (end - top))) : 0;
+      }
+      var entry = {
+        target: link.href,
+        at: Date.now(),
+        heading: h,
+        offset: offset,
+        para: lastAbove(ps, line),
+        frac: Math.max(0, Math.min(1, window.pageYOffset / maxScroll())),
+        headings: hs.length,
+        paras: ps.length
+      };
+      sessionStorage.setItem(KEY, JSON.stringify(entry));
+    }
+
+    document.addEventListener("click", function (e) {
+      try {
+        if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.defaultPrevented) return;
+        var node = e.target;
+        var link = node && node.closest ? node.closest("a.lang-toggle") : null;
+        if (link) save(link);
+      } catch (err) {}
+    });
+
+    function restore() {
+      try {
+        var raw = sessionStorage.getItem(KEY);
+        if (!raw) return;
+        var entry = JSON.parse(raw);
+        if (location.hash) return;
+        if (norm(entry.target) !== norm(location.href)) return;
+        sessionStorage.removeItem(KEY);
+        if (!(Date.now() - entry.at < MAX_AGE)) return;
+        var hs = heads(), ps = paras();
+        var y = null;
+        if (entry.heading >= 0 && hs.length === entry.headings && entry.heading < hs.length) {
+          var top = absTop(hs[entry.heading]);
+          var end = entry.heading + 1 < hs.length ? absTop(hs[entry.heading + 1]) : (main().getBoundingClientRect().bottom + window.pageYOffset);
+          y = top + entry.offset * Math.max(0, end - top) - LINE;
+        } else if (entry.para >= 0 && ps.length === entry.paras && entry.para < ps.length) {
+          y = absTop(ps[entry.para]) - LINE;
+        } else {
+          y = entry.frac * maxScroll();
+        }
+        var root = document.documentElement;
+        var prev = root.style.scrollBehavior;
+        root.style.scrollBehavior = "auto";
+        window.scrollTo({ top: Math.max(0, y), left: 0, behavior: "auto" });
+        root.style.scrollBehavior = prev;
+      } catch (err) {}
+    }
+
+    function run() {
+      var fonts = document.fonts && document.fonts.ready;
+      if (fonts && fonts.then) fonts.then(restore, restore); else restore();
+    }
+    if (document.readyState === "complete") run();
+    else window.addEventListener("load", run);
+  } catch (err) {}
+})();
+</script>

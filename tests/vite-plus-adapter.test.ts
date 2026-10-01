@@ -1,5 +1,6 @@
 import { expect, test, vi } from "vite-plus/test";
 import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 import type { ConfigEnv, Plugin } from "vite";
 import type * as NodeChildProcess from "node:child_process";
 import viteConfig from "../vite.config";
@@ -171,8 +172,7 @@ test("runPagefind defaults to the project root when no directory is given", () =
         calls.push(cwd);
     });
 
-    expect(calls).toHaveLength(1);
-    expect(calls[0]).toMatch(/civic\.ai\/?$/);
+    expect(calls).toEqual([fileURLToPath(new URL("..", import.meta.url))]);
 });
 
 test("runPagefind's default executor runs the local pagefind bin directly, never ambient bunx", () => {
@@ -219,12 +219,20 @@ test("Astro build bridge's default post-build step minifies then indexes via loc
 
     expect(execFileSyncMock.mock.calls.map((call) => call[0])).toEqual([
         "bun",
+        "bun",
         join(process.cwd(), "node_modules", ".bin", "pagefind"),
+        "bun",
     ]);
     expect(execFileSyncMock.mock.calls[0]?.[1]).toEqual([
         "scripts/minify-html.mjs",
     ]);
-    expect(execFileSyncMock.mock.calls[1]?.[1]).toEqual(["--site", "dist"]);
+    expect(execFileSyncMock.mock.calls[1]?.[1]).toEqual([
+        "scripts/subset-zh-fonts.mjs",
+    ]);
+    expect(execFileSyncMock.mock.calls[2]?.[1]).toEqual(["--site", "dist"]);
+    expect(execFileSyncMock.mock.calls[3]?.[1]).toEqual([
+        "scripts/evaluate-record.mjs",
+    ]);
     expect(
         execFileSyncMock.mock.calls
             .flat(2)

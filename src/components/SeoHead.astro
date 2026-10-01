@@ -7,33 +7,51 @@ interface Props {
     ogType: "website" | "article";
     ogDesc: string;
     ogImg: string;
+    // Set only for the default 1200x630 share card, whose size is known.
+    ogImgAlt?: string | undefined;
     pageTitle: string;
 }
 
-const { page, ogType, ogDesc, ogImg, pageTitle } = Astro.props;
+const { page, ogType, ogDesc, ogImg, ogImgAlt, pageTitle } = Astro.props;
 const zh = lang2(page.data.lang) === "zh";
 const brand = zh ? site.title_zh || site.title : site.title;
 const fullTitle = pageTitle.includes(brand) ? pageTitle : `${pageTitle} — ${brand}`;
 const alt = normalizeAltUrl(page.data.alt_lang_url);
 const canonical = `${site.url}${page.url}`;
+const ja = page.data.lang === "ja";
+// The comics exist in three editions; the rest of the site pairs EN with 華文.
+const COMICS = { en: "/comics/", "zh-Hant": "/tw/comics/", ja: "/ja/comics/" };
+const comicsCluster = Object.values(COMICS).includes(page.url);
+const locale = ja ? "ja_JP" : zh ? "zh_TW" : "en_GB";
 ---
 <title>{fullTitle}</title>
 <meta name="description" content={ogDesc} />
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-<link rel="canonical" href={canonical} />
-{alt && <link rel="alternate" hreflang={zh ? "zh-Hant" : "en"} href={canonical} />}
-{alt && <link rel="alternate" hreflang={zh ? "en" : "zh-Hant"} href={`${site.url}${alt}`} />}
-{alt && <link rel="alternate" hreflang="x-default" href={zh ? `${site.url}${alt}` : canonical} />}
+<meta name="robots" content={page.data.noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
+{!page.data.noindex && <link rel="canonical" href={canonical} />}
+{comicsCluster ? <>
+  {Object.entries(COMICS).map(([hreflang, url]) => <link rel="alternate" hreflang={hreflang} href={`${site.url}${url}`} />)}
+  <link rel="alternate" hreflang="x-default" href={`${site.url}${COMICS.en}`} />
+</> : <>
+  {alt && <link rel="alternate" hreflang={zh ? "zh-Hant" : "en"} href={canonical} />}
+  {alt && <link rel="alternate" hreflang={zh ? "en" : "zh-Hant"} href={`${site.url}${alt}`} />}
+  {alt && <link rel="alternate" hreflang="x-default" href={zh ? `${site.url}${alt}` : canonical} />}
+</>}
 {site.google_site_verification && <meta name="google-site-verification" content={site.google_site_verification} />}
 <meta property="og:title" content={pageTitle} />
 <meta property="og:description" content={ogDesc} />
 <meta property="og:image" content={ogImg} />
+{ogImgAlt && <meta property="og:image:width" content="1200" />}
+{ogImgAlt && <meta property="og:image:height" content="630" />}
+{ogImgAlt && <meta property="og:image:alt" content={ogImgAlt} />}
 <meta property="og:url" content={canonical} />
 <meta property="og:type" content={ogType} />
 <meta property="og:site_name" content={brand} />
-<meta property="og:locale" content={zh ? "zh_TW" : "en_GB"} />
-{alt && <meta property="og:locale:alternate" content={zh ? "en_GB" : "zh_TW"} />}
+<meta property="og:locale" content={locale} />
+{comicsCluster
+  ? ["en_GB", "zh_TW", "ja_JP"].filter((l) => l !== locale).map((l) => <meta property="og:locale:alternate" content={l} />)
+  : alt && <meta property="og:locale:alternate" content={zh ? "en_GB" : "zh_TW"} />}
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={pageTitle} />
 <meta name="twitter:description" content={ogDesc} />
 <meta name="twitter:image" content={ogImg} />
+{ogImgAlt && <meta name="twitter:image:alt" content={ogImgAlt} />}

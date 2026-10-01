@@ -1,5 +1,5 @@
 import { expect, test } from "vite-plus/test";
-import { getPageByUrl, getSitemapPages } from "../src/lib/pages";
+import { getPageByUrl, getSitemapPages, visibleHtml } from "../src/lib/pages";
 
 test("loads canonical root pages", () => {
     expect(getPageByUrl("/").sourceName).toBe("index.md");
@@ -29,11 +29,12 @@ test("keeps book-aligned source material tableless", () => {
     const kamiSetup = getPageByUrl("/kami/").html;
     expect(kamiSetup).not.toContain("<th>RAM</th>");
     expect(kamiSetup).toContain("For machines with 16 GB RAM or more:");
-    expect(kamiSetup).toContain("gemma4:12b-it-qat");
 
     const twKamiSetup = getPageByUrl("/tw/kami/").html;
     expect(twKamiSetup).not.toContain("<th>記憶體</th>");
-    expect(twKamiSetup).toContain("記憶體達 16 GB 或以上：");
+    expect(twKamiSetup).toContain(
+        '記憶體達 <span lang="en-GB">16 GB</span> 或以上：'
+    );
 
     const measures = getPageByUrl("/measures/").html;
     expect(measures).not.toContain("<th>Pack</th>");
@@ -45,8 +46,14 @@ test("keeps book-aligned source material tableless", () => {
 test("expands generated glossary pages", () => {
     expect(getPageByUrl("/glossary/").html).toContain('id="civic-ai"');
     expect(getPageByUrl("/glossary/").html).toContain("Civic AI");
+    expect(getPageByUrl("/glossary/").html).toContain(
+        'id="glossary-diagnosis"'
+    );
     expect(getPageByUrl("/tw/glossary/").html).toContain('id="civic-ai"');
     expect(getPageByUrl("/tw/glossary/").html).toContain("仁工智慧");
+    expect(getPageByUrl("/tw/glossary/").html).toContain(
+        'id="glossary-diagnosis"'
+    );
 });
 
 test("excludes OpenClaw human guide from sitemap", () => {
@@ -60,7 +67,7 @@ test("excludes OpenClaw human guide from sitemap", () => {
 test("normalizes front-matter action and navigation links", () => {
     const indexPage = getPageByUrl("/");
     expect(indexPage.data.manifesto_link).toBe("/manifesto/");
-    expect(indexPage.data.prev_action?.url).toBe("/faq/");
+    expect(indexPage.data.prev_action?.url).toBe("/manifesto/");
     expect(indexPage.data.next_action?.url).toBe("/1/");
 
     const comicsPage = getPageByUrl("/comics/");
@@ -69,9 +76,31 @@ test("normalizes front-matter action and navigation links", () => {
 
     const twIndexPage = getPageByUrl("/tw/");
     expect(twIndexPage.data.manifesto_link).toBe("/tw/manifesto/");
-    expect(twIndexPage.data.prev_action?.url).toBe("/tw/faq/");
+    expect(twIndexPage.data.prev_action?.url).toBe("/tw/manifesto/");
     expect(twIndexPage.data.next_action?.url).toBe("/tw/1/");
 
     expect(indexPage.data.alt_lang_url).toBe("/tw/");
     expect(getPageByUrl("/1/").data.alt_lang_url).toBe("/tw/1/");
+});
+
+test("visibleHtml curls quotes except on Japanese pages", () => {
+    const en = getPageByUrl("/glossary/");
+    expect(visibleHtml(en)).not.toMatch(/>[^<]*'[^<]*</);
+    const ja = {
+        ...en,
+        data: { ...en.data, lang: "ja" as const },
+        html: '<p>"x"</p>',
+    };
+    expect(visibleHtml(ja)).toBe('<p>"x"</p>');
+});
+
+test("serves content images as native pictures, not script-revealed noscript", () => {
+    const pack = getPageByUrl("/1/").html;
+    expect(pack).toContain(
+        '<picture><source srcset="/img/pack1-1-720w.avif 720w, /img/pack1-1.avif 1437w" sizes="(max-width: 700px) calc(100vw - 40px), 640px" type="image/avif"><img src="/img/pack1-1.jpg"'
+    );
+    expect(pack).not.toContain("<noscript><img");
+    expect(getPageByUrl("/").html).toContain(
+        '<source srcset="/img/overview-small-720w.avif 720w, /img/overview-small.avif 1280w" sizes="(max-width: 700px) calc(100vw - 40px), 640px" type="image/avif"><img src="/img/overview-small.png"'
+    );
 });

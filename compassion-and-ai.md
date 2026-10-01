@@ -1,18 +1,22 @@
 ---
 layout: chapter
+page_class: transcript-page
 title: "Podcast: Can AI Be Compassionate?"
 author: "Caroline Emmer De Albuquerque Green and Geshe Lodoe Sangpo"
 lang: en-gb
 alt_lang_url: "/tw/compassion-and-ai/"
 permalink: "/compassion-and-ai/"
 date: 2026-03-13
-description: 'Originally recorded for <a href="https://podcasts.ox.ac.uk/accelerating-ai-ethics">Accelerating AI Ethics</a>, University of Oxford Institute for Ethics in AI.'
+description: "Originally recorded for Accelerating AI Ethics, University of Oxford Institute for Ethics in AI."
+meta_description: "Caroline Green and Geshe Lodoe Sangpo ask whether AI can ever be truly compassionate, drawing on the Buddhist ethics of interdependence and equality."
 nav_next:
     url: "/"
     text: "Home"
 ---
 
 <em>Caroline Green speaks with Geshe Lodoe Sangpo — a Tibetan Buddhist monk and scholar — in McLeod Ganj, Dharamsala, about whether AI can ever be truly compassionate. Drawing on Buddhist ethics, they explore interdependence, equality, and why compassion is a way of being rather than a skill that can be trained into a system.</em>
+
+Originally recorded for [Accelerating AI Ethics](https://podcasts.ox.ac.uk/series/accelerating-ai-ethics), University of Oxford Institute for Ethics in AI.
 
 ## In brief
 
@@ -29,7 +33,7 @@ This episode brings the civic care framework into dialogue with Buddhist ethics.
 ## Listen
 
 <div class="audio-section">
-  <p><em>The full podcast will be available on 19 April 2026.</em></p>
+  <p><em>The full podcast is available via <a href="https://podcasts.ox.ac.uk/series/accelerating-ai-ethics">Accelerating AI Ethics</a>.</em></p>
 </div>
 
 ## Full transcript
@@ -76,4 +80,4 @@ For example, Audrey Tang explained this to me — if you want to go to a gym and
 
 **Caroline Green:** You just mentioned Civic AI — the way that we're proposing that AI, we refer to them as Kami — smaller, very contextualised AI systems — can help specific communities and groups of people. Here, what's really at the core is still the humans — the way that they relate with each other. AI is serving them, supporting them in whatever situation they are in. The humans are at the centre of it.
 
-**Geshe Lodoe Sangpo:** His Holiness the Dalai Lama said AI will never be able to be like humans because of human creativity — the ability to create new things. And I think that is one of the most beautiful examples of compassion. AI can be a great asset. But the human — and other species — has to be at the centre, not the AI. We can use AI in a very constructive way, like the Civic AI you are heading into. Just boosting AI's capacity to its maximum and consuming so much energy — if it becomes very destructive, what is the purpose? Human growth, connection, human-to-human bond — that is very important.
+**Geshe Lodoe Sangpo:** His Holiness the Dalai Lama said AI will never be able to be like humans because of human creativity — the ability to create new things. And I think that is one of the most beautiful examples of compassion. AI can be a great asset. But the human — and other species — have to be at the centre, not the AI. We can use AI in a very constructive way, like the Civic AI you are heading into. Just boosting AI's capacity to its maximum and consuming so much energy — if it becomes very destructive, what is the purpose? Human growth, connection, human-to-human bond — that is very important.

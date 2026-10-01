@@ -30,7 +30,10 @@ type GlossaryEntry = {
     aliases_tw?: string[];
 };
 
-function glossaryAliases(entry: GlossaryEntry, key: "aliases_tw"): string[] {
+function glossaryAliases(
+    entry: GlossaryEntry,
+    key: "aliases_tw" | "aliases_en"
+): string[] {
     const raw = entry[key];
     return Array.isArray(raw) ? raw : [];
 }
@@ -219,6 +222,9 @@ export function getSearchSuggestions(lang: SearchLang): string[] {
     for (const entry of glossary as GlossaryEntry[]) {
         if (lang === "en") {
             if (entry.term_en) terms.add(entry.term_en);
+            for (const alias of glossaryAliases(entry, "aliases_en")) {
+                if (alias) terms.add(alias);
+            }
         } else {
             if (entry.term_tw) terms.add(entry.term_tw);
             for (const alias of glossaryAliases(entry, "aliases_tw")) {

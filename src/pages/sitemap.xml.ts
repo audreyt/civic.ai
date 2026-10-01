@@ -15,40 +15,8 @@ function lastmodFor(page: PageRecord): string {
     return statSync(page.sourcePath).mtime.toISOString();
 }
 
-function syntheticSitemapPage(
-    url: string,
-    lang: "en-gb" | "zh-tw",
-    sourcePath: string,
-    altLangUrl?: string
-): PageRecord {
-    return {
-        sourcePath,
-        sourceName: sourcePath,
-        url,
-        slug: url.replace(/^\//, "").replace(/\/$/, ""),
-        data: { title: url, lang, permalink: url, alt_lang_url: altLangUrl },
-        rawBody: "",
-        html: "",
-        includeInSitemap: true,
-        isRawHtmlDocument: false,
-    };
-}
-
 export function GET() {
-    const pages = getSitemapPages().concat([
-        syntheticSitemapPage(
-            "/conference/sensemaking/",
-            "en-gb",
-            "_data/polis_care_deliberation.js",
-            "/tw/conference/sensemaking/"
-        ),
-        syntheticSitemapPage(
-            "/tw/conference/sensemaking/",
-            "zh-tw",
-            "_data/polis_care_deliberation.js",
-            "/conference/sensemaking/"
-        ),
-    ]);
+    const pages = getSitemapPages();
     const urls = pages
         .map((page) => {
             const pageUrl = `${site.url}${page.url}`;

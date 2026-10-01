@@ -19,7 +19,14 @@
     },
     "scripts": {
         "prepare": "vp config",
+        "anchors": "bun scripts/anchors.mjs",
         "sync:public": "bun scripts/sync-public.mjs",
+        "polis:refresh": "bun scripts/refresh-polis-care-snapshot.mjs",
+        "sensemaker:extract": "cd sensemaker && bun src/cli.mjs extract",
+        "sensemaker:regenerate": "cd sensemaker && bun src/cli.mjs regenerate",
+        "sensemaker:regenerate:wasm": "cd sensemaker && bun src/cli.mjs regenerate:wasm",
+        "sensemaker:verify": "cd sensemaker && bun src/cli.mjs verify",
+        "sensemaker:test": "cd sensemaker && bun test",
         "minify-html": "bun scripts/minify-html.mjs",
         "lint": "vp fmt --check . && vp lint && bun pangu-format.mjs --check && bun scripts/check-tw-typography.mjs",
         "format": "vp fmt . && bun pangu-format.mjs",
@@ -33,9 +40,13 @@
         "worker:typecheck": "cd worker && bun run typecheck",
         "worker:test": "cd worker && bun run test",
         "import-comics": "bun import-comics.mjs",
+        "fonts:ja": "bun scripts/fetch-ja-fonts.mjs",
+        "fonts:latin": "bun scripts/fetch-latin-fonts.mjs",
+        "fonts:zh": "bun scripts/fetch-zh-fonts.mjs",
+        "fonts:subset": "bun scripts/subset-zh-fonts.mjs",
         "en": "bun scripts/review-set.mjs en",
         "tw": "bun scripts/review-set.mjs tw",
-        "ci": "vp check && vp test && vp build && vp run check-links && vp run check:hybrid && vp run check:astro-output && vp run check:search && vp run check:parity && vp run worker:typecheck && vp run worker:test"
+        "ci": "vp check && vp test && vp run sensemaker:test && vp run sensemaker:verify && vp build && vp run check-links && vp run check:hybrid && vp run check:astro-output && vp run check:search && vp run check:parity && vp run worker:typecheck && vp run worker:test"
     },
     "dependencies": {
         "markdown-it-anchor": "^9.2.0",
@@ -51,10 +62,16 @@
         "nunjucks": "^3.2.4"
     },
     "devDependencies": {
+        "subset-font": "2.5.0",
+        "fontkit": "2.0.4",
+        "@types/fontkit": "2.0.8",
+        "parse5": "7.3.0",
         "@vitest/coverage-v8": "4.1.10",
+        "@wllama/wllama": "3.5.1",
         "fuse.js": "^6.6.2",
         "html-minifier": "^4.0.0",
         "pagefind": "1.5.0-beta.1",
+        "puppeteer-core": "25.3.0",
         "@types/markdown-it": "^14.1.2",
         "typescript": "^7.0.2",
         "@types/nunjucks": "^3.2.6",

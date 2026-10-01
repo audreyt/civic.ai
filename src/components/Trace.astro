@@ -1,0 +1,63 @@
+---
+import { loadPages, type PageRecord } from "../lib/pages";
+import { record, recordSources } from "../lib/record";
+import { lang2, site } from "../lib/site";
+import CivicBug from "./CivicBug.astro";
+
+interface Props { page: PageRecord; }
+const { page } = Astro.props;
+const zh = lang2(page.data.lang) === "zh";
+const sources = recordSources(page);
+const amended = record.summary(sources);
+const ledger = zh ? "/tw/ledger/" : "/ledger/";
+const twin = loadPages().find((candidate) => candidate.url === page.data.alt_lang_url);
+const amend = `https://github.com/audreyt/civic.ai/issues/new?title=${encodeURIComponent(`Amendment proposed: ${page.url}`)}`;
+const address = page.data.steward_email ?? "au@civic.ai";
+// A bare Polis homepage is not a live conversation. Never invent a conversation ID.
+const polis = page.data.polis_url ?? /https:\/\/pol\.is\/[a-zA-Z0-9]+(?=["')\s<]|$)/.exec(page.rawBody)?.[0];
+const date = (iso: string) => new Date(iso).toLocaleDateString(zh ? "zh-TW" : "en-GB", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" });
+---
+<!-- The record folds away under the site-mark: readers who want the
+     stewards, amendments, sources and evals open it; the page ends quietly for
+     everyone else. Print opens it (see the script below and the print CSS). -->
+<details class="record-trace record-zone" data-pagefind-ignore>
+  <summary class="record-trace__summary">
+    <CivicBug class="record-trace__mark" />
+    <h2 class="record-trace__heading">{zh ? "紀錄" : "The Trace"}</h2>
+    {amended && <span class="record-trace__hint">{zh ? "修訂 " : "Amended "}<time datetime={amended.amendedDate}>{amended.amendedDate.slice(0, 10)}</time></span>}
+  </summary>
+  <div class="record-trace__inner">
+    <dl class="record-trace__rows">
+      <div class="record-trace__row record-trace__stewards">
+        <dt>{zh ? "守護者" : "Stewards"}</dt>
+        <dd>{(page.data.stewards ?? [zh ? "唐鳳" : "Audrey Tang", "Caroline Green"]).join(" · ")}<br /><span class="record-secondary">{zh ? "共同照料：" : "with "}jdd-kami · Tenzin Yangtso</span></dd>
+      </div>
+      {amended && <div class="record-trace__row record-trace__amended">
+        <dt>{zh ? "修訂" : "Amended"}</dt>
+        <dd><time datetime={amended.amendedDate}>{date(amended.amendedDate)}</time> · {zh ? `自 ${date(amended.firstDate)} 起，${amended.count} 次紀錄` : `${amended.count} recorded amendments since ${date(amended.firstDate)}`}<br /><a href={ledger}>{zh ? "完整修訂紀錄" : "Full amendment ledger"} →</a></dd>
+      </div>}
+      <div class="record-trace__row record-trace__source">
+        <dt>{zh ? "來源" : "Source"}</dt>
+        <dd>{sources.map((source, i) => <><span class="record-source-name">{source}</span> · <a href={`https://github.com/audreyt/civic.ai/blob/main/${source}`} class="record-edit">{zh ? "在 GitHub 編輯" : "edit on GitHub"}</a><span class="record-print-url">https://github.com/audreyt/civic.ai/blob/main/{source}</span>{i < sources.length - 1 && <br />}</>)}<br /><span>{zh ? "CC0 公眾領域" : "CC0 public domain"}</span><span class="record-print-url">{site.url}{page.url}</span></dd>
+      </div>
+      <div class="record-trace__row record-trace__evals">
+        <dt>{zh ? "評測" : "Evals"}</dt>
+        <dd><div data-record-evals="trace" data-record-lang={zh ? "zh" : "en"}></div></dd>
+      </div>
+      <div class="record-trace__row record-trace__contest">
+        <dt>{zh ? "異議" : "Contest"}</dt>
+        <dd><a class="record-contest" href={amend}>{zh ? "不同意？提出修正。" : "Disagree? File an amendment."}</a><br /><a href={`mailto:${address}`}>{zh ? "寫信給守護者" : "Write to the stewards"} · {address}</a>{polis && <><br /><a href={polis}>{zh ? "參與 Polis 對話" : "Join the Polis conversation"}</a></>}</dd>
+      </div>
+      <div class="record-trace__row record-trace__twin">
+        <dt>{zh ? "雙語" : "Twin"}</dt>
+        <dd>{twin ? <><a href={twin.url} lang={zh ? "en-GB" : "zh-TW"}>{twin.data.title ?? twin.url}</a><br /><span class="record-secondary">{zh ? "同一份紀錄，同樣可查核。" : "Same record, same receipts."}</span></> : <span class="record-secondary">{zh ? "本頁無對應版本。" : "No twin edition for this page."}</span>}</dd>
+      </div>
+    </dl>
+    {!amended && <p class="record-history-note">{zh ? "完整來源歷史不可用；修訂日期與次數省略。" : "Complete source history unavailable; amendment date and count omitted."} <a href={ledger}>{zh ? "修訂紀錄" : "Amendment ledger"}</a></p>}
+  </div>
+</details>
+<script is:inline>
+window.addEventListener("beforeprint", function () {
+    document.querySelectorAll("details.record-trace").forEach(function (d) { d.open = true; });
+});
+</script>

@@ -450,12 +450,18 @@
         }
     }
 
-    initCapacity();
+    // Ask the remote service whether it is up only once a reader opens search,
+    // not on every page load: reading a page makes no cross-origin request.
+    var capacityChecked = false;
 
     var obs = new MutationObserver(function () {
         if (!overlay.classList.contains("active")) {
             hideAsk();
         } else {
+            if (!capacityChecked) {
+                capacityChecked = true;
+                initCapacity();
+            }
             renderHistory();
         }
     });

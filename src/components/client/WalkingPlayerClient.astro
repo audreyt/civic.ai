@@ -1,0 +1,317 @@
+---
+// WalkingPlayerClient (DESIGN.md §21, §11.6): a player built over the native
+// <audio>, which stays the no-JS fallback. From 1280px the player docks at the
+// foot of the TOC in the left rail; below that it stays in the column and
+// becomes a slim bar at the viewport bottom only while playing.
+import type { PageRecord } from "../../lib/pages";
+interface Props { page: PageRecord; }
+const { page } = Astro.props;
+---
+{page.data.audio && (
+<script is:inline>
+(function () {
+    try {
+        var section = document.querySelector("main .audio-section");
+        if (!section || section.getAttribute("data-walker")) return;
+        var audio = section.querySelector("audio");
+        if (!audio) return;
+        var zh = document.documentElement.lang.indexOf("zh") === 0;
+        var T = zh
+            ? {
+                  group: "旁白音檔",
+                  play: "播放",
+                  pause: "暫停",
+                  back: "倒退 30 秒",
+                  forward: "快轉 30 秒",
+                  backText: "−30 秒",
+                  forwardText: "+30 秒",
+                  speed: "播放速度",
+                  speedHint: "，點一下切換",
+                  seek: "播放進度",
+                  of: "，全長 ",
+              }
+            : {
+                  group: "Narration",
+                  play: "Play",
+                  pause: "Pause",
+                  back: "Back 30 seconds",
+                  forward: "Forward 30 seconds",
+                  backText: "\u221230 s",
+                  forwardText: "+30 s",
+                  speed: "Playback speed",
+                  speedHint: ", press to change",
+                  seek: "Seek",
+                  of: " of ",
+              };
+        var SPEEDS = [0.75, 1, 1.25, 1.5, 2];
+        var KEY = "civic-audio:" + location.pathname;
+        var NS = "http://www.w3.org/2000/svg";
+        var speedIndex = 1;
+        var lastSave = 0;
+        var restored = false;
+        var slotVisible = true;
+        var barOn = false;
+
+        function el(tag, cls, text) {
+            var node = document.createElement(tag);
+            if (cls) node.className = cls;
+            if (text) node.textContent = text;
+            return node;
+        }
+        function pad(n) {
+            return n < 10 ? "0" + n : String(n);
+        }
+        function fmt(s) {
+            if (!isFinite(s) || s < 0) return "\u2013:\u2013\u2013";
+            s = Math.floor(s);
+            var h = Math.floor(s / 3600);
+            var m = Math.floor((s % 3600) / 60);
+            var sec = s % 60;
+            return h ? h + ":" + pad(m) + ":" + pad(sec) : m + ":" + pad(sec);
+        }
+        function icon(paths) {
+            var svg = document.createElementNS(NS, "svg");
+            svg.setAttribute("viewBox", "0 0 16 16");
+            svg.setAttribute("width", "16");
+            svg.setAttribute("height", "16");
+            svg.setAttribute("aria-hidden", "true");
+            svg.setAttribute("focusable", "false");
+            for (var i = 0; i < paths.length; i++) {
+                var p = document.createElementNS(NS, "path");
+                p.setAttribute("d", paths[i]);
+                p.setAttribute("fill", "currentColor");
+                svg.appendChild(p);
+            }
+            return svg;
+        }
+        function button(cls, label) {
+            var b = el("button", "walking-player__btn " + cls);
+            b.type = "button";
+            b.setAttribute("aria-label", label);
+            return b;
+        }
+
+        var player = el("div", "walking-player");
+        player.setAttribute("role", "group");
+        player.setAttribute("aria-label", T.group);
+
+        var time = el("div", "walking-player__time");
+        var elapsedEl = el("span", "walking-player__elapsed", "0:00");
+        var totalEl = el("span", "walking-player__total", fmt(NaN));
+        time.appendChild(elapsedEl);
+        time.appendChild(document.createTextNode(" / "));
+        time.appendChild(totalEl);
+
+        var seek = el("input", "walking-player__seek");
+        seek.type = "range";
+        seek.min = "0";
+        seek.max = "0";
+        seek.step = "1";
+        seek.value = "0";
+        seek.disabled = true;
+        seek.setAttribute("aria-label", T.seek);
+
+        var controls = el("div", "walking-player__buttons");
+        var playBtn = button("walking-player__play", T.play);
+        var playIcon = icon(["M4 2.5v11l9-5.5z"]);
+        var pauseIcon = icon(["M3.5 2.5h3v11h-3z", "M9.5 2.5h3v11h-3z"]);
+        playBtn.appendChild(playIcon);
+        var backBtn = button("walking-player__skip", T.back);
+        backBtn.appendChild(el("span", "walking-player__skip-text", T.backText));
+        var fwdBtn = button("walking-player__skip", T.forward);
+        fwdBtn.appendChild(el("span", "walking-player__skip-text", T.forwardText));
+        var speedBtn = button("walking-player__speed", "");
+        controls.appendChild(playBtn);
+        controls.appendChild(backBtn);
+        controls.appendChild(fwdBtn);
+        controls.appendChild(speedBtn);
+
+        player.appendChild(time);
+        player.appendChild(seek);
+        player.appendChild(controls);
+        section.appendChild(player);
+        section.setAttribute("data-walker", "1");
+
+        function speedLabel() {
+            return SPEEDS[speedIndex] + "\u00d7";
+        }
+        function paintSpeed() {
+            speedBtn.textContent = speedLabel();
+            speedBtn.setAttribute("aria-label", T.speed + " " + speedLabel() + T.speedHint);
+        }
+        function duration() {
+            return isFinite(audio.duration) ? audio.duration : 0;
+        }
+        function paint() {
+            var cur = audio.currentTime || 0;
+            var dur = duration();
+            elapsedEl.textContent = fmt(cur);
+            totalEl.textContent = dur ? fmt(dur) : fmt(NaN);
+            if (dur) {
+                seek.max = String(Math.floor(dur));
+                seek.disabled = false;
+            }
+            seek.value = String(Math.floor(cur));
+            seek.setAttribute("aria-valuetext", fmt(cur) + T.of + (dur ? fmt(dur) : fmt(NaN)));
+        }
+        function paintState() {
+            var playing = !audio.paused;
+            playBtn.setAttribute("aria-label", playing ? T.pause : T.play);
+            playBtn.replaceChild(playing ? pauseIcon : playIcon, playBtn.firstChild);
+            player.classList.toggle("is-playing", playing);
+            paintBar();
+        }
+        // Below 1280px the card stays where it is while its slot is on screen;
+        // once the slot scrolls away, a playing player becomes a bar at the foot.
+        function paintBar() {
+            var want = !audio.paused && player.parentNode === section && !slotVisible;
+            if (want === barOn) return;
+            section.style.minHeight = want ? player.offsetHeight + "px" : "";
+            barOn = want;
+            player.classList.toggle("is-bar", want);
+            document.documentElement.classList.toggle("walking-bar-on", want);
+        }
+
+        function store(force) {
+            try {
+                var cur = audio.currentTime;
+                var dur = duration();
+                if (!isFinite(cur) || audio.ended) return;
+                var now = Date.now();
+                if (!force && now - lastSave < 5000) return;
+                lastSave = now;
+                if (cur < 1 || (dur && cur >= dur - 1)) localStorage.removeItem(KEY);
+                else localStorage.setItem(KEY, String(Math.floor(cur)));
+            } catch (e) {}
+        }
+        function restore() {
+            if (restored) return;
+            restored = true;
+            try {
+                var saved = parseFloat(localStorage.getItem(KEY));
+                var dur = duration();
+                if (isFinite(saved) && saved > 0 && (!dur || saved < dur - 1)) {
+                    audio.currentTime = saved;
+                    paint();
+                }
+            } catch (e) {}
+        }
+        function seekBy(delta) {
+            var dur = duration();
+            var next = (audio.currentTime || 0) + delta;
+            if (next < 0) next = 0;
+            if (dur && next > dur) next = dur;
+            audio.currentTime = next;
+            paint();
+        }
+
+        playBtn.addEventListener("click", function () {
+            if (audio.paused) {
+                var p = audio.play();
+                if (p && p.catch) p.catch(function () {});
+            } else audio.pause();
+        });
+        backBtn.addEventListener("click", function () {
+            seekBy(-30);
+        });
+        fwdBtn.addEventListener("click", function () {
+            seekBy(30);
+        });
+        speedBtn.addEventListener("click", function () {
+            speedIndex = (speedIndex + 1) % SPEEDS.length;
+            audio.playbackRate = SPEEDS[speedIndex];
+            paintSpeed();
+        });
+        seek.addEventListener("input", function () {
+            audio.currentTime = parseFloat(seek.value) || 0;
+            paint();
+        });
+        audio.addEventListener("loadedmetadata", function () {
+            restore();
+            paint();
+        });
+        audio.addEventListener("durationchange", paint);
+        audio.addEventListener("timeupdate", function () {
+            paint();
+            store(false);
+        });
+        audio.addEventListener("play", paintState);
+        audio.addEventListener("pause", function () {
+            paintState();
+            store(true);
+        });
+        audio.addEventListener("ended", function () {
+            paintState();
+            try {
+                localStorage.removeItem(KEY);
+            } catch (e) {}
+            paint();
+        });
+        window.addEventListener("pagehide", function () {
+            store(true);
+        });
+
+        // Rail: at 1280px the player lives at the foot of the TOC, so it can
+        // neither cover the TOC nor outlast <main>; otherwise it stays in the column.
+        var mq = window.matchMedia ? window.matchMedia("(min-width: 1280px)") : null;
+        function dock() {
+            var toc = document.querySelector("main .page-toc");
+            if (mq && mq.matches && toc) {
+                if (player.parentNode !== toc) toc.appendChild(player);
+                section.setAttribute("data-docked", "1");
+            } else {
+                if (player.parentNode !== section) section.appendChild(player);
+                section.removeAttribute("data-docked");
+            }
+        }
+        // The TOC is sticky and scrolls inside its own box; sizing that box to the
+        // viewport keeps the player (the box's last item) on screen from load.
+        var fitQueued = false;
+        function fit() {
+            fitQueued = false;
+            var toc = document.querySelector("main .page-toc");
+            if (!toc) return;
+            if (player.parentNode !== toc) {
+                toc.style.maxHeight = "";
+                return;
+            }
+            var top = toc.getBoundingClientRect().top;
+            var room = window.innerHeight - 24 - Math.max(top, 24);
+            toc.style.maxHeight = Math.max(room, 180) + "px";
+        }
+        function queueFit() {
+            if (fitQueued) return;
+            fitQueued = true;
+            window.requestAnimationFrame(fit);
+        }
+        function redock() {
+            dock();
+            fit();
+            paintBar();
+        }
+        if (window.IntersectionObserver) {
+            new IntersectionObserver(function (entries) {
+                slotVisible = entries[entries.length - 1].isIntersecting;
+                paintBar();
+            }).observe(section);
+        } else slotVisible = false;
+        redock();
+        document.addEventListener("DOMContentLoaded", redock);
+        window.addEventListener("load", redock);
+        window.addEventListener("resize", queueFit);
+        window.addEventListener("scroll", queueFit, { passive: true });
+        if (mq) {
+            if (mq.addEventListener) mq.addEventListener("change", redock);
+            else if (mq.addListener) mq.addListener(redock);
+        }
+
+        paintSpeed();
+        paintState();
+        if (audio.readyState >= 1) {
+            restore();
+        }
+        paint();
+    } catch (e) {}
+})();
+</script>
+)}

@@ -10,88 +10,92 @@
     unicode-range: U+0F00-0FFF;
 }
 
-@font-face {
-    font-family: "Outfit";
-    font-style: normal;
-    font-weight: 300 600;
-    font-display: swap;
-    src: url("fonts/outfit-latin-ext.woff2") format("woff2");
-    unicode-range:
-        U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
-        U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
-        U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-    font-family: "Outfit";
-    font-style: normal;
-    font-weight: 300 600;
-    font-display: swap;
-    src: url("fonts/outfit-latin.woff2") format("woff2");
-    unicode-range:
-        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
-        U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
-        U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* ─── CUSTOM PROPERTIES ─── */
+/* ─── CUSTOM PROPERTIES ───
+   The design charter's tokens (DESIGN.md §5 Soil & Daylight, §6 Two Voices,
+   §13 Lantern). The older names further down are aliases, kept so every
+   existing rule follows the charter without being rewritten one by one. */
 :root {
-    --oxford-blue: #002147;
-    --ink: #0f1923;
-    --paper: #faf8f5;
-    --warm: #f4f1ec;
-    --surface: #fff;
-    --card: #f4f1ec;
-    --text: #2c3e50;
-    --muted: #5f6a7d;
-    --heading: #002147;
-    --gold: #886d35;
-    --gold-light: #c9a961;
-    --teal: #2a7f8a;
-    --poster-paper: #faf8f5;
-    --border: #e0ddd7;
-    --shadow: 0 2px 8px rgba(0, 33, 71, 0.06);
-    --shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.08);
-    --serif: "Monlam Bodyig", "Lora", Georgia, serif;
-    --sans: "Monlam Bodyig", "Outfit", system-ui, sans-serif;
-    --accent-teal: #2a7f8a;
-    --accent-blue: #2a7f8a;
-    --accent-gradient: linear-gradient(135deg, var(--oxford-blue), #003366);
+    /* Soil & Daylight */
+    --field: #f2f1e8;
+    --surface: #fbfaf4;
+    --ink: #211d16;
+    --soil: #5a5142;
+    --moss: #33603e;
+    --cinnabar: #b4351f;
+    /* Dark enough for small labels on paper: 5.19 on field, 5.63 on surface */
+    --harvest: #7a6128;
+    --rule: #ddd9cb;
+    --oxford: #002147;
+    /* The 2px provenance rule framing interior pages (DESIGN.md §7.1) */
+    --oxford-rule: var(--oxford);
+
+    /* Comic-derived pack hues: wayfinding only, never body text */
+    --pack-1: #eb573a;
+    --pack-2: #f09344;
+    --pack-3: #f9dd55;
+    --pack-4: #7cc967;
+    --pack-5: #6197f8;
+    --pack-6: #a753f6;
+
+    /* Two voices: argued and spoken text in serif; logged, measured and
+       navigational text in mono */
+    --prose:
+        "Literata", "Literata Fallback", "Noto Serif TC", "Monlam Bodyig",
+        georgia, serif;
+    --machine:
+        "IBM Plex Mono", "Noto Sans TC", "Monlam Bodyig", ui-monospace,
+        monospace;
+
+    /* Rhythm */
+    --measure-en: 66ch;
+    --measure-zh: 36em;
+    --leading-en: 1.65;
+    --leading-zh: 1.95;
+    --radius-prose: 4px;
+    --radius-machine: 0;
+
+    /* Aliases */
+    --oxford-blue: var(--oxford);
+    --paper: var(--field);
+    --warm: #eae8dc;
+    --card: var(--surface);
+    --text: var(--ink);
+    --muted: var(--soil);
+    --heading: var(--ink);
+    --gold: var(--harvest);
+    --gold-light: #c8a25c;
+    --teal: var(--moss);
+    --poster-paper: var(--field);
+    --border: var(--rule);
+    --shadow: 0 1px 2px rgba(33, 29, 22, 0.06);
+    --shadow-hover: 0 6px 20px rgba(33, 29, 22, 0.08);
+    --serif: var(--prose);
+    --sans: var(--machine);
+    --accent-teal: var(--moss);
+    --accent-blue: var(--moss);
+    --accent-gradient: var(--oxford);
 }
 
 html[data-theme="light"] {
     color-scheme: light;
-    --paper: #faf8f5;
-    --warm: #f4f1ec;
-    --surface: #fff;
-    --card: #f4f1ec;
-    --text: #2c3e50;
-    --muted: #5f6a7d;
-    --heading: #002147;
-    --gold: #886d35;
-    --teal: #2a7f8a;
-    --border: #e0ddd7;
-    --shadow: 0 2px 8px rgba(0, 33, 71, 0.06);
-    --shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.08);
-    --accent-teal: #2a7f8a;
-    --accent-blue: #2a7f8a;
 }
 
+/* Lantern mode: warm lights on indigo-charcoal (DESIGN.md §13) */
 html[data-theme="dark"] {
     color-scheme: dark;
-    --paper: #111820;
-    --warm: #161e28;
-    --surface: #1c2535;
-    --card: #161e28;
-    --text: #b8b4ac;
-    --muted: #8a96a8;
-    --heading: #e8e4dc;
-    --border: rgba(255, 255, 255, 0.1);
-    --gold: #c9a961;
-    --teal: #4bc3d4;
-    --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    --shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.4);
-    --accent-teal: #4bc3d4;
-    --accent-blue: #4bc3d4;
+    --oxford-rule: #5b7cb2;
+    --field: #191c22;
+    --surface: #20242c;
+    --ink: #eae4d4;
+    --soil: #a89f8d;
+    --moss: #8fb79a;
+    --cinnabar: #e06844;
+    --harvest: #c8a25c;
+    --rule: #343945;
+    --warm: #1d2027;
+    --gold-light: #c8a25c;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.35);
 }
 
 /* ─── BASE ─── */
@@ -117,19 +121,19 @@ body {
 }
 
 /* Web fonts blocked (e.g. iOS Lockdown Mode): the system fallback is much
-   thinner than Outfit at the same weight, so lift the body copy to a more
-   readable weight and drop the antialiasing that renders SF lighter still. */
+   thinner than the machinery face at the same weight, so lift the body copy to
+   a more readable weight and drop the antialiasing that renders SF lighter. */
 html.fonts-unavailable body {
     font-weight: 450;
     -webkit-font-smoothing: auto;
 }
 
 html.fonts-unavailable {
-    --muted: #4c576a;
+    --muted: color-mix(in srgb, var(--soil) 78%, var(--ink));
 }
 
 html[data-theme="dark"].fonts-unavailable {
-    --muted: #9aa6b8;
+    --muted: color-mix(in srgb, var(--soil) 78%, var(--ink));
 }
 
 ::selection {
@@ -137,17 +141,38 @@ html[data-theme="dark"].fonts-unavailable {
 }
 
 /* ─── LINKS ─── */
+/* Visited links shift towards soil, and external links carry a small
+   machinery-voiced arrow (DESIGN.md §11.2). */
+main a:visited {
+    color: color-mix(in srgb, var(--moss) 72%, var(--soil));
+}
+
+main a[href^="http"]:not([href^="https://civic.ai"]):not(:has(img))::after {
+    content: "\2197";
+    display: inline-block;
+    margin-left: 0.12em;
+    font-family: var(--machine);
+    font-size: 0.7em;
+    line-height: 1;
+    text-decoration: none;
+}
+
 a {
     color: var(--teal);
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
     text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
-    transition: color 0.2s;
+    transition:
+        color 0.2s,
+        text-decoration-thickness 0.2s,
+        text-decoration-color 0.2s;
 }
 
 a:hover {
     color: var(--gold);
+    text-decoration-thickness: 2px;
+    text-decoration-color: currentColor;
 }
 
 /* ─── GLOSSARY GLOSSING ─── */
@@ -161,14 +186,14 @@ a:hover {
     border-bottom-color: var(--gold);
 }
 .gloss:focus-visible {
-    outline: 2px solid var(--gold-light);
+    outline: 2px solid var(--moss);
     outline-offset: 2px;
 }
 
 /* ─── HEADER ─── */
 header {
     background: var(--oxford-blue);
-    color: white;
+    color: #fbfaf4;
     padding: 56px 32px 48px;
     text-align: center;
     position: relative;
@@ -182,12 +207,7 @@ header::after {
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        var(--gold-light),
-        transparent
-    );
+    background: var(--gold-light);
 }
 
 header .brand {
@@ -223,10 +243,11 @@ header img.oxford-logo:hover {
     padding: 5px 14px;
     border-radius: 3px;
     transition: all 0.2s;
+    white-space: nowrap;
 }
 
 .lang-toggle:hover {
-    color: white;
+    color: #fbfaf4;
     border-color: var(--gold-light);
     background: rgba(255, 255, 255, 0.08);
 }
@@ -259,8 +280,9 @@ header nav.site-nav a {
 }
 
 header nav.site-nav a:hover,
-header nav.site-nav a:focus-visible {
-    color: #fff;
+header nav.site-nav a:focus-visible,
+header nav.site-nav a[aria-current="page"] {
+    color: #fbfaf4;
     border-bottom-color: var(--gold-light);
 }
 
@@ -276,7 +298,7 @@ header h1 {
 }
 
 header p {
-    font-family: var(--sans);
+    font-family: var(--prose);
     font-size: 1rem;
     font-weight: 300;
     color: rgba(255, 255, 255, 0.75);
@@ -286,7 +308,7 @@ header p {
 }
 
 header a {
-    color: white;
+    color: #fbfaf4;
     text-decoration: none;
 }
 
@@ -353,10 +375,16 @@ header .chapter-date {
     display: block;
 }
 
+/* The two names are equal, neither a subtitle of the other (DESIGN.md §4.1) */
 .site-wordmark__secondary {
-    color: var(--teal);
-    font-weight: 500;
-    letter-spacing: 0.02em;
+    color: inherit;
+    font-weight: inherit;
+    letter-spacing: 0.04em;
+}
+
+.site-wordmark__sep {
+    margin: 0 -0.2em;
+    color: var(--gold);
 }
 
 .site-header__nav {
@@ -379,7 +407,8 @@ header .chapter-date {
 }
 
 .site-header--interior nav.site-nav a:hover,
-.site-header--interior nav.site-nav a:focus-visible {
+.site-header--interior nav.site-nav a:focus-visible,
+.site-header--interior nav.site-nav a[aria-current="page"] {
     color: var(--teal);
     border-bottom-color: var(--teal);
 }
@@ -417,19 +446,6 @@ header .chapter-date {
     align-items: center;
     justify-content: flex-end;
     gap: 12px;
-    margin: 0;
-}
-
-.site-header__home-tools {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 2;
-    display: grid;
-    grid-template-columns: max-content max-content;
-    align-items: center;
-    justify-content: end;
-    column-gap: 14px;
     margin: 0;
 }
 
@@ -493,7 +509,7 @@ html[data-theme="dark"] .theme-toggle__sun {
     content: "";
     display: block;
     height: 2px;
-    background: var(--heading);
+    background: var(--oxford-rule);
 }
 
 .site-header__title-block {
@@ -523,10 +539,15 @@ html[data-theme="dark"] .theme-toggle__sun {
     margin-left: 0;
 }
 
+/* The colophon draws its own box rather than relying on the bare section
+   rule, so it looks the same on pages that do not load this whole sheet. */
 .partner-colophon {
     position: relative;
     padding: 24px 32px 28px;
     text-align: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
 }
 
 .partner-colophon::before {
@@ -534,7 +555,7 @@ html[data-theme="dark"] .theme-toggle__sun {
     display: block;
     height: 2px;
     margin-bottom: 24px;
-    background: var(--heading);
+    background: var(--oxford-rule);
 }
 
 .partner-colophon__marks {
@@ -564,13 +585,17 @@ html[data-theme="light"] .partner-logo {
 }
 
 .partner-colophon p {
-    max-width: 40rem;
+    max-width: 616px;
     margin: 0 auto;
     color: var(--text);
     font-family: var(--sans);
     font-size: 0.72rem;
     line-height: 1.55;
     letter-spacing: 0.04em;
+}
+
+.partner-colophon a {
+    white-space: nowrap;
 }
 
 /* ─── TABLES ─── */
@@ -610,37 +635,27 @@ main tr:last-child td {
     border-bottom: none;
 }
 
-/* Two-column comparison table (e.g. inside-the-kami "the shared design lesson"):
-   balance the columns and let both wrap, so a long first cell can't force the
-   column wide and trigger horizontal scroll. Overrides the global block/nowrap
-   table behaviour for this scoped case only. */
-.compare-table table {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-}
-.compare-table th:first-child,
-.compare-table td:first-child {
-    width: 40%;
-    white-space: normal;
-}
-.compare-table td {
-    vertical-align: top;
-}
-
 /* ─── MAIN CONTENT ─── */
 main {
     max-width: 680px;
     margin: 0 auto;
     padding: 48px 32px;
     font-family: var(--serif);
-    font-size: 1.1rem;
+    font-size: 1.125rem;
+    /* A bare URL or very long word breaks rather than widening the page. */
+    overflow-wrap: break-word;
 }
 
 main img {
     max-width: 100%;
     height: auto;
     border-radius: 4px;
+}
+
+/* Build-time <picture> wrappers add no box of their own, so every image rule
+   written for a bare <img> still lays it out the same way. */
+main picture {
+    display: contents;
 }
 
 main article {
@@ -714,8 +729,21 @@ h4 {
     margin-top: 1.8em;
     margin-bottom: 0.4em;
 }
+
+/* FAQ questions are h3 under their h2 group (no skipped level) but keep the
+   compact question size rather than the chapter-section treatment. */
+h3[id^="faq-"] {
+    font-size: 1.05rem;
+    margin-top: 1.8em;
+    margin-bottom: 0.4em;
+    padding-top: 0;
+    border-top: none;
+}
 /* FAQ grouping and filter pills */
 .faq-filter {
+    position: sticky;
+    top: 8px;
+    z-index: 20;
     display: inline-flex;
     flex-wrap: wrap;
     gap: 6px;
@@ -746,12 +774,12 @@ h4 {
 .faq-filter button:focus-visible,
 .faq-filter button[aria-pressed="true"] {
     background: var(--oxford-blue);
-    color: #fff;
+    color: #fbfaf4;
     transform: translateY(-1px);
 }
 
 .faq-filter button:focus-visible {
-    outline: 2px solid var(--gold-light);
+    outline: 2px solid var(--moss);
     outline-offset: 3px;
 }
 
@@ -849,42 +877,7 @@ em {
 :lang(zh) em,
 :lang(zh) blockquote {
     font-style: normal;
-    font-family: "Kaiti TC", "DFKai-SB", "BiauKai", "STKaiti", cursive;
-}
-
-/* ─── INTERVIEW PAGES ─── */
-.method-note {
-    margin: 0 0 2.5rem;
-    padding: 0 0 1rem;
-    border-bottom: 1px solid var(--border);
-    font-family: var(--sans);
-    font-size: 0.92rem;
-    line-height: 1.65;
-    color: var(--muted);
-}
-
-.method-note p {
-    margin: 0.35rem 0;
-}
-
-body.interview-page h4 a {
-    color: inherit;
-    text-decoration: none;
-}
-
-body.interview-page h4 a:hover {
-    color: inherit;
-}
-
-body.interview-page hr {
-    margin: 2.2rem 0 1.3rem;
-}
-
-body.interview-page main p:has(> strong:first-child) strong:first-child {
-    font-family: var(--sans);
-    font-size: 0.82em;
-    letter-spacing: 0.04em;
-    color: var(--gold);
+    font-family: "Civic Kai", var(--prose);
 }
 
 /* ─── LEAD & CALLOUT ─── */
@@ -937,7 +930,6 @@ body.interview-page main p:has(> strong:first-child) strong:first-child {
 
 /* ─── AUDIO PLAYER ─── */
 .audio-section {
-    clear: both;
     margin: 32px 0;
     padding: 20px 24px;
     background: var(--warm);
@@ -945,33 +937,43 @@ body.interview-page main p:has(> strong:first-child) strong:first-child {
     border-radius: 4px;
 }
 
+.audio-section audio:focus-visible {
+    outline: 2px solid var(--moss);
+    outline-offset: 3px;
+}
+
 .audio-section audio {
     width: 100%;
     display: block;
-    outline: none;
 }
 
-.audio-label {
-    font-family: var(--sans);
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin: 0 0 0.5rem;
-}
-
-.audio-links {
-    font-size: 0.85rem;
-    color: var(--muted);
-    margin: 0.5rem 0 0;
-}
-
-/* ─── TRANSCRIPT SPEAKER TURNS ─── */
+/* ─── BOLD LEAD-INS ───
+   A paragraph or loose bullet that opens in bold starts a new unit (a
+   question, a risk and its fix, a speaker's turn): a hairline and air above
+   each keep the units apart. Straight under a heading the heading already
+   separates, so a second rule there would only double it. */
 main p:has(> strong:first-child) {
     border-top: 1px solid var(--border);
     padding-top: 1.4rem;
     margin-top: 1.6rem;
+}
+
+main :is(h2, h3, h4) + p:has(> strong:first-child),
+main
+    :is(h2, h3, h4)
+    + :is(ul, ol)
+    > li:first-child
+    > p:first-child:has(> strong:first-child) {
+    border-top: 0;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+/* Eval slots are filled by the last build step; until then they say nothing. */
+[data-record-evals]:empty,
+.record-trace__evals:has([data-record-evals]:empty),
+.record-ledger__evals:has(> [data-record-evals]:empty) {
+    display: none;
 }
 
 /* ─── VIDEO EMBED ─── */
@@ -1066,7 +1068,7 @@ p + .figure-caption {
 /* ─── NEXT ACTION / NAVIGATION ─── */
 .next-action {
     background: var(--oxford-blue);
-    color: white;
+    color: #fbfaf4;
     padding: 48px 24px;
     margin: 0;
     text-align: center;
@@ -1081,12 +1083,7 @@ p + .figure-caption {
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        var(--gold-light),
-        transparent
-    );
+    background: var(--gold-light);
 }
 
 .next-action-content {
@@ -1102,7 +1099,7 @@ p + .figure-caption {
     font-family: var(--serif);
     font-size: 2em;
     margin: 0 0 16px 0;
-    color: white;
+    color: #fbfaf4;
     border-bottom: none;
 }
 
@@ -1117,7 +1114,7 @@ p + .figure-caption {
     align-items: center;
     gap: 10px;
     background: transparent;
-    color: white;
+    color: #fbfaf4;
     text-decoration: none;
     padding: 14px 28px;
     border-radius: 3px;
@@ -1131,7 +1128,7 @@ p + .figure-caption {
 
 .next-action-button:hover {
     background: rgba(255, 255, 255, 0.1);
-    color: white;
+    color: #fbfaf4;
     border-color: var(--gold-light);
 }
 
@@ -1151,7 +1148,7 @@ p + .figure-caption {
 /* Header manifesto button — override for use inside header */
 header .next-action-button {
     background: transparent;
-    color: white;
+    color: #fbfaf4;
     border: 1px solid rgba(255, 255, 255, 0.35);
     padding: 10px 24px;
     font-size: 0.85em;
@@ -1164,24 +1161,33 @@ header .next-action-button:hover {
 }
 
 /* ─── FOOTER ─── */
+/* The closing band bookends the Oxford-blue home masthead and stays dark in
+   both themes. It cannot sit on --ink: Lantern turns --ink cream, which left
+   pale text on a pale band. */
 footer {
     text-align: center;
     padding: 48px 32px;
-    background: var(--ink);
-    color: rgba(255, 255, 255, 0.55);
+    background: var(--oxford);
+    color: color-mix(in srgb, #fbfaf4 82%, var(--oxford));
     margin-top: 0;
     font-size: 0.85em;
     line-height: 1.8;
+}
+
+footer p {
+    max-width: 616px;
+    margin: 0 auto;
 }
 
 footer a {
     color: var(--gold-light);
     text-decoration: none;
     text-decoration-thickness: 1px;
+    white-space: nowrap;
 }
 
 footer a:hover {
-    color: white;
+    color: #fbfaf4;
     text-decoration: underline;
     text-underline-offset: 3px;
 }
@@ -1222,10 +1228,24 @@ footer a:hover {
 }
 
 /* ─── SKIP LINK ─── */
-/* Skip link: kept in the accessibility tree for screen readers, but never shown
-   visually (no on-focus reveal). */
+/* Visually hidden until focused, then revealed as an overlay. */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
 .skip-link {
     position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 100;
     width: 1px;
     height: 1px;
     margin: -1px;
@@ -1237,7 +1257,17 @@ footer a:hover {
 }
 
 .skip-link:focus-visible {
-    outline: none;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 10px 16px;
+    overflow: visible;
+    clip: auto;
+    background: var(--oxford-blue);
+    color: #fbfaf4;
+    border-radius: 8px;
+    outline: 2px solid var(--gold-light);
+    outline-offset: 2px;
 }
 
 /* ─── FOCUS ─── */
@@ -1335,10 +1365,8 @@ footer a:hover {
 
     .site-wordmark {
         font-size: 0.95rem;
-    }
-
-    .site-wordmark__secondary {
-        display: none;
+        letter-spacing: 0.02em;
+        gap: 5px;
     }
 
     .site-mark {
@@ -1405,46 +1433,151 @@ footer a:hover {
     }
 }
 
+/* ─── LORA (SELF-HOSTED; SIL OFL 1.1, Cyreal) ─── */
+
 /* ─── CORMORANT GARAMOND (SELF-HOSTED) ─── */
+
+/* Japanese comic overlays (/ja/comics/): exact glyph subsets of the overlay text, regenerated by `vp run fonts:ja`. */
 @font-face {
-    font-family: "Cormorant Garamond";
+    font-family: "Mochiy Pop One";
     font-style: normal;
-    font-weight: 300 700;
+    font-weight: 400;
     font-display: swap;
-    src: url("fonts/cormorant-normal-latin-ext.woff2") format("woff2");
+    src: url("/fonts/mochiy-pop-one-ja-400.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/noto-sans-jp-ja-400.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Zen Maru Gothic";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("/fonts/zen-maru-gothic-ja-500.woff2") format("woff2");
+}
+
+/* Georgia, scaled to Literata's advance widths and vertical metrics (ascent
+   1177/1000, descent 308/1000, no line gap), so swapping in the web font does
+   not reflow the page. */
+@font-face {
+    font-family: "Literata Fallback";
+    src: local("Georgia"), local("Times New Roman");
+    size-adjust: 106.97%;
+    ascent-override: 110.03%;
+    descent-override: 28.79%;
+    line-gap-override: 0%;
+}
+
+/* Charter Latin faces: regenerated by `vp run fonts:latin`. */
+@font-face {
+    font-family: "IBM Plex Mono";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/ibm-plex-mono-400-latin-ext.woff2") format("woff2");
     unicode-range:
         U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
         U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
         U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 @font-face {
-    font-family: "Cormorant Garamond";
+    font-family: "IBM Plex Mono";
     font-style: normal;
-    font-weight: 300 700;
+    font-weight: 400;
     font-display: swap;
-    src: url("fonts/cormorant-normal-latin.woff2") format("woff2");
+    src: url("/fonts/ibm-plex-mono-400-latin.woff2") format("woff2");
     unicode-range:
         U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
         U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
         U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
-    font-family: "Cormorant Garamond";
-    font-style: italic;
-    font-weight: 300 700;
+    font-family: "IBM Plex Mono";
+    font-style: normal;
+    font-weight: 500;
     font-display: swap;
-    src: url("fonts/cormorant-italic-latin-ext.woff2") format("woff2");
+    src: url("/fonts/ibm-plex-mono-500-latin-ext.woff2") format("woff2");
     unicode-range:
         U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
         U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
         U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 @font-face {
-    font-family: "Cormorant Garamond";
-    font-style: italic;
-    font-weight: 300 700;
+    font-family: "IBM Plex Mono";
+    font-style: normal;
+    font-weight: 500;
     font-display: swap;
-    src: url("fonts/cormorant-italic-latin.woff2") format("woff2");
+    src: url("/fonts/ibm-plex-mono-500-latin.woff2") format("woff2");
+    unicode-range:
+        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+        U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+        U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: "IBM Plex Mono";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("/fonts/ibm-plex-mono-600-latin-ext.woff2") format("woff2");
+    unicode-range:
+        U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+        U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+        U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+    font-family: "IBM Plex Mono";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("/fonts/ibm-plex-mono-600-latin.woff2") format("woff2");
+    unicode-range:
+        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+        U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+        U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: "Literata";
+    font-style: italic;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("/fonts/literata-italic-latin-ext.woff2") format("woff2");
+    unicode-range:
+        U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+        U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+        U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+    font-family: "Literata";
+    font-style: italic;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("/fonts/literata-italic-latin.woff2") format("woff2");
+    unicode-range:
+        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+        U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+        U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: "Literata";
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("/fonts/literata-normal-latin-ext.woff2") format("woff2");
+    unicode-range:
+        U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+        U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+        U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+    font-family: "Literata";
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("/fonts/literata-normal-latin.woff2") format("woff2");
     unicode-range:
         U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
         U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
@@ -1467,8 +1600,9 @@ footer a:hover {
     /* --- Base typography --- */
     body {
         background: white;
-        color: #1a1a1a;
-        font-family: "Cormorant Garamond", "Lora", Georgia, serif;
+        color: var(--ink);
+        font-family: var(--prose);
+        font-variant-numeric: lining-nums proportional-nums;
         font-size: 10.8pt;
         line-height: 1.52;
         text-rendering: optimizeLegibility;
@@ -1509,13 +1643,15 @@ footer a:hover {
         content: "";
     }
 
-    /* --- Header: Oxford blue title band --- */
+    /* --- Header: a typeset title block, not a reversed-out panel. Paper is
+       not a screen: a full-bleed ink rectangle wastes toner and greys out in
+       photocopy, so the title sits on the page with a rule beneath it. --- */
     header {
-        background: #002147 !important;
-        color: white;
-        padding: 14mm 12mm 11mm;
-        margin: 0 -18mm 0;
-        width: calc(100% + 36mm);
+        background: transparent !important;
+        color: var(--ink);
+        padding: 0 0 6mm;
+        margin: 0 0 8mm;
+        width: auto;
         text-align: center;
         overflow: visible;
         border-bottom: none;
@@ -1527,7 +1663,7 @@ footer a:hover {
         display: block;
         width: 32mm;
         height: 0.6pt;
-        background: #c9a961;
+        background: var(--harvest);
         margin: 7mm auto 0;
     }
 
@@ -1541,14 +1677,15 @@ footer a:hover {
     }
 
     header > .site-header__title-block h1 {
-        color: white;
+        color: var(--ink);
     }
 
     header h1 {
         opacity: 1 !important;
         animation: none !important;
-        color: white;
-        font-family: "Cormorant Garamond", Georgia, serif;
+        color: var(--ink);
+        font-family: var(--prose);
+        font-variant-numeric: lining-nums proportional-nums;
         font-size: 22pt;
         font-weight: 600;
         line-height: 1.12;
@@ -1557,19 +1694,29 @@ footer a:hover {
         text-wrap: balance;
     }
 
-    header p,
     header .chapter-date {
         margin-top: 3mm;
-        color: rgba(255, 255, 255, 0.78);
-        font-family: var(--sans);
+        color: var(--soil);
+        font-family: var(--machine);
         font-size: 8pt;
         font-weight: 400;
         letter-spacing: 0.06em;
         text-transform: uppercase;
     }
 
+    /* The standfirst is the human voice: prose, sentence case. */
+    header p:not(.chapter-date) {
+        margin-top: 3mm;
+        color: var(--soil);
+        font-family: var(--prose);
+        font-size: 9.5pt;
+        line-height: 1.5;
+        text-transform: none;
+        letter-spacing: 0;
+    }
+
     /* --- Oxford institutional line below header --- */
-    header + main::before {
+    header ~ main::before {
         content: "6-Pack of Care  ·  Oxford Institute for Ethics in AI  ·  Accelerator Fellowship Programme";
         display: block;
         text-align: center;
@@ -1578,10 +1725,10 @@ footer a:hover {
         font-weight: 500;
         letter-spacing: 0.12em;
         text-transform: uppercase;
-        color: #002147;
+        color: var(--oxford);
         padding: 5mm 0 4mm;
         margin: 0 auto 6mm;
-        border-bottom: 0.4pt solid #002147;
+        border-bottom: 0.4pt solid var(--oxford);
         max-width: 34em;
     }
 
@@ -1603,16 +1750,18 @@ footer a:hover {
 
     /* --- Headings --- */
     h2 {
-        font-family: "Cormorant Garamond", Georgia, serif;
-        color: #002147;
-        border-bottom: 1pt solid #002147;
+        font-family: var(--prose);
+        font-variant-numeric: lining-nums proportional-nums;
+        color: var(--oxford);
+        border-bottom: 1pt solid var(--oxford);
         padding-bottom: 2mm;
     }
 
     h3 {
-        font-family: "Cormorant Garamond", Georgia, serif;
-        color: #002147;
-        border-top-color: #c9a961;
+        font-family: var(--prose);
+        font-variant-numeric: lining-nums proportional-nums;
+        color: var(--oxford);
+        border-top-color: var(--harvest);
     }
 
     /* --- Horizontal rules: gold ornamental --- */
@@ -1630,7 +1779,7 @@ footer a:hover {
         content: "◆";
         display: block;
         font-size: 6pt;
-        color: #c9a961;
+        color: var(--harvest);
         letter-spacing: 3mm;
         line-height: 1;
     }
@@ -1640,48 +1789,49 @@ footer a:hover {
         display: block;
         width: 50mm;
         height: 0.35pt;
-        background: linear-gradient(90deg, transparent, #c9a961, transparent);
+        background: #c8a25c;
         margin: 2mm auto 0;
     }
 
     /* --- Interview page specifics --- */
-    body.interview-page main > * {
+    body.transcript-page main > * {
         max-width: 34em;
         margin-left: auto;
         margin-right: auto;
     }
 
     /* Method note: styled as formal abstract */
-    body.interview-page .method-note {
+    body.transcript-page .method-note {
         margin: 0 auto 7mm;
         padding: 3mm 4mm 3.5mm;
         border: 0.4pt solid #bbb4a8;
-        border-left: 2pt solid #002147;
-        background: #f7f5f1;
+        border-left: 2pt solid var(--oxford);
+        background: var(--surface);
         font-family: var(--sans);
         font-size: 7.8pt;
         line-height: 1.5;
-        color: #444;
+        color: var(--soil);
     }
 
-    body.interview-page .method-note p {
+    body.transcript-page .method-note p {
         margin: 1mm 0;
     }
 
-    body.interview-page .method-note a[href^="http"] {
+    body.transcript-page .method-note a[href^="http"] {
         text-decoration: underline;
         text-decoration-thickness: 0.4pt;
         text-underline-offset: 1.5pt;
-        color: #002147;
+        color: var(--oxford);
     }
 
     /* Question headings: Oxford blue with gold number accent */
-    body.interview-page h4 {
-        font-family: "Cormorant Garamond", Georgia, serif;
+    body.transcript-page h4 {
+        font-family: var(--prose);
+        font-variant-numeric: lining-nums proportional-nums;
         font-size: 11.5pt;
         line-height: 1.32;
         font-weight: 700;
-        color: #002147;
+        color: var(--oxford);
         margin: 0 0 3.5mm;
         padding: 0 0 0 0;
         text-wrap: balance;
@@ -1689,27 +1839,27 @@ footer a:hover {
     }
 
     /* Style Q1, Q2 etc. labels */
-    body.interview-page h4 a[href^="#q"] {
-        color: #c9a961;
+    body.transcript-page h4 a[href^="#q"] {
+        color: var(--harvest);
         font-weight: 700;
         margin-right: 0.2em;
     }
 
-    body.interview-page h4 + p,
-    body.interview-page h4 + p + p {
+    body.transcript-page h4 + p,
+    body.transcript-page h4 + p + p {
         break-before: avoid-page;
         page-break-before: avoid;
     }
 
     /* Speaker turn separators */
-    body.interview-page main p:has(> strong:first-child) {
+    body.transcript-page main p:has(> strong:first-child) {
         border-top: 0.35pt solid #d4cfc7;
         padding-top: 4mm;
         margin-top: 5mm;
     }
 
     /* Speaker labels: Oxford blue small-caps */
-    body.interview-page main p:has(> strong:first-child) strong:first-child {
+    body.transcript-page main p:has(> strong:first-child) strong:first-child {
         display: inline-block;
         margin-right: 0.5em;
         font-family: var(--sans);
@@ -1717,11 +1867,11 @@ footer a:hover {
         font-weight: 600;
         letter-spacing: 0.06em;
         text-transform: uppercase;
-        color: #002147;
+        color: var(--oxford);
     }
 
     /* Endorsement / Qualification / Correction labels: differentiated */
-    body.interview-page
+    body.transcript-page
         main
         p:has(> strong:first-child:not(:only-child))
         strong:first-child {
@@ -1731,15 +1881,15 @@ footer a:hover {
 
     /* Blockquotes in print */
     blockquote {
-        border-left: 1.5pt solid #002147;
+        border-left: 1.5pt solid var(--oxford);
         padding-left: 5mm;
-        color: #333;
+        color: var(--soil);
         font-style: italic;
     }
 
     /* Emphasis in print */
     strong {
-        color: #002147;
+        color: var(--oxford);
         font-weight: 700;
     }
 
@@ -1748,37 +1898,39 @@ footer a:hover {
     }
 
     /* --- Footer imprint on last page --- */
-    body.interview-page main::after {
+    body.transcript-page main::after {
         content: "© 2025 Audrey Tang & Caroline Green · Oxford Institute for Ethics in AI · University of Oxford";
         display: block;
         max-width: 34em;
         margin: 10mm auto 0;
         padding: 4mm 0 0;
-        border-top: 0.4pt solid #002147;
+        border-top: 0.4pt solid var(--oxford);
         font-family: var(--sans);
         font-size: 6pt;
         font-weight: 500;
         letter-spacing: 0.1em;
         text-transform: uppercase;
-        color: #002147;
+        color: var(--oxford);
         text-align: center;
     }
 }
 
 @page {
-    size: A4 portrait;
+    /* No forced sheet size: the charter asks print to fit A4 and US Letter
+       alike, so the paper in the tray decides and these margins suit both. */
     margin: 18mm 20mm 22mm;
 
     @bottom-center {
         content: counter(page);
-        font-family: "Cormorant Garamond", Georgia, serif;
+        font-family: var(--prose);
+        font-variant-numeric: lining-nums proportional-nums;
         font-size: 8pt;
-        color: #002147;
+        color: var(--oxford);
     }
 
     @top-center {
-        content: "Interview with Article Zero";
-        font-family: "Outfit", system-ui, sans-serif;
+        content: "civic.ai";
+        font-family: var(--machine);
         font-size: 6pt;
         font-weight: 500;
         letter-spacing: 0.14em;
@@ -1795,22 +1947,6 @@ footer a:hover {
         content: none;
     }
     margin-top: 0;
-}
-
-/* ─── CONFERENCE PAGE ─── */
-.conf-intro {
-    font-family: var(--serif);
-    font-size: 1.15rem;
-    color: var(--muted);
-    border-left: 3px solid var(--gold);
-    padding: 16px 24px;
-    background: var(--warm);
-    border-radius: 0 4px 4px 0;
-    margin: 0 0 2em;
-}
-
-.conf-intro p {
-    margin: 0.5em 0;
 }
 
 .conf-quote {
@@ -1837,7 +1973,8 @@ footer a:hover {
     margin: 0;
     padding: 0 0 0 1.2em;
     border: 0;
-    font-family: "Cormorant Garamond", var(--serif);
+    font-family: var(--prose);
+    font-variant-numeric: lining-nums proportional-nums;
     font-size: 1.25rem;
     font-style: italic;
     line-height: 1.55;
@@ -1854,7 +1991,8 @@ footer a:hover {
     position: absolute;
     top: -0.15em;
     left: -0.05em;
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: var(--prose);
+    font-variant-numeric: lining-nums proportional-nums;
     font-size: 3.5rem;
     font-style: normal;
     line-height: 1;
@@ -1868,7 +2006,8 @@ footer a:hover {
     position: absolute;
     bottom: -0.5em;
     right: -0.1em;
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: var(--prose);
+    font-variant-numeric: lining-nums proportional-nums;
     font-size: 3.5rem;
     font-style: normal;
     line-height: 1;
@@ -1916,18 +2055,6 @@ footer a:hover {
     .conf-quote-portrait {
         width: 128px;
         justify-self: start;
-    }
-
-    .conf-quote--mirror {
-        grid-template-columns: 1fr auto;
-    }
-
-    .conf-quote--mirror .conf-quote-portrait {
-        order: 1;
-    }
-
-    .conf-quote--mirror figcaption {
-        text-align: left;
     }
 }
 
@@ -2102,7 +2229,7 @@ footer a:hover {
 }
 
 .conf-goal p {
-    font-size: 0.92rem;
+    font-size: 1.125rem;
     color: var(--muted);
     margin: 0;
     line-height: 1.6;
@@ -2131,7 +2258,7 @@ footer a:hover {
     top: 8px;
     bottom: 8px;
     width: 2px;
-    background: linear-gradient(to bottom, var(--gold), var(--teal));
+    background: var(--rule);
     border-radius: 1px;
 }
 
@@ -2170,6 +2297,10 @@ footer a:hover {
 
 .conf-detail {
     flex: 1;
+    /* A flex item keeps its min-content width by default; let it shrink so a
+       320px phone does not scroll sideways. */
+    min-width: 0;
+    overflow-wrap: break-word;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 4px;
@@ -2205,18 +2336,6 @@ footer a:hover {
 .conf-break::before {
     border-color: var(--gold);
     background: var(--surface);
-}
-
-.conf-tool-note {
-    text-align: center;
-    font-family: var(--sans);
-    font-size: 0.82rem;
-    color: var(--muted);
-    background: var(--warm);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 10px 16px;
-    margin: 0 0 2em;
 }
 
 /* Mobile adjustments for agenda timeline */
@@ -2423,6 +2542,33 @@ body.comics-page main {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
+.comics-alt {
+    padding: 0 12px 10px;
+    background: var(--warm);
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    text-align: center;
+}
+
+.comics-alt summary {
+    padding: 6px 0;
+    color: var(--teal);
+    cursor: pointer;
+}
+
+.comics-alt p {
+    font-family: var(--prose);
+    margin: 0.6em 0;
+    color: var(--text);
+    font-size: 0.92rem;
+    line-height: 1.55;
+    text-align: left;
+}
+
+.comics-overview .comics-alt {
+    background: none;
+}
+
 @media print {
     .ja-ov-layer,
     .comics-gallery .comics-page-label {
@@ -2431,6 +2577,11 @@ body.comics-page main {
 }
 
 /* ─── POLIS REPORT ─── */
+.polis-generated-report :not(pre) > code {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
 .polis-overview {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2621,13 +2772,6 @@ body.comics-page main {
     filter: brightness(1.2);
 }
 
-.polis-source {
-    text-align: center;
-    margin: 2em 0;
-    font-family: var(--sans);
-    font-size: 0.85rem;
-}
-
 @media (max-width: 719px) {
     .polis-statement {
         padding: 16px;
@@ -2641,20 +2785,18 @@ body.comics-page main {
 /* ─── DARK MODE ─── */
 
 :root[data-theme="dark"] {
-    --paper: #111820;
-    --warm: #161e28;
-    --surface: #1c2535;
-    --card: #161e28;
-    --text: #b8b4ac;
-    --muted: #8a96a8;
-    --heading: #e8e4dc;
-    --border: rgba(255, 255, 255, 0.1);
-    --gold: #c9a961;
-    --teal: #4bc3d4;
-    --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    --shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.4);
-    --accent-teal: #4bc3d4;
-    --accent-blue: #4bc3d4;
+    --field: #191c22;
+    --surface: #20242c;
+    --ink: #eae4d4;
+    --soil: #a89f8d;
+    --moss: #8fb79a;
+    --cinnabar: #e06844;
+    --harvest: #c8a25c;
+    --rule: #343945;
+    --warm: #1d2027;
+    --gold-light: #c8a25c;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.35);
 }
 
 html[data-theme="dark"] main th {
@@ -2686,7 +2828,7 @@ html[data-theme="dark"] .faq-filter button:hover,
 html[data-theme="dark"] .faq-filter button:focus-visible,
 html[data-theme="dark"] .faq-filter button[aria-pressed="true"] {
     background: var(--teal);
-    color: var(--ink);
+    color: var(--field);
 }
 
 html[data-theme="dark"] .polis-bar-disagree {
@@ -2712,15 +2854,15 @@ html[data-theme="dark"] .polis-consensus-badge {
     border-color: color-mix(in srgb, var(--teal) 40%, transparent);
 }
 
-html[data-theme="dark"] .polis-dot-plot circle[fill="#002147"] {
+html[data-theme="dark"] .polis-dot-plot circle[fill="var(--oxford)"] {
     fill: #7eb8d0;
 }
 
-html[data-theme="dark"] .polis-dot-plot text[fill="#002147"] {
+html[data-theme="dark"] .polis-dot-plot text[fill="var(--oxford)"] {
     fill: #7eb8d0;
 }
 
-html[data-theme="dark"] .polis-dot-plot circle[stroke="#002147"] {
+html[data-theme="dark"] .polis-dot-plot circle[stroke="var(--oxford)"] {
     stroke: #7eb8d0;
 }
 
@@ -2767,18 +2909,7 @@ html[data-theme="dark"] .audio-section {
     padding: 36px;
     border: 1px solid color-mix(in srgb, var(--oxford-blue) 10%, transparent);
     border-radius: 28px;
-    background:
-        radial-gradient(
-            circle at top left,
-            rgba(42, 127, 138, 0.12),
-            transparent 38%
-        ),
-        radial-gradient(
-            circle at 80% 20%,
-            rgba(196, 97, 74, 0.13),
-            transparent 28%
-        ),
-        linear-gradient(145deg, #fffdf9, #f3efe8);
+    background: var(--surface);
     box-shadow: 0 18px 48px rgba(15, 25, 35, 0.08);
 }
 
@@ -2867,7 +2998,7 @@ html[data-theme="dark"] .audio-section {
 .polis-pill-nav a:focus-visible,
 .polis-pill-nav a.is-active {
     background: var(--oxford-blue);
-    color: #fff;
+    color: var(--surface);
     transform: translateY(-1px);
 }
 
@@ -2875,7 +3006,7 @@ html[data-theme="dark"] .audio-section {
 .polis-statement-card:focus-visible,
 .polis-participant-card:focus-visible,
 .polis-point:focus-visible {
-    outline: 2px solid var(--gold-light);
+    outline: 2px solid var(--moss);
     outline-offset: 3px;
 }
 
@@ -2885,6 +3016,13 @@ html[data-theme="dark"] .audio-section {
 .polis-method-grid {
     display: grid;
     gap: 18px;
+}
+
+.polis-consensus-grid > *,
+.polis-two-up > *,
+.polis-method-grid > *,
+.polis-side-stack > * {
+    min-width: 0;
 }
 
 .polis-stats-grid {
@@ -2922,6 +3060,16 @@ html[data-theme="dark"] .audio-section {
     align-items: start;
     margin-bottom: 32px;
 }
+.polis-consensus-card,
+.polis-side-card,
+.polis-visual-card {
+    max-width: none;
+    margin: 0;
+}
+
+.polis-side-card a {
+    overflow-wrap: anywhere;
+}
 
 .polis-consensus-card,
 .polis-side-card,
@@ -2935,17 +3083,7 @@ html[data-theme="dark"] .audio-section {
 
 .polis-consensus-card {
     padding: 28px;
-    background:
-        linear-gradient(
-            180deg,
-            rgba(255, 255, 255, 0.9),
-            rgba(255, 250, 244, 0.92)
-        ),
-        radial-gradient(
-            circle at top right,
-            rgba(196, 97, 74, 0.11),
-            transparent 32%
-        );
+    background: var(--surface);
 }
 
 .polis-card__header {
@@ -3038,14 +3176,14 @@ html[data-theme="dark"] .audio-section {
     justify-content: center;
     padding: 8px 12px;
     background: var(--oxford-blue);
-    color: #fff;
+    color: #fbfaf4;
 }
 
 .polis-status-pill {
     margin: 0 0 10px;
     padding: 9px 14px;
     background: color-mix(in srgb, var(--status-color) 12%, white);
-    color: var(--status-color);
+    color: var(--ink);
 }
 
 .polis-metric-pair {
@@ -3278,13 +3416,7 @@ html[data-theme="dark"] .audio-section {
     margin-bottom: 16px;
     border: 1px solid rgba(15, 25, 35, 0.06);
     border-radius: 20px;
-    background:
-        radial-gradient(
-            circle at top left,
-            rgba(42, 127, 138, 0.08),
-            transparent 32%
-        ),
-        linear-gradient(180deg, #fffaf6, #f4efe7);
+    background: var(--warm);
 }
 
 .polis-point {
@@ -3511,18 +3643,7 @@ html[data-theme="dark"] .audio-section {
 /* ─── POLIS DELIBERATION MIRROR — DARK MODE ─── */
 
 html[data-theme="dark"] .polis-hero__copy {
-    background:
-        radial-gradient(
-            circle at top left,
-            rgba(42, 127, 138, 0.15),
-            transparent 38%
-        ),
-        radial-gradient(
-            circle at 80% 20%,
-            rgba(196, 97, 74, 0.1),
-            transparent 28%
-        ),
-        linear-gradient(145deg, var(--surface), var(--warm));
+    background: var(--surface);
     border-color: var(--border);
     box-shadow: 0 18px 48px rgba(0, 0, 0, 0.25);
 }
@@ -3548,7 +3669,7 @@ html[data-theme="dark"] .polis-pill-nav a:hover,
 html[data-theme="dark"] .polis-pill-nav a:focus-visible,
 html[data-theme="dark"] .polis-pill-nav a.is-active {
     background: var(--teal);
-    color: #fff;
+    color: var(--surface);
 }
 
 html[data-theme="dark"] .polis-consensus-card,
@@ -3561,13 +3682,7 @@ html[data-theme="dark"] .polis-error-card {
 }
 
 html[data-theme="dark"] .polis-consensus-card {
-    background:
-        linear-gradient(180deg, var(--surface), var(--warm)),
-        radial-gradient(
-            circle at top right,
-            rgba(196, 97, 74, 0.08),
-            transparent 32%
-        );
+    background: var(--surface);
 }
 
 html[data-theme="dark"] .polis-statement-card,
@@ -3613,17 +3728,11 @@ html[data-theme="dark"] .polis-badge {
 
 html[data-theme="dark"] .polis-badge--warm {
     background: rgba(231, 76, 60, 0.12);
-    color: #e74c3c;
+    color: var(--ink);
 }
 
 html[data-theme="dark"] .polis-plot {
-    background:
-        radial-gradient(
-            circle at top left,
-            rgba(75, 195, 212, 0.06),
-            transparent 32%
-        ),
-        linear-gradient(180deg, var(--surface), var(--warm));
+    background: var(--warm);
     border-color: var(--border);
 }
 
@@ -3668,10 +3777,11 @@ html[data-theme="dark"] .polis-status-pill {
     position: relative;
 }
 
+/* Terminal copy-boxes are machinery: squared, hairline, mono (DESIGN.md §11.8) */
 pre {
     background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-machine);
     padding: 0.85rem 1rem;
     margin: 1.1rem 0;
     overflow-x: auto;
@@ -3679,9 +3789,7 @@ pre {
 }
 
 pre code {
-    font-family:
-        ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono",
-        monospace;
+    font-family: var(--machine);
     font-size: 0.82rem;
     line-height: 1.6;
     color: var(--text);
@@ -3694,19 +3802,15 @@ pre code {
     position: absolute;
     top: 0.45rem;
     right: 0.45rem;
-    font-family:
-        system-ui,
-        -apple-system,
-        sans-serif;
+    font-family: var(--machine);
     font-size: 0.68rem;
     line-height: 1;
     padding: 0.3em 0.6em;
     color: var(--muted);
     background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 6px;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-machine);
     cursor: pointer;
-    opacity: 0.6;
     transition:
         opacity 0.15s ease,
         color 0.15s ease,
@@ -3724,6 +3828,14 @@ pre code {
     opacity: 1;
     color: var(--teal);
     border-color: var(--teal);
+}
+
+/* Phones: long prompts wrap rather than scroll sideways; Copy still copies them whole. */
+@media (max-width: 600px) {
+    pre code {
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+    }
 }
 
 /* Agent bootstrap directive: fine print tucked under the hero; present and machine-readable */
@@ -3773,8 +3885,8 @@ pre code {
 }
 .in-short__body {
     margin: 0;
-    font-family: var(--sans);
-    font-size: 0.98rem;
+    font-family: var(--prose);
+    font-size: 1.125rem;
     line-height: 1.6;
     color: var(--text);
 }
@@ -3815,7 +3927,7 @@ pre code {
     gap: 0.35rem;
     margin: 0;
     padding-left: 1.1em;
-    font-family: var(--sans);
+    font-family: var(--prose);
     font-size: 0.92rem;
     line-height: 1.55;
     color: var(--text);
@@ -3834,6 +3946,26 @@ pre code {
 h2[id],
 h4[id] {
     scroll-margin-top: 24px;
+}
+
+h3[id^="faq-"] {
+    /* Clear the sticky .faq-filter pill (top: 8px, ~48px tall single-row,
+       ~90px wrapped two-row on narrow screens) on #faq-N anchor jumps. */
+    scroll-margin-top: 96px;
+}
+
+@media (max-width: 640px) {
+    h3[id^="faq-"] {
+        /* Wrapped pill can reach three rows on very narrow screens. */
+        scroll-margin-top: 140px;
+    }
+}
+
+/* Theme and search buttons only work with JavaScript; without it they would
+   be dead affordances, so they appear once the head script marks html.js. */
+html:not(.js) .theme-toggle,
+html:not(.js) .search-toggle {
+    display: none;
 }
 
 /* ─── ON-THIS-PAGE CONTENTS ─── */
@@ -3862,19 +3994,27 @@ h4[id] {
     list-style: none;
 }
 .page-toc li {
-    margin: 0.25em 0;
+    /* flow-root keeps each entry's 4px margins from collapsing into its
+       neighbour's, so entries stay 8px apart. */
+    display: flow-root;
+    margin: 0;
     line-height: 1.4;
 }
-.page-toc__h3 {
-    padding-left: 0.8em;
-}
-.page-toc__h4 {
-    padding-left: 1.6em;
+
+/* The FAQ filter hides contents entries with `hidden`; flow-root above would
+   otherwise keep them on screen. */
+.page-toc li[hidden] {
+    display: none;
 }
 .page-toc a {
     font-size: 0.9rem;
     text-decoration: none;
     color: var(--text);
+    /* Keep every entry a 24px+ target (WCAG 2.2 target size). The spacing is
+       margin, not padding: overflow on a line-clamped box clips at the padding
+       edge, so bottom padding showed the top of the clamped third line. */
+    min-height: 24px;
+    margin-block: 4px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -3931,182 +4071,43 @@ h4[id] {
 .reading-path__steps {
     margin: 0;
     padding-left: 1.2em;
-    font-size: 0.9rem;
+    font-size: 1.125rem;
 }
 .reading-path__steps li {
     margin: 0.3em 0;
     line-height: 1.5;
 }
 
-/* ─── CSS-ONLY LQIP (leanrada.com/notes/css-only-lqip/) ─── */
-.lqip {
-    --lqip-ca: mod(
-        round(down, calc((var(--lqip) + pow(2, 19)) / pow(2, 18))),
-        4
-    );
-    --lqip-cb: mod(
-        round(down, calc((var(--lqip) + pow(2, 19)) / pow(2, 16))),
-        4
-    );
-    --lqip-cc: mod(
-        round(down, calc((var(--lqip) + pow(2, 19)) / pow(2, 14))),
-        4
-    );
-    --lqip-cd: mod(
-        round(down, calc((var(--lqip) + pow(2, 19)) / pow(2, 12))),
-        4
-    );
-    --lqip-ce: mod(
-        round(down, calc((var(--lqip) + pow(2, 19)) / pow(2, 10))),
-        4
-    );
-    --lqip-cf: mod(
-        round(down, calc((var(--lqip) + pow(2, 19)) / pow(2, 8))),
-        4
-    );
-    --lqip-ll: mod(
-        round(down, calc((var(--lqip) + pow(2, 19)) / pow(2, 6))),
-        4
-    );
-    --lqip-aaa: mod(
-        round(down, calc((var(--lqip) + pow(2, 19)) / pow(2, 3))),
-        8
-    );
-    --lqip-bbb: mod(calc(var(--lqip) + pow(2, 19)), 8);
-    --lqip-ca-clr: hsl(0 0% calc(var(--lqip-ca) / 3 * 60% + 20%));
-    --lqip-cb-clr: hsl(0 0% calc(var(--lqip-cb) / 3 * 60% + 20%));
-    --lqip-cc-clr: hsl(0 0% calc(var(--lqip-cc) / 3 * 60% + 20%));
-    --lqip-cd-clr: hsl(0 0% calc(var(--lqip-cd) / 3 * 60% + 20%));
-    --lqip-ce-clr: hsl(0 0% calc(var(--lqip-ce) / 3 * 60% + 20%));
-    --lqip-cf-clr: hsl(0 0% calc(var(--lqip-cf) / 3 * 60% + 20%));
-    --lqip-base-clr: oklab(
-        calc(var(--lqip-ll) / 3 * 0.6 + 0.2)
-            calc(var(--lqip-aaa) / 8 * 0.7 - 0.35)
-            calc((var(--lqip-bbb) + 1) / 8 * 0.7 - 0.35)
-    );
-    --lqip-s10: 2%;
-    --lqip-s20: 8%;
-    --lqip-s30: 18%;
-    --lqip-s40: 32%;
-    background-blend-mode:
-        hard-light, hard-light, hard-light, hard-light, hard-light, hard-light,
-        normal;
-    background-image:
-        radial-gradient(
-            50% 75% at 16.67% 25%,
-            var(--lqip-ca-clr),
-            rgb(from var(--lqip-ca-clr) r g b / calc(100% - var(--lqip-s10)))
-                10%,
-            rgb(from var(--lqip-ca-clr) r g b / calc(100% - var(--lqip-s20)))
-                20%,
-            rgb(from var(--lqip-ca-clr) r g b / calc(100% - var(--lqip-s30)))
-                30%,
-            rgb(from var(--lqip-ca-clr) r g b / calc(100% - var(--lqip-s40)))
-                40%,
-            rgb(from var(--lqip-ca-clr) r g b / calc(var(--lqip-s40))) 60%,
-            rgb(from var(--lqip-ca-clr) r g b / calc(var(--lqip-s30))) 70%,
-            rgb(from var(--lqip-ca-clr) r g b / calc(var(--lqip-s20))) 80%,
-            rgb(from var(--lqip-ca-clr) r g b / calc(var(--lqip-s10))) 90%,
-            transparent
-        ),
-        radial-gradient(
-            50% 75% at 50% 25%,
-            var(--lqip-cb-clr),
-            rgb(from var(--lqip-cb-clr) r g b / calc(100% - var(--lqip-s10)))
-                10%,
-            rgb(from var(--lqip-cb-clr) r g b / calc(100% - var(--lqip-s20)))
-                20%,
-            rgb(from var(--lqip-cb-clr) r g b / calc(100% - var(--lqip-s30)))
-                30%,
-            rgb(from var(--lqip-cb-clr) r g b / calc(100% - var(--lqip-s40)))
-                40%,
-            rgb(from var(--lqip-cb-clr) r g b / calc(var(--lqip-s40))) 60%,
-            rgb(from var(--lqip-cb-clr) r g b / calc(var(--lqip-s30))) 70%,
-            rgb(from var(--lqip-cb-clr) r g b / calc(var(--lqip-s20))) 80%,
-            rgb(from var(--lqip-cb-clr) r g b / calc(var(--lqip-s10))) 90%,
-            transparent
-        ),
-        radial-gradient(
-            50% 75% at 83.33% 25%,
-            var(--lqip-cc-clr),
-            rgb(from var(--lqip-cc-clr) r g b / calc(100% - var(--lqip-s10)))
-                10%,
-            rgb(from var(--lqip-cc-clr) r g b / calc(100% - var(--lqip-s20)))
-                20%,
-            rgb(from var(--lqip-cc-clr) r g b / calc(100% - var(--lqip-s30)))
-                30%,
-            rgb(from var(--lqip-cc-clr) r g b / calc(100% - var(--lqip-s40)))
-                40%,
-            rgb(from var(--lqip-cc-clr) r g b / calc(var(--lqip-s40))) 60%,
-            rgb(from var(--lqip-cc-clr) r g b / calc(var(--lqip-s30))) 70%,
-            rgb(from var(--lqip-cc-clr) r g b / calc(var(--lqip-s20))) 80%,
-            rgb(from var(--lqip-cc-clr) r g b / calc(var(--lqip-s10))) 90%,
-            transparent
-        ),
-        radial-gradient(
-            50% 75% at 16.67% 75%,
-            var(--lqip-cd-clr),
-            rgb(from var(--lqip-cd-clr) r g b / calc(100% - var(--lqip-s10)))
-                10%,
-            rgb(from var(--lqip-cd-clr) r g b / calc(100% - var(--lqip-s20)))
-                20%,
-            rgb(from var(--lqip-cd-clr) r g b / calc(100% - var(--lqip-s30)))
-                30%,
-            rgb(from var(--lqip-cd-clr) r g b / calc(100% - var(--lqip-s40)))
-                40%,
-            rgb(from var(--lqip-cd-clr) r g b / calc(var(--lqip-s40))) 60%,
-            rgb(from var(--lqip-cd-clr) r g b / calc(var(--lqip-s30))) 70%,
-            rgb(from var(--lqip-cd-clr) r g b / calc(var(--lqip-s20))) 80%,
-            rgb(from var(--lqip-cd-clr) r g b / calc(var(--lqip-s10))) 90%,
-            transparent
-        ),
-        radial-gradient(
-            50% 75% at 50% 75%,
-            var(--lqip-ce-clr),
-            rgb(from var(--lqip-ce-clr) r g b / calc(100% - var(--lqip-s10)))
-                10%,
-            rgb(from var(--lqip-ce-clr) r g b / calc(100% - var(--lqip-s20)))
-                20%,
-            rgb(from var(--lqip-ce-clr) r g b / calc(100% - var(--lqip-s30)))
-                30%,
-            rgb(from var(--lqip-ce-clr) r g b / calc(100% - var(--lqip-s40)))
-                40%,
-            rgb(from var(--lqip-ce-clr) r g b / calc(var(--lqip-s40))) 60%,
-            rgb(from var(--lqip-ce-clr) r g b / calc(var(--lqip-s30))) 70%,
-            rgb(from var(--lqip-ce-clr) r g b / calc(var(--lqip-s20))) 80%,
-            rgb(from var(--lqip-ce-clr) r g b / calc(var(--lqip-s10))) 90%,
-            transparent
-        ),
-        radial-gradient(
-            50% 75% at 83.33% 75%,
-            var(--lqip-cf-clr),
-            rgb(from var(--lqip-cf-clr) r g b / calc(100% - var(--lqip-s10)))
-                10%,
-            rgb(from var(--lqip-cf-clr) r g b / calc(100% - var(--lqip-s20)))
-                20%,
-            rgb(from var(--lqip-cf-clr) r g b / calc(100% - var(--lqip-s30)))
-                30%,
-            rgb(from var(--lqip-cf-clr) r g b / calc(100% - var(--lqip-s40)))
-                40%,
-            rgb(from var(--lqip-cf-clr) r g b / calc(var(--lqip-s40))) 60%,
-            rgb(from var(--lqip-cf-clr) r g b / calc(var(--lqip-s30))) 70%,
-            rgb(from var(--lqip-cf-clr) r g b / calc(var(--lqip-s20))) 80%,
-            rgb(from var(--lqip-cf-clr) r g b / calc(var(--lqip-s10))) 90%,
-            transparent
-        ),
-        linear-gradient(var(--lqip-base-clr), var(--lqip-base-clr));
+/* ─── GLOSSARY LIST ─── */
+.glossary-tier h2 {
+    margin-top: 0.55em;
+    margin-bottom: 0.35em;
+    scroll-margin-top: 96px;
+}
+.glossary-tier:first-of-type h2 {
+    margin-top: 0.2em;
 }
 
-/* ─── GLOSSARY LIST ─── */
+.glossary-tier p {
+    margin-top: 0;
+    margin-bottom: 0.7em;
+    color: var(--muted);
+}
+
 .glossary-list {
-    margin: 1.5em 0;
+    margin: 0.5em 0 0.35em;
 }
 .glossary-list dt {
     font-family: var(--sans);
     font-weight: 600;
     color: var(--heading);
     margin-top: 1.3em;
-    scroll-margin-top: 24px;
+    /* Clear the sticky .faq-filter pill (top: 8px, ~48px tall single-row,
+       ~90px wrapped two-row on narrow screens) on #<term> anchor jumps. */
+    scroll-margin-top: 96px;
+}
+.glossary-list dt:first-child {
+    margin-top: 0.5em;
 }
 .glossary-list dd {
     margin: 0.3em 0 0;
@@ -4114,611 +4115,13 @@ h4[id] {
     line-height: 1.6;
 }
 
-/* ─── CONCEPT MAP · THE DAY WHEEL ───
-   Build-time sundial + station manifest rendered by src/lib/conceptMap.ts
-   from _data/concept_map.json. Zero client JS; everything below is
-   progressive enhancement over plain readable HTML. */
-
-.cmap {
-    --cmap-p6: #a753f6;
-    margin-block: 1.5rem;
-}
-
-.cmap
-    :is(
-        .cmap-station,
-        .cmap-chip,
-        .cmap-field-chip,
-        .cmap-badge,
-        .cmap-frame-title
-    ) {
-    --ink: var(--ink-l);
-}
-
-html[data-theme="dark"]
-    .cmap
-    :is(
-        .cmap-station,
-        .cmap-chip,
-        .cmap-field-chip,
-        .cmap-badge,
-        .cmap-frame-title
-    ) {
-    --ink: var(--ink-d);
-}
-
-html[data-theme="dark"] .cmap {
-    --cmap-p6: #a753f6;
-}
-
-/* ── the membrane frame: Pack 6 drawn as what it is ── */
-
-.cmap-frame {
-    position: relative;
-    border: 2px solid var(--cmap-p6);
-    border-radius: 12px;
-    padding: 1.1rem 1.1rem 0.9rem;
-}
-
-.cmap-frame-title {
-    display: inline-block;
-    font-weight: 700;
-    font-size: 0.95rem;
-    color: var(--ink);
-    text-decoration: none;
-    background: var(--paper);
-    padding-inline: 0.55em;
-}
-
-.cmap-frame-title:hover {
-    text-decoration: underline;
-}
-
-.cmap-frame-chips {
-    list-style: none;
-    margin: 0.6rem 0;
-    padding: 0;
-    display: grid;
-    gap: 0.4rem;
-}
-
-.cmap-frame-chip {
-    display: flex;
-    align-items: baseline;
-    gap: 0.45em;
-    font-size: 0.78rem;
-    color: var(--text);
-    background: var(--paper);
-    padding-inline: 0.45em;
-}
-
-.cmap-frame-glyph {
-    color: var(--cmap-p6);
-    font-weight: 700;
-}
-
-.cmap-frame-chip--measure a {
-    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-    font-size: 0.78rem;
-    color: var(--text);
-    text-decoration: none;
-}
-
-.cmap-frame-chip--measure a:hover {
-    text-decoration: underline;
-}
-
-/* ── dial + walk ── */
-
-.cmap-dial {
-    margin: 0 auto;
-    max-width: 440px;
-}
-
-.cmap-dial-frame {
-    position: relative;
-}
-
-.cmap-dial-svg {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.cmap-rim {
-    fill: none;
-    stroke: var(--cmap-p6);
-    stroke-width: 2.5;
-}
-
-.cmap-horizon {
-    stroke: var(--border);
-    stroke-width: 1.5;
-    stroke-dasharray: 2 7;
-}
-
-.cmap-night {
-    fill: none;
-    stroke: var(--muted);
-    stroke-width: 2.5;
-    stroke-dasharray: 3 8;
-    opacity: 0.75;
-}
-
-.cmap-arc {
-    fill: none;
-    stroke-width: 14;
-    stroke-linecap: round;
-    opacity: 0.92;
-}
-
-.cmap-cycle-arrow,
-.cmap-night-arrow {
-    fill: var(--muted);
-}
-
-.cmap-chord {
-    stroke: var(--muted);
-    stroke-width: 2;
-    opacity: 0;
-}
-
-.cmap-chord--dashed {
-    stroke-dasharray: 4 5;
-}
-
-.cmap-chip {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35em;
-    font-size: 0.72rem;
-    font-weight: 700;
-    line-height: 1.1;
-    color: var(--ink);
-    background: var(--surface);
-    border: 1.5px solid var(--hue);
-    border-radius: 999px;
-    padding: 0.28em 0.7em;
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-.cmap-field-dock {
-    margin-top: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.35rem;
-}
-
-.cmap-field-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35em;
-    color: var(--ink);
-    background: var(--surface);
-    border: 1.5px solid var(--hue);
-    border-radius: 999px;
-    padding: 0.28em 0.7em;
-    font-size: 0.72rem;
-    font-weight: 700;
-    line-height: 1.1;
-    text-align: center;
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-.cmap-field-note {
-    margin: 0;
-    max-width: 13rem;
-    color: var(--muted);
-    font-size: 0.72rem;
-    font-weight: 600;
-    line-height: 1.2;
-    text-align: center;
-}
-
-.cmap-chip:hover,
-.cmap-field-chip:hover {
-    background: color-mix(in srgb, var(--hue) 12%, var(--surface));
-}
-
-/* ── stations: the readable manifest ── */
-
-.cmap-zone {
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    border: 0;
-    margin: 1.5rem 0 0.6rem;
-    padding: 0;
-}
-
-.cmap-walk > .cmap-zone:first-child {
-    margin-top: 0;
-}
-
-.cmap-station {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-top: 3px solid var(--hue);
-    border-radius: 6px;
-    padding: 0.85rem 1.05rem 0.95rem;
-    scroll-margin-top: 5rem;
-}
-
-.cmap-phase {
-    margin: 0;
-    font-size: 0.68rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ink);
-}
-
-.cmap-station-title {
-    margin: 0.15rem 0 0.35rem;
-    font-family: var(--serif);
-    font-size: 1.18rem;
-    border: 0;
-    padding: 0;
-}
-
-.cmap-station-title a {
-    color: var(--heading);
-    text-decoration: none;
-}
-
-.cmap-station-title a:hover {
-    text-decoration: underline;
-}
-
-.cmap-measure {
-    margin: 0;
-}
-
-.cmap-measure a {
-    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-    font-size: 0.8rem;
-    color: var(--text);
-    text-decoration: none;
-}
-
-.cmap-measure a:hover {
-    text-decoration: underline;
-}
-
-.cmap-measure-tag {
-    display: inline-block;
-    font-size: 0.66rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--muted);
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    padding: 0 0.5em;
-    margin-right: 0.55em;
-}
-
-.cmap-sends {
-    list-style: none;
-    margin: 0.55rem 0 0;
-    padding: 0;
-    display: grid;
-    gap: 0.35rem;
-}
-
-.cmap-send {
-    display: flex;
-    align-items: baseline;
-    gap: 0.55em;
-    font-size: 0.85rem;
-    color: var(--text);
-}
-
-.cmap-badge {
-    flex: none;
-    display: inline-block;
-    color: var(--ink);
-    font-size: 1.35em;
-    font-weight: 700;
-    line-height: 1;
-    text-decoration: none;
-}
-
-.cmap-badge-glyph {
-    display: inline-block;
-    color: var(--ink);
-}
-
-.cmap-badge:hover {
-    background: color-mix(in srgb, var(--hue) 12%, transparent);
-}
-
-.cmap-send--dashed .cmap-badge {
-    border: 1.5px dashed var(--ink);
-    border-radius: 999px;
-    padding: 0.06em;
-}
-
-.cmap-hand {
-    display: flex;
-    align-items: baseline;
-    gap: 0.6em;
-    margin: 0.6rem 0 0.85rem;
-    padding-left: 1.05rem;
-    font-size: 0.85rem;
-    color: var(--muted);
-}
-
-.cmap-hand-glyph {
-    font-weight: 700;
-}
-
-.cmap-hand--night {
-    border-block: 1px dashed var(--border);
-    padding-block: 0.5rem;
-}
-
-.cmap-loop {
-    margin-left: auto;
-    font-size: 0.8rem;
-    color: var(--muted);
-    white-space: nowrap;
-}
-
-.cmap-guard {
-    margin: 1.3rem 0 0.8rem;
-    border: 1px dashed var(--border);
-    border-radius: 6px;
-    padding: 0.6rem 0.9rem;
-    font-size: 0.8rem;
-    line-height: 1.55;
-    color: var(--muted);
-}
-
-.cmap-legend {
-    margin: 0.9rem auto 0;
-    max-width: 680px;
-    text-align: center;
-    font-size: 0.8rem;
-}
-
-.cmap-legend a {
-    color: var(--muted);
-}
-
-.cmap-legend a:hover {
-    color: var(--heading);
-}
-
-/* ── mobile: walking the day (dawn→sunset rail) ── */
-
-@media (max-width: 719px) {
-    .cmap-walk {
-        position: relative;
-        padding-left: 14px;
-    }
-
-    .cmap-walk::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        width: 3px;
-        border-radius: 2px;
-        background: linear-gradient(
-            180deg,
-            #eb573a 0%,
-            #f09344 24%,
-            #f9dd55 46%,
-            #7cc967 64%,
-            #6197f8 84%,
-            #a753f6 100%
-        );
-    }
-
-    .cmap-dial {
-        margin-bottom: 1.2rem;
-    }
-}
-
-@media (max-width: 479px) {
-    .cmap-chip--cycle {
-        padding: 0.3em 0.55em;
-    }
-
-    .cmap-chip--cycle .cmap-chip-name {
-        font-size: 0;
-    }
-
-    .cmap-chip--cycle .cmap-chip-name::before {
-        content: attr(data-short);
-        font-size: 0.72rem;
-    }
-}
-
-/* ── desktop: sticky dial beside the walk, full-bleed frame ── */
-
-@media (min-width: 720px) {
-    .cmap {
-        margin-inline: calc(50% - 50vw);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-inline: 24px;
-    }
-
-    .cmap-frame {
-        width: min(100%, 1120px);
-        padding: 0 2rem 1.2rem;
-    }
-
-    .cmap-frame-title {
-        position: absolute;
-        top: 0;
-        left: 1.6rem;
-        transform: translateY(-50%);
-    }
-
-    .cmap-body {
-        display: grid;
-        grid-template-columns: minmax(260px, 34%) 1fr;
-        gap: 1.6rem 2.2rem;
-        align-items: start;
-        margin-top: 1.4rem;
-    }
-
-    .cmap-dial {
-        position: sticky;
-        top: 1.5rem;
-        max-width: none;
-    }
-
-    .cmap-guard {
-        margin-bottom: 1.1rem;
-    }
-}
-
-/* frame chips straddle the border only when there is room for one row */
-@media (min-width: 1000px) {
-    .cmap-frame-chips {
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        gap: 0.5rem 1.2rem;
-        padding-inline: 2rem;
-        pointer-events: none;
-    }
-
-    .cmap-frame-chips a {
-        pointer-events: auto;
-    }
-
-    .cmap-frame-chips--top {
-        top: 0;
-        transform: translateY(-50%);
-        padding-left: 18rem;
-    }
-
-    .cmap-frame-chips--bottom {
-        bottom: 0;
-        transform: translateY(50%);
-        justify-content: space-between;
-        padding-right: 3rem;
-    }
-
-    .cmap-frame-chip {
-        pointer-events: auto;
-    }
-}
-
-/* ── hover/focus illumination: ask a pack what it sends ── */
-
-.cmap:has(#st-p1:is(:hover, :focus-within)) .cmap-arc-1,
-.cmap:has(.cmap-chip-1:is(:hover, :focus-visible)) .cmap-arc-1,
-.cmap:has(#st-p2:is(:hover, :focus-within)) .cmap-arc-2,
-.cmap:has(.cmap-chip-2:is(:hover, :focus-visible)) .cmap-arc-2,
-.cmap:has(#st-p3:is(:hover, :focus-within)) .cmap-arc-3,
-.cmap:has(.cmap-chip-3:is(:hover, :focus-visible)) .cmap-arc-3,
-.cmap:has(#st-p4:is(:hover, :focus-within)) .cmap-arc-4,
-.cmap:has(.cmap-chip-4:is(:hover, :focus-visible)) .cmap-arc-4,
-.cmap:has(#st-p5:is(:hover, :focus-within)) .cmap-arc-5,
-.cmap:has(.cmap-chip-5:is(:hover, :focus-visible)) .cmap-arc-5 {
-    stroke-width: 20;
-    opacity: 1;
-}
-
-.cmap:has(.cmap-chip-1:is(:hover, :focus-visible)) .cmap-chord-1-3,
-.cmap:has(.cmap-chip-3:is(:hover, :focus-visible)) .cmap-chord-1-3,
-.cmap:has(#st-p1:is(:hover, :focus-within)) .cmap-chord-1-3,
-.cmap:has(#st-p3:is(:hover, :focus-within)) .cmap-chord-1-3,
-.cmap:has(.cmap-chip-2:is(:hover, :focus-visible)) .cmap-chord-2-4,
-.cmap:has(.cmap-chip-4:is(:hover, :focus-visible)) .cmap-chord-2-4,
-.cmap:has(#st-p2:is(:hover, :focus-within)) .cmap-chord-2-4,
-.cmap:has(#st-p4:is(:hover, :focus-within)) .cmap-chord-2-4 {
-    opacity: 0.9;
-}
-
-.cmap:has(.cmap-chip-1:is(:hover, :focus-visible)) #st-p1,
-.cmap:has(.cmap-chip-2:is(:hover, :focus-visible)) #st-p2,
-.cmap:has(.cmap-chip-3:is(:hover, :focus-visible)) #st-p3,
-.cmap:has(.cmap-chip-4:is(:hover, :focus-visible)) #st-p4,
-.cmap:has(.cmap-chip-5:is(:hover, :focus-visible)) #st-p5 {
-    border-color: var(--hue);
-    box-shadow: var(--shadow);
-}
-
-/* keyboard fallback: entering the dial by Tab wakes it, independent of
-   engines whose :has(:focus…) invalidation skips SVG-internal targets */
-.cmap-dial-frame:focus-within .cmap-chord {
-    opacity: 0.55;
-}
-
-.cmap-dial-frame:focus-within .cmap-arc {
-    opacity: 1;
-}
-
-/* ── dark scheme: lantern-tuned strokes ── */
-
-html[data-theme="dark"] .cmap-arc-1 {
-    stroke: #eb573a;
-}
-
-html[data-theme="dark"] .cmap-arc-2 {
-    stroke: #f09344;
-}
-
-html[data-theme="dark"] .cmap-arc-3 {
-    stroke: #f9dd55;
-}
-
-html[data-theme="dark"] .cmap-arc-4 {
-    stroke: #7cc967;
-}
-
-html[data-theme="dark"] .cmap-arc-5 {
-    stroke: #6197f8;
-}
-
 /* ── motion: only ever confirms something the reader did ── */
 
 @media (prefers-reduced-motion: no-preference) {
-    .cmap-arc {
-        transition:
-            stroke-width 0.2s ease,
-            opacity 0.2s ease;
-    }
-
-    .cmap-chord {
-        transition: opacity 0.2s ease;
-    }
-
-    .cmap-dial {
-        view-transition-name: cmap-dial;
-    }
-
-    .cmap-frame {
-        view-transition-name: cmap-frame;
-    }
-
     /* the compass fills as you walk the day (Chromium+; others keep the
        fully lit dial) */
     @media (min-width: 720px) {
         @supports (animation-timeline: view()) {
-            .cmap {
-                timeline-scope: --st1, --st2, --st3, --st4, --st5;
-            }
-
             #st-p1 {
                 view-timeline-name: --st1;
             }
@@ -4738,40 +4141,7 @@ html[data-theme="dark"] .cmap-arc-5 {
             #st-p5 {
                 view-timeline-name: --st5;
             }
-
-            .cmap-arc {
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
-                animation: cmap-fill linear both;
-                animation-range: entry 0% cover 45%;
-            }
-
-            .cmap-arc-1 {
-                animation-timeline: --st1;
-            }
-
-            .cmap-arc-2 {
-                animation-timeline: --st2;
-            }
-
-            .cmap-arc-3 {
-                animation-timeline: --st3;
-            }
-
-            .cmap-arc-4 {
-                animation-timeline: --st4;
-            }
-
-            .cmap-arc-5 {
-                animation-timeline: --st5;
-            }
         }
-    }
-}
-
-@keyframes cmap-fill {
-    to {
-        stroke-dashoffset: 0;
     }
 }
 
@@ -4821,8 +4191,9 @@ html[data-theme="dark"] .cmap-arc-5 {
     position: fixed;
     inset: 0;
     z-index: 1200;
-    align-items: flex-start;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     padding: 12vh 16px 24px;
     background: color-mix(in srgb, var(--oxford-blue) 72%, transparent);
     backdrop-filter: blur(4px);
@@ -4841,7 +4212,36 @@ html[data-theme="dark"] .cmap-arc-5 {
     border: 1px solid var(--border);
     border-radius: 8px;
     box-shadow: var(--shadow-hover);
-    padding: 20px 22px 18px;
+    padding: 22px;
+}
+
+.search-overlay__close {
+    display: block;
+    flex: 0 0 auto;
+    width: min(92vw, 680px);
+    min-height: 44px;
+    margin: 0 0 8px;
+    padding: 6px 4px;
+    color: #f4f1ec;
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    text-align: right;
+    background: transparent;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.search-overlay__close:hover,
+.search-overlay__close:focus-visible {
+    color: #f4f1ec;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.search-overlay__close:focus-visible {
+    outline: 2px solid #f4f1ec;
+    outline-offset: 2px;
 }
 
 .pagefind-ui__filter-panel-label,
@@ -5256,3 +4656,2241 @@ html[data-theme="dark"] .cmap-arc-5 {
     color: var(--muted, #777);
     margin: 0.75rem 0 0.25rem;
 }
+
+/* ─── MOBILE-FIRST PERSUASION UPGRADE ───
+   Reversible: delete this trailing block to restore the previous treatment.
+   Base rules target phones; min-width queries restore the desktop treatment. */
+:root {
+    --display: var(--prose);
+    --tap-min: 44px;
+}
+
+/* Display serif + calmer body rhythm (existing tokens reused) */
+body {
+    line-height: 1.65;
+}
+
+header h1 {
+    font-family: var(--display);
+    font-variant-numeric: lining-nums proportional-nums;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+}
+
+.site-header--home h1 {
+    font-size: clamp(2.2rem, 8vw, 3.4rem);
+    line-height: 1.05;
+}
+
+/* The home title holds together on wide screens and wraps, balanced, on
+   phones rather than running off the masthead. */
+.title-keep {
+    white-space: nowrap;
+}
+
+.site-header--home h1 {
+    text-wrap: balance;
+}
+
+@media (max-width: 480px) {
+    .title-keep {
+        white-space: normal;
+    }
+
+    /* Clear the language, theme and search buttons above the logos. */
+    .site-header--home {
+        padding-top: 84px;
+    }
+}
+
+/* Phones: the interior masthead carries the bilingual wordmark and three
+   tools on one row. The empty middle track no longer spends two gaps, and when
+   the row is still too short (the Chinese pages' "English" toggle is wider
+   than "華文") the two names stack, equal, beside the mark instead of pushing
+   the tools off the screen. */
+@media (max-width: 480px) {
+    .site-header__bar {
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        column-gap: 10px;
+    }
+
+    .site-header__tools {
+        grid-column: 2;
+    }
+
+    .site-wordmark {
+        position: relative;
+        flex-wrap: wrap;
+        row-gap: 0;
+        min-width: 0;
+        padding-inline-start: 25px;
+        white-space: normal;
+    }
+
+    .site-wordmark .site-mark {
+        position: absolute;
+        inset-inline-start: 0;
+        top: 50%;
+        translate: 0 -50%;
+    }
+
+    .site-wordmark__sep {
+        display: none;
+    }
+}
+
+.site-header--home .header-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.site-header--home .header-cta-row .next-action-button {
+    margin-top: 0;
+    min-height: var(--tap-min);
+}
+
+/* Fold: tagline + lede + CTA + proof strip above the overview poster */
+.fold-tag {
+    font-family: var(--display);
+    font-variant-numeric: lining-nums proportional-nums;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    color: var(--heading);
+    margin: 0 0 0.6em;
+}
+
+.fold-tag strong {
+    color: inherit;
+    font-weight: 600;
+}
+
+.fold-lede {
+    font-size: 1.125rem;
+    margin: 0.6em 0;
+}
+
+.cta-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 1.2em 0 0.4em;
+}
+
+.cta-note {
+    font-size: 0.92rem;
+    color: var(--muted);
+    margin: 0.4em 0 0;
+}
+
+/* Thumb-first nav: scroll-snap row on phones, wrapped row on desktop */
+header nav.site-nav {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    max-width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scrollbar-width: thin;
+    padding-bottom: 4px;
+}
+
+header nav.site-nav a {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--tap-min);
+    padding: 6px 2px;
+    font-size: 0.85rem;
+}
+
+.site-header--interior nav.site-nav a {
+    font-size: 0.85rem;
+}
+
+.site-header__tools .lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--tap-min);
+}
+
+.theme-toggle,
+.search-toggle {
+    min-width: var(--tap-min);
+    min-height: var(--tap-min);
+}
+
+/* Thumb-zone prev/next: stacked full-width buttons. Stays positioned so the
+   band's top rule (::before) sits on the band, not at the top of the page. */
+.next-action {
+    position: relative;
+    padding: 32px 20px;
+}
+
+.next-action-content {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.next-action-content .next-action-button {
+    justify-content: center;
+    width: 100%;
+    min-height: 48px;
+}
+
+/* 6-Pack as tappable cards instead of text bullets */
+.pack-cards {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 1.2em 0;
+    padding: 0;
+}
+
+.pack-cards li {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.pack-cards a {
+    display: block;
+    min-height: var(--tap-min);
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    color: var(--text);
+    text-decoration: none;
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        border-color 0.2s;
+}
+
+.pack-cards a:hover {
+    border-color: var(--teal);
+    box-shadow: var(--shadow-hover);
+    color: var(--text);
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+.pack-cards strong {
+    display: block;
+    margin-bottom: 2px;
+    color: var(--heading);
+}
+
+.pack-cards span {
+    font-size: 1.125rem;
+    color: var(--muted);
+}
+
+@media (min-width: 720px) {
+    .cta-row {
+        flex-direction: row;
+    }
+
+    header nav.site-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 640px;
+        overflow: visible;
+        padding-bottom: 0;
+    }
+
+    header nav.site-nav a {
+        min-height: 0;
+        font-size: 0.8rem;
+    }
+
+    .site-header--interior nav.site-nav {
+        justify-content: flex-start;
+        max-width: none;
+    }
+
+    .site-header--interior nav.site-nav a {
+        font-size: 0.72rem;
+    }
+
+    .next-action {
+        position: relative;
+        padding: 48px 24px;
+    }
+
+    .next-action-content {
+        flex-direction: row;
+    }
+
+    .next-action-content .next-action-button {
+        width: auto;
+    }
+
+    .pack-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ─── AESTHETIC PASS · ROUND 1 ───
+   Text-safe colour variants, line breaking, zh-TW typography, TOC margin rail,
+   title spacing, reading paths, flush filter bars, mobile nav wrap. */
+:root,
+html[data-theme="light"] {
+    --gold-text: #7a6128;
+}
+
+html[data-theme="dark"] {
+    --gold-text: var(--harvest);
+}
+
+/* Small gold labels use the text-safe gold; --gold stays for rules/borders. */
+
+.in-short__label,
+.page-toc > summary,
+main th,
+h4[data-faq-label]::before,
+.site-header--interior .chapter-date,
+.polis-eyebrow,
+.polis-section__kicker,
+.polis-side-card__kicker,
+.conf-time,
+.conf-break .conf-detail {
+    color: var(--gold-text);
+}
+
+/* Line breaking */
+main p,
+main li,
+main dd,
+main figcaption,
+.in-short p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+.fold-tag,
+.fold-lede {
+    text-wrap: balance;
+}
+
+/* Traditional Chinese typography */
+html:lang(zh) {
+    --serif:
+        "Literata", "Monlam Bodyig", "Noto Serif TC", "Source Han Serif TC",
+        "Songti TC", "Microsoft JhengHei", serif;
+    --sans: var(--machine);
+}
+
+:lang(zh) main {
+    line-break: strict;
+}
+
+:lang(zh) main p,
+:lang(zh) main li,
+:lang(zh) .in-short__body,
+:lang(zh) .in-short__takeaways-list {
+    line-height: 1.9;
+}
+
+/* Home agent note: readable fine print */
+.agent-note {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--muted);
+    opacity: 1;
+}
+
+/* Interior title block sits closer to the first content element */
+.site-header--interior {
+    padding-bottom: 0;
+}
+
+.site-header--interior .site-header__title-block > :last-child {
+    margin-bottom: 0;
+}
+
+body:has(.site-header--interior) main {
+    padding-top: 32px;
+}
+
+@media (max-width: 640px) {
+    body:has(.site-header--interior) main {
+        padding-top: 24px;
+    }
+}
+
+:lang(zh) main .page-toc li {
+    line-height: 1.4;
+}
+
+/* Table of contents: margin rail beside the column on wide screens */
+@media (min-width: 1280px) {
+    main:not(:has(.cmap, .polis-fullbleed)) .page-toc {
+        float: left;
+        width: 220px;
+        margin: 0 0 0 -260px;
+        padding: 0 0 0 14px;
+        position: sticky;
+        top: 24px;
+        max-height: calc(100vh - 48px);
+        overflow-y: auto;
+        background: none;
+        border: 0;
+        border-left: 1px solid var(--border);
+        border-radius: 0;
+    }
+
+    main:not(:has(.cmap, .polis-fullbleed)) .page-toc > summary {
+        list-style: none;
+        cursor: default;
+        pointer-events: none;
+    }
+
+    main:not(:has(.cmap, .polis-fullbleed))
+        .page-toc
+        > summary::-webkit-details-marker {
+        display: none;
+    }
+
+    main:not(:has(.cmap, .polis-fullbleed)) .page-toc ul {
+        margin: 0.6em 0 0;
+        padding-left: 0;
+    }
+
+    main:not(:has(.cmap, .polis-fullbleed)) .page-toc li,
+    :lang(zh) main:not(:has(.cmap, .polis-fullbleed)) .page-toc li {
+        margin: 0.1em 0;
+        line-height: 1.35;
+    }
+
+    main:not(:has(.cmap, .polis-fullbleed)) .page-toc__h3 {
+        padding-left: 0.7em;
+    }
+
+    main:not(:has(.cmap, .polis-fullbleed)) .page-toc__h4 {
+        padding-left: 1.4em;
+    }
+
+    main:not(:has(.cmap, .polis-fullbleed)) .page-toc a {
+        font-size: 0.8rem;
+        color: var(--muted);
+    }
+
+    main:not(:has(.cmap, .polis-fullbleed)) .page-toc a:hover,
+    main:not(:has(.cmap, .polis-fullbleed)) .page-toc a[aria-current="true"] {
+        color: var(--teal);
+    }
+
+    main:not(:has(.cmap, .polis-fullbleed)) .page-toc a[aria-current="true"] {
+        font-weight: 600;
+    }
+}
+
+/* Home reading paths: centred, equal-width, wrapping band */
+.reading-paths {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    width: 100%;
+    max-width: 920px;
+    margin: 0.8em auto 1.5em;
+    position: static;
+    left: auto;
+    transform: none;
+}
+
+.reading-paths > .reading-path {
+    flex: 0 1 280px;
+    min-width: 240px;
+}
+
+@media (max-width: 560px) {
+    .reading-paths > .reading-path {
+        flex: 1 1 100%;
+        min-width: 0;
+        max-width: none;
+    }
+}
+
+/* Sticky filter bars: flush, one row, horizontally scrollable */
+html[data-theme] .faq-filter {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 6px;
+    width: 100%;
+    justify-content: flex-start;
+    top: 0;
+    margin: 0 0 22px;
+    padding: 6px 0;
+    border: 0;
+    border-bottom: 1px solid var(--border);
+    border-radius: 0;
+    background: var(--paper);
+    box-shadow: none;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-snap-type: x proximity;
+}
+
+.faq-filter::-webkit-scrollbar {
+    display: none;
+}
+
+.faq-filter button {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    white-space: nowrap;
+}
+
+.faq-filter button:hover,
+.faq-filter button:focus-visible,
+.faq-filter button[aria-pressed="true"] {
+    transform: none;
+}
+
+/* Phones: wrap the categories so none hide off-screen; a wrapped bar is too
+   tall to stay pinned over the answers. */
+@media (max-width: 480px) {
+    html[data-theme] .faq-filter {
+        position: static;
+        flex-wrap: wrap;
+        overflow-x: visible;
+        scroll-snap-type: none;
+    }
+}
+
+/* Mobile site navigation wraps instead of hiding links off-screen */
+@media (max-width: 480px) {
+    header nav.site-nav {
+        flex-wrap: wrap;
+        overflow: visible;
+        scroll-snap-type: none;
+        padding-bottom: 0;
+        gap: 2px 14px;
+        justify-content: flex-start;
+    }
+
+    .site-header--home nav.site-nav {
+        justify-content: center;
+    }
+
+    .site-header__nav {
+        overflow: visible;
+    }
+
+    .site-header--interior nav.site-nav {
+        flex-wrap: wrap;
+        width: auto;
+        min-width: 0;
+        max-width: 100%;
+        padding-bottom: 0;
+        gap: 2px 14px;
+    }
+
+    header nav.site-nav a {
+        min-height: 40px;
+    }
+}
+
+html[data-theme="dark"] .polis-label-disagree {
+    color: #f07a60;
+}
+
+/* 404: plain blocks, EN then TW */
+.not-found[lang="zh-TW"] {
+    --serif:
+        "Literata", "Monlam Bodyig", "Noto Serif TC", "Source Han Serif TC",
+        "Songti TC", "Microsoft JhengHei", serif;
+    --sans: var(--machine);
+}
+
+.not-found + .not-found {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+}
+
+.not-found__title {
+    margin: 0 0 0.5em;
+    font-family: var(--prose);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--heading);
+    text-wrap: balance;
+}
+
+:lang(zh) main .not-found__title {
+    line-height: 1.2;
+}
+
+.not-found__links {
+    font-family: var(--sans);
+    font-size: 0.95rem;
+}
+
+/* ─── PRINT: header breathing room and plates that fit ─── */
+@media print {
+    header.site-header--interior {
+        padding-bottom: 22px;
+    }
+
+    main img {
+        display: block;
+        max-height: 150mm;
+        width: auto;
+        max-width: 100%;
+        margin-inline: auto;
+        break-inside: avoid;
+    }
+
+    main :has(> img),
+    main figure,
+    main picture {
+        break-inside: avoid;
+    }
+
+    /* The overview poster keeps its own aspect: no reserved screen frame, no
+       stretched width, and a height that fits under the home masthead. */
+    main .overview-frame {
+        aspect-ratio: auto !important;
+        height: auto;
+    }
+
+    main .overview-frame > img,
+    main .overview-frame .overview-image {
+        width: auto;
+        max-width: 100%;
+        max-height: 130mm;
+        margin-inline: auto;
+    }
+
+    main > p.cta-note:first-of-type {
+        margin-top: 6mm;
+    }
+
+    /* Interactive controls have no place on paper. */
+    .faq-filter,
+    .copy-btn {
+        display: none !important;
+    }
+}
+
+/* ─── PACK HUE WAYFINDING (pack pages only; decoration, never text) ─── */
+body[data-pack="1"] {
+    --pack-rule: #eb573a;
+}
+body[data-pack="2"] {
+    --pack-rule: #f09344;
+}
+body[data-pack="3"] {
+    --pack-rule: #d4b21c;
+}
+body[data-pack="4"] {
+    --pack-rule: #5fae4a;
+}
+body[data-pack="5"] {
+    --pack-rule: #6197f8;
+}
+body[data-pack="6"] {
+    --pack-rule: #a753f6;
+}
+html[data-theme="dark"] body[data-pack="3"] {
+    --pack-rule: #f9dd55;
+}
+html[data-theme="dark"] body[data-pack="4"] {
+    --pack-rule: #7cc967;
+}
+html[data-theme="dark"] body[data-pack="6"] {
+    --pack-rule: #b98cf9;
+}
+
+@media screen {
+    body[data-pack] main h2 {
+        border-bottom-color: var(--pack-rule);
+    }
+
+    body[data-pack] .in-short {
+        border-left-color: var(--pack-rule);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    body[data-pack] main:not(:has(.cmap, .polis-fullbleed)) .page-toc {
+        border-left-color: color-mix(
+            in srgb,
+            var(--pack-rule) 40%,
+            transparent
+        );
+    }
+}
+
+/* ─── PRINT: paper is always light, and citations keep their addresses ───
+   A reader's dark theme must not reach the printer: reset the dark tokens to
+   their light values (the theme script also switches html[data-theme] around
+   beforeprint/afterprint for component rules with fixed dark colours). */
+@media print {
+    /* Outranks both :root[data-theme="dark"] and html[data-theme="dark"]. */
+    html:root[data-theme="dark"] {
+        color-scheme: light;
+        --field: #f2f1e8;
+        --surface: #fbfaf4;
+        --ink: #211d16;
+        --soil: #5a5142;
+        --moss: #33603e;
+        --cinnabar: #b4351f;
+        --harvest: #7a6128;
+        --rule: #ddd9cb;
+        --warm: #eae8dc;
+        --gold-light: #c8a25c;
+        --shadow: none;
+        --shadow-hover: none;
+        --gold-text: #7a6128;
+    }
+
+    /* A photocopy cannot follow a link: print external addresses in brackets. */
+    main a[href^="http"]:not([href^="https://civic.ai"]):not(:has(img))::after {
+        content: " [" attr(href) "]";
+        font-size: 0.82em;
+        color: var(--soil);
+        overflow-wrap: anywhere;
+    }
+}
+
+/* ─── THE RECORD: Trace, ledger, ¶ (DESIGN.md §7.2, §8, §10) ─── */
+.record-zone,
+.record-paragraph__link {
+    font-family: var(--machine, "IBM Plex Mono", ui-monospace, monospace);
+    font-variant-numeric: tabular-nums;
+    color: var(--ink, #211d16);
+    border-radius: 0;
+}
+
+.record-trace {
+    width: 100%;
+    margin-block: 3rem 0;
+    border-block: 1px solid var(--rule, #ddd9cb);
+    background: var(--surface, var(--surface));
+}
+
+.record-trace__inner {
+    position: relative;
+    max-width: 64rem;
+    margin-inline: auto;
+    padding: 0.5rem 1.25rem 1.5rem;
+}
+
+/* The site-mark is the Trace's handle: it turns as the record opens. */
+.record-trace__summary {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem 0.6rem;
+    max-width: 64rem;
+    margin-inline: auto;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    list-style: none;
+    font-family: var(--machine);
+}
+
+.record-trace__summary::-webkit-details-marker {
+    display: none;
+}
+
+.record-trace__mark {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex: 0 0 auto;
+    color: var(--harvest);
+    transition: transform 0.2s ease;
+}
+
+.record-trace[open] .record-trace__mark {
+    transform: rotate(180deg);
+}
+
+.record-trace .record-trace__heading {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 0.875rem;
+    letter-spacing: 0.08em;
+    color: var(--ink, #211d16);
+}
+
+.record-trace__hint {
+    margin-inline-start: auto;
+    font-size: 0.75rem;
+    color: var(--soil, #5a5142);
+}
+
+.record-trace__summary:hover .record-trace__heading {
+    color: var(--moss, #33603e);
+}
+
+.record-trace__summary:focus-visible {
+    outline: 2px solid var(--moss, #33603e);
+    outline-offset: -2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .record-trace__mark {
+        transition: none;
+    }
+}
+
+.record-trace__rows {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.record-trace__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.25rem;
+    padding-block: 0.75rem;
+    border-bottom: 1px solid var(--rule, #ddd9cb);
+}
+
+.record-trace__row:last-child {
+    border-bottom: 0;
+}
+
+.record-trace__row dt {
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--soil, #5a5142);
+}
+
+.record-trace__row dd {
+    min-width: 0;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.record-secondary,
+.record-history-note,
+.record-eval-built {
+    color: var(--soil, #5a5142);
+}
+
+.record-history-note {
+    margin: 0.75rem 0 0;
+    font-size: 0.75rem;
+}
+
+.record-zone a {
+    color: var(--moss, #33603e);
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+}
+
+.record-zone a:focus-visible,
+.record-paragraph__link:focus-visible {
+    outline: 2px solid var(--moss, #33603e);
+    outline-offset: 3px;
+}
+
+.record-zone .record-contest {
+    color: var(--cinnabar, #b4351f);
+}
+
+.record-eval-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem 1rem;
+}
+
+.record-eval {
+    font-size: 0.8rem;
+}
+
+.record-zone .record-eval--fail {
+    color: #80601b;
+}
+
+.record-eval-built {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
+    overflow-wrap: anywhere;
+}
+
+.record-print-url {
+    display: none;
+}
+
+.record-ledger {
+    min-width: 0;
+}
+
+.record-ledger h2 {
+    font-family: inherit;
+    font-size: 1.2rem;
+    color: var(--ink, #211d16);
+    border-color: var(--rule, #ddd9cb);
+}
+
+.record-ledger__month {
+    margin: 2rem 0 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+}
+
+.record-ledger p {
+    font-family: inherit;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.record-eval-board {
+    display: grid;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    border: 1px solid var(--rule, #ddd9cb);
+    border-radius: 0;
+    background: var(--surface, var(--surface));
+}
+
+.record-eval-board > li {
+    margin: 0;
+    padding: 1rem;
+    border-bottom: 1px solid var(--rule, #ddd9cb);
+}
+
+.record-eval-board > li:last-child {
+    border-bottom: 0;
+}
+
+.record-eval-board strong {
+    color: inherit;
+    font-family: inherit;
+}
+
+.record-eval-board p {
+    margin: 0.5rem 0 0;
+    font-size: 0.75rem;
+    color: var(--soil, #5a5142);
+}
+
+.record-ledger__entries {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.record-ledger__entries > li {
+    display: grid;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--rule, #ddd9cb);
+    font: 0.8rem/1.6 var(--machine, "IBM Plex Mono", ui-monospace, monospace);
+    overflow-wrap: anywhere;
+}
+
+.record-ledger__entries time {
+    color: var(--soil, #5a5142);
+}
+
+.record-ledger__pages {
+    line-height: 1.8;
+}
+
+.record-zone .record-ledger__summary a {
+    color: inherit;
+}
+
+.record-paragraph {
+    position: relative;
+    scroll-margin-top: 1rem;
+}
+
+.record-paragraph__link {
+    position: absolute;
+    inset-inline-end: 0;
+    inset-block-start: -1.2rem;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.7rem;
+    line-height: 1.5;
+    color: var(--soil, #5a5142);
+    background: var(--surface, var(--surface));
+    text-decoration: none;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.record-paragraph:hover > .record-paragraph__link,
+.record-paragraph:focus-within > .record-paragraph__link,
+.record-paragraph:target > .record-paragraph__link {
+    opacity: 1;
+}
+
+html[data-theme="dark"] .record-zone {
+    --ink: #eae4d4;
+    --surface: #20242c;
+    --soil: #a89f8d;
+    --moss: #8fb79a;
+    --cinnabar: #e06844;
+    --rule: #343945;
+}
+
+html[data-theme="dark"] .record-paragraph__link {
+    color: var(--soil, #a89f8d);
+    background: var(--surface, #20242c);
+}
+
+html[data-theme="dark"] .record-zone .record-eval--fail {
+    color: #c8a25c;
+}
+
+@media (min-width: 720px) {
+    .record-trace__inner {
+        padding: 0.5rem 2rem 2rem;
+    }
+
+    .record-trace__summary {
+        padding-inline: 2rem;
+    }
+
+    .record-trace__row {
+        grid-template-columns: 7rem minmax(0, 1fr);
+        gap: 1rem;
+    }
+
+    .record-ledger__entries > li {
+        grid-template-columns: 6rem minmax(0, 1fr);
+        column-gap: 1rem;
+    }
+
+    .record-ledger__summary {
+        grid-column: 2;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .record-paragraph > .record-paragraph__link {
+        inset-inline-start: calc(100% + 1rem);
+        inset-inline-end: auto;
+        inset-block-start: 0;
+        width: 4rem;
+        background: none;
+        opacity: 1;
+    }
+}
+
+@media print {
+    .record-trace,
+    html[data-theme="dark"] .record-trace {
+        --ink: #211d16;
+        --surface: #fbfaf4;
+        --soil: #5a5142;
+        --moss: #5a5142;
+        --rule: #5a5142;
+        display: block !important;
+        margin: 1.5rem 0;
+        border: 1px solid var(--soil, #5a5142);
+        background: none;
+        break-inside: avoid;
+    }
+
+    .record-trace__inner {
+        padding: 0.75rem;
+    }
+
+    /* Paper always gets the full record, never the folded summary. */
+    .record-trace::details-content {
+        content-visibility: visible;
+    }
+
+    .record-trace__summary,
+    .record-trace__evals,
+    .record-trace__contest,
+    .record-trace__twin,
+    .record-edit,
+    .record-trace__amended a {
+        display: none !important;
+    }
+
+    .record-trace__row {
+        display: block;
+        padding-block: 0.25rem;
+        border: 0;
+        font-size: 9pt;
+    }
+
+    .record-trace__row dt {
+        display: inline;
+        margin-inline-end: 0.5rem;
+    }
+
+    .record-trace__row dd {
+        display: inline;
+        padding: 0;
+    }
+
+    .record-print-url {
+        display: block;
+        overflow-wrap: anywhere;
+    }
+
+    .record-paragraph > .record-paragraph__link {
+        position: static;
+        display: inline;
+        margin-inline-start: 0.5rem;
+        padding: 0;
+        color: #5a5142;
+        background: none;
+        opacity: 1;
+        font-size: 0.7em;
+    }
+}
+
+/* ─── STYLESHEET AUDIT FIXES ─── */
+/* Chinese emphasis keeps its brush face, but only for Han: a Latin title
+   inside Chinese emphasis stays in Literata instead of falling into Kaiti. */
+@font-face {
+    font-family: "Civic Kai";
+    src:
+        local("Kaiti TC"), local("STKaitiTC-Regular"), local("STKaiti"),
+        local("DFKai-SB"), local("BiauKai"), local("KaiTi");
+    unicode-range:
+        U+2E80-2FDF, U+3000-303F, U+3100-312F, U+31A0-31BF, U+3400-4DBF,
+        U+4E00-9FFF, U+F900-FAFF, U+FF00-FFEF, U+20000-2FA1F;
+}
+
+/* Logged, measured and executable text speaks in the machinery voice. */
+:not(pre) > code,
+.polis-stat__value {
+    font-family: var(--machine);
+}
+
+/* Grounds that stay Oxford blue in both themes need Lantern's light moss, or
+   hover and focus turn dark green on navy (2.07:1). */
+.site-header--home,
+.skip-link,
+.search-overlay__close {
+    --moss: #8fb79a;
+    --teal: var(--moss);
+}
+
+.skip-link:focus-visible,
+.search-overlay__close:focus-visible,
+.search-overlay .pagefind-ui .civic-search__submit:focus-visible,
+.search-overlay .pagefind-ui__search-input:focus-visible {
+    outline: 2px solid var(--moss);
+    outline-offset: 2px;
+}
+
+/* Later screen passes were not media-scoped and overrode print typography. */
+@media print {
+    body {
+        background: transparent;
+        line-height: 1.52;
+    }
+
+    header h1,
+    .site-header--home h1 {
+        font-size: 22pt;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+        line-height: 1.12;
+    }
+
+    body:has(.site-header--interior) main {
+        padding-top: 0;
+    }
+}
+
+/* ─── MEASURES MAP ───
+   Three zones read top to bottom: the four-pack care cycle (a loop of cards on
+   wide screens, a sequence on phones), the field between organisations, and
+   Pack 6, whose outline frames the whole map because it bounds every
+   deployment in time. Every relation is written in words; a pack's hue only
+   says which pack it is. */
+.cmap {
+    margin: 1.5rem 0 2rem;
+}
+
+.cmap-frame {
+    padding: 1rem 0.875rem;
+    border: 2px solid var(--pack-6);
+}
+
+.cmap-zone + .cmap-zone {
+    margin-top: 1.5rem;
+}
+
+.cmap-zone-title {
+    margin: 0 0 0.75rem;
+    padding: 0;
+    border: 0;
+    font-family: var(--machine);
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    color: var(--soil);
+}
+
+.cmap-card {
+    min-width: 0;
+    padding: 0.875rem 1rem 1rem;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-top: 4px solid var(--hue);
+    border-radius: var(--radius-machine);
+    scroll-margin-top: 1rem;
+}
+
+.cmap-card-title {
+    margin: 0 0 0.625rem;
+    padding: 0;
+    border: 0;
+    font-family: var(--prose);
+    font-size: 1.3125rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.cmap-card-title a {
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.cmap-card-title a:hover,
+.cmap-card-title a:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+}
+
+.cmap-measure,
+.cmap-hand,
+.cmap-guard,
+.cmap-legend {
+    margin: 0;
+}
+
+.cmap-label,
+.cmap-rel {
+    display: block;
+    font-family: var(--machine);
+    font-size: 0.875rem;
+    line-height: 1.45;
+    color: var(--soil);
+}
+
+.cmap-measure a,
+.cmap-cargo {
+    font-family: var(--prose);
+    font-size: 1.125rem;
+    line-height: 1.45;
+}
+
+.cmap-cargo {
+    display: block;
+    color: var(--ink);
+}
+
+.cmap-rels {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0.875rem 0 0;
+    padding: 0.875rem 0 0;
+    list-style: none;
+    border-top: 1px solid var(--rule);
+}
+
+.cmap-rels li {
+    margin: 0;
+    padding: 0;
+}
+
+/* A pack named inside a relation reads as prose, not as a machine label, and
+   carries its hue as a dot. */
+.cmap-pack {
+    font-family: var(--prose);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: var(--ink);
+}
+
+.cmap-pack::before {
+    content: "";
+    display: inline-block;
+    width: 0.625em;
+    height: 0.625em;
+    margin-inline: 0.2em 0.3em;
+    border-radius: 50%;
+    background: var(--hue);
+}
+
+.cmap-cycle {
+    display: grid;
+}
+
+/* The handoff between two cycle cards, and what passes along it. */
+.cmap-hand {
+    position: relative;
+    padding: 0.625rem 0 0.625rem 2.25rem;
+}
+
+.cmap-hand::before {
+    content: "↓" / "";
+    position: absolute;
+    top: 0.5rem;
+    left: 0.625rem;
+    font-family: var(--machine);
+    font-size: 1.375rem;
+    line-height: 1.2;
+    color: var(--ink);
+}
+
+.cmap-hand--4::before {
+    content: "↺" / "";
+}
+
+.cmap-back {
+    display: inline-block;
+    margin-top: 0.25rem;
+    font-family: var(--machine);
+    font-size: 0.875rem;
+}
+
+.cmap-guard {
+    margin-top: 0.875rem;
+    padding-top: 0.875rem;
+    border-top: 1px solid var(--rule);
+    font-family: var(--prose);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    color: var(--soil);
+}
+
+.cmap-legend {
+    margin-top: 0.875rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+@media (min-width: 64rem) {
+    .cmap {
+        width: min(68rem, calc(100vw - 4rem));
+        margin-inline: calc((100% - min(68rem, calc(100vw - 4rem))) / 2);
+    }
+
+    .cmap-frame {
+        padding: 1.5rem;
+    }
+
+    /* Drawn as the loop it is: 1 → 2, down to 3, back across to 4, up to 1. */
+    .cmap-cycle {
+        grid-template-columns: minmax(0, 1fr) 11rem minmax(0, 1fr);
+        grid-template-areas:
+            "p1 h1 p2"
+            "h4 .  h2"
+            "p4 h3 p3";
+        gap: 0.5rem 0.75rem;
+        align-items: center;
+    }
+
+    .cmap-step {
+        align-self: stretch;
+    }
+
+    .cmap-step--1 {
+        grid-area: p1;
+    }
+
+    .cmap-step--2 {
+        grid-area: p2;
+    }
+
+    .cmap-step--3 {
+        grid-area: p3;
+    }
+
+    .cmap-step--4 {
+        grid-area: p4;
+    }
+
+    .cmap-hand {
+        padding: 0.375rem 0.5rem;
+        text-align: center;
+    }
+
+    .cmap-hand::before {
+        position: static;
+        display: block;
+        font-size: 1.75rem;
+    }
+
+    .cmap-hand--1 {
+        grid-area: h1;
+    }
+
+    .cmap-hand--1::before {
+        content: "→" / "";
+    }
+
+    .cmap-hand--2 {
+        grid-area: h2;
+    }
+
+    .cmap-hand--3 {
+        grid-area: h3;
+    }
+
+    .cmap-hand--3::before {
+        content: "←" / "";
+    }
+
+    .cmap-hand--4 {
+        grid-area: h4;
+    }
+
+    .cmap-hand--4::before {
+        content: "↑" / "";
+    }
+
+    /* The upward arrow already closes the loop on screen. */
+    .cmap-back {
+        display: none;
+    }
+
+    .cmap-zone--field .cmap-rels {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .cmap-zone--boundary .cmap-rels {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media print {
+    .cmap {
+        width: auto;
+        margin-inline: 0;
+    }
+
+    .cmap-frame {
+        padding: 3mm;
+        border-width: 1pt;
+    }
+
+    .cmap-card {
+        background: none;
+        break-inside: avoid;
+    }
+
+    .cmap-hand {
+        break-after: avoid;
+    }
+}
+
+/* ═══ DESIGN.md §21 builds — one block per lane ═══ */
+
+/* ─── lane A: stable paragraph anchors ─── */
+
+/* ─── end lane A ─── */
+
+/* ─── lane B: chapter nav loop ─── */
+
+/* Chapter navigation: Pack 4's loop home. */
+.chapter-nav__onward {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+}
+
+.chapter-nav__loop {
+    border-style: dashed;
+}
+
+/* Once the nav is a row, the previous link centres against Pack 4's stacked pair. */
+@media (min-width: 720px) {
+    .next-action-content:has(.chapter-nav__onward) {
+        align-items: center;
+    }
+}
+
+/* ─── end lane B ─── */
+
+/* ─── lane C: pack eyebrows, governing questions, tool cards ─── */
+/* Eyebrow: machinery voice, ink-soil text, hue only as a short rule. */
+.pack-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 0.9rem;
+    font-family: var(--machine);
+    font-size: 0.75rem;
+    line-height: 1.5;
+    letter-spacing: 0.06em;
+    color: var(--soil);
+}
+
+.pack-eyebrow__mark {
+    flex: none;
+    width: 1.5rem;
+    height: 3px;
+    background: var(--pack-rule, var(--oxford-rule));
+}
+
+/* Governing question: human voice standfirst. */
+.site-header__title-block .pack-question {
+    max-width: 38rem;
+    margin: 0.9rem 0 0;
+    font-family: var(--prose);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: var(--ink);
+}
+
+/* Buildable tools: a grid of machinery cards, keyed on the heading id. */
+:is(#buildable-tools, #可立即建置的工具, #今天就能做的工具) + ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr));
+    gap: 1rem;
+    margin: 1.2rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+:is(#buildable-tools, #可立即建置的工具, #今天就能做的工具) + ul > li {
+    margin: 0;
+    padding: 0.9rem 1rem 2.3rem 1.1rem;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-inline-start: 4px solid var(--pack-rule, var(--rule));
+    border-radius: 0;
+    font-family: var(--prose);
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+:is(#buildable-tools, #可立即建置的工具, #今天就能做的工具)
+    + ul
+    > li
+    > strong:first-child {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-family: var(--machine);
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--ink);
+}
+
+/* One hairline per card: a loose lead-in paragraph must not add its own. */
+:is(#buildable-tools, #可立即建置的工具, #今天就能做的工具) + ul > li > p {
+    margin: 0;
+    padding: 0;
+    border-top: 0;
+}
+
+/* The ¶ permalink lives inside the card at every width. */
+:is(#buildable-tools, #可立即建置的工具, #今天就能做的工具)
+    + ul
+    > li
+    > .record-paragraph__link {
+    inset-block: auto 0.35rem;
+    inset-inline: auto 0.5rem;
+    width: auto;
+    background: none;
+    opacity: 1;
+    color: var(--soil);
+}
+/* ─── end lane C ─── */
+
+/* ─── lane D: home constellation ─── */
+
+/* A quiet field of lights behind the masthead. The layer sits between the
+   Oxford ground and the header's content (the header becomes its own stacking
+   context so z-index: -1 stops there), never takes a pointer, and paints inside
+   the header only: no layout shift, no overflow. */
+.site-header--home {
+    isolation: isolate;
+}
+
+.home-constellation {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    contain: paint;
+    pointer-events: none;
+}
+
+.home-constellation__field {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: var(--gold-light);
+}
+
+.home-constellation__field circle {
+    opacity: 0.5;
+}
+
+.home-constellation__field .a {
+    opacity: 0.62;
+}
+
+.home-constellation__field .b {
+    opacity: 0.42;
+}
+
+.home-constellation__field .c {
+    opacity: 0.28;
+}
+
+/* Lights behind the title and description: barely there. */
+.home-constellation__field .e {
+    opacity: 0.12;
+}
+
+/* The drift is switched on by script and only for people who have not asked
+   for stillness: tens of seconds, a few pixels. */
+@media (prefers-reduced-motion: no-preference) {
+    .home-constellation[data-drift] .home-constellation__field {
+        animation: constellation-drift 90s ease-in-out infinite alternate;
+    }
+}
+
+@keyframes constellation-drift {
+    from {
+        transform: translate(-4px, 3px);
+    }
+
+    to {
+        transform: translate(4px, -3px);
+    }
+}
+
+@media print {
+    .home-constellation {
+        display: none;
+    }
+}
+
+/* ─── end lane D ─── */
+
+/* ─── lane E: Measures instrument cards ─── */
+.instrument-card {
+    --card-hue: var(--rule);
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem 1rem 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--card-hue);
+    border-radius: var(--radius-machine);
+}
+.instrument-card[data-pack="1"] {
+    --card-hue: var(--pack-1);
+}
+.instrument-card[data-pack="2"] {
+    --card-hue: var(--pack-2);
+}
+.instrument-card[data-pack="3"] {
+    --card-hue: var(--pack-3);
+}
+.instrument-card[data-pack="4"] {
+    --card-hue: var(--pack-4);
+}
+.instrument-card[data-pack="5"] {
+    --card-hue: var(--pack-5);
+}
+.instrument-card[data-pack="6"] {
+    --card-hue: var(--pack-6);
+}
+.instrument-card > p {
+    margin-top: 0;
+}
+.instrument-card > p > span[id] {
+    display: inline-block;
+    scroll-margin-top: 2rem;
+}
+.instrument-card__specs {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem 1.5rem;
+    margin: 1rem 0 0;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--rule);
+}
+.instrument-card__specs > div {
+    min-width: 0;
+}
+.instrument-card__specs dt {
+    margin: 0 0 0.125rem;
+    font-family: var(--machine);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--soil);
+}
+.instrument-card__specs dd {
+    margin: 0;
+    font-family: var(--prose);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    font-variant-numeric: tabular-nums;
+    overflow-wrap: anywhere;
+}
+@media (min-width: 900px) {
+    .instrument-card__specs {
+        grid-template-columns: 1fr 1fr;
+    }
+    .instrument-card__specs > div:nth-child(2),
+    .instrument-card__specs > div:nth-child(3) {
+        grid-column: 1 / -1;
+    }
+}
+/* ─── end lane E ─── */
+
+/* ─── lane F: FAQ question controls ─── */
+.faq-answer {
+    margin-block: 0 2rem;
+}
+
+/* The category filter's own state, kept apart from the phone fold's `hidden`. */
+.faq-answer[data-faq-filtered] {
+    display: none;
+}
+
+.faq-copy-link,
+.faq-disclosure {
+    margin-inline-start: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--rule);
+    border-radius: 0;
+    background: var(--surface);
+    color: var(--moss);
+    font-family: var(--machine);
+    font-size: 0.75rem;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.faq-disclosure {
+    display: none;
+}
+
+/* Copy link is an icon button: a chain that becomes a check once copied. */
+.faq-copy-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.faq-copy-link__icon {
+    width: 1rem;
+    height: 1rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.faq-copy-link__check,
+.faq-copy-link.is-copied .faq-copy-link__chain {
+    display: none;
+}
+
+.faq-copy-link.is-copied .faq-copy-link__check {
+    display: inline;
+}
+
+.faq-copy-link:hover,
+.faq-copy-link:focus-visible,
+.faq-disclosure:hover,
+.faq-disclosure:focus-visible {
+    outline: 2px solid var(--moss);
+    outline-offset: 3px;
+}
+
+.faq-live {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+@media (max-width: 719px) {
+    .faq-disclosure {
+        display: inline-block;
+    }
+
+    .faq-answer[hidden] {
+        display: none;
+    }
+}
+
+/* ─── end lane F ─── */
+
+/* ─── lane G: paired glossary entries ─── */
+
+.glossary-list dt {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2em 0.55em;
+    align-items: baseline;
+}
+
+.glossary-term {
+    font-family: var(--prose);
+    font-size: 1.08em;
+}
+
+.glossary-term-pair {
+    color: var(--soil);
+    font-family: var(--machine);
+    font-size: 0.78em;
+    font-weight: 400;
+    overflow-wrap: anywhere;
+}
+
+/* ─── end lane G ─── */
+
+/* ─── lane H: Your Kami's own trace ─── */
+
+.kami-trace {
+    margin: 2rem 0;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-machine);
+    background: var(--surface);
+    color: var(--ink);
+}
+
+.kami-trace dl {
+    margin: 0;
+    padding: 0 1rem;
+}
+
+.kami-trace__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.25rem;
+    padding-block: 0.75rem;
+    border-bottom: 1px solid var(--rule);
+}
+
+.kami-trace__row:last-child {
+    border-bottom: 0;
+}
+
+.kami-trace__row dt {
+    font-family: var(--machine);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--soil);
+}
+
+.kami-trace__row dd {
+    min-width: 0;
+    margin: 0;
+    font-family: var(--prose);
+    font-size: 1rem;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+}
+
+.kami-trace__row ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.kami-trace__row li {
+    margin: 0;
+    padding: 0;
+}
+
+.kami-trace__row li + li {
+    margin-top: 0.4rem;
+}
+
+.kami-trace time {
+    font-family: var(--machine);
+    font-size: 0.875em;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.kami-trace figcaption {
+    padding: 0.6rem 1rem;
+    border-top: 1px solid var(--rule);
+    font-family: var(--machine);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    color: var(--soil);
+}
+
+@media (min-width: 720px) {
+    .kami-trace dl {
+        padding-inline: 1.5rem;
+    }
+
+    .kami-trace__row {
+        grid-template-columns: 7rem minmax(0, 1fr);
+        gap: 1rem;
+    }
+
+    .kami-trace figcaption {
+        padding-inline: 1.5rem;
+    }
+}
+
+@media print {
+    .kami-trace {
+        break-inside: avoid;
+    }
+}
+
+/* ─── end lane H ─── */
+
+/* ─── lane I: margin notes: glosses and footnotes ─── */
+/* Wide screens (min-width 1360px): the column is 680px, the ¶ links take about
+   5rem beyond it, and a 15rem note then still clears the viewport edge. */
+.margin-notes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+}
+
+.margin-note {
+    position: absolute;
+    box-sizing: border-box;
+    width: 15rem;
+    margin: 0;
+    padding: 0 0 0 0.75rem;
+    border-inline-start: 1px solid var(--rule);
+    font-family: var(--prose);
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    color: var(--soil);
+}
+
+.margin-note[hidden],
+.margin-pop[hidden],
+.margin-disclosure[hidden] {
+    display: none;
+}
+
+.mn-terms {
+    margin: 0 0 0.25rem;
+    font-family: var(--machine);
+    font-size: 0.7rem;
+    line-height: 1.5;
+    color: var(--ink);
+}
+
+.mn-text {
+    margin: 0;
+}
+
+.mn-text p {
+    margin: 0;
+}
+
+.mn-text p + p {
+    margin-top: 0.5rem;
+}
+
+.mn-foot {
+    margin: 0.375rem 0 0;
+    font-family: var(--machine);
+    font-size: 0.7rem;
+    line-height: 1.5;
+}
+
+.mn-more {
+    color: var(--moss);
+    text-underline-offset: 0.2em;
+}
+
+.mn-more:focus-visible,
+.mn-close:focus-visible,
+.margin-pop:focus-visible {
+    outline: 2px solid var(--moss);
+    outline-offset: 3px;
+}
+
+.margin-pop {
+    position: absolute;
+    z-index: 40;
+    box-sizing: border-box;
+    width: min(20rem, calc(100vw - 1rem));
+    padding: 0.75rem 2.75rem 0.75rem 0.875rem;
+    background: var(--surface);
+    color: var(--soil);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-prose);
+    font-family: var(--prose);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+}
+
+.mn-close {
+    position: absolute;
+    top: 0;
+    inset-inline-end: 0;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--soil);
+    font-family: var(--machine);
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.margin-disclosure {
+    margin: 0.5rem 0 1.25rem;
+    padding: 0.625rem 0.875rem;
+    background: var(--surface);
+    border-inline-start: 2px solid var(--moss);
+    font-family: var(--prose);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--soil);
+}
+
+.gloss[aria-expanded="true"] {
+    border-bottom-style: solid;
+}
+
+@media print {
+    .margin-notes,
+    .margin-pop,
+    .margin-disclosure {
+        display: none;
+    }
+}
+/* ─── end lane I ─── */
+
+/* ─── lane J: walking player ─── */
+/* Progressive enhancement over the native <audio> (DESIGN.md §11.6): once the
+   script has built the player, the native control steps aside. */
+html .audio-section[data-walker] {
+    padding: 0;
+    background: none;
+    border: 0;
+    border-radius: 0;
+}
+
+.audio-section[data-walker] audio {
+    display: none;
+}
+
+/* From 1280px the player lives at the foot of the TOC, so the section is empty. */
+.audio-section[data-docked] {
+    display: none;
+}
+
+.walking-player {
+    display: grid;
+    gap: 4px;
+    padding: 10px 12px 12px;
+    font-family: var(--machine);
+    font-size: 0.8rem;
+    line-height: 1.2;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-machine);
+}
+
+.walking-player__time {
+    white-space: nowrap;
+}
+
+.walking-player__seek {
+    display: block;
+    width: 100%;
+    height: 44px;
+    margin: 0;
+    accent-color: var(--moss);
+    background: transparent;
+    cursor: pointer;
+}
+
+.walking-player__seek:disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+
+.walking-player__buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.walking-player__btn {
+    flex: 1 1 auto;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font: inherit;
+    color: var(--ink);
+    background: var(--field);
+    border: 1px solid var(--soil);
+    border-radius: var(--radius-machine);
+    cursor: pointer;
+}
+
+.walking-player__btn:hover {
+    background: var(--warm);
+}
+
+.walking-player__play {
+    color: var(--surface);
+    background: var(--moss);
+    border-color: var(--moss);
+}
+
+.walking-player__play:hover {
+    background: var(--moss);
+    filter: brightness(1.1);
+}
+
+.walking-player :is(button, input):focus-visible {
+    outline: 2px solid var(--moss);
+    outline-offset: 3px;
+}
+
+/* Rail: the last item inside the TOC's own scroll box, pinned to its foot. */
+.page-toc > .walking-player {
+    position: sticky;
+    bottom: 0;
+    margin-top: 12px;
+    padding: 8px 0 0;
+    font-size: 0.75rem;
+    background: var(--field);
+    border-width: 1px 0 0;
+}
+
+.page-toc > .walking-player .walking-player__btn {
+    padding: 0 4px;
+}
+
+.page-toc > .walking-player .walking-player__buttons {
+    gap: 4px;
+}
+
+/* Below 1280px: a card in the column; a slim bar at the viewport foot only while playing. */
+@media (max-width: 1279px) {
+    .walking-player.is-bar {
+        position: fixed;
+        inset: auto 0 0;
+        z-index: 30;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        column-gap: 10px;
+        gap: 0 10px;
+        padding: 4px max(12px, calc((100% - 680px) / 2))
+            calc(4px + env(safe-area-inset-bottom));
+        border-width: 1px 0 0;
+        border-color: var(--soil);
+    }
+
+    .walking-player.is-bar .walking-player__buttons {
+        grid-column: 1 / -1;
+    }
+
+    html.walking-bar-on body {
+        padding-bottom: 7rem;
+    }
+}
+
+@media (min-width: 560px) and (max-width: 1279px) {
+    .walking-player.is-bar {
+        grid-template-columns: auto 1fr auto;
+    }
+
+    .walking-player.is-bar .walking-player__buttons {
+        grid-column: auto;
+    }
+
+    html.walking-bar-on body {
+        padding-bottom: 5rem;
+    }
+}
+
+@media print {
+    .walking-player {
+        display: none !important;
+    }
+}
+/* ─── end lane J ─── */
+
+/* ─── lane K: reading-position transfer ─── */
+
+/* ─── end lane K ─── */
+
+/* ─── lane L: hanging punctuation and inline language ─── */
+
+:lang(zh) main :is(p, li, dd, blockquote, figcaption, td, th) {
+    hanging-punctuation: first last;
+    hanging-punctuation: allow-end first last;
+}
+
+@supports (text-autospace: normal) {
+    :lang(zh) main {
+        text-autospace: normal;
+    }
+}
+
+@supports (text-spacing-trim: trim-start) {
+    :lang(zh) main {
+        text-spacing-trim: trim-start;
+    }
+}
+
+html:not(:lang(zh)) main span[lang="zh-TW"] {
+    line-break: strict;
+}
+
+@media print {
+    :lang(zh) main span[lang="en-GB"] {
+        hyphens: manual;
+    }
+}
+
+/* ─── end lane L ─── */

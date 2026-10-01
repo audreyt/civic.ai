@@ -24,8 +24,8 @@ goals:
     - title: "Safe space"
       text: "A place where difficult questions, uncertainties and challenges can be raised openly."
     - title: "Real impact"
-      text: "The day's outcomes will directly feed into the Civic AI book project."
-agenda_title: "Draft Agenda"
+      text: "The day's outcomes feed directly into the Civic AI book project."
+agenda_title: "Agenda"
 agenda:
     - time: "09:45"
       title: "Welcome & Framing the Day"
@@ -186,7 +186,7 @@ agenda:
     - time: "16:30"
       title: "Wrap Up & Goodbye"
 packs_title: "The 6-Pack of Care"
-packs_intro: "Six interlocking principles for building AI that cares."
+packs_intro: "Six interlocking principles for AI that supports care between people."
 packs_link_text: "Explore the framework"
 packs_link_url: "/"
 packs_period: "."
@@ -198,6 +198,7 @@ packs:
     - { num: 5, name: "Solidarity", url: "/5/" }
     - { num: 6, name: "Symbiosis", url: "/6/" }
 thumbnail: "/img/overview-small.jpg"
+og_image: "/img/og-card.jpg"
 overview_image:
     src: "/img/overview-small.png"
     alt: "6-Pack of Care visual overview"
@@ -205,7 +206,7 @@ overview_image:
     h: 1781
 ---
 
-<div class="conf-quotes-pair">
+<div class="conf-quotes-pair" id="quotes-pair">
 <figure class="conf-quote">
     <div class="conf-quote-portrait">
         <a href="https://www.gyalwarinpoche.com/news/3-13"><img src="/img/his-holiness-dalai-lama.jpg" alt="His Holiness the 14th Dalai Lama answers a question from Tenzin Yangtso" title="His Holiness the 14th Dalai Lama answers a question from Tenzin Yangtso" width="512" height="512" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:50%;border:2px solid var(--border);box-shadow:0 10px 24px rgba(15,25,35,.12)" /></a>
@@ -237,6 +238,6 @@ overview_image:
 <p style="font-size:0.95rem">Participants took part in a <a href="https://pol.is">Polis</a> exercise on AI and community care. The results are available in two formats.</p>
 
 <div class="conf-packs-condensed">
-<a href="/conference/report/">Community Voices on AI</a>
-<a href="/conference/sensemaking/">Deliberation Mirror</a>
+<a href="/conference/report/">Community Voices on AI (written report)</a>
+<a href="/conference/sensemaking/">Deliberation Mirror (interactive)</a>
 </div>

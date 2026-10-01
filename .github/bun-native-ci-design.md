@@ -5,7 +5,7 @@ Status: Superseded 2026-07-12 by the Vite+-managed runtime cutover — see `vp-r
 
 ## Problem
 
-The GitHub Actions run at `29059112124` succeeded but warned that `actions/checkout@v4` declares a Node.js 20 action runtime and was being forced onto Node.js 24 by the runner.
+The GitHub Actions run `29059112124` succeeded but warned that `actions/checkout@v4` declares a Node.js 20 action runtime and was being forced onto Node.js 24 by the runner.
 
 The warning concerns the private runtime of a GitHub Action, not the runtime selected by repository commands. Both workflows still use `actions/checkout@v4`. The Pages workflow also uses Node.js 20 generations of `actions/configure-pages`, `actions/upload-pages-artifact`, and `actions/deploy-pages`.
 

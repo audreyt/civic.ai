@@ -6,7 +6,8 @@ import type { VectorizeBinding } from "./vectorize";
 
 export type Env = {
     AUDREY_MODEL?: string;
-    BASETEN_API_KEY?: string;
+    // The Baseten credential is a stored provider key on the Cloudflare AI
+    // Gateway side, so only the gateway run token is needed here.
     CF_AIG_TOKEN?: string;
     CF_AIG_ACCOUNT_ID?: string;
     CF_AI_GATEWAY_ACCOUNT_ID?: string;

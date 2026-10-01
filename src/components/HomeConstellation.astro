@@ -1,0 +1,46 @@
+---
+// Home constellation behind the institutional masthead (DESIGN.md §10): 120
+// small lights at seeded, build-time positions. Decorative only; its slow drift
+// is switched on by ConstellationClient, so without JavaScript it is still.
+import type { PageRecord } from "../lib/pages";
+interface Props { page: PageRecord; }
+const { page } = Astro.props;
+const isHome = page.url === "/" || page.url === "/tw/";
+
+// mulberry32: the same lights on every build.
+function seeded(seed: number) {
+    let a = seed >>> 0;
+    return () => {
+        a = (a + 0x6d2b79f5) >>> 0;
+        let t = a;
+        t = Math.imul(t ^ (t >>> 15), t | 1);
+        t = (t + Math.imul(t ^ (t >>> 7), t | 61)) ^ t;
+        return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+}
+const rand = seeded(0x6c1a);
+const pct = (n: number) => Math.round(n * 10) / 10;
+// The title and description sit in the middle of the masthead: lights inside
+// that band stay very faint; lights in the margins and the top and bottom
+// strips carry the field.
+const inText = (x: number, y: number) => x > 16 && x < 84 && y > 14 && y < 92;
+type Light = { x: number; y: number; r: number; k: string };
+const lights: Light[] = [];
+while (lights.length < 120) {
+    const x = pct(rand() * 100);
+    const y = pct(rand() * 100);
+    const r = Math.round((0.6 + rand() * 1.0) * 10) / 10;
+    const pick = rand();
+    const faint = inText(x, y);
+    // Faint lights: a single class (e). Margin lights: three soft steps.
+    const k = faint ? "e" : pick < 0.5 ? "c" : pick < 0.85 ? "b" : "a";
+    lights.push({ x, y, r, k });
+}
+---
+{isHome && (
+    <div class="home-constellation" aria-hidden="true" data-constellation>
+        <svg class="home-constellation__field" width="100%" height="100%" focusable="false">
+            {lights.map((l) => <circle class={l.k} cx={`${l.x}%`} cy={`${l.y}%`} r={l.r} />)}
+        </svg>
+    </div>
+)}

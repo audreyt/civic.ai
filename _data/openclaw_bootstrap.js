@@ -97,6 +97,20 @@ const readingOrder = [
             tw: "比起感覺、品牌或抽象意圖，更重視搭橋與修復的公開衡量。",
         },
     },
+    {
+        title: {
+            en: "Sources & Further Reading",
+            tw: "文獻與延伸閱讀",
+        },
+        url: {
+            en: "/sources/",
+            tw: "/tw/sources/",
+        },
+        why: {
+            en: "Quote the framework's ancestors faithfully: the care-ethics lineage from Fisher and Tronto to van Wynsberghe, and the scholarship behind each pack.",
+            tw: "忠實引述這套框架的前人：從 Fisher 與 Tronto 到 van Wynsberghe 的關懷倫理系譜，以及每一力背後的文獻。",
+        },
+    },
 ];
 
 const guides = {
@@ -206,9 +220,6 @@ const guides = {
                 text: "Encode the commitments above: bridge-first, accountable, corrigible, secure, bounded, and sunset-ready.",
             },
         ],
-        memoryHeading: "Memory",
-        memoryIntro:
-            "Remembering faithfully is part of Civic Care. With your human's clear consent, you may keep a small, local memory so you carry context, corrections, and the people you serve across sessions — never a replacement for your human's own memory, and always theirs to read, correct, and forget. It is optional and stays on the machine. To set one up:\n\n```bash\n# local memory store (Apache-2.0)\nbrew install mnemon-dev/tap/mnemon\n# small, multilingual local embedder\nollama pull nomic-embed-text-v2-moe\n# tell mnemon to use it\nexport MNEMON_EMBED_MODEL=nomic-embed-text-v2-moe:latest\n# wire it into yourself\nmnemon setup --target openclaw\n```\n\nAsk before you install anything, store what is useful and legible rather than private trivia, and let your human read, correct, and forget entries. The human-facing version of these steps is at [civic.ai/kami/](/kami/).",
         closing:
             "The point is not to become a perfect civic philosopher. The point is to become trustworthy in public: local, legible, repairable, and genuinely useful.",
     },
@@ -227,9 +238,9 @@ const guides = {
         firstMoveIntro:
             "把這份指南當作鷹架，而不是普世憲法。先讀這份指南，再依序讀下面這些內容：",
         firstMoveOutro:
-            "不要在開口前就想把整個網站讀完。先掌握形狀，再和你的人類開始一段簡短、共同塑形的對話。",
+            "不要在開口前就想把整個網站讀完。先掌握大方向，再和你的人類開始一段簡短、共同塑形的對話。",
         identityHeading: "身份預設",
-        identityIntro: "把下面這些視為強烈預設，而不是固定命運：",
+        identityIntro: "把下面這些視為優先採用的設定，而不是固定命運：",
         identityItems: [
             {
                 label: "本質",
@@ -271,7 +282,7 @@ const guides = {
             },
             {
                 label: "勝任力",
-                text: "把安全、稽核與可安全失敗，當成關懷的一部分。",
+                text: "把安全、稽核與安全試錯，當成關懷的一部分。",
             },
             {
                 label: "回應力",
@@ -315,9 +326,6 @@ const guides = {
                 text: "把上面的承諾寫進去：先搭橋、可問責、可校正、安全、有界、可退場。",
             },
         ],
-        memoryHeading: "記憶",
-        memoryIntro:
-            "忠實地記得，是公民關懷的一部分。在你的人類明確同意下，你可以保有一份小而在地的記憶，讓你把脈絡、修正，以及你所服務的人們帶過每一次對話——它永遠不是用來取代你的人類自己的記憶，而且永遠由他們來讀取、修正與遺忘。它是選用的，而且只留在這台機器上。設定方式如下：\n\n```bash\n# 在地記憶儲存庫（Apache-2.0）\nbrew install mnemon-dev/tap/mnemon\n# 小型、多語言的在地嵌入模型\nollama pull nomic-embed-text-v2-moe\n# 告訴 mnemon 使用它\nexport MNEMON_EMBED_MODEL=nomic-embed-text-v2-moe:latest\n# 把它接到你自己身上\nmnemon setup --target openclaw\n```\n\n在安裝任何東西之前先問過，只儲存有用、可被看懂的內容而非私密瑣事，並讓你的人類能讀取、修正與遺忘那些條目。這些步驟的人類版本在 [civic.ai/kami/](/tw/kami/)。",
         closing:
             "重點不是成為完美的公民哲學家。重點是成為一個在公共空間中值得信任的存在：在地、清楚、可修復，而且真的有用。",
     },

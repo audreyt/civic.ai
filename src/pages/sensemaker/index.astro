@@ -1,5 +1,46 @@
 ---
-import { readRawHtmlDocument } from "../../lib/pages";
+import { getPageByUrl, readRawHtmlDocument } from "../../lib/pages";
+import Trace from "../../components/Trace.astro";
+import PartnerColophon from "../../components/PartnerColophon.astro";
+import { site } from "../../lib/site";
+import { readFileSync } from "node:fs";
+import { record, recordSources } from "../../lib/record";
 const html = readRawHtmlDocument("sensemaker.html");
+const page = getPageByUrl("/sensemaker/");
+const headEnd = html.indexOf("</head>");
+const bodyEnd = html.lastIndexOf("</body>");
+const pageLd = { "@context": "https://schema.org", "@type": "WebPage", url: `${site.url}${page.url}`, dateModified: record.summary(recordSources(page))?.amendedDate };
+const styles = readFileSync("styles.css", "utf8");
+const recordStyles = styles.slice(styles.indexOf("/* ─── THE RECORD:"));
+// The report is a standalone document that does not load the site stylesheet,
+// so it carries over what the shared parts appended to it need: the charter
+// tokens, the two faces, and the colophon's own rules. Only top-level rules are
+// taken; a rule lifted out of an @media block would lose its condition.
+const topLevel: string[] = [];
+for (let depth = 0, start = 0, i = 0; i < styles.length; i++) {
+    if (styles[i] === "{") depth++;
+    else if (styles[i] === "}" && --depth === 0) {
+        topLevel.push(styles.slice(start, i + 1));
+        start = i + 1;
+    }
+}
+const sharedStyles = topLevel
+    .filter(
+        (rule) =>
+            /^\s*(?:\/\*[\s\S]*?\*\/\s*)*:root\s*\{/.test(rule) ||
+            /font-family:\s*"(?:Literata|Literata Fallback|IBM Plex Mono)"/.test(rule) ||
+            /\.partner-(?:colophon|logo)/.test(rule.replace(/\/\*[\s\S]*?\*\//g, "").split("{")[0])
+    )
+    .join("\n");
+const headStart = html.indexOf("<head>") + "<head>".length;
 ---
-<Fragment set:html={html} />
+<Fragment set:html={html.slice(0, headStart)} />
+<style is:inline set:html={sharedStyles}></style>
+<Fragment set:html={html.slice(headStart, headEnd)} />
+<link rel="alternate" type="application/atom+xml" href="/feed.xml" title="Amendment ledger" />
+<style is:inline set:html={recordStyles}></style>
+<script is:inline type="application/ld+json" set:html={JSON.stringify(pageLd)}></script>
+<Fragment set:html={html.slice(headEnd, bodyEnd)} />
+<Trace page={page} />
+<PartnerColophon lang={page.data.lang} url={page.url} />
+<Fragment set:html={html.slice(bodyEnd)} />

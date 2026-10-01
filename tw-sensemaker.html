@@ -33,8 +33,8 @@ permalink: "/tw/sensemaker/"
         --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
         --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
         --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.08);
-        --serif: "DM Serif Display", Georgia, serif;
-        --sans: "Instrument Sans", -apple-system, system-ui, sans-serif;
+        --serif: var(--prose);
+        --sans: var(--machine);
         --ease: cubic-bezier(0.22, 1, 0.36, 1);
     }
 
@@ -73,32 +73,14 @@ permalink: "/tw/sensemaker/"
         overflow: hidden;
     }
 
-    .hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background:
-            radial-gradient(
-                ellipse 80% 50% at 20% 40%,
-                rgba(255, 255, 255, 0.06) 0%,
-                transparent 70%
-            ),
-            radial-gradient(
-                ellipse 60% 80% at 80% 20%,
-                rgba(255, 255, 255, 0.04) 0%,
-                transparent 60%
-            );
-        pointer-events: none;
-    }
-
     .hero::after {
         content: "";
         position: absolute;
         bottom: 0;
         left: 0;
         right: 0;
-        height: 120px;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.15), transparent);
+        height: 1px;
+        background: rgba(0, 0, 0, 0.18);
         pointer-events: none;
     }
 
@@ -499,7 +481,7 @@ permalink: "/tw/sensemaker/"
     }
 
     /* ─── COLLAPSIBLE DETAILS ─── */
-    details {
+    .container details {
         border: 1px solid var(--border);
         border-radius: var(--radius);
         margin-bottom: 10px;
@@ -508,15 +490,15 @@ permalink: "/tw/sensemaker/"
         transition: box-shadow 0.3s var(--ease);
     }
 
-    details:hover {
+    .container details:hover {
         box-shadow: var(--shadow-sm);
     }
 
-    details[open] {
+    .container details[open] {
         box-shadow: var(--shadow-md);
     }
 
-    summary {
+    .container summary {
         padding: 18px 24px;
         cursor: pointer;
         font-weight: 600;
@@ -529,15 +511,15 @@ permalink: "/tw/sensemaker/"
         transition: background 0.2s;
     }
 
-    summary:hover {
+    .container summary:hover {
         background: var(--surface-warm);
     }
 
-    summary::-webkit-details-marker {
+    .container summary::-webkit-details-marker {
         display: none;
     }
 
-    summary::after {
+    .container summary::after {
         content: "";
         margin-left: auto;
         width: 8px;
@@ -549,7 +531,7 @@ permalink: "/tw/sensemaker/"
         flex-shrink: 0;
     }
 
-    details[open] summary::after {
+    .container details[open] summary::after {
         transform: rotate(-135deg);
     }
 
@@ -623,12 +605,7 @@ permalink: "/tw/sensemaker/"
     /* ─── DIVIDER ─── */
     .divider {
         height: 1px;
-        background: linear-gradient(
-            90deg,
-            transparent,
-            var(--border-strong),
-            transparent
-        );
+        background: var(--rule);
         margin: 40px 0;
     }
 
@@ -686,7 +663,7 @@ permalink: "/tw/sensemaker/"
         .section-header {
             margin: 40px 0 16px;
         }
-        details summary {
+        .container details summary {
             padding: 16px 18px;
             font-size: 0.9rem;
         }

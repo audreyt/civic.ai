@@ -93,13 +93,22 @@
         const imgs = () => layers().map(imgFor).filter(Boolean);
         const toJa = (src) =>
             src.replace(/-wordless(\.[a-z0-9]+)(?=($|[?#]))/i, "-ja$1");
-        const toWordless = (src) =>
-            src.replace(/-ja(\.[a-z0-9]+)(?=($|[?#]))/i, "-wordless$1");
+        // A responsive srcset lists narrower renditions first; print uses the
+        // full-size lettered file named by its last (widest) candidate.
+        const toJaSet = (set) => {
+            const widest = set.split(",").pop().trim().split(/\s+/)[0];
+            const ja = toJa(widest);
+            return ja !== widest ? ja : set;
+        };
         // Base panel art follows the document language: the original
         // Japanese shows the lettered `-ja` art (text baked in) under the
         // overlays; any live translation swaps back to `-wordless` so the
-        // (translated) overlay text is what reads. Skipped mid-print so the
-        // enterPrint/exitPrint snapshot stays authoritative.
+        // (translated) overlay text is what reads. The lettered art ships
+        // only at full size, so each <picture> source keeps its wordless
+        // srcset in data-wordless-srcset to restore it. Skipped mid-print so
+        // the enterPrint/exitPrint snapshot stays authoritative.
+        const toWordless = (src) =>
+            src.replace(/-ja(\.[a-z0-9]+)(?=($|[?#]))/i, "-wordless$1");
         const syncImgLang = () => {
             if (printState.active) return;
             const ja = isJa();
@@ -107,6 +116,17 @@
                 const src = img.getAttribute("src") || "";
                 const next = ja ? toJa(src) : toWordless(src);
                 if (next !== src) img.setAttribute("src", next);
+                const pic = img.closest("picture");
+                if (!pic) return;
+                pic.querySelectorAll("source").forEach((s) => {
+                    const set = s.getAttribute("srcset") || "";
+                    if (!s.dataset.wordlessSrcset)
+                        s.dataset.wordlessSrcset = set;
+                    const want = ja
+                        ? toJaSet(s.dataset.wordlessSrcset)
+                        : s.dataset.wordlessSrcset;
+                    if (want !== set) s.setAttribute("srcset", want);
+                });
             });
         };
         // Print swaps every overlay image to its lettered `-ja` variant so
@@ -117,22 +137,31 @@
         // afterprint, Firefox relies on the matchMedia listener, and
         // browsers that fire both would otherwise call enter/exit twice.
         // printState guards that reentrancy AND (more importantly) captures
-        // each image's literal pre-print `src` — including the async AVIF
-        // src rewrite in ClientScripts.astro — so exit restores exactly
-        // what was on screen rather than recomputing a "-wordless" guess
-        // that would clobber a `.avif` extension or any src not currently
-        // wordless.
+        // each image's literal pre-print `src` and its <picture> sources'
+        // `srcset`, so exit restores exactly what was on screen rather than
+        // recomputing a "-wordless" guess that would clobber a `.avif`
+        // extension or any src not currently wordless.
         const printState = { active: false, snapshot: null };
         const enterPrint = () => {
             if (printState.active) return;
             printState.active = true;
-            printState.snapshot = imgs().map((img) => [
-                img,
-                img.getAttribute("src") || "",
-            ]);
-            printState.snapshot.forEach(([img, src]) => {
-                const next = toJa(src);
-                if (next !== src) img.setAttribute("src", next);
+            // A <picture>'s <source srcset> outranks the <img src>, so the
+            // lettered variant has to replace both to reach the page.
+            printState.snapshot = imgs().flatMap((img) => {
+                const pic = img.closest("picture");
+                const sources = pic ? [...pic.querySelectorAll("source")] : [];
+                return [
+                    [img, "src", img.getAttribute("src") || ""],
+                    ...sources.map((s) => [
+                        s,
+                        "srcset",
+                        s.getAttribute("srcset") || "",
+                    ]),
+                ];
+            });
+            printState.snapshot.forEach(([el, attr, val]) => {
+                const next = attr === "srcset" ? toJaSet(val) : toJa(val);
+                if (next !== val) el.setAttribute(attr, next);
             });
         };
         const exitPrint = () => {
@@ -140,7 +169,7 @@
             printState.active = false;
             const snapshot = printState.snapshot || [];
             printState.snapshot = null;
-            snapshot.forEach(([img, src]) => img.setAttribute("src", src));
+            snapshot.forEach(([el, attr, val]) => el.setAttribute(attr, val));
         };
         const preloadJa = () => {
             imgs().forEach((img) => {

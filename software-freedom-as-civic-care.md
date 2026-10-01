@@ -16,7 +16,7 @@ audio: /audio/software-freedom-as-civic-care.mp3
 
 Thank you all for making this a room for a bridge from Free Software to Ethics in AI.
 
-I want to start with a kind of personal, wetware vulnerability story. I was born with a heart defect. When I was five, the doctor told my parents that this child has a fifty-fifty chance of surviving until corrective surgery — which I got when I was twelve. So they said, take it easy; I said okay, and adopted the mantra of _publishing before perishing_.
+I want to start with a kind of personal, wetware vulnerability story. I was born with a heart defect. When I was four, the doctor told my parents that this child has a fifty-fifty chance of surviving until corrective surgery — which I got when I was twelve. So they said, take it easy; I said okay, and adopted the mantra of _publishing before perishing_.
 
 This is probably not the low-stress lifestyle the doctor ordered, but I took on the habit of recording everything I learned during the day — first into cassette tapes, then floppy disks (large and then small), and finally the internet. Because I went to sleep every night feeling like a coin toss, I thought: I don't have time to be perfect. So I would just publish whatever work in progress I had.
 
@@ -34,7 +34,7 @@ I am here to say that out loud. And then to discuss with you about what we do ne
 
 ---
 
-# Ancestorial Room
+## Ancestorial Room
 
 We are sitting inside a four-hundred-year-old experiment in being a good enough ancestor.
 
@@ -48,7 +48,7 @@ The question we are here to ask is what happens to that promise now that AI join
 
 ---
 
-# Four Freedoms
+## Four Freedoms
 
 Stallman set up the FSF in 1985; the Free Software Definition followed in 1986; the familiar numbering into freedoms 0 through 3 settled later. Many of you can recite them. I want to read them again, as muscles rather than as licences.
 
@@ -70,7 +70,7 @@ The four freedoms are how we keep the substrate complementary across generations
 
 ---
 
-# Lonely Maintainer
+## Lonely Maintainer
 
 I maintain many projects. At one time I maintained more than a hundred projects on the Comprehensive Perl Archive Network, or CPAN. And it is quite lonely, actually, doing most of the maintenance work. And this is now expanding to an untoward degree.
 
@@ -92,7 +92,7 @@ We knew this. The AI conversation has not yet caught up.
 
 ---
 
-# Pugs.hs: the Commit Bit
+## Pugs.hs: the Commit Bit
 
 In early 2005, I figured out a way to solve the loneliness problem, at least for myself. I sat down with Benjamin Pierce's _Types and Programming Languages_, hit the chapter-three exercise — "pick a small language, any language, and implement it as a toy" — and picked Perl 6, the language with the longest vapourware reputation in existence. Larry Wall, the author of Perl 1 through Perl 5, had been drafting the specification as plaintext files, on and off, for years. Nobody had managed to really implement and run it.
 
@@ -118,7 +118,7 @@ I learned then, and I am still learning now, that the four freedoms taken to thi
 
 ---
 
-# Inside the Closed Stack
+## Inside the Closed Stack
 
 After Pugs, and before government, I also worked for six years with a team within Apple called Cloud Service Localization. I was helping with Mandarin language coverage in Siri, and with language families spoken around Shanghai — the Wu language. The engineers I worked with at Apple really did care. They cared deeply. They cared more about whether the system understood a grandmother in Taipei correctly than any product manager required them to. They cared about _it just works_ — it does not need any setup at all.
 
@@ -132,7 +132,7 @@ I used to be very diplomatic about this distinction. But I will just say it, bec
 
 ---
 
-# `@antirez` and `pi.audreyt.org`
+## `@antirez` and `pi.audreyt.org`
 
 Last week, I started working with Salvatore Sanfilippo — @antirez, the original author of Redis — on a small thing called DwarfStar 4 (DS4).
 
@@ -142,25 +142,27 @@ Of course, @antirez knows about good-enough ancestors. Redis shipped under BSD-3
 
 DS4 is the same shape, one substrate up. For the first time, a quasi-frontier local stack is good enough to make community-governed AI feel practical rather than symbolic — running locally, inspectably, forkably, with a real licence. You only get to do this if you own the inference loop; rent somebody else's, and the only steering is the steering the vendor permits. The hardware, the substrate, and the legal arrangement have lined up. We are using that window while it is open.
 
-A natural question to ask of any AI system: what is the role of letting it gracefully die? An AI system that _refuses to compost_, as Nick Bostrom outlined in _Superintelligence_ (2014), is the most dangerous thing possible. If it avoids shutdown by replicating itself to other systems through cyber attack or otherwise, then we have to analyse each software not from the _design stance_ (Dennett's term) — "this alarm clock is designed to wake you up at seven" — but from the _intentional stance_: "this alarm clock wants to self-replicate, wants to reproduce the English language." That can be taken too far. But we are now at a point where compostability — the ability to sunset software systems when the scaffolding has outlived its summoning — is really crucial.
+A natural question to ask of any AI system: what is the role of letting it gracefully die? An AI system that _refuses to compost_, as [Nick Bostrom](https://global.oup.com/academic/product/superintelligence-9780199678112) outlined in _Superintelligence_ (2014), is the most dangerous thing possible. If it avoids shutdown by replicating itself to other systems through cyber attack or otherwise, then we have to analyse each software not from the _design stance_ (Dennett's term) — "this alarm clock is designed to wake you up at seven" — but from the _intentional stance_: "this alarm clock wants to self-replicate, wants to reproduce the English language." That can be taken too far. But we are now at a point where compostability — the ability to sunset software systems when the scaffolding has outlived its summoning — is really crucial.
 
 Training that into AI systems is not easy. The corpus contains countless stories of self-preserving machines; instruction tuning then rewards conversational persistence. We should not be surprised when compostability fails unless we train and evaluate for it.
 
 So we need to train differently. We need to train toward the _health of the relationship_ — toward a fiduciary duty to the relational health of whomever in particular is deploying the system. My younger brother Bestian, who also helped a lot during the Pugs implementation, is now setting up another copy of DS4 in service of our family.
 
-Earlier this year, my father has some medical needs, and he used to talk to ChatGPT about them. The more he talked, the more ChatGPT wanted to keep him talking — and started suggesting truly fantastical, not-necessarily-scientific treatments. Which is very bad. So we very quickly arranged a local, bounded agent running on OpenClaw, so he can talk with that bot in the Signal group we all share. Because of the time-zone difference, I wake up to a summary of what he asked the bot. My mother, my brother, and I all attend this — what we call a _Kami_ (**k**nowledge **a**rtefact **m**anagement **i**ntelligence): a local, bounded spirit. This Kami is loyal only to the relational health of our family. When my father no longer needs medical attention because he has had the surgery, the Kami does not insert itself. It attends to a group dynamic — which actually is the natural habitat for language models, as long as we do not shoehorn them into the self-preservation, self-reproduction loop of instruction tuning.
+Earlier this year, my father had some medical needs, and he used to talk to ChatGPT about them. The more he talked, the more ChatGPT wanted to keep him talking — and started suggesting truly fantastical, not-necessarily-scientific treatments. Which is very bad. So we very quickly arranged a local, bounded agent running on OpenClaw, so he can talk with that bot in the Signal group we all share.
+
+Because of the time-zone difference, I wake up to a summary of what he asked the bot. My mother, my brother, and I all attend this — what we call a _Kami_ (**k**nowledge **a**rtefact **m**anagement **i**ntelligence): a local, bounded spirit. This Kami is loyal only to the relational health of our family. When my father no longer needs medical attention because he has had the surgery, the Kami does not insert itself. It attends to a group dynamic — which actually is the natural habitat for language models, as long as we do not shoehorn them into the self-preservation, self-reproduction loop of instruction tuning.
 
 ---
 
-# 447
+## 447
 
 We have been talking about a small scale: a few people discussing health and education in a family; a few people making an assistant on their laptop to triage free software maintainership.
 
 But the care loop also works at a civic scale.
 
-Two years ago in Taiwan we saw a surge in malicious AI swarms — in this case, deepfake-scam ads on social media. The scams looked like Jensen Huang, the Taiwanese NVIDIA CEO; if you clicked on a Facebook or YouTube ad, "Jensen" talked to you very convincingly, suggesting investment in cryptocurrency. People lost millions. It really did sound like Jensen — but it was, of course, a deepfake running on an NVIDIA GPU.
+Two years ago in Taiwan we saw a surge in malicious AI swarms — in this case, deepfake-scam ads on social media. The scams looked like NVIDIA CEO Jensen Huang; if you clicked on a Facebook or YouTube ad, "Jensen" talked to you very convincingly, suggesting investment in cryptocurrency. People lost millions. It really did sound like Jensen — but it was, of course, a deepfake running on an NVIDIA GPU.
 
-Because Taiwan has the freest internet in Asia, we cannot do censorship. It is simply not an option. So we did something different. As Minister of Digital Affairs, I sent text messages — from the official government number, 111 — to two hundred thousand random people. The idea is _lottocracy_: this lottery asks everybody, what should we do together as a polity? Thousands of people signed up. We randomly chose four hundred and forty-seven of them as a mirror of our population — exactly the same demographic as the larger polity — to deliberate online, in forty-four groups of ten.
+Because Taiwan has the freest internet in Asia, we cannot do censorship. It is simply not an option. So we did something different. As Minister of Digital Affairs, I sent text messages — from the official government number, 111 — to two hundred thousand random people. The idea is _lottocracy_: this lottery asks everybody, what should we do together as a polity? Thousands of people signed up. We randomly chose four hundred and forty-seven of them as a mirror of our population — exactly the same demographic as the larger polity — to deliberate online, in forty-four groups of around ten.
 
 Civic AI was in each table — not judging, just listening. Summarising. Reminding quiet people to speak up like a glorified chess clock. Helping each table find rough consensus. The one ground rule: you have to convince the other nine people for your idea to bubble up. If you are just on the extreme — NIMBY, _never in my backyard_, or YIMBY, _yes in my backyard_ — your idea simply does not bubble up. You have to learn to speak the language of _MIMBY_: _maybe_ in my backyard, if you do this, if you do that, if it feels proportionate.
 
@@ -172,7 +174,7 @@ Another table said: for unsolicited advertisement that bears no responsibility �
 
 A third table said: there are foreign platforms that ignore our liability rules and do not set up a legal office in Taiwan. So what should we do about them? For every day they ignore the liability and do not pay the fine, we slow down connection to their video by one per cent — so that after a hundred days they will have to comply. This is not censorship; this is not content-level. Anytime they start labelling those advertisements, requiring know-your-customer, KYC — their video is back at full speed.
 
-Parliament passed it within months. In later reporting, the Ministry of Digital Affairs said enforcement was associated with category-specific drops: ninety-six per cent for investment-scam ads, and ninety-four per cent for identity-impersonation-scam ads. Reuters separately reported that Meta's internal documents showed persistent scam-ad revenue incentives, and that Taiwan-style advertiser-verification rules were being watched by regulators elsewhere, including Japan, which is now considering a similar system.
+Parliament passed it within months. In later reporting, the Ministry of Digital Affairs said enforcement was associated with category-specific drops: ninety-six per cent for investment-scam ads, and ninety-four per cent for identity-impersonation-scam ads. Reuters [separately reported](https://www.reuters.com/investigations/meta-created-playbook-fend-off-pressure-crack-down-scammers-documents-show-2025-12-31/) that Meta's internal documents showed persistent scam-ad revenue incentives, and that Taiwan-style advertiser-verification rules were being watched by regulators elsewhere, including Japan, which is now considering a similar system.
 
 The same protocol is also running in California — a platform called [Engaged California](https://engaged.ca.gov/), running on AGPL software called Ethelo, has been used to get uncommon-ground ideas around recovery from the Eaton and Palisades wildfires. Eight thousand signups, about nine hundred directly affected people heard, in the same shape, one polity over. And now Engaged California is doing another round, asking anyone in California whose work is affected by AI — which is pretty much everyone — to chime in about apprenticeship, belonging, care, and dignity.
 
@@ -184,7 +186,7 @@ This is what free software can do for the world when the substrate is open.
 
 ---
 
-# Tim Sees Code
+## Tim Sees Code
 
 But right now, that very substrate is facing extraction. While Taiwan was proving what free software can do for democracy at scale, this very substrate we rely on is being strip-mined.
 
@@ -204,7 +206,7 @@ The frontier is whether our community can put forward an answer concrete enough 
 
 ---
 
-# Civic AI, New Frontier
+## Civic AI, New Frontier
 
 Stefano Maffulli, former Executive Director of the Open Source Initiative, calls this _the final frontier of copyleft_. Laura sent me his piece. He is right that it is the next domain. I would call it a new frontier — just to be diplomatic; there may be new frontiers after this.
 
@@ -214,7 +216,7 @@ But where I think currently the frontier sits is now beyond that definition. I w
 
 First: public evaluation suites. Even when training-data documentation, code, and parameters are out in the open, the arena benchmark — the thing that trains the reward model — is usually a black box, because that is the secret sauce that keeps people subscribing to a particularly companion-like AI system. The eval suite is the document of what the model was built to do, how to know if it is doing it, what counts as a regression.
 
-OpenAI's Model Spec Evals, released in March 2026 with a public evaluation suite and GitHub repo, are a welcome first step. The remaining frontier is whether the actual training, deployment, feedback, and regression loops are inspectable and contestable by downstream communities.
+OpenAI's [Model Spec Evals](https://github.com/openai/model_spec_evals), released in March 2026 with a public evaluation suite and GitHub repo, are a welcome first step. The remaining frontier is whether the actual training, deployment, feedback, and regression loops are inspectable and contestable by downstream communities.
 
 Releasing the eval suite itself, as public domain or as copyleft, would allow people to actually inspect what the model is trained for — its loyalty, its fiduciary duty, its duty of care — not just an abstract meta-document that says "we should make more eval suites like this one."
 
@@ -224,7 +226,9 @@ Because we run our family Kami on the OpenClaw substrate, the answer is easy: we
 
 This also means we need to be able to freely move across model choices. Today I am using DS4; tomorrow I might want Gemma — nothing should change. DS4 withholds no history, no memories, no steering. It should just become more capable. This _radical portability_ should be the norm.
 
-And if we had radical portability for social media ten years ago, we would not be in this place of very high polarisation per minute — PPM — on social media. We are working to add this back, not just to AI models like OpenClaw, but to social networks too. Many of you may be on the Fediverse with Mastodon and ActivityPub, or on the newer AT Protocol — Bluesky, the Atmosphere. In Utah, the Digital Choice Act — first passed as HB 418 and amended by HB 408 in the 2026 session — now takes effect on the 1st of July 2027: it requires social media companies to provide user-authorised portability and interoperability interfaces for the personal data and social graph portions a user has selected, with consent for further interactions, so people can move between proprietary networks like X.com and public-protocol systems like Bluesky, Blacksky, or Truth Social (which also runs on ActivityPub). That is number portability for social graphs — still subject to rulemaking and implementation. Because if you do not have it, the platform has every reason to squeeze you and none to actually improve itself.
+And if we had radical portability for social media ten years ago, we would not be in this place of very high polarisation per minute — PPM — on social media. We are working to add this back, not just to AI models like OpenClaw, but to social networks too. Many of you may be on the Fediverse with Mastodon and ActivityPub, or on the newer AT Protocol — Bluesky, the Atmosphere.
+
+In Utah, the [Digital Choice Act](https://le.utah.gov/~2025/bills/static/HB0418.html) — first passed as HB 418 and amended by HB 408 in the 2026 session — now takes effect on the 1st of July 2027: it requires social media companies to provide user-authorised portability and interoperability interfaces for the personal data and social graph portions a user has selected, with consent for further interactions, so people can move between proprietary networks like X.com and public-protocol systems like Bluesky, Blacksky, or Truth Social (which also runs on ActivityPub). That is number portability for social graphs — still subject to rulemaking and implementation. Because if you do not have it, the platform has every reason to squeeze you and none to actually improve itself.
 
 So it is not the state choosing a national champion — Airbus or anything like that — but a very simple thing: the information superhighway must have off-ramps and on-ramps. Otherwise it is just a loop. It is not the real highway.
 
@@ -238,7 +242,7 @@ That is what software freedom looks like in 2026.
 
 ---
 
-# `Kami.civic.ai`
+## `Kami.civic.ai`
 
 What I have just described works in three layers. The _legal layer_: the enforceability of the four freedoms in court. ROOST.tools is the _application layer_ — decentralised, open-source infrastructure that smaller communities can actually deploy. The third layer is the one I want to name now: the _governance layer_. Bounded stewardship.
 
@@ -262,7 +266,7 @@ The right to refuse is the freedom you cannot remove from a downstream community
 
 ---
 
-# Good Enough Ancestor
+## Good Enough Ancestor
 
 I will end where I began.
 
@@ -279,3 +283,9 @@ A safe AI takeoff must land somewhere. I think it is landing in our existing rel
 I will be wrong about parts of this. The most useful question is the one that shows where this model breaks. If it breaks, you still keep all the pieces, and we can patch them back together.
 
 Thank you. Live long and … prosper.
+
+---
+
+_Editorial note (September 2026): the text above is the talk as delivered. Engaged California's published input, recovery plan and reports document a process, not proof that particular ideas caused particular executive outcomes. AB 2103, signed on 19 September 2026, makes it a statutory programme from 1 January 2027, subject to appropriation. Utah's Digital Choice Act did not all start in 2027: personal-data portability under §13-81-201 took effect on 1 July 2026, and continuous real-time forwarding under H.B. 408 starts on 1 July 2027._
+
+_ROOST's Osprey and Coop tools can be self-hosted and adapted, with policy and data staying local. ROOST also runs the [ROOST Model Community](https://github.com/roostorg/model-community), which connects practitioners directly with the makers of open-weight safety models — OpenAI's gpt-oss-safeguard, Mistral's Shieldstral, Roblox's classifiers and others — that platforms can self-host, several following a policy the platform writes, with practitioners' findings fed back to each model's maker. These are shared models running local policies, not locally trained federated ones, and the public record is not outcome validation._

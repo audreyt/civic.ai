@@ -1,0 +1,50 @@
+{
+    "en": {
+        "consensusSummary": "Across all three opinion groups, participants found broad agreement on most statements. The strongest common ground concerned human contact, disclosure, accountability, and community voice.",
+        "differencesSummary": "A smaller set of statements revealed meaningful divisions between the three opinion groups. These are the tensions worth exploring further.",
+        "groups": [
+            {
+                "code": "A",
+                "title": "Innovation-Ready",
+                "summary": "The most comfortable with AI adoption. This group is notably less concerned about slowing down and does not believe companies should be forced to help displaced workers. They support AI companionship for elderly people but are sceptical of offering imperfect AI tools to families.",
+                "statementIds": ["10", "14", "19", "2"]
+            },
+            {
+                "code": "B",
+                "title": "Supportive Reformers",
+                "summary": "The largest group. They favour offering AI tools to families, even imperfect ones, and want strong worker protections. They believe AI companies should compensate creators and are open to AI with guardrails.",
+                "statementIds": ["3", "9", "18", "19"]
+            },
+            {
+                "code": "C",
+                "title": "Principled Sceptics",
+                "summary": "The smallest but most decisive group. They take strong, clear positions and are the most cautious about AI. They want to slow down, demand strict regulation, and reject the notion of offering imperfect AI tools.",
+                "statementIds": ["19", "3", "14", "7"]
+            }
+        ]
+    },
+    "zh-TW": {
+        "consensusSummary": "三個意見群組在大多數陳述上形成廣泛共識。最強的共同立場集中於人際接觸、資訊揭露、問責機制與社區發言權。",
+        "differencesSummary": "少數陳述顯示三個意見群組之間存在明顯分歧。這些張力值得進一步探討。",
+        "groups": [
+            {
+                "code": "A",
+                "title": "擁抱創新",
+                "summary": "對採用 AI 最為開放的群組。他們較不擔心放慢腳步，也不認為公司應被迫幫助被取代的員工。他們支持用 AI 陪伴長者，但對提供不完美的 AI 工具給家庭持懷疑態度。",
+                "statementIds": ["10", "14", "19", "2"]
+            },
+            {
+                "code": "B",
+                "title": "支持改革",
+                "summary": "最大的群組。他們贊成向家庭提供 AI 工具，即使並不完美，也希望加強勞工保障。他們認為 AI 公司應補償創作者，對有護欄的 AI 持開放態度。",
+                "statementIds": ["3", "9", "18", "19"]
+            },
+            {
+                "code": "C",
+                "title": "謹慎質疑",
+                "summary": "最小但立場最明確的群組。他們態度鮮明，對 AI 最為謹慎。他們希望放慢速度、要求嚴格監管，並拒絕提供不完美的 AI 工具。",
+                "statementIds": ["19", "3", "14", "7"]
+            }
+        ]
+    }
+}

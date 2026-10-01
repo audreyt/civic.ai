@@ -8,7 +8,7 @@ import type { ComicsOverlayFrame } from "../src/lib/site";
 // body). That means a handful of branches inside those renderers — the
 // `shapePolys` fallback defaults, an italic overlay frame, an overlay layer
 // with zero frames, a filtered-out empty-text frame, and an optional
-// OpenClaw guide section/field — are only reachable with fixture data the
+// OpenClaw guide field — are only reachable with fixture data the
 // real `_data/*.json` content never happens to contain. `../src/lib/site`
 // is mocked here with a minimal, self-consistent fixture that deliberately
 // exercises those paths; every other test in this file benefits from the
@@ -237,10 +237,6 @@ const siteFixture = vi.hoisted(() => {
                     mapping: [
                         { file: "BOOTSTRAP.md", text: "Mapping text EN." },
                     ],
-                    // Missing `memoryHeading` exercises the false branch of
-                    // the `if (guide.memoryHeading)` guard.
-                    memoryHeading: undefined,
-                    memoryIntro: undefined,
                     closing: "Closing EN.",
                 },
                 tw: {
@@ -265,8 +261,6 @@ const siteFixture = vi.hoisted(() => {
                     mappingHeading: "OpenClaw 對應",
                     mappingIntro: "對應說明。",
                     mapping: [{ file: "BOOTSTRAP.md", text: "對應文字。" }],
-                    memoryHeading: "記憶",
-                    memoryIntro: "記憶說明。",
                     closing: "結語。",
                 },
             },
@@ -276,8 +270,11 @@ const siteFixture = vi.hoisted(() => {
 
 vi.mock("../src/lib/site", () => siteFixture);
 
-import { asciifySkill, expandShortcodes } from "../src/lib/shortcodes";
-
+import {
+    asciifySkill,
+    expandShortcodes,
+    renderGlossaryList,
+} from "../src/lib/shortcodes";
 test("expandShortcodes throws when unresolved {% ... %} template syntax remains", () => {
     expect(() =>
         expandShortcodes(
@@ -302,6 +299,24 @@ test("expandShortcodes returns the expanded body when no legacy syntax remains",
         "Plain body with no legacy shortcodes."
     );
     expect(result).toBe("Plain body with no legacy shortcodes.");
+});
+
+test("expandShortcodes inserts the bilingual report from one snapshot", () => {
+    const english = expandShortcodes(
+        { sourcePath: "polis-report.md", data: { lang: "en-gb" } },
+        "<!-- astro:polis-report -->"
+    );
+    const mandarin = expandShortcodes(
+        { sourcePath: "tw-polis-report.md", data: { lang: "zh-tw" } },
+        "<!-- astro:polis-report -->"
+    );
+
+    const snapshotId =
+        "39b1eed77ad2caed03c11d38b7f5730b5008f9df14e4c7617dc3b2854b740db0";
+    expect(english).toContain(`data-polis-snapshot="${snapshotId}"`);
+    expect(english).toContain("views of 62 participants");
+    expect(mandarin).toContain(`data-polis-snapshot="${snapshotId}"`);
+    expect(mandarin).toContain("62 位參與者");
 });
 
 test("expandShortcodes exercises the zh-lang branch of all site shortcodes", () => {
@@ -343,4 +358,35 @@ test("asciifySkill converts smart punctuation to ASCII and strips remaining non-
 test("asciifySkill passes plain ASCII text through unchanged", () => {
     const input = "Just a plain ASCII sentence, with punctuation!";
     expect(asciifySkill(input)).toBe(input);
+});
+
+test("renderGlossaryList renders untiered mock entries in instruments tier", () => {
+    const html = renderGlossaryList("en");
+    expect(html).toContain(
+        '<nav class="faq-filter" aria-label="Filter glossary">'
+    );
+    expect(html).toContain('data-glossary-filter="all"');
+    expect(html).toContain('data-glossary-filter="diagnosis"');
+    expect(html).toContain('data-glossary-filter="architecture"');
+    expect(html).toContain('data-glossary-filter="design"');
+    expect(html).toContain('data-glossary-filter="instruments"');
+    expect(html).toContain('<h2 id="glossary-diagnosis">Diagnosis</h2>');
+    expect(html).toContain('<h2 id="glossary-architecture">Architecture</h2>');
+    expect(html).toContain('<h2 id="glossary-design">Design</h2>');
+    expect(html).toContain('<h2 id="glossary-instruments">Instruments</h2>');
+    expect(html).toContain(
+        '<dt id=""><span class="glossary-term">Term EN</span><span class="glossary-term-pair" lang="zh-TW">詞彙</span></dt><dd>Definition EN</dd>'
+    );
+
+    const twHtml = renderGlossaryList("zh-tw");
+    expect(twHtml).toContain(
+        '<nav class="faq-filter" aria-label="篩選詞彙表">'
+    );
+    expect(twHtml).toContain('<h2 id="glossary-diagnosis">診斷</h2>');
+    expect(twHtml).toContain('<h2 id="glossary-architecture">架構</h2>');
+    expect(twHtml).toContain('<h2 id="glossary-design">設計</h2>');
+    expect(twHtml).toContain('<h2 id="glossary-instruments">工具</h2>');
+    expect(twHtml).toContain(
+        '<dt id=""><span class="glossary-term">詞彙</span><span class="glossary-term-pair" lang="en-GB">Term EN</span></dt><dd>定義</dd>'
+    );
 });

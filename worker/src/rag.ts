@@ -1,10 +1,10 @@
 import {
     DEFAULT_NEMOTRON_MAX_COMPLETION_TOKENS,
-    DEFAULT_NEMOTRON_ULTRA_BASETEN_MODEL,
     openAiChatCompletionsEventStreamToText,
     resolveAudreyAiGateway,
-    streamViaDirectBasetenChatCompletions,
+    resolveWorkersAiChatModel,
     streamViaGatewayChatCompletions,
+    streamViaWorkersAiChat,
     type AudreyGatewayEnv,
 } from "@au/cf-ai-gateway";
 import { citationFootnotes } from "./citationFootnotes";
@@ -101,7 +101,6 @@ export async function streamSiteAnswer(
               AI?: AiBinding;
               SITE_VECTORIZE?: VectorizeBinding;
               SITE_EMBEDDING_MODEL?: string;
-              BASETEN_MODEL?: string;
           })
         | undefined,
     question: string,
@@ -118,8 +117,7 @@ export async function streamSiteAnswer(
             embeddingModel,
         });
     }
-    const gateway = resolveAudreyAiGateway(bindings);
-    if (!gateway || gateway.kind !== "chat") {
+    const respondWithStub = () => {
         const body =
             chunks.length > 0
                 ? retrievalStubMarkdown(question, lang, chunks)
@@ -131,106 +129,60 @@ export async function streamSiteAnswer(
                 "Cache-Control": "no-store",
             },
         });
-    }
+    };
 
-    const basetenKey = bindings.BASETEN_API_KEY?.trim();
-    const gatewayConfig = gateway.config;
     const messages = buildMessages(question, chunks, lang);
-    const basetenModel =
-        bindings.BASETEN_MODEL?.trim() || DEFAULT_NEMOTRON_ULTRA_BASETEN_MODEL;
+    const footnotes = chunks.map((c) => {
+        const label = c.metadata.heading || c.metadata.pageTitle || "Section";
+        return `[${label}](${c.metadata.url})`;
+    });
+    const respondWithGeneratedText = async (
+        openByteStream: () => Promise<ReadableStream<Uint8Array>>
+    ): Promise<Response> => {
+        try {
+            const byteStream = await openByteStream();
+            const textStreamOut = byteStream
+                .pipeThrough(openAiChatCompletionsEventStreamToText())
+                .pipeThrough(citationFootnotes(footnotes))
+                .pipeThrough(new TextEncoderStream());
+            return new Response(textStreamOut, {
+                status: 200,
+                headers: {
+                    "Content-Type": "text/plain; charset=utf-8",
+                    "Cache-Control": "no-store",
+                    "X-Accel-Buffering": "no",
+                },
+            });
+        } catch (e) {
+            console.error("answer stream failed", e);
+            return respondWithStub();
+        }
+    };
 
-    async function nemotronByteStream(): Promise<ReadableStream<Uint8Array>> {
-        if (basetenKey && !gatewayConfig.gatewayAuthToken) {
-            return streamViaDirectBasetenChatCompletions(
-                basetenKey,
-                basetenModel,
+    const gateway = resolveAudreyAiGateway(bindings);
+    if (gateway && gateway.kind === "chat") {
+        return respondWithGeneratedText(() =>
+            streamViaGatewayChatCompletions(
+                gateway.config,
                 messages,
                 DEFAULT_NEMOTRON_MAX_COMPLETION_TOKENS
-            );
-        }
-        if (gatewayConfig.gatewayAuthToken) {
-            return streamViaGatewayChatCompletions(
-                gatewayConfig,
-                messages,
-                DEFAULT_NEMOTRON_MAX_COMPLETION_TOKENS
-            );
-        }
-        if (basetenKey) {
-            return streamViaDirectBasetenChatCompletions(
-                basetenKey,
-                basetenModel,
-                messages,
-                DEFAULT_NEMOTRON_MAX_COMPLETION_TOKENS
-            );
-        }
-        return streamViaGatewayChatCompletions(
-            gatewayConfig,
-            messages,
-            DEFAULT_NEMOTRON_MAX_COMPLETION_TOKENS
+            )
         );
     }
 
-    try {
-        const byteStream = await nemotronByteStream();
-        const footnotes = chunks.map((c) => {
-            const label =
-                c.metadata.heading || c.metadata.pageTitle || "Section";
-            return `[${label}](${c.metadata.url})`;
-        });
-        const textStreamOut = byteStream
-            .pipeThrough(openAiChatCompletionsEventStreamToText())
-            .pipeThrough(citationFootnotes(footnotes))
-            .pipeThrough(new TextEncoderStream());
-
-        return new Response(textStreamOut, {
-            status: 200,
-            headers: {
-                "Content-Type": "text/plain; charset=utf-8",
-                "Cache-Control": "no-store",
-                "X-Accel-Buffering": "no",
-            },
-        });
-    } catch (e) {
-        console.error("nemotron stream failed", e);
-        if (basetenKey) {
-            try {
-                const byteStream = await streamViaDirectBasetenChatCompletions(
-                    basetenKey,
-                    basetenModel,
-                    messages,
-                    DEFAULT_NEMOTRON_MAX_COMPLETION_TOKENS
-                );
-                const footnotes = chunks.map((c) => {
-                    const label =
-                        c.metadata.heading || c.metadata.pageTitle || "Section";
-                    return `[${label}](${c.metadata.url})`;
-                });
-                const textStreamOut = byteStream
-                    .pipeThrough(openAiChatCompletionsEventStreamToText())
-                    .pipeThrough(citationFootnotes(footnotes))
-                    .pipeThrough(new TextEncoderStream());
-                return new Response(textStreamOut, {
-                    status: 200,
-                    headers: {
-                        "Content-Type": "text/plain; charset=utf-8",
-                        "Cache-Control": "no-store",
-                        "X-Accel-Buffering": "no",
-                    },
-                });
-            } catch (e2) {
-                console.error("direct baseten fallback failed", e2);
-            }
-        }
-        const body =
-            chunks.length > 0
-                ? retrievalStubMarkdown(question, lang, chunks)
-                : stubSiteAnswer(question, lang);
-        return new Response(textStream(body), {
-            status: 200,
-            headers: {
-                "Content-Type": "text/plain; charset=utf-8",
-                "Cache-Control": "no-store",
-            },
-        });
+    const workersAiChatModel = resolveWorkersAiChatModel(
+        bindings.AUDREY_MODEL
+    );
+    if (workersAiChatModel && ai) {
+        return respondWithGeneratedText(() =>
+            streamViaWorkersAiChat(
+                ai,
+                workersAiChatModel,
+                messages,
+                DEFAULT_NEMOTRON_MAX_COMPLETION_TOKENS
+            )
+        );
     }
+
+    return respondWithStub();
 }

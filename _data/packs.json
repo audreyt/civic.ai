@@ -1,0 +1,50 @@
+[
+    {
+        "num": 1,
+        "name_en": "Attentiveness",
+        "name_zh": "覺察力",
+        "ordinal_zh": "一",
+        "question_en": "What the people closest to the problem are seeing that institutions still miss.",
+        "question_tw": "制度還沒看見、但最接近痛點的人已經看見了什麼。"
+    },
+    {
+        "num": 2,
+        "name_en": "Responsibility",
+        "name_zh": "負責力",
+        "ordinal_zh": "二",
+        "question_en": "Who is accountable, with what authority, and what happens if they fail.",
+        "question_tw": "誰負責、握有什麼權限、失敗時會發生什麼事。"
+    },
+    {
+        "num": 3,
+        "name_en": "Competence",
+        "name_zh": "勝任力",
+        "ordinal_zh": "三",
+        "question_en": "Whether the system actually works in practice: audited, explainable, and safe to fail.",
+        "question_tw": "系統是否真的在實務上可稽核、可解釋，而且能安全試錯。"
+    },
+    {
+        "num": 4,
+        "name_en": "Responsiveness",
+        "name_zh": "回應力",
+        "ordinal_zh": "四",
+        "question_en": "Whether affected people can contest outcomes and force repair.",
+        "question_tw": "受影響的人是否能提出異議、要求修復，並讓系統改變。"
+    },
+    {
+        "num": 5,
+        "name_en": "Solidarity",
+        "name_zh": "團結力",
+        "ordinal_zh": "五",
+        "question_en": "Whether the ecosystem rewards cooperation, exit, and public accountability over lock-in.",
+        "question_tw": "整個生態系統是否獎勵合作、退出與公開問責，而不是平台鎖定。"
+    },
+    {
+        "num": 6,
+        "name_en": "Symbiosis",
+        "name_zh": "共生力",
+        "ordinal_zh": "六",
+        "question_en": "Whether the system stays bounded, local, and sunset-ready instead of hardening into permanent rule.",
+        "question_tw": "系統是否保持在地、有界、可退場，而不是固化成永久統治。"
+    }
+]

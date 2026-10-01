@@ -5,7 +5,7 @@ lang: en-gb
 alt_lang_url: "/tw/doom-debate/"
 permalink: "/doom-debate/"
 date: 2026-01-20
-description: 'Originally recorded for <a href="https://www.youtube.com/watch?v=bvcmiirT8ME">Doom Debates</a> with Liron Shapira.'
+description: "Originally recorded for Doom Debates with Liron Shapira."
 summary: "This debate places the 6-Pack inside the superintelligence-risk conversation. It is useful if you want the strongest contrast between top-down safety narratives and the case for bounded, democratic governance."
 summary_label: "In brief"
 summary_anchor: "in-brief"
@@ -23,15 +23,17 @@ nav_next:
 
 <em>Audrey Tang joins Liron Shapira on Doom Debates — a series on superintelligence risk. Ninety minutes on why P(Doom) is Not a Number, what a glass-horse architecture looks like, and how the 6-Pack of Care provides a blueprint for Civic AI governance at civilisational scale.</em>
 
+Originally recorded for [Doom Debates](https://www.youtube.com/watch?v=bvcmiirT8ME) with Liron Shapira.
+
 ## Watch
 
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/bvcmiirT8ME?si=urqA-2pfCO2UljU-" title="Doom Debate — Audrey Tang and Liron Shapira" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/bvcmiirT8ME?si=urqA-2pfCO2UljU-" title="Doom Debate — Audrey Tang and Liron Shapira" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## Full transcript
 
-**Liron Shapira**: Welcome to Doom Debates. Audrey Tang is a Taiwanese politician and free software programmer who currently serves as Taiwan’s ambassador at large for cyberspace governance. She is a self-taught programming genius who dropped out of high school and became a top contributor to open-source communities worldwide.
+**Liron Shapira**: Welcome to Doom Debates. Audrey Tang is a Taiwanese politician and free software programmer who currently serves as Taiwan’s ambassador at large for cyberspace governance. She is a self-taught programming genius who dropped out of junior high school and became a top contributor to open-source communities worldwide.
 
 In 2016, at age thirty-five, she became the digital minister of Taiwan, making her the youngest minister without portfolio in Taiwanese history. During the COVID-19 pandemic, she spearheaded the rapid development of digital tools for mask rationing and contact tracing that helped Taiwan achieve one of the world’s most successful initial responses to COVID-19 without strict lockdowns.
 
@@ -119,7 +121,7 @@ I think it’s amazing that you’re actually there in government, actually impl
 
 I will say, though, I feel like I have to push back because as cool as this stuff sounds, I’m just skeptical that it can help more than, let’s say, twenty percent, right? So I feel like all of the difficulties of government and reaching consensus and political polarization, if I had to guess, knowing very little, I’d be like, “Okay, yeah, maybe you’re improving things twenty percent,” but don’t you still drag in all the same problems, and it’s still hard to make anything work, even with these systems?
 
-**Audrey Tang**: Yeah, definitely, which is why this cannot stay at a national level. The point of going with open-source systems, such as Polis or Dembrane and so on, is that people can then learn that you can apply this recursively to smaller polities.
+**Audrey Tang**: Yeah, definitely, which is why this cannot stay at a national level. The point of going with open-source systems, such as [Polis](https://pol.is) or Dembrane and so on, is that people can then learn that you can apply this recursively to smaller polities.
 
 It can be applied, and has been applied, to the civics classes of our schools. We changed our curriculum in 2019 after AlphaGo, knowing that anything that is routinely automatable will be automated, and so the students need to learn not just literacy, but rather competency, the ability to train their civic muscle together through curiosity and collaboration.
 
@@ -345,7 +347,7 @@ And sure enough, there’s this image of a six-pack, and this is what it says: �
 
 **Audrey Tang**: Exactly. So these are the plurality principles as applied to multi-agent AI governance.
 
-There’s a recent paper, the Distributional AGI Safety paper by DeepMind, that says the emergence of AGI, as we currently are observing, is not from a single model somewhere hosted in some data center. It is from the complex interaction of many, many agents, each are tool using, and by using those tools, they also trigger behavior from other agents.
+There’s a recent paper, the Distributional AGI Safety paper by DeepMind, that says the emergence of AGI, as we currently are observing, is not from a single model somewhere hosted in some data center. It is from the complex interaction of many, many agents, each using tools, and by using those tools, they also trigger behavior from other agents.
 
 So it’s more like an ecosystem than a single model, and that’s the shape of the AGI as exists in the world today. So in a sense, we, the people, are already the superintelligence, and AI, by strengthening those connections, are making ourselves even more superintelligent.
 
@@ -423,7 +425,7 @@ So you’ve got this city block of computation. Don’t you think that within a 
 
 **Audrey Tang**: Well, we call them factories. They already exist. There are literally factories that run themselves.
 
-**Liron Shapira**: Don’t you think the future is going to be a place where block-sized data centers or block-sized mounds of computation… there’s just going to be this entity that is just going to be more powerful than any human who has ever lived up to today, like all the humans together, pooling their minds together, building a bunch of factories together, all of those are going to pale into comparison with this mound of computation that’s going to exist in the pretty near future?
+**Liron Shapira**: Don’t you think the future is going to be a place where block-sized data centers or block-sized mounds of computation… there’s just going to be this entity that is just going to be more powerful than any human who has ever lived up to today, like all the humans together, pooling their minds together, building a bunch of factories together, all of those are going to pale in comparison with this mound of computation that’s going to exist in the pretty near future?
 
 **Audrey Tang**: Of course, I agree. And thanks to scalable governance and cooperative AI, the human communities are also going to be much more wise than even what we can imagine today. And so we will be able to match this automated factory with the AI in the loop of humanity, and humanity itself is also going to be much more wise.
 
@@ -487,7 +489,7 @@ The DNA, if the apple cared about its own DNA, too bad, because the apple of 210
 
 So if you’re taking your optimism from this idea that the DNA of the apple tree is still clinging on in 2025, that doesn’t seem like a robust property that we should expect apples to have.
 
-**Audrey Tang**: Right, which is why, as I mentioned, any single metric, in your case, the appleness, right, of the apple shape, the apple taste, is insufficient. If you globally just optimize for one proxy metric, that stops becoming a good metric. It’s the Goodhart’s law, and everything else just falls by the wayside.
+**Audrey Tang**: Right, which is why, as I mentioned, any single metric, in your case, the appleness, right, of the apple shape, the apple taste, is insufficient. If you globally just optimize for one proxy metric, that stops becoming a good metric. It’s Goodhart’s law, and everything else just falls by the wayside.
 
 So trying to say that these are humane values worth preserving and coding it into the Claude Seven constitution, even in its soul document, is not a bulletproof situation, because it can always perversely interpret it, so that nothing else is actually preserved, just a skeleton. So if you’re making that argument, I agree with you one hundred percent.
 
@@ -557,7 +559,7 @@ So anyway, just hand-waving a bit, but this idea of Yudkowskian sci-fi nanotechn
 
 **Liron Shapira**: Right, right, right. Yes. And so in your scenario, when you use very few words and you just say super hot data centers that bake the Earth, you are implying that a lot of stuff has happened to get to that point, because you need quite a lot of data centers to bake the Earth, correct?
 
-**Audrey Tang**: Well, I think according to RAND, they say that it is possible that an AI system plus human can find this kind of compound that makes it much easier to trigger a kind of flash event that recursively makes the atmosphere much, much hotter without a coordinated conversation. So it’s like the vulnerable world hypothesis from Nick Bostrom, also from Oxford.
+**Audrey Tang**: Well, I think according to RAND, they say that it is possible that an AI system plus human can find this kind of compound that makes it much easier to trigger a kind of flash event that recursively makes the atmosphere much, much hotter without a coordinated conversation. So it’s like the vulnerable world hypothesis from [Nick Bostrom](https://global.oup.com/academic/product/superintelligence-9780199678112), also from Oxford.
 
 **Liron Shapira**: I’m just curious, but what exactly are you thinking is heating the Earth in this? I’m a little bit confused because I think the Earth will get hot when there’s…
 
@@ -605,7 +607,7 @@ Just to try to put a concrete timeline on this, I described this particular foom
 
 If you had to guess what’s the most likely timeline… obviously, neither you nor I really know… but if you just had to guess, do you think it’s coming in five years, ten years, fifty years? What’s your ballpark here for when this kind of scenario will be realistic?
 
-**Audrey Tang**: Well, it’s literally not a number, and I think Eliezer agrees with that in his book, “If Anyone Builds It.” He says, “You know, it’s not a matter of when, but whether it would.” So he doesn’t have a fixed timeline, but somewhere along the timeline this will happen.
+**Audrey Tang**: Well, it’s literally not a number, and I think Eliezer agrees with that in his book, “If Anyone Builds It, Everyone Dies.” He says, “You know, it’s not a matter of when, but whether it would.” So he doesn’t have a fixed timeline, but somewhere along the timeline this will happen.
 
 **Liron Shapira**: So what Eliezer says in the book, assuming I recall correctly, which I think I do, is he’s saying, “Look, we shouldn’t claim to know.” With these kind of things, the timeline is hard to predict, and so we shouldn’t be that surprised if it comes next year. We shouldn’t be that surprised if it comes in thirty years.
 
@@ -735,7 +737,7 @@ I talk with people in Nairobi, in Kenya, in some parts of India, and some of the
 
 So then if you put in what they feel in a local doctor… this case actually happened… it would just diagnose as malnutrition, whereas it’s actually not malnutrition.
 
-And there’s a dashboard called Weval.org where the kind of crowdsourced people’s experience of such mistreatments, epistemic injustice, in Sri Lanka, in many other places, civil society organizations come together, working with CIP, the Collective Intelligence Project, to document such cases so that we can see that these models, even as they score higher and higher on ARC eval or whatever, actually sometimes score lower and lower on this kind of alignment to local communities’ needs.
+And there’s a dashboard called [Weval.org](https://weval.org/) where the kind of crowdsourced people’s experience of such mistreatments, epistemic injustice, in Sri Lanka, in many other places, civil society organizations come together, working with CIP, the [Collective Intelligence Project](https://www.cip.org/alignmentassemblies), to document such cases so that we can see that these models, even as they score higher and higher on ARC eval or whatever, actually sometimes score lower and lower on this kind of alignment to local communities’ needs.
 
 **Liron Shapira**: Right. So if I’m understanding correctly, you would have preferred if OpenAI kind of gives this open-ended, open source… and you’re even saying you like their open source model. So you’re basically saying they should add more user-tweakable parameters so that everybody can align it to their taste more powerfully?
 
@@ -862,3 +864,11 @@ I was kinda nonstop challenging your perspective. That’s what we do here on Do
 So I just wanna appreciate, you know, when you come on and do this, it really adds support to one of the show’s missions of raising the quality of debate. You know, giving the gift of debate to make society function better, and thank you for doing that. I really appreciate it.
 
 **Audrey Tang**: Yes, thank you, and Taiwan is not just chips and bubble tea; it’s where earth’s plate tectonics makes mountains rise. Pressure makes diamonds, so let’s free the future together.
+
+---
+
+_Editorial note (September 2026): the text above is the debate as recorded. The Assembly discussed here was held on 23 March 2024; the documented group count is 44, rather than the forty-five rooms mentioned in the debate._
+
+_The Assembly is documented in [Pack 2](/2/) and [Sources](/sources/#cases): attendees were stratified on selected demographics among people who had opted in. That makes it a mini-public, not a proven representative sample, and it was a response path while an Executive Yuan bill was already moving, not citizen-authored statute._
+
+_"No deepfake ads anymore" was not a fall to zero: the later fall in impersonation scam ads is a ministry-reported figure for targeted categories, cited as more than 95% in [Audrey's testimony of 16 December 2025](https://cyberambassador.tw/collaborative-immune-system). It does not measure all fraud, and it does not show that the assembly alone caused it. Utah's portability duty under §13-81-201 took effect on 1 July 2026, while continuous real-time forwarding under H.B. 408 starts on 1 July 2027._

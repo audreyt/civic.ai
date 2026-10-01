@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "仁工智慧 OpenClaw 啟動指南"
-description: "給仁工智慧打造的新 claws 的公開第一次啟動指南。"
+description: "給依仁工智慧理念培養的新 claws 的公開啟動指南。"
 lang: zh-tw
 alt_lang_url: "/openclaw/"
 permalink: "/tw/openclaw/"

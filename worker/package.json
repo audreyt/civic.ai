@@ -10,7 +10,7 @@
         "test": "bun test ./test/*.node.ts"
     },
     "dependencies": {
-        "@au/cf-ai-gateway": "^0.1.3",
+        "@au/cf-ai-gateway": "file:vendor/au-cf-ai-gateway-0.3.0.tgz",
         "hono": "^4.6.14"
     },
     "devDependencies": {

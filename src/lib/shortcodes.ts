@@ -1,3 +1,4 @@
+import { renderPolisReport } from "../../_data/polis_report.js";
 import type { PageRecord } from "./pages";
 import { renderConceptMap } from "./conceptMap";
 import {
@@ -43,6 +44,10 @@ export function expandShortcodes(
         .replaceAll(
             "<!-- astro:concept-map -->",
             renderConceptMap(page.data.lang)
+        )
+        .replaceAll(
+            "<!-- astro:polis-report -->",
+            renderPolisReport(page.data.lang)
         )
         .replaceAll(
             "<!-- astro:openclaw-raw-skill-note en -->",
@@ -93,20 +98,24 @@ export function renderComicsGallery(lang: string | undefined): string {
     const caption = zh
         ? `<p class="figure-caption"><strong>概覽圖。</strong>六力一覽，由 Nicky Case 繪製。</p>`
         : `<p class="figure-caption"><strong>Overview.</strong> All six packs at a glance, illustrated by Nicky Case.</p>`;
+    // Each plate's long-form alt text, readable on phones where the drawn type
+    // is too small, plus the full-size image (DESIGN.md §10, Comics).
+    const describe = (alt: string, src: string) =>
+        `<details class="comics-alt"><summary>${zh ? "閱讀文字描述" : "Read the description"}</summary><p>${escapeHtml(alt)}</p><p><a href="${escapeAttr(src)}">${zh ? "開啟原尺寸圖片" : "Open the full-size image"}</a></p></details>`;
     const pages = comics.packs
         .flatMap((pack) =>
             pack.pages.map((page) => {
                 const img = zh
                     ? `/img/pack${pack.num}-${page.id}-tw.jpg`
                     : `/img/pack${pack.num}-${page.id}.jpg`;
-                return `<a href="${base}${pack.slug}/" class="comics-page-link" id="pack-${pack.num}-${page.id}"><noscript><img src="${escapeAttr(img)}" alt="${escapeAttr(page.alt[key])}" width="1437" height="1999" loading="lazy" decoding="async" /></noscript><span class="comics-page-label"><span class="comics-page-pack">${escapeHtml(pack.title[key])}</span><span class="comics-page-type">${escapeHtml(page.type[key])}</span></span></a>`;
+                return `<div class="comics-cell"><a href="${base}${pack.slug}/" class="comics-page-link" id="pack-${pack.num}-${page.id}"><noscript><img src="${escapeAttr(img)}" alt="${escapeAttr(page.alt[key])}" width="1437" height="1999" loading="lazy" decoding="async" /></noscript><span class="comics-page-label"><span class="comics-page-pack">${escapeHtml(pack.title[key])}</span><span class="comics-page-type">${escapeHtml(page.type[key])}</span></span></a>${describe(page.alt[key], img)}</div>`;
             })
         )
         .join("");
     const credit = zh
         ? `插圖由 <a href="https://ncase.me">Nicky Case</a> 繪製（CC0）。<a href="${escapeAttr(comics.source_repo)}">原始檔案</a>見 GitHub。`
         : `Illustrated by <a href="https://ncase.me">Nicky Case</a> (CC0). <a href="${escapeAttr(comics.source_repo)}">Source files</a> on GitHub.`;
-    return `<div class="comics-gallery"><section class="comics-overview"><a href="${base}#the-6-pack" class="comics-overview-link"><noscript><img src="${escapeAttr(overview.src)}" alt="${escapeAttr(overview.alt)}" class="overview-image" width="${overview.width}" height="${overview.height}" loading="lazy" decoding="async" /></noscript></a>${caption}</section><div class="comics-grid">${pages}</div><p class="comics-credit">${credit}</p></div>`;
+    return `<div class="comics-gallery"><section class="comics-overview"><a href="${base}#the-6-pack" class="comics-overview-link"><noscript><img src="${escapeAttr(overview.src)}" alt="${escapeAttr(overview.alt)}" class="overview-image" width="${overview.width}" height="${overview.height}" loading="lazy" decoding="async" /></noscript></a>${caption}${describe(overview.alt, overview.src)}</section><div class="comics-grid">${pages}</div><p class="comics-credit">${credit}</p></div>`;
 }
 
 // Builds the three polygons (background clip, left float, right float) that
@@ -221,14 +230,100 @@ export function renderComicsGalleryJa(): string {
 
 export function renderGlossaryList(lang: string | undefined): string {
     const zh = lang2(lang) === "zh";
-    const entries = glossary
-        .map((entry) => {
-            const term = zh ? entry.term_tw : entry.term_en;
-            const definition = zh ? entry.def_tw : entry.def_en;
-            return `<dt id="${escapeAttr(entry.id)}">${escapeHtml(term)}</dt><dd>${definition}</dd>`;
+
+    const tiers = [
+        {
+            id: "diagnosis",
+            labelEn: "Diagnosis",
+            labelTw: "診斷",
+            descEn: "What has gone wrong.",
+            descTw: "什麼出了問題。",
+        },
+        {
+            id: "architecture",
+            labelEn: "Architecture",
+            labelTw: "架構",
+            descEn: "What we name, and what we refuse.",
+            descTw: "我們如何命名，以及我們拒絕什麼。",
+        },
+        {
+            id: "design",
+            labelEn: "Design",
+            labelTw: "設計",
+            descEn: "What those commitments become as design.",
+            descTw: "那些承諾成為設計之後的樣子。",
+        },
+        {
+            id: "instruments",
+            labelEn: "Instruments",
+            labelTw: "工具",
+            descEn: "Named instruments a room can pick up.",
+            descTw: "場域可以拿起來用的具名工具。",
+        },
+    ] as const;
+
+    const navButtons = [
+        `<button type="button" data-glossary-filter="all" aria-pressed="true">${zh ? "全部詞條" : "All terms"}</button>`,
+        ...tiers.map(
+            (tier) =>
+                `<button type="button" data-glossary-filter="${escapeAttr(tier.id)}" aria-pressed="false">${zh ? escapeHtml(tier.labelTw) : escapeHtml(tier.labelEn)}</button>`
+        ),
+    ].join("");
+
+    const nav = `<nav class="faq-filter" aria-label="${zh ? "篩選詞彙表" : "Filter glossary"}">${navButtons}</nav>`;
+
+    const grouped: {
+        diagnosis: typeof glossary;
+        architecture: typeof glossary;
+        design: typeof glossary;
+        instruments: typeof glossary;
+    } = {
+        diagnosis: [],
+        architecture: [],
+        design: [],
+        instruments: [],
+    };
+
+    for (const entry of glossary) {
+        const rawTier =
+            entry &&
+            typeof entry === "object" &&
+            "tier" in entry &&
+            typeof entry.tier === "string"
+                ? entry.tier
+                : undefined;
+        const tierKey: "diagnosis" | "architecture" | "design" | "instruments" =
+            rawTier === "diagnosis" ||
+            rawTier === "architecture" ||
+            rawTier === "design" ||
+            rawTier === "instruments"
+                ? rawTier
+                : "instruments";
+        grouped[tierKey].push(entry);
+    }
+
+    const sections = tiers
+        .map((tier) => {
+            const tierEntries = grouped[tier.id];
+            const heading = zh ? tier.labelTw : tier.labelEn;
+            const desc = zh ? tier.descTw : tier.descEn;
+            const labelAttr = tier.labelEn;
+
+            const dts = tierEntries
+                .map((entry) => {
+                    const term = zh ? entry.term_tw : entry.term_en;
+                    const pairedTerm = zh ? entry.term_en : entry.term_tw;
+                    const pairedLang = zh ? "en-GB" : "zh-TW";
+                    const definition = zh ? entry.def_tw : entry.def_en;
+                    return `<dt id="${escapeAttr(entry.id)}"><span class="glossary-term">${escapeHtml(term)}</span><span class="glossary-term-pair" lang="${pairedLang}">${escapeHtml(pairedTerm)}</span></dt><dd>${definition}</dd>`;
+                })
+                .join("");
+
+            return `<section class="glossary-tier" data-glossary-tier="${escapeAttr(tier.id)}" data-glossary-label="${escapeAttr(labelAttr)}"><h2 id="glossary-${escapeAttr(tier.id)}">${escapeHtml(heading)}</h2><p>${escapeHtml(desc)}</p><dl class="glossary-list">${dts}</dl></section>`;
         })
         .join("");
-    return `<dl class="glossary-list">${entries}</dl>`;
+
+    return `${nav}${sections}`;
 }
 
 export function renderOpenClawRawSkillNote(which: "en" | "tw"): string {
@@ -269,7 +364,6 @@ export function renderOpenClawGuideMarkdown(which: "en" | "tw"): string {
     guide.mapping.forEach((item) =>
         lines.push(`- **\`${item.file}\`** — ${item.text}`, "")
     );
-    if (guide.memoryHeading) section(guide.memoryHeading, guide.memoryIntro);
     lines.push(guide.closing);
     return lines.join("\n");
 }

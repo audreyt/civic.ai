@@ -58,7 +58,7 @@ What His Holiness pointed out is not that "machines are inferior to humans," but
 
 ## The True Condition of the Kami: An Asymmetric Gift
 
-Vitalik Buterin put it well: "We don't just want to be consumers, we want to actually have agency in the world." He argues that AI should be a bicycle for the mind, not a car you are supposed to fall asleep inside.[^6]
+Vitalik Buterin put it well: "We don't just want to be consumers, we want to actually have agency in the world." He argues that AI should be a bicycle for the mind — Steve Jobs's phrase, which Buterin echoes — not a car you are supposed to fall asleep inside.[^6]
 
 Audrey proposed a civic test: do these distributed systems leave each relationship and community more capable after engaging with them, or do they make them more dependent on some giant blender in the cloud?
 

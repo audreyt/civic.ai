@@ -1,0 +1,19 @@
+---
+// ConstellationClient (DESIGN.md §12): switches on the home field's slow drift.
+// Without JavaScript, and for readers who ask for reduced motion, it stays still.
+---
+<script is:inline>
+(function () {
+    try {
+        var layer = document.querySelector("[data-constellation]");
+        if (!layer || layer.getAttribute("data-ready")) return;
+        layer.setAttribute("data-ready", "1");
+        if (
+            window.matchMedia &&
+            window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        )
+            return;
+        layer.setAttribute("data-drift", "1");
+    } catch (e) {}
+})();
+</script>

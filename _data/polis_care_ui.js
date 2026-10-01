@@ -147,11 +147,11 @@ export default {
             badge: "當前共識",
             title: "目前最能搭橋的陳述",
             description:
-                "這條領先陳述是依據整體支持度，以及各 Polis 分群中最弱的一段支持度推導出來的。",
+                "這條領先陳述是依據整體支持度，以及各 Polis 分群中最低的支持度推導出來的。",
             support: "整體支持",
             bridge: "最弱分群支持",
-            strongestGroup: "最支持於",
-            weakestGroup: "最薄弱於",
+            strongestGroup: "支持度最高的群體",
+            weakestGroup: "支持度最低的群體",
             timeline: "共識軌跡",
             timelineDescription:
                 "在累積投票檢查點上，領先陳述曾經發生變化的時刻。",
@@ -176,7 +176,7 @@ export default {
         },
         participants: {
             kicker: "參與者地圖",
-            title: "匿名投票群塊與參與者",
+            title: "匿名投票群體與參與者",
             description:
                 "若 Polis 有提供分群，參與者就以該分群上色。這張地圖是輕量級的投票模式投影，不是語意嵌入。",
             ribbonTitle: "分群分布",
@@ -193,7 +193,7 @@ export default {
                 "這一頁試著重現 Habermolt 的閱讀體驗，但也清楚說明 Polis 匯出資料能提供與無法提供的是什麼。",
             sources: "CSV 來源",
             limitations: "這個重建做了什麼",
-            note: "本頁沒有使用隱藏 API。所有內容都由上面的五個匯出檔推導而來。",
+            note: "本頁沒有使用隱藏介面。所有內容都由上面的五個匯出檔推導而來。",
         },
         dynamics: {
             converging: {
@@ -219,7 +219,8 @@ export default {
             aligned: {
                 label: "整體一致",
                 icon: "◎",
-                description: "大多數參與者的投票行為像是一個寬鬆的大群體。",
+                description:
+                    "大多數參與者的投票行為相近，大致形成同一個投票群體。",
             },
             polarized: {
                 label: "兩極化",

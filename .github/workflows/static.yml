@@ -22,6 +22,8 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v7
+              with:
+                  fetch-depth: 0
 
             - name: Setup Vite+
               uses: voidzero-dev/setup-vp@v1
@@ -48,6 +50,12 @@ jobs:
 
             - name: Test worker
               run: vp run worker:test
+
+            - name: Test deterministic sensemaker
+              run: vp run sensemaker:test
+
+            - name: Verify replay artifacts
+              run: vp run sensemaker:verify
 
             - name: Build site
               run: vp build

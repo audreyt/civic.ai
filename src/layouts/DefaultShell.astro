@@ -9,6 +9,8 @@ import PageHead from "../components/PageHead.astro";
 import PartnerColophon from "../components/PartnerColophon.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import SearchOverlay from "../components/SearchOverlay.astro";
+import Trace from "../components/Trace.astro";
+import { record, recordSources } from "../lib/record";
 
 interface Props { page: PageRecord; }
 const { page } = Astro.props;
@@ -28,15 +30,25 @@ const websiteLd = {
     description: site.description,
     sameAs: ["https://www.oxford-aiethics.ox.ac.uk/", "https://afp.oxford-aiethics.ox.ac.uk/"],
     author: [
-        { "@type": "Person", name: "Audrey Tang", url: "https://audreyt.org", sameAs: ["https://en.wikipedia.org/wiki/Audrey_Tang", "https://www.wikidata.org/wiki/Q181916"] },
+        { "@type": "Person", name: "Audrey Tang", url: "https://audreyt.org", sameAs: ["https://en.wikipedia.org/wiki/Audrey_Tang", "https://www.wikidata.org/wiki/Q15025"] },
         { "@type": "Person", name: "Caroline Green", url: "https://www.oxford-aiethics.ox.ac.uk/caroline-emmer-de-albuquerque-green" },
     ],
     publisher: { "@type": "Organization", name: "Oxford Institute for Ethics in AI", url: "https://www.oxford-aiethics.ox.ac.uk/", logo: { "@type": "ImageObject", url: `${site.url}/img/oxford-logo.svg` } },
 };
+const pageLd = {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: page.data.title,
+          description: page.data.meta_description || page.data.description,
+          url: `${site.url}${page.url}`,
+          dateModified: record.summary(recordSources(page))?.amendedDate,
+          inLanguage: page.data.lang === "ja" ? "ja" : zh ? "zh-Hant" : "en-GB",
+          isPartOf: { "@type": "WebSite", name: site.title, url: site.url },
+      };
 ---
 <!doctype html>
 <html lang={page.data.lang || "en"}>
-  <head><PageHead page={page} ogType="website" preloadFont="/fonts/outfit-latin.woff2" /></head>
+  <head><PageHead page={page} ogType="website" /></head>
   <body>
     <a class="skip-link" href="#main">{zh ? "跳至內容" : "Skip to content"}</a>
     <SiteHeader page={page} />
@@ -55,8 +67,10 @@ const websiteLd = {
       {page.data.prev_action && <a href={page.data.prev_action.url} class="next-action-button"><span class="button-arrow">←</span><span class="button-text">{page.data.prev_action.text}</span></a>}
       {page.data.next_action && <a href={page.data.next_action.url} class="next-action-button"><span class="button-text">{page.data.next_action.text}</span><span class="button-arrow">→</span></a>}
     </div></section>}
-    {page.url === "/" || page.url === "/tw/" ? <Footer lang={page.data.lang} /> : <PartnerColophon lang={page.data.lang} />}
+    <Trace page={page} />
+    {page.url === "/" || page.url === "/tw/" ? <Footer lang={page.data.lang} /> : <PartnerColophon lang={page.data.lang} url={page.url} />}
     <script is:inline type="application/ld+json" set:html={JSON.stringify(websiteLd)}></script>
+    {pageLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(pageLd)}></script>}
     <ClientScripts page={page} />
   </body>
 </html>

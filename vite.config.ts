@@ -9,7 +9,7 @@ export default defineConfig({
         jsPlugins: [
             { name: "vite-plus", specifier: "vite-plus/oxlint-plugin" },
         ],
-        ignorePatterns: ["worker/**", "coverage/**"],
+        ignorePatterns: ["worker/**", "sensemaker/**", "coverage/**"],
         rules: {
             "vite-plus/prefer-vite-plus-imports": "error",
             "no-unused-vars": [
@@ -24,7 +24,7 @@ export default defineConfig({
         options: { typeAware: true, typeCheck: true, denyWarnings: true },
     },
     staged: {
-        "**/*": "vp fmt",
+        "**/*": "vp fmt --no-error-on-unmatched-pattern",
         "**/*.md": [
             "bun pangu-format.mjs",
             "bun scripts/check-tw-typography.mjs",
@@ -41,6 +41,7 @@ export default defineConfig({
         ignorePatterns: [
             "node_modules/**",
             "worker/**",
+            "sensemaker/generated/**",
             ".astro/**",
             "dist/**",
             "public/**",
