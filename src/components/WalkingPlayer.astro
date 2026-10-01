@@ -1,6 +1,9 @@
 ---
 import type { PageRecord } from "../lib/pages";
+import { lang2 } from "../lib/site";
 interface Props { page: PageRecord; }
 const { page } = Astro.props;
+const zh = lang2(page.data.lang) === "zh";
+const title = zh ? "由唐鳳本人的 AI 聲音朗讀" : "Narrated in Audrey's own AI voice";
 ---
-{page.data.audio && <div class="audio-section"><audio controls preload="metadata" title="Narrated in Audrey's own AI voice"><source src={page.data.audio} type="audio/mpeg" /></audio></div>}
+{page.data.audio && <div class="audio-section"><audio controls preload="metadata" title={title}><source src={page.data.audio} type="audio/mpeg" /></audio></div>}

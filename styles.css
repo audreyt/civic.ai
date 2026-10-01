@@ -6881,7 +6881,161 @@ html[data-theme="dark"] .record-zone .record-eval--fail {
 /* ─── end lane I ─── */
 
 /* ─── lane J: walking player ─── */
+/* Progressive enhancement over the native <audio> (DESIGN.md §11.6): once the
+   script has built the player, the native control steps aside. */
+html .audio-section[data-walker] {
+    padding: 0;
+    background: none;
+    border: 0;
+    border-radius: 0;
+}
 
+.audio-section[data-walker] audio {
+    display: none;
+}
+
+/* From 1280px the player lives at the foot of the TOC, so the section is empty. */
+.audio-section[data-docked] {
+    display: none;
+}
+
+.walking-player {
+    display: grid;
+    gap: 4px;
+    padding: 10px 12px 12px;
+    font-family: var(--machine);
+    font-size: 0.8rem;
+    line-height: 1.2;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-machine);
+}
+
+.walking-player__time {
+    white-space: nowrap;
+}
+
+.walking-player__seek {
+    display: block;
+    width: 100%;
+    height: 44px;
+    margin: 0;
+    accent-color: var(--moss);
+    background: transparent;
+    cursor: pointer;
+}
+
+.walking-player__seek:disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+
+.walking-player__buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.walking-player__btn {
+    flex: 1 1 auto;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font: inherit;
+    color: var(--ink);
+    background: var(--field);
+    border: 1px solid var(--soil);
+    border-radius: var(--radius-machine);
+    cursor: pointer;
+}
+
+.walking-player__btn:hover {
+    background: var(--warm);
+}
+
+.walking-player__play {
+    color: var(--surface);
+    background: var(--moss);
+    border-color: var(--moss);
+}
+
+.walking-player__play:hover {
+    background: var(--moss);
+    filter: brightness(1.1);
+}
+
+.walking-player :is(button, input):focus-visible {
+    outline: 2px solid var(--moss);
+    outline-offset: 3px;
+}
+
+/* Rail: the last item inside the TOC's own scroll box, pinned to its foot. */
+.page-toc > .walking-player {
+    position: sticky;
+    bottom: 0;
+    margin-top: 12px;
+    padding: 8px 0 0;
+    font-size: 0.75rem;
+    background: var(--field);
+    border-width: 1px 0 0;
+}
+
+.page-toc > .walking-player .walking-player__btn {
+    padding: 0 4px;
+}
+
+.page-toc > .walking-player .walking-player__buttons {
+    gap: 4px;
+}
+
+/* Below 1280px: a card in the column; a slim bar at the viewport foot only while playing. */
+@media (max-width: 1279px) {
+    .walking-player.is-bar {
+        position: fixed;
+        inset: auto 0 0;
+        z-index: 30;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        column-gap: 10px;
+        gap: 0 10px;
+        padding: 4px max(12px, calc((100% - 680px) / 2))
+            calc(4px + env(safe-area-inset-bottom));
+        border-width: 1px 0 0;
+        border-color: var(--soil);
+    }
+
+    .walking-player.is-bar .walking-player__buttons {
+        grid-column: 1 / -1;
+    }
+
+    html.walking-bar-on body {
+        padding-bottom: 7rem;
+    }
+}
+
+@media (min-width: 560px) and (max-width: 1279px) {
+    .walking-player.is-bar {
+        grid-template-columns: auto 1fr auto;
+    }
+
+    .walking-player.is-bar .walking-player__buttons {
+        grid-column: auto;
+    }
+
+    html.walking-bar-on body {
+        padding-bottom: 5rem;
+    }
+}
+
+@media print {
+    .walking-player {
+        display: none !important;
+    }
+}
 /* ─── end lane J ─── */
 
 /* ─── lane K: reading-position transfer ─── */
