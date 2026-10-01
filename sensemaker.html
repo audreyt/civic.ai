@@ -579,7 +579,7 @@ alt_lang_url: "/tw/sensemaker"
             }
 
             /* ─── COLLAPSIBLE DETAILS ─── */
-            details {
+            .container details {
                 border: 1px solid var(--border);
                 border-radius: var(--radius);
                 margin-bottom: 10px;
@@ -588,15 +588,15 @@ alt_lang_url: "/tw/sensemaker"
                 transition: box-shadow 0.3s var(--ease);
             }
 
-            details:hover {
+            .container details:hover {
                 box-shadow: var(--shadow-sm);
             }
 
-            details[open] {
+            .container details[open] {
                 box-shadow: var(--shadow-md);
             }
 
-            summary {
+            .container summary {
                 padding: 18px 24px;
                 cursor: pointer;
                 font-weight: 600;
@@ -609,15 +609,15 @@ alt_lang_url: "/tw/sensemaker"
                 transition: background 0.2s;
             }
 
-            summary:hover {
+            .container summary:hover {
                 background: var(--surface-warm);
             }
 
-            summary::-webkit-details-marker {
+            .container summary::-webkit-details-marker {
                 display: none;
             }
 
-            summary::after {
+            .container summary::after {
                 content: "";
                 margin-left: auto;
                 width: 8px;
@@ -629,7 +629,7 @@ alt_lang_url: "/tw/sensemaker"
                 flex-shrink: 0;
             }
 
-            details[open] summary::after {
+            .container details[open] summary::after {
                 transform: rotate(-135deg);
             }
 
@@ -761,7 +761,7 @@ alt_lang_url: "/tw/sensemaker"
                 .section-header {
                     margin: 40px 0 16px;
                 }
-                details summary {
+                .container details summary {
                     padding: 16px 18px;
                     font-size: 0.9rem;
                 }
