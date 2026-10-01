@@ -53,7 +53,8 @@ const articleLd: Record<string, unknown> = {
     isPartOf: { "@type": "WebSite", name: "Civic AI", url: site.url },
 };
 if (page.data.date) articleLd.datePublished = page.data.date;
-if (page.data.og_image || page.data.thumbnail) articleLd.image = `${site.url}${page.data.og_image || page.data.thumbnail}`;
+const ldImage = page.data.og_image || page.data.thumbnail;
+if (ldImage) articleLd.image = ldImage.includes("://") ? ldImage : `${site.url}${ldImage}`;
 ---
 <!doctype html>
 <html lang={page.data.lang || "en"}>

@@ -15,7 +15,7 @@ nav_next:
 
 <em>Caroline Green speaks with Geshe Lodoe Sangpo — a Tibetan Buddhist monk and scholar — in McLeod Ganj, Dharamsala, about whether AI can ever be truly compassionate. Drawing on Buddhist ethics, they explore interdependence, equality, and why compassion is a way of being rather than a skill that can be trained into a system.</em>
 
-Originally recorded for [Accelerating AI Ethics](https://podcasts.ox.ac.uk/accelerating-ai-ethics), University of Oxford Institute for Ethics in AI.
+Originally recorded for [Accelerating AI Ethics](https://podcasts.ox.ac.uk/series/accelerating-ai-ethics), University of Oxford Institute for Ethics in AI.
 
 ## In brief
 
