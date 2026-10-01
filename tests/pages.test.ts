@@ -32,7 +32,9 @@ test("keeps book-aligned source material tableless", () => {
 
     const twKamiSetup = getPageByUrl("/tw/kami/").html;
     expect(twKamiSetup).not.toContain("<th>記憶體</th>");
-    expect(twKamiSetup).toContain("記憶體達 16 GB 或以上：");
+    expect(twKamiSetup).toContain(
+        '記憶體達 <span lang="en-GB">16 GB</span> 或以上：'
+    );
 
     const measures = getPageByUrl("/measures/").html;
     expect(measures).not.toContain("<th>Pack</th>");

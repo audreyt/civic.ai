@@ -40,7 +40,7 @@ for (const [path, paragraph] of [
     ],
     [
         "tw/doom-debate/index.html",
-        `<p>原始錄音收錄於 ${doomDebatesLink}，對談者為 Liron Shapira。</p>`,
+        '<p>原始錄音收錄於 <a href="https://www.youtube.com/watch?v=bvcmiirT8ME"><span lang="en-GB">Doom Debates</span></a>，對談者為 <span lang="en-GB">Liron Shapira</span>。</p>',
     ],
 ]) {
     const doomDebate = built(path);

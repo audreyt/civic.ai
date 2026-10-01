@@ -6870,4 +6870,31 @@ html[data-theme="dark"] .record-zone .record-eval--fail {
 
 /* ─── lane L: hanging punctuation and inline language ─── */
 
+:lang(zh) main :is(p, li, dd, blockquote, figcaption, td, th) {
+    hanging-punctuation: first last;
+    hanging-punctuation: allow-end first last;
+}
+
+@supports (text-autospace: normal) {
+    :lang(zh) main {
+        text-autospace: normal;
+    }
+}
+
+@supports (text-spacing-trim: trim-start) {
+    :lang(zh) main {
+        text-spacing-trim: trim-start;
+    }
+}
+
+html:not(:lang(zh)) main span[lang="zh-TW"] {
+    line-break: strict;
+}
+
+@media print {
+    :lang(zh) main span[lang="en-GB"] {
+        hyphens: manual;
+    }
+}
+
 /* ─── end lane L ─── */
