@@ -1,0 +1,6 @@
+---
+import type { PageRecord } from "../lib/pages";
+interface Props { page: PageRecord; }
+const { page } = Astro.props;
+---
+{page.data.audio && <div class="audio-section"><audio controls preload="metadata" title="Narrated in Audrey's own AI voice"><source src={page.data.audio} type="audio/mpeg" /></audio></div>}

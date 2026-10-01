@@ -2,6 +2,12 @@
 import type { PageRecord } from "../lib/pages";
 import { smartQuotes } from "../lib/legacyMarkdown";
 import { glossary, lang2 } from "../lib/site";
+import DayCompassClient from "./client/DayCompassClient.astro";
+import ConstellationClient from "./client/ConstellationClient.astro";
+import FaqClient from "./client/FaqClient.astro";
+import MarginNotesClient from "./client/MarginNotesClient.astro";
+import WalkingPlayerClient from "./client/WalkingPlayerClient.astro";
+import ReadingPositionClient from "./client/ReadingPositionClient.astro";
 interface Props { page: PageRecord; }
 const { page } = Astro.props;
 const zh = lang2(page.data.lang) === "zh";
@@ -681,4 +687,9 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                 }
             })();
         </script>
-
+<DayCompassClient page={page} />
+<ConstellationClient page={page} />
+<FaqClient page={page} />
+<MarginNotesClient page={page} />
+<WalkingPlayerClient page={page} />
+<ReadingPositionClient page={page} />

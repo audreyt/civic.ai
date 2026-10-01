@@ -6,6 +6,9 @@ import HeaderTools from "./HeaderTools.astro";
 import SiteLogos from "./SiteLogos.astro";
 import SiteNav from "./SiteNav.astro";
 import SiteWordmark from "./SiteWordmark.astro";
+import DayCompass from "./DayCompass.astro";
+import HomeConstellation from "./HomeConstellation.astro";
+import PackEyebrow from "./PackEyebrow.astro";
 
 interface Props { page: PageRecord; headerTitle?: string; headerSubtitle?: string; headerDate?: string; }
 const { page, headerTitle, headerSubtitle, headerDate } = Astro.props;
@@ -18,6 +21,7 @@ const description = page.data.description ? smartQuotes(page.data.description) :
 <header class:list={["site-header", isHome ? "site-header--home" : "site-header--interior"]}>
   {isHome ? (
     <>
+      <HomeConstellation page={page} />
       <HeaderTools lang={page.data.lang} altLangUrl={page.data.alt_lang_url} />
       <SiteLogos lang={page.data.lang} />
       <h1><span class="title-keep">{displayTitle}</span>{displaySubtitle && <><span style="font-weight: 300">-</span><span class="title-keep">{displaySubtitle}</span></>}</h1>
@@ -29,11 +33,13 @@ const description = page.data.description ? smartQuotes(page.data.description) :
     <>
       <div class="site-header__bar">
         <SiteWordmark lang={page.data.lang} />
+        <DayCompass page={page} />
         <HeaderTools lang={page.data.lang} altLangUrl={page.data.alt_lang_url} />
         <div class="site-header__nav"><SiteNav lang={page.data.lang} /></div>
       </div>
       <div class="site-header__frame-rule" aria-hidden="true"></div>
       <div class="site-header__title-block">
+        <PackEyebrow page={page} />
         <h1>{displayTitle}{displaySubtitle && <span>{displaySubtitle}</span>}</h1>
         {headerDate ? <p class="chapter-date">{headerDate}</p> : page.data.date ? <p class="chapter-date">{formatDateDisplay(page.data.date, page.data.lang)}</p> : null}
         {page.data.author && <p class="chapter-date">{page.data.author}</p>}

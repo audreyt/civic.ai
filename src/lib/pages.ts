@@ -3,6 +3,8 @@ import { extname, join } from "node:path";
 import matter from "gray-matter";
 import { nativePictures, renderMarkdown, smartQuotes } from "./legacyMarkdown";
 import { expandShortcodes } from "./shortcodes";
+import { transformFaq } from "./faqTransform";
+import { annotateInlineLang } from "./inlineLang";
 import { normalizeUrl } from "./site";
 import { generatedPages } from "./recordPages";
 
@@ -168,7 +170,16 @@ function loadPage(sourceName: string): PageRecord {
         ? rawBody
         : sourceName.endsWith(".html")
           ? expanded
-          : nativePictures(renderMarkdown(expanded, url), hasPublicFile);
+          : annotateInlineLang(
+                transformFaq(
+                    nativePictures(
+                        renderMarkdown(expanded, url),
+                        hasPublicFile
+                    ),
+                    url
+                ),
+                data.lang
+            );
     const includeInSitemap =
         !data.exclude_from_sitemap && data.layout !== false;
     return {

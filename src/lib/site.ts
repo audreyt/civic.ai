@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import siteData from "../../_data/site.json";
 import pathsData from "../../_data/paths.json";
 import glossaryData from "../../_data/glossary.json";
+import packsData from "../../_data/packs.json";
 import comicsData from "../../_data/comics.json";
 import comicsJaOverlaysData from "../../_data/comics-ja-overlays.json";
 import openclawBootstrapData from "../../_data/openclaw_bootstrap.js";
@@ -34,6 +35,7 @@ export interface ComicsOverlayFrame {
 export const site = siteData;
 export const paths = pathsData;
 export const glossary = glossaryData;
+export const packs = packsData;
 export const comics = comicsData;
 export const comicsJaOverlays = comicsJaOverlaysData as Record<
     string,
