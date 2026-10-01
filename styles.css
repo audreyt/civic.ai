@@ -4014,6 +4014,12 @@ html:not(.js) .search-toggle {
     margin: 0;
     line-height: 1.4;
 }
+
+/* The FAQ filter hides contents entries with `hidden`; flow-root above would
+   otherwise keep them on screen. */
+.page-toc li[hidden] {
+    display: none;
+}
 .page-toc a {
     font-size: 0.9rem;
     text-decoration: none;
@@ -6386,6 +6392,11 @@ html[data-theme="dark"] .record-zone .record-eval--fail {
 /* ─── lane F: FAQ question controls ─── */
 .faq-answer {
     margin-block: 0 2rem;
+}
+
+/* The category filter's own state, kept apart from the phone fold's `hidden`. */
+.faq-answer[data-faq-filtered] {
+    display: none;
 }
 
 .faq-copy-link,

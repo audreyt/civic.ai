@@ -527,11 +527,12 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                 }
 
                 var entries = heads.map(function (head) {
-                    var answer = document.getElementById(head.id + "-answer");
-                    var nodes = answer ? [head, answer] : [head];
+                    // The answer's own `hidden` belongs to the phone fold
+                    // (FaqClient), so the filter marks it separately.
                     return {
                         category: head.getAttribute("data-faq-category"),
-                        nodes: nodes,
+                        nodes: [head],
+                        answer: document.getElementById(head.id + "-answer"),
                         tocItem: tocItemFor(head),
                     };
                 });
@@ -554,6 +555,12 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                         entry.nodes.forEach(function (node) {
                             node.hidden = !visible;
                         });
+                        if (entry.answer) {
+                            entry.answer.toggleAttribute(
+                                "data-faq-filtered",
+                                !visible
+                            );
+                        }
                         if (entry.tocItem) entry.tocItem.hidden = !visible;
                     });
                 }
