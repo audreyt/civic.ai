@@ -131,7 +131,7 @@ html.fonts-unavailable {
 }
 
 html[data-theme="dark"].fonts-unavailable {
-    --muted: #9aa6b8;
+    --muted: color-mix(in srgb, var(--soil) 78%, var(--ink));
 }
 
 ::selection {

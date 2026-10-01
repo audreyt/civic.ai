@@ -37,6 +37,22 @@ if (location.hostname === "6pack.care") location.replace("https://civic.ai" + lo
 </script>
 <script is:inline>
 document.documentElement.classList.add("js");
+// Web fonts can be blocked outright (iOS Lockdown Mode). The system fallback
+// renders thinner at the same weight, so say so and let the stylesheet
+// compensate rather than leaving the reader with faint text. Measuring is the
+// only reliable test: fonts.check() reports a blocked face as available.
+(function () {
+    function settle() {
+        var c = document.createElement("canvas").getContext("2d");
+        var s = "civic ai care";
+        c.font = '16px "Literata", monospace';
+        var withFace = c.measureText(s).width;
+        c.font = "16px monospace";
+        if (withFace === c.measureText(s).width) document.documentElement.classList.add("fonts-unavailable");
+    }
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(settle);
+    else window.addEventListener("load", settle);
+})();
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#f8f4ed" />
