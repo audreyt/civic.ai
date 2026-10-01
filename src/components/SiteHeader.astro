@@ -6,7 +6,6 @@ import HeaderTools from "./HeaderTools.astro";
 import SiteLogos from "./SiteLogos.astro";
 import SiteNav from "./SiteNav.astro";
 import SiteWordmark from "./SiteWordmark.astro";
-import DayCompass from "./DayCompass.astro";
 import HomeConstellation from "./HomeConstellation.astro";
 import PackEyebrow from "./PackEyebrow.astro";
 
@@ -33,7 +32,6 @@ const description = page.data.description ? smartQuotes(page.data.description) :
     <>
       <div class="site-header__bar">
         <SiteWordmark lang={page.data.lang} />
-        <DayCompass page={page} />
         <HeaderTools lang={page.data.lang} altLangUrl={page.data.alt_lang_url} />
         <div class="site-header__nav"><SiteNav lang={page.data.lang} /></div>
       </div>

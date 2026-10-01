@@ -72,26 +72,6 @@ export function expandShortcodes(
     return expanded;
 }
 
-// Tiny decorative six-dot compass beside each reading-path stop; a stop that
-// points at a pack page (/N/ or /tw/N/, hash or not) fills that pack's dot.
-const PACK_STOP = /^(?:\/tw)?\/([1-6])\/(?:#.*)?$/;
-const ORDINAL_ZH = ["一", "二", "三", "四", "五", "六"];
-const PATH_COMPASS_DOTS = ORDINAL_ZH.map((_, i) => {
-    const angle = ((-90 + i * 60) * Math.PI) / 180;
-    return {
-        cx: (8 + 5.4 * Math.cos(angle)).toFixed(2),
-        cy: (8 + 5.4 * Math.sin(angle)).toFixed(2),
-    };
-});
-
-function readingPathCompass(pack: number | undefined): string {
-    const dots = PATH_COMPASS_DOTS.map(
-        (dot, i) =>
-            `<circle class="path-compass__dot${i + 1 === pack ? " is-on" : ""}" data-pack="${i + 1}" cx="${dot.cx}" cy="${dot.cy}" r="1.5"/>`
-    ).join("");
-    return `<svg class="path-compass" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false">${dots}</svg>`;
-}
-
 export function renderReadingPaths(lang: string | undefined): string {
     const zh = lang2(lang) === "zh";
     const groups = paths
@@ -101,12 +81,7 @@ export function renderReadingPaths(lang: string | undefined): string {
                 .map((step) => {
                     const href = zh ? step.url_tw : step.url;
                     const label = zh ? step.label_tw : step.label_en;
-                    const match = PACK_STOP.exec(href);
-                    const pack = match ? Number(match[1]) : undefined;
-                    const hidden = pack
-                        ? `<span class="visually-hidden">${zh ? `（第${ORDINAL_ZH[pack - 1]}力）` : ` (Pack ${pack})`}</span>`
-                        : "";
-                    return `<li>${readingPathCompass(pack)}<a href="${escapeAttr(href)}">${escapeHtml(label)}${hidden}</a></li>`;
+                    return `<li><a href="${escapeAttr(href)}">${escapeHtml(label)}</a></li>`;
                 })
                 .join("");
             return `<div class="reading-path"><h3 class="reading-path__title">${escapeHtml(title)}</h3><ol class="reading-path__steps">${steps}</ol></div>`;

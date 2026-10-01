@@ -2,7 +2,6 @@
 import type { PageRecord } from "../lib/pages";
 import { smartQuotes } from "../lib/legacyMarkdown";
 import { glossary, lang2 } from "../lib/site";
-import DayCompassClient from "./client/DayCompassClient.astro";
 import ConstellationClient from "./client/ConstellationClient.astro";
 import FaqClient from "./client/FaqClient.astro";
 import MarginNotesClient from "./client/MarginNotesClient.astro";
@@ -676,7 +675,6 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                 }
             })();
         </script>
-<DayCompassClient page={page} />
 <ConstellationClient page={page} />
 <FaqClient page={page} />
 <MarginNotesClient page={page} />

@@ -1,8 +1,7 @@
 ---
-// Home constellation behind the institutional masthead (DESIGN.md §21): about
-// 120 small lights at seeded, build-time positions, and the Ring of Six that
-// six of them settle into on arrival. Decorative only; the arrival is driven by
-// ConstellationClient and the markup below is already the settled state.
+// Home constellation behind the institutional masthead (DESIGN.md §10): 120
+// small lights at seeded, build-time positions. Decorative only; its slow drift
+// is switched on by ConstellationClient, so without JavaScript it is still.
 import type { PageRecord } from "../lib/pages";
 interface Props { page: PageRecord; }
 const { page } = Astro.props;
@@ -23,10 +22,9 @@ const rand = seeded(0x6c1a);
 const pct = (n: number) => Math.round(n * 10) / 10;
 // The title and description sit in the middle of the masthead: lights inside
 // that band stay very faint; lights in the margins and the top and bottom
-// strips carry the field. Six margin lights (class "t") are the travellers.
+// strips carry the field.
 const inText = (x: number, y: number) => x > 16 && x < 84 && y > 14 && y < 92;
-const travellerSectors = [0, 1, 2, 3, 4, 5];
-type Light = { x: number; y: number; r: number; k: string; t: boolean };
+type Light = { x: number; y: number; r: number; k: string };
 const lights: Light[] = [];
 while (lights.length < 120) {
     const x = pct(rand() * 100);
@@ -36,28 +34,13 @@ while (lights.length < 120) {
     const faint = inText(x, y);
     // Faint lights: a single class (e). Margin lights: three soft steps.
     const k = faint ? "e" : pick < 0.5 ? "c" : pick < 0.85 ? "b" : "a";
-    lights.push({ x, y, r, k, t: false });
+    lights.push({ x, y, r, k });
 }
-// Choose one margin light per sector of the masthead as a traveller.
-travellerSectors.forEach((s) => {
-    const lo = s * (100 / 6);
-    const hi = lo + 100 / 6;
-    const found = lights.find((l) => !l.t && l.k !== "e" && l.x >= lo && l.x < hi);
-    const any = found ?? lights.find((l) => !l.t && l.k !== "e");
-    if (any) { any.t = true; any.k = "t"; }
-});
-const ring = [0, 1, 2, 3, 4, 5].map((i) => {
-    const a = -Math.PI / 2 + (i * Math.PI) / 3;
-    return { cx: pct(32 + 22 * Math.cos(a)), cy: pct(32 + 22 * Math.sin(a)), n: i + 1 };
-});
 ---
 {isHome && (
     <div class="home-constellation" aria-hidden="true" data-constellation>
         <svg class="home-constellation__field" width="100%" height="100%" focusable="false">
             {lights.map((l) => <circle class={l.k} cx={`${l.x}%`} cy={`${l.y}%`} r={l.r} />)}
-        </svg>
-        <svg class="home-constellation__ring" viewBox="0 0 64 64" width="64" height="64" focusable="false">
-            {ring.map((d) => <circle cx={d.cx} cy={d.cy} r="4" style={`fill:var(--pack-${d.n})`} />)}
         </svg>
     </div>
 )}

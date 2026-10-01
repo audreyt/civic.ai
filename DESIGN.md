@@ -105,7 +105,7 @@ The canonical pack colours come from the 6-Pack comics. They outrank the earlier
 | 5    | Blue/Solidarity       | `#6197F8` | Cross-group cooperation  |
 | 6    | Purple/Symbiosis      | `#A753F6` | Boundary and handoff     |
 
-Usage is strict: pack hues are wayfinding only. On pack pages they colour h2 rules, gist-card keels, the eyebrow mark, tool-card keels and wide-screen TOC rails; on the Measures map, card top rules, relation dots and the Pack 6 outline, and below it the instrument-card keels; elsewhere, only the dots of the Day Compass, the reading-path compasses and the home page's Ring of Six. Never body text, never backgrounds behind prose, never the page frame. The pack-page rules use contrast-tuned variants: Packs 3 and 4 darken in Daylight (`#D4B21C`, `#5FAE4A`), and Pack 6 lightens in Lantern (`#B98CF9`). **Oxford blue is not retired; it is constrained.** It frames institutional provenance: the home masthead and footer, the interior masthead and colophon rules, formal provenance links, and at most one primary institutional CTA. Pages stay one family; hue is wayfinding, Oxford blue is provenance, neither becomes a theme.
+Usage is strict: pack hues are wayfinding only. On pack pages they colour h2 rules, gist-card keels, the eyebrow mark, tool-card keels and wide-screen TOC rails; on the Measures map, card top rules, relation dots and the Pack 6 outline, and below it the instrument-card keels. Never body text, never backgrounds behind prose, never the page frame. The pack-page rules use contrast-tuned variants: Packs 3 and 4 darken in Daylight (`#D4B21C`, `#5FAE4A`), and Pack 6 lightens in Lantern (`#B98CF9`). **Oxford blue is not retired; it is constrained.** It frames institutional provenance: the home masthead and footer, the interior masthead and colophon rules, formal provenance links, and at most one primary institutional CTA. Pages stay one family; hue is wayfinding, Oxford blue is provenance, neither becomes a theme.
 
 ### 5.4 Rules
 
@@ -162,7 +162,7 @@ One anatomy serves every page; blueprints (§10) vary the organs, not the skelet
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
-│ masthead   wordmark · compass  lang · theme · search tools   │
+│ masthead   wordmark            lang · theme · search tools   │
 │ nav        text navigation                                   │
 ├──────────────Oxford-blue provenance rule (2px)───────────────┤
 │                                                              │
@@ -229,15 +229,14 @@ The Trace prints (§17) as a boxed colophon, so even the photocopied page shows 
 Navigation across the core follows the care cycle in order.
 
 - The masthead uses text navigation (§7.1).
-- **The Day Compass**: interior mastheads carry a 30 px ring of six dots after the wordmark, one per pack in its hue, each a link to its chapter (named, for example, "Pack 3: Competence · Noon"), with a centre hub linking to the 6-Pack overview. On a pack page that pack's dot is filled and marked `aria-current`, and as the reader moves through the chapter a thin arc around it fills with reading progress; without JavaScript or under reduced motion the dot is simply filled. Elsewhere all six dots are outlined. At 480 px and below the compass takes its own row beneath the wordmark, because the first row has no room for it beside the tools.
 - Chapter navigation follows Packs 1–6, then Measures and FAQ, using destination titles. Pages may override the sequence in front matter. Each pack destination names its hour of the day in the machinery voice — 1 曉 First light, 2 朝 Morning, 3 午 Noon, 4 霖 Afternoon rain, 5 暮 Dusk, 6 落 Sunset (`← Pack 3: Competence · Noon`). Pack 4, where the care cycle closes, offers Pack 5 and a second, dashed link home: `↺ Back to Pack 1: Attentiveness · First light`. Pack 6's onward step is Measures — the cycle resolves into instruments.
-- **Reading paths** (`_data/paths.json`): the home page offers five three-stop paths — everyday conversations, care and frontline work, policy and governance, builders and engineers, and civic and community practice. Each path is a labelled list of links, and each stop carries a small compass with its pack's dot filled (all six outlined for a stop that is not a pack chapter).
+- **Reading paths** (`_data/paths.json`): the home page offers five three-stop paths — everyday conversations, care and frontline work, policy and governance, builders and engineers, and civic and community practice. Each path is a labelled list of links.
 
 ## 10. Page blueprints
 
 Every page keeps the shared anatomy (§7.1). Distinctive organs only, per page:
 
-- **Home** — The one page with an institutional doorway. It keeps the current Oxford-blue masthead and reversed Oxford/AFP lockups, echoing the AFP site rather than pretending civic.ai has no institutional home. Behind that masthead about 120 faint lights drift almost imperceptibly; once per session six of them travel into the Ring of Six at the masthead's top-left, in the pack hues, over 900 ms, and then the page is still. The ring is in the markup in its settled place, so without JavaScript, under reduced motion and on a return visit the reader sees it already formed (§12). Below that, the page becomes civic.ai: the thesis line — _"Civic AI is artificial intelligence that answers to the people it affects."_ — and Nicky Case's overview page as a framed plate ("the argument, drawn"), not as wallpaper. Then a three-step starting sequence, listening and viewing links, the five reading paths, a text-card pack index, four ways into the practice (each with its own evidential status, not four interchangeable proofs), publications and the project stewards. The page closes with the Oxford-blue institutional footer.
+- **Home** — The one page with an institutional doorway. It keeps the current Oxford-blue masthead and reversed Oxford/AFP lockups, echoing the AFP site rather than pretending civic.ai has no institutional home. Behind that masthead about 120 faint lights drift almost imperceptibly; without JavaScript or under reduced motion they stand still (§12). Below that, the page becomes civic.ai: the thesis line — _"Civic AI is artificial intelligence that answers to the people it affects."_ — and Nicky Case's overview page as a framed plate ("the argument, drawn"), not as wallpaper. Then a three-step starting sequence, listening and viewing links, the five reading paths, a text-card pack index, four ways into the practice (each with its own evidential status, not four interchangeable proofs), publications and the project stewards. The page closes with the Oxford-blue institutional footer.
 - **Pack pages (1–6)** — Each pack opens with a bilingual eyebrow in the machinery voice — pack number, the pack's name in the other language and its hour (`Pack 4 · 回應力 · Afternoon rain`/`第四力 · Responsiveness · 霖`) — beside a short pack-hue mark; then the shared title block, the pack's governing question as a standfirst under the title, and its gist card; then the first comic plate and prose. The second comic appears later in the chapter. The first plate loads eagerly at high priority, with native AVIF selection where a sibling asset exists. Buildable tools are machinery cards: squared and hairline-bordered on `--surface`, with a 4 px pack-hue keel, the tool's bold lead-in as the card title in the machinery voice and its ¶ link kept inside the card; one column on phones, two on wide screens. Chapter nav at the foot (§9).
 - **Measures** — The instrument room. After the map, each headline measure is an instrument card: squared, with its pack's hue as the keel, the measure's own paragraph unchanged, then a short specification in the machinery voice — the measure's name in the other language, its supporting diagnostics, what it refuses to reward, its threshold and how to read it. Every value is quoted from the page's own words; the page states no refresh cadence or intended reader, so the cards show none. Each of the eleven named instruments carries an anchor matching its glossary id (`#shadow-mode`, `#brake`, …).
 - **Manifesto** — The document. Widest margins, ¶ numbers, a provenance line up top ("As delivered; the spoken record — vocabulary is not normalised to later usage"), audio where narration exists (§11.6), print-first quality (§17). No gist card; a manifesto is not summarised above its own first line.
@@ -272,10 +271,9 @@ Motion is small, and it only confirms something the reader did or marks arrival;
 1. **The record opens**: the Trace's site-mark turns half a revolution over 200 ms as its disclosure opens.
 2. **Arrival**: headings have a short arrival treatment on page load.
 3. **Hover**: portraits and cards have restrained hover movement.
-4. **The constellation**: on the home page the field of lights drifts by a few pixels over 90 seconds, and once per session six lights travel into the Ring of Six (900 ms, ease-out); then nothing moves.
-5. **Reading progress**: on pack pages the Day Compass's arc follows the reader's position (120 ms, linear).
+4. **The constellation**: on the home page the field of lights drifts by a few pixels over 90 seconds.
 
-`prefers-reduced-motion: reduce` removes smooth scrolling and shortens animation and transition durations; the Trace still indicates its open state by orientation, the constellation stays still with its ring already formed, and the compass shows its filled dot without the arc. Nothing on the site ever moves to attract attention.
+`prefers-reduced-motion: reduce` removes smooth scrolling and shortens animation and transition durations; the Trace still indicates its open state by orientation, and the constellation stays still. Nothing on the site ever moves to attract attention.
 
 ## 13. Lantern mode
 
@@ -301,7 +299,7 @@ Accessibility is Pack 1 applied to the reader: attention to the quietest users, 
 - Body ≥ 18 px; all type in `rem`; layout must survive 200 % zoom and 320 px viewports without horizontal scroll.
 - Visible focus everywhere: a 2 px moss outline, normally at 3 px offset. Selected shell and search controls use 2 px; the Trace summary places its outline inside the handle. Contest text is cinnabar, but its focus outline remains moss.
 - Full keyboard paths, skip-link (exists — keep), `aria-pressed` on filters (exists — keep), `lang` on mixed-language runs, added at build (§6.4).
-- Reading without JavaScript is complete: glossing and margin notes, TOC, filters, FAQ folding, reading progress, reading-position transfer and search are enhancements atop a full plain-HTML page. Authored content images become native picture elements at build, with AVIF renditions where available and a JPEG or PNG fallback; images remain visible without JavaScript and need no client-side swap.
+- Reading without JavaScript is complete: glossing and margin notes, TOC, filters, FAQ folding, reading-position transfer and search are enhancements atop a full plain-HTML page. Authored content images become native picture elements at build, with AVIF renditions where available and a JPEG or PNG fallback; images remain visible without JavaScript and need no client-side swap.
 - Alt text remains long-form and faithful (the comics' alt text is already exemplary; it is a design asset, not a chore).
 - Both languages get equal a11y: skip-links and labels localised, zh line-length and leading tuned for readability, not squeezed into Latin metrics.
 
