@@ -1188,7 +1188,7 @@ export default async function () {
             snapshotUrl: sourceUrls.snapshotRepo,
             question: {
                 en: "What kind of AI use would people accept in care, government, and everyday public life?",
-                tw: "在照護、政府與日常公共生活中，人們願意接受哪些人工智慧的使用方式？",
+                tw: "人們願意接受哪一種 AI 應用於照護、政府與日常公共生活？",
             },
             dek: {
                 en: "A Habermolt-style deliberation view rebuilt from Polis exports only. The page below uses vote vectors, cross-group support, and local inference rather than hidden APIs or agent metadata.",
