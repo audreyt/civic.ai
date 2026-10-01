@@ -118,10 +118,8 @@ function sizeCheck(rendered) {
             ) + compressed(scriptTags.map((m) => m[2]).join(""));
         // Fonts agent's per-page report is optional. Unknown schemas are reported,
         // never interpreted as a zero-byte success.
-        const fontPage = fontReport?.pages?.find?.((p) => p.url === page.url);
-        const fonts = page.url.startsWith("/tw/")
-            ? fontPage?.totalBytes
-            : undefined;
+        const fontPage = fontReport?.pages?.find?.((p) => p.path === page.url);
+        const fonts = page.url.startsWith("/tw/") ? fontPage?.bytes : undefined;
         const fontRequired = Boolean(fontReport) && page.url.startsWith("/tw/");
         const fontMeasured = Number.isFinite(fonts) && fonts >= 0;
         return {
@@ -133,7 +131,7 @@ function sizeCheck(rendered) {
             ...(fontRequired && !fontMeasured
                 ? {
                       fontError:
-                          "Missing or unrecognised per-page totalBytes in font report",
+                          "Missing or unrecognised per-page bytes in font report",
                   }
                 : {}),
             pass:
@@ -147,7 +145,7 @@ function sizeCheck(rendered) {
         pass: detail.every((row) => row.pass) && !fontError,
         detail,
         budgets: { html: 60000, css: 30000, js: 30000, zhFonts: 260000 },
-        scope: `Per-page gzip HTML, linked/inline CSS and JS; decimal KB. zh fonts: ${fontError ?? (fontReport ? "report.json, recognised per-page totalBytes only" : "skipped (no font report)")}. EN fonts, images and network requests are outside this static check.`,
+        scope: `Per-page gzip HTML, linked/inline CSS and JS; decimal KB. zh fonts: ${fontError ?? (fontReport ? "report.json, recognised per-page bytes only" : "skipped (no font report)")}. EN fonts, images and network requests are outside this static check.`,
         scopeZh: `逐頁計算 gzip 壓縮後的 HTML、CSS 與 JS，KB 採十進位。華文字型：${fontReport ? "依字型報告中可辨識的逐頁資料" : "略過（無字型報告）"}。英文字型、圖片及網路請求不在此靜態檢查範圍。`,
     };
 }

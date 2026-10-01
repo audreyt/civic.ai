@@ -447,19 +447,6 @@ header .chapter-date {
     margin: 0;
 }
 
-.site-header__home-tools {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 2;
-    display: grid;
-    grid-template-columns: max-content max-content;
-    align-items: center;
-    justify-content: end;
-    column-gap: 14px;
-    margin: 0;
-}
-
 .theme-toggle {
     display: inline-grid;
     place-items: center;
@@ -639,24 +626,6 @@ main td:first-child {
 
 main tr:last-child td {
     border-bottom: none;
-}
-
-/* Two-column comparison table (e.g. inside-the-kami "the shared design lesson"):
-   balance the columns and let both wrap, so a long first cell can't force the
-   column wide and trigger horizontal scroll. Overrides the global block/nowrap
-   table behaviour for this scoped case only. */
-.compare-table table {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-}
-.compare-table th:first-child,
-.compare-table td:first-child {
-    width: 40%;
-    white-space: normal;
-}
-.compare-table td {
-    vertical-align: top;
 }
 
 /* ─── MAIN CONTENT ─── */
@@ -902,41 +871,6 @@ em {
     font-family: "Kaiti TC", "DFKai-SB", "BiauKai", "STKaiti", cursive;
 }
 
-/* ─── INTERVIEW PAGES ─── */
-.method-note {
-    margin: 0 0 2.5rem;
-    padding: 0 0 1rem;
-    border-bottom: 1px solid var(--border);
-    font-family: var(--sans);
-    font-size: 0.92rem;
-    line-height: 1.65;
-    color: var(--muted);
-}
-
-.method-note p {
-    margin: 0.35rem 0;
-}
-
-body.interview-page h4 a {
-    color: inherit;
-    text-decoration: none;
-}
-
-body.interview-page h4 a:hover {
-    color: inherit;
-}
-
-body.interview-page hr {
-    margin: 2.2rem 0 1.3rem;
-}
-
-body.interview-page main p:has(> strong:first-child) strong:first-child {
-    font-family: var(--sans);
-    font-size: 0.82em;
-    letter-spacing: 0.04em;
-    color: var(--gold);
-}
-
 /* ─── LEAD & CALLOUT ─── */
 .lead {
     font-size: 1.05rem;
@@ -1002,22 +936,6 @@ body.interview-page main p:has(> strong:first-child) strong:first-child {
 .audio-section audio {
     width: 100%;
     display: block;
-}
-
-.audio-label {
-    font-family: var(--sans);
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin: 0 0 0.5rem;
-}
-
-.audio-links {
-    font-size: 0.85rem;
-    color: var(--muted);
-    margin: 0.5rem 0 0;
 }
 
 /* ─── TRANSCRIPT SPEAKER TURNS ─── */
@@ -1972,22 +1890,6 @@ footer a:hover {
     margin-top: 0;
 }
 
-/* ─── CONFERENCE PAGE ─── */
-.conf-intro {
-    font-family: var(--serif);
-    font-size: 1.15rem;
-    color: var(--muted);
-    border-left: 3px solid var(--gold);
-    padding: 16px 24px;
-    background: var(--warm);
-    border-radius: 0 4px 4px 0;
-    margin: 0 0 2em;
-}
-
-.conf-intro p {
-    margin: 0.5em 0;
-}
-
 .conf-quote {
     display: grid;
     gap: 16px;
@@ -2094,18 +1996,6 @@ footer a:hover {
     .conf-quote-portrait {
         width: 128px;
         justify-self: start;
-    }
-
-    .conf-quote--mirror {
-        grid-template-columns: 1fr auto;
-    }
-
-    .conf-quote--mirror .conf-quote-portrait {
-        order: 1;
-    }
-
-    .conf-quote--mirror figcaption {
-        text-align: left;
     }
 }
 
@@ -2383,18 +2273,6 @@ footer a:hover {
 .conf-break::before {
     border-color: var(--gold);
     background: var(--surface);
-}
-
-.conf-tool-note {
-    text-align: center;
-    font-family: var(--sans);
-    font-size: 0.82rem;
-    color: var(--muted);
-    background: var(--warm);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 10px 16px;
-    margin: 0 0 2em;
 }
 
 /* Mobile adjustments for agenda timeline */
@@ -2843,13 +2721,6 @@ body.comics-page main {
 .polis-beeswarm circle:hover {
     opacity: 1;
     filter: brightness(1.2);
-}
-
-.polis-source {
-    text-align: center;
-    margin: 2em 0;
-    font-family: var(--sans);
-    font-size: 0.85rem;
 }
 
 @media (max-width: 719px) {
@@ -4077,12 +3948,6 @@ html:not(.js) .search-toggle {
     margin: 0;
     line-height: 1.4;
 }
-.page-toc__h3 {
-    padding-left: 0.8em;
-}
-.page-toc__h4 {
-    padding-left: 1.6em;
-}
 .page-toc a {
     font-size: 0.9rem;
     text-decoration: none;
@@ -4150,165 +4015,6 @@ html:not(.js) .search-toggle {
 .reading-path__steps li {
     margin: 0.3em 0;
     line-height: 1.5;
-}
-
-/* ─── CSS-ONLY LQIP (leanrada.com/notes/css-only-lqip/) ─── */
-.lqip {
-    --lqip-ca: mod(
-        round(down, calc((var(--lqip) + pow(2, 19)) / pow(2, 18))),
-        4
-    );
-    --lqip-cb: mod(
-        round(down, calc((var(--lqip) + pow(2, 19)) / pow(2, 16))),
-        4
-    );
-    --lqip-cc: mod(
-        round(down, calc((var(--lqip) + pow(2, 19)) / pow(2, 14))),
-        4
-    );
-    --lqip-cd: mod(
-        round(down, calc((var(--lqip) + pow(2, 19)) / pow(2, 12))),
-        4
-    );
-    --lqip-ce: mod(
-        round(down, calc((var(--lqip) + pow(2, 19)) / pow(2, 10))),
-        4
-    );
-    --lqip-cf: mod(
-        round(down, calc((var(--lqip) + pow(2, 19)) / pow(2, 8))),
-        4
-    );
-    --lqip-ll: mod(
-        round(down, calc((var(--lqip) + pow(2, 19)) / pow(2, 6))),
-        4
-    );
-    --lqip-aaa: mod(
-        round(down, calc((var(--lqip) + pow(2, 19)) / pow(2, 3))),
-        8
-    );
-    --lqip-bbb: mod(calc(var(--lqip) + pow(2, 19)), 8);
-    --lqip-ca-clr: hsl(0 0% calc(var(--lqip-ca) / 3 * 60% + 20%));
-    --lqip-cb-clr: hsl(0 0% calc(var(--lqip-cb) / 3 * 60% + 20%));
-    --lqip-cc-clr: hsl(0 0% calc(var(--lqip-cc) / 3 * 60% + 20%));
-    --lqip-cd-clr: hsl(0 0% calc(var(--lqip-cd) / 3 * 60% + 20%));
-    --lqip-ce-clr: hsl(0 0% calc(var(--lqip-ce) / 3 * 60% + 20%));
-    --lqip-cf-clr: hsl(0 0% calc(var(--lqip-cf) / 3 * 60% + 20%));
-    --lqip-base-clr: oklab(
-        calc(var(--lqip-ll) / 3 * 0.6 + 0.2)
-            calc(var(--lqip-aaa) / 8 * 0.7 - 0.35)
-            calc((var(--lqip-bbb) + 1) / 8 * 0.7 - 0.35)
-    );
-    --lqip-s10: 2%;
-    --lqip-s20: 8%;
-    --lqip-s30: 18%;
-    --lqip-s40: 32%;
-    background-blend-mode:
-        hard-light, hard-light, hard-light, hard-light, hard-light, hard-light,
-        normal;
-    background-image:
-        radial-gradient(
-            50% 75% at 16.67% 25%,
-            var(--lqip-ca-clr),
-            rgb(from var(--lqip-ca-clr) r g b / calc(100% - var(--lqip-s10)))
-                10%,
-            rgb(from var(--lqip-ca-clr) r g b / calc(100% - var(--lqip-s20)))
-                20%,
-            rgb(from var(--lqip-ca-clr) r g b / calc(100% - var(--lqip-s30)))
-                30%,
-            rgb(from var(--lqip-ca-clr) r g b / calc(100% - var(--lqip-s40)))
-                40%,
-            rgb(from var(--lqip-ca-clr) r g b / calc(var(--lqip-s40))) 60%,
-            rgb(from var(--lqip-ca-clr) r g b / calc(var(--lqip-s30))) 70%,
-            rgb(from var(--lqip-ca-clr) r g b / calc(var(--lqip-s20))) 80%,
-            rgb(from var(--lqip-ca-clr) r g b / calc(var(--lqip-s10))) 90%,
-            transparent
-        ),
-        radial-gradient(
-            50% 75% at 50% 25%,
-            var(--lqip-cb-clr),
-            rgb(from var(--lqip-cb-clr) r g b / calc(100% - var(--lqip-s10)))
-                10%,
-            rgb(from var(--lqip-cb-clr) r g b / calc(100% - var(--lqip-s20)))
-                20%,
-            rgb(from var(--lqip-cb-clr) r g b / calc(100% - var(--lqip-s30)))
-                30%,
-            rgb(from var(--lqip-cb-clr) r g b / calc(100% - var(--lqip-s40)))
-                40%,
-            rgb(from var(--lqip-cb-clr) r g b / calc(var(--lqip-s40))) 60%,
-            rgb(from var(--lqip-cb-clr) r g b / calc(var(--lqip-s30))) 70%,
-            rgb(from var(--lqip-cb-clr) r g b / calc(var(--lqip-s20))) 80%,
-            rgb(from var(--lqip-cb-clr) r g b / calc(var(--lqip-s10))) 90%,
-            transparent
-        ),
-        radial-gradient(
-            50% 75% at 83.33% 25%,
-            var(--lqip-cc-clr),
-            rgb(from var(--lqip-cc-clr) r g b / calc(100% - var(--lqip-s10)))
-                10%,
-            rgb(from var(--lqip-cc-clr) r g b / calc(100% - var(--lqip-s20)))
-                20%,
-            rgb(from var(--lqip-cc-clr) r g b / calc(100% - var(--lqip-s30)))
-                30%,
-            rgb(from var(--lqip-cc-clr) r g b / calc(100% - var(--lqip-s40)))
-                40%,
-            rgb(from var(--lqip-cc-clr) r g b / calc(var(--lqip-s40))) 60%,
-            rgb(from var(--lqip-cc-clr) r g b / calc(var(--lqip-s30))) 70%,
-            rgb(from var(--lqip-cc-clr) r g b / calc(var(--lqip-s20))) 80%,
-            rgb(from var(--lqip-cc-clr) r g b / calc(var(--lqip-s10))) 90%,
-            transparent
-        ),
-        radial-gradient(
-            50% 75% at 16.67% 75%,
-            var(--lqip-cd-clr),
-            rgb(from var(--lqip-cd-clr) r g b / calc(100% - var(--lqip-s10)))
-                10%,
-            rgb(from var(--lqip-cd-clr) r g b / calc(100% - var(--lqip-s20)))
-                20%,
-            rgb(from var(--lqip-cd-clr) r g b / calc(100% - var(--lqip-s30)))
-                30%,
-            rgb(from var(--lqip-cd-clr) r g b / calc(100% - var(--lqip-s40)))
-                40%,
-            rgb(from var(--lqip-cd-clr) r g b / calc(var(--lqip-s40))) 60%,
-            rgb(from var(--lqip-cd-clr) r g b / calc(var(--lqip-s30))) 70%,
-            rgb(from var(--lqip-cd-clr) r g b / calc(var(--lqip-s20))) 80%,
-            rgb(from var(--lqip-cd-clr) r g b / calc(var(--lqip-s10))) 90%,
-            transparent
-        ),
-        radial-gradient(
-            50% 75% at 50% 75%,
-            var(--lqip-ce-clr),
-            rgb(from var(--lqip-ce-clr) r g b / calc(100% - var(--lqip-s10)))
-                10%,
-            rgb(from var(--lqip-ce-clr) r g b / calc(100% - var(--lqip-s20)))
-                20%,
-            rgb(from var(--lqip-ce-clr) r g b / calc(100% - var(--lqip-s30)))
-                30%,
-            rgb(from var(--lqip-ce-clr) r g b / calc(100% - var(--lqip-s40)))
-                40%,
-            rgb(from var(--lqip-ce-clr) r g b / calc(var(--lqip-s40))) 60%,
-            rgb(from var(--lqip-ce-clr) r g b / calc(var(--lqip-s30))) 70%,
-            rgb(from var(--lqip-ce-clr) r g b / calc(var(--lqip-s20))) 80%,
-            rgb(from var(--lqip-ce-clr) r g b / calc(var(--lqip-s10))) 90%,
-            transparent
-        ),
-        radial-gradient(
-            50% 75% at 83.33% 75%,
-            var(--lqip-cf-clr),
-            rgb(from var(--lqip-cf-clr) r g b / calc(100% - var(--lqip-s10)))
-                10%,
-            rgb(from var(--lqip-cf-clr) r g b / calc(100% - var(--lqip-s20)))
-                20%,
-            rgb(from var(--lqip-cf-clr) r g b / calc(100% - var(--lqip-s30)))
-                30%,
-            rgb(from var(--lqip-cf-clr) r g b / calc(100% - var(--lqip-s40)))
-                40%,
-            rgb(from var(--lqip-cf-clr) r g b / calc(var(--lqip-s40))) 60%,
-            rgb(from var(--lqip-cf-clr) r g b / calc(var(--lqip-s30))) 70%,
-            rgb(from var(--lqip-cf-clr) r g b / calc(var(--lqip-s20))) 80%,
-            rgb(from var(--lqip-cf-clr) r g b / calc(var(--lqip-s10))) 90%,
-            transparent
-        ),
-        linear-gradient(var(--lqip-base-clr), var(--lqip-base-clr));
 }
 
 /* ─── GLOSSARY LIST ─── */
@@ -4470,14 +4176,6 @@ html[data-theme="dark"] .cmap {
     stroke-dasharray: 2 7;
 }
 
-.cmap-night {
-    fill: none;
-    stroke: var(--muted);
-    stroke-width: 2.5;
-    stroke-dasharray: 3 8;
-    opacity: 0.75;
-}
-
 .cmap-arc {
     fill: none;
     stroke-width: 14;
@@ -4485,8 +4183,7 @@ html[data-theme="dark"] .cmap {
     opacity: 0.92;
 }
 
-.cmap-cycle-arrow,
-.cmap-night-arrow {
+.cmap-cycle-arrow {
     fill: var(--muted);
 }
 
@@ -4582,15 +4279,6 @@ html[data-theme="dark"] .cmap {
     border-radius: 6px;
     padding: 0.85rem 1.05rem 0.95rem;
     scroll-margin-top: 5rem;
-}
-
-.cmap-phase {
-    margin: 0;
-    font-size: 0.68rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ink);
 }
 
 .cmap-station-title {
@@ -4865,9 +4553,7 @@ html[data-theme="dark"] .cmap {
 .cmap:has(#st-p3:is(:hover, :focus-within)) .cmap-arc-3,
 .cmap:has(.cmap-chip-3:is(:hover, :focus-visible)) .cmap-arc-3,
 .cmap:has(#st-p4:is(:hover, :focus-within)) .cmap-arc-4,
-.cmap:has(.cmap-chip-4:is(:hover, :focus-visible)) .cmap-arc-4,
-.cmap:has(#st-p5:is(:hover, :focus-within)) .cmap-arc-5,
-.cmap:has(.cmap-chip-5:is(:hover, :focus-visible)) .cmap-arc-5 {
+.cmap:has(.cmap-chip-4:is(:hover, :focus-visible)) .cmap-arc-4 {
     stroke-width: 20;
     opacity: 1;
 }
@@ -4918,10 +4604,6 @@ html[data-theme="dark"] .cmap-arc-3 {
 
 html[data-theme="dark"] .cmap-arc-4 {
     stroke: #7cc967;
-}
-
-html[data-theme="dark"] .cmap-arc-5 {
-    stroke: #6197f8;
 }
 
 /* ── motion: only ever confirms something the reader did ── */
@@ -5607,53 +5289,6 @@ header h1 {
     margin: 1.2em 0 0.4em;
 }
 
-.cta-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 48px;
-    padding: 12px 24px;
-    border-radius: 4px;
-    border: 1px solid var(--teal);
-    background: transparent;
-    color: var(--teal);
-    font-family: var(--sans);
-    font-weight: 600;
-    font-size: 0.95rem;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-    text-underline-offset: 3px;
-}
-
-.cta-button:hover {
-    border-color: var(--gold);
-    color: var(--gold);
-    text-decoration: none;
-}
-
-.cta-button--primary {
-    background: var(--oxford-blue);
-    border-color: var(--oxford-blue);
-    color: #fbfaf4;
-}
-
-.cta-button--primary:hover {
-    background: var(--teal);
-    border-color: var(--teal);
-    color: #fbfaf4;
-}
-
-html[data-theme="dark"] .cta-button--primary {
-    background: var(--teal);
-    border-color: var(--teal);
-    color: #fbfaf4;
-}
-
-html[data-theme="dark"] .cta-button--primary:hover {
-    background: var(--gold);
-    border-color: var(--gold);
-}
-
 .cta-note {
     font-size: 0.92rem;
     color: var(--muted);
@@ -5825,12 +5460,11 @@ html[data-theme="dark"] {
 }
 
 /* Small gold labels use the text-safe gold; --gold stays for rules/borders. */
+
 .in-short__label,
 .page-toc > summary,
-.audio-label,
 main th,
 h4[data-faq-label]::before,
-body.interview-page main p:has(> strong:first-child) strong:first-child,
 .site-header--interior .chapter-date,
 .polis-eyebrow,
 .polis-section__kicker,

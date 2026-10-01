@@ -151,24 +151,23 @@ for (const page of pages) {
                 bytes: face.bytes,
                 weight: source.weight,
             });
-            // Intercept only the named Han fallbacks, not the existing
-            // variable Latin faces: overlapping ranges can mask their Latin
-            // glyphs in Chrome. Aliases reuse the same WOFF2 downloads.
-            for (const family of [
-                "Noto Serif TC",
-                "Georgia",
-                "PingFang TC",
-                "Kaiti TC",
-                "Noto Sans TC",
-            ]) {
-                // Exact heavier descriptors let Chrome choose the real 600
-                // outlines. A broad overlapping regular range masks them.
-                // The regular entries at those same weights cover glyphs
-                // outside the semantic heavy subset, without system fallback.
+            // Only the prose face is intercepted. Aliasing the sans and kai
+            // families too would have pulled the machinery voice and Chinese
+            // emphasis into the serif subset, erasing both distinctions, and
+            // repeated every unicode-range once per aliased family. Those
+            // stacks keep their system faces, which every current OS ships.
+            for (const family of ["Noto Serif TC"]) {
+                // One descriptor per weight band rather than per discrete
+                // weight: the heavy band is declared last from the real 600
+                // source, so Chrome still picks those outlines where they
+                // exist, while the regular source covers every other glyph at
+                // the same weights without falling back to a system face.
+                // Enumerating 600/650/700/800/900 separately repeated the whole
+                // unicode-range five times per family for no added behaviour.
                 const weights =
                     source.weight === 400
-                        ? ["100 500", 600, 650, 700, 800, 900]
-                        : [600, 650, 700, 800, 900];
+                        ? ["100 500", "600 900"]
+                        : ["600 900"];
                 for (const weight of weights) {
                     rules.push(
                         `@font-face{font-family:"${family}";font-style:normal;font-weight:${weight};font-display:swap;src:url("/fonts/zh/${face.file}") format("woff2");unicode-range:${face.unicodeRange}}`

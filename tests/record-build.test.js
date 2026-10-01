@@ -42,9 +42,11 @@ test("postbuild publishes failed evals and exact final HTML bytes without reject
     }
 });
 
+// The receipt shape is the one scripts/subset-zh-fonts.mjs actually writes:
+// a site path and the page's total subset bytes.
 test.each([
-    [{ pages: [{ url: "/tw/", totalBytes: 260000 }] }, true],
-    [{ pages: [{ url: "/tw/", totalBytes: 260001 }] }, false],
+    [{ pages: [{ path: "/tw/", bytes: 260000 }] }, true],
+    [{ pages: [{ path: "/tw/", bytes: 260001 }] }, false],
     [{ pages: [] }, false],
 ])(
     "uses optional zh font receipts without treating missing measurements as zero",
