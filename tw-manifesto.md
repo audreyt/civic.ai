@@ -15,7 +15,7 @@ nav_prev:
 nav_next:
     url: "/tw/faq"
     text: "常見問題"
-audio: /audio/manifesto.mp3
+audio: /audio/tw-manifesto.mp3
 ---
 
 當我們談論「AI」與「社會」，有兩種未來正在相互角力。
