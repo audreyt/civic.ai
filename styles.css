@@ -6156,10 +6156,6 @@ html[data-theme="dark"] body[data-pack="6"] {
     display: none;
 }
 
-.record-chip {
-    display: none;
-}
-
 .record-ledger {
     min-width: 0;
 }
@@ -6313,25 +6309,6 @@ html[data-theme="dark"] .record-zone .record-eval--fail {
 }
 
 @media screen and (min-width: 1200px) {
-    /* The chip hangs in the right gutter beside the reading column. The
-       comics gallery fills the page width, leaving no gutter to hang in, and
-       the hang never reaches past the viewport edge on any page. */
-    body:not(.comics-page)
-        main:not(:has(.cmap, .polis-fullbleed))
-        .record-chip {
-        display: grid;
-        float: right;
-        position: sticky;
-        top: 1.5rem;
-        width: 10rem;
-        margin: 0 max(-16rem, calc((100% - 100vw) / 2 + 1.5rem)) 0 0;
-        padding-inline-start: 0.75rem;
-        border-inline-start: 1px solid var(--rule, #ddd9cb);
-        gap: 0.5rem;
-        font-size: 0.7rem;
-        line-height: 1.5;
-    }
-
     .record-paragraph > .record-paragraph__link {
         inset-inline-start: calc(100% + 1rem);
         inset-inline-end: auto;

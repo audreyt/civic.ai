@@ -147,7 +147,7 @@ test.each(["en", "zh"])(
                 terms: { pass: false, scope: "<repair>", scopeZh: "<repair>" },
             },
         };
-        const html = ["trace", "board", "chip"]
+        const html = ["trace", "board"]
             .map(
                 (kind) =>
                     `<div data-record-evals="${kind}" data-record-lang="${lang}">pending</div>`

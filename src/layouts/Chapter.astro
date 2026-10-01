@@ -10,7 +10,6 @@ import PartnerColophon from "../components/PartnerColophon.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import SearchOverlay from "../components/SearchOverlay.astro";
 import Trace from "../components/Trace.astro";
-import TraceChip from "../components/TraceChip.astro";
 import { record, recordSources } from "../lib/record";
 
 interface Props { page: PageRecord; }
@@ -76,7 +75,7 @@ if (ldImage) articleLd.image = ldImage.includes("://") ? ldImage : `${site.url}$
               "data-pagefind-meta": `section:${page.data.title || page.url}`,
           }
         : {})}
-    ><TraceChip page={page} /><InShort page={page} />{page.data.audio && <div class="audio-section"><audio controls preload="metadata" title="Narrated in Audrey's own AI voice"><source src={page.data.audio} type="audio/mpeg" /></audio></div>}<Fragment set:html={visibleHtml(page)} /></main>
+    ><InShort page={page} />{page.data.audio && <div class="audio-section"><audio controls preload="metadata" title="Narrated in Audrey's own AI voice"><source src={page.data.audio} type="audio/mpeg" /></audio></div>}<Fragment set:html={visibleHtml(page)} /></main>
     <section class="next-action"><div class="next-action-content">
       {prev && <a href={prev.url} class="next-action-button">{!hasExplicitNav && <span class="button-arrow">←</span>}<span class="button-text">{prev.text}</span></a>}
       {next && <a href={next.url} class="next-action-button"><span class="button-text">{next.text}</span>{!hasExplicitNav && <span class="button-arrow">→</span>}</a>}

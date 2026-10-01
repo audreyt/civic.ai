@@ -97,7 +97,7 @@ const names = {
 /** One replaceable slot, no client JS and no reliance on comments surviving minification. */
 export function injectEvals(html, report) {
     return html.replace(
-        /<div\b([^>]*\bdata-record-evals="(trace|board|chip)"[^>]*)>[\s\S]*?<\/div>/g,
+        /<div\b([^>]*\bdata-record-evals="(trace|board)"[^>]*)>[\s\S]*?<\/div>/g,
         (_match, attributes, kind) => {
             const zh = /\bdata-record-lang="zh"/.test(attributes);
             const labels = names[zh ? "zh" : "en"];
@@ -119,11 +119,9 @@ export function injectEvals(html, report) {
             const body =
                 kind === "board"
                     ? `<ul class="record-eval-board">${cells}</ul>`
-                    : kind === "chip"
-                      ? `<a href="${zh ? "/tw" : ""}/ledger/">${zh ? "評測：" : "Evals: "}${Object.values(report.checks).filter((check) => check.pass).length}/${Object.keys(report.checks).length} ${zh ? "通過" : "pass"}</a>`
-                      : `<span class="record-eval-list">${cells}</span>`;
+                    : `<span class="record-eval-list">${cells}</span>`;
             const receipt = `<a href="/evals.json">${zh ? "完整評測紀錄（JSON）" : "Full eval receipts (JSON)"}</a>`;
-            return `<div${attributes}>${body}${kind === "chip" ? "" : `<span class="record-eval-built">${zh ? "建置：" : "Built "}${escapeRecord(report.builtAt)} · ${receipt}</span>`}</div>`;
+            return `<div${attributes}>${body}<span class="record-eval-built">${zh ? "建置：" : "Built "}${escapeRecord(report.builtAt)} · ${receipt}</span></div>`;
         }
     );
 }
