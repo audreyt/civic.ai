@@ -107,7 +107,7 @@ Pack 3 檢查流程是否依承諾運作；Pack 4 檢查關懷是否真的落地
 
 想像一間工坊，牆上掛滿退役的「壞掉零件」，每個都標記著它是如何壞的、如何避免未來的損壞、以及誰修復了它。那面牆不是恥辱牆，而是學習牆——公開展示，由使用這間工坊的社群共同守護，而不只是由打造機器的工程師看管。隱藏自己壞掉零件的工坊，會重蹈覆轍。願意把牆築起來的工坊，假以時日會成為這一帶最可靠的一家——不是因為它從不弄壞東西，而是因為它把一次次的失敗，鋪成了自身勝任力的地基。
 
-### 本力文獻
+### 相關文獻
 
 - Tronto，《[Moral Boundaries](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)》（1993），頁 105–108、134–136——接受照顧與回應力；van Wynsberghe，[〈Designing Robots for Care〉](https://doi.org/10.1007/s11948-011-9343-6)（2013），頁 418——回應力作為被照顧者的主動姿態。
 - Hirschman，《[Exit, Voice, and Loyalty](https://www.hup.harvard.edu/books/9780674276604)》（1970）——申訴即發聲。

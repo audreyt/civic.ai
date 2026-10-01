@@ -110,7 +110,7 @@ permalink: "/tw/3/"
 
 想像一座維護良好的橋樑，上面掛著檢查標籤——日期、載重測試、下次檢查——任何過橋的人都看得到。勝任力不是沒有失敗；而是有人檢查過、而且會再檢查的證明。部署的各個階段，就是檢查時程；決策軌跡，就是檢查紀錄；無責備的事後審查，就是發現問題時提交的報告。
 
-### 本力文獻
+### 相關文獻
 
 - Tronto，《[Caring Democracy](https://nyupress.org/9780814770344/caring-democracy/)》（2013），頁 35——上述引文；《[Moral Boundaries](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)》（1993），頁 127–137——勝任力作為道德要素；van Wynsberghe，[〈Designing Robots for Care〉](https://doi.org/10.1007/s11948-011-9343-6)（2013），頁 423、427–428——賦能型與取代型。
 - Polanyi，《[The Tacit Dimension](https://press.uchicago.edu/ucp/books/book/chicago/T/bo6035368.html)》（1966）；Lave 與 Wenger，《[Situated Learning](https://doi.org/10.1017/CBO9780511815355)》（1991）——內隱知識與學徒制。

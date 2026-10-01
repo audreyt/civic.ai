@@ -465,7 +465,7 @@
         "def_en": "Money set aside in advance — engagement contracts require vendors to pre-fund it — so that when the system causes harm, compensation and rollback are already funded rather than merely promised. Community evaluators are paid from it, and Pack 6 designs decision traces to settle against it as civic receipts returning value to knowledge custodians. A design commitment, not yet a running settlement; where financial stakes are low, pause triggers replace escrow.",
         "def_tw": "預先撥出的款項——參與契約要求供應商預先注資——使系統造成傷害時，賠償與回滾已有資金，而不只是承諾。社群評測者從中獲得報酬；共生力（Pack 6）設計決策軌跡以公民收據的形式對它結算，把價值返還知識守護者。這是設計承諾，尚非運行中的結算；在財務風險低的地方，以暫停觸發取代託管。",
         "aliases_en": ["escrowed"],
-        "aliases_tw": ["託管", "託管資金"]
+        "aliases_tw": ["託管資金"]
     },
     {
         "id": "perspective-receipts",

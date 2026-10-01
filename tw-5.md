@@ -107,7 +107,7 @@ permalink: "/tw/5/"
 
 想像一個標示清楚的交流道——多條車道、明確的標誌、安全的匯流——它不是一個讓每位駕駛變成更好的人的地方，而是一條經過設計、讓合作駕駛成為最省力之舉的道路。團結力打造的正是這個：不是更高的個人美德標準，而是一條值得在上面展現美德的路。
 
-### 本力文獻
+### 相關文獻
 
 - Tronto，《[Caring Democracy](https://nyupress.org/9780814770344/caring-democracy/)》（2013），頁 23、35、169——共同關懷、其道德品質，以及收回擋箭牌；Sevenhuijsen，《[Citizenship and the Ethics of Care](https://www.routledge.com/Citizenship-and-the-Ethics-of-Care-Feminist-Considerations-on-Justice-Morality-and-Politics/Sevenhuijsen/p/book/9780415170826)》（1998）。
 - Hirschman，《[Exit, Voice, and Loyalty](https://www.hup.harvard.edu/books/9780674276604)》（1970）——退出作為約束。

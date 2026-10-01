@@ -128,7 +128,7 @@ Tronto 也點出她所稱的*關懷赤字*：對關懷的需求太多、照顧�
 
 想像門旁貼著一張工單：要修什麼、誰來修、何時完成；如何驗收；如果失敗找誰。簽名清晰可辨，未依約履約的罰則也同樣標示清晰。我們要教系統貼出工單、簽名負責、說到做到，再配上相應的監督機制，讓守信變成最省力的路，而不用靠英雄式的機構意志撐著。
 
-### 本力文獻
+### 相關文獻
 
 - Tronto，《[Caring Democracy](https://nyupress.org/9780814770344/caring-democracy/)》（2013），頁 33、46、169–171——五種擋箭牌、對 Lasswell 的改寫，以及這些擋箭牌的收錄；《[Moral Boundaries](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)》（1993），頁 120–121——特權式不負責。
 - Tronto，[〈Creating Caring Institutions〉](https://doi.org/10.1080/17496535.2010.484259)（2010）——什麼使機構成為關懷的機構：目的、權力、多元。

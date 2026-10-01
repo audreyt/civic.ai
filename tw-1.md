@@ -120,7 +120,7 @@ Carol Gilligan 在《In a Human Voice》（2023）中點出這種修練鍛鍊的
 
 想像一位熱情接待者，叫得出每位客人的名字，也替他們的行李留好位置。她還會穿過房間，找到獨自站在牆邊的人，問一個只有對方答得出的問題。這就是覺察力。而因為有些客人想抹去別人，接待者守著一條底線：好客，但這個家必須尊重權利。教我們的系統當熱情接待者——保持覺察、不急著最佳化、主動好奇誰還沒加入對話——我們就能留住更多珍貴的東西，也創造更多可以分享的東西。需求一出現，義務就跟著來。一切就從這裡開始。
 
-### 本力文獻
+### 相關文獻
 
 - Fisher 與 Tronto，[〈Toward a Feminist Theory of Caring〉](https://experts.umn.edu/en/publications/toward-a-feminist-theory-of-caring/)（1990）；Tronto，《[Moral Boundaries](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)》（1993），頁 105–108、120–121——階段、道德要素與特權式不負責。
 - van Wynsberghe，[〈Designing Robots for Care〉](https://doi.org/10.1007/s11948-011-9343-6)（2013）——把四個階段帶進機器的一項文獻先例。
