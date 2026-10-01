@@ -110,7 +110,7 @@
                     "type": { "en": "Problem", "tw": "問題", "ja": "問題点" },
                     "alt": {
                         "en": "Hand-lettered comic page headed 'RESPONSIVENESS — PROBLEM': a rabbit holding a compass explains that society needs metrics to know where it is going but those metrics are often broken; paired charts contrast a rising 'average income' with the reality that income soars for the upper class while stalling for the lower class, and a table maps clicks to clickbait, comments to rage-bait flame wars, and user approval to sycophantic chatbots.",
-                        "tw": "手繪漫畫頁，標題為「RESPONSIVENESS——PROBLEM」：一隻拿著羅盤的兔子說明社會需要指標來判斷前進方向，但這些指標往往是壞掉的；成對的圖表對比上揚的「平均收入」與真實情況——上層階級大幅上升、下層階級卻停滯——並以一張對照表把點擊對應到標題黨、留言對應到激怒式論戰、使用者好評對應到諂媚的聊天機器人。"
+                        "tw": "手繪漫畫頁，標題為「RESPONSIVENESS——PROBLEM」：一隻拿著羅盤的兔子說明社會需要指標來判斷前進方向，但這些指標往往是壞掉的；成對的圖表對比上揚的「平均收入」與真實情況——上層階級的收入大幅上升、下層階級的收入卻停滯——並以一張對照表把點擊對應到標題黨、留言對應到激怒式論戰、使用者好評對應到諂媚的聊天機器人。"
                     }
                 },
                 {
@@ -172,7 +172,7 @@
                     "type": { "en": "Solution", "tw": "解方", "ja": "解決策" },
                     "alt": {
                         "en": "Hand-lettered comic page headed 'NOT: a one-size-fits-all overlord, BUT: local solutions for local folks — SOLUTION' urging 'fight for the users', with three recent examples — the nonprofit ROOST.tools making open-source, un-centralised tools to detect and prevent child abuse; the open-source gpt-oss-safeguard that lets a community bring its own policy so it assists rather than replaces human moderators; and this book itself, made with a bounded local-spirit Kami fine-tuned to steward one specific relationship and run on one specific laptop — closing that sharing power, not concentrating it, is how we build the future.",
-                        "tw": "手繪漫畫頁，標題為「不要：一體適用的霸主／而要：在地解方給在地人——SOLUTION」，呼籲「為使用者而戰」，並舉三個近期例子——非營利組織 ROOST.tools 製作沒有集中控制的開源工具，協助偵測與預防兒童剝削；開源的 gpt-oss-safeguard 讓社群自帶政策，協助而非取代人類審核者；以及這本書本身，由一個守護特定關係、在一台特定筆電上在地運行的「在地精神」Kami（地神）所輔助——結語說分享權力而非集中權力，正是我們打造未來的方法。"
+                        "tw": "手繪漫畫頁，標題為「不要：一體適用的霸主／而要：在地解方給在地人——SOLUTION」，呼籲「為使用者而戰」，並舉三個近期例子——非營利組織 ROOST.tools 製作沒有集中控制的開源工具，協助偵測與預防兒童剝削；開源的 gpt-oss-safeguard 讓社群自帶政策，協助而非取代人類審核者；以及這本書本身，由一個守護特定關係、在一台特定筆電上在地運行的「地方之靈」Kami（地神）所輔助——結語說分享權力而非集中權力，正是我們打造未來的方法。"
                     }
                 }
             ]

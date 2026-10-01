@@ -180,7 +180,7 @@
             "kind": "chord",
             "cargo": {
                 "en": "remedies wired before launch",
-                "tw": "補救在上線前接妥"
+                "tw": "補救流程在上線前備妥"
             }
         },
         {
@@ -252,7 +252,7 @@
             "kind": "membrane",
             "cargo": {
                 "en": "bounds and sunsets are contractual",
-                "tw": "界限與退場期限是契約性的"
+                "tw": "界限與退場期限由契約訂定"
             },
             "both": true
         }

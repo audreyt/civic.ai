@@ -1188,7 +1188,7 @@ export default async function () {
             snapshotUrl: sourceUrls.snapshotRepo,
             question: {
                 en: "What kind of AI use would people accept in care, government, and everyday public life?",
-                tw: "人們願意接受哪一種人工智慧應用於照護、政府與日常公共生活？",
+                tw: "在照護、政府與日常公共生活中，人們願意接受哪些人工智慧的使用方式？",
             },
             dek: {
                 en: "A Habermolt-style deliberation view rebuilt from Polis exports only. The page below uses vote vectors, cross-group support, and local inference rather than hidden APIs or agent metadata.",
@@ -1248,7 +1248,7 @@ export default async function () {
                 ],
                 tw: [
                     "每則留言都視為一條陳述。",
-                    "領先陳述的排序，結合了整體支持度與各 Polis 分群中最弱的一段支持度。",
+                    "領先陳述的排序，結合了整體支持度與各 Polis 分群中最低的支持度。",
                     "陳述地圖與參與者地圖，都是對投票向量的簡易二維投影；因此接近代表投票模式相似，而不是精確的意識形態距離。",
                     "與 Habermolt 相比，這裡缺少的是：智慧體名稱、撰寫出的意見、語意嵌入，以及原生的排序歷史。",
                 ],

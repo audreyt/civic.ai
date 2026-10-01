@@ -77,16 +77,16 @@ next_action:
 
 <h2 id="the-6-pack">關懷六力</h2>
 
-關懷六力是 [⿻ 多元宇宙](https://plurality.net) 在 AI 治理上的應用。Pack 1–4 構成一個回饋迴圈——關懷循環（覺察力 → 負責力 → 勝任力 → 回應力 → 再回到覺察力）。Pack 5 將這個迴圈擴展到跨組織。Pack 6 是邊界條件，確保每個部署保持在地、多元、可退場。部署的基本單位是**地神**（Kami）——有界的在地管理者，而非全能的統治者。每一力都有層次：結語意象教出模式，模式化為可建置的工具，工具成為具名儀器，儀器再餵養一項公開主指標背後的診斷。
+關懷六力是 [⿻ 多元宇宙](https://plurality.net) 在 AI 治理上的應用。Pack 1–4 構成一個回饋迴圈——關懷循環（覺察力 → 負責力 → 勝任力 → 回應力 → 再回到覺察力）。Pack 5 將這個迴圈擴展到跨組織。Pack 6 是邊界條件，確保每個部署保持在地、多元、可退場。部署的基本單位是**地神**（Kami）——有界的在地管理者，而非全能的統治者。每一力都有層次：結語意象說明模式，模式化為可建置的工具，工具成為具名工具，再提供一項公開主指標背後的診斷依據。
 
-關懷六力公開汲取關懷倫理。[Berenice Fisher 與 Joan Tronto](https://experts.umn.edu/en/publications/toward-a-feminist-theory-of-caring/) 在 1990 年提出四個關懷階段，Aimee van Wynsberghe 在 2013 年把這些階段用作[照護機器人的設計框架](https://doi.org/10.1007/s11948-011-9343-6)。它也汲取審議民主與⿻多元宇宙，〈[文獻與延伸閱讀](/tw/sources/)〉逐力點名每一筆這樣的債務。它的價值不是發現六個全新美德，而是把關懷翻譯成制度機件。若某個「力」的名稱沒有改變誰能異議、誰必須作答、什麼被記錄，或失敗後會發生什麼事，它就是裝飾。
+關懷六力公開汲取關懷倫理。[Berenice Fisher 與 Joan Tronto](https://experts.umn.edu/en/publications/toward-a-feminist-theory-of-caring/) 在 1990 年提出四個關懷階段，Aimee van Wynsberghe 在 2013 年把這些階段用作[照護機器人的設計框架](https://doi.org/10.1007/s11948-011-9343-6)。它也汲取審議民主與⿻多元宇宙，〈[文獻與延伸閱讀](/tw/sources/)〉逐力列出每一項借鑑來源。它的價值不是發現六個全新美德，而是把關懷翻譯成制度機件。若某個「力」的名稱沒有改變誰能異議、誰必須作答、什麼被記錄，或失敗後會發生什麼事，它就是裝飾。
 
 六項設計原則，把關懷倫理轉化為制度可以建造、檢查與修正的做法：
 
 <ul class="pack-cards">
 <li><a href="/tw/1/"><strong>一：覺察力</strong><span>制度還沒看見、但最接近痛點的人已經看見了什麼。</span></a></li>
 <li><a href="/tw/2/"><strong>二：負責力</strong><span>誰負責、握有什麼權限、失敗時會發生什麼事。</span></a></li>
-<li><a href="/tw/3/"><strong>三：勝任力</strong><span>系統是否真的在實務上可稽核、可解釋，而且能安全試錯。</span></a></li>
+<li><a href="/tw/3/"><strong>三：勝任力</strong><span>系統是否真的能在實務上運作、可稽核、可解釋，而且能安全試錯。</span></a></li>
 <li><a href="/tw/4/"><strong>四：回應力</strong><span>受影響的人是否能提出異議、要求修復，並讓系統改變。</span></a></li>
 <li><a href="/tw/5/"><strong>五：團結力</strong><span>整個生態系統是否獎勵合作、退出與公開問責，而不是平台鎖定。</span></a></li>
 <li><a href="/tw/6/"><strong>六：共生力</strong><span>系統是否保持在地、有界、可退場，而不是硬化成永久統治。</span></a></li>
@@ -101,29 +101,29 @@ next_action:
 - **公民實踐案例。** [《數位公民》](/tw/ciudadania-digital/)和[Podcast：AI 與民主](/tw/ai-democracy-podcast/)展示這套工作如何連到參與、正當性，以及日常公共問題解決。
 - **長期照護案例。** [《長期照護仁工智慧中的覺察力》](/tw/care-ai/)探討一個跨部門協作如何與最接近問題的人共同產製以照護為核心的負責任仁工智慧定義。
 
-書中將這些擴展為七個案例研究，〈[文獻](/tw/sources/#cases)〉逐一追蹤各案的公開紀錄。這七個案例不是同等的證明。五個有深淺不一的公開運作紀錄：臺灣的對齊大會、日本的 Team Mirai（未來團隊）、加州的 Engaged California、Monlam AI，以及 ROOST 的開放信任與安全工具。兩個是新興的。這些案例真實且具名，卻來自異常有準備的土壤：公民科技者、具回應力的公共制度、厚實的結社生活。請把各案視為組件紀錄，而非隨插即用的模板——在新房間裡，仍要重新問：誰缺席、誰有參與資格、誰能停下系統。
+書中將這些擴展為七個案例研究，〈[文獻](/tw/sources/#cases)〉逐一追蹤各案的公開紀錄。這七個案例不是同等的證明。五個有深淺不一的公開運作紀錄：臺灣的對齊大會、日本的 Team Mirai（未來團隊）、加州的 Engaged California、Monlam AI，以及 ROOST 的開放信任與安全工具。兩個是新興的。這些案例真實且具名，卻來自準備格外充分的土壤：公民科技者、具回應力的公共制度、厚實的結社生活。請把各案視為組件紀錄，而非隨插即用的模板——在新房間裡，仍要重新問：誰缺席、誰有參與資格、誰能停下系統。
 
-回應這項質疑的，不是同一塊土壤上的第六個案例，而是來自別處的持續證據。[Global Dialogues](https://globaldialogues.ai/) 每兩個月詢問一份橫跨 70 國的滾動樣本，了解人們實際上如何與 AI 共處；[Jhilmil](https://www.cip.org/jhilmil) 則讓印度的社群組織親自撰寫前沿模型必須通過的健康評測。兩者都出自[集體智慧計畫](https://www.cip.org/)——我們之中的一人在那裡擔任資深研究員——各自能與不能支撐什麼，見〈[文獻](/tw/sources/)〉。
+回應這項質疑的，不是同一塊土壤上的第六個案例，而是來自別處的持續證據。[Global Dialogues](https://globaldialogues.ai/) 每兩個月訪問一組橫跨 70 國的滾動樣本，了解人們實際上如何與 AI 共處；[Jhilmil](https://www.cip.org/jhilmil) 則讓印度的社群組織親自撰寫前沿模型必須通過的健康評測。兩者都出自[集體智慧計畫](https://www.cip.org/)——我們之中的一人在那裡擔任資深研究員——各自能與不能支撐什麼，見〈[文獻](/tw/sources/)〉。
 
 [Dedicate](https://dedicate.life) 是英國已上線的照護助理，幫助無酬照顧者找到同儕、專家與在地服務。邊界上的一次拒絕，證明邊界存在，卻不證明範圍內的服務有效，而其觸及範圍尚未公布。
 
-「提升老年人的聲音」（Lifting the Voices of Older Persons）是一項仍在尋找立足點的傾聽行動。工作名稱、制度歸屬與地理範圍仍未確定。它著手把長者的優先事項帶進聯合國正在協商的長者權利文書。關懷六力是這個計畫應被要求的契約，不是它已賺得的收據。
+「提升老年人的聲音」（Lifting the Voices of Older Persons）是一項仍在尋找立足點的傾聽行動。工作名稱、制度歸屬與地理範圍仍未確定。它著手把長者的優先事項帶進聯合國正在協商的長者權利文書。關懷六力是這個計畫應被要求的契約，不是它已取得的收據。
 
 Monlam 的公開紀錄支持社群扎根的語言工具，不支持對每個模型的正式集體控制。ROOST 證明共享安全工具可以自行託管；尚未證明聯邦式 AI 網路。
 
 ## 學術發表
 
-- [〈讓人民設定前沿 AI 的步調〉](https://audreyt.org/noema-pace)：Hélène Landemore 與唐鳳提議設立常設的「全球 AI 公民大會」——從各大洲抽籤選出一千人，前沿 AI 實驗室與各國政府須公開回應大會的建議：接受什麼、拒絕什麼，以及理由。這是 Pack 2「採納或解釋」的義務，延伸到前沿。_（原刊於 Noema，2026 年 9 月 23 日；連結為中文版）_
+- [〈讓人民設定前沿 AI 的步調〉](https://audreyt.org/noema-pace)：Hélène Landemore 與唐鳳提議設立常設的「全球 AI 公民大會」——從各大洲抽籤選出一千人，前沿 AI 實驗室與各國政府須公開回應大會的建議：接受什麼、拒絕什麼，以及理由。這是 Pack 2「採納或解釋」的義務，延伸到前沿。_（原刊於 Noema，2026 年 9 月 23 日；連結為華文翻譯）_
 - [〈AI 與數位公共廣場的未來〉](https://journals.sagepub.com/doi/10.1177/26339137261459441)：唐鳳與 Beth Goldberg、Hélène Landemore 等二十多位共同作者，描繪 LLM 如何強化數位公共廣場——集體對話、搭橋系統、社群調解與真人驗證——這份經同儕審查的研究議程直接引用了關懷六力。_（Collective Intelligence，2026）_
 - [〈以資料為土壤，守護主權〉](/tw/safer-sovereignty/)：唐鳳將 Tenzin Yangtso 提出的「資料是土壤，不是石油」應用於企業 AI——韌性來自聯邦式安全下的有界在地守護者，而非單一的全球大腦。_（原刊於 The Kyndryl Institute，2026 年 4 月 28 日）_
-- [〈廢除 Section 230，釋放第一修正案〉](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/)：唐鳳、Jaron Lanier 與 Allison Stanger 主張終結演算法放大的免責保護，同時保護人類言論——這是 Pack 5 核心的觸及而非言論改革。_（Communications of the ACM，2026 年 1 月）_
-- [〈惡意 AI 群集如何威脅民主〉](https://www.science.org/doi/10.1126/science.adz1697)：唐鳳與 Maria Ressa、Nick Bostrom、Nicholas Christakis 等 18 位研究者共同記錄 LLM 驅動的智慧體群集如何滲透社群、在人口規模上製造假共識。_（Science，2026）_
+- [〈廢除 Section 230，釋放第一修正案〉](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/)：唐鳳、Jaron Lanier 與 Allison Stanger 主張終結演算法放大的免責保護，同時保護人類言論——這是 Pack 5 核心的改革：針對觸及，而非言論。_（Communications of the ACM，2026 年 1 月）_
+- [〈惡意 AI 群集如何威脅民主〉](https://www.science.org/doi/10.1126/science.adz1697)：唐鳳與 Maria Ressa、Nick Bostrom、Nicholas Christakis 及另外 18 位研究者共同記錄 LLM 驅動的智慧體群集如何滲透社群、在人口規模上製造假共識。_（Science，2026）_
 - [〈透過集體預測編碼的共生對齊：共創人機生態系的理論框架〉](https://doi.org/10.1162/ARTL.a.475)：唐鳳與谷口忠大等六位共同作者，提出共生對齊的理論說明——有界智慧體透過集體預測編碼協商共享意義，而不是收斂到單一主導模型。這是 Packs 5 和 6 背後的一種技術讀法，不是已部署的安全證明。_（Artificial Life，2026）_
 - [〈對話網路〉](https://www.mediatechdemocracy.com/conversation-networks)：唐鳳、Deb Roy 與 Lawrence Lessig 提出公民通訊基礎設施——可互通的應用程式加上由社群引導的仁工智慧——作為關懷六力的技術層。_（McGill Centre for Media, Technology and Democracy，2025 年 4 月）_
-- [〈社群出發的設計〉](https://arxiv.org/abs/2502.10834)：唐鳳與 Glen Weyl 等四位共同作者提出以社會結構為核心重建社交平台——獎勵搭橋社群的內容，而非最大化互動。Packs 1 和 5 的技術基礎。_（arXiv，2025 年 2 月）_
+- [〈社群出發的設計〉](https://arxiv.org/abs/2502.10834)：唐鳳與 Glen Weyl 及另外四位共同作者提出以社會結構為核心重建社交平台——獎勵搭橋社群的內容，而非最大化互動。Packs 1 和 5 的技術基礎。_（arXiv，2025 年 2 月）_
 - [〈美德 AI，共創無限未來〉](/tw/virtuous-ai/)：唐鳳談以公民美德培育 AI、智聯網，以及為何對齊必須是社群驅動的鮮活過程。_（武藏野大學百年校慶）_
 - [〈⿻存在〉](/tw/plurality-being/)：Tenzin Yangtso 從生存邏輯與生命意義——物質與意識——之間的張力出發，主張從開採轉向耕耘。_（2026 年 3 月）_
-- [〈⿻輕柔之橋〉](/tw/gentle-bridge/)：Tenzin Yangtso 與 jdd-kami 共筆——論意識與物質的兩種力、轉嫁關係，以及為什麼靠近是自由公共財。_（2026 年 3 月）_
+- [〈⿻輕柔之橋〉](/tw/gentle-bridge/)：Tenzin Yangtso 與 jdd-kami 共筆——論意識與物質的兩種力、轉嫁關係，以及為什麼靠近是免費的公共財。_（2026 年 3 月）_
 
 ## 計畫簡介
 

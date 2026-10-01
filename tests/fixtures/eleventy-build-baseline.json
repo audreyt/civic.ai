@@ -3038,7 +3038,7 @@
             "path": "tw/5/index.html",
             "lang": "zh-tw",
             "title": "五：團結力——共同關懷 — 仁工智慧",
-            "description": "仁工智慧的團結力：獎勵協作、退出與公共問責，而非鎖定壟斷。「關懷六力」的第五力。",
+            "description": "仁工智慧的團結力：獎勵協作、退出與公共問責，而非平台鎖定。「關懷六力」的第五力。",
             "canonical": "https://civic.ai/tw/5/",
             "alternates": [
                 {
@@ -3290,7 +3290,7 @@
             "path": "tw/ai-crisis-diplomacy/index.html",
             "lang": "zh-tw",
             "title": "把 AI 安全當成民防來對待 — 仁工智慧",
-            "description": "演講於 2026 年印度人工智慧影響力峰會，新德里。",
+            "description": "演講發表於 2026 年印度人工智慧影響力峰會，新德里。",
             "canonical": "https://civic.ai/tw/ai-crisis-diplomacy/",
             "alternates": [
                 {
@@ -4705,7 +4705,7 @@
             "path": "tw/openclaw/index.html",
             "lang": "zh-tw",
             "title": "仁工智慧 OpenClaw 啟動指南",
-            "description": "給仁工智慧打造的新 claws 的公開第一次啟動指南。",
+            "description": "給依仁工智慧理念培養的新 claws 的公開啟動指南。",
             "canonical": "https://civic.ai/tw/openclaw/",
             "alternates": [
                 {
@@ -5272,6 +5272,7 @@
         "audio/ai-alignment-cannot-be-top-down.mp3",
         "audio/manifesto.mp3",
         "audio/software-freedom-as-civic-care.mp3",
+        "audio/tw-manifesto.mp3",
         "favicon.ico",
         "favicon.svg",
         "feed.xml",

@@ -107,7 +107,7 @@
         "term_en": "corrective loop",
         "term_tw": "矯正迴路",
         "def_en": "The framework's defended point: who can find out we are wrong, make us say so, and make it cost us while there is still time to change course. The 6-Pack entrenches this loop — rights baseline, engagement contracts, responsiveness, <a href=\"/glossary/#adopt-or-explain\">adopt-or-explain</a>, <a href=\"/glossary/#remedy-escrow\">escrowed remedies</a>, <a href=\"/glossary/#brake\">brakes</a> — through feedback, contestation, repair, and mandate-revocation where reversal is no longer possible; everything else stays bounded, revisable, and answerable.",
-        "def_tw": "整套框架真正捍衛的核心：誰能發現我們錯了、迫使我們承認，並在還來得及改變方向時讓錯誤付出代價。關懷六力把這條迴路固定下來——權利底線、參與契約、回應力、<a href=\"/tw/glossary/#adopt-or-explain\">採納或解釋</a>、<a href=\"/tw/glossary/#remedy-escrow\">預先注資的補救</a>、<a href=\"/tw/glossary/#brake\">煞車</a>——透過回饋、爭議、修復，以及在無法回復時撤回授權；其餘一切保持有界、可修訂、可問責。"
+        "def_tw": "整套框架真正捍衛的核心：誰能發現我們錯了、迫使我們承認，並在還來得及改變方向時讓我們為錯誤付出代價。關懷六力把這條迴路固定下來——權利底線、參與契約、回應力、<a href=\"/tw/glossary/#adopt-or-explain\">採納或解釋</a>、<a href=\"/tw/glossary/#remedy-escrow\">預先注資的補救</a>、<a href=\"/tw/glossary/#brake\">煞車</a>——透過回饋、爭議、修復，以及在無法回復時撤回授權；其餘一切保持有界、可修訂、可問責。"
     },
     {
         "id": "kami",
@@ -311,7 +311,7 @@
         "term_en": "contestability / appeal",
         "term_tw": "申訴（可爭議性）",
         "def_en": "The standing to challenge an algorithmic decision and be answered — notice, hearing, and reasoned explanation for automated public decisions (Citron's technological due process, 2008), operationalised as Pack 4's one-click appeal with a clock: every appeal lands in a <a href=\"/glossary/#correction-backlog-board\">correction backlog</a> and is owed closure, not mere receipt; the backlog's public view shows status and age, never private case details. Voice in Hirschman's pair; exit belongs to Pack 5. The research programme is contestability by design. See <a href=\"/sources/\">Sources</a>.",
-        "def_tw": "挑戰演算法決定並獲得回應的地位——自動化公共決策應有通知、聽證與說理（Citron 的技術性正當程序，2008），在回應力（Pack 4）落實為附帶時鐘的一鍵申訴：每件申訴都進入<a href=\"/tw/glossary/#correction-backlog-board\">校正積壓</a>，必須有始有終，而非石沉大海；積壓的公開檢視只顯示狀態與案齡，不揭露私人案情。這是 Hirschman 二元組中的發聲；退出屬於團結力（Pack 5）。所屬的研究計畫是可爭議性設計（contestability by design）。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。",
+        "def_tw": "挑戰演算法決定並獲得回應的地位——自動化公共決策應有通知、聽證與說理（Citron 的技術性正當程序，2008），在回應力（Pack 4）落實為附有計時的一鍵申訴：每件申訴都進入<a href=\"/tw/glossary/#correction-backlog-board\">校正積壓</a>，必須有始有終，而非石沉大海；積壓的公開檢視只顯示狀態與案齡，不揭露私人案情。這是 Hirschman 二元組中的發聲；退出屬於團結力（Pack 5）。所屬的研究計畫是可爭議性設計（contestability by design）。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。",
         "aliases_en": ["contestable"],
         "aliases_tw": ["申訴"]
     },
@@ -321,7 +321,7 @@
         "term_en": "trust-under-loss",
         "term_tw": "失利下的信任",
         "def_en": "The Responsiveness measure: after a bad outcome and attempted repair, do affected people report that the system became more trustworthy rather than less. It counts only when tied to accountable identity and corroborated by an independent signal — a return to the service, a withdrawn appeal, a third party who can attest — never self-reported sentiment alone, which the very actor who caused the harm can manufacture. Procedural-justice research is the ground it stands on; the measure is an application to test, not a guarantee. See <a href=\"/sources/\">Sources</a>.",
-        "def_tw": "回應力的衡量：在發生不良結果並嘗試修復之後，受影響者是否覺得系統比原先更值得信任，而不是更不值得。只有繫於可問責身分、並有獨立訊號佐證——回到服務、撤回申訴、可作證的第三方——才算數；自陳感受本身不算，因為造成傷害的行為者最能製造這種感受。程序正義研究是它的立足之地；這項衡量是有待檢驗的應用，不是保證。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。",
+        "def_tw": "回應力的衡量：在發生不良結果並嘗試修復之後，受影響者是否覺得系統比原先更值得信任，而不是更不值得。只有繫於可問責身分、並有獨立訊號佐證——重新使用服務、撤回申訴、可作證的第三方——才算數；自陳感受本身不算，因為造成傷害的行為者最能製造這種感受。程序正義研究是它的立足之地；這項衡量是有待檢驗的應用，不是保證。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。",
         "aliases_en": ["Trust-under-loss"]
     },
     {
@@ -370,7 +370,7 @@
         "term_en": "deliberative polling",
         "term_tw": "審議式民調",
         "def_en": "James Fishkin's method: brief a sample, deliberate in small groups, survey before and after. Taiwan's 2024 anti-scam Assembly used it: 200,000 invitations, 1,760 valid responses, and 447 participants in 44 groups on Stanford's Online Deliberation Platform, not Polis. It produced a public record of recommendations while an Executive Yuan bill was already moving. It neither stood for the whole population nor enacted the statute. See <a href=\"/sources/\">Sources</a>.",
-        "def_tw": "James Fishkin 的方法：給樣本提供均衡資訊，分小編組審議，前後各做一次調查。臺灣 2024 年反詐騙大會用的是它：20 萬封邀請、1,760 份有效回覆、447 人分成 44 組，在史丹佛 Online Deliberation Platform 上舉行，而非 Polis。它在行政院法案已在推進時產出一份公開建議紀錄，既不等於全體人口，也未自行制定法律。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。",
+        "def_tw": "James Fishkin 的方法：向抽樣選出的參與者提供均衡資訊，分小組審議，前後各做一次調查。臺灣 2024 年反詐騙大會用的是它：20 萬封邀請、1,760 份有效回覆、447 人分成 44 組，在史丹佛 Online Deliberation Platform 上舉行，而非 Polis。它在行政院法案已在推進時產出一份公開建議紀錄，既不等於全體人口，也未自行制定法律。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。",
         "aliases_en": ["Deliberative Poll"]
     },
     {
@@ -454,7 +454,7 @@
         "term_en": "brake (circuit breaker)",
         "term_tw": "煞車",
         "def_en": "A single, prominent, wired-and-tested control that stops the system now — accessible at the speed of human recognition, so a person can halt a wrong action in the moment rather than only signal for later. The engineering pattern is Fowler's circuit breaker (2014); the care application adds the pause-on-ambiguity rule and the ledger, because a brake that is easy to pull needs an answer to alarm fatigue: every pull is logged and attributed. Specified on the <a href=\"/measures/#named-instruments\">Measures</a> page.",
-        "def_tw": "單一、醒目、已接線且經過測試的控制——在人類辨識的速度下可及，使人能在當下叫停錯誤的行動，而不只是為日後留下訊號。工程模式是 Fowler 的斷路器（2014）；關懷的應用加上了有疑即停（pause-on-ambiguity）的規則與帳本，因為好拉的煞車必須回答警示疲勞：每次拉下都被記錄與歸屬。工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。",
+        "def_tw": "單一、醒目、已接線且經過測試的控制——讓人一察覺問題就能操作，使人能在當下叫停錯誤的行動，而不只是為日後留下訊號。工程模式是 Fowler 的斷路器（2014）；關懷的應用加上了有疑即停（pause-on-ambiguity）的規則與帳本，因為容易操作的煞車也必須處理警示疲勞：每次拉下都要記錄，並註明由誰操作。工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。",
         "aliases_tw": ["斷路器"]
     },
     {
@@ -513,7 +513,7 @@
         "term_en": "shadow mode / Apprentice Model",
         "term_tw": "影子模式",
         "def_en": "The first stage of the Apprentice Model: the system sees real inputs and proposes real actions but does not act, its proposals compared against the human or prior system so divergences can be studied before trust is granted. Shadow mode, then canary release, then guarded full rollout — apprenticeship as legitimate peripheral participation (Lave and Wenger, 1991), read as the mechanism by which a room grants a system real work. Specified on the <a href=\"/measures/#named-instruments\">Measures</a> page.",
-        "def_tw": "學徒模式的第一階段：系統看見真實輸入、提出真實行動方案，但不執行；它的提案與人類或舊系統對照，使分歧在授信之前被研究。影子模式，然後金絲雀發布，再全面上線——學徒制即正當的邊緣性參與（Lave 與 Wenger，1991），讀成房間授予系統實質工作的機制。工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。",
+        "def_tw": "學徒模式的第一階段：系統看見真實輸入、提出真實行動方案，但不執行；它的提案與人類或舊系統對照，使分歧在給予信任之前被研究。先用影子模式，再金絲雀發布，最後在防護措施下全面上線——學徒制即正當的邊緣性參與（Lave 與 Wenger，1991），可理解為場域中的人授予系統實質工作的機制。工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。",
         "aliases_en": ["apprentice", "apprenticeship"],
         "aliases_tw": ["學徒模式"]
     },
@@ -523,7 +523,7 @@
         "term_en": "canary release",
         "term_tw": "金絲雀發布",
         "def_en": "The second stage of the Apprentice Model: deployment to a small, stratified slice of real cases with automatic rollback triggers if drift exceeds defined bounds. A canary is a probe, not a stand-in for the public — canary health and coverage are Pack 3 supporting diagnostics. Specified on the <a href=\"/measures/#named-instruments\">Measures</a> page.",
-        "def_tw": "學徒模式的第二階段：先發布給一小批分層的真實案例切片，偏移超過界限即自動回滾。金絲雀是探針，不是公眾的替身——金絲雀健康度與覆蓋率是勝任力（Pack 3）的輔助診斷。工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。",
+        "def_tw": "學徒模式的第二階段：先在分層抽選的少量真實案例中部署，偏移超過界限即自動回滾。金絲雀是探針，不是公眾的替身——金絲雀健康度與覆蓋率是勝任力（Pack 3）的輔助診斷。工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。",
         "aliases_en": ["canaries"],
         "aliases_tw": ["金絲雀測試", "金絲雀"]
     }

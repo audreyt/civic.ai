@@ -186,7 +186,7 @@ agenda:
     - time: "16:30"
       title: "結束與道別"
 packs_title: "關懷六力"
-packs_intro: "六項環環相扣的關懷設計原則。"
+packs_intro: "六項環環相扣的支持人與人之間關懷的 AI 設計原則。"
 packs_link_text: "探索框架"
 packs_link_url: "/tw/"
 packs_period: "。"
@@ -213,7 +213,7 @@ overview_image:
     </div>
     <div class="conf-quote-copy">
         <blockquote>
-            <p>歸根結底，AI 是這個世界的一種工具。無論它發展到多麼先進的高度，都永遠無法取代人類心智那種瞬息萬變的能力，以及無窮無盡的思維潛能。</p>
+            <p>歸根結底，AI 是這個世界的一種工具。無論它發展到多麼先進的高度，都永遠無法取代人類心智那種瞬息萬變的能力，以及無窮無盡的感知能力。</p>
             <p>生命並非孤立自存，而是源於相互依存的緣起；因此，我們運用這些工具的目的不應是為了『控制』，而是為了改善人與人之間的關係。科技中真正的慈悲，應如同一座橋樑，消除我們之間的隔閡與無知。</p>
         </blockquote>
         <figcaption>——第十四世達賴喇嘛</figcaption>
@@ -238,6 +238,6 @@ overview_image:
 <p style="font-size:0.95rem">與會者參與了一場以 AI 與社區關懷為主題的 <a href="https://pol.is">Polis</a> 集體感知練習，結果以兩種格式呈現。</p>
 
 <div class="conf-packs-condensed">
-<a href="/tw/conference/report/">社群 AI 之聲</a>
+<a href="/tw/conference/report/">社群談 AI 的聲音（書面報告）</a>
 <a href="/tw/conference/sensemaking/">審議鏡像（互動探索）</a>
 </div>

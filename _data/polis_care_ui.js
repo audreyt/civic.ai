@@ -147,11 +147,11 @@ export default {
             badge: "當前共識",
             title: "目前最能搭橋的陳述",
             description:
-                "這條領先陳述是依據整體支持度，以及各 Polis 分群中最弱的一段支持度推導出來的。",
+                "這條領先陳述是依據整體支持度，以及各 Polis 分群中最低的支持度推導出來的。",
             support: "整體支持",
             bridge: "最弱分群支持",
-            strongestGroup: "最支持於",
-            weakestGroup: "最薄弱於",
+            strongestGroup: "支持度最高的群體",
+            weakestGroup: "支持度最低的群體",
             timeline: "共識軌跡",
             timelineDescription:
                 "在累積投票檢查點上，領先陳述曾經發生變化的時刻。",
@@ -219,7 +219,8 @@ export default {
             aligned: {
                 label: "整體一致",
                 icon: "◎",
-                description: "大多數參與者的投票行為像是一個寬鬆的大群體。",
+                description:
+                    "大多數參與者的投票行為相近，大致形成同一個投票群體。",
             },
             polarized: {
                 label: "兩極化",

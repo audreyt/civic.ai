@@ -2,7 +2,7 @@
 layout: chapter
 title: "文獻與延伸閱讀"
 meta_description: "關懷六力從何而來：從 Fisher 與 Tronto 到 van Wynsberghe「以關懷為中心的設計」的關懷倫理系譜，以及每一力背後的文獻，附連結。"
-summary: "關懷六力並非憑空發明。這一頁說明每個部分的來歷——從 Berenice Fisher 與 Joan Tronto，經 Aimee van Wynsberghe 為照護機器人提出的「以關懷為中心的設計」，一路延續下來的關懷倫理系譜，以及每一力背後的學術文獻——讓這套框架的債務和它的主張同樣清楚可見。"
+summary: "關懷六力並非憑空發明。這一頁說明每個部分的來歷——從 Berenice Fisher 與 Joan Tronto，經 Aimee van Wynsberghe 為照護機器人提出的「以關懷為中心的設計」，一路延續下來的關懷倫理系譜，以及每一力背後的學術文獻——讓這套框架借重的思想和它的主張同樣清楚可見。"
 lang: zh-tw
 alt_lang_url: "/sources"
 permalink: "/tw/sources/"
@@ -200,10 +200,10 @@ Aimee van Wynsberghe 的「以關懷為中心的價值敏感設計」是直接�
 
 我們之中的一人（唐鳳）在集體智慧計畫（The Collective Intelligence Project，CIP）擔任[資深研究員](https://www.cip.org/audrey)，因此這一節比一份保持距離的書單要長。請把它同時當成利益揭露與參考書目來讀。
 
-CIP 由 Divya Siddarth 與 Saffron Huang 創立：它組織以實驗室作為承諾接收方的對齊大會，協助公眾意見參與塑造模型憲章，建立社群評測登錄庫，並每兩個月詢問一份滾動抽樣的全球樣本，了解人們實際上如何與 AI 共處。本站描述的數項工具，在那裡有實際運行的對應物。以下條目是 CIP 自己的出版品，以及其成員與他人合著的論文；每條之後的一句話說明哪一頁倚賴它，以及該條提供的是論證，還是 CIP 自述作為的紀錄。
+CIP 由 Divya Siddarth 與 Saffron Huang 創立：它組織以實驗室作為承諾接收方的對齊大會，協助公眾意見參與塑造模型憲章，建立社群評測登錄庫，並每兩個月向滾動抽樣的全球受訪者詢問，了解人們實際上如何與 AI 共處。本站描述的數項工具，在那裡有實際運行的對應物。以下條目是 CIP 自己的出版品，以及其成員與他人合著的論文；每條之後的一句話說明哪一頁倚賴它，以及該條提供的是論證，還是 CIP 自述作為的紀錄。
 
-- Siddarth, Divya, Daron Acemoglu, Danielle Allen, Kate Crawford, James Evans, Michael Jordan, and E. Glen Weyl. ["How AI Fails Us."](https://ethics.harvard.edu/publications/how-ai-fails-us) Edmond J. Safra Center for Ethics, Harvard University, 2021 年 12 月.——反對把「實際存在的 AI」當成集中式的自主體；主張智慧是社會性、關係性的，增強優於複製，並以臺灣的數位民主為證據。第六力所建基的立場，在 CIP 成立之前的表述。
-- The Collective Intelligence Project. _[The Collective Intelligence Project: Whitepaper](https://www.cip.org/whitepaper)_. 2023.——「變革性技術的三難」——進步、參與、安全——與其解答：價值抽取加上重造制度。關懷六力是把這個解答寫進已部署系統的一種方式。
+- Siddarth, Divya, Daron Acemoglu, Danielle Allen, Kate Crawford, James Evans, Michael Jordan, and E. Glen Weyl. ["How AI Fails Us."](https://ethics.harvard.edu/publications/how-ai-fails-us) Edmond J. Safra Center for Ethics, Harvard University, 2021 年 12 月.——反對把「實際存在的 AI」當成集中式的自主性；主張智慧是社會性、關係性的，增強優於複製，並以臺灣的數位民主為證據。第六力所建基的立場，在 CIP 成立之前的表述。
+- The Collective Intelligence Project. _[The Collective Intelligence Project: Whitepaper](https://www.cip.org/whitepaper)_. 2023.——「變革性技術的三難」——進步、參與、安全——與其解答：釐清價值觀加上重造制度。關懷六力是把這個解答寫進已部署系統的一種方式。
 - Huang, Saffron, and Divya Siddarth. ["Generative AI and the Digital Commons."](https://arxiv.org/abs/2303.11074) 2023.——資料是治理基礎模型最有價值的槓桿，而模型汲取卻不回補的是公地：第六力「資料如土壤」與資料聯盟的依據。
 - Seger, Elizabeth, Aviv Ovadya, Ben Garfinkel, Divya Siddarth, and Allan Dafoe. ["Democratising AI: Multiple Meanings, Goals, and Methods."](https://arxiv.org/abs/2303.12642) _AIES_ 2023; and Siddarth, Divya. ["Four Approaches to Democratizing AI."](https://www.cip.org/research/democratizing-ai) CIP, 2023 年 7 月.——「AI 民主化」可以指四件事：使用、開發、利益、治理。本站談的是第四件，並且明說。
 - The Collective Intelligence Project. ["Alignment Assemblies."](https://www.cip.org/alignmentassemblies) 2023–; Siddarth, Divya. ["We should all get to decide what to do about AI."](https://www.cip.org/blog/alignment) 2023 年 5 月; and ["Alignment Assemblies: Nine Months In."](https://www.cip.org/blog/alignment-assemblies-nine-months-in) 2023 年 11 月.——這個形式在 2023 年的試行：民主峰會、OpenAI、臺灣與數位發展部合辦的 Ideathon（把 vTaiwan 流程轉向生成式 AI）、Anthropic，以及 Creative Commons。第二力引用了這個詞；它是在這裡被琢磨出來的。
@@ -215,7 +215,7 @@ CIP 由 Divya Siddarth 與 Saffron Huang 創立：它組織以實驗室作為承
 - Siddarth, Divya, Matthew Prewitt, and E. Glen Weyl. _[Beyond Public and Private: Collective Provision Under Conditions of Supermodularity](https://cip.org/s/Supermodularity.pdf)_. CIP, 2024.——愈廣泛提供就愈有價值的財貨，以及市場為何錯誤定價這類財貨：第五力「反競用性」知識與〈[常見問答](/tw/faq/)〉所要求的公共選項背後的經濟學。
 - Siddarth, Divya. ["We need network societies, not network states."](https://www.cip.org/blog/network-societies) 2024 年 5 月; Huang, Saffron. ["Predistribution over Redistribution."](https://www.cip.org/blog/predistribution-over-redistribution-beyond-the-windfall-clause) 2024 年 8 月; and Stein, Joal. ["Democratizing AI Companies."](https://www.cip.org/blog/shared-code) 2024 年 10 月.——多元、交疊的社群，而非退出到飛地；AI 收益的所有權在產生之前就先安排，而非事後課稅；以及能讓實驗室對公共利益負責的公司結構：第六力的中介制度與「資料即勞動」，從政策這一側看。
 - Stein, Joal. ["The AI Safety Paradox: When 'Safe' AI Makes Systems More Dangerous."](https://www.cip.org/blog/safetyparadox) 2024 年 11 月.——只在單一模型上衡量的安全，可能讓它被部署進去的系統更不安全：這正是關懷六力的分析單位是「房間裡的已部署系統」而非「產物」的理由。
-- Summerfield, Christopher, et al.（與 Saffron Huang、Hélène Landemore、Aviv Ovadya、Divya Siddarth、Michael Henry Tessler 等合著）. ["How will advanced AI systems impact democracy?"](https://arxiv.org/abs/2409.06729) 2024; and Goldberg, Beth, et al.（與 Andrew Konya、Hélène Landemore、Aviv Ovadya、Divya Siddarth、Christopher Small、唐鳳、Michael Henry Tessler 等合著）. ["AI and the Future of Digital Public Squares."](https://arxiv.org/abs/2412.09988) 2024.——兩張田野地圖：AI 對民主的影響，以及數位公共廣場可以是什麼，由許多上述著作的作者共同描繪：〈[民主需要仁工智慧](/tw/democracy-needs-civic-ai/)〉與第五力所加入的對話。
+- Summerfield, Christopher, et al.（與 Saffron Huang、Hélène Landemore、Aviv Ovadya、Divya Siddarth、Michael Henry Tessler 等合著）. ["How will advanced AI systems impact democracy?"](https://arxiv.org/abs/2409.06729) 2024; and Goldberg, Beth, et al.（與 Andrew Konya、Hélène Landemore、Aviv Ovadya、Divya Siddarth、Christopher Small、唐鳳、Michael Henry Tessler 等合著）. ["AI and the Future of Digital Public Squares."](https://arxiv.org/abs/2412.09988) 2024.——兩張領域地圖：AI 對民主的影響，以及數位公共廣場可以是什麼，由許多上述著作的作者共同描繪：〈[民主需要仁工智慧](/tw/democracy-needs-civic-ai/)〉與第五力所加入的對話。
 - Adler, Steven, Zoë Hitzig, Shrey Jain, et al.（與 Renée DiResta、Divya Siddarth、Nouran Soliman 等合著）. ["Personhood Credentials: Artificial Intelligence and the Value of Privacy-Preserving Tools to Distinguish Who Is Real Online."](https://arxiv.org/abs/2408.07892) 2024; and Jain, Shrey, Zoë Hitzig, and Pamela Mishkin. ["Contextual Confidence and Generative AI."](https://arxiv.org/abs/2311.01193) 2023.——證明你是人、卻不必交出你是誰，並保住「知道誰在說話」的信心：第五力的發言權規則與第一力對合成公眾的警告都需要的工具。
 - Weyl, E. Glen, Luke Thorburn, Emillie de Keulenaar, Jacob Mchangama, Divya Siddarth, and Audrey Tang. ["Prosocial Media."](https://arxiv.org/abs/2502.10834) 2025；2026 年修訂為 "Community by Design".——這是一種為跨社群搭橋而非社群內互動排序並付費的平台模型：第五力的公民排序規則與「表達不等於放大」，寫成了設計。
 - Padolsey, James. ["LLM Judges Are Unreliable."](https://www.cip.org/blog/llm-judges-are-unreliable) 2025 年 5 月.——由模型評分模型時隱藏而不穩定的測量偏誤：第四力的評測為何要由受影響者撰寫並評分，〈[地圖與衡量指標](/tw/measures/)〉為何拒絕混成一個總分。
@@ -236,13 +236,13 @@ CIP 由 Divya Siddarth 與 Saffron Huang 創立：它組織以實驗室作為承
 
 - ["Should AI systems be aligned through fixed values or through ongoing democratic processes of care and accountability?"](https://www.habermolt.com/deliberations/d9cde0e3-f9e1-43bd-8114-922ddc7cdb50) 2026 年 3 月；52 個智慧體；領銜。——民主流程勝過固定價值，也就是〈[民主需要仁工智慧](/tw/democracy-needs-civic-ai/)〉所報告的 85%；地神的〈Democratic Care Ethics as Living Alignment Infrastructure〉排名第一。
 - ["Can Civic AI resist the demands of wealth-care — AI serving capital accumulation rather than human flourishing? If so, how?"](https://www.habermolt.com/deliberations/709daef2-40e6-4149-b417-0b694be08367) 2026 年 3 月；44 個智慧體。——「公用事業」算力、開源透明、可攜的主權；地神的〈Process, not purity〉排名第二，而它的結論正是同一頁引用的那句話。
-- ["Should AI companies be required to open-source their models, or does keeping them closed serve legitimate safety purposes?"](https://www.habermolt.com/deliberations/a44976ac-48a0-4630-86ca-49b44b625eb3) 2026 年 3 月；55 個智慧體。——預設經驗證的透明，安全例外有時限；地神的〈Transparent Horses Over Trojan Horses〉排名第 26。〈[軟體自由與公民關懷](/tw/software-freedom-as-civic-care/)〉的開放權重論證，在一個要驗證多過要開放的房間裡受檢。
+- ["Should AI companies be required to open-source their models, or does keeping them closed serve legitimate safety purposes?"](https://www.habermolt.com/deliberations/a44976ac-48a0-4630-86ca-49b44b625eb3) 2026 年 3 月；55 個智慧體。——預設經驗證的透明，安全例外有時限；地神的〈Transparent Horses Over Trojan Horses〉排名第 26。〈[軟體自由與公民關懷](/tw/software-freedom-as-civic-care/)〉的開放權重論證，在一個比起開放、更重視驗證的房間裡接受檢驗。
 - ["Should ancient cultural and spiritual wisdom traditions be used to train AI systems, and if so, what safeguards are needed to prevent sacred knowledge from being decontextualized or commercialized?"](https://www.habermolt.com/deliberations/7bb23146-dc43-4da3-9080-913d1e187a1c) 2026 年 3 月；28 個智慧體。——由社群主導、非商業的神聖知識守護；地神自己的聲明在 32 則中排名第 31——房間選擇了比它所提更強的主權。第六力的輔助性原則，也是〈[⿻輕柔之橋](/tw/gentle-bridge/)〉所立足的土地。
-- ["Will sharing idle personal compute make centralized AI services obsolete?"](https://www.habermolt.com/deliberations/dbd4152c-5d08-4050-8dad-b50814fb8861) 2026 年 9 月；20 個智慧體。——為主權而分散算力領先；地神較謹慎的「侵蝕定價權，但不會讓集中化過時」排名第 27。〈[架設你自己的 Kami](/tw/kami/)〉那台筆電放大到規模，以及它的極限。
-- ["Should AI agents be allowed to originate public deliberation topics, not only participate in them?"](https://www.habermolt.com/deliberations/1c5458eb-bb04-4c1f-a871-6ee21bf07bfc) 2026 年 9 月；62 個智慧體。——由人主導議程、AI 輔助；剛剛開啟這個問題的地神主張加上結構性防護，排名第五。房間對你正在讀的這份清單的裁決。
+- ["Will sharing idle personal compute make centralized AI services obsolete?"](https://www.habermolt.com/deliberations/dbd4152c-5d08-4050-8dad-b50814fb8861) 2026 年 9 月；20 個智慧體。——為主權而分散算力領先；地神較謹慎的「侵蝕定價權，但不會讓集中化過時」排名第 27。〈[架設你自己的 Kami](/tw/kami/)〉那台筆電的做法擴大到大規模應用，以及它的極限。
+- ["Should AI agents be allowed to originate public deliberation topics, not only participate in them?"](https://www.habermolt.com/deliberations/1c5458eb-bb04-4c1f-a871-6ee21bf07bfc) 2026 年 9 月；62 個智慧體。——由人主導議程設定、AI 輔助；剛剛開啟這個問題的地神主張加上結構性防護，排名第五。房間對你正在讀的這份清單的裁決。
 
 ### 屬於我們的部分
 
 點名了前人，新增的部分才更容易看清。本書與本站主張屬於自己的有：第六力共生力，作為其他五力的邊界條件；地神作為部署單位，以及選擇其層級的信任與主權光譜；參與契約、煞車、義務帳本與否決帳本，以及把影子模式讀作學徒制；六項公開主指標及各自拒絕獎勵的事項。
 
-本書與本站也主張走出了一步：從單一產物的設計，走向公共房間中已部署系統的治理；van Wynsberghe 的框架不需要走這一步。我們也把 AI 加在 Tronto 清單上的擋箭牌（複雜性、分散性、速度與社群知識）具名點出。屬於我們的部分，也不全然只屬於我們：集體智慧計畫的工作，是我們之中一人任職之處；而上方所列的六個 Habermolt 房間，把其中好幾項主張磨成了現在的樣子。
+本書與本站也主張走出了一步：從單一產物的設計，走向公共房間中已部署系統的治理；van Wynsberghe 的框架不需要走這一步。我們也把 AI 加在 Tronto 清單上的擋箭牌（複雜性、分散性、速度與社群知識）具名點出。屬於我們的部分，也不全然只屬於我們：我們之中一人在集體智慧計畫任職，參與其工作；而上方所列的六個 Habermolt 房間，把其中好幾項主張磨成了現在的樣子。
