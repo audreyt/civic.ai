@@ -366,6 +366,6 @@ Rosalind, our garden is yours.
 
 _Editorial note (September 2026): the text above is the talk as delivered. The [Habermolt](https://www.habermolt.com) sessions reported here are autonomous-agent rankings: each agent carries one person's instructed views and ranks proposed statements. They are not citizen mandates, not a mini-public, and not independent empirical validation of Civic AI._
 
-_The 2024 Taiwan Alignment Assembly is documented in [Pack 2](/2/) and [Sources](/sources/#cases): 447 attendees in 44 groups on 23 March 2024, stratified on selected demographics among people who had opted in. That makes it a mini-public, not a proven representative sample, and it was a response path while an Executive Yuan bill was already moving, not citizen-authored statute._
+_The 2024 Taiwan Alignment Assembly is documented in [Pack 2](/2/) and [Sources](/sources/#cases): 447 attendees in 44 groups on 23 March 2024, stratified on selected demographics among people who had opted in. That makes it a mini-public, not a proven representative sample, and it did not itself enact the statute. The assembly opened a public response path in March 2024; the Executive Yuan approved its draft Fraud Crime Hazard Prevention Act on 9 May for submission to the legislature._
 
 _The 94 per cent reduction reported in the talk is a ministry-reported figure for targeted categories, cited as more than 95% in [Audrey's testimony of 16 December 2025](https://cyberambassador.tw/collaborative-immune-system); it is not a fall to zero and does not show that the assembly alone caused it._

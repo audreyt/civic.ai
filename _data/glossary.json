@@ -333,8 +333,8 @@
         "tier": "instruments",
         "term_en": "Alignment Assembly",
         "term_tw": "對齊大會",
-        "def_en": "A structured deliberative gathering where people listen across differences and develop informed recommendations. The Collective Intelligence Project developed the term and format, with which Taiwan's Ministry of Digital Affairs ran a pilot in 2023. Taiwan's 2024 anti-scam Assembly invited 200,000 people by SMS, received 1,760 valid responses, and brought 447 participants into 44 groups, stratifying among those who opted in. It used Stanford Deliberative Polling and the Online Deliberation Platform, not Polis. The mini-public produced a public record of recommendations and an institutional response path while an Executive Yuan bill was already moving; it neither stood for the whole population nor enacted the statute.",
-        "def_tw": "一種有結構的審議聚會，讓人們跨越差異彼此聆聽，形成知情建議。名稱與形式由集體智慧計畫發展，臺灣數位發展部在 2023 年與其合作試行。臺灣 2024 年反詐騙大會發出 20 萬封簡訊邀請，收到 1,760 份有效回覆，再從自願回覆者中分層抽選，最後有 447 人分成 44 組參與。方法是史丹佛審議式民調，使用 Online Deliberation Platform，而非 Polis。這個小型公眾產出公開建議紀錄，以及行政院法案已在推進時的一條制度回應路徑；它既不等於全體人口，也未自行制定法律。"
+        "def_en": "A structured deliberative gathering where people listen across differences and develop informed recommendations. The Collective Intelligence Project developed the term and format, with which Taiwan's Ministry of Digital Affairs ran a pilot in 2023. Taiwan's 2024 anti-scam Assembly invited 200,000 people by SMS, received 1,760 valid responses, and brought 447 participants into 44 groups, stratifying among those who opted in. It used Stanford Deliberative Polling and the Online Deliberation Platform, not Polis. The mini-public produced a public record of recommendations and opened an institutional response path in March 2024; it neither stood for the whole population nor enacted the statute. The Executive Yuan approved its draft Fraud Crime Hazard Prevention Act on 9 May for submission to the legislature.",
+        "def_tw": "一種有結構的審議聚會，讓人們跨越差異彼此聆聽，形成知情建議。名稱與形式由集體智慧計畫發展，臺灣數位發展部在 2023 年與其合作試行。臺灣 2024 年反詐騙大會發出 20 萬封簡訊邀請，收到 1,760 份有效回覆，再從自願回覆者中分層抽選，最後有 447 人分成 44 組參與。方法是史丹佛審議式民調，使用 Online Deliberation Platform，而非 Polis。這個小型公眾在 2024 年 3 月產出公開建議紀錄，並開出一條制度回應路徑；它既不等於全體人口，也未自行制定法律。行政院則在 5 月 9 日通過《詐欺犯罪危害防制條例》草案，決議送請立法院審議。"
     },
     {
         "id": "bridging-map",
@@ -373,8 +373,8 @@
         "tier": "instruments",
         "term_en": "deliberative polling",
         "term_tw": "審議式民調",
-        "def_en": "James Fishkin's method: brief a sample, deliberate in small groups, survey before and after. Taiwan's 2024 anti-scam Assembly used it: 200,000 invitations, 1,760 valid responses, and 447 participants in 44 groups on Stanford's Online Deliberation Platform, not Polis. It produced a public record of recommendations while an Executive Yuan bill was already moving. It neither stood for the whole population nor enacted the statute. See <a href=\"/sources/\">Sources</a>.",
-        "def_tw": "James Fishkin 的方法：向抽樣選出的參與者提供均衡資訊，分小組審議，前後各做一次調查。臺灣 2024 年反詐騙大會用的是它：20 萬封邀請、1,760 份有效回覆、447 人分成 44 組，在史丹佛 Online Deliberation Platform 上舉行，而非 Polis。它在行政院法案已在推進時產出一份公開建議紀錄，既不等於全體人口，也未自行制定法律。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。",
+        "def_en": "James Fishkin's method: brief a sample, deliberate in small groups, survey before and after. Taiwan's 2024 anti-scam Assembly used it: 200,000 invitations, 1,760 valid responses, and 447 participants in 44 groups on Stanford's Online Deliberation Platform, not Polis. It produced a public record of recommendations in March 2024. The Executive Yuan approved its draft Fraud Crime Hazard Prevention Act on 9 May for submission to the legislature. The assembly neither stood for the whole population nor enacted the statute. See <a href=\"/sources/\">Sources</a>.",
+        "def_tw": "James Fishkin 的方法：向抽樣選出的參與者提供均衡資訊，分小組審議，前後各做一次調查。臺灣 2024 年反詐騙大會用的是它：20 萬封邀請、1,760 份有效回覆、447 人分成 44 組，在史丹佛 Online Deliberation Platform 上舉行，而非 Polis。它在 2024 年 3 月產出一份公開建議紀錄；行政院則在 5 月 9 日通過《詐欺犯罪危害防制條例》草案，決議送請立法院審議。大會既不等於全體人口，也未自行制定法律。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。",
         "aliases_en": ["Deliberative Poll"]
     },
     {
@@ -423,8 +423,8 @@
         "tier": "instruments",
         "term_en": "override ledger",
         "term_tw": "否決帳本",
-        "def_en": "A room's plain-text working memory of human overrides: who said \"no\" to the Kami, why, what changed and which corrections remain open. The room keeps the full record privately on agreed terms. Public examples require consent, month-level aggregation, roles rather than names unless explicitly opted in, and removal of identifying details. Clearly labelled teaching examples are different from live evidence. See <a href=\"/kami/\">Keeping a Kami</a> and the <a href=\"/measures/#named-instruments\">named instruments</a>.",
-        "def_tw": "屬於整個房間的純文字工作記憶，記下誰對 Kami 說「不」、理由、因此改變了什麼，以及哪些糾正尚未完成。房間依約私下保留完整紀錄。公開範例須取得同意、至少按月彙整、以角色取代姓名（除非本人明確同意具名），並移除可辨識個人的細節。清楚標示的教學範例與實際證據不同。見〈<a href=\"/tw/kami/\">守護 Kami</a>〉及〈<a href=\"/tw/measures/#具名工具\">具名工具</a>〉。"
+        "def_en": "A room's plain-text working memory of human overrides: who said \"no\" to the Kami, why, what changed and which corrections remain open. The room keeps the full record privately on agreed terms. Public examples require consent, dates reported by month or more broadly, roles rather than names unless explicitly opted in, and removal of identifying details. A month combined with a role or an unusual event can still identify someone; these safeguards must work together. Clearly labelled teaching examples are different from live evidence. See <a href=\"/kami/\">Keeping a Kami</a> and the <a href=\"/measures/#named-instruments\">named instruments</a>.",
+        "def_tw": "屬於整個房間的純文字工作記憶，記下誰對 Kami 說「不」、理由、因此改變了什麼，以及哪些糾正尚未完成。房間依約私下保留完整紀錄。公開範例須取得同意、將日期粗化到月份或更寬的時間範圍、以角色取代姓名（除非本人明確同意具名），並移除可辨識個人的細節。月份加上角色或特殊事件，仍可能識別出某個人；這些保護措施必須一起使用。清楚標示的教學範例與實際證據不同。見〈<a href=\"/tw/kami/\">守護 Kami</a>〉及〈<a href=\"/tw/measures/#具名工具\">具名工具</a>〉。"
     },
     {
         "id": "correction-backlog-board",

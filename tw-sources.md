@@ -108,7 +108,7 @@ Aimee van Wynsberghe 的「以關懷為中心的價值敏感設計」是直接�
 - Berners-Lee, Tim. ["Principles of Design."](https://www.w3.org/DesignIssues/Principles.html) W3C, 1998; and Berners-Lee, Tim, and Noah Mendelsohn. ["The Rule of Least Power."](https://www.w3.org/2001/tag/doc/leastPower.html) W3C TAG Finding, 2006.——「最小權能」是他的原則，不是我們的。
 - Saltzer, Jerome H., and Michael D. Schroeder. ["The Protection of Information in Computer Systems."](https://doi.org/10.1109/PROC.1975.9939) _Proceedings of the IEEE_ 63, no. 9 (1975): 1278–1308.——最小權限，設計原則第六條。
 - O'Neill, Onora. _[A Question of Trust](https://www.bbc.co.uk/programmes/p00ghvd8)_. Cambridge University Press, 2002.——重點是可信賴性而非信任，以及為何透明本身不足以產生它：附有檢驗標籤的橋。
-- Kaufman, Shachar, Saharon Rosset, and Claudia Perlich. ["Leakage in Data Mining: Formulation, Detection, and Avoidance."](https://doi.org/10.1145/2020408.2020496) _KDD_ 2011.——訓練／測試資料洩漏。
+- Kaufman, Shachar, Saharon Rosset, and Claudia Perlich. ["Leakage in Data Mining: Formulation, Detection, and Avoidance."](https://doi.org/10.1145/2020408.2020496) _KDD_ 2011.——資料洩漏：評估資訊洩漏進訓練或模型選擇。
 - Allspaw, John. ["Blameless PostMortems and a Just Culture."](https://www.etsy.com/codeascraft/blameless-postmortems) Etsy Code as Craft, 22 May 2012; and Lunney, John, and Sue Lueder. ["Postmortem Culture: Learning from Failure."](https://sre.google/sre-book/postmortem-culture/) In _Site Reliability Engineering_, edited by Betsy Beyer et al. O'Reilly, 2016.——從維運工程借來的「不究責事後檢討」。
 - Fowler, Martin. ["Circuit Breaker."](https://martinfowler.com/bliki/CircuitBreaker.html) 6 March 2014.——煞車所借名的工程模式；「遇歧義即暫停」的規則是關懷的應用。
 
@@ -158,7 +158,7 @@ Aimee van Wynsberghe 的「以關懷為中心的價值敏感設計」是直接�
 - Bostrom, Nick. _[Superintelligence: Paths, Dangers, Strategies](https://global.oup.com/academic/product/superintelligence-9780199678112)_. Oxford University Press, 2014; ["Ethical Issues in Advanced Artificial Intelligence."](https://nickbostrom.com/ethics/ai) In _Cognitive, Emotive and Ethical Aspects of Decision Making in Humans and in Artificial Intelligence_, vol. 2, edited by I. Smit et al., 12–17. International Institute of Advanced Studies in Systems Research and Cybernetics, 2003; ["What Is a Singleton?"](https://nickbostrom.com/fut/singleton), _Linguistic and Philosophical Investigations_ 5, no. 2 (2006): 48–54.——前沿風險與迴紋針例子。Singleton 指全球性的決策機構，不一定是單一 AI。
 - Russell, Stuart. _[Human Compatible: Artificial Intelligence and the Problem of Control](https://www.penguinrandomhouse.com/books/566677/human-compatible-by-stuart-russell/)_. Viking, 2019; and Christian, Brian. _[The Alignment Problem: Machine Learning and Human Values](https://wwnorton.com/books/9780393635829)_. Norton, 2020.——控制、學習與人類價值的研究；兩書都沒有把整個問題縮減成固定的目標函數。
 - Narayanan, Arvind, and Sayash Kapoor. ["AI as Normal Technology."](https://knightcolumbia.org/content/ai-as-normal-technology) Knight First Amendment Institute, 15 April 2025；Kapoor, Sayash, Arvind Narayanan, Daniel Kokotajlo, Eli Lifland, and Thomas Larsen. ["Common Ground between AI 2027 & AI as Normal Technology."](https://asteriskmag.substack.com/p/common-ground-between-ai-2027-and) _Asterisk_, 12 November 2025.——兩種對立的預測，在開發者與政府的近期議程上取得共識；關懷六力所問的「系統行動之處，誰有權得到交代」，在兩種情境下都成立。
-- Future of Life Institute。[〈Statement on Superintelligence〉](https://superintelligence-statement.org/)。2025 年 10 月 22 日。——Geoffrey Hinton、Yoshua Bengio、唐鳳等許多人連署，呼籲在取得廣泛的科學共識、確認能安全開發，並得到公眾強力支持之前，禁止開發超級智慧；[常見問題第 17 題](/tw/faq/#faq-17)有所討論。
+- Future of Life Institute。[〈Statement on Superintelligence〉](https://superintelligence-statement.org/)。2025 年 10 月 22 日。——Geoffrey Hinton、Yoshua Bengio、唐鳳等許多人連署，呼籲在取得廣泛的科學共識、確認能安全且可控地開發，並得到公眾強力支持之前，禁止開發超級智慧；[常見問題第 17 題](/tw/faq/#faq-17)有所討論。
 - Krueger, David。[〈Stop AI: How and Why〉](https://post-agi.org/talks-berkeley/krueger-stop-ai)。演講，Post-AGI Civilizational Equilibria 工作坊，柏克萊，2026 年 5 月 23–24 日。——主張拆解先進 AI 晶片的供應鏈，全球暫停前沿 AI。
 - Ryle, Gilbert. “Thinking and Reflecting” and “The Thinking of Thoughts.” In _Collected Papers_, vol. 2, _Collected Essays 1929–1968_. Hutchinson, 1971；Geertz, Clifford. “Thick Description: Toward an Interpretive Theory of Culture.” In _The Interpretation of Cultures: Selected Essays_, 3–30. Basic Books, 1973.——Geertz 在頁 6–7 明確借用 Ryle 的區分與眨眼例子。
 - Nelson, Alondra. ["Thick Alignment."](https://www.youtube.com/watch?v=Sq_XwqVTqvQ) Keynote, ACM FAccT, 12 June 2023；與 Caroline Green 在《Accelerating AI Ethics》對談 ["Thick Alignment and the Future of AI Governance,"](https://podcasts.apple.com/us/podcast/thick-alignment-and-the-future-of-ai/id1829644671?i=1000754457892) 2026 年 3 月 10 日。——AI 治理中的社會脈絡、參與與權威；這個 AI 用法承接更早的厚描述系譜。
@@ -175,7 +175,7 @@ Aimee van Wynsberghe 的「以關懷為中心的價值敏感設計」是直接�
 
 - **臺灣。** 數位發展部，[〈「運用 AI 促進資訊完整性」公民審議大會〉](https://moda.gov.tw/major-policies/alignment-assemblies/2024-deliberative-assembly/1521)，2024；史丹佛[審議民主實驗室](https://deliberation.stanford.edu/)；以及[〈數位發展部與國際組織「集體智慧計畫」（CIP）合作〉](https://moda.gov.tw/en/press/press-releases/5243)，2023 年 5 月 27 日.——第二力與〈[AI 對齊不能由上而下](/tw/ai-alignment-cannot-be-top-down/)〉背後的官方紀錄：20 萬份邀請、1,760 份有效回覆、447 位出席者分成 44 組。2023 年的試行與 CIP 合作，2024 年的大會則是與史丹佛實驗室合作的審議式民調：兩個夥伴、兩種方法，相隔一年，不可互換。
 
-    2024 年的出席者從自願報名者中分層組成，不是 Polis 活動。場域軟體管理發言佇列、時間與逐字稿，不判斷政策；大會取得的是制度回應路徑，不是把建議自動變成法律，也不能證明後續成果單由審議造成。
+    2024 年的出席者從自願報名者中分層組成，不是 Polis 活動。場域軟體管理發言佇列、時間與逐字稿，不判斷政策；大會取得的是制度回應路徑，不是把建議自動變成法律，也不能證明後續成果單由審議造成。大會於 2024 年 3 月舉行；行政院則[在 5 月 9 日通過《詐欺犯罪危害防制條例》草案](https://www.ey.gov.tw/Page/9277F759E41CCD91/cdedac72-e512-4f92-8a44-492847bed989)，決議送請立法院審議。
 
 - **日本。** [Team Mirai](https://team-mir.ai/)，2025–.——該黨自己的網站：2024 年東京都知事選舉的結果，以及它所公布的 2026 年 2 月 8 日眾議院比例代表票數與席次。網站自述的數字，不是官方選務機關的資料擷取。
 
@@ -189,7 +189,7 @@ Aimee van Wynsberghe 的「以關懷為中心的價值敏感設計」是直接�
 
     這是建立語言工具的機構，不是單一微型模型的證據。實際目標是讓藏語知識繼續能以藏語使用；資料集的所有權、授權與同意安排，仍待計畫文件佐證。
 
-- **線上安全。** [ROOST](https://roost.tools).——開源、可自行託管的事件回應與審核工具，截至 2026 年 9 月，Osprey 的產品頁列出 Bluesky、Discord 與 Matrix 為使用者：第五力所指的可重用層。[ROOST 模型社群](https://github.com/roostorg/model-community)另匯集 Mila、Mistral、OpenAI、Roblox 與 Zentropi 的開放權重安全模型與政策包，是讓以聯邦學習訓練安全模型變得可行的發布與實務層。部署數量、審核成效與經過基準測試的損害降幅，並未公布。
+- **線上安全。** [ROOST](https://roost.tools).——開源、可自行託管的事件回應與審核工具，截至 2026 年 9 月，Osprey 的產品頁列出 Bluesky、Discord 與 Matrix 為使用者：第五力所指的可重用層。[ROOST 模型社群](https://github.com/roostorg/model-community)另匯集 Mila、Mistral、OpenAI、Roblox 與 Zentropi 的開放權重安全模型與政策包，是讓以聯邦學習訓練安全模型變得可行的發布與實務層。ROOST 由 Andrew Chang 撰寫的 [Bluesky 案例研究](https://roost.tools/blog/how-bluesky-transformed-their-safety-operations-with-osprey/)（2026 年 2 月 4 日）公布了營運規模：每天處理逾 4,500 萬個事件、依自動規則執行逾 10 萬次處置，並估計每年資料儲存成本降低約七成。這些是 ROOST 與 Bluesky 自行報告的處理量與效率數字，並不能證明處置決定的準確性或傷害的減少。在本條目檢視的來源中，我們沒有找到針對這兩點的獨立評估。
 
     共享軟體能提供在地人類營運者事件調查與審核的能力，不必集中內容治理政策。這些紀錄不能證明聯邦式模型訓練，也不能證明經衡量的損害降幅。
 

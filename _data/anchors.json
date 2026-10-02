@@ -593,7 +593,7 @@
             },
             {
                 "id": "p54",
-                "hash": "6c7aad5a8e09",
+                "hash": "901955bc5425",
                 "text": "Result. The package earned roughly 85% support among the deliberants. What the assembly produced was a public record of "
             },
             {
@@ -952,9 +952,9 @@
                 "text": "Unsafe confidence. The system acts despite weak evidence. Fix: Confidence thresholds, fallback routing, and pause on amb"
             },
             {
-                "id": "p46",
-                "hash": "b04844c72fd3",
-                "text": "Train/test leakage. Evals look good; reality fails. Fix: Hold-out datasets, randomised spot checks, live A/Bs with rollb"
+                "id": "p45a",
+                "hash": "11190bdb82ac",
+                "text": "Data leakage. Evaluation information leaks into training or model selection. Evals look good; reality fails. Fix: Hold-o"
             },
             {
                 "id": "p47",
@@ -1047,7 +1047,7 @@
                 "text": "The full trail is on the Sources page."
             }
         ],
-        "retired": []
+        "retired": ["p46"]
     },
     "/4/": {
         "units": [
@@ -2233,8 +2233,8 @@
             },
             {
                 "id": "p49",
-                "hash": "b5e317d8cc79",
-                "text": "In practice, Taiwan moved from Assembly to an answerable legislative response path in months. The assembly secured that "
+                "hash": "af436a336535",
+                "text": "In practice, Taiwan moved from Assembly to an answerable legislative response path in months. The assembly opened a publ"
             },
             {
                 "id": "p50",
@@ -2758,12 +2758,12 @@
             },
             {
                 "id": "p154",
-                "hash": "6d92afd326f2",
+                "hash": "5ac9b6268520",
                 "text": "The convergence now arrives from the risk side as well. In AI 2040: Plan A (2026), the positive scenario of the AI Futur"
             },
             {
                 "id": "p155",
-                "hash": "d7e0dfbe0b3d",
+                "hash": "f6236d82078a",
                 "text": "What that scenario leaves open is the second question: its public receives a Citizen’s Dividend and ratifies bargains ne"
             },
             {
@@ -3603,7 +3603,7 @@
             },
             {
                 "id": "p110",
-                "hash": "82a233df2ac7",
+                "hash": "848ed8c1d362",
                 "text": "Editorial note (September 2026): the text above is the speech as delivered. The pack pages and the Sources page treat se"
             },
             {
@@ -4482,9 +4482,9 @@
                 "text": "煞車。 大會建議：平台若未設置能處理求償的在地代表，影片流量每天減速 1%。第 29 條要求未在台設立據點的適用境外平台，指定在台法律代表。第 39 條：未指定、或法律代表怠於告知協助，可處罰鍰；情節重大者，經專家程序後，可為解析／連線限制"
             },
             {
-                "id": "p54",
-                "hash": "a657279acca0",
-                "text": "結果。 方案獲得約 85% 與會公民的支持。大會產出的是公開的重新思考紀錄與可行動建議——行政院法案當時已在推進的一條制度回應路徑——不是公民起草的成文法。臺灣數位發展部（moda）其後報告，在《詐欺犯罪危害防制條例》、通報基礎設施、AI "
+                "id": "p53a",
+                "hash": "10d518e25552",
+                "text": "結果。 方案獲得約 85% 與會公民的支持。大會產出的是公開的重新思考紀錄與可行動建議，不是公民起草的成文法。大會在 2024 年 3 月開出了一條公眾回應路徑；行政院則在 5 月 9 日通過《詐欺犯罪危害防制條例》草案，決議送請立法院審議"
             },
             {
                 "id": "p55",
@@ -4612,7 +4612,7 @@
                 "text": "完整足跡見〈文獻與延伸閱讀〉。"
             }
         ],
-        "retired": []
+        "retired": ["p54"]
     },
     "/tw/3/": {
         "units": [
@@ -4843,8 +4843,8 @@
             },
             {
                 "id": "p46",
-                "hash": "f08a5f65f605",
-                "text": "訓練與測試資料重疊。 評測看起來很好；現實失敗。解方：留作測試的資料集、隨機抽查、帶回滾的即時 A/B。"
+                "hash": "6de4b8ee1675",
+                "text": "資料洩漏。 評估資訊洩漏進了訓練或模型選擇。評測看起來很好；現實失敗。解方：留作測試的資料集、隨機抽查、帶回滾的即時 A/B。"
             },
             {
                 "id": "p47",
@@ -6122,9 +6122,9 @@
                 "text": "速度落差確實存在，但立憲民主一直都在處理同樣的落差：憲法慢、立法快、行政更快，每一層受上一層約束。六力把這套結構搬到 AI 治理上。大會不審批每一次模型更新，而是訂下允許更新的條件；條件一旦被違反，煞車早就接好了。"
             },
             {
-                "id": "p49",
-                "hash": "f8911e276aaf",
-                "text": "實際上，臺灣從對齊大會到一條可問責的立法回應路徑，只花了幾個月。大會是在行政院法案已經推動時，爭取到這條路徑；法律並不是大會自己訂的。審議之所以慢，往往是因為被當成一次性的活動，而不是常設的基礎設施。"
+                "id": "p48a",
+                "hash": "a1b21795a879",
+                "text": "實際上，臺灣從對齊大會到一條可問責的立法回應路徑，只花了幾個月。大會在 2024 年 3 月開出了一條公眾回應路徑；行政院則在 5 月 9 日通過《詐欺犯罪危害防制條例》草案，決議送請立法院審議。法律並不是大會自己訂的。審議之所以慢，往往是"
             },
             {
                 "id": "p50",
@@ -6648,12 +6648,12 @@
             },
             {
                 "id": "p154",
-                "hash": "0fcd0fe80b75",
+                "hash": "73803b87bca7",
                 "text": "現在，研究風險的一方也走到了同一個方向。AI Futures Project 的正面情境《AI 2040: Plan A》（2026）——這個團隊先前的《AI 2027》預測，結局是人類滅絕或無法逆轉的權力集中——描繪的好結局，靠的是可修正"
             },
             {
                 "id": "p155",
-                "hash": "0effbb180177",
+                "hash": "aa1bbdb10c1d",
                 "text": "那個情境沒回答的，正是第二個問題：裡面的公眾領「公民紅利」、批准 AI 談好的協議，但人們生活的房間，從來沒有成為作者。那一半，就是仁工智慧的工作。這兩條路線不是對手，而是同一條河的支流。也有許多人，包括唐鳳，連署了禁止開發超級智慧的呼籲："
             },
             {
@@ -6942,7 +6942,7 @@
                 "text": "這補上的，是補救的缺口，不是罪責的缺口。沒人預見得到的傷害，到底有沒有人該被責怪，仍然要交給法院和道德判斷。契約要確保的事比較窄，卻對受害的人更實在：一定有人出面回應，而修補不必等到責任歸屬吵完才開始。"
             }
         ],
-        "retired": []
+        "retired": ["p49"]
     },
     "/tw/manifesto/": {
         "units": [
@@ -7493,8 +7493,8 @@
             },
             {
                 "id": "p110",
-                "hash": "25b0b7ce006e",
-                "text": "編者按（2026 年 9 月）：以上是演講當時的原文。各力頁面與〈文獻與延伸閱讀〉對其中若干主張有更謹慎的處理——2024 年對齊大會是從自願報名者中分層抽出的迷你公眾，也是法案已在推進時的一條回應路徑，而非成文法的作者，更不是全體公眾；四"
+                "hash": "4f2592bb294e",
+                "text": "編者按（2026 年 9 月）：以上是演講當時的原文。各力頁面與〈文獻與延伸閱讀〉對其中若干主張有更謹慎的處理——2024 年對齊大會是從自願報名者中分層抽出的迷你公眾，在 3 月開出回應路徑（行政院其後於 5 月 9 日通過《詐欺犯罪危害"
             },
             {
                 "id": "p111",

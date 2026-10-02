@@ -154,7 +154,7 @@ I think we should land in our communities, as Pope Leo XIV said, I think last we
 
 ---
 
-_Editorial note (September 2026): the text above is the conversation as recorded. The 2024 Taiwan Alignment Assembly is documented in [Pack 2](/2/) and [Sources](/sources/#cases): 447 attendees in 44 groups on 23 March 2024, stratified on selected demographics among people who had opted in. That makes it a mini-public, not a proven representative sample, and it was a response path while an Executive Yuan bill was already moving, not citizen-authored statute._
+_Editorial note (September 2026): the text above is the conversation as recorded. The 2024 Taiwan Alignment Assembly is documented in [Pack 2](/2/) and [Sources](/sources/#cases): 447 attendees in 44 groups on 23 March 2024, stratified on selected demographics among people who had opted in. That makes it a mini-public, not a proven representative sample, and it did not itself enact the statute. The assembly opened a public response path in March 2024; the Executive Yuan approved its draft Fraud Crime Hazard Prevention Act on 9 May for submission to the legislature._
 
 _The later fall in impersonation scam ads is a ministry-reported figure for targeted categories, cited as more than 95% in [Audrey's testimony of 16 December 2025](https://cyberambassador.tw/collaborative-immune-system). It is not a fall to zero, it does not measure all fraud, and it does not show that the assembly alone caused it._
 

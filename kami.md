@@ -127,7 +127,7 @@ Watch for five warning signs:
 - A keeper leaves without a named successor.
 - The room dissolves or its mandate ends.
 - The consequences of breach exceed what the current arrangement can safely hold.
-- The override ledger goes quiet. Investigate whether people still pay attention and feel able to say no; silence may call for a pause or retirement, not celebration.
+- The override ledger goes quiet. Investigate whether people still pay attention, feel able to say no and see their overrides take effect; silence may call for a pause or retirement, not celebration.
 
 Agree the handover and privacy arrangements before stopping. Retirement is a human decision, not automatic destruction of the model.
 
@@ -153,7 +153,7 @@ Note one more thing: the three notes travel, but day-to-day memories live on the
 
 All of this — many hands questioning one Kami — is the doorway to Keeping. Slow group work no setup page can do for you.
 
-The room keeps its full override record on agreed private terms. A public example needs consent from those documented, a consent note, only the necessary detail and at least month-level aggregation. Use roles rather than names unless someone explicitly opts in, and remove identifying details from the reason. People must be able to refuse publication or withdraw consent. Clearly labelled invented teaching examples are allowed, but are not evidence from a live room.
+The room keeps its full override record on agreed private terms. A public example needs consent from those documented, a consent note, only the necessary detail and dates reported by month or more broadly. A month combined with a role or an unusual event can still identify someone; these safeguards must work together. Use roles rather than names unless someone explicitly opts in, and remove identifying details from the reason. People must be able to refuse publication or withdraw consent. Clearly labelled invented teaching examples are allowed, but are not evidence from a live room.
 
 Before installation, write a short charter together: a text file, a shared note, even handwriting on paper. Tie it to the four answers — who keeps it, what a breach could cause, who can overrule, when it ends or is reviewed. It will not be a finished system of rules. It is a snapshot of what you have agreed so far, and you will rewrite it.
 
