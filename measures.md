@@ -28,7 +28,7 @@ You do not need a dashboard to begin. Ask your school, care provider or resident
 
 Each pack then answers a distinct public audit question, with one headline public measure plus supporting diagnostics.
 
-These six measures are the authors’ proposals for public evaluation, not validated measurement standards. Their definitions and thresholds need testing with the people affected.
+These six measures are our proposals for public evaluation, not validated measurement standards. Their definitions and thresholds need testing with the people affected.
 
 **These metrics are designed for sufficiency, not maximisation.** Each deployment context defines a threshold — "good enough" for that community. Crossing the threshold is the goal; score-chasing beyond it risks the same metric gaming the 6-Pack warns against. A headline measure is a public test, not a totalising score.
 
@@ -159,7 +159,7 @@ Each headline measure names not only what it rewards but what it must refuse, so
 - **Trust is decomposed, not collapsed.** Pack 1 asks whether people were heard. Pack 2 asks whether promises were real. Pack 3 asks whether delivery held up under inspection. Pack 4 asks whether repair worked after harm. Pack 5 asks whether groups can act together fairly. Pack 6 asks whether stewardship can remain bounded over time.
 - **Artefacts are not metrics.** Bridging maps, engagement contracts, repair logs, and exit drills are governance evidence. They matter because they support the headline measures; they are not scores by themselves.
 - **The map is not the index.** Pack 1's bridging map charts where crossings are possible — who agrees, who clashes, and why, among those present in the record. Pack 5's uncommon-ground index counts the crossings actually made: shared decisions co-endorsed across group lines. Terrain first, then traffic. Composition precedes co-action, so a high index over a wide representation gap measures selection, not solidarity.
-- **Training signals are not the public audit.** Cross-group endorsement may inform model tuning or routing, but its public, conference-facing role in this framework is the Pack 5 uncommon-ground index. Pack 4 owns whether affected people could correct the system and whether repair restored trust.
+- **Training signals are not the public audit.** Cross-group endorsement may inform model tuning or routing, but its public-facing role in this framework is the Pack 5 uncommon-ground index. Pack 4 owns whether affected people could correct the system and whether repair restored trust.
 - **The record is small and named.** Most strong cases come from places with unusually strong civic infrastructure — thresholds are earned room by room, not inherited from Taiwan or California.
 
 ### Before you call it Civic AI

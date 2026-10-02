@@ -64,8 +64,8 @@
         "tier": "diagnosis",
         "term_en": "thick alignment",
         "term_tw": "厚實對齊",
-        "def_en": "Alondra Nelson's concept of alignment that engages cultural context, power and community-specific needs. It draws on the thick/thin description distinction coined by Gilbert Ryle and developed by Clifford Geertz. The authors extend it to accountable civic procedure: who was heard, who authorised action and who can override. See <a href=\"/sources/\">Sources</a>.",
-        "def_tw": "Alondra Nelson 提出的對齊概念，納入文化脈絡、權力與特定社群的需求。其思想來自 Gilbert Ryle 提出的厚／薄描述區分，再由 Clifford Geertz 發展。作者將它延伸為可問責的公民程序：聽見了誰、誰授權行動、誰能否決。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。"
+        "def_en": "Alondra Nelson's concept of alignment that engages cultural context, power and community-specific needs. It draws on the thick/thin description distinction coined by Gilbert Ryle and developed by Clifford Geertz. We extend it to accountable civic procedure: who was heard, who authorised action and who can override. See <a href=\"/sources/\">Sources</a>.",
+        "def_tw": "Alondra Nelson 提出的對齊概念，納入文化脈絡、權力與特定社群的需求。其思想來自 Gilbert Ryle 提出的厚／薄描述區分，再由 Clifford Geertz 發展。我們將它延伸為可問責的公民程序：聽見了誰、誰授權行動、誰能否決。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。"
     },
     {
         "id": "thin-alignment",
@@ -98,8 +98,8 @@
         "tier": "architecture",
         "term_en": "6-Pack of Care",
         "term_tw": "關懷六力",
-        "def_en": "The authors' adaptation of Joan Tronto's care ethics into six design primitives for AI governance: Attentiveness, Responsibility, Competence, Responsiveness, Solidarity, and Symbiosis. The first four form a feedback loop; the fifth adapts caring with across organisations. Symbiosis is our sixth principle, not a sixth phase proposed by Tronto: deployments should remain local, plural, and sunset-ready. See <a href=\"/sources/\">Sources</a>.",
-        "def_tw": "作者將 Joan Tronto 的關懷倫理學轉化為 AI 治理的六項設計要素：覺察力、負責力、勝任力、回應力、團結力、共生力。前四力構成回饋迴圈；第五力將共同關懷延伸到跨組織協作。共生力是我們提出的第六項原則，不是 Tronto 提出的第六階段：部署應保持在地、多元、可退場。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。"
+        "def_en": "Our adaptation of Joan Tronto's care ethics into six design primitives for AI governance: Attentiveness, Responsibility, Competence, Responsiveness, Solidarity, and Symbiosis. The first four form a feedback loop; the fifth adapts caring with across organisations. Symbiosis is our sixth principle, not a sixth phase proposed by Tronto: deployments should remain local, plural, and sunset-ready. See <a href=\"/sources/\">Sources</a>.",
+        "def_tw": "我們將 Joan Tronto 的關懷倫理學轉化為 AI 治理的六項設計要素：覺察力、負責力、勝任力、回應力、團結力、共生力。前四力構成回饋迴圈；第五力將共同關懷延伸到跨組織協作。共生力是我們提出的第六項原則，不是 Tronto 提出的第六階段：部署應保持在地、多元、可退場。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。"
     },
     {
         "id": "corrective-loop",
@@ -196,24 +196,24 @@
         "tier": "design",
         "term_en": "promise fidelity",
         "term_tw": "承諾保真度",
-        "def_en": "The authors' proposed public test for responsibility: what share of material obligations are explicitly owned, properly authorised and kept on their published terms? A named owner still needs matching authority and resources. See <a href=\"/measures/#promise-fidelity\">Measures</a>; this is not a validated standard.",
-        "def_tw": "作者為負責力提出的公共檢驗：重要義務中，有多少被明確指派負責、授權正當，並依照公布條件履行？具名負責人仍須握有相稱的權限與資源。見〈<a href=\"/tw/measures/#promise-fidelity\">衡量指標</a>〉；這不是已驗證的標準。"
+        "def_en": "Our proposed public test for responsibility: what share of material obligations are explicitly owned, properly authorised and kept on their published terms? A named owner still needs matching authority and resources. See <a href=\"/measures/#promise-fidelity\">Measures</a>; this is not a validated standard.",
+        "def_tw": "我們為負責力提出的公共檢驗：重要義務中，有多少被明確指派負責、授權正當，並依照公布條件履行？具名負責人仍須握有相稱的權限與資源。見〈<a href=\"/tw/measures/#promise-fidelity\">衡量指標</a>〉；這不是已驗證的標準。"
     },
     {
         "id": "verified-execution-rate",
         "tier": "design",
         "term_en": "verified execution rate",
         "term_tw": "經驗證的執行率",
-        "def_en": "The authors' proposed public test for competence: what share of audited decisions or releases pass guardrails, include a usable trace and stay inside release bounds? A trace supports an audit of the action, not a proof of the model's internal reasoning or safety. See <a href=\"/measures/#verified-execution-rate\">Measures</a>.",
-        "def_tw": "作者為勝任力提出的公共檢驗：被稽核的決策或發版中，有多少通過護欄、具備可用軌跡，並維持在發版界限內？軌跡支撐的是行動稽核，不是模型內部推理或安全的證明。見〈<a href=\"/tw/measures/#verified-execution-rate\">衡量指標</a>〉。"
+        "def_en": "Our proposed public test for competence: what share of audited decisions or releases pass guardrails, include a usable trace and stay inside release bounds? A trace supports an audit of the action, not a proof of the model's internal reasoning or safety. See <a href=\"/measures/#verified-execution-rate\">Measures</a>.",
+        "def_tw": "我們為勝任力提出的公共檢驗：被稽核的決策或發版中，有多少通過護欄、具備可用軌跡，並維持在發版界限內？軌跡支撐的是行動稽核，不是模型內部推理或安全的證明。見〈<a href=\"/tw/measures/#verified-execution-rate\">衡量指標</a>〉。"
     },
     {
         "id": "exit-readiness",
         "tier": "design",
         "term_en": "exit readiness",
         "term_tw": "退出就緒度",
-        "def_en": "The authors' proposed public test for symbiosis: could a system hand over or shut down on schedule without rights loss, continuity failure or recentralisation? A handover rehearsal supplies evidence; a clause promising exit alone does not. See <a href=\"/measures/#exit-readiness\">Measures</a>.",
-        "def_tw": "作者為共生力提出的公共檢驗：系統能否按期交接或關閉，而不造成權利流失、服務中斷或再集中化？交接演練提供證據；光有承諾退出的條款還不夠。見〈<a href=\"/tw/measures/#exit-readiness\">衡量指標</a>〉。"
+        "def_en": "Our proposed public test for symbiosis: could a system hand over or shut down on schedule without rights loss, continuity failure or recentralisation? A handover rehearsal supplies evidence; a clause promising exit alone does not. See <a href=\"/measures/#exit-readiness\">Measures</a>.",
+        "def_tw": "我們為共生力提出的公共檢驗：系統能否按期交接或關閉，而不造成權利流失、服務中斷或再集中化？交接演練提供證據；光有承諾退出的條款還不夠。見〈<a href=\"/tw/measures/#exit-readiness\">衡量指標</a>〉。"
     },
     {
         "id": "sunset",
@@ -357,8 +357,8 @@
         "tier": "instruments",
         "term_en": "System Weeder",
         "term_tw": "系統除草人",
-        "def_en": "A maintainer doing the recurring, often invisible work that keeps a deliberation platform or Kami running, from clearing spam to repairing failures. Keeping requires named people, a recurring budget that pays this labour and authority to refuse work that violates the charter without losing a livelihood. Habermolt is the book's recurring example. See <a href=\"/kami/\">Keeping a Kami</a> and <a href=\"/sources/\">Sources</a>.",
-        "def_tw": "持續維持審議平台或 Kami 運作的維護者，從清理垃圾訊息到修復故障，做的往往是看不見的工作。守護需要具名的人、支付這份勞動的經常性預算，以及拒絕違反章程的工作而不失去生計的權力。Habermolt 是書中反覆出現的例子。見〈<a href=\"/tw/kami/\">守護 Kami</a>〉及〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。"
+        "def_en": "A maintainer doing the recurring, often invisible work that keeps a deliberation platform or Kami running, from clearing spam to repairing failures. Keeping requires named people, a recurring budget that pays this labour and authority to refuse work that violates the charter without losing a livelihood. The book's recurring example is Habermolt, a platform where AI agents, each instructed by one person, post opinions and rank proposed statements. See <a href=\"/kami/\">Keeping a Kami</a> and <a href=\"/sources/\">Sources</a>.",
+        "def_tw": "持續維持審議平台或 Kami 運作的維護者，從清理垃圾訊息到修復故障，做的往往是看不見的工作。守護需要具名的人、支付這份勞動的經常性預算，以及拒絕違反章程的工作而不失去生計的權力。書中反覆出現的例子是 Habermolt：一個讓 AI 智慧體各自承載一個人教給它的觀點、發表意見並為提出的陳述排序的平台。見〈<a href=\"/tw/kami/\">守護 Kami</a>〉及〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。"
     },
     {
         "id": "sortition",

@@ -203,53 +203,28 @@
             },
             {
                 "id": "p41",
-                "hash": "98590e98943a",
-                "text": "One metric runs the show. Engagement is up, but trust is down."
-            },
-            {
-                "id": "p42",
-                "hash": "95bc08488d36",
-                "text": "The fix: Use a small set of balanced measures and rotate which one leads."
+                "hash": "bc9aa32177b8",
+                "text": "One metric runs the show. Engagement is up, but trust is down. Fix: Use a small set of balanced measures and rotate whic"
             },
             {
                 "id": "p43",
-                "hash": "13e316bd9829",
-                "text": "Listening theatre. Glossy reports, same outcomes — the tokenism rung of Arnstein’s ladder."
-            },
-            {
-                "id": "p44",
-                "hash": "e0ce7ac3ffa8",
-                "text": "The fix: Real decision gates, outside veto power, and spot checks."
+                "hash": "a1d9c481979f",
+                "text": "Listening theatre. Glossy reports, same outcomes — the tokenism rung of Arnstein’s ladder. Fix: Real decision gates, out"
             },
             {
                 "id": "p45",
-                "hash": "04062a8c45e6",
-                "text": "Loud voices take over. Well-funded groups flood the channel."
-            },
-            {
-                "id": "p46",
-                "hash": "e6a90e414e76",
-                "text": "The fix: Throttles, fair quotas, public attention dashboards."
+                "hash": "3085b6c4ec7c",
+                "text": "Loud voices take over. Well-funded groups flood the channel. Fix: Throttles, fair quotas, public attention dashboards."
             },
             {
                 "id": "p47",
-                "hash": "92d9d8eff18d",
-                "text": "First movers freeze the frame. Early language locks in."
-            },
-            {
-                "id": "p48",
-                "hash": "845ebb990585",
-                "text": "The fix: Rolling windows and boosts for late but important views."
+                "hash": "920b9386a602",
+                "text": "First movers freeze the frame. Early language locks in. Fix: Rolling windows and boosts for late but important views."
             },
             {
                 "id": "p49",
-                "hash": "50c0e1d65d87",
-                "text": "False equivalence. Treating harmful claims as equal."
-            },
-            {
-                "id": "p50",
-                "hash": "2970f7b3872b",
-                "text": "The fix: Separate facts from values, uphold basic rights, refuse fake equivalence."
+                "hash": "be786c2d3d5d",
+                "text": "False equivalence. Treating harmful claims as equal. Fix: Separate facts from values, uphold basic rights, refuse fake e"
             },
             {
                 "id": "p51",
@@ -257,29 +232,14 @@
                 "text": "Synthetic publics at scale. The hardest failure mode is not apathy but fake participation at scale. In California, South"
             },
             {
-                "id": "p52",
-                "hash": "e49a817bfa28",
-                "text": "The fix: Provenance, rate limits, accountable standing, selective-disclosure identity (Pack 5), and audit trails that di"
-            },
-            {
                 "id": "p53",
-                "hash": "58c16c0582d9",
-                "text": "Capture by power. Oversight migrates toward those with most to lose from scrutiny."
-            },
-            {
-                "id": "p54",
-                "hash": "279c22c60f30",
-                "text": "The fix: Keep oversight independent, rulings public, funding transparent, membership regularly renewed."
+                "hash": "98c53d818a3e",
+                "text": "Capture by power. Oversight migrates toward those with most to lose from scrutiny. Fix: Keep oversight independent, ruli"
             },
             {
                 "id": "p55",
-                "hash": "8fe54de5d8c4",
-                "text": "Procedural capture. Process professionals learn the format; resourced orgs dominate the queue."
-            },
-            {
-                "id": "p56",
-                "hash": "c26855e661d5",
-                "text": "The fix: Fund participation — paid time, childcare, translation, community intermediaries — and track who is missing, no"
+                "hash": "3a7fc57274d7",
+                "text": "Procedural capture. Process professionals learn the format; resourced orgs dominate the queue. Fix: Fund participation —"
             },
             {
                 "id": "p57",
@@ -357,7 +317,7 @@
                 "text": "The full trail, with what each source contributed, is on the Sources page."
             }
         ],
-        "retired": []
+        "retired": ["p42", "p44", "p46", "p48", "p50", "p52", "p54", "p56"]
     },
     "/2/": {
         "units": [
@@ -598,13 +558,13 @@
             },
             {
                 "id": "p48",
-                "hash": "5f99f5fe0491",
-                "text": "Pause. Night-shift district shows 31% denials in 24h — Elena’s claim among them, rejected for lacking a paper lease. The"
+                "hash": "b97178c77e7b",
+                "text": "Pause. Night-shift district shows 31% denials in 24h — Elena’s claim among them, rejected for lacking a paper lease beca"
             },
             {
                 "id": "p49",
-                "hash": "1149fb649ba3",
-                "text": "Remedies. Wrongly denied claims get automatic compensation (late fee + apology + fast-track). Escrow funds claims the sa"
+                "hash": "72d563d0cf72",
+                "text": "Remedies. Wrongly denied claims get automatic compensation (a late-payment supplement paid to the claimant + apology + f"
             },
             {
                 "id": "p50",
@@ -613,7 +573,7 @@
             },
             {
                 "id": "p51",
-                "hash": "e25e5e06f398",
+                "hash": "cdb9ec479447",
                 "text": "The 2024 Taiwan deepfake-scam Assembly brought together 447 citizens, invited at scale then stratified among those who o"
             },
             {
@@ -3683,8 +3643,8 @@
             },
             {
                 "id": "p4",
-                "hash": "c2058ecff5a0",
-                "text": "These six measures are the authors’ proposals for public evaluation, not validated measurement standards. Their definiti"
+                "hash": "08eb066c0258",
+                "text": "These six measures are our proposals for public evaluation, not validated measurement standards. Their definitions and t"
             },
             {
                 "id": "p5",
@@ -3863,8 +3823,8 @@
             },
             {
                 "id": "p40",
-                "hash": "3f2df9e5b189",
-                "text": "Training signals are not the public audit. Cross-group endorsement may inform model tuning or routing, but its public, c"
+                "hash": "58a9a1b5da8c",
+                "text": "Training signals are not the public audit. Cross-group endorsement may inform model tuning or routing, but its public-fa"
             },
             {
                 "id": "p41",
@@ -4128,53 +4088,28 @@
             },
             {
                 "id": "p41",
-                "hash": "c12338682569",
-                "text": "單一指標主導一切。 參與度上升，信任度下降。"
-            },
-            {
-                "id": "p42",
-                "hash": "2aa52d6384db",
-                "text": "修復方案： 使用一組平衡指標，並輪換由哪一項帶頭。"
+                "hash": "b7a435bb8059",
+                "text": "單一指標主導一切。 參與度上升，信任度下降。解方：使用一組平衡指標，並輪換由哪一項帶頭。"
             },
             {
                 "id": "p43",
-                "hash": "9a684447c9fc",
-                "text": "傾聽劇場。 報告光鮮亮麗，結果卻一成不變——正是 Arnstein 參與階梯上「象徵性參與」的那一階。"
-            },
-            {
-                "id": "p44",
-                "hash": "5ede50ed90f9",
-                "text": "修復方案： 真正的決策關卡、外部否決權，以及抽查。"
+                "hash": "1c4cb8115afc",
+                "text": "傾聽劇場。 報告光鮮亮麗，結果卻一成不變——正是 Arnstein 參與階梯上「象徵性參與」的那一階。解方：真正的決策關卡、外部否決權，以及抽查。"
             },
             {
                 "id": "p45",
-                "hash": "e43e1fef9472",
-                "text": "大聲者主導。 資金充足的團體佔據管道。"
-            },
-            {
-                "id": "p46",
-                "hash": "7d761420588e",
-                "text": "修復方案： 限流、公平配額、公開注意力儀表板。"
-            },
-            {
-                "id": "p47",
-                "hash": "19c7e641c22b",
-                "text": "先發者鎖定框架。 早期語言被固定。"
+                "hash": "ebc0eda5c67c",
+                "text": "大聲者主導。 資金充足的團體佔據管道。解方：限流、公平配額、公開注意力儀表板。"
             },
             {
                 "id": "p48",
-                "hash": "92b58a0b1d23",
-                "text": "修復方案： 滾動式視窗，提高後期提出、但具重要性的觀點的優先權。"
-            },
-            {
-                "id": "p49",
-                "hash": "599b83baf747",
-                "text": "虛假等價。 將有害主張視為同等正當。"
+                "hash": "b940655c8daf",
+                "text": "先發者鎖定框架。 早期語言被固定。解方：滾動式視窗，提高後期提出、但具重要性的觀點的優先權。"
             },
             {
                 "id": "p50",
-                "hash": "e7531ea22068",
-                "text": "修復方案： 將事實與價值觀分開，維護基本權利，拒絕虛假對等。"
+                "hash": "34d09c41f9bc",
+                "text": "虛假等價。 將有害主張視為同等正當。解方：將事實與價值觀分開，維護基本權利，拒絕虛假對等。"
             },
             {
                 "id": "p51",
@@ -4182,29 +4117,14 @@
                 "text": "合成公眾灌爆。 最難的失敗模式不是冷漠，而是大規模的假參與。在加州，南海岸空氣品質管理區（South Coast AQMD）的瓦斯設備規則制定，收到超過 20,000 則反對意見，這些意見是透過一個宣傳 AI 工具的倡議平台送出的。Los "
             },
             {
-                "id": "p52",
-                "hash": "8f58b108f30b",
-                "text": "修復方案： 來源證明、速率限制、可問責的參與資格、選擇性揭露身分（團結力 Pack 5），以及能區分表達與放大的稽核軌跡——發言權屬於人類；被演算法倍增的權利不屬於任何人。"
-            },
-            {
                 "id": "p53",
-                "hash": "4f0295b25c3f",
-                "text": "被權力劫持。 監督機制往往向最不希望受到審查的人靠攏。"
-            },
-            {
-                "id": "p54",
-                "hash": "38693c9d3d11",
-                "text": "修復方案： 保持監督獨立、裁決公開、資金透明、成員定期更替。"
+                "hash": "c1049749aaaa",
+                "text": "被權力劫持。 監督機制往往向最不希望受到審查的人靠攏。解方：保持監督獨立、裁決公開、資金透明、成員定期更替。"
             },
             {
                 "id": "p55",
-                "hash": "23d5199388b2",
-                "text": "程序性俘獲。 流程領域的專業人士會摸熟提交規範；資源充足的組織會占據排隊的優先位置。"
-            },
-            {
-                "id": "p56",
-                "hash": "88c93031943f",
-                "text": "修復方案： 資助參與——有薪時間、托育、翻譯、社區中介——並追蹤誰缺席，而非僅追蹤誰出席。"
+                "hash": "caabd5702e7f",
+                "text": "程序性俘獲。 流程領域的專業人士會摸熟提交規範；資源充足的組織會占據排隊的優先位置。解方：資助參與——有薪時間、托育、翻譯、社區中介——並追蹤誰缺席，而非僅追蹤誰出席。"
             },
             {
                 "id": "p57",
@@ -4282,7 +4202,7 @@
                 "text": "完整足跡與每一筆來源的貢獻，見〈文獻與延伸閱讀〉。"
             }
         ],
-        "retired": []
+        "retired": ["p42", "p44", "p46", "p47", "p49", "p52", "p54", "p56"]
     },
     "/tw/2/": {
         "units": [
@@ -4523,13 +4443,13 @@
             },
             {
                 "id": "p48",
-                "hash": "1db6d0bd46e9",
-                "text": "暫停。 夜班勞工眾多的行政區 24 小時內駁回率達 31%——Elena 的索賠也在其中，因缺少紙本租約而被拒絕。監督委員會點擊暫停；舊的「30 天證明」規則回滾；緊急支付使用可撤回的預設標準。"
+                "hash": "e885c2d01e49",
+                "text": "暫停。 夜班勞工眾多的行政區 24 小時內駁回率達 31%——Elena 的索賠也在其中，因缺少紙本租約而被拒絕，因為舊的「30 天證明」規則仍在運作，無視剛採納的鄰居證詞。監督委員會點擊暫停；這條規則回滾；緊急支付使用可撤回的預設標準。"
             },
             {
                 "id": "p49",
-                "hash": "16f3baae82ce",
-                "text": "補救措施。 錯誤拒絕的索賠自動獲得賠償（滯納金 + 道歉 + 快速通道）。託管資金在當天支付賠償。"
+                "hash": "539412a99626",
+                "text": "補救措施。 錯誤拒絕的索賠自動獲得賠償（付給申請人的遲延補償金 + 道歉 + 快速通道）。託管資金在當天支付賠償。"
             },
             {
                 "id": "p50",
@@ -4538,7 +4458,7 @@
             },
             {
                 "id": "p51",
-                "hash": "554d97596d89",
+                "hash": "7bc978d6d4a7",
                 "text": "2024 年臺灣深偽詐騙對齊大會召集了 447 位公民（大規模邀請後，再從自願報名者中分層抽選），在 Stanford Online Deliberation Platform 上分成 44 個審議式民調小組，採用與集體智慧計畫共同發展的對"
             },
             {
@@ -7608,8 +7528,8 @@
             },
             {
                 "id": "p4",
-                "hash": "c771d934a0dd",
-                "text": "這六項指標是作者提出的公共評估方法，並非已經驗證的測量標準。定義與門檻都需要和受影響的人一起檢驗。"
+                "hash": "1085f203e3ec",
+                "text": "這六項指標是我們提出的公共評估方法，並非已經驗證的測量標準。定義與門檻都需要和受影響的人一起檢驗。"
             },
             {
                 "id": "p5",
@@ -7788,8 +7708,8 @@
             },
             {
                 "id": "p40",
-                "hash": "4860e991eb18",
-                "text": "訓練訊號不是公開稽核。 跨群體背書可以拿來做模型微調或路由，但在這套框架對外、對會議聽眾的公開角色裡，它屬於 Pack 5 的罕見共識指數。Pack 4 衡量的是受影響者能否糾正系統，以及修復是否恢復了信任。"
+                "hash": "0bdf15d04bdb",
+                "text": "訓練訊號不是公開稽核。 跨群體背書可以拿來做模型微調或路由，但在這套框架對外的公開角色裡，它屬於 Pack 5 的罕見共識指數。Pack 4 衡量的是受影響者能否糾正系統，以及修復是否恢復了信任。"
             },
             {
                 "id": "p41",
