@@ -83,7 +83,7 @@ These six measures are our proposals for public evaluation, not validated measur
 <dl class="instrument-card__specs">
 <div><dt>Traditional Mandarin name</dt><dd>失利下的信任</dd></div>
 <div><dt>Diagnostics</dt><dd>Appeal closure time; repair completion rate; correction throughput ratio; correction backlog depth and age; harm recurrence within 90 days.</dd></div>
-<div><dt>Refuses</dt><dd>Counts only when tied to accountable identity and corroborated by an independent signal — a return to the service, a withdrawn appeal, a third party who can attest — never a sentiment a campaign can manufacture, since self-reported trust after a repair can be astroturfed by the very actor who caused the harm.</dd></div>
+<div><dt>Refuses</dt><dd>Counts only when tied to accountable identity and corroborated by an independent signal — a return to the service, an appeal withdrawn because the repair settled it (not abandoned from exhaustion), a third party who can attest — never a sentiment a campaign can manufacture, since self-reported trust after a repair can be astroturfed by the very actor who caused the harm.</dd></div>
 <div><dt>Threshold</dt><dd>Defined by each deployment context — "good enough" for that community.</dd></div>
 <div><dt>Read as</dt><dd>A public test, not a totalising score.</dd></div>
 </dl>
@@ -150,7 +150,7 @@ Each headline measure names not only what it rewards but what it must refuse, so
 - **Representation gap (Pack 1).** Counts only when the least-heard groups gain real standing in the record, never when a gap narrows by averaging dissenters into the middle.
 - **Promise fidelity (Pack 2).** Rewards promises that are owned and honoured, never promises that are merely well-worded, so a high score requires authority and funding that match the duty rather than language that gestures at it.
 - **Verified execution rate (Pack 3).** Rises only when traces are reconstructable by an independent auditor and canaries cover the cases they claim to cover, never when the system passes on easy cases and calls the ceremony proof. Operational controls are not a safety proof.
-- **Trust-under-loss (Pack 4).** Counts only when tied to accountable identity and corroborated by an independent signal — a return to the service, a withdrawn appeal, a third party who can attest — never a sentiment a campaign can manufacture, since self-reported trust after a repair can be astroturfed by the very actor who caused the harm.
+- **Trust-under-loss (Pack 4).** Counts only when tied to accountable identity and corroborated by an independent signal — a return to the service, an appeal withdrawn because the repair settled it (not abandoned from exhaustion), a third party who can attest — never a sentiment a campaign can manufacture, since self-reported trust after a repair can be astroturfed by the very actor who caused the harm.
 - **Uncommon-ground index (Pack 5).** Rewards groups that listen across lines, never groups that fall silent, and never a room curated into agreement — the index is read against Pack 1's representation gap, because the cheapest way to raise co-endorsement is to exclude whoever would withhold it. A floor protects standing opposition, so the measure does not pathologise legitimate, sustained disagreement by treating a persistent minority as a failure to engineer away.
 - **Exit readiness (Pack 6).** Counts only when a system can hand off or shut down on schedule without rights loss, continuity failure, or recentralisation, never when exit exists only on paper.
 

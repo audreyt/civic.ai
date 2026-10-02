@@ -39,8 +39,8 @@
         "tier": "diagnosis",
         "term_en": "relational health",
         "term_tw": "關係健康度",
-        "def_en": "A diagnostic category for the quality of relationships Civic AI aims to support: not a slogan, and not a substitute for safety or ethics. Safety prevents bad outcomes; ethics follows principles; health asks whether the relationship can actively flourish. Four relations are in view: people to people (how AI mediates human relationships); people to technology providers (two-way accountability across a power asymmetry); people to AI (trust cannot be built on sycophancy); and AI systems and their operators to one another (what they can share, and how failures travel). Four conditions must be continuously maintained: transparency (what attentiveness needs), agency (responsibility in institutional form), accountability (what competence makes possible), and reciprocity (what responsiveness enables). Relational health is not a property a system either has or lacks.",
-        "def_tw": "一種診斷類別，用來看仁工智慧所要支撐的關係品質。它不是口號，也不能取代安全或倫理。安全防止壞結果；倫理遵循原則；健康則問這段關係能否主動蓬勃。涉及四種關係：人與人（AI 如何中介人際關係）、人與科技供應商（跨越權力不對稱的雙向問責）、人與 AI（信任無法建立在逢迎上）、AI 系統及其營運者彼此之間（能分享什麼、失敗如何傳播）。四項條件必須持續維持：透明度（覺察力所需）、能動性（負責力的制度形式）、問責（勝任力使之可能）、互惠（回應力使之實現）。關係健康度不是系統有或沒有的單一屬性。",
+        "def_en": "A diagnostic category for the quality of relationships Civic AI aims to support: not a slogan, and not a substitute for safety or ethics. Safety prevents bad outcomes; ethics follows principles; health asks whether the relationship can actively flourish. Four relations are in view: people to people (how AI mediates human relationships); people to technology providers (two-way accountability across a power asymmetry); people to AI (trust cannot be built on sycophancy); and AI systems and their operators to one another (what they can share, and how failures travel). Four conditions must be continuously maintained: transparency (what attentiveness needs), agency (responsibility in institutional form), accountability (answerability that competence's traces make checkable), and reciprocity (what responsiveness enables). Relational health is not a property a system either has or lacks.",
+        "def_tw": "一種診斷類別，用來看仁工智慧所要支撐的關係品質。它不是口號，也不能取代安全或倫理。安全防止壞結果；倫理遵循原則；健康則問這段關係能否主動蓬勃。涉及四種關係：人與人（AI 如何中介人際關係）、人與科技供應商（跨越權力不對稱的雙向問責）、人與 AI（信任無法建立在逢迎上）、AI 系統及其營運者彼此之間（能分享什麼、失敗如何傳播）。四項條件必須持續維持：透明度（覺察力所需）、能動性（負責力的制度形式）、問責（勝任力的軌跡讓這份答責得以查核）、互惠（回應力使之實現）。關係健康度不是系統有或沒有的單一屬性。",
         "aliases_tw": ["關係健康"]
     },
     {
@@ -98,8 +98,8 @@
         "tier": "architecture",
         "term_en": "6-Pack of Care",
         "term_tw": "關懷六力",
-        "def_en": "Our adaptation of Joan Tronto's care ethics into six design primitives for AI governance: Attentiveness, Responsibility, Competence, Responsiveness, Solidarity, and Symbiosis. The first four form a feedback loop; the fifth adapts caring with across organisations. Symbiosis is our sixth principle, not a sixth phase proposed by Tronto: deployments should remain local, plural, and sunset-ready. See <a href=\"/sources/\">Sources</a>.",
-        "def_tw": "我們將 Joan Tronto 的關懷倫理學轉化為 AI 治理的六項設計要素：覺察力、負責力、勝任力、回應力、團結力、共生力。前四力構成回饋迴圈；第五力將共同關懷延伸到跨組織協作。共生力是我們提出的第六項原則，不是 Tronto 提出的第六階段：部署應保持在地、多元、可退場。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。"
+        "def_en": "Our adaptation of Joan Tronto's care ethics into six design principles for AI governance: Attentiveness, Responsibility, Competence, Responsiveness, Solidarity, and Symbiosis. The first four form a feedback loop; the fifth adapts caring with across organisations. Symbiosis is our sixth principle, not a sixth phase proposed by Tronto: deployments should remain local, plural, and sunset-ready. See <a href=\"/sources/\">Sources</a>.",
+        "def_tw": "我們將 Joan Tronto 的關懷倫理學轉化為 AI 治理的六項設計原則：覺察力、負責力、勝任力、回應力、團結力、共生力。前四力構成回饋迴圈；第五力將共同關懷延伸到跨組織協作。共生力是我們提出的第六項原則，不是 Tronto 提出的第六階段：部署應保持在地、多元、可退場。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。"
     },
     {
         "id": "corrective-loop",
@@ -188,8 +188,8 @@
         "tier": "design",
         "term_en": "two lanes",
         "term_tw": "兩條車道",
-        "def_en": "Governance at two speeds: a slow lane sets the Engagement Contract, independent oversight and prefunded remedies; a fast sandbox lane learns within tighter bounds and shorter cycles. The sandbox contains the cost of error, not a route around obligations. See <a href=\"/2/\">Responsibility</a>.",
-        "def_tw": "讓治理以兩種速度運作：慢車道訂立參與契約、獨立監督與預先備妥的補救資金；快車道的沙盒則在更窄界限與更短週期內學習。沙盒是為了控制犯錯的代價，不是繞過義務的捷徑。見〈<a href=\"/tw/2/\">負責力</a>〉。"
+        "def_en": "Governance at two speeds: a slow lane sets the bounds — the Engagement Contract, red lines, severity classes, pause triggers, independent oversight and prefunded remedies; a fast lane acts inside them at machine speed, under precommitted brakes, shadow modes, canaries and reversible defaults. Which lane a decision belongs in depends on what happens if it is wrong. This is a different split from Pack 2's contract or sandbox, which separates big changes from small, safe-to-fail experiments; a sandbox contains the cost of error, not a route around obligations. See <a href=\"/faq/#faq-5\">FAQ Q5</a> and <a href=\"/3/\">Competence</a>.",
+        "def_tw": "讓治理以兩種速度運作：慢車道訂立界限——參與契約、紅線、嚴重等級、暫停觸發條件、獨立監督與預先備妥的補救資金；快車道在界限之內以機器速度行動，受預先承諾的煞車、影子模式、金絲雀測試與可撤回預設約束。一項決定該走哪條車道，看的是它出錯會怎樣。這與負責力的「契約或沙盒」是不同的區分：後者分開重大變更與小型、可安全失敗的實驗；沙盒是為了控制犯錯的代價，不是繞過義務的捷徑。見〈<a href=\"/tw/faq/#faq-5\">問答 Q5</a>〉與〈<a href=\"/tw/3/\">勝任力</a>〉。"
     },
     {
         "id": "promise-fidelity",
@@ -324,8 +324,8 @@
         "tier": "design",
         "term_en": "trust-under-loss",
         "term_tw": "失利下的信任",
-        "def_en": "The Responsiveness measure: after a bad outcome and attempted repair, do affected people report that the system became more trustworthy rather than less. It counts only when tied to accountable identity and corroborated by an independent signal — a return to the service, a withdrawn appeal, a third party who can attest — never self-reported sentiment alone, which the very actor who caused the harm can manufacture. Procedural-justice research is the ground it stands on; the measure is an application to test, not a guarantee. See <a href=\"/sources/\">Sources</a>.",
-        "def_tw": "回應力的衡量：在發生不良結果並嘗試修復之後，受影響者是否覺得系統比原先更值得信任，而不是更不值得。只有繫於可問責身分、並有獨立訊號佐證——重新使用服務、撤回申訴、可作證的第三方——才算數；自陳感受本身不算，因為造成傷害的行為者最能製造這種感受。程序正義研究是它的立足之地；這項衡量是有待檢驗的應用，不是保證。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。",
+        "def_en": "The Responsiveness measure: after a bad outcome and attempted repair, do affected people report that the system became more trustworthy rather than less. It counts only when tied to accountable identity and corroborated by an independent signal — a return to the service, an appeal withdrawn because the repair settled it (not abandoned from exhaustion), a third party who can attest — never self-reported sentiment alone, which the very actor who caused the harm can manufacture. Procedural-justice research is the ground it stands on; the measure is an application to test, not a guarantee. See <a href=\"/sources/\">Sources</a>.",
+        "def_tw": "回應力的衡量：在發生不良結果並嘗試修復之後，受影響者是否覺得系統比原先更值得信任，而不是更不值得。只有繫於可問責身分、並有獨立訊號佐證——重新使用服務、因修復已了結而撤回（而非心力耗盡而放棄）的申訴、可作證的第三方——才算數；自陳感受本身不算，因為造成傷害的行為者最能製造這種感受。程序正義研究是它的立足之地；這項衡量是有待檢驗的應用，不是保證。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。",
         "aliases_en": ["Trust-under-loss"]
     },
     {

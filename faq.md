@@ -482,7 +482,7 @@ Several of the site's working terms belong to named authors too: bridging-based 
 
 What the framework adds is narrower and, we think, still worth having. First, the unit of analysis: van Wynsberghe evaluated one artefact in one practice; the 6-Pack governs a deployed system answerable to a room, which is why it needs instruments that an artefact does not (the engagement contract, the brake, the obligation and override ledgers, and shadow mode read as apprenticeship). Second, the passes AI adds to Tronto's list (complexity, distribution, speed, and community knowledge), named as such ([Pack 2](../2/)).
 
-Third, the sixth practice, symbiosis, as a boundary condition on the other five: a rule that even well-governed care must stay bounded, plural, and sunset-ready ([Pack 6](../6/)). Fourth, the six headline public measures and what each refuses to reward ([Measures](../measures/)). And fifth, the Kami as the unit of deployment, with a tier chosen by the consequence of breach rather than by the prestige of isolation ([Set up your own Kami](../kami/)). A framework that asks institutions to show their work should be able to say which parts of its own work were done by others. This one can.
+Third, the sixth pack, symbiosis, as a boundary condition on the other five: a rule that even well-governed care must stay bounded, plural, and sunset-ready ([Pack 6](../6/)). Fourth, the six headline public measures and what each refuses to reward ([Measures](../measures/)). And fifth, the Kami as the unit of deployment, with a tier chosen by the consequence of breach rather than by the prestige of isolation ([Set up your own Kami](../kami/)). A framework that asks institutions to show their work should be able to say which parts of its own work were done by others. This one can.
 
 ---
 
@@ -490,7 +490,7 @@ Third, the sixth practice, symbiosis, as a boundary condition on the other five:
 
 Nothing stops it automatically, and the tradition knows it. Tronto warns that care without attention to the perspective of the person receiving it is not care; it is a projection of the carer's preferences onto a passive recipient. The residential schools that separated Indigenous children from their families were, by many official accounts, expressions of care. So were many psychiatric confinements.
 
-The 6-Pack's answer is structural: responsiveness, the fourth practice, is not optional ([Pack 4](../4/)). Care is not complete when it is given. It is complete when the people receiving it can say whether it helped, and their answer changes what happens next. A system that is attentive, responsible and competent but gives people no way to say "this is not working for me" can drift from care into control without anyone noticing.
+The 6-Pack's answer is structural: responsiveness, the fourth pack, is not optional ([Pack 4](../4/)). Care is not complete when it is given. It is complete when the people receiving it can say whether it helped, and their answer changes what happens next. A system that is attentive, responsible and competent but gives people no way to say "this is not working for me" can drift from care into control without anyone noticing.
 
 Three rules follow.
 

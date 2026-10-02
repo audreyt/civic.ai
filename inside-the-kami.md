@@ -19,7 +19,7 @@ Capability composes: bounding each Kami does not bound what an orchestrator asse
 
 ## In brief
 
-- Recent work from Yoshua Bengio's Scientist AI and the SAI line from LeCun and colleagues points toward bounded, specialised systems rather than one general-purpose governor.
+- Recent work from Yoshua Bengio's Scientist AI and the SAI line from Judah Goldfeder, Yann LeCun and colleagues points toward bounded, specialised systems rather than one general-purpose governor.
 - A third line of work — Tadahiro Taniguchi and colleagues' _Collective Predictive Coding_ (CPC) — offers a theoretical framework for how those bounded systems can negotiate shared meaning with their human communities, rather than receive it from above. The 2026 _Artificial Life_ paper, _Symbiotic Alignment via Collective Predictive Coding: A Theoretical Framework for Co-Creative Human–AI Ecosystems_, which I co-authored, formalises this as _symbiotic alignment_.
 - These three programmes suggest a shared shape: Bengio argues for an honest inside, SAI for a narrow one, and CPC proposes how many such systems could co-construct meaning without a single supervisor. These are research arguments, not deployed care or safety proofs.
 - This convergent shape is not new: Eric Drexler's 2019 _Comprehensive AI Services_ (CAIS), from the same Oxford tradition as Bostrom's _Superintelligence_, already reframed advanced AI as an ecology of bounded, specialised services rather than a single agent. What the 6-Pack adds is the civic layer CAIS leaves open.
@@ -36,12 +36,9 @@ system makes Pack 3 impossible to verify.
 
 Two recent ML programmes — Yoshua Bengio's [Scientist AI](https://lawzero.org/en)
 and the [Superhuman Adaptable Intelligence](https://arxiv.org/abs/2602.23643)
-(SAI) agenda from LeCun and colleagues — converge on a useful design lesson: the best substrate for Civic AI is
+(SAI) agenda from Goldfeder, LeCun and colleagues — converge on a useful design lesson: the best substrate for Civic AI is
 not a universal agent. It is a bounded, specialised system whose action remains
 under human authorisation.
-
-That convergence does not settle politics. It does narrow the technical search
-space.
 
 An honest, narrow substrate is a design goal, not a property conferred on a model by citing these programmes.
 
@@ -79,7 +76,7 @@ where governance belongs.
 
 ## SAI: capability through specialisation
 
-The SAI programme of LeCun and colleagues attacks a different myth: that the right goal is one
+The SAI programme of Goldfeder, LeCun and colleagues attacks a different myth: that the right goal is one
 general intelligence good at everything.
 
 Its case is mathematical before it is political. The [No Free Lunch theorem](https://doi.org/10.1109/4235.585893) — a
@@ -89,8 +86,9 @@ negative transfer when tasks compete for the same representational capacity.
 Even models that look general often hide specialisation internally, routing
 different tasks to different subsystems.
 
-The slogan version is memorable because it is correct: **the AI that folds our
-proteins should not be the AI that folds our laundry.**
+The slogan goes further than the theorem, which proves nothing about any particular
+pair of tasks, but it names the lesson: **the AI that folds our proteins should
+not be the AI that folds our laundry.**
 
 For Civic AI, the implication is direct. A Kami — **k**nowledge **a**rtefact **m**anagement **i**ntelligence; the word came first, the initials caught up — should not be a mini-sovereign mind roaming across domains. It should be a specialist: good at one class of
 community work, replaceable when its job changes, and unable to turn local
@@ -108,10 +106,10 @@ The dominant alignment paradigm answers this top-down. A supervisor — a single
 
 CPC offers a different formulation: _symbiotic alignment_. Treat the population of agents — humans and AIs together — as a _symbol-emergence system_. Each agent has its own internal states and its own observations of the world, and the group as a whole maintains a shared communicative variable — language, norms, categories, a Polis cluster label, a deliberation outcome. The total collective free energy of the system — a single measure of how badly, taken together, the agents' predictions fit the world and each other — splits into two parts:
 
-- an **individual** part, where each agent minimises its own prediction error about the world and keeps its internal state consistent with the shared symbols — the familiar territory of standard multi-agent reinforcement learning
+- an **individual** part, where each agent minimises its own prediction error about the world and keeps its internal state consistent with the shared symbols
 - a **collective** part that pulls the shared symbol system toward coherence across the population
 
-The collective term is the new object. Mathematically, it cannot be rewritten as a sum of agent-wise utilities: it is irreducibly population-level. A single agent acting purely in its own interest cannot minimise it; only the group can, through communication. This is the formal statement of why solidarity ([Pack 5](/5/)) is not optional and not reducible to individual virtue.
+The collective term is the new object. Mathematically, it cannot be rewritten as a sum of agent-wise terms: it is irreducibly population-level. A single agent acting purely in its own interest cannot minimise it; only the group can, through communication. In this model, that is one formal way to say why solidarity ([Pack 5](/5/)) is not reducible to individual virtue. It is a modelling choice, not a proof that solidarity is required.
 
 Crucially, this negotiation does not require a central coordinator. The paper shows that decentralised turn-taking dialogue — a speaker samples a message, a listener accepts or rejects it based on its own observation, and the group iterates — is mathematically equivalent to a _Metropolis–Hastings Naming Game_ (MHNG), which is a form of Markov Chain Monte Carlo — a standard method for approximating a hard probability calculation by taking many small, locally judged steps. Shared symbols emerge from local accept/reject exchanges in a way that provably approximates Bayesian inference over the collective posterior.
 
@@ -151,7 +149,7 @@ adopt-or-explain duties.
 **Pack 3: Competence.** Better-calibrated uncertainty makes decision traces
 more honest. A trace that says "0.92 likely" should mean what it says. But
 Pack 3 is broader than prediction quality. Sandboxing, least power, data
-minimalism and graduated release remain operational duties. CPC offers one further analogy: an apprentice that learns through accept/reject turn-taking with its cultivator — the Apprentice Model of shadow mode, canary and general release — can be read as approximate Bayesian inference. Apprenticeship remains a civic practice; the maths is a correspondence, not a proof that shadow-mode deployment has known convergence limits in the field.
+minimalism and graduated release remain operational duties. CPC offers one further analogy: an apprentice that learns through accept/reject turn-taking with its cultivator — the Apprentice Model of shadow mode, canary and general release — can be read as approximate Bayesian inference. The analogy has a limit: the naming game is symmetric, each side taking turns to propose and to judge, while the apprentice relation is not, because the cultivator holds the brake. It covers the learning, not the authority. Apprenticeship remains a civic practice; the maths is a correspondence, not a proof that shadow-mode deployment converges in the field.
 
 **Pack 4: Responsiveness.** A truth-tracking model gives cleaner failure
 analysis: was the factual judgement wrong, was uncertainty miscalibrated or was
@@ -210,6 +208,11 @@ Put the pieces together and a plausible technical substrate comes into view:
 
 This is what I mean by a **Kami of Care**: not a universal governor, but a
 civic instrument that is trustworthy inside and accountable outside.
+
+That is a direction, not today's setup. The Kami on the [setup page](/kami/) runs
+an ordinary open-weight model inside OpenClaw, an agent runtime, so its tools
+and actions are exactly what needs explicit governance. What makes it a Kami is
+its bound and its keepers, not its core.
 
 It is not the only possible substrate. It is simply the strongest one now in
 view. Bengio helps explain how the inside can stay honest. LeCun helps explain

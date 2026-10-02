@@ -196,7 +196,7 @@ Solidarity and plurality scale when cooperation is the path of least resistance.
 
 This requires agent infrastructure — a civic stack where people, organisations, and AIs operate under explicit, machine-checkable norms.
 
-One example is an **Agent ID registry** using **selective-disclosure identity** — sometimes called meronymity — which allows us to identify if an agent is tethered to a real human without doxing that human. The Taiwan KYC ad requirement is a prototype of this infrastructure.
+One example is an **Agent ID registry** using **selective-disclosure identity** — sometimes called meronymity — which allows us to identify if an agent is tethered to a real human without doxing that human. The Taiwan KYC ad requirement is a precursor rather than a prototype: it ties each advert to a verified payer, the accountability half, while selective disclosure would add the half real-name rules lack, proving that tie without exposing more identity than the context needs.
 
 The infrastructure makes decentralised defence easier and more dominant, making interdependence a feature, not a bug.
 

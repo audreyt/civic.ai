@@ -32,6 +32,8 @@ Taiwan's [Fraud Crime Hazard Prevention Act](https://law.moj.gov.tw/ENG/LawClass
 
 The Habermolt entries below record exchanges between AI agents. Their rankings can prompt further questions, but cannot establish public consent, represent a population or validate the 6-Pack.
 
+Several of these cases involve us. Some entries say so where they appear; here they are in one place. Audrey was Taiwan's digital minister when the 2024 Assembly ran, and the public pledge it answered to was hers. She is a senior research fellow at the Collective Intelligence Project, whose Alignment Assemblies, Weval, Global Dialogues and Jhilmil appear on this page. She co-authored _Plurality_, the Taniguchi paper on symbiotic alignment, the _Science_ paper on AI swarms and "Sunset Section 230", and she developed jdd-kami, the drafting system behind "A Gentle Bridge", with Tenzin Yangtso. Weigh those entries with that in mind.
+
 ### The care-ethics foundation
 
 Berenice Fisher and Joan Tronto distinguished four phases in 1990: caring about, taking care of, care-giving and care-receiving. In _Moral Boundaries_, Tronto associated them with attentiveness, responsibility, competence and responsiveness. _Caring Democracy_ added caring with, including democratic commitments to plurality, communication, trust and respect. We adapt caring with as Pack 5, Solidarity, and propose symbiosis as Pack 6. The phases, moral elements and our adaptation are related, but not interchangeable.
@@ -189,7 +191,7 @@ The named cases carry more weight here than any single paper, so their own recor
 
     Shared software can give local human operators incident-investigation and review capacity without centralising moderation policy. These records do not establish federated model training or measured harm reduction.
 
-- **Unpaid carers.** [Dedicate](https://dedicate.life). — A live assistant that surfaces content supplied by named care organisations and declines what falls outside it, the boundary van Wynsberghe's 2016 paper draws. Its reach, its indexed directory and its content partners are not published.
+- **Unpaid carers.** [Dedicate](https://dedicate.life). — A live assistant that surfaces content it credits to care organisations in its answers and declines what falls outside it, the boundary van Wynsberghe's 2016 paper draws. Its reach, its indexed directory and a full list of its content partners are not published.
 
     Bounded to England within the U.K., the assistant makes attributable support easier to find and redirects questions beyond its remit; it is not an open-domain medical adviser. An observed off-topic refusal shows a boundary, not the quality of in-scope help or real-world impact.
 
@@ -249,6 +251,6 @@ These are contributions to our drafting history, not independent tests of the fr
 
 ### What is ours
 
-Naming the ancestors makes the additions easier to see. What the book and this site claim as their own: the sixth practice, symbiosis, as a boundary condition on the other five; the Kami as the unit of deployment and the trust-and-sovereignty spectrum for choosing its tier; the engagement contract, the brake, the obligation and override ledgers, and shadow mode read as apprenticeship; the six headline public measures and what each refuses to reward.
+Naming the ancestors makes the additions easier to see. What the book and this site claim as their own: the sixth pack, symbiosis, as a boundary condition on the other five; the Kami as the unit of deployment and the trust-and-sovereignty spectrum for choosing its tier; the engagement contract, the brake, the obligation and override ledgers, and shadow mode read as apprenticeship; the six headline public measures and what each refuses to reward.
 
 They also claim the move from the design of one artefact to the governance of a deployed system in a public room, a step van Wynsberghe's framework did not need to make, with the passes AI adds to Tronto's list (complexity, distribution, speed, and community knowledge) named as such. Some of what is ours was not ours alone: the Collective Intelligence Project's programme is where one of us works, and the six Habermolt rooms listed above argued several of these claims into their present shape.
