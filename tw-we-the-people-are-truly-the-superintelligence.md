@@ -203,4 +203,4 @@ _場內的 AI 處理發言順序、時間與逐字稿；公開紀錄並未顯示
 
 _Engaged California 公開的意見、復原計畫與報告，記錄的是一個過程，並不證明某些構想造成了某些行政成果。AB 2103 於 2026 年 9 月 19 日簽署，使它自 2027 年 1 月 1 日起成為法定計畫，仍受撥款限制。猶他州《數位選擇法》並非全在 2027 年才開始：§13-81-201 的個人資料可攜性已於 2026 年 7 月 1 日生效，H.B. 408 的持續即時轉送則自 2027 年 7 月 1 日起實施。_
 
-_ROOST 的 Osprey 與 Coop 可自行託管與調整，政策與資料留在本地。ROOST 另經營 [ROOST 模型社群](https://github.com/roostorg/model-community)（ROOST Model Community），把實務工作者與開放權重安全模型的開發者直接連結起來：OpenAI 的 gpt-oss-safeguard、Mistral 的 Shieldstral、Roblox 的分類器等，平台都能自行託管，其中數款依平台自訂的政策運作，實務心得也回饋給各模型的開發者。這是共用的模型搭配在地的政策，並非在地訓練的聯邦式模型；其公開紀錄也不是成效驗證。_
+_ROOST 的 Osprey 與 Coop 可自行託管與調整，政策與資料留在本地。ROOST 另經營 [ROOST 模型社群](https://github.com/roostorg/model-community)（ROOST Model Community），把實務工作者與開放權重安全模型的開發者直接連結起來：OpenAI 的 gpt-oss-safeguard、Mistral 的 Shieldstral、Roblox 的分類器等，平台都能自行託管，其中數款依平台自訂的政策運作，實務心得也回饋給各模型的開發者。這是共用的模型搭配在地的政策。這個社群本身不訓練模型，它是發布與實務層，讓以聯邦學習訓練安全模型變得可行。其公開紀錄也不是成效驗證。_

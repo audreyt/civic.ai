@@ -111,7 +111,7 @@ The reply to that objection is not a sixth case from the same soil. It is recurr
 
 Lifting the Voices of Older Persons is a listening effort still finding its footing. Its working title, institutional home and geography are still unsettled. The effort sets out to carry older people's priorities into a United Nations instrument on their rights. The 6-Pack is the contract that project must be held to, not a receipt it has earned.
 
-Monlam's public record supports community-rooted language tools, not formal collective control of every model. ROOST shows that shared safety tools can be self-hosted; it does not yet show a federated AI network.
+Monlam's public record supports community-rooted language tools, not formal collective control of every model. ROOST shows that shared safety tools can be self-hosted, and its [Model Community](https://github.com/roostorg/model-community) is the distribution and practice layer that makes federated training of safety models feasible.
 
 ## Publications
 

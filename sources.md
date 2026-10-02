@@ -188,7 +188,7 @@ The named cases carry more weight here than any single paper, so their own recor
 
     This is an institution building language tools, not evidence for a single tiny model. The practical aim is to keep Tibetan knowledge usable in Tibetan; claims about dataset ownership, licensing and consent still need project documentation.
 
-- **Online safety.** [ROOST](https://roost.tools). — Open-source, self-hostable incident-response and moderation tools, with Osprey's product page naming Bluesky, Discord and Matrix as users as of September 2026: the reusable layer Pack 5 points to. Deployment counts, moderation outcomes and benchmarked reductions in harm are not published.
+- **Online safety.** [ROOST](https://roost.tools). — Open-source, self-hostable incident-response and moderation tools, with Osprey's product page naming Bluesky, Discord and Matrix as users as of September 2026: the reusable layer Pack 5 points to. The [ROOST Model Community](https://github.com/roostorg/model-community) adds open-weight safety models from Mila, Mistral, OpenAI, Roblox and Zentropi with policy packs, the distribution and practice layer that makes federated training of safety models feasible. Deployment counts, moderation outcomes and benchmarked reductions in harm are not published.
 
     Shared software can give local human operators incident-investigation and review capacity without centralising moderation policy. These records do not establish federated model training or measured harm reduction.
 
