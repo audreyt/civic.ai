@@ -20,7 +20,7 @@ permalink: "/tw/5/"
 
 先問：「我們離開時，能保住所依靠的人際關係和紀錄嗎？」在要求大家使用某套系統之前，請實際使用的人試著匯出資料，並交接給另一個服務。跨群體合作需要彼此的約定，光用同一套軟體還不夠。
 
-在 Joan Tronto 的《[關懷民主](https://nyupress.org/9780814770344/caring-democracy/)》（頁 23）中，第五階段「共同關懷」要求：關懷需求，以及滿足這些需求的方式，必須與民主對正義、平等、人人自由的承諾一致——這個階段的道德品質是多元、溝通、信任與尊重，她取自 Selma Sevenhuijsen 的《[Citizenship and the Ethics of Care](https://www.routledge.com/Citizenship-and-the-Ethics-of-Care-Feminist-Considerations-on-Justice-Morality-and-Politics/Sevenhuijsen/p/book/9780415170826)》。在仁工智慧裡，團結力提出的是一個結構性問題：這個生態系統的規則，究竟讓合作更容易被實踐，還是反而讓支配更容易？
+在 Joan Tronto 的《[關懷民主](https://nyupress.org/9780814770344/caring-democracy/)》（頁 23）中，第五階段「共同關懷」要求：關懷需求，以及滿足這些需求的方式，必須與民主對正義、平等、人人自由的承諾一致——這個階段的道德品質是多元、溝通、信任與尊重，她取自 Selma Sevenhuijsen 的《[Citizenship and the Ethics of Care](https://www.routledge.com/Citizenship-and-the-Ethics-of-Care-Feminist-Considerations-on-Justice-Morality-and-Politics/Sevenhuijsen/p/book/9780415170826)》；她並在其後加上團結（頁 35）。在仁工智慧裡，團結力提出的是一個結構性問題：這個生態系統的規則，究竟讓合作更容易被實踐，還是反而讓支配更容易？
 
 這個問題也有一種技術上的讀法。[Leibo 及其同事](https://arxiv.org/abs/1702.03037)在 2017 年研究序列社會困境的模擬：各自領取獎勵的智慧體可能合作，也可能背叛，取決於賽局與能力。Trivedi 及其同事的《[唯我超智慧不太可能具備合作性](https://arxiv.org/abs/2606.03237)》探討：在相互依存的行動者之間，單邊最佳化為何可能失敗。Taniguchi 及其同事提出另一種目標：加入任何單一智慧體都無法獨力滿足的集體項。這是團結的一種理論表述，並不證明各自領取獎勵的系統必然極化，也不證明公民合作非得採用這個特定項。
 

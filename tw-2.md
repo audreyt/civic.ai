@@ -30,7 +30,7 @@ permalink: "/tw/2/"
 4. **自力更生擋箭牌。** 「你應該自己透過市場安排關懷。」
 5. **慈善擋箭牌。** 「自願捐款就夠了；不需要集體義務。」
 
-企業也在更大規模上玩同樣的遊戲，把權責層層分散，直到無人可被追究。當擋箭牌在機構規模運作，就成了我們所稱的*不負責機器*（這是我們的用語，不是 Tronto 的；她的用語是擋箭牌與特權式不負責），也就是一個對每項關懷需求都反覆輸出同一個標準答案的國家：「那是你自己的事。你自己想辦法。」仁工智慧（Civic AI）必須拆解這部機器。
+企業也在更大規模上玩同樣的遊戲，把權責層層分散，直到無人可被追究。當擋箭牌在機構規模運作，就成了 Tronto 所說的*不負責機器*（《關懷民主》頁 59–61），也就是一個對每項關懷需求都反覆輸出同一個標準答案的國家：「那是你自己的事。你自己想辦法。」仁工智慧（Civic AI）必須拆解這部機器。
 
 AI 又為這部機器添上自己的擋箭牌。複雜性：系統太精密，沒有任何一個人能為它負責。分散性：在訓練者、部署者與被授權者之間的每個接點，責任都可能被簽字轉手，這就是 Dennis Thompson 在 1980 年命名的[多手問題](https://doi.org/10.2307/1954312)，Helen Nissenbaum 在 1996 年[把它帶進了電腦運算](https://doi.org/10.1007/BF02639315)。速度：系統跑得比治理快，等到有人察覺，問責的時機已經錯過。參與契約就是要讓這些擋箭牌看得見、收得回。
 
@@ -130,7 +130,7 @@ Tronto 也點出她所稱的*關懷赤字*：對關懷的需求太多、照顧�
 
 ### 相關文獻
 
-- Tronto，《[Caring Democracy](https://nyupress.org/9780814770344/caring-democracy/)》（2013），頁 33、46、169–171——五種擋箭牌、對 Lasswell 的改寫，以及這些擋箭牌的收錄；《[Moral Boundaries](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)》（1993），頁 120–121——特權式不負責。
+- Tronto，《[Caring Democracy](https://nyupress.org/9780814770344/caring-democracy/)》（2013），頁 33、46、59–61、169–171——五種擋箭牌、對 Lasswell 的改寫、不負責機器，以及這些擋箭牌的收錄；《[Moral Boundaries](https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415906425)》（1993），頁 120–121——特權式不負責。
 - Tronto，[〈Creating Caring Institutions〉](https://doi.org/10.1080/17496535.2010.484259)（2010）——什麼使機構成為關懷的機構：目的、權力、多元。
 - Bovens，[〈Analysing and Assessing Accountability〉](https://doi.org/10.1111/j.1468-0386.2007.00378.x)（2007）——可問責性作為基本單位。
 - Thompson，[〈The Problem of Many Hands〉](https://doi.org/10.2307/1954312)（1980）；Nissenbaum，[〈Accountability in a Computerized Society〉](https://doi.org/10.1007/BF02639315)（1996）——分散性擋箭牌的舊名。
