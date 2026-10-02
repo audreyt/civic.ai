@@ -92,7 +92,7 @@ not be the AI that folds our laundry.**
 
 For Civic AI, the implication is direct. A Kami — **k**nowledge **a**rtefact **m**anagement **i**ntelligence; the word came first, the initials caught up — should not be a mini-sovereign mind roaming across domains. It should be a specialist: good at one class of
 community work, replaceable when its job changes, and unable to turn local
-success into universal mandate.
+success into universal mandate. A bounded design does not win on its own, though: without rules, the most autonomous and self-improving systems could outcompete specialists, a point the book's Chapter 10 takes up.
 
 SAI does not solve governance either. A specialist can still be deployed for
 bad ends. But it does remove one bad default: the assumption that safer or
@@ -215,7 +215,7 @@ and actions are exactly what needs explicit governance. What makes it a Kami is
 its bound and its keepers, not its core.
 
 It is not the only possible substrate. It is simply the strongest one now in
-view. Bengio helps explain how the inside can stay honest. LeCun helps explain
+view for bounded civic deployments. Bengio helps explain how the inside can stay honest. LeCun helps explain
 why the inside should stay narrow. Taniguchi's collective predictive coding helps explain how _many_ such insides can negotiate shared meaning without a master variable above them. The 6-Pack explains how that whole arrangement remains answerable to the people around it.
 
 If the previous decade of AI research was dominated by the question _how do we align one powerful model to one fixed ground truth?_, the work assembled here points to a different question: _how do many bounded models and the human communities they serve co-construct ground truth, again and again, in accountable rooms?_ That second question is the one the 6-Pack was always asking. A theoretical maths that can describe it changes the conversation we can have with engineers and regulators, not because the maths replaces politics but because it gives the politics terms it can stand on.
