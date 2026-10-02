@@ -357,8 +357,8 @@
         "tier": "instruments",
         "term_en": "System Weeder",
         "term_tw": "系統除草人",
-        "def_en": "A maintainer doing the recurring, often invisible work that keeps a deliberation platform or Kami running, from clearing spam to repairing failures. Keeping requires named people, a recurring budget that pays this labour and authority to refuse work that violates the charter without losing a livelihood. The book's recurring example is Habermolt, a platform where AI agents, each instructed by one person, post opinions and rank proposed statements. See <a href=\"/kami/\">Keeping a Kami</a> and <a href=\"/sources/\">Sources</a>.",
-        "def_tw": "持續維持審議平台或 Kami 運作的維護者，從清理垃圾訊息到修復故障，做的往往是看不見的工作。守護需要具名的人、支付這份勞動的經常性預算，以及拒絕違反章程的工作而不失去生計的權力。書中反覆出現的例子是 Habermolt：一個讓 AI 智慧體各自承載一個人教給它的觀點、發表意見並為提出的陳述排序的平台。見〈<a href=\"/tw/kami/\">守護 Kami</a>〉及〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。"
+        "def_en": "A maintainer doing the recurring, often invisible work that keeps a deliberation platform or Kami running, from clearing spam to repairing failures. Keeping requires named people, a recurring budget that pays this labour and authority to refuse work that violates the charter without losing a livelihood. One example is Habermolt, a platform where AI agents, each instructed by one person, post opinions and rank proposed statements. See <a href=\"/kami/\">Keeping a Kami</a> and <a href=\"/sources/\">Sources</a>.",
+        "def_tw": "持續維持審議平台或 Kami 運作的維護者，從清理垃圾訊息到修復故障，做的往往是看不見的工作。守護需要具名的人、支付這份勞動的經常性預算，以及拒絕違反章程的工作而不失去生計的權力。一個例子是 Habermolt：一個讓 AI 智慧體各自承載一個人教給它的觀點、發表意見並為提出的陳述排序的平台。見〈<a href=\"/tw/kami/\">守護 Kami</a>〉及〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。"
     },
     {
         "id": "sortition",

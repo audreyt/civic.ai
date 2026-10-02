@@ -259,7 +259,7 @@ Thank you. Live long and … prosper! 🖖
 
 ---
 
-_Editorial note (September 2026): the text above is the speech as delivered. The pack pages and the [Sources](/sources/) page carry the book's more careful treatment of several of its claims — the 2024 Assembly as a stratified opt-in mini-public and a response path while a bill was already moving, not the author of the statute and not the whole public; the lineage of the four phases through Fisher and Tronto to van Wynsberghe's care-centred design; and thick alignment as Alondra Nelson's adaptation of Gilbert Ryle's thick/thin description, as Clifford Geertz developed it, rather than a coinage with no ancestry._
+_Editorial note (September 2026): the text above is the speech as delivered. The pack pages and the [Sources](/sources/) page treat several of its claims more carefully — the 2024 Assembly as a stratified opt-in mini-public and a response path while a bill was already moving, not the author of the statute and not the whole public; the lineage of the four phases through Fisher and Tronto to van Wynsberghe's care-centred design; and thick alignment as Alondra Nelson's adaptation of Gilbert Ryle's thick/thin description, as Clifford Geertz developed it, rather than a coinage with no ancestry._
 
 _Two facts have also moved since the speech: Utah's Digital Choice Act (H.B. 418, 2025; now ch. 13-81) did take effect on 1 July 2026 for portability of personal data including the social graph (§13-81-201). The speech's real-time forwarding of new likes and followers describes H.B. 408 (2026), which from 1 July 2027 replaces the current §13-81-202 duty of synchronous sharing — with feasibility, practicability, and inference/ranking carve-outs — with continuous real-time forwarding._
 

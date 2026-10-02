@@ -15,7 +15,7 @@ nav_next:
 
 The 6-Pack describes the governance around a Civic AI. This essay asks a narrower question: what kind of technical substrate makes that governance easier to uphold?
 
-Capability composes: bounding each Kami does not bound what an orchestrator assembles from many. Appendix B of the book therefore requires a named owner and scope for the orchestrator, with a legible per-turn record of which model planned, executed and checked. Composition rights sunset with the Engagement Contract, and oversight must have a way to pause the chain. This is a governance constraint, not a description of an implemented pipeline; observation alone does not guarantee control.
+Capability composes: bounding each Kami does not bound what an orchestrator assembles from many. A bounded design therefore requires a named owner and scope for the orchestrator, with a legible per-turn record of which model planned, executed and checked. Composition rights sunset with the Engagement Contract, and oversight must have a way to pause the chain. This is a governance constraint, not a description of an implemented pipeline; observation alone does not guarantee control.
 
 ## In brief
 
@@ -92,7 +92,7 @@ not be the AI that folds our laundry.**
 
 For Civic AI, the implication is direct. A Kami — **k**nowledge **a**rtefact **m**anagement **i**ntelligence; the word came first, the initials caught up — should not be a mini-sovereign mind roaming across domains. It should be a specialist: good at one class of
 community work, replaceable when its job changes, and unable to turn local
-success into universal mandate. A bounded design does not win on its own, though: without rules, the most autonomous and self-improving systems could outcompete specialists, a point the book's Chapter 10 takes up.
+success into universal mandate. A bounded design does not win on its own, though: without rules, the most autonomous and self-improving systems could outcompete specialists. Who should set those rules is a separate question; one answer is [a standing citizens' assembly for frontier AI](https://www.noemamag.com/let-the-people-decide-the-pace-of-frontier-ai/).
 
 SAI does not solve governance either. A specialist can still be deployed for
 bad ends. But it does remove one bad default: the assumption that safer or

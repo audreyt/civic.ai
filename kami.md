@@ -31,7 +31,7 @@ Before uploading shared material or installing anything for the group, hold a me
 
 People who cannot attend need named proxies with real authority to override on their behalf. If the room cannot answer these questions, pause. Choosing no AI is legitimate. If the room cannot afford the people, resources and authority needed to keep it answerable, a different tool cannot solve that problem. The people remain the carers; the Kami is a bounded helper.
 
-These questions come from Appendix A of the book. Its archetypes and labelled teaching examples are design aids, not validated product assurances. The [source trail](/sources/) distinguishes proposals from evidence.
+These questions, the archetypes and the labelled teaching examples are design aids, not validated product assurances. The [source trail](/sources/) distinguishes proposals from evidence.
 
 Here is what that looks like in a normal week. The residents' group asks: what did we actually agree at last month's meeting? The Kami should read the source note, mark what it cannot find and leave people to check the answer. A teacher asks: what confused the class most this week? A small charity asks: what did we promise our funders, and when? Its memory is only as useful as the notes it can read and the corrections people make. Switching it off is not deletion: humans must review local records, remote copies and backups under the agreed retention terms.
 
@@ -121,7 +121,7 @@ Shutdown does not by itself delete local files, remote copies or backups. On the
 
 ### When to pause or retire
 
-Appendix A names five warning signs:
+Watch for five warning signs:
 
 - The room no longer needs the helper.
 - A keeper leaves without a named successor.
