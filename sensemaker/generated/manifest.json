@@ -27,9 +27,9 @@
             "sha256": "f45a4a8782df22b6f7eace8c45f50d21d92d2596c2328c2b1adef74da25ca938"
         },
         "generatorLib": {
-            "bytes": 31208,
             "path": "sensemaker/src/lib.mjs",
-            "sha256": "29d612619c2fa3e49b2aad939ad719c62d62a0968aa62f65c625daac6a60b550"
+            "bytes": 31646,
+            "sha256": "1dc9f6a83a525c028bf209d327f80e98cfe36b25eba0d837ad15cefdbc2d6136"
         },
         "narrativeEn": {
             "bytes": 1952,
@@ -72,14 +72,14 @@
             "sha256": "4e0548427aff54587bd1c81e0ac3add265d3abaf1ee0d665f39ebc33ab74c1af"
         },
         "reportEn": {
-            "bytes": 36049,
             "path": "sensemaker/generated/report.en.html",
-            "sha256": "923a82f61b12537201efa38e0f969f50e77c38d543f6c9605f08669a467ae945"
+            "bytes": 36265,
+            "sha256": "86b3795bff0545a64930b635af2150a54338133c33d4050bdae5573658a0bfed"
         },
         "reportZhTw": {
-            "bytes": 35277,
             "path": "sensemaker/generated/report.zh-tw.html",
-            "sha256": "261b040f14983d47a8b1a5dc3fe8b90e3fdd5f682efeee39a0e586743570e9ed"
+            "bytes": 35492,
+            "sha256": "15ac5f97c477f6b514de54693ca0cc836699cf01ccb7ff9f2bc0fab5c68e41a8"
         },
         "snapshotManifest": {
             "bytes": 1381,

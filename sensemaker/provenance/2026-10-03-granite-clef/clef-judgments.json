@@ -1,0 +1,106 @@
+[
+    {
+        "id": "0",
+        "text": "AI in care homes should free up time for staff to spend with residents, not replace human contact.",
+        "topic": "care",
+        "topic_p": {
+            "care": 0.9368452128644122,
+            "everyday": 0.022426596426722276,
+            "government": 0.015106582115915358,
+            "other": 0.025621608592950207
+        },
+        "accepts": 0.4348127427757149,
+        "tokens": 296
+    },
+    {
+        "id": "1",
+        "text": "People living with dementia deserve a say in whether AI tools are used in their care.",
+        "topic": "care",
+        "topic_p": {
+            "care": 0.9365379018853552,
+            "everyday": 0.023535929640396972,
+            "government": 0.014129104747961316,
+            "other": 0.025797063726286644
+        },
+        "accepts": 0.12203925251556613,
+        "tokens": 293
+    },
+    {
+        "id": "2",
+        "text": "Using AI to keep an elderly person company when no human is available is better than leaving them alone.",
+        "topic": "care",
+        "topic_p": {
+            "care": 0.8855573474154672,
+            "everyday": 0.05642258676006598,
+            "government": 0.011520279745191037,
+            "other": 0.046499786079275775
+        },
+        "accepts": 0.9589859433862671,
+        "tokens": 296
+    },
+    {
+        "id": "3",
+        "text": "Families caring for someone with a serious illness should be offered AI tools to help, even if those tools are not perfect.",
+        "topic": "care",
+        "topic_p": {
+            "care": 0.9327398735617582,
+            "everyday": 0.02553883336869945,
+            "government": 0.014268590870591092,
+            "other": 0.027452702198951212
+        },
+        "accepts": 0.9749279356747151,
+        "tokens": 301
+    },
+    {
+        "id": "4",
+        "text": "When AI helps make a decision about your benefits, housing, or health, you should be told.",
+        "topic": "government",
+        "topic_p": {
+            "care": 0.020797843096107674,
+            "everyday": 0.033902124141984284,
+            "government": 0.9035975602502684,
+            "other": 0.04170247251163954
+        },
+        "accepts": 0.11058774231471664,
+        "tokens": 296
+    },
+    {
+        "id": "5",
+        "text": "If an AI system treats people unfairly because of their race, age, or disability, someone should be held responsible.",
+        "topic": "other",
+        "topic_p": {
+            "care": 0.04616745545296373,
+            "everyday": 0.22991606522936345,
+            "government": 0.07745672361341079,
+            "other": 0.646459755704262
+        },
+        "accepts": 0.07103925955385533,
+        "tokens": 299
+    },
+    {
+        "id": "6",
+        "text": "People should always be able to reach a real person when dealing with a government service, even if AI handles most tasks.",
+        "topic": "government",
+        "topic_p": {
+            "care": 0.005241864756650983,
+            "everyday": 0.013793040632731741,
+            "government": 0.9697977381580668,
+            "other": 0.011167356452550509
+        },
+        "accepts": 0.14173732049578333,
+        "tokens": 300
+    },
+    {
+        "id": "7",
+        "text": "The UK should create an independent body with real power to shut down harmful AI systems.",
+        "topic": "government",
+        "topic_p": {
+            "care": 0.008909132188059003,
+            "everyday": 0.0511338997950628,
+            "government": 0.8232650535411417,
+            "other": 0.11669191447573643
+        },
+        "accepts": 0.059887929134453316,
+        "tokens": 293
+    }
+]
