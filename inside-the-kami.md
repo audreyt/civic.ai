@@ -7,7 +7,7 @@ alt_lang_url: "/tw/inside-the-kami"
 permalink: "/inside-the-kami/"
 date: 2026-03-05
 description: "What recent ML research suggests goes inside a bounded Civic AI — and what it cannot provide."
-summary: "Three lines of ML research — Bengio, LeCun and Taniguchi's collective predictive coding — suggest a bounded, specialised Kami that negotiates shared meaning rather than ruling from above. Honesty and narrow scope are design goals; legitimacy, pace and justice remain ours. These programmes are not deployed care or safety proofs."
+summary: "Three lines of ML research — Bengio; Goldfeder, LeCun and colleagues; and Taniguchi's collective predictive coding — suggest a bounded, specialised Kami that negotiates shared meaning rather than ruling from above. Honesty and narrow scope are design goals; legitimacy, pace and justice remain ours. These programmes are not deployed care or safety proofs."
 nav_next:
     url: "/"
     text: "Home"
@@ -42,7 +42,7 @@ under human authorisation.
 
 An honest, narrow substrate is a design goal, not a property conferred on a model by citing these programmes.
 
-None of this is a new intuition. In 2019, within the same Oxford tradition that produced Bostrom's _[Superintelligence](https://global.oup.com/academic/product/superintelligence-9780199678112)_, Eric Drexler's [_Reframing Superintelligence: Comprehensive AI Services as General Intelligence_](https://web.archive.org/web/20250905024310/https://www.fhi.ox.ac.uk/wp-content/uploads/Reframing_Superintelligence_FHI-TR-2019-1.1-1.pdf) (CAIS) argued that advanced AI is most plausibly reached not as a single self-improving agent but as a growing ecology of bounded, specialised services — the same shape Bengio and LeCun now arrive at from trust and capability arguments. What CAIS left open is exactly what the 6-Pack supplies: not the architecture of boundedness, but its legitimacy — who authorises a service, who is owed an answer, who can revoke the mandate.
+None of this is a new intuition. In 2019, within the same Oxford tradition that produced Bostrom's _[Superintelligence](https://global.oup.com/academic/product/superintelligence-9780199678112)_, Eric Drexler's [_Reframing Superintelligence: Comprehensive AI Services as General Intelligence_](https://web.archive.org/web/20250905024310/https://www.fhi.ox.ac.uk/wp-content/uploads/Reframing_Superintelligence_FHI-TR-2019-1.1-1.pdf) (CAIS) argued that advanced AI is most plausibly reached not as a single self-improving agent but as a growing ecology of bounded, specialised services — the same shape Bengio and the SAI authors now arrive at from trust and capability arguments. What CAIS left open is exactly what the 6-Pack supplies: not the architecture of boundedness, but its legitimacy — who authorises a service, who is owed an answer, who can revoke the mandate.
 
 ## Bengio: truth without appetite
 
@@ -79,10 +79,9 @@ where governance belongs.
 The SAI programme of Goldfeder, LeCun and colleagues attacks a different myth: that the right goal is one
 general intelligence good at everything.
 
-Its case is mathematical before it is political. The [No Free Lunch theorem](https://doi.org/10.1109/4235.585893) — a
-formal result in machine learning — says no single algorithm dominates every
-class of problem. Multi-task systems suffer
-negative transfer when tasks compete for the same representational capacity.
+The [No Free Lunch result][no-free-lunch] concerns averages taken uniformly over all cost functions in Wolpert and Macready's formal optimisation setting. It does not prove that a specialist beats a generalist on every practical task; that choice still requires measurement.
+
+Modern learning theory supplies a more empirical caution. Multi-task systems can suffer **negative transfer** when tasks compete for a shared representation. Whether separation into specialist subsystems helps depends on the task distribution and the mechanism; separation is not magic.
 Even models that look general often hide specialisation internally, routing
 different tasks to different subsystems.
 
@@ -119,14 +118,14 @@ CPC is a research agenda, not a finished engineering recipe. It gives the relati
 
 ## The shared design lesson
 
-Bengio, LeCun and Taniguchi are solving different problems. One is asking how
+Bengio, the SAI authors and Taniguchi are solving different problems. One is asking how
 to make prediction trustworthy. Another is asking how to make capability
 efficient. The third is asking how shared meaning can be negotiated. Still,
 they point toward the same Civic AI shape.
 
 - **Separate truth-tracking from speech imitation** (Bengio) — Decision traces can distinguish verified claims from reported claims.
-- **Specialisation beats generality** (LeCun) — Each Kami should have a narrow mandate.
-- **Modular systems beat monoliths** (Bengio + LeCun) — Civic AI should be composable, replaceable and federated.
+- **Specialisation supports bounded mandates** (Goldfeder, LeCun and colleagues) — Each Kami should have a narrow mandate.
+- **Modular systems support federation** (Bengio + SAI authors) — Civic AI should be composable, replaceable and federated.
 - **Action is the danger point** (Bengio) — Authorise tools and interventions in governance, not inside opaque weights.
 - **Non-decomposable collective regularisation** (CPC; Taniguchi et al., 2026) — Solidarity as a proposed term in the loss that no agent can minimise alone, not a machine-enforceable primitive already in production.
 - **Decentralised Bayesian inference via MHNG** (CPC) — Bounded local Kamis can co-construct shared meaning through peer-to-peer dialogue, without ceding sovereignty to a central server.
@@ -215,7 +214,7 @@ and actions are exactly what needs explicit governance. What makes it a Kami is
 its bound and its keepers, not its core.
 
 It is not the only possible substrate. It is simply the strongest one now in
-view for bounded civic deployments. Bengio helps explain how the inside can stay honest. LeCun helps explain
+view for bounded civic deployments. Bengio helps explain how the inside can stay honest. Goldfeder, LeCun and colleagues help explain
 why the inside should stay narrow. Taniguchi's collective predictive coding helps explain how _many_ such insides can negotiate shared meaning without a master variable above them. The 6-Pack explains how that whole arrangement remains answerable to the people around it.
 
 If the previous decade of AI research was dominated by the question _how do we align one powerful model to one fixed ground truth?_, the work assembled here points to a different question: _how do many bounded models and the human communities they serve co-construct ground truth, again and again, in accountable rooms?_ That second question is the one the 6-Pack was always asking. A theoretical maths that can describe it changes the conversation we can have with engineers and regulators, not because the maths replaces politics but because it gives the politics terms it can stand on.
@@ -223,3 +222,5 @@ If the previous decade of AI research was dominated by the question _how do we a
 The field is getting clearer about what belongs inside a Kami. The more
 important question — who gets to authorise it, limit it and retire it — is
 still, irreducibly, ours. That question, too, has a literature: Seth Lazar's [democratic duties of explanation](https://arxiv.org/abs/2208.08628) and Kate Vredenburgh's [right to explanation](https://doi.org/10.1111/jopp.12262) ask, in political philosophy's terms, who is owed an account of why a system did what it did. The [Sources](/sources/) page places this essay's substrate arguments beside them.
+
+[no-free-lunch]: https://doi.org/10.1109/4235.585893
