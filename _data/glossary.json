@@ -313,8 +313,8 @@
         "tier": "design",
         "term_en": "contestability / appeal",
         "term_tw": "申訴（可爭議性）",
-        "def_en": "The standing to challenge an algorithmic decision and be answered — notice, hearing, and reasoned explanation for automated public decisions (Citron's technological due process, 2008), operationalised as Pack 4's one-click appeal with a clock: every appeal lands in a <a href=\"/glossary/#correction-backlog-board\">correction backlog</a> and is owed closure, not mere receipt; the backlog's public view shows status and age, never private case details. Voice in Hirschman's pair; exit belongs to Pack 5. The research programme is contestability by design. See <a href=\"/sources/\">Sources</a>.",
-        "def_tw": "挑戰演算法決定並獲得回應的地位——自動化公共決策應有通知、聽證與說理（Citron 的技術性正當程序，2008），在回應力（Pack 4）落實為附有計時的一鍵申訴：每件申訴都進入<a href=\"/tw/glossary/#correction-backlog-board\">校正積壓</a>，必須有始有終，而非石沉大海；積壓的公開檢視只顯示狀態與案齡，不揭露私人案情。這是 Hirschman 二元組中的發聲；退出屬於團結力（Pack 5）。所屬的研究計畫是可爭議性設計（contestability by design）。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。",
+        "def_en": "The standing to challenge an algorithmic decision and be answered — notice, hearing, and reasoned explanation for automated public decisions (Citron's technological due process, 2008), operationalised as Pack 4's one-click appeal with a clock: every appeal lands in a <a href=\"/glossary/#correction-backlog-board\">correction backlog</a> and is owed closure, not mere receipt; the backlog's public view shows status and age, never private case details. A working appeal provides access to human review and a remedy where warranted. Voice in Hirschman's pair; exit belongs to Pack 5. The research programme is contestability by design. See <a href=\"/sources/\">Sources</a>.",
+        "def_tw": "挑戰演算法決定並獲得回應的地位——自動化公共決策應有通知、聽證與說理（Citron 的技術性正當程序，2008），在回應力（Pack 4）落實為附有計時的一鍵申訴：每件申訴都進入<a href=\"/tw/glossary/#correction-backlog-board\">校正積壓</a>，必須有始有終，而非石沉大海；積壓的公開檢視只顯示狀態與案齡，不揭露私人案情。申訴必須提供人工審查的途徑，並在有必要時提供補救。這是 Hirschman 二元組中的發聲；退出屬於團結力（Pack 5）。所屬的研究計畫是可爭議性設計（contestability by design）。見〈<a href=\"/tw/sources/\">文獻與延伸閱讀</a>〉。",
         "aliases_en": ["contestable"],
         "aliases_tw": ["申訴"],
         "gloss_skip_en": ["see the appeal"]
@@ -457,8 +457,8 @@
         "tier": "instruments",
         "term_en": "brake (circuit breaker)",
         "term_tw": "煞車",
-        "def_en": "A single, prominent, wired-and-tested control that stops the system now — accessible at the speed of human recognition, so a person can halt a wrong action in the moment rather than only signal for later. The engineering pattern is Fowler's circuit breaker (2014); the care application adds the pause-on-ambiguity rule and the ledger, because a brake that is easy to pull needs an answer to alarm fatigue: every pull is logged and attributed. Specified on the <a href=\"/measures/#named-instruments\">Measures</a> page.",
-        "def_tw": "單一、醒目、已接線且經過測試的控制——讓人一察覺問題就能操作，使人能在當下叫停錯誤的行動，而不只是為日後留下訊號。工程模式是 Fowler 的斷路器（2014）；關懷的應用加上了有疑即停（pause-on-ambiguity）的規則與帳本，因為容易操作的煞車也必須處理警示疲勞：每次拉下都要記錄，並註明由誰操作。工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。",
+        "def_en": "A single, prominent, wired-and-tested control that stops the system now — accessible at the speed of human recognition, so a person can halt a wrong action in the moment rather than only signal for later. The Engagement Contract names who may invoke it and how authority, review and repair proceed; its use must be rehearsed before launch. The engineering pattern is Fowler's circuit breaker (2014); the care application adds the pause-on-ambiguity rule and the ledger, because a brake that is easy to pull needs an answer to alarm fatigue: every pull is logged and attributed. Specified on the <a href=\"/measures/#named-instruments\">Measures</a> page.",
+        "def_tw": "單一、醒目、已接線且經過測試的控制——讓人一察覺問題就能操作，使人能在當下叫停錯誤的行動，而不只是為日後留下訊號。參與契約須寫明誰可使用，以及權限、審查與修復如何接續；上線前必須演練。工程模式是 Fowler 的斷路器（2014）；關懷的應用加上了有疑即停（pause-on-ambiguity）的規則與帳本，因為容易操作的煞車也必須處理警示疲勞：每次拉下都要記錄，並註明由誰操作。工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。",
         "aliases_tw": ["斷路器"],
         "gloss_skip_en": [
             "hit the brakes",
@@ -490,8 +490,8 @@
         "tier": "instruments",
         "term_en": "data coalition",
         "term_tw": "資料聯盟",
-        "def_en": "In Pack 6's proposed settlement design, an existing community institution — a neighbourhood association, tribal council, union, craft cooperative, or religious congregation — acts as steward of knowledge its members authorise it to manage. It bargains the Engagement Contract, decides what may be shared and what stays offline, and would receive settlement collectively rather than per person. Its mandate cannot be assumed from the institution's existence.",
-        "def_tw": "在共生力（Pack 6）提出的結算設計中，由既有的社群機構——鄰里協會、部落議會、工會、工藝合作社或宗教團體——守護成員授權其管理的知識。它談判參與契約、決定哪些知識可以分享、哪些保持離線，並擬以集體而非個人為單位接受結算。機構存在，並不等於已經獲得這份授權。"
+        "def_en": "In Pack 6's proposed settlement design, an existing community institution — a neighbourhood association, tribal council, union, craft cooperative, or religious congregation — acts as steward of community-held data and models its members authorise it to manage. It bargains the Engagement Contract, decides what may be shared and what stays offline, and would receive settlement collectively rather than per person. Prefunded escrow could back draws and settlement under the charter; valuation and settlement windows remain open design questions. Its mandate cannot be assumed from the institution's existence.",
+        "def_tw": "在共生力（Pack 6）提出的結算設計中，由既有的社群機構——鄰里協會、部落議會、工會、工藝合作社或宗教團體——守護由社群共同保管、成員授權其管理的資料與模型。它談判參與契約、決定哪些知識可以分享、哪些保持離線，並擬以集體而非個人為單位接受結算。預先注資的託管機制，可支應依章程執行的提領與結算；估值方式與結算窗口仍屬待解的設計問題。機構存在，並不等於已經獲得這份授權。"
     },
     {
         "id": "shared-eval-registry",
