@@ -63,7 +63,7 @@ export default {
                 "This page aims for a Habermolt-like reading experience, but it stays honest about what Polis exports can and cannot provide.",
             sources: "CSV sources",
             limitations: "What this reconstruction does",
-            note: "No hidden APIs were used. Everything on the page is derived from the five export files above.",
+            note: "No hidden APIs were used. Everything on this map is derived from the five export files above. The written report's at-home replay is separate: the same Granite settings (seed 0) and the same Clef request matched on a second run.",
         },
         dynamics: {
             converging: {
@@ -193,7 +193,7 @@ export default {
                 "這一頁試著重現 Habermolt 的閱讀體驗，但也清楚說明 Polis 匯出資料能提供與無法提供的是什麼。",
             sources: "CSV 來源",
             limitations: "這個重建做了什麼",
-            note: "本頁沒有使用隱藏介面。所有內容都由上面的五個匯出檔推導而來。",
+            note: "這一頁沒有使用隱藏介面。地圖上的內容都由上面的五個匯出檔推導而來。書面報告的在家重播是另一件事：相同的 Granite 設定（seed 0）與相同的 Clef 請求，再跑一次結果相同。",
         },
         dynamics: {
             converging: {

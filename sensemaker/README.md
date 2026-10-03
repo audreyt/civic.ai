@@ -141,7 +141,7 @@ vp run sensemaker:regenerate
 
 This is a new provenance record, not a replay of the accepted wllama artifact. The previously used private Ollama assembly was `gemma4:12b-it-qat-mtp` at digest `77136510022ab8b4240a9e4d4094e74de16e638acecde7fcd670c123eb15b44e` under Ollama `0.32.1`; its bare tag was never a public model identity.
 
-On 3 October 2026 a public pair was tried and committed: [`provenance/2026-10-03-granite-clef/`](provenance/2026-10-03-granite-clef/). `granite4.2:30b` wrote the English narrative once, under the same decoding settings, and the canonical JSON matched `generated/narrative.en.json`. `clef` classified the first eight English comments through `POST /v1/systemone`. Clef does not implement chat, so it cannot write the narrative, and it needs Ollama 0.35.1 or later. zh-TW was not generated, and the publication replay above is unchanged. Repeat the candidate without writing `generated/`:
+On 3 October 2026 a public pair was tried and committed: [`provenance/2026-10-03-granite-clef/`](provenance/2026-10-03-granite-clef/). `granite4.2:30b` wrote the English narrative with seed 0, temperature 0, and top-k 1; the canonical JSON matched `generated/narrative.en.json`, and a second run produced the same raw completion. `clef` classified the first eight English comments through `POST /v1/systemone` and does not sample; a rerun matched, including the probabilities. Clef cannot write the narrative, and it needs Ollama 0.35.1 or later. zh-TW was not generated, and the publication replay above is unchanged. Repeat the candidate without writing `generated/`:
 
 ```bash
 ollama pull granite4.2:30b

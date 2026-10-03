@@ -35,6 +35,6 @@
 <h3 id="replay-and-provenance">重播與來源</h3>
 <p>三個群組敘事以 45 筆明確分群資料為準。來源摘要記載 46 位對話參與者，但 participant export 只有 45 筆群組指派，因此不把兩者混為同一數字。</p>
 <p>快照 <code>39b1eed77ad2caed03c11d38b7f5730b5008f9df14e4c7617dc3b2854b740db0</code>；模型執行 <code>Qwen2.5-1.5B-Instruct · 6a1a2eb6d156 · wllama 3.5.1</code>。每種語言皆以 batch size one 連續生成兩次，只有 canonical JSON 完全相同才會寫入。</p>
-<p>網站原始碼另存一份 2026 年 10 月 3 日的在家重播紀錄：granite4.2:30b 以單次執行重現了這份英文敘事，clef 則用來分類意見。該次候選不是上方這次出版重播。</p>
+<p>網站原始碼另存一份 2026 年 10 月 3 日的在家重播紀錄：granite4.2:30b 以 seed 0、temperature 0、top-k 1 重現了這份英文敘事。再跑一次，完成文字相同。clef 用來分類意見，它不抽樣；再跑一次，機率也相同。該次候選不是上方這次出版重播。</p>
 <p><a href="/tw/conference/sensemaking/">以同一份快照開啟完整集體感知視圖</a> · <a href="https://github.com/audreyt/polis-tally/tree/b1cce6f7761871e51729859600f6b92b3c59b3d7">固定來源資料</a></p>
 </div>

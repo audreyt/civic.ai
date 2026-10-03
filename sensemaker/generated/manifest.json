@@ -28,8 +28,8 @@
         },
         "generatorLib": {
             "path": "sensemaker/src/lib.mjs",
-            "bytes": 31646,
-            "sha256": "1dc9f6a83a525c028bf209d327f80e98cfe36b25eba0d837ad15cefdbc2d6136"
+            "bytes": 31883,
+            "sha256": "9914b7fe10490f4389aec52d54910f9369bba087ffbd4ae3a6ef795ef0f79518"
         },
         "narrativeEn": {
             "bytes": 1952,
@@ -73,13 +73,13 @@
         },
         "reportEn": {
             "path": "sensemaker/generated/report.en.html",
-            "bytes": 36265,
-            "sha256": "86b3795bff0545a64930b635af2150a54338133c33d4050bdae5573658a0bfed"
+            "bytes": 36399,
+            "sha256": "65c0c1948ea005ec7e4e31f36b41cf3e48f3e62807b515d96d114a554cef8d4e"
         },
         "reportZhTw": {
             "path": "sensemaker/generated/report.zh-tw.html",
-            "bytes": 35492,
-            "sha256": "15ac5f97c477f6b514de54693ca0cc836699cf01ccb7ff9f2bc0fab5c68e41a8"
+            "bytes": 35595,
+            "sha256": "c9c0d78bbe482444f9db7b9a490c150b39d034aaa97d1d949882ba45af2c5ae0"
         },
         "snapshotManifest": {
             "bytes": 1381,

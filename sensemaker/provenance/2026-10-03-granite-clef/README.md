@@ -15,7 +15,9 @@ Two local Ollama models, loaded together, on the Rhodes House Polis snapshot `39
 
 The full identity, decoding settings, token counts, and file hashes are in [`record.json`](record.json).
 
-Granite's one English completion is [`granite-en.raw.json`](granite-en.raw.json). Parsed and canonicalised, it matches `generated/narrative.en.json` (`35aae6d3d65355e0823efaae72256bee9e89143eade410e49975de57b401f767`), including the citation order the validator requires. That was one run, not the publication rule of two identical runs, and zh-TW was not generated.
+Granite's one English completion is [`granite-en.raw.json`](granite-en.raw.json). Parsed and canonicalised, it matches `generated/narrative.en.json` (`35aae6d3d65355e0823efaae72256bee9e89143eade410e49975de57b401f767`), including the citation order the validator requires. A later rerun with the same seed, temperature 0, and top-k 1 produced that same raw completion again. zh-TW was not generated. The commit hook pretty-printed the raw file after the first hash was recorded, so compare a new run to the hash in `record.json`, not to the formatted file.
+
+Clef has no seed. It scores the choices you give it. A rerun of these eight judgments matched, including the probabilities.
 
 Clef's eight judgments are [`clef-judgments.json`](clef-judgments.json). Care comments stayed in care. Benefits and government-service comments went to government. The unfair-treatment comment landed in `other`.
 
