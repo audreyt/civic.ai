@@ -46,11 +46,6 @@ jobs:
             - name: Check
               run: vp check
 
-
-
-
-
-
             - name: DIAG git before build
               run: |
                   git rev-parse --is-shallow-repository; git rev-list --count HEAD; test -f .git/shallow && wc -l .git/shallow || echo no-shallow-file
