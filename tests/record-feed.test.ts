@@ -1,6 +1,7 @@
 import { expect, test } from "vite-plus/test";
 import { amendmentFeed } from "../src/lib/recordFeed";
 import { getPageByUrl, getSitemapPages } from "../src/lib/pages";
+import { ledgerMonthPages } from "../src/lib/recordPages";
 
 test("emits stable commit IDs, amended timestamps and escaped XML metadata", () => {
     const feed = amendmentFeed(
@@ -45,4 +46,42 @@ test("discovers both generated ledgers with reciprocal twins for sitemap and llm
     expect(
         pages.filter((page) => page.url === "/conference/sensemaking/")
     ).toHaveLength(1);
+});
+
+test("gives every ledger month a reciprocal twin outside search and the sitemap", () => {
+    const pages = ledgerMonthPages(["2026-09"]);
+    expect(
+        pages.map((page) => [
+            page.url,
+            page.slug,
+            page.data.alt_lang_url,
+            page.data.title,
+            page.data.ledger_month,
+            page.data.search_exclude,
+            page.includeInSitemap,
+        ])
+    ).toEqual([
+        [
+            "/ledger/2026-09/",
+            "ledger/2026-09",
+            "/tw/ledger/2026-09/",
+            "Amendment ledger: 2026-09",
+            "2026-09",
+            true,
+            false,
+        ],
+        [
+            "/tw/ledger/2026-09/",
+            "tw/ledger/2026-09",
+            "/ledger/2026-09/",
+            "修訂紀錄：2026-09",
+            "2026-09",
+            true,
+            false,
+        ],
+    ]);
+    expect(pages.map((page) => page.data.description)).toEqual([
+        "This site's Git amendments in 2026-09.",
+        "本站 2026-09 的 Git 修訂紀錄。",
+    ]);
 });

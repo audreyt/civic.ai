@@ -7,7 +7,8 @@ import { expandShortcodes } from "./shortcodes";
 import { transformFaq } from "./faqTransform";
 import { annotateInlineLang } from "./inlineLang";
 import { normalizeUrl } from "./site";
-import { generatedPages } from "./recordPages";
+import { generatedPages, ledgerMonthPages } from "./recordPages";
+import { record } from "./record";
 
 export type LayoutName = "default" | "chapter" | "conference";
 
@@ -68,6 +69,7 @@ export interface PageFrontmatter {
     steward_email?: string;
     polis_url?: string;
     record_sources?: string[];
+    ledger_month?: string;
 }
 
 export interface PageRecord {
@@ -210,10 +212,12 @@ export function visibleHtml(page: PageRecord): string {
 
 export function loadPages(): PageRecord[] {
     if (pageCache) return pageCache;
-    pageCache = readdirSync(root)
+    const pages = readdirSync(root)
         .filter(isRootContentFile)
         .map(loadPage)
-        .concat(generatedPages)
+        .concat(generatedPages);
+    pageCache = pages
+        .concat(ledgerMonthPages(record.months(pages)))
         .sort((a, b) => a.url.localeCompare(b.url));
     return pageCache;
 }

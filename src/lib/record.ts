@@ -93,6 +93,8 @@ export function createRecordLoader(
             }
         >();
         for (const page of pages) {
+            // A ledger month page shows amendments; it is not amended itself.
+            if (page.data.ledger_month) continue;
             for (const source of recordSources(page)) {
                 for (const revision of revisions(source) ?? []) {
                     let entry = entries.get(revision.id);
@@ -120,7 +122,15 @@ export function createRecordLoader(
             );
     }
 
-    return { complete, revisions, summary, amendments };
+    function months(pages: readonly PageRecord[]): string[] {
+        return [
+            ...new Set(
+                amendments(pages).map((entry) => entry.date.slice(0, 7))
+            ),
+        ];
+    }
+
+    return { complete, revisions, summary, amendments, months };
 }
 
 /** Generated prose is attributed to its data and renderer as well as its page. */

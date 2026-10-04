@@ -1,29 +1,44 @@
 ---
 import { loadPages, type PageRecord } from "../lib/pages";
-import { record } from "../lib/record";
+import { record, type Amendment } from "../lib/record";
 import { lang2 } from "../lib/site";
 interface Props { page: PageRecord; }
 const { page } = Astro.props;
 const zh = lang2(page.data.lang) === "zh";
+const month = page.data.ledger_month;
+const base = zh ? "/tw/ledger/" : "/ledger/";
+const latest = 50;
 const amendments = record.amendments(loadPages());
-const months = new Map<string, typeof amendments>();
-for (const amendment of amendments) {
-  const month = amendment.date.slice(0, 7);
-  const entries = months.get(month) ?? [];
-  entries.push(amendment);
-  months.set(month, entries);
-}
+const group = (entries: readonly Amendment[]) => {
+  const months = new Map<string, Amendment[]>();
+  for (const entry of entries) {
+    const key = entry.date.slice(0, 7);
+    const list = months.get(key) ?? [];
+    list.push(entry);
+    months.set(key, list);
+  }
+  return months;
+};
+const byMonth = group(amendments);
+const months = [...byMonth.keys()];
+const sections = group(month ? byMonth.get(month) ?? [] : amendments.slice(0, latest));
+const at = month ? months.indexOf(month) : -1;
+const newer = at > 0 ? months[at - 1] : undefined;
+const older = at >= 0 ? months[at + 1] : undefined;
+const count = (n: number) => zh ? `${n} 筆` : `${n} ${n === 1 ? "amendment" : "amendments"}`;
 ---
 <div class="record-ledger record-zone">
+  {month && <p><a href={base}>{zh ? "← 修訂紀錄" : "← Amendment ledger"}</a></p>}
   <p>{zh ? "這是本站自己的修訂紀錄。每筆來自 Git 提交，包含首次發布；日期採 UTC。紀錄描述已提交的來源，不推測未提交的編輯。" : "This is the site's own amendment record. Each entry is a Git commit, including first publication; dates use UTC. The record describes committed sources, not uncommitted edits."}</p>
-  <p><a href="/feed.xml">{zh ? "訂閱修訂紀錄（Atom）" : "Subscribe to amendments (Atom)"}</a></p>
-  <section class="record-ledger__evals">
+  {!month && <p><a href="/feed.xml">{zh ? "訂閱修訂紀錄（Atom）" : "Subscribe to amendments (Atom)"}</a></p>}
+  {!month && <section class="record-ledger__evals">
     <h2>{zh ? "本站評測" : "Site evaluations"}</h2>
     <div data-record-evals="board" data-record-lang={zh ? "zh" : "en"}></div>
-  </section>
+  </section>}
   {!record.complete && <p>{zh ? "Git 歷史缺失或不完整，暫不顯示修訂紀錄。" : "Git history is missing or shallow; amendment records are omitted."}</p>}
-  {[...months].map(([month, entries]) => <section class="record-ledger__month">
-    <h2>{month}</h2>
+  {!month && amendments.length > latest && <p>{zh ? `以下是最近 ${latest} 筆修訂；每個月份另有完整的一頁。` : `Below are the latest ${latest} amendments; each month has a page of its own.`}</p>}
+  {[...sections].map(([key, entries]) => <section class="record-ledger__month">
+    <h2>{month ? key : <a href={`${base}${key}/`}>{key}</a>}</h2>
     <ol class="record-ledger__entries">
       {entries.map((entry) => <li>
         <time datetime={entry.date}>{entry.date.slice(0, 10)}</time>
@@ -32,4 +47,17 @@ for (const amendment of amendments) {
       </li>)}
     </ol>
   </section>)}
+  {(newer || older) && <nav class="record-ledger__pager" aria-label={zh ? "相鄰月份" : "Adjacent months"}>
+    {newer && <a href={`${base}${newer}/`} rel="prev">{zh ? `← 較新：${newer}` : `← Newer: ${newer}`}</a>}
+    {older && <a href={`${base}${older}/`} rel="next">{zh ? `較舊：${older} →` : `Older: ${older} →`}</a>}
+  </nav>}
+  {months.length > 0 && <nav class="record-ledger__months" aria-label={zh ? "依月份瀏覽修訂" : "Amendments by month"}>
+    <h2>{zh ? "依月份" : "By month"}</h2>
+    <ol>
+      {months.map((key) => <li>
+        {key === month ? <span aria-current="page">{key}</span> : <a href={`${base}${key}/`}>{key}</a>}
+        {" · "}{count(byMonth.get(key)?.length ?? 0)}
+      </li>)}
+    </ol>
+  </nav>}
 </div>

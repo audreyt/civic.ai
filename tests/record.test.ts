@@ -118,3 +118,23 @@ test("the default git reader honours the checkout's actual history depth", () =>
     if (shallow) expect(loader.summary(["AGENTS.md"])).toBeUndefined();
     else expect(loader.summary(["AGENTS.md"])?.count).toBeGreaterThan(0);
 });
+
+test("pages the ledger by month without listing month pages as amended", () => {
+    // Given one source amended twice in September and once in August, and a month page built from the same source.
+    const loader = createRecordLoader(
+        ".",
+        git({
+            "a.md": `${b}\t2026-09-02T00:00:00Z\tLater\n${c}\t2026-09-01T00:00:00Z\tSame month\n${a}\t2026-08-31T23:00:00Z\tEarlier`,
+        })
+    );
+    const archive = {
+        ...page("a.md", "/ledger/2026-09/"),
+        data: { ledger_month: "2026-09" },
+    };
+    const pages = [page("a.md", "/a/"), archive];
+    // Then months are listed once, newest first, and only the real page is attributed.
+    expect(loader.months(pages)).toEqual(["2026-09", "2026-08"]);
+    expect(loader.amendments(pages).flatMap((entry) => entry.pages)).toEqual(
+        Array(3).fill({ url: "/a/", title: "/a/" })
+    );
+});
