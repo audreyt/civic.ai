@@ -3,6 +3,7 @@ node_modules/
 package-lock.json
 .bun/
 .npm-cache/
+.omo/
 
 # Build output
 _site/
