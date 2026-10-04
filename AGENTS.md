@@ -49,7 +49,7 @@ Match verification to the change. Markdown: content and typography gates. Code o
 
 **Config:** `astro.config.mjs` — custom-domain root site, static output, directory URLs, `dist/` output.
 
-**Deployment:** GitHub Actions (`.github/workflows/static.yml`) auto-deploys `dist/` to GitHub Pages on push to main.
+**Deployment:** civic.ai and www.civic.ai are served by the Cloudflare Pages project `civicai-network` (mirror: `civic-ai.pages.dev`), which builds every push to main from its own clone. Cloudflare clones shallow, and the Trace and `/ledger/` need full history, so the dashboard build command starts with `git fetch --unshallow --quiet 2>/dev/null || true` and logs `git history: shallow=… commits=…`; keep that prefix. GitHub Actions (`.github/workflows/static.yml`) also builds, checks and deploys `dist/` to GitHub Pages, but the domain does not point there.
 
 ## Conventions
 
