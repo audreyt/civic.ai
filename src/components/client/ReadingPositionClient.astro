@@ -2,7 +2,8 @@
 // ReadingPositionClient (DESIGN.md §21): the masthead language link opens the
 // twin page at the same place in the text. Without JS it is a plain link.
 ---
-<script is:inline>
+<script>
+// @ts-nocheck
 (function () {
   try {
     if (window.__readingPositionBound) return;

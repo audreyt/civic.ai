@@ -21,6 +21,9 @@ const glossaryPayload = (glossary as any[])
         skip: (zh ? (entry.gloss_skip_tw ?? []) : (entry.gloss_skip_en ?? [])).map((s: string) => smartQuotes(s)),
     }));
 const glossaryBase = zh ? "/tw/glossary/" : "/glossary/";
+// FAQ folding stays inline so phones collapse answers while parsing, but only
+// pages with FAQ questions (the client's own h3[id^="faq-"] guard) carry it.
+const hasFaq = /<h3\b[^>]*\sid="faq-/.test(page.html);
 ---
 <script is:inline define:vars={{ glossaryPayload, glossaryBase }}>
 window.__GLOSSARY__ = glossaryPayload;
@@ -750,7 +753,7 @@ window.__GLOSSARY_BASE__ = glossaryBase;
             })();
         </script>
 <ConstellationClient page={page} />
-<FaqClient page={page} />
+{hasFaq && <FaqClient page={page} />}
 <MarginNotesClient page={page} />
 <WalkingPlayerClient page={page} />
 <ReadingPositionClient page={page} />

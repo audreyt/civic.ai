@@ -9,4 +9,12 @@ export default defineConfig({
     trailingSlash: "always",
     build: { format: "directory", concurrency: staticRouteConcurrency },
     outDir: "dist",
+    // Client scripts ship as cached files instead of being repeated inline in
+    // every page's HTML (DESIGN.md §15); other assets keep Vite's default.
+    vite: {
+        build: {
+            assetsInlineLimit: (file) =>
+                file.endsWith(".js") ? false : undefined,
+        },
+    },
 });
