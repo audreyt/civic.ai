@@ -1,6 +1,7 @@
 ---
 import { loadPages, type PageRecord } from "../lib/pages";
 import { record, recordSources } from "../lib/record";
+import { ledgerMonthPages } from "../lib/recordPages";
 import { lang2, site } from "../lib/site";
 import CivicBug from "./CivicBug.astro";
 
@@ -10,7 +11,8 @@ const zh = lang2(page.data.lang) === "zh";
 const sources = recordSources(page);
 const amended = record.summary(sources);
 const ledger = zh ? "/tw/ledger/" : "/ledger/";
-const twin = loadPages().find((candidate) => candidate.url === page.data.alt_lang_url);
+const month = page.data.ledger_month;
+const twin = (month ? ledgerMonthPages([month]) : loadPages()).find((candidate) => candidate.url === page.data.alt_lang_url);
 const amend = `https://github.com/audreyt/civic.ai/issues/new?title=${encodeURIComponent(`Amendment proposed: ${page.url}`)}`;
 const address = page.data.steward_email ?? "au@civic.ai";
 // A bare Polis homepage is not a live conversation. Never invent a conversation ID.

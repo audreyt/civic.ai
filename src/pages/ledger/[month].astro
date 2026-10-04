@@ -1,0 +1,18 @@
+---
+import Default from "../../layouts/Default.astro";
+import { loadPages, type PageRecord } from "../../lib/pages";
+import { record } from "../../lib/record";
+import { ledgerMonthPages } from "../../lib/recordPages";
+
+// Month pages need full git history, so they are routed here at build time
+// rather than listed by loadPages(), which stays free of git.
+export function getStaticPaths() {
+    return ledgerMonthPages(record.months(loadPages()))
+        .filter((page) => !page.url.startsWith("/tw/"))
+        .map((page) => ({ params: { month: page.data.ledger_month }, props: { page } }));
+}
+
+interface Props { page: PageRecord }
+const { page } = Astro.props;
+---
+<Default page={page} />

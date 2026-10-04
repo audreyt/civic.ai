@@ -7,8 +7,7 @@ import { expandShortcodes } from "./shortcodes";
 import { transformFaq } from "./faqTransform";
 import { annotateInlineLang } from "./inlineLang";
 import { normalizeUrl } from "./site";
-import { generatedPages, ledgerMonthPages } from "./recordPages";
-import { record } from "./record";
+import { generatedPages } from "./recordPages";
 
 export type LayoutName = "default" | "chapter" | "conference";
 
@@ -212,12 +211,10 @@ export function visibleHtml(page: PageRecord): string {
 
 export function loadPages(): PageRecord[] {
     if (pageCache) return pageCache;
-    const pages = readdirSync(root)
+    pageCache = readdirSync(root)
         .filter(isRootContentFile)
         .map(loadPage)
-        .concat(generatedPages);
-    pageCache = pages
-        .concat(ledgerMonthPages(record.months(pages)))
+        .concat(generatedPages)
         .sort((a, b) => a.url.localeCompare(b.url));
     return pageCache;
 }
