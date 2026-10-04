@@ -29,6 +29,7 @@ export function createRecordLoader(
             encoding: "utf8",
             maxBuffer: 32 * 1024 * 1024,
         });
+        if (args[0] === "rev-parse") console.warn("DIAG record", cwd, JSON.stringify([result.status, result.stdout, result.stderr, result.error?.message, process.env.HOME]));
         return result.status === 0 ? result.stdout : undefined;
     }
 ) {

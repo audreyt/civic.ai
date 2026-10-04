@@ -25,6 +25,10 @@ jobs:
               with:
                   fetch-depth: 0
 
+            - name: DIAG git after checkout
+              run: |
+                  git rev-parse --is-shallow-repository; git rev-list --count HEAD; ls -la .git | head -30; id; ls -ld . .git
+
             - name: Setup Vite+
               uses: voidzero-dev/setup-vp@v1
               with:
@@ -56,6 +60,13 @@ jobs:
 
             - name: Verify replay artifacts
               run: vp run sensemaker:verify
+
+            - name: DIAG git before build
+              run: |
+                  git rev-parse --is-shallow-repository; git rev-list --count HEAD; test -f .git/shallow && wc -l .git/shallow || echo no-shallow-file
+                  node -e "const r=require('child_process').spawnSync('git',['rev-parse','--is-shallow-repository'],{encoding:'utf8'});console.log('DIAG', process.cwd(), JSON.stringify([r.status,r.stdout,r.stderr,r.error&&r.error.message]))"
+                  vp exec node -e "const r=require('child_process').spawnSync('git',['rev-parse','--is-shallow-repository'],{encoding:'utf8'});console.log('DIAG', process.cwd(), JSON.stringify([r.status,r.stdout,r.stderr,r.error&&r.error.message]))"
+                  env | grep -i -E '^(GIT|HOME|PATH|VP|VITE)' | cut -c1-200
 
             - name: Build site
               run: vp build
