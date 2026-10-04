@@ -90,8 +90,8 @@
         "tier": "architecture",
         "term_en": "Civic AI",
         "term_tw": "仁工智慧",
-        "def_en": "AI designed as local care infrastructure — helping communities cooperate across differences rather than supercharging conflict. Where most AI optimises for individual engagement or commercial extraction, Civic AI treats <a href=\"/glossary/#relational-health\">relational health</a> as a first-class design concern, decomposed into six public measures, and is governed by the communities it serves.",
-        "def_tw": "將 AI 設計為在地的關懷基礎設施——幫助社群跨越分歧、彼此協作，而非激化衝突。仁工智慧以<a href=\"/tw/glossary/#relational-health\">關係健康度</a>為首要設計關切，並拆解為六項公開主指標，由它所服務的社群治理。"
+        "def_en": "Our name for the aim of this project: AI that the people it affects can check, correct and switch off, because a community runs it under rules it has agreed. The 6-Pack of Care sets out six principles for getting there, with <a href=\"/glossary/#relational-health\">relational health</a> as a first-class concern, measured in public. Most of the work is people keeping a tool answerable.",
+        "def_tw": "本計畫追求的目標：受 AI 影響的人，能夠檢查、修正並關閉它，因為社群依照共同約定的規則來運作它。關懷六力提出達成這個目標的六項原則，以<a href=\"/tw/glossary/#relational-health\">關係健康度</a>為首要關切，並公開衡量。大部分的工作，是人持續讓工具保持可問責。"
     },
     {
         "id": "6-pack-of-care",
@@ -114,8 +114,8 @@
         "tier": "architecture",
         "term_en": "Kami",
         "term_tw": "地神（Kami）",
-        "def_en": "A bounded local AI steward (Knowledge Artefact Management Intelligence) whose purpose is interwoven with the health of a specific place, practice, or network of people. Inspired by the Shinto concept of local guardian spirits, a Kami is built to stay within its relational mandate; its keepers engineer and enforce that boundary rather than trusting it to lack ambition.",
-        "def_tw": "一位有界的在地 AI 守護者（Knowledge 知識、Artefact 工藝、Management 管理、Intelligence 智慧），其使命與特定場域、實踐或人際網路的健康緊密交織。靈感源自神道信仰中的在地守護神概念，地神（Kami）被設計成守在其關係性使命之內；這道邊界由守護者設計並落實，而不是信任它天生沒有擴張的野心。"
+        "def_en": "Our name for an ordinary AI model or agent that a group runs under the 6-Pack (Knowledge Artefact Management Intelligence; the name echoes the Shinto idea of a local guardian spirit). It serves one place, practice or network of people. It reads civic.ai's instructions and keeps three short notes about its job, and the group keeps the power to check, correct and switch it off. The instructions can only ask the model to stay within its job. The limits that matter are set in the software's permissions and enforced by its keepers.",
+        "def_tw": "我們對一個群體依關懷六力運作的一般 AI 模型或智慧體的稱呼（Knowledge 知識、Artefact 工藝、Management 管理、Intelligence 智慧；名字呼應神道信仰中的在地守護神）。它服務一個場域、一種實踐或一群人，閱讀 civic.ai 的指示，並為自己的工作寫下三份簡短筆記；群體保有檢查、修正與關閉它的權力。指示只能請求模型守在自己的工作範圍內；真正重要的界限，要靠軟體權限設定，並由守護者落實。"
     },
     {
         "id": "keeping",

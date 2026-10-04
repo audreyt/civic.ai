@@ -358,6 +358,8 @@ export function renderOpenClawGuideMarkdown(which: "en" | "tw"): string {
     guide.commitments.forEach((item) =>
         lines.push(`- **${item.label}${separator}** ${item.text}`, "")
     );
+    section(guide.limitsHeading, guide.limitsIntro);
+    guide.limitsItems.forEach((item) => lines.push(`- ${item}`, ""));
     section(guide.antiPatternsHeading, guide.antiPatternsIntro);
     guide.antiPatterns.forEach((item) => lines.push(`- ${item}`, ""));
     section(guide.mappingHeading, guide.mappingIntro);

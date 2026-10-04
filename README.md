@@ -6,7 +6,7 @@ Source for **[civic.ai](https://civic.ai/)** — the bilingual (British English/
   <a href="https://civic.ai/comics/"><img src="img/overview-small.jpg" alt="The 6-Pack of Care, illustrated by Nicky Case" width="420"></a>
 </p>
 
-Civic AI is artificial intelligence that answers to the people it affects: many small, bounded local stewards — each a **Kami** — that a community can own, inspect, correct, and switch off, instead of one system built to govern everyone. The 6-Pack of Care is the governance framework — six plain-language tests for AI a community can actually trust.
+The 6-Pack of Care is six principles for AI that a community runs, plus instructions an AI agent can follow. The instructions enforce nothing: the group checks the AI, corrects it and can switch it off. We call such a helper a **Kami**: an ordinary AI model or agent given our instructions and three short notes, with its important limits set in the software's permissions and kept by people.
 
 - **The idea** → start with the [Manifesto](https://civic.ai/manifesto/); the six packs run [1](https://civic.ai/1/) · [2](https://civic.ai/2/) · [3](https://civic.ai/3/) · [4](https://civic.ai/4/) · [5](https://civic.ai/5/) · [6](https://civic.ai/6/), with [Measures](https://civic.ai/measures/) and the [FAQ](https://civic.ai/faq/). The full site — illustrations, audio, case studies — is **[civic.ai](https://civic.ai/)**.
 - **Working in the codebase** → build, architecture, and conventions live in [AGENTS.md](AGENTS.md).

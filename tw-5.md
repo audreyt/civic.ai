@@ -2,7 +2,7 @@
 layout: chapter
 title: "五：團結力——共同關懷"
 meta_description: "仁工智慧的團結力：獎勵協作、退出與公共問責，而非平台鎖定。「關懷六力」的第五力。"
-summary: "多數僵局只是表面上的零和。團結力就是找出雙贏，再打造一個讓合作最省力的生態系統——開放協定、退出權、聯邦——使沒有人能取得不關懷的結構性豁免。"
+summary: "多數僵局只是表面上的零和。團結力就是找出雙贏，再打造一個讓合作最省力的生態系統（開放協定、退出權、聯邦），使沒有人能取得不關懷的結構性豁免。"
 lang: zh-tw
 alt_lang_url: "/5"
 permalink: "/tw/5/"
@@ -10,9 +10,9 @@ permalink: "/tw/5/"
 
 <noscript><img src="/img/pack5-1-tw.jpg" alt="手繪漫畫頁，標題為「團結力——PROBLEM」：當大家想要不同的東西，我們往往陷入「負和」或「零和」思維——兩位廚師都想要同一顆橘子，他們可以爭奪而兩敗俱傷（負和），或平分但仍假設一方所得即另一方所失（零和）；下方是一張輸贏對照圖。" class="overview-image" width="1437" height="1999" fetchpriority="high" decoding="async"></noscript>
 
-當大家想要不同的東西，反射動作是把它當成一場要贏的戰爭，或一塊要分的餅。但多數僵局只是表面上的零和：往每個立場底下的需求看去，往往能找到一個讓所有人都滿意的更大選項。團結力就是找出這些雙贏的修練——從長遠來看，是打造一個讓合作之舉同時也是最省力之舉的生態系統。
+當大家想要不同的東西，反射動作是把它當成一場要贏的戰爭，或一塊要分的餅。但多數僵局只是表面上的零和：往每個立場底下的需求看去，往往能找到一個讓所有人都滿意的更大選項。團結力就是找出這些雙贏的修練，從長遠來看，是打造一個讓合作之舉同時也是最省力之舉的生態系統。
 
-交通更安全不是因為每個駕駛都是聖人，而是因為道路、標誌和規則使安全駕駛比魯莽駕駛更容易。
+交通更安全，是因為道路、標誌和規則使安全駕駛比魯莽駕駛更容易，駕駛不必都是聖人。
 
 即使完美的在地關懷，放在敵對的更大生態系統裡仍然會失敗。團結力處理的是整個場域的條件，讓公民行為透過制度設計而不是靠聖人道德來佔上風。
 
@@ -20,19 +20,19 @@ permalink: "/tw/5/"
 
 先問：「我們離開時，能保住所依靠的人際關係和紀錄嗎？」在要求大家使用某套系統之前，請實際使用的人試著匯出資料，並交接給另一個服務。跨群體合作需要彼此的約定，光用同一套軟體還不夠。
 
-在 Joan Tronto 的《[關懷民主](https://nyupress.org/9780814770344/caring-democracy/)》（頁 23）中，第五階段「共同關懷」要求：關懷需求，以及滿足這些需求的方式，必須與民主對正義、平等、人人自由的承諾一致——這個階段的道德品質是多元、溝通、信任與尊重，她取自 Selma Sevenhuijsen 的《[Citizenship and the Ethics of Care](https://www.routledge.com/Citizenship-and-the-Ethics-of-Care-Feminist-Considerations-on-Justice-Morality-and-Politics/Sevenhuijsen/p/book/9780415170826)》；她並在其後加上團結（頁 35）。在仁工智慧裡，團結力提出的是一個結構性問題：這個生態系統的規則，究竟讓合作更容易被實踐，還是反而讓支配更容易？
+在 Joan Tronto 的《[關懷民主](https://nyupress.org/9780814770344/caring-democracy/)》（頁 23）中，第五階段「共同關懷」要求：關懷需求，以及滿足這些需求的方式，必須與民主對正義、平等、人人自由的承諾一致。這個階段的道德品質是多元、溝通、信任與尊重，她取自 Selma Sevenhuijsen 的《[Citizenship and the Ethics of Care](https://www.routledge.com/Citizenship-and-the-Ethics-of-Care-Feminist-Considerations-on-Justice-Morality-and-Politics/Sevenhuijsen/p/book/9780415170826)》；她並在其後加上團結（頁 35）。在仁工智慧裡，團結力提出的是一個結構性問題：這個生態系統的規則，究竟讓合作更容易被實踐，還是反而讓支配更容易？
 
 這個問題也有一種技術上的讀法。[Leibo 及其同事](https://arxiv.org/abs/1702.03037)在 2017 年研究序列社會困境的模擬：各自領取獎勵的智慧體可能合作，也可能背叛，取決於賽局與能力。Trivedi 及其同事的《[唯我超智慧不太可能具備合作性](https://arxiv.org/abs/2606.03237)》探討：在相互依存的行動者之間，單邊最佳化為何可能失敗。Taniguchi 及其同事提出另一種目標：加入任何單一智慧體都無法獨力滿足的集體項。這是團結的一種理論表述，並不證明各自領取獎勵的系統必然極化，也不證明公民合作非得採用這個特定項。
 
 ### 定義
 
-- **不必曝光的可問責身分。** 智慧體身分應該能證明背後有真實管理者負責，但不必把私人細節攤在公眾面前——這就是選擇性揭露，或稱部分匿名（meronymity）——[Soliman 及其同事](https://doi.org/10.1145/3613904.3642241)在 CHI 2024 為「只揭露自己選定的身分面向、並有可信背書者」所創的詞：證明角色，而不揭露其人。問責不應以肉搜為代價。
+- **不必曝光的可問責身分。** 智慧體身分應該能證明背後有人負責，但不必把私人細節攤在公眾面前。這就是選擇性揭露，或稱部分匿名（meronymity），[Soliman 及其同事](https://doi.org/10.1145/3613904.3642241)在 CHI 2024 為「只揭露自己選定的身分面向、並有可信背書者」所創的詞：證明角色，而不揭露其人。問責不應以肉搜為代價。
 - **互通性勝於平台鎖定。** 可攜性和開放協定把競爭轉移到關懷品質。退出權保障自由，因為人們離開時不必失去自己的關係、歷史和受眾：這是 Albert Hirschman 所說的[退出](https://www.hup.harvard.edu/books/9780674276604)，只有在離開真正可行時，才能約束在位者。
 
     猶他州的《數位選擇法》（H.B. 418，2025；現為第 13-81 章）已要求提供可攜的個人資料副本，含社交圖譜（[§13-81-201](https://le.utah.gov/xcode/Title13/Chapter81/13-81-S201.html)，2026 年 7 月 1 日生效），以技術可行、實務可使用為限。現行互通性文本是[同步共享](https://le.utah.gov/xcode/Title13/Chapter81/13-81-S202.html)（§13-81-202），並排除推論與排序系統。H.B. 408（2026）自 2027 年 7 月 1 日起改為持續即時轉送。
 
 - **[聯邦](/tw/glossary/#federation)勝於單體。** 分享威脅情報，但不要造出單一瓶頸。本地政策留在本地，防禦能力則能跨機構累積。
-- **表達不等於放大。** 推薦系統的問責是公民義務——正如 Renée DiResta 在 2018 年所說，[言論自由不等於觸及自由](https://www.wired.com/story/free-speech-is-not-the-same-as-free-reach/)，也是《[讓第 230 條落日](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/)》一文的論點。在公民脈絡裡，排序應獎勵跨群體的理由交換與共同解題，而不是只獎勵最快煽動某一群集的內容。加州 [SB 1159](https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB1159) 已於 2026 年 9 月簽署成為法律，將 AI 系統排除於「公眾成員」的參與資格之外，同時允許人們以一般人的發言量使用輔助工具。公民管道中的發言資格屬於人類，可透過選擇性揭露證明而不必曝光身分；被演算法倍增的聲量，不因此取得人的參與資格。
+- **表達不等於放大。** 推薦系統的問責是公民義務。正如 Renée DiResta 在 2018 年所說，[言論自由不等於觸及自由](https://www.wired.com/story/free-speech-is-not-the-same-as-free-reach/)，也是《[讓第 230 條落日](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/)》一文的論點。在公民脈絡裡，排序應獎勵跨群體的理由交換與共同解題，而不是只獎勵最快煽動某一群集的內容。加州 [SB 1159](https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB1159) 已於 2026 年 9 月簽署成為法律，將 AI 系統排除於「公眾成員」的參與資格之外，同時允許人們以一般人的發言量使用輔助工具。公民管道中的發言資格屬於人類，可透過選擇性揭露證明而不必曝光身分；被演算法倍增的聲量，不因此取得人的參與資格。
 
 ### 為什麼重要
 
@@ -44,7 +44,7 @@ permalink: "/tw/5/"
 
 ### 開架書庫與反競用性資源
 
-卡內基（Carnegie）在美國資助了[超過 1,600 座公共圖書館](https://guides.loc.gov/chronicling-america-carnegie-libraries)。這些圖書館之所以促進民主，靠的不是建築本身，而是開架書庫：讀者親自在書架間瀏覽，而不是央求館員代為取書。把能力鎖在專有 API 後面的垂直 AI 平台，重演的正是閉架模式；開放權重模型、開放協定與共享評測登錄庫，則是開架書庫的當代對應——這種基礎設施把社群當成有能力的行動者，而不是只能依平台條款受服務的消費者。
+卡內基（Carnegie）在美國資助了[超過 1,600 座公共圖書館](https://guides.loc.gov/chronicling-america-carnegie-libraries)。這些圖書館之所以促進民主，靠的是開架書庫：讀者親自在書架間瀏覽，不必央求館員代為取書。把能力鎖在專有 API 後面的垂直 AI 平台，重演的正是閉架模式；開放權重模型、開放協定與共享評測登錄庫，則是開架書庫的當代對應：這種基礎設施把社群當成有能力的行動者，由社群自己訂條款。
 
 知識與石油不同，是「反競用性」（anti-rival）的資源。這是 Steven Weber 在《開源的成功》中所創的[詞](https://www.hup.harvard.edu/books/9780674018587)：使用讓它更豐饒，而不是更耗竭。開放協定也是如此：eduroam 每多一所機構加入，就對每位成員更有價值，而沒有任何參與者能獨佔這份增益。有了團結力的生態系統，也是這樣運作：當一座城市採用選擇性揭露的證明，其他每座城市都能以趨近於零的邊際成本採用同一套標準。
 
@@ -54,8 +54,8 @@ permalink: "/tw/5/"
 
 - **選擇性揭露身分。** 智慧體、組織與個人都擁有可驗證的證明，由受信任的託管者保存；公開證明保持最小，但提出質疑與撤銷都是真實可行的。
 - **社群可攜性。** 使用者可以匯出社交圖譜和內容，通過互通性測試，並在離開時保留自己的受眾。退出不再等於社會流放，自由才變得實際。供應商鎖定會把商業上的不便，變成人們無法退出的關懷關係。
-- **罕見共識稽核。** 平台公布[罕見共識指數](/tw/measures/#uncommon-ground-index)——衡量共同決策中真正獲得跨群體參與和背書的比例。這正是[搭橋式排序](https://www.belfercenter.org/publication/bridging-based-ranking)在排序資訊流時讀取的同一種跨群體訊號，在這裡從排序政策升格為公開稽核。多元不再只是品牌口號，而是能被看見的事實。這項指數不能替代真正的多元；它讓真正的多元更難造假，而且必須對照 Pack 1 的代表性落差一起讀——因為抬高共同背書最便宜的方法，就是縮限誰能進到房間裡。
-- **聯邦式安全網路。** 夥伴在自己的文化脈絡中偵測危害，透過開放工具分享所能分享的，並把執行留在本地，而不是把一切交給單一中心。[ROOST](https://roost.tools) 示範的是這項目標中可重用、可自行託管的那一層——Osprey 做事件回應，Coop 做審查——它的 [ROOST 模型社群](https://github.com/roostorg/model-community)則分享開放權重的安全模型與政策包，是讓無法匯集原始資料的平台得以用聯邦學習訓練安全模型的發布與實務層。
+- **罕見共識稽核。** 平台公布[罕見共識指數](/tw/measures/#uncommon-ground-index)，衡量共同決策中真正獲得跨群體參與和背書的比例。這正是[搭橋式排序](https://www.belfercenter.org/publication/bridging-based-ranking)在排序資訊流時讀取的同一種跨群體訊號，在這裡從排序政策升格為公開稽核。多元不再只是品牌口號，而是能被看見的事實。這項指數不能替代真正的多元，但它讓多元更難造假。請對照 Pack 1 的代表性落差一起讀，因為抬高共同背書最便宜的方法，就是縮限誰能進到房間裡。
+- **聯邦式安全網路。** 夥伴在自己的文化脈絡中偵測危害，透過開放工具分享所能分享的，並把執行留在本地，不把一切交給單一中心。[ROOST](https://roost.tools) 示範的是這項目標中可重用、可自行託管的那一層（Osprey 做事件回應，Coop 做審查），它的 [ROOST 模型社群](https://github.com/roostorg/model-community)則分享開放權重的安全模型與政策包，是讓無法匯集原始資料的平台得以用聯邦學習訓練安全模型的發布與實務層。
 
 - **協定層級規範。** 用機器可讀的合作條款寫下共同義務：未經同意不得抓取、必須承接申訴交接、必須尊重退出。
 
@@ -67,7 +67,7 @@ permalink: "/tw/5/"
 2. **在採購中強制要求可攜性。** 公部門買家要求協定互通、交接排練與退出演練列為標準契約條款。
 3. **採納罕見共識稽核。** 確保平台每季度公布罕見共識指數及其輔助診斷；要求第三方驗證。
 4. **加入安全聯盟。** 貢獻並取用共享威脅登錄庫的資訊；本地化執行。
-5. **預設公民排序規則。** 在公民脈絡中，讓資訊流優先獎勵理由交換、可爭議性和跨群體合作，而不是憤怒。
+5. **預設公民排序規則。** 在公民脈絡中，讓資訊流優先獎勵理由交換、可爭議性和跨群體合作，不獎勵憤怒。
 
 ### 今天就能做的工具
 
@@ -79,9 +79,9 @@ permalink: "/tw/5/"
 
 <h3 id="一個案例洪水機器人"><span id="一個案例賑災機器人" aria-hidden="true"></span>一個案例：洪水機器人</h3>
 
-這是綜合多種情境寫成的虛構教學示例，不是實際部署紀錄，也不是實測成果。
+這是綜合多種情境寫成的虛構教學示例，沒有實際部署紀錄或實測成果。
 
-危機持續加深——社區現在也把這個機器人改名為「河守」（River-Steward）：一個有覺察力、有界限的智慧體，看起來不再像一件產品，而開始像一位鄰居。
+危機持續加深，社區現在也把這個機器人改名為「河守」（River-Steward）：一個有覺察力、範圍有限的智慧體，看起來不再像一件產品，而開始像一位鄰居。
 
 - **身分。** 詐騙者開始冒充援助工作者以攔截資金，而真正的志願翻譯員則遭受承受壓力、流離失所的援助申請者騷擾。城市改用選擇性揭露身分後，翻譯員可以證明自己的角色，卻不必公開個人電話號碼。濫用下降；問責上升。
 - **可攜性。** 採購規則要求案件檔案、同意紀錄和聯絡方式，能夠從緊急機器人一次匯出到長期住房服務，而不是重新手動輸入。
@@ -97,7 +97,7 @@ permalink: "/tw/5/"
 
 ### 與其他「力」的介接
 
-- **來自覺察力（Pack 1）：** 搭橋地圖交出的是地形——誰同意、誰衝突、哪裡可能有跨越。罕見共識指數清點的是實際發生的跨越；組成先於共同行動。
+- **來自覺察力（Pack 1）：** 搭橋地圖交出的是地形：誰同意、誰衝突、哪裡可能有跨越。罕見共識指數清點的是實際發生的跨越；組成先於共同行動。
 - **來自負責力（Pack 2）：** 可攜性和退出條款在每份參與契約中被引用。
 - **來自勝任力（Pack 3）：** 可靠且監測機制完善的系統，才讓公開稽核可信。
 - **來自回應力（Pack 4）：** 注重修復的文化能促進跨組織信任。
@@ -105,19 +105,19 @@ permalink: "/tw/5/"
 
 ### 結語意象：標示清楚的交流道
 
-想像一個標示清楚的交流道——多條車道、明確的標誌、安全的匯流——它不是一個讓每位駕駛變成更好的人的地方，而是一條經過設計、讓合作駕駛成為最省力之舉的道路。團結力打造的正是這個：不是更高的個人美德標準，而是一條值得在上面展現美德的路。
+想像一個標示清楚的交流道，有多條車道、明確的標誌、安全的匯流。它不是讓每位駕駛變成更好的人的地方，而是經過設計、讓合作駕駛成為最省力之舉的道路。團結力打造的正是這個：一條值得在上面展現美德的路。
 
 ### 相關文獻
 
-- Tronto，《[Caring Democracy](https://nyupress.org/9780814770344/caring-democracy/)》（2013），頁 23、35、169——共同關懷、其道德品質，以及收回擋箭牌；Sevenhuijsen，《[Citizenship and the Ethics of Care](https://www.routledge.com/Citizenship-and-the-Ethics-of-Care-Feminist-Considerations-on-Justice-Morality-and-Politics/Sevenhuijsen/p/book/9780415170826)》（1998）。
-- Hirschman，《[Exit, Voice, and Loyalty](https://www.hup.harvard.edu/books/9780674276604)》（1970）——退出作為約束。
-- Weber，《[The Success of Open Source](https://www.hup.harvard.edu/books/9780674018587)》（2004）——反競用性財貨；Benkler，《[The Wealth of Networks](https://yalebooks.yale.edu/book/9780300125771/the-wealth-of-networks/)》（2006）——開架書庫。
-- Soliman 等人，[〈Meronymous Communication〉](https://doi.org/10.1145/3613904.3642241)（CHI 2024）——部分匿名。
-- DiResta，[〈Free Speech Is Not the Same As Free Reach〉](https://www.wired.com/story/free-speech-is-not-the-same-as-free-reach/)（2018）；Lanier、Stanger 與唐鳳，[〈Sunset Section 230〉](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/)（2026）——表達不等於放大。
-- Ovadya，《[Bridging-Based Ranking](https://www.belfercenter.org/publication/bridging-based-ranking)》（2022）——公民排序規則。
-- Ostrom，《[Governing the Commons](https://doi.org/10.1017/CBO9780511807763)》（1990）與[〈Beyond Markets and States〉](https://doi.org/10.1257/aer.100.3.641)（2010）——公共資源設計原則與多中心治理。
-- Leibo 等人，[〈Multi-agent Reinforcement Learning in Sequential Social Dilemmas〉](https://arxiv.org/abs/1702.03037)（2017）；Taniguchi 等人，[〈Symbiotic Alignment via Collective Predictive Coding: A Theoretical Framework for Co-Creative Human–AI Ecosystems〉](https://doi.org/10.1162/ARTL.a.475)（2026）；Trivedi 等人，[〈Solipsistic Superintelligence〉](https://arxiv.org/abs/2606.03237)（2026）——理論上的技術讀法，不是田野結果。
-- 猶他州 H.B. 418，[《數位選擇法》](https://le.utah.gov/~2025/bills/static/HB0418.html)（2025），現為 [§§13-81-201 與 13-81-202](https://le.utah.gov/xcode/Title13/Chapter81/13-81.html)（2026 年 7 月 1 日生效；2027 年 7 月 1 日由後法取代）；[H.B. 408](https://le.utah.gov/Session/2026/bills/enrolled/HB0408.pdf)（2026）——可攜性已生效；持續即時轉送自 2027 年 7 月 1 日起。
+- Tronto，《[Caring Democracy](https://nyupress.org/9780814770344/caring-democracy/)》（2013），頁 23、35、169：共同關懷、其道德品質，以及收回擋箭牌；Sevenhuijsen，《[Citizenship and the Ethics of Care](https://www.routledge.com/Citizenship-and-the-Ethics-of-Care-Feminist-Considerations-on-Justice-Morality-and-Politics/Sevenhuijsen/p/book/9780415170826)》（1998）。
+- Hirschman，《[Exit, Voice, and Loyalty](https://www.hup.harvard.edu/books/9780674276604)》（1970）：退出作為約束。
+- Weber，《[The Success of Open Source](https://www.hup.harvard.edu/books/9780674018587)》（2004）：反競用性財貨；Benkler，《[The Wealth of Networks](https://yalebooks.yale.edu/book/9780300125771/the-wealth-of-networks/)》（2006）：開架書庫。
+- Soliman 等人，[〈Meronymous Communication〉](https://doi.org/10.1145/3613904.3642241)（CHI 2024）：部分匿名。
+- DiResta，[〈Free Speech Is Not the Same As Free Reach〉](https://www.wired.com/story/free-speech-is-not-the-same-as-free-reach/)（2018）；Lanier、Stanger 與唐鳳，[〈Sunset Section 230〉](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/)（2026）：表達不等於放大。
+- Ovadya，《[Bridging-Based Ranking](https://www.belfercenter.org/publication/bridging-based-ranking)》（2022）：公民排序規則。
+- Ostrom，《[Governing the Commons](https://doi.org/10.1017/CBO9780511807763)》（1990）與[〈Beyond Markets and States〉](https://doi.org/10.1257/aer.100.3.641)（2010）：公共資源設計原則與多中心治理。
+- Leibo 等人，[〈Multi-agent Reinforcement Learning in Sequential Social Dilemmas〉](https://arxiv.org/abs/1702.03037)（2017）；Taniguchi 等人，[〈Symbiotic Alignment via Collective Predictive Coding: A Theoretical Framework for Co-Creative Human–AI Ecosystems〉](https://doi.org/10.1162/ARTL.a.475)（2026）；Trivedi 等人，[〈Solipsistic Superintelligence〉](https://arxiv.org/abs/2606.03237)（2026）：理論上的技術讀法，不是田野結果。
+- 猶他州 H.B. 418，[《數位選擇法》](https://le.utah.gov/~2025/bills/static/HB0418.html)（2025），現為 [§§13-81-201 與 13-81-202](https://le.utah.gov/xcode/Title13/Chapter81/13-81.html)（2026 年 7 月 1 日生效；2027 年 7 月 1 日由後法取代）；[H.B. 408](https://le.utah.gov/Session/2026/bills/enrolled/HB0408.pdf)（2026）：可攜性已生效；持續即時轉送自 2027 年 7 月 1 日起。
 - 完整足跡見〈[文獻與延伸閱讀](/tw/sources/)〉。
 
 <noscript><img src="/img/pack5-2-tw.jpg" alt="手繪漫畫頁，標題為「NOT：相互保證毀滅／BUT：盡可能雙贏——SOLUTION」：在每個「什麼」背後追問更深的「為什麼」，再打造一個同時滿足雙方的新「什麼」——兩位廚師發現一人要果皮做利口酒、一人要果肉榨汁，於是雙方百分之百滿足、毫無浪費；臺灣也曾用 pol.is 平台把分歧的辯論化為雙贏——包括迎進科學家與藝術家的就業金卡——示範更好的討論如何幫助大家共贏。" class="overview-image" width="1437" height="1999" loading="lazy" decoding="async"></noscript>

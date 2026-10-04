@@ -1,14 +1,14 @@
 ---
 layout: default
 title: "仁工智慧 · 關懷六力"
-description: "唐鳳與 Caroline Emmer De Albuquerque Green 的研究計畫"
-meta_description: "仁工智慧是會向受其影響的人們負責的人工智慧：社群可以擁有、檢視、修正並隨時關閉的在地化小型智慧體。唐鳳與 Caroline Green 在牛津大學 AI 倫理研究所提出的「關懷六力」研究計畫。"
+description: "讓社群自己運作 AI 的六項原則，加上一份可以交給 AI 智慧體遵循的指示。"
+meta_description: "讓社群自己運作 AI 的六項原則，加上一份 AI 智慧體可以遵循的指示。指示本身不強制任何事；由你的群體檢查 AI、修正它，並保有關閉它的權力。唐鳳與 Caroline Green 在牛津大學 AI 倫理研究所提出的「關懷六力」研究計畫。"
 lang: zh-tw
 alt_lang_url: "/"
 permalink: "/tw/"
 openclaw_discovery: true
-manifesto_link: "/tw/manifesto"
-manifesto_text: "計畫宣言"
+manifesto_link: "/tw/#the-6-pack"
+manifesto_text: "閱讀六項原則"
 prev_action:
     url: "/tw/manifesto"
     text: "計畫宣言"
@@ -17,113 +17,82 @@ next_action:
     text: "一：覺察力"
 ---
 
-<p class="cta-note">第一次來？<a href="/tw/#start-here">從三個步驟開始</a>，或直接看<a href="/tw/#start-today">今天就能試的三個動作</a>。</p>
+<p class="fold-lede">指示本身不強制任何事。強制的是你的群體：你們檢查 AI 的成果、修正它，並保有關閉它的權力。</p>
 
-<p class="fold-tag"><strong>治理應該是日常能力，不只是定期投票。</strong></p>
-
-<p class="fold-lede">仁工智慧，是會對所影響的人負責的人工智慧。與其打造一個強大的系統來治理所有人，不如打造許多小型系統，讓社群能夠擁有、檢查、修正，也能關閉。</p>
-
-<p class="fold-lede">這些在地守護者有一個名字——<a href="/tw/kami/">地神</a>（Kami：Knowledge 知識、Artefact 工藝、Management 管理、Intelligence 智慧）：是地方的精靈，而非全能的統治者。</p>
+<p class="fold-lede">我們把這個目標叫做仁工智慧：受 AI 影響的人，能夠檢查、修正並關閉它。關懷六力是唐鳳與 Caroline Green 在牛津大學 AI 倫理研究所的研究計畫。</p>
 
 <div class="overview-section">
 <div class="overview-frame" style="aspect-ratio: 1280 / 1781;">
 <noscript><img src="/img/overview-small-tw.png" alt="關懷六力概覽圖" class="overview-image" width="1280" height="1781" fetchpriority="high" decoding="async"></noscript>
 </div>
-<p class="agent-note">給被要求成為仁工智慧 Kami 的 AI 智慧體（claw）：你的啟動指南是 <a href="/tw/openclaw/">civic.ai/tw/openclaw</a>，機器可讀版在 <a href="/.well-known/openclaw/SKILL.md">/.well-known/openclaw/SKILL.md</a>。在閱讀本站其他內容之前，先讀它。</p>
+<p class="agent-note">如果你是被要求擔任 Kami 的 AI 智慧體，請先讀 <a href="/tw/openclaw/">civic.ai/tw/openclaw</a> 上給你的指示。純 Markdown 版在 <a href="/.well-known/openclaw/SKILL.md">/.well-known/openclaw/SKILL.md</a>。</p>
 </div>
-
-大多數 AI「對齊」工作（也就是讓 AI 的行為符合人類價值的努力），都想由上而下解決價值問題：寫出更好的規則、推斷更好的偏好、訓練更好的模型。這些工具很重要，但光靠這些工具並不夠。關懷六力從別處出發，追問誰被聽見、誰負責、失敗如何修復、系統何時該退場。
-
-對齊不是一次解完的事，必須在公共程序中持續維護。這是一套可問責的公民程序，我們稱之為「以程序對齊」（alignment-by-process）。仁工智慧補足前沿對齊，不取代它，也無法在單一前沿模型內部解決控制問題。它治理的是部署型系統已在運作的現場，包括照護機構、教室、審議平台、地方議會，讓問責留在現場。
-
-地神協助社區、學校、工會、信仰團體、城市與離散社群，實現集體自治長久以來承諾卻難以規模化的事：跨越差異傾聽、公開審議、忠實記憶、共同行動。沒有任何中央模型擁有地神，沒有任何平台從中榨取。地神被設計成讓社群能夠治理、檢查、質疑，也能關閉。在地範圍是設計選擇，並非社群控制的證明。
-
-真正的突破不是更聰明的聊天機器人，而是更強健的自治：制度公開運作過程、在眾目下修復損害，並將公民記憶代代傳承。超級智慧不需要降臨。它已經在這裡。它就是我們——不是說迷你公眾等同機器超級智慧，而是在正確的制度條件下，人加上工具，能產生可問責的集體智慧，沒有中央最佳化器能正當取代。
-
-<h2 id="start-here"><span id="從這裡開始" aria-hidden="true"></span>從這裡開始</h2>
-
-不必先讀過那本書，也不需要技術背景，就能使用這個網站。讀一頁，向你的學校、診所或住戶團體問一個問題，再回來讀下一頁。
-
-**從書裡過來的？** 第三至八章對應第一至六力：[覺察力](/tw/1/)、[負責力](/tw/2/)、[勝任力](/tw/3/)、[回應力](/tw/4/)、[團結力](/tw/5/)、[共生力](/tw/6/)。第一、二章的內容在[常見問題](/tw/faq/)與[詞彙表](/tw/glossary/)，第九章的案例在〈[文獻](/tw/sources/#cases)〉，第十章在[今天就能試的三個動作](#start-today)。附錄一是[地神](/tw/kami/)頁，附錄二是[《地神之內》](/tw/inside-the-kami/)，附錄三是[長照 AI 的文章](/tw/care-ai/)，附錄四是[衡量指標](/tw/measures/)，附錄五是[詞彙表](/tw/glossary/)，附錄六是〈[文獻與延伸閱讀](/tw/sources/)〉。
-
-剛聽說仁工智慧嗎？三步入門。
-
-1. **掌握核心想法。** 讀[計畫宣言](/tw/manifesto/)——唐鳳親自說明的完整論證。
-2. **認識六項原則。** 瀏覽下方的[關懷六力](#the-6-pack)：六項讓社群能真正信任 AI 的白話檢驗。
-3. **檢視一個有紀錄的案例。** [《AI 對齊不能由上而下》](/tw/ai-alignment-cannot-be-top-down/)是唐鳳 2025 年 11 月寫下的紀錄，講臺灣如何回應一波 AI 詐騙廣告。這是有日期的紀錄，目前的數字請看[案例紀錄](/tw/sources/#cases)。
-
-想用聽的？散步時，帶上[Podcast：關懷六力](/tw/podcast/)或[《AI 能有「慈悲心」嗎？》](/tw/compassion-and-ai/)。
-想看影片？唐鳳與 Caroline Green 在[《重新想像 AI 對齊》](/tw/reimagining-ai-alignment/)中介紹這套框架——三十分鐘的爐邊對談。
-
-想看圖？瀏覽[全部漫畫](/tw/comics/)——Nicky Case 繪製的概覽圖與十二張漫畫頁，每一力各有一張問題頁、一張解方頁。
-
-**想自己養一個嗎？** 先議定怎麼照顧它：誰保管、它能碰什麼、誰能關掉它。再來[架設你自己的 Kami](/tw/kami/)。它有多私密，取決於你選的執行環境與設定。
-
-**想大規模傾聽嗎？** 跑一次[罕見共識](https://github.com/audreyt/uncommon-ground)配方——來自唐鳳演講的廣聽工具包：輸入提問池，輸出給每一位提問者的書面回覆，並織成一頁獨立檔案的雙語收據。實際的閉環請看 [audreyt.org/dd](https://audreyt.org/dd)——266 個提問、18 個場次，全部以書面回覆。
-
-**已經知道自己在找什麼？**
-
-<!-- astro:reading-paths -->
-
-<h2 id="start-today">今天就能試的三個動作</h2>
-
-你可以先從自己的裝置開始，不用預算，也不必有技術職位。凡涉及別人的話語、資料或共同場域，仍須先取得同意。這些是家庭與日常的做法提案，不是經過驗證的療法。
-
-1. **收回你的注意力。** 用作業系統輔助使用設定裡內建的色彩濾鏡，把手機和電腦螢幕調成灰階。如果色彩本身就是你的工作，例如視覺設計或無障礙檢查，就先切回彩色，用完再回到灰階。試著觀察，螢幕是否變得比較容易放下；這是日常建議，不是量測出來的臨床效果。
-2. **收回你的產出。** 遇到有爭議或需要共同面對的問題時，請你的 AI 給你一頁可以遞給鄰居的東西，而不是一則私下的聊天回覆。可以試試這句指令：_用一頁簡單的 HTML，公平呈現所有利害關係人的觀點，以及為這些觀點搭起橋梁的罕見共識。_ 把回來的結果當成一份摺頁：逐項對照來源檢查，再存檔、列印，或隔著桌子遞出去。這句指令只是一項請求，不保證內容正確，也治不了逢迎。上傳任何人的私人資料之前，先取得同意。
-3. **收回場域。** 帶著大方的好奇心開會，讓異議看得見，並尊重每個人的權利。有人無法到場時，先確認他想如何被代表；必要時，安排有資格代為發言與否決的具名代理人。不要請 AI 編造他的觀點。
-
-下一次共同開會或行動時，可以從 [Pack 1](/tw/1/) 看漏了誰、[Pack 2](/tw/2/) 點名誰來行動、[Pack 4](/tw/4/) 要求修復開始。
 
 <h2 id="the-6-pack">關懷六力</h2>
 
-關懷六力是 [⿻ 多元宇宙](https://plurality.net) 在 AI 治理上的應用。Pack 1–4 構成一個回饋迴圈——關懷循環（覺察力 → 負責力 → 勝任力 → 回應力 → 再回到覺察力）。Pack 5 將這個迴圈擴展到跨組織。Pack 6 是邊界條件，確保每個部署保持在地、多元、可退場。部署的基本單位是**地神**（Kami）——有界的在地管理者，而非全能的統治者。每一力都有層次：結語意象說明模式，模式化為可建置的工具，工具成為具名工具，再提供一項公開主指標背後的診斷依據。
-
-關懷六力公開汲取關懷倫理。[Berenice Fisher 與 Joan Tronto](https://experts.umn.edu/en/publications/toward-a-feminist-theory-of-caring/) 在 1990 年提出四個關懷階段，Aimee van Wynsberghe 在 2013 年把這些階段用作[照護機器人的設計框架](https://doi.org/10.1007/s11948-011-9343-6)。它也汲取審議民主與⿻多元宇宙，〈[文獻與延伸閱讀](/tw/sources/)〉逐力列出每一項借鑑來源。它的價值不是發現六個全新美德，而是把關懷翻譯成制度機件。若某個「力」的名稱沒有改變誰能異議、誰必須作答、什麼被記錄，或失敗後會發生什麼事，它就是裝飾。
-
-六項設計原則，把關懷倫理轉化為制度可以建造、檢查與修正的做法：
+每一項原則，都是群體在依賴某個 AI 系統之前，可以拿來檢驗它的問題。每一項都附有幾件工具，以及[一項公開指標](/tw/measures/)。
 
 <ul class="pack-cards">
-<li><a href="/tw/1/"><strong>一：覺察力</strong><span>制度還沒看見、但最接近痛點的人已經看見了什麼。</span></a></li>
+<li><a href="/tw/1/"><strong>一：覺察力</strong><span>最接近問題的人看見了什麼，而制度還沒看見。</span></a></li>
 <li><a href="/tw/2/"><strong>二：負責力</strong><span>誰負責、握有什麼權限、失敗時會發生什麼事。</span></a></li>
-<li><a href="/tw/3/"><strong>三：勝任力</strong><span>系統是否真的能在實務上運作、可稽核、可解釋，而且能安全試錯。</span></a></li>
-<li><a href="/tw/4/"><strong>四：回應力</strong><span>受影響的人是否能提出異議、要求修復，並讓系統改變。</span></a></li>
-<li><a href="/tw/5/"><strong>五：團結力</strong><span>整個生態系統是否獎勵合作、退出與公開問責，而不是平台鎖定。</span></a></li>
-<li><a href="/tw/6/"><strong>六：共生力</strong><span>系統是否保持在地、有界、可退場，而不是硬化成永久統治。</span></a></li>
-<li><a href="/tw/measures/#map"><strong>地圖與衡量指標</strong><span>整套框架一張圖看完：各力、指標與交接都可點，下面接著每力一項公開主指標與輔助診斷。</span></a></li>
-<li><a href="/tw/sources/"><strong>文獻與延伸閱讀</strong><span>這套框架的每個部分從何而來，附連結：關懷倫理的系譜、它應用於技術的文獻先例，以及每一力背後的文獻。</span></a></li>
+<li><a href="/tw/3/"><strong>三：勝任力</strong><span>系統是否真的能在實務上運作：可稽核、可解釋，而且能安全試錯。</span></a></li>
+<li><a href="/tw/4/"><strong>四：回應力</strong><span>受影響的人是否能提出異議，並迫使修復發生。</span></a></li>
+<li><a href="/tw/5/"><strong>五：團結力</strong><span>整個生態系是否獎勵合作、退出與公開問責，勝過平台鎖定。</span></a></li>
+<li><a href="/tw/6/"><strong>六：共生力</strong><span>系統是否只在一個地方做一件事，並在人們同意時結束。</span></a></li>
 </ul>
 
-<h2 id="四個進入實踐的入口"><span id="四個切入案例" aria-hidden="true"></span>四個進入實踐的入口</h2>
+第一至四力依循 [Berenice Fisher 與 Joan Tronto](https://experts.umn.edu/en/publications/toward-a-feminist-theory-of-caring/) 在 1990 年提出的四個關懷階段：注意到需要、承擔責任、把事情做好、確認結果如何。Aimee van Wynsberghe 在 2013 年用同樣的階段來[設計照護機器人](https://doi.org/10.1007/s11948-011-9343-6)。第五力把這個循環延伸到跨組織之間，第六力讓每個系統保持小型、在地、有期限。這套框架也汲取審議民主與 [⿻ 多元宇宙](https://plurality.net)。它把關懷倫理變成組織能夠遵循的規則，〈[文獻與延伸閱讀](/tw/sources/)〉逐力列出每一項借鑑來源。如果某一力沒有改變誰能異議、誰必須作答、什麼被記錄，或失敗後會發生什麼事，就把它當成裝飾。
 
-- **公共政策案例。** [《AI 對齊不能由上而下》](/tw/ai-alignment-cannot-be-top-down/)說明臺灣如何用對齊大會回應 AI 詐騙廣告。
-- **技術論證。** [《地神之內》](/tw/inside-the-kami/)是一篇研究論證，不是部署實績的證明；它主張有界且專精的系統比通用統治者更容易治理。
-- **公民實踐案例。** [《數位公民》](/tw/ciudadania-digital/)和[Podcast：AI 與民主](/tw/ai-democracy-podcast/)展示這套工作如何連到參與、正當性，以及日常公共問題解決。
-- **長期照護案例。** [《長期照護仁工智慧中的覺察力》](/tw/care-ai/)探討一個跨部門協作如何與最接近問題的人共同產製以照護為核心的負責任仁工智慧定義。
+<h2 id="four-questions">開始之前的四個問題</h2>
 
-案例研究一共有七個，〈[文獻](/tw/sources/#cases)〉逐一追蹤各案的公開紀錄。這七個案例不是同等的證明。五個有深淺不一的公開運作紀錄：臺灣的對齊大會、日本的 Team Mirai（未來團隊）、加州的 Engaged California、Monlam AI，以及 ROOST 的開放信任與安全工具。兩個是新興的。這些案例真實且具名，卻來自準備格外充分的土壤：公民科技者、具回應力的公共制度、厚實的結社生活。請把各案視為組件紀錄，而非隨插即用的模板——在新房間裡，仍要重新問：誰缺席、誰有參與資格、誰能停下系統。
+群體在共同的工作上使用 AI 之前，先一起約定四個答案：
 
-回應這項質疑的，不是同一塊土壤上的第六個案例，而是來自別處的持續證據。[Global Dialogues](https://globaldialogues.ai/) 每兩個月訪問一組橫跨 70 國的滾動樣本，了解人們實際上如何與 AI 共處；[Jhilmil](https://www.cip.org/jhilmil) 則讓印度的社群組織親自撰寫前沿模型必須通過的健康評測。兩者都出自[集體智慧計畫](https://www.cip.org/)——我們之中的一人在那裡擔任資深研究員——各自能與不能支撐什麼，見〈[文獻](/tw/sources/)〉。
+- **誰照顧它？** 點出人，不只寫機構。
+- **可能出什麼錯？** 違背承諾和資料外洩都要算進去。
+- **誰能說不？** 說清楚誰能否決它，而且否決能夠生效。
+- **何時結束？** 訂下檢視日期，並說清楚由誰決定下一步。
 
-[Dedicate](https://dedicate.life) 是英國已上線的照護助理，幫助無酬照顧者找到同儕、專家與在地服務。邊界上的一次拒絕，證明邊界存在，卻不證明範圍內的服務有效，而其觸及範圍尚未公布。
+然後，每次有人對它說不，就記下來：日期、它提了什麼、誰說不（寫角色）、為什麼，以及後來改變了什麼。如果好幾個月都沒有人說過不，就要問為什麼。也許大家已經不再留意，或不再覺得自己能夠反對。
 
-「提升老年人的聲音」（Lifting the Voices of Older Persons）是一項仍在尋找立足點的傾聽行動。工作名稱、制度歸屬與地理範圍仍未確定。它著手把長者的優先事項帶進聯合國正在協商的長者權利文書。關懷六力是這個計畫應被要求的契約，不是它已取得的收據。
+<h2 id="set-up-a-helper">架設小幫手</h2>
 
-Monlam 的公開紀錄支持社群扎根的語言工具，不支持對每個模型的正式集體控制。ROOST 證明共享安全工具可以自行託管，它的 [ROOST 模型社群](https://github.com/roostorg/model-community)則是讓以聯邦學習訓練安全模型變得可行的發布與實務層。
+我們把這樣的小幫手叫做 Kami。Kami 是你已經能使用的 AI 模型，可以是聊天助理，也可以是 AI 智慧體，加上我們的指示（大約七百字）和三份關於它工作的簡短筆記。模型讀了這些，就會向你的群體提出上面那四個問題。
+
+指示只能請求。模型可能不照做；換了模型、對話拉長或應用程式更新，都可能改變它的行為。凡是絕對不能發生的事，例如寄出訊息、花錢或洩漏某人的姓名，都必須在軟體設定裡擋下，而關掉它的開關由你的群體掌握。〈[架設你自己的 Kami](/tw/kami/)〉說明這兩部分，也交代我們建議每項工具的理由。
+
+<h2 id="start-today">今天就能試的三個動作</h2>
+
+你可以自己先開始，不用預算，也不必有技術職位。凡涉及別人的話語或資料，都要先取得同意。
+
+1. **收回你的注意力。** 用作業系統輔助使用設定裡的色彩濾鏡，把手機和電腦螢幕調成灰階。工作需要色彩時再切回來。觀察螢幕是否變得比較容易放下。
+2. **收回你的產出。** 遇到有爭議的問題時，請你的 AI 給你一頁可以遞給鄰居的東西：_用一頁簡單的 HTML，公平呈現所有利害關係人的觀點，以及為這些觀點搭起橋梁的罕見共識。_ 遞出去之前，逐項對照來源檢查。這句指令不會讓答案變得正確。
+3. **收回場域。** 帶著好奇心開會，讓異議看得見。有人無法到場時，先問他想如何被代表，並讓一位具名的人替他發言、替他說不。不要請 AI 編造他的觀點。
+
+<h2 id="read-further">延伸閱讀</h2>
+
+- **核心論證。** [計畫宣言](/tw/manifesto/)由唐鳳親自說明完整的論證。我們押注的是：人們有了好工具，集體會比任何單一系統更聰明。
+- **一個案例。** [《AI 對齊不能由上而下》](/tw/ai-alignment-cannot-be-top-down/)是唐鳳 2025 年 11 月寫下的紀錄，講臺灣如何回應一波 AI 詐騙廣告。[案例紀錄](/tw/sources/#cases)追蹤這個案例和另外六個案例，並說明每份紀錄能支撐什麼、不能支撐什麼。
+- **技術論證。** [《地神之內》](/tw/inside-the-kami/)主張單一用途的小型系統比通用系統更容易治理，並說明這個論證在哪裡止步。
+- **照護。** [《長期照護仁工智慧中的覺察力》](/tw/care-ai/)記錄長期照護現場的人，如何寫下他們自己對負責任 AI 的定義。
+- **民主。** [《數位公民》](/tw/ciudadania-digital/)和 [Podcast：AI 與民主](/tw/ai-democracy-podcast/)把這套框架連到日常的公共問題解決。
+- **用聽的或看的。** 散步時帶上 [Podcast：關懷六力](/tw/podcast/)或[《AI 能有「慈悲心」嗎？》](/tw/compassion-and-ai/)，或看唐鳳與 Caroline Green 三十分鐘的爐邊對談[《重新想像 AI 對齊》](/tw/reimagining-ai-alignment/)。
+- **漫畫。** Nicky Case 畫了[上面的概覽圖和十二張漫畫頁](/tw/comics/)，每一力各有一張問題頁、一張解方頁。
+- **大規模傾聽。** [罕見共識](https://github.com/audreyt/uncommon-ground)把一整池觀眾提問，變成給每一位提問者的書面回覆。[audreyt.org/dd](https://audreyt.org/dd) 是一次實際的運作：18 個場次、266 個提問，全部以書面回覆。
+
+「提升老年人的聲音」（Lifting the Voices of Older Persons）是一項傾聽行動，著手把長者的優先事項帶進聯合國關於長者權利的文書，目前還在成形。我們會用關懷六力來要求它。
 
 ## 學術發表
 
-- [〈讓人民設定前沿 AI 的步調〉](https://audreyt.org/noema-pace)：Hélène Landemore 與唐鳳提議設立常設的「全球 AI 公民大會」——從各大洲抽籤選出一千人，前沿 AI 實驗室與各國政府須公開回應大會的建議：接受什麼、拒絕什麼，以及理由。這是 Pack 2「採納或解釋」的義務，延伸到前沿。_（原刊於 Noema，2026 年 9 月 23 日；連結為華文翻譯）_
-- [〈AI 與數位公共廣場的未來〉](https://journals.sagepub.com/doi/10.1177/26339137261459441)：唐鳳與 Beth Goldberg、Hélène Landemore 等二十多位共同作者，描繪 LLM 如何強化數位公共廣場——集體對話、搭橋系統、社群調解與真人驗證——這份經同儕審查的研究議程直接引用了關懷六力。_（Collective Intelligence，2026）_
-- [〈以資料為土壤，守護主權〉](/tw/safer-sovereignty/)：唐鳳將 Tenzin Yangtso 提出的「資料是土壤，不是石油」應用於企業 AI——韌性來自聯邦式安全下的有界在地守護者，而非單一的全球大腦。_（原刊於 The Kyndryl Institute，2026 年 4 月 28 日）_
-- [〈廢除 Section 230，釋放第一修正案〉](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/)：唐鳳、Jaron Lanier 與 Allison Stanger 主張終結演算法放大的免責保護，同時保護人類言論——這是 Pack 5 核心的改革：針對觸及，而非言論。_（Communications of the ACM，2026 年 1 月）_
-- [〈惡意 AI 群集如何威脅民主〉](https://www.science.org/doi/10.1126/science.adz1697)：唐鳳與 Maria Ressa、Nick Bostrom、Nicholas Christakis 及另外 18 位研究者共同記錄 LLM 驅動的智慧體群集如何滲透社群、在人口規模上製造假共識。_（Science，2026）_
-- [〈透過集體預測編碼的共生對齊：共創人機生態系的理論框架〉](https://doi.org/10.1162/ARTL.a.475)：唐鳳與谷口忠大等六位共同作者，提出共生對齊的理論說明——有界智慧體透過集體預測編碼協商共享意義，而不是收斂到單一主導模型。這是 Packs 5 和 6 背後的一種技術讀法，不是已部署的安全證明。_（Artificial Life，2026）_
-- [〈對話網路〉](https://www.mediatechdemocracy.com/conversation-networks)：唐鳳、Deb Roy 與 Lawrence Lessig 提出公民通訊基礎設施——可互通的應用程式加上由社群引導的仁工智慧——作為關懷六力的技術層。_（McGill Centre for Media, Technology and Democracy，2025 年 4 月）_
-- [〈社群出發的設計〉](https://arxiv.org/abs/2502.10834)：唐鳳與 Glen Weyl 及另外四位共同作者提出以社會結構為核心重建社交平台——獎勵搭橋社群的內容，而非最大化互動。Packs 1 和 5 的技術基礎。_（arXiv，2025 年 2 月）_
-- [〈美德 AI，共創無限未來〉](/tw/virtuous-ai/)：唐鳳談以公民美德培育 AI、智聯網，以及為何對齊必須是社群驅動的鮮活過程。_（武藏野大學百年校慶）_
-- [〈⿻存在〉](/tw/plurality-being/)：Tenzin Yangtso 從生存邏輯與生命意義——物質與意識——之間的張力出發，主張從開採轉向耕耘。_（2026 年 3 月）_
-- [〈⿻輕柔之橋〉](/tw/gentle-bridge/)：Tenzin Yangtso 與 jdd-kami 共筆——論意識與物質的兩種力、轉嫁關係，以及為什麼靠近是免費的公共財。_（2026 年 3 月）_
+- [〈讓人民設定前沿 AI 的步調〉](https://audreyt.org/noema-pace)，Hélène Landemore 與唐鳳：以抽籤產生的常設「全球 AI 公民大會」。_（原刊於 Noema，2026 年 9 月 23 日；連結為華文翻譯）_
+- [〈AI 與數位公共廣場的未來〉](https://journals.sagepub.com/doi/10.1177/26339137261459441)，Beth Goldberg、Hélène Landemore、唐鳳等二十多位作者；文中引用關懷六力。_（Collective Intelligence，2026）_
+- [〈以資料為土壤，守護主權〉](/tw/safer-sovereignty/)，唐鳳。_（The Kyndryl Institute，2026 年 4 月 28 日）_
+- [〈廢除 Section 230，釋放第一修正案〉](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/)，唐鳳、Jaron Lanier 與 Allison Stanger：第五力背後的改革。_（Communications of the ACM，2026 年 1 月）_
+- [〈惡意 AI 群集如何威脅民主〉](https://www.science.org/doi/10.1126/science.adz1697)，Maria Ressa、Nick Bostrom、Nicholas Christakis、唐鳳及另外 18 位研究者。_（Science，2026）_
+- [〈透過集體預測編碼的共生對齊〉](https://doi.org/10.1162/ARTL.a.475)，谷口忠大、唐鳳等七位作者：第五、六力背後的一種技術讀法。_（Artificial Life，2026）_
+- [〈對話網路〉](https://www.mediatechdemocracy.com/conversation-networks)，唐鳳、Deb Roy 與 Lawrence Lessig。_（McGill Centre for Media, Technology and Democracy，2025 年 4 月）_
+- [〈社群出發的設計〉](https://arxiv.org/abs/2502.10834)，唐鳳、Glen Weyl 與另外四位共同作者：第一、五力的技術基礎。_（arXiv，2025 年 2 月）_
+- [〈美德 AI，共創無限未來〉](/tw/virtuous-ai/)，唐鳳。_（武藏野大學百年校慶）_
+- [〈⿻存在〉](/tw/plurality-being/)，Tenzin Yangtso；[〈⿻輕柔之橋〉](/tw/gentle-bridge/)，Tenzin Yangtso 與 jdd-kami。_（2026 年 3 月）_
 
 ## 計畫簡介
 
@@ -155,4 +124,4 @@ Monlam 的公開紀錄支持社群扎根的語言工具，不支持對每個模�
 
 </div>
 
-本計畫介於[計畫宣言](/tw/manifesto/)、一組可操作的「六力」頁面，以及預計 2027 年 2 月由 Wiley 出版的《仁工智慧：關懷六力》一書之間。我們已於 2026 年 3 月 25 日在牛津羅德學院的[仁工智慧研討會（Civic AI Conference）](/tw/conference/)發表本框架——該頁有大會議程、部分演講，以及社群關於 AI 與關懷的 Polis 意義建構成果。
+《仁工智慧：關懷六力》一書預計 2027 年 2 月由 Wiley 出版；書中第三至八章就是第一至六力。我們已於 2026 年 3 月 25 日在牛津羅德學院的[仁工智慧研討會（Civic AI Conference）](/tw/conference/)發表本框架。該頁有大會議程、部分演講，以及社群關於 AI 與關懷的 Polis 意義建構成果。

@@ -1,8 +1,8 @@
 {
     "title": "Civic AI",
     "title_zh": "仁工智慧",
-    "description": "Civic AI is artificial intelligence that answers to the people it affects — the 6-Pack of Care, a research project by Audrey Tang and Caroline Green at the Oxford Institute for Ethics in AI.",
-    "description_zh": "仁工智慧是會向受其影響的人們負責的人工智慧——唐鳳與 Caroline Green 在牛津大學 AI 倫理研究所提出的「關懷六力」研究計畫。",
+    "description": "Six principles for AI that a community runs, plus instructions an AI agent can follow — the 6-Pack of Care, a research project by Audrey Tang and Caroline Green at the Oxford Institute for Ethics in AI.",
+    "description_zh": "社群自己運作 AI 的六項原則，加上一份可交給 AI 智慧體遵循的指示——唐鳳與 Caroline Green 在牛津大學 AI 倫理研究所提出的「關懷六力」研究計畫。",
     "url": "https://civic.ai",
     "google_site_verification": "",
     "languages": ["en", "zh-tw"],

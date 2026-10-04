@@ -18,14 +18,8 @@ function expect(path, needle) {
 
 expect("tw/1/index.html", "<em>先搭橋，再決策。</em>");
 expect("tw/1/index.html", "<strong>關係優先。</strong>");
-checks.push("index.html: Policy & governance");
-const home = built("index.html");
-if (
-    !home.includes("Policy &amp; governance") &&
-    !home.includes("Policy & governance")
-)
-    throw new Error("index.html missing Policy & governance");
-expect("tw/index.html", "政策與治理");
+expect("index.html", "Six principles for AI that a community runs");
+expect("tw/index.html", "讓社群自己運作 AI 的六項原則");
 expect("comics/index.html", 'id="pack-1-1"');
 expect("glossary/index.html", 'id="civic-ai"');
 expect("glossary/index.html", "Civic AI");

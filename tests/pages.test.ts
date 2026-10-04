@@ -28,12 +28,12 @@ test("keeps book-aligned source material tableless", () => {
 
     const kamiSetup = getPageByUrl("/kami/").html;
     expect(kamiSetup).not.toContain("<th>RAM</th>");
-    expect(kamiSetup).toContain("For machines with 16 GB RAM or more:");
+    expect(kamiSetup).toContain("On a laptop with 16 GB of memory or more");
 
     const twKamiSetup = getPageByUrl("/tw/kami/").html;
     expect(twKamiSetup).not.toContain("<th>記憶體</th>");
     expect(twKamiSetup).toContain(
-        '記憶體達 <span lang="en-GB">16 GB</span> 或以上：'
+        '記憶體 <span lang="en-GB">16 GB</span> 以上的筆電'
     );
 
     const measures = getPageByUrl("/measures/").html;
@@ -66,7 +66,7 @@ test("excludes OpenClaw human guide from sitemap", () => {
 
 test("normalizes front-matter action and navigation links", () => {
     const indexPage = getPageByUrl("/");
-    expect(indexPage.data.manifesto_link).toBe("/manifesto/");
+    expect(indexPage.data.manifesto_link).toBe("/#the-6-pack");
     expect(indexPage.data.prev_action?.url).toBe("/manifesto/");
     expect(indexPage.data.next_action?.url).toBe("/1/");
 
@@ -75,7 +75,7 @@ test("normalizes front-matter action and navigation links", () => {
     expect(comicsPage.data.nav_next?.url).toBe("/1/");
 
     const twIndexPage = getPageByUrl("/tw/");
-    expect(twIndexPage.data.manifesto_link).toBe("/tw/manifesto/");
+    expect(twIndexPage.data.manifesto_link).toBe("/tw/#the-6-pack");
     expect(twIndexPage.data.prev_action?.url).toBe("/tw/manifesto/");
     expect(twIndexPage.data.next_action?.url).toBe("/tw/1/");
 
