@@ -19,7 +19,7 @@ next_action:
     arrow: "right"
 ---
 
-<p class="fold-lede">The instructions do not enforce anything. Your group does: you check the AI's work, correct it and keep the power to switch it off.</p>
+<p class="fold-lede">Your group stays in charge: you check the AI's work, correct it and can switch it off. The instructions only ask; they enforce nothing.</p>
 
 <p class="fold-lede">Civic AI is our name for that goal: AI that the people it affects can check, correct and switch off. The 6-Pack of Care is a research project by Audrey Tang and Caroline Green at the Oxford Institute for Ethics in AI.</p>
 
