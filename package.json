@@ -43,8 +43,6 @@
         "comics:vector": "bun scripts/comics-vector.mjs",
         "fonts:ja": "bun scripts/fetch-ja-fonts.mjs",
         "fonts:latin": "bun scripts/fetch-latin-fonts.mjs",
-        "fonts:zh": "bun scripts/fetch-zh-fonts.mjs",
-        "fonts:subset": "bun scripts/subset-zh-fonts.mjs",
         "en": "bun scripts/review-set.mjs en",
         "tw": "bun scripts/review-set.mjs tw",
         "ci": "vp check && vp test && vp run sensemaker:test && vp run sensemaker:verify && vp build && vp run check-links && vp run check:hybrid && vp run check:astro-output && vp run check:search && vp run check:parity && vp run worker:typecheck && vp run worker:test"

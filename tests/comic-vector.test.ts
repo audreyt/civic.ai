@@ -33,7 +33,7 @@ test("turns a comic's noscript image into a vector plate", () => {
         read
     );
     expect(html).toBe(
-        '<span class="comic comic--lettered overview-image" style="aspect-ratio: 100 / 200; --comic-ar: 100 / 200; --comic-lettered: url(/img/p.jpg);"><picture><source srcset="/img/p-wordless-720w.avif 720w, /img/p-wordless.avif 100w, /img/p-wordless-200w.avif 200w" sizes="(max-width: 700px) calc(100vw - 40px), 640px" type="image/avif"><img class="comic-art" src="/img/p-wordless.jpg" alt="A page" width="100" height="200" loading="lazy" decoding="async"></picture><img class="comic-lettering" src="/img/p-lettering.svg" alt="" width="100" height="200" loading="lazy" decoding="async"><svg class="comic-text" viewBox="0 0 400 800" preserveAspectRatio="none" lang="en-GB" role="group" aria-label="Comic text" data-font-subset="skip"><text font-size="10"><tspan x="1" y="2">you\'re</tspan></text></svg></span>'
+        '<span class="comic comic--lettered overview-image" style="aspect-ratio: 100 / 200; --comic-ar: 100 / 200; --comic-lettered: url(/img/p.jpg);"><picture><source srcset="/img/p-wordless-720w.avif 720w, /img/p-wordless.avif 100w, /img/p-wordless-200w.avif 200w" sizes="(max-width: 700px) calc(100vw - 40px), 640px" type="image/avif"><img class="comic-art" src="/img/p-wordless.jpg" alt="A page" width="100" height="200" loading="lazy" decoding="async"></picture><img class="comic-lettering" src="/img/p-lettering.svg" alt="" width="100" height="200" loading="lazy" decoding="async"><svg class="comic-text" viewBox="0 0 400 800" preserveAspectRatio="none" lang="en-GB" role="group" aria-label="Comic text"><text font-size="10"><tspan x="1" y="2">you\'re</tspan></text></svg></span>'
     );
 });
 

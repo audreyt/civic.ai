@@ -38,10 +38,12 @@
     --pack-6: #a753f6;
 
     /* Two voices: argued and spoken text in serif; logged, measured and
-       navigational text in mono */
+       navigational text in mono. Han uses the reader's own faces (DESIGN.md
+       §6.2): a Song face where the platform ships one, otherwise its Hei. */
     --prose:
-        "Literata", "Literata Fallback", "Noto Serif TC", "Monlam Bodyig",
-        georgia, serif;
+        "Literata", "Literata Fallback", "Noto Serif CJK TC",
+        "Source Han Serif TC", "Songti TC", "PingFang TC", "Microsoft JhengHei",
+        "Monlam Bodyig", georgia, serif;
     --machine:
         "IBM Plex Mono", "Noto Sans TC", "Monlam Bodyig", ui-monospace,
         monospace;
@@ -5104,8 +5106,9 @@ h4,
 /* Traditional Chinese typography */
 html:lang(zh) {
     --serif:
-        "Literata", "Monlam Bodyig", "Noto Serif TC", "Source Han Serif TC",
-        "Songti TC", "Microsoft JhengHei", serif;
+        "Literata", "Literata Fallback", "Monlam Bodyig", "Noto Serif CJK TC",
+        "Source Han Serif TC", "Songti TC", "PingFang TC", "Microsoft JhengHei",
+        serif;
     --sans: var(--machine);
 }
 
@@ -5328,8 +5331,9 @@ html[data-theme="dark"] .polis-label-disagree {
 /* 404: plain blocks, EN then TW */
 .not-found[lang="zh-TW"] {
     --serif:
-        "Literata", "Monlam Bodyig", "Noto Serif TC", "Source Han Serif TC",
-        "Songti TC", "Microsoft JhengHei", serif;
+        "Literata", "Literata Fallback", "Monlam Bodyig", "Noto Serif CJK TC",
+        "Source Han Serif TC", "Songti TC", "PingFang TC", "Microsoft JhengHei",
+        serif;
     --sans: var(--machine);
 }
 

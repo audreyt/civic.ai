@@ -1,5 +1,6 @@
 import { expect, test } from "vite-plus/test";
 import { spawnSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import {
     mkdtempSync,
     mkdirSync,
@@ -41,26 +42,22 @@ test("postbuild publishes failed evals and exact final HTML bytes without reject
     }
 });
 
-// The receipt shape is the one scripts/subset-zh-fonts.mjs actually writes:
-// a site path and the page's total subset bytes.
+// Hex digests barely shrink under gzip, so either page tops 60 KB.
+const words = Array.from({ length: 3000 }, (_, i) =>
+    createHash("sha256").update(String(i)).digest("hex")
+).join(" ");
 test.each([
-    [{ pages: [{ path: "/tw/", bytes: 260000 }] }, true],
-    [{ pages: [{ path: "/tw/", bytes: 260001 }] }, false],
-    [{ pages: [] }, false],
+    [`<p>${words}</p>`, true],
+    [`<p title="${words}">x</p>`, false],
 ])(
-    "uses optional zh font receipts without treating missing measurements as zero",
-    (fontReport, pass) => {
+    "lets a long page pass on its own text, never on its markup",
+    (body, pass) => {
         const scratch = mkdtempSync(join(process.cwd(), ".record-eval-"));
         try {
-            mkdirSync(join(scratch, "dist/tw"), { recursive: true });
-            mkdirSync(join(scratch, "dist/fonts/zh"), { recursive: true });
+            mkdirSync(join(scratch, "dist"));
             writeFileSync(
-                join(scratch, "dist/tw/index.html"),
-                "<html><body>Text</body></html>"
-            );
-            writeFileSync(
-                join(scratch, "dist/fonts/zh/report.json"),
-                JSON.stringify(fontReport)
+                join(scratch, "dist/index.html"),
+                `<html lang="en"><body>${body}</body></html>`
             );
             const result = spawnSync(
                 "bun",
@@ -71,6 +68,7 @@ test.each([
             const report = JSON.parse(
                 readFileSync(join(scratch, "dist/evals.json"), "utf8")
             );
+            expect(report.checks.size.detail[0].html).toBeGreaterThan(60000);
             expect(report.checks.size.pass).toBe(pass);
         } finally {
             rmSync(scratch, { recursive: true });

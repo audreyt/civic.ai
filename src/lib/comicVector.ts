@@ -101,7 +101,7 @@ export function vectorComics(
             ? `<img class="comic-lettering" src="${comic.lettering}" alt="" width="${width}" height="${height}"${loading ? ` loading="${loading}"` : ""} decoding="async">`
             : "";
         const label = zh ? "漫畫文字" : "Comic text";
-        const text = `<svg class="comic-text${zh ? " comic-text--overlay" : ""}" viewBox="${comic.viewBox}" preserveAspectRatio="none"${comic.lang ? ` lang="${comic.lang}"` : ""} role="group" aria-label="${label}" data-font-subset="skip">${comic.text}</svg>`;
+        const text = `<svg class="comic-text${zh ? " comic-text--overlay" : ""}" viewBox="${comic.viewBox}" preserveAspectRatio="none"${comic.lang ? ` lang="${comic.lang}"` : ""} role="group" aria-label="${label}">${comic.text}</svg>`;
         return `<span class="${cls}" style="${style}">${picture}${lettering}${text}</span>`;
     });
 }

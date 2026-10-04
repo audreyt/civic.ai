@@ -28,19 +28,11 @@ const outDir = join(root, "public");
 rmSync(outDir, { recursive: true, force: true });
 mkdirSync(outDir, { recursive: true });
 
-// fonts/src holds the full upstream Han faces the build subsets from. They are
-// inputs, not deliverables: shipping them would add ~1 MB to every deploy.
-const fontSrcDir = join(root, "fonts", "src");
-
 for (const source of PASSTHROUGH) {
     const from = join(root, source);
     if (!existsSync(from))
         throw new Error(`Missing passthrough asset: ${source}`);
-    cpSync(from, join(outDir, basename(source)), {
-        recursive: true,
-        filter: (src) =>
-            src !== fontSrcDir && !src.startsWith(fontSrcDir + "/"),
-    });
+    cpSync(from, join(outDir, basename(source)), { recursive: true });
 }
 
 // The shipped stylesheet drops its comments; styles.css itself keeps them.

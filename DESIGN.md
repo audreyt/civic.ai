@@ -127,18 +127,20 @@ There is no third voice. UI chrome (nav, labels, buttons) borrows the machinery 
 
 ### 6.2 Faces
 
-| Role             | Latin                                            | Han (zh-Hant)                                 | Notes                                                                                      |
-| ---------------- | ------------------------------------------------ | --------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Display & prose  | **Literata**                                     | **Noto Serif TC**, subset per page            | Self-hosted WOFF2 with swap; Latin has a metric-adjusted local fallback                    |
-| Machinery        | **IBM Plex Mono**                                | System sans fallback                          | Noto Sans TC is named in the fallback stack but is not shipped                             |
-| Chinese emphasis | Literata for Latin                               | **Civic Kai**, local Han-only face            | Used for emphasis and quotations; falls back to prose where no local Kai face is available |
-| Japanese comics  | —                                                | Mochiy Pop One, Noto Sans JP, Zen Maru Gothic | Self-hosted subsets for the Japanese overlays                                              |
-| Comic lettering  | **Patrick Hand**, Patrick Hand SC, Anton, Oswald | —                                             | The comics' own OFL faces, exact subsets of their text; `block`, not `swap` (§10, Comics)  |
-| Tibetan          | —                                                | **Monlam Bodyig** (self-hosted)               | Keep; it is a solidarity statement in font form                                            |
+| Role             | Latin                                            | Han (zh-Hant)                                 | Notes                                                                                           |
+| ---------------- | ------------------------------------------------ | --------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| Display & prose  | **Literata**                                     | The reader's system Song face, else its Hei   | Latin is self-hosted WOFF2 with swap and a metric-adjusted local fallback; no Han webfont ships |
+| Machinery        | **IBM Plex Mono**                                | System sans fallback                          | Noto Sans TC is named in the fallback stack but is not shipped                                  |
+| Chinese emphasis | Literata for Latin                               | **Civic Kai**, local Han-only face            | Used for emphasis and quotations; falls back to prose where no local Kai face is available      |
+| Japanese comics  | —                                                | Mochiy Pop One, Noto Sans JP, Zen Maru Gothic | Self-hosted subsets for the Japanese overlays                                                   |
+| Comic lettering  | **Patrick Hand**, Patrick Hand SC, Anton, Oswald | —                                             | The comics' own OFL faces, exact subsets of their text; `block`, not `swap` (§10, Comics)       |
+| Tibetan          | —                                                | **Monlam Bodyig** (self-hosted)               | Keep; it is a solidarity statement in font form                                                 |
 
-**jf 蘭陽明體 (LanYang Ming) is image-only.** There is no web-embedding licence, and none is coming: it must never ship as a webfont, a subset, or outlined SVG text. Where its voice is wanted — the bilingual wordmark lockup, title plates inside illustrations — it is pre-rendered offline into PNG, the same workflow already used for illustration, with the full text carried in `alt`. Live DOM prose in zh-Hant is Noto Serif TC, with Civic Kai for emphasis and quotations; it is the shipped face, not a placeholder.
+**jf 蘭陽明體 (LanYang Ming) is image-only.** There is no web-embedding licence, and none is coming: it must never ship as a webfont, a subset, or outlined SVG text. Where its voice is wanted — the bilingual wordmark lockup, title plates inside illustrations — it is pre-rendered offline into PNG, the same workflow already used for illustration, with the full text carried in `alt`. Live DOM prose in zh-Hant uses the reader's own faces, with Civic Kai for emphasis and quotations.
 
-Downloaded fonts are self-hosted subsets with `font-display: swap`; Civic Kai and the system fallbacks are local faces. No CDN fonts, ever (§3, Pack 5).
+**No Han webfont ships.** A self-hosted, per-page Noto Serif TC subset was retired: it cost 101–455 KB per zh page (median 215 KB, about four-fifths of the page), could not be cached from one page to the next, and still missed characters added after its source was cut. The reader's own faces cost nothing and cover every character. Han prose names them in order (`--prose`, and `--serif` on zh pages): Noto Serif CJK TC or Source Han Serif TC where installed, Songti TC on macOS, then PingFang TC and Microsoft JhengHei, before the generic `serif` that Android resolves to Noto Serif CJK TC. Mac, Android and most Linux readers therefore get a Song face. iPhone and iPad Safari ship no Traditional Chinese Song face and Windows only the dated PMingLiU, so there Han prose is set in Hei and shares its face with the machinery voice. The trade is deliberate (§15).
+
+Downloaded fonts (Latin, Tibetan, the Japanese overlays and comic lettering) are self-hosted subsets with `font-display: swap`; Han prose, Civic Kai and the system fallbacks are local faces. No CDN fonts, ever (§3, Pack 5).
 
 ### 6.3 Scale and rhythm
 
@@ -310,19 +312,21 @@ Solidarity includes readers on old phones and thin connections. Budgets are targ
 
 | Resource                             | Target                                                                                                     |
 | ------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| HTML (gzip)                          | ≤ 60,000 bytes                                                                                             |
+| HTML (gzip)                          | ≤ 60,000 bytes; a longer page passes while its markup beyond its own text stays ≤ 25,000 bytes             |
 | CSS, linked + inline (gzip)          | ≤ 30,000 bytes                                                                                             |
 | JS, initially linked + inline (gzip) | ≤ 30,000 bytes; zero required for reading. Excludes JSON-LD and resources fetched only on search intent    |
-| Fonts, zh page                       | ≤ 260,000 bytes of Noto Serif TC subset files, uncompressed                                                |
+| Fonts, zh page                       | None shipped: Han uses the reader's system faces (§6.2)                                                    |
 | Fonts, EN page critical path         | ≤ 120 KB (Literata + Plex Mono); not measured by the report                                                |
 | Images above the fold                | Native AVIF selection with resized renditions where available and JPEG/PNG fallback; separate check        |
 | Third-party requests                 | **0** from the reading shell; hosted video players and the optional Ask service are named exceptions (§18) |
+
+A long-form page is judged by what its content costs, not by its length: a page whose own words exceed the HTML target passes while the markup beyond its text (tags and attributes; inline CSS and JS count under their own budgets) stays within 25,000 bytes.
 
 The margin notes' definitions (`/glossary-notes.json`, about 32 KB uncompressed) are fetched after load, when the browser is idle, and only on pages with glossed terms; like the search bundles they sit outside the initial JS budget.
 
 The shipped stylesheet is `styles.css` without its comments (`scripts/sync-public.mjs`); the source keeps them for editors, and the comments are about a quarter of its gzip weight.
 
-Image weights need a separate check: some shipped fallback images exceed 250 KB. Han subsetting is the hard problem and gets real engineering. An offline post-build pass parses the HTML and subsets Noto Serif TC at weights 400 and 600 with `subset-font`. Pages share a common-glyph face and download content-hashed deltas; the font report records bytes and missing glyphs. The pass runs after minification and before search indexing and eval injection. If a page's subset exceeds budget, the eval board says so.
+Image weights need a separate check: some shipped fallback images exceed 250 KB.
 
 ## 16. The machine door
 
@@ -411,8 +415,9 @@ Nothing is waiting here: every proposal from the original charter has shipped an
 
     /* Two voices */
     --prose:
-        "Literata", "Literata Fallback", "Noto Serif TC", "Monlam Bodyig",
-        georgia, serif;
+        "Literata", "Literata Fallback", "Noto Serif CJK TC",
+        "Source Han Serif TC", "Songti TC", "PingFang TC", "Microsoft JhengHei",
+        "Monlam Bodyig", georgia, serif;
     --machine:
         "IBM Plex Mono", "Noto Sans TC", "Monlam Bodyig", ui-monospace,
         monospace;

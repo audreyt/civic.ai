@@ -1,5 +1,5 @@
 #!/usr/bin/env bun
-import { readdirSync, readFileSync, writeFileSync, existsSync } from "node:fs";
+import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { spawnSync } from "node:child_process";
 import { gzipSync } from "node:zlib";
@@ -69,15 +69,6 @@ evaluate("contrast", () =>
 );
 
 const compressed = (text) => (text.length ? gzipSync(text).length : 0);
-const fontReportPath = join(dist, "fonts/zh/report.json");
-let fontReport;
-let fontError;
-try {
-    if (existsSync(fontReportPath))
-        fontReport = JSON.parse(readFileSync(fontReportPath, "utf8"));
-} catch (error) {
-    fontError = String(error);
-}
 function sizeCheck(rendered) {
     const detail = rendered.map((page) => {
         const cssPaths = [
@@ -105,6 +96,15 @@ function sizeCheck(rendered) {
                 );
             }, 0);
         const html = compressed(page.html);
+        // A long page can exceed the HTML budget on its own words alone: it
+        // passes while its markup beyond that text stays within budget. Inline
+        // CSS and JS are left out here; they count under their own budgets.
+        const prose = page.html.replace(
+            /<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi,
+            ""
+        );
+        const markup =
+            compressed(prose) - compressed(prose.replace(/<[^>]+>/g, ""));
         const css =
             resources(cssPaths) +
             compressed(
@@ -116,37 +116,25 @@ function sizeCheck(rendered) {
             resources(
                 scriptTags.flatMap((m) => /src="([^"]+)"/.exec(m[1])?.[1] ?? [])
             ) + compressed(scriptTags.map((m) => m[2]).join(""));
-        // Fonts agent's per-page report is optional. Unknown schemas are reported,
-        // never interpreted as a zero-byte success.
-        const fontPage = fontReport?.pages?.find?.((p) => p.path === page.url);
-        const fonts = page.url.startsWith("/tw/") ? fontPage?.bytes : undefined;
-        const fontRequired = Boolean(fontReport) && page.url.startsWith("/tw/");
-        const fontMeasured = Number.isFinite(fonts) && fonts >= 0;
         return {
             url: page.url,
             html,
+            markup,
             css,
             js,
-            ...(fontMeasured ? { fonts } : {}),
-            ...(fontRequired && !fontMeasured
-                ? {
-                      fontError:
-                          "Missing or unrecognised per-page bytes in font report",
-                  }
-                : {}),
             pass:
-                html <= 60000 &&
+                (html <= 60000 || markup <= 25000) &&
                 css <= 30000 &&
-                js <= 30000 &&
-                (!fontRequired || (fontMeasured && fonts <= 260000)),
+                js <= 30000,
         };
     });
     return {
-        pass: detail.every((row) => row.pass) && !fontError,
+        pass: detail.every((row) => row.pass),
         detail,
-        budgets: { html: 60000, css: 30000, js: 30000, zhFonts: 260000 },
-        scope: `Per-page gzip HTML, linked/inline CSS and JS; decimal KB. zh fonts: ${fontError ?? (fontReport ? "report.json, recognised per-page bytes only" : "skipped (no font report)")}. EN fonts, images and network requests are outside this static check.`,
-        scopeZh: `逐頁計算 gzip 壓縮後的 HTML、CSS 與 JS，KB 採十進位。華文字型：${fontReport ? "依字型報告中可辨識的逐頁資料" : "略過（無字型報告）"}。英文字型、圖片及網路請求不在此靜態檢查範圍。`,
+        budgets: { html: 60000, htmlMarkup: 25000, css: 30000, js: 30000 },
+        scope: "Per-page gzip HTML, linked/inline CSS and JS; decimal KB. A page over the HTML budget passes while its markup beyond its own text stays within 25 KB. Chinese text uses the reader's system fonts; fonts, images and network requests are outside this static check.",
+        scopeZh:
+            "逐頁計算 gzip 壓縮後的 HTML、CSS 與 JS，KB 採十進位。HTML 超出預算的長頁，只要文字以外的標記不超過 25 KB 即算通過。華文使用讀者裝置的系統字型；字型、圖片及網路請求不在此靜態檢查範圍。",
     };
 }
 const report = { builtAt: new Date().toISOString(), checks };

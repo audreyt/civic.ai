@@ -29,9 +29,6 @@ function shouldIgnoreBuildFile(path) {
     return (
         path.startsWith("_astro/") ||
         path.startsWith("pagefind/") ||
-        // Per-page Han subsets are content-hashed: their names change whenever
-        // the page's glyph set does, so they cannot be a fixed requirement.
-        path.startsWith("fonts/zh/") ||
         path.endsWith(".DS_Store") ||
         path.includes("/.DS_Store")
     );
