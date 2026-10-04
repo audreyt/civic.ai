@@ -263,7 +263,7 @@
     },
     "legend": {
         "en": "Each pack descends in layers: closing image → pattern → buildable tools → named instruments → diagnostics → one headline measure.",
-        "tw": "每一力逐層而下：結語意象 → 模式 → 可建置工具 → 具名工具 → 診斷 → 一項公開主指標。"
+        "tw": "每一力逐層而下：收尾意象 → 模式 → 可建置工具 → 具名工具 → 診斷 → 一項公開主指標。"
     },
     "legendUrl": {
         "en": "/measures/#named-instruments",
