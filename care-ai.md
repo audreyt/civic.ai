@@ -59,11 +59,11 @@ The co-production moved through four phases, each deepening the practice of atte
 
 The collaboration produced several concrete outputs that embody attentiveness in practice:
 
-**A care-centric definition of responsible AI** — a framing that starts from what people value in care (human connection, dignity, choice) rather than from what technology can optimise. The definition states that AI use should not undermine, harm, or breach fundamental values of care, human rights, independence, choice and control, dignity, equality, and wellbeing.
+**A care-centric definition of responsible AI.** A framing that starts from what people value in care (human connection, dignity, choice) rather than from what technology can optimise. The definition states that AI use should not undermine, harm, or breach fundamental values of care, human rights, independence, choice and control, dignity, equality, and wellbeing.
 
-**Principles for practice across eleven domains** — including improving care and support, choice and control, accessibility, training, data privacy, transparency, human contact and connections, bias and discrimination, continuous improvement, co-production, and sustainable technology. These were not drawn from existing AI ethics frameworks but built from the ground up by the people who live within the care system.
+**Principles for practice across eleven domains.** They include improving care and support, choice and control, accessibility, training, data privacy, transparency, human contact and connections, bias and discrimination, continuous improvement, co-production, and sustainable technology. These were not drawn from existing AI ethics frameworks but built from the ground up by the people who live within the care system.
 
-**Sector-specific outputs from each working group** — a technology provider pledge, care professional demands, and care recipient statements. These are artefacts of attentiveness: evidence that different groups were heard on their own terms, not collapsed into a single consensus document.
+**Sector-specific outputs from each working group.** A technology provider pledge, care professional demands, and care recipient statements. These are artefacts of attentiveness: evidence that different groups were heard on their own terms, not collapsed into a single consensus document.
 
 **A published shared statement** endorsed by approximately 30 organisations, marking the first step and making the collaboration's commitments visible to the broader sector.
 

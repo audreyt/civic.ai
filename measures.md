@@ -36,7 +36,7 @@ These six measures are our proposals for public evaluation and have not been val
 
 <div class="instrument-card" data-pack="1">
 
-<span id="representation-gap">**Representation gap**</span> — the Attentiveness measure: Which materially affected groups are still missing or badly under-represented in the record?
+<span id="representation-gap">**Representation gap.**</span> The Attentiveness measure: Which materially affected groups are still missing or badly under-represented in the record?
 
 <dl class="instrument-card__specs">
 <div><dt>Traditional Mandarin name</dt><dd>代表性落差</dd></div>
@@ -50,7 +50,7 @@ These six measures are our proposals for public evaluation and have not been val
 
 <div class="instrument-card" data-pack="2">
 
-<span id="promise-fidelity">**Promise fidelity**</span> — the Responsibility measure: What share of material obligations are explicitly owned, properly authorised, and kept on their published terms?
+<span id="promise-fidelity">**Promise fidelity.**</span> The Responsibility measure: What share of material obligations are explicitly owned, properly authorised, and kept on their published terms?
 
 <dl class="instrument-card__specs">
 <div><dt>Traditional Mandarin name</dt><dd>承諾保真度</dd></div>
@@ -64,7 +64,7 @@ These six measures are our proposals for public evaluation and have not been val
 
 <div class="instrument-card" data-pack="3">
 
-<span id="verified-execution-rate">**Verified execution rate**</span> — the Competence measure: What share of audited decisions or releases pass guardrails, include a usable trace, and stay inside release bounds?
+<span id="verified-execution-rate">**Verified execution rate.**</span> The Competence measure: What share of audited decisions or releases pass guardrails, include a usable trace, and stay inside release bounds?
 
 <dl class="instrument-card__specs">
 <div><dt>Traditional Mandarin name</dt><dd>經驗證的執行率</dd></div>
@@ -78,7 +78,7 @@ These six measures are our proposals for public evaluation and have not been val
 
 <div class="instrument-card" data-pack="4">
 
-<span id="trust-under-loss">**Trust-under-loss**</span> — the Responsiveness measure: After a bad outcome and attempted repair, do affected people report that the system became more trustworthy rather than less?
+<span id="trust-under-loss">**Trust-under-loss.**</span> The Responsiveness measure: After a bad outcome and attempted repair, do affected people report that the system became more trustworthy rather than less?
 
 <dl class="instrument-card__specs">
 <div><dt>Traditional Mandarin name</dt><dd>失利下的信任</dd></div>
@@ -92,7 +92,7 @@ These six measures are our proposals for public evaluation and have not been val
 
 <div class="instrument-card" data-pack="5">
 
-<span id="uncommon-ground-index">**Uncommon-ground index**</span> — the Solidarity measure: Are shared decisions showing real cross-group participation and co-endorsement, rather than separate silos?
+<span id="uncommon-ground-index">**Uncommon-ground index.**</span> The Solidarity measure: Are shared decisions showing real cross-group participation and co-endorsement, rather than separate silos?
 
 <dl class="instrument-card__specs">
 <div><dt>Traditional Mandarin name</dt><dd>罕見共識指數</dd></div>
@@ -106,7 +106,7 @@ These six measures are our proposals for public evaluation and have not been val
 
 <div class="instrument-card" data-pack="6">
 
-<span id="exit-readiness">**Exit readiness**</span> — the Symbiosis measure: Could this system hand over or shut down on schedule without rights loss, continuity failure, or recentralisation?
+<span id="exit-readiness">**Exit readiness.**</span> The Symbiosis measure: Could this system hand over or shut down on schedule without rights loss, continuity failure, or recentralisation?
 
 <dl class="instrument-card__specs">
 <div><dt>Traditional Mandarin name</dt><dd>退出就緒度</dd></div>

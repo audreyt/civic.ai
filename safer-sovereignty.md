@@ -48,11 +48,11 @@ What these organizations often lack is not operational discipline. It is a gover
 
 For organizations deploying AI in core decision-making, decision sovereignty means being able to determine not only where data resides, but how it is interpreted, what actions may follow, how decisions can be reviewed, and how the system can be paused or replaced. One useful way to think about this is as a stack with five layers:
 
-1. **Residence** — where the data lives.
-2. **Access** — who may see or use it.
-3. **Inference** — which AI model or analytical system is allowed to draw conclusions from it.
-4. **Actuation** — what operational systems are allowed to do because of those conclusions, such as sending messages, approving payments, routing cases, or shutting down a machine.
-5. **Exit** — how the organization pauses, migrates, or retires the system without losing continuity, records, or accountability.
+1. **Residence.** Where the data lives.
+2. **Access.** Who may see or use it.
+3. **Inference.** Which AI model or analytical system is allowed to draw conclusions from it.
+4. **Actuation.** What operational systems are allowed to do because of those conclusions, such as sending messages, approving payments, routing cases, or shutting down a machine.
+5. **Exit.** How the organization pauses, migrates, or retires the system without losing continuity, records, or accountability.
 
 A surprising number of current AI programs stop at the first two layers. The greatest enterprise risk now sits in the third and fourth. Data can remain local while a general model elsewhere decides how to triage a patient, sequence a supply chain, investigate an employee, or shut down a machine. Location alone does not protect judgment. And without the fifth layer, exit, an organization that has delegated inference and actuation to a vendor has no credible way to take them back in moments of failure, regulatory change, or crisis, when continued operation is no longer acceptable.
 

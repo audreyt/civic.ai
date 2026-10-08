@@ -36,7 +36,7 @@ nav_next:
 
 <div class="instrument-card" data-pack="1">
 
-<span id="representation-gap">**代表性落差**</span>——覺察力指標：哪些受到實質影響的群體，仍然缺席或在紀錄中的代表性嚴重不足？
+<span id="representation-gap">**代表性落差。**</span>覺察力指標：哪些受到實質影響的群體，仍然缺席或在紀錄中的代表性嚴重不足？
 
 <dl class="instrument-card__specs">
 <div><dt>英文名稱</dt><dd>Representation gap</dd></div>
@@ -50,7 +50,7 @@ nav_next:
 
 <div class="instrument-card" data-pack="2">
 
-<span id="promise-fidelity">**承諾保真度**</span>——負責力指標：重要義務中，有多少被明確指派負責、授權正當，並依照公布條件履行？
+<span id="promise-fidelity">**承諾保真度。**</span>負責力指標：重要義務中，有多少被明確指派負責、授權正當，並依照公布條件履行？
 
 <dl class="instrument-card__specs">
 <div><dt>英文名稱</dt><dd>Promise fidelity</dd></div>
@@ -64,7 +64,7 @@ nav_next:
 
 <div class="instrument-card" data-pack="3">
 
-<span id="verified-execution-rate">**經驗證的執行率**</span>——勝任力指標：被抽查的決策或發版中，有多少通過護欄、具備可用軌跡，並且維持在發版界限內？
+<span id="verified-execution-rate">**經驗證的執行率。**</span>勝任力指標：被抽查的決策或發版中，有多少通過護欄、具備可用軌跡，並且維持在發版界限內？
 
 <dl class="instrument-card__specs">
 <div><dt>英文名稱</dt><dd>Verified execution rate</dd></div>
@@ -78,7 +78,7 @@ nav_next:
 
 <div class="instrument-card" data-pack="4">
 
-<span id="trust-under-loss">**失利下的信任**</span>——回應力指標：在發生不良結果並嘗試修復之後，受影響者是否覺得系統比原先更值得信任，而不是更不值得？
+<span id="trust-under-loss">**失利下的信任。**</span>回應力指標：在發生不良結果並嘗試修復之後，受影響者是否覺得系統比原先更值得信任，而不是更不值得？
 
 <dl class="instrument-card__specs">
 <div><dt>英文名稱</dt><dd>Trust-under-loss</dd></div>
@@ -92,7 +92,7 @@ nav_next:
 
 <div class="instrument-card" data-pack="5">
 
-<span id="uncommon-ground-index">**罕見共識指數**</span>——團結力指標：共同決策中，是否真的出現跨群體參與及共同背書，而不是各說各話的平行孤島？
+<span id="uncommon-ground-index">**罕見共識指數。**</span>團結力指標：共同決策中，是否真的出現跨群體參與及共同背書，而不是各說各話的平行孤島？
 
 <dl class="instrument-card__specs">
 <div><dt>英文名稱</dt><dd>Uncommon-ground index</dd></div>
@@ -106,7 +106,7 @@ nav_next:
 
 <div class="instrument-card" data-pack="6">
 
-<span id="exit-readiness">**退出就緒度**</span>——共生力指標：這個系統是否能按期交接或關閉，而不造成權利流失、服務中斷或再集中化？
+<span id="exit-readiness">**退出就緒度。**</span>共生力指標：這個系統是否能按期交接或關閉，而不造成權利流失、服務中斷或再集中化？
 
 <dl class="instrument-card__specs">
 <div><dt>英文名稱</dt><dd>Exit readiness</dd></div>
