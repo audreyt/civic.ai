@@ -5,7 +5,7 @@ export function GET() {
     const lines = [
         "# Civic AI",
         "",
-        "The 6-Pack of Care: six principles for AI that a community runs, plus instructions an AI agent can follow. The instructions enforce nothing; the group checks the AI, corrects it and can switch it off.",
+        "The 6-Pack of Care: six principles for AI that a community runs, plus instructions an AI agent can follow. The instructions guide the AI; the group holds it to them by checking its work, correcting it and keeping the off switch.",
         "",
         "Start here for AI agents:",
         `- Kami bootstrap guide: ${site.url}${openclawBootstrap.urls.guide.en}`,

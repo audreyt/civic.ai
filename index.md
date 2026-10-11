@@ -2,7 +2,7 @@
 layout: default
 title: "Civic AI — 6-Pack of Care"
 description: "Six principles for AI that a community runs, plus instructions you can give an AI agent to follow them."
-meta_description: "Six principles for AI that a community runs, plus instructions an AI agent can follow. The instructions enforce nothing; your group checks the AI, corrects it and can switch it off. The 6-Pack of Care, by Audrey Tang and Caroline Green at the Oxford Institute for Ethics in AI."
+meta_description: "Six principles for AI that a community runs, plus instructions an AI agent can follow. The instructions guide the AI; your group holds it to them by checking its work, correcting it and keeping the off switch. The 6-Pack of Care, by Audrey Tang and Caroline Green at the Oxford Institute for Ethics in AI."
 lang: en-gb
 alt_lang_url: "/tw/"
 permalink: "/"
@@ -19,7 +19,7 @@ next_action:
     arrow: "right"
 ---
 
-<p class="fold-lede">Your group stays in charge: you check the AI's work, correct it and can switch it off. The instructions only ask; they enforce nothing.</p>
+<p class="fold-lede">Your group stays in charge: you check the AI's work, correct it and can switch it off. The instructions guide the AI; you hold it to them.</p>
 
 <p class="fold-lede">Civic AI is our name for that goal: AI that the people it affects can check, correct and switch off. The 6-Pack of Care is a research project by Audrey Tang and Caroline Green at the Oxford Institute for Ethics in AI.</p>
 

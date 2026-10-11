@@ -1697,7 +1697,7 @@
             "path": "index.html",
             "lang": "en-gb",
             "title": "Civic AI — 6-Pack of Care",
-            "description": "Six principles for AI that a community runs, plus instructions an AI agent can follow. The instructions enforce nothing; your group checks the AI, corrects it and can switch it off. The 6-Pack of Care, by Audrey Tang and Caroline Green at the Oxford Institute for Ethics in AI.",
+            "description": "Six principles for AI that a community runs, plus instructions an AI agent can follow. The instructions guide the AI; your group holds it to them by checking its work, correcting it and keeping the off switch. The 6-Pack of Care, by Audrey Tang and Caroline Green at the Oxford Institute for Ethics in AI.",
             "canonical": "https://civic.ai/",
             "alternates": [
                 {
@@ -4267,7 +4267,7 @@
             "path": "tw/index.html",
             "lang": "zh-tw",
             "title": "仁工智慧 · 關懷六力",
-            "description": "讓社群自己運作 AI 的六項原則，加上一份 AI 智慧體可以遵循的指示。指示本身不強制任何事；由你的群體檢查 AI、修正它，並保有關閉它的權力。唐鳳與 Caroline Green 在牛津大學 AI 倫理研究所提出的「關懷六力」研究計畫。",
+            "description": "讓社群自己運作 AI 的六項原則，加上一份 AI 智慧體可以遵循的指示。指示引導 AI，你的群體則確保它照著做：檢查它的成果、修正它，並保有關閉它的權力。唐鳳與 Caroline Green 在牛津大學 AI 倫理研究所提出的「關懷六力」研究計畫。",
             "canonical": "https://civic.ai/tw/",
             "alternates": [
                 {

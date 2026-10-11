@@ -2,7 +2,7 @@
 layout: default
 title: "仁工智慧 · 關懷六力"
 description: "讓社群自己運作 AI 的六項原則，加上一份可以交給 AI 智慧體遵循的指示。"
-meta_description: "讓社群自己運作 AI 的六項原則，加上一份 AI 智慧體可以遵循的指示。指示本身不強制任何事；由你的群體檢查 AI、修正它，並保有關閉它的權力。唐鳳與 Caroline Green 在牛津大學 AI 倫理研究所提出的「關懷六力」研究計畫。"
+meta_description: "讓社群自己運作 AI 的六項原則，加上一份 AI 智慧體可以遵循的指示。指示引導 AI，你的群體則確保它照著做：檢查它的成果、修正它，並保有關閉它的權力。唐鳳與 Caroline Green 在牛津大學 AI 倫理研究所提出的「關懷六力」研究計畫。"
 lang: zh-tw
 alt_lang_url: "/"
 permalink: "/tw/"
@@ -17,7 +17,7 @@ next_action:
     text: "一：覺察力"
 ---
 
-<p class="fold-lede">作主的始終是你的群體：你們檢查 AI 的成果、修正它，也能把它關掉。指示只是請求，本身不強制任何事。</p>
+<p class="fold-lede">作主的始終是你的群體：你們檢查 AI 的成果、修正它，也能把它關掉。指示引導 AI，確保它照著做的是你們。</p>
 
 <p class="fold-lede">我們把這個目標叫做仁工智慧：受 AI 影響的人，能夠檢查、修正並關閉它。關懷六力是唐鳳與 Caroline Green 在牛津大學 AI 倫理研究所的研究計畫。</p>
 
