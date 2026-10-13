@@ -562,7 +562,7 @@
             "path": "6/index.html",
             "lang": "en-gb",
             "title": "Pack 6: Symbiosis — Kami of Care — Civic AI",
-            "description": "Symbiosis in Civic AI: systems that stay local, limited, and ready to retire instead of hardening into permanent rule. Pack 6 of the 6-Pack of Care.",
+            "description": "Symbiosis in Civic AI: systems that stay local, limited, and ready to retire instead of hardening into permanent rule. Pack 6 of the 6-Pack of Care by Audrey Tang and Caroline Green.",
             "canonical": "https://civic.ai/6/",
             "alternates": [
                 {
@@ -2816,7 +2816,7 @@
             "path": "tw/3/index.html",
             "lang": "zh-tw",
             "title": "三：勝任力——給予關懷 — 仁工智慧",
-            "description": "仁工智慧的勝任力：系統在現實中真的管用——可稽核、可解釋、容許安全失敗。「關懷六力」的第三力。",
+            "description": "仁工智慧的勝任力：系統在現實中真的管用——可稽核、可解釋、容許安全失敗。唐鳳與 Caroline Green「關懷六力」的第三力。",
             "canonical": "https://civic.ai/tw/3/",
             "alternates": [
                 {
@@ -2924,7 +2924,7 @@
             "path": "tw/4/index.html",
             "lang": "zh-tw",
             "title": "四：回應力——接收關懷 — 仁工智慧",
-            "description": "仁工智慧的回應力：可被糾正的系統，讓受影響的人能提出異議、促成修補。「關懷六力」的第四力。",
+            "description": "仁工智慧的回應力：可被糾正的系統，讓受影響的人能提出異議、促成修補。唐鳳與 Caroline Green「關懷六力」的第四力。",
             "canonical": "https://civic.ai/tw/4/",
             "alternates": [
                 {
@@ -3029,7 +3029,7 @@
             "path": "tw/5/index.html",
             "lang": "zh-tw",
             "title": "五：團結力——共同關懷 — 仁工智慧",
-            "description": "仁工智慧的團結力：獎勵協作、退出與公共問責，而非平台鎖定。「關懷六力」的第五力。",
+            "description": "仁工智慧的團結力：獎勵協作、退出與公共問責，而非平台鎖定。唐鳳與 Caroline Green「關懷六力」的第五力。",
             "canonical": "https://civic.ai/tw/5/",
             "alternates": [
                 {
@@ -3131,7 +3131,7 @@
             "path": "tw/6/index.html",
             "lang": "zh-tw",
             "title": "六：共生力——關懷的地神 — 仁工智慧",
-            "description": "仁工智慧的共生力：讓系統保持在地、範圍有限、隨時可退場，不固化為永久統治。「關懷六力」的第六力。",
+            "description": "仁工智慧的共生力：讓系統保持在地、範圍有限、隨時可退場，不固化為永久統治。唐鳳與 Caroline Green「關懷六力」的第六力。",
             "canonical": "https://civic.ai/tw/6/",
             "alternates": [
                 {
@@ -3825,7 +3825,7 @@
             "path": "tw/faq/index.html",
             "lang": "zh-tw",
             "title": "常見問題 — 仁工智慧",
-            "description": "關於仁工智慧與「關懷六力」的常見問答：關懷倫理與 AI 對齊、可糾正性、日落條款，以及民主化的 AI 治理。",
+            "description": "關於仁工智慧與「關懷六力」的常見問答：關懷倫理與 AI 對齊、地神、可糾正性、日落條款，以及民主化的 AI 治理。",
             "canonical": "https://civic.ai/tw/faq/",
             "alternates": [
                 {
@@ -4585,7 +4585,7 @@
             "path": "tw/measures/index.html",
             "lang": "zh-tw",
             "title": "地圖與衡量指標 — 仁工智慧",
-            "description": "先用一張關懷六力地圖看見整套框架，再以每力一項公開主指標與輔助診斷判斷仁工智慧部署是否真正落實關懷六力。",
+            "description": "一張呈現整套關懷六力的視覺地圖，接著是每一力各一項公開主指標，以及仁工智慧部署的輔助診斷。",
             "canonical": "https://civic.ai/tw/measures/",
             "alternates": [
                 {
@@ -5118,7 +5118,7 @@
         {
             "path": "tw/virtuous-ai/index.html",
             "lang": "zh-tw",
-            "title": "美德 AI，共創無限未來 — 仁工智慧",
+            "title": "美德 AI 能解放未來 — 仁工智慧",
             "description": "唐鳳談以公民美德培育 AI、智聯網，以及為何對齊必須是社群驅動的鮮活過程。",
             "canonical": "https://civic.ai/tw/virtuous-ai/",
             "alternates": [

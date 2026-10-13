@@ -79,9 +79,9 @@ next_action:
 - **漫畫。** Nicky Case 畫了[上面的概覽圖和十二張漫畫頁](/tw/comics/)，每一力各有一張問題頁、一張解方頁。
 - **大規模傾聽。** [罕見共識](https://github.com/audreyt/uncommon-ground)把一整池觀眾提問，變成給每一位提問者的書面回覆。[audreyt.org/dd](https://audreyt.org/dd) 是一次實際的運作：18 個場次、266 個提問，全部以書面回覆。
 
-「提升老年人的聲音」（Lifting the Voices of Older Persons）是一項傾聽行動，著手把長者的優先事項帶進聯合國關於長者權利的文書，目前還在成形。我們會用關懷六力來要求它。
+「傾聽長者之聲」（Lifting the Voices of Older Persons）是一項傾聽行動，著手把長者的優先事項帶進聯合國關於長者權利的文書，目前還在成形。我們會用關懷六力來要求它。
 
-## 學術發表
+<h2 id="學術發表">發表</h2>
 
 - [〈讓人民設定前沿 AI 的步調〉](https://audreyt.org/noema-pace)，Hélène Landemore 與唐鳳：以抽籤產生的常設「全球 AI 公民大會」。_（原刊於 Noema，2026 年 9 月 23 日；連結為華文翻譯）_
 - [〈AI 與數位公共廣場的未來〉](https://journals.sagepub.com/doi/10.1177/26339137261459441)，Beth Goldberg、Hélène Landemore、唐鳳等二十多位作者；文中引用關懷六力。_（Collective Intelligence，2026）_
@@ -91,7 +91,7 @@ next_action:
 - [〈透過集體預測編碼的共生對齊〉](https://doi.org/10.1162/ARTL.a.475)，谷口忠大、唐鳳等七位作者：第五、六力背後的一種技術讀法。_（Artificial Life，2026）_
 - [〈對話網路〉](https://www.mediatechdemocracy.com/conversation-networks)，唐鳳、Deb Roy 與 Lawrence Lessig。_（McGill Centre for Media, Technology and Democracy，2025 年 4 月）_
 - [〈社群出發的設計〉](https://arxiv.org/abs/2502.10834)，唐鳳、Glen Weyl 與另外四位共同作者：第一、五力的技術基礎。_（arXiv，2025 年 2 月）_
-- [〈美德 AI，共創無限未來〉](/tw/virtuous-ai/)，唐鳳。_（武藏野大學百年校慶）_
+- [〈美德 AI 能解放未來〉](/tw/virtuous-ai/)，唐鳳。_（武藏野大學百年校慶）_
 - [〈⿻存在〉](/tw/plurality-being/)，Tenzin Yangtso；[〈⿻輕柔之橋〉](/tw/gentle-bridge/)，Tenzin Yangtso 與 jdd-kami。_（2026 年 3 月）_
 
 ## 計畫簡介
