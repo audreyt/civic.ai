@@ -87,7 +87,7 @@ next_action:
 - [〈AI 與數位公共廣場的未來〉](https://journals.sagepub.com/doi/10.1177/26339137261459441)，Beth Goldberg、Hélène Landemore、唐鳳等二十多位作者；文中引用關懷六力。_（Collective Intelligence，2026）_
 - [〈以資料為土壤，守護主權〉](/tw/safer-sovereignty/)，唐鳳。_（The Kyndryl Institute，2026 年 4 月 28 日）_
 - [〈廢除 Section 230，釋放第一修正案〉](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/)，唐鳳、Jaron Lanier 與 Allison Stanger：第五力背後的改革。_（Communications of the ACM，2026 年 1 月）_
-- [〈惡意 AI 群集如何威脅民主〉](https://www.science.org/doi/10.1126/science.adz1697)，Maria Ressa、Nick Bostrom、Nicholas Christakis、唐鳳及另外 18 位研究者。_（Science，2026）_
+- [〈惡意 AI 蜂群如何威脅民主〉](https://www.science.org/doi/10.1126/science.adz1697)，Maria Ressa、Nick Bostrom、Nicholas Christakis、唐鳳及另外 18 位研究者。_（Science，2026）_
 - [〈透過集體預測編碼的共生對齊〉](https://doi.org/10.1162/ARTL.a.475)，谷口忠大、唐鳳等七位作者：第五、六力背後的一種技術讀法。_（Artificial Life，2026）_
 - [〈對話網路〉](https://www.mediatechdemocracy.com/conversation-networks)，唐鳳、Deb Roy 與 Lawrence Lessig。_（McGill Centre for Media, Technology and Democracy，2025 年 4 月）_
 - [〈社群出發的設計〉](https://arxiv.org/abs/2502.10834)，唐鳳、Glen Weyl 與另外四位共同作者：第一、五力的技術基礎。_（arXiv，2025 年 2 月）_

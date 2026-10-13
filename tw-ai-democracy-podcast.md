@@ -5,7 +5,7 @@ lang: zh-tw
 alt_lang_url: "/ai-democracy-podcast/"
 permalink: "/tw/ai-democracy-podcast/"
 date: 2025-08-05
-description: "原始錄音來自牛津 AI 倫理研究所的 Accelerating AI Ethics Podcast。"
+description: "原始錄音來自牛津大學 AI 倫理研究所的 Accelerating AI Ethics Podcast。"
 meta_description: "唐鳳與 Caroline Green 談數位民主、集體智慧，以及以多元取代奇點的願景：牛津 Accelerating AI Ethics 首集。"
 og_image: "/img/ai-democracy-podcast.jpg"
 nav_next:
@@ -15,7 +15,7 @@ nav_next:
 
 <em>唐鳳與 Caroline Green 博士合錄《AI 倫理加速》首集——錄製於唐鳳擔任牛津加速學人的第一天。五十八分鐘涵蓋數位民主、集體智慧、多元宇宙作為奇點的替代願景，以及為何 AI 倫理必須透過設計內建，而非事後補救。</em>
 
-原始錄音來自牛津 AI 倫理研究所的 [Accelerating AI Ethics](https://podcasts.ox.ac.uk/ai-and-democracy-ambassador-audrey-tang-plurality-practice-transparency-and-collective-intelligence) Podcast。
+原始錄音來自牛津大學 AI 倫理研究所的 [Accelerating AI Ethics](https://podcasts.ox.ac.uk/ai-and-democracy-ambassador-audrey-tang-plurality-practice-transparency-and-collective-intelligence) Podcast。
 
 ## 摘要
 
@@ -208,7 +208,7 @@ nav_next:
 
 這是一種稱為「審議式對齊」的技術，我認為這項技術在讓人們引導 AI 工具符合其社會規範方面，充滿了巨大的潛力。
 
-**Caroline Green**：2025 年 9 月，牛津 AI 倫理研究所將搬進新建的施瓦茨曼人文中心，這是牛津大學人文學科的一棟令人驚豔的新建築。我們將在那棟建築裡會面，而它的核心就是搭橋，建立與當地社區和公眾的橋樑，所以這將是一棟開放的建築，人們可以進來，與在裡面工作的學者、研究人員、員工互動。我們有很多非常令人興奮的新空間，像是音樂廳和供人們會面的場所。
+**Caroline Green**：2025 年 9 月，牛津大學 AI 倫理研究所將搬進新建的施瓦茨曼人文中心，這是牛津大學人文學科的一棟令人驚豔的新建築。我們將在那棟建築裡會面，而它的核心就是搭橋，建立與當地社區和公眾的橋樑，所以這將是一棟開放的建築，人們可以進來，與在裡面工作的學者、研究人員、員工互動。我們有很多非常令人興奮的新空間，像是音樂廳和供人們會面的場所。
 
 您對我們可以在那棟新建築裡舉辦什麼樣的活動形式，來吸引人們進來並讓他們了解您正在做的工作，有什麼想法嗎？
 
@@ -342,9 +342,9 @@ Facebook 應該對那 700 萬美元負責。只有這樣他們才會遵守。另
 
 **Caroline Green**：唐鳳，非常感謝您參與這次對話。從臺灣的開放政府運動，到您在加速學人計畫中的工作，很明顯，倫理 AI 不僅僅是關於規則，它是關於關係、參與、想像力，而您所展示的不只是問題，實際上是尋找解決方案，這就是為什麼我對與您合作感到如此興奮。
 
-**唐鳳**：謝謝您。讓我們攜手共創無限未來。
+**唐鳳**：謝謝您。讓我們一起解放未來。
 
-**Caroline Green**：聽眾可以造訪學人計畫網站 [afp.oxford-aiethics.ox.ac.uk](https://afp.oxford-aiethics.ox.ac.uk)，了解更多關於唐鳳的工作以及其他學人的計畫。這裡是牛津 AI 倫理研究所的 Podcast《AI 倫理加速》。如果您喜歡這集節目，請訂閱並分享。下次見。
+**Caroline Green**：聽眾可以造訪學人計畫網站 [afp.oxford-aiethics.ox.ac.uk](https://afp.oxford-aiethics.ox.ac.uk)，了解更多關於唐鳳的工作以及其他學人的計畫。這裡是牛津大學 AI 倫理研究所的 Podcast《AI 倫理加速》。如果您喜歡這集節目，請訂閱並分享。下次見。
 
 感謝您的收聽。
 

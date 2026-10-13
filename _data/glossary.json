@@ -189,7 +189,7 @@
         "term_en": "two lanes",
         "term_tw": "兩條車道",
         "def_en": "Governance at two speeds: a slow lane sets the bounds — the Engagement Contract, red lines, severity classes, pause triggers, independent oversight and prefunded remedies; a fast lane acts inside them at machine speed, under precommitted brakes, shadow modes, canaries and reversible defaults. Which lane a decision belongs in depends on what happens if it is wrong. This is a different split from Pack 2's contract or sandbox, which separates big changes from small, safe-to-fail experiments; a sandbox contains the cost of error, not a route around obligations. See <a href=\"/faq/#faq-5\">FAQ Q5</a> and <a href=\"/3/\">Competence</a>.",
-        "def_tw": "讓治理以兩種速度運作：慢車道訂立界限——參與契約、紅線、嚴重等級、暫停觸發條件、獨立監督與預先備妥的補救資金；快車道在界限之內以機器速度行動，受預先承諾的煞車、影子模式、金絲雀測試與可撤回預設約束。一項決定該走哪條車道，看的是它出錯會怎樣。這與負責力的「契約或沙盒」是不同的區分：後者分開重大變更與小型、可安全失敗的實驗；沙盒是為了控制犯錯的代價，不是繞過義務的捷徑。見〈<a href=\"/tw/faq/#faq-5\">問答 Q5</a>〉與〈<a href=\"/tw/3/\">勝任力</a>〉。"
+        "def_tw": "讓治理以兩種速度運作：慢車道訂立界限——參與契約、紅線、嚴重等級、暫停觸發條件、獨立監督與預先備妥的補救資金；快車道在界限之內以機器速度行動，受預先承諾的煞車、影子模式、金絲雀發布與可逆預設約束。一項決定該走哪條車道，看的是它出錯會怎樣。這與負責力的「契約或沙盒」是不同的區分：後者分開重大變更與小型、可安全失敗的實驗；沙盒是為了控制犯錯的代價，不是繞過義務的捷徑。見〈<a href=\"/tw/faq/#faq-5\">問答 Q5</a>〉與〈<a href=\"/tw/3/\">勝任力</a>〉。"
     },
     {
         "id": "promise-fidelity",
@@ -298,7 +298,7 @@
         "term_en": "meronymity (selective-disclosure identity)",
         "term_tw": "選擇性揭露身分",
         "def_en": "An identity design pattern in which a person or AI agent proves a specific role or attribute (for example, \"I am a real person\" or \"I am a licensed care worker\") without revealing their full identity. An agent can prove it answers to a real human or legally constituted steward without exposing that person's address or phone number. The word meronymity was coined by Nouran Soliman and colleagues at CHI 2024 for communication that reveals chosen facets of identity, backed by trusted endorsers. Selective disclosure enables accountability without requiring doxxing. See <a href=\"/5/\">Solidarity</a>.",
-        "def_tw": "一種身分設計模式，讓個人或 AI 智慧體能證明特定角色或屬性（例如「我是真實的人」或「我是持有執照的照護工作者」），而無需揭露完整身分。智慧體可以證明自己向真實的人或依法成立的守護機構負責，不必公開那個人的住址或電話。meronymity（部分匿名）一詞由 Nouran Soliman 等人在 CHI 2024 提出，指只揭露自己選定的身分面向、並有可信背書者的溝通方式。選擇性揭露使問責成為可能，同時不要求以肉搜為代價。見〈<a href=\"/tw/5/\">團結力</a>〉。"
+        "def_tw": "一種身分設計模式，讓個人或 AI 智慧體能證明特定角色或屬性（例如「我是真實的人」或「我是持有執照的照護工作者」），而無需揭露完整身分。智慧體可以證明自己向真實的人或依法成立的守護機構負責，不必公開那個人的住址或電話。meronymity（局部具名／部分匿名）一詞由 Nouran Soliman 等人在 CHI 2024 提出，指只揭露自己選定的身分面向、並有可信背書者的溝通方式。選擇性揭露使問責成為可能，同時不要求以肉搜為代價。見〈<a href=\"/tw/5/\">團結力</a>〉。"
     },
     {
         "id": "accountable-formation",
