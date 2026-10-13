@@ -91,7 +91,7 @@ next_action:
 - [〈透過集體預測編碼的共生對齊〉](https://doi.org/10.1162/ARTL.a.475)，谷口忠大、唐鳳等七位作者：第五、六力背後的一種技術讀法。_（Artificial Life，2026）_
 - [〈對話網路〉](https://www.mediatechdemocracy.com/conversation-networks)，唐鳳、Deb Roy 與 Lawrence Lessig。_（McGill Centre for Media, Technology and Democracy，2025 年 4 月）_
 - [〈社群出發的設計〉](https://arxiv.org/abs/2502.10834)，唐鳳、Glen Weyl 與另外四位共同作者：第一、五力的技術基礎。_（arXiv，2025 年 2 月）_
-- [〈美德 AI 能解放未來〉](/tw/virtuous-ai/)，唐鳳。_（武藏野大學百年校慶）_
+- [〈美德 AI，共創無限未來〉](/tw/virtuous-ai/)，唐鳳。_（武藏野大學百年校慶）_
 - [〈⿻存在〉](/tw/plurality-being/)，Tenzin Yangtso；[〈⿻輕柔之橋〉](/tw/gentle-bridge/)，Tenzin Yangtso 與 jdd-kami。_（2026 年 3 月）_
 
 ## 計畫簡介

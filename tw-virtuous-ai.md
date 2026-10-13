@@ -1,6 +1,6 @@
 ---
 layout: chapter
-title: "美德 AI 能解放未來"
+title: "美德 AI，共創無限未來"
 author: "唐鳳"
 lang: zh-tw
 alt_lang_url: "/virtuous-ai"
