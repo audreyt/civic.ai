@@ -141,4 +141,4 @@ Tronto 也點出她所稱的*關懷赤字*：對關懷的需求太多、照顧�
 - 集體智慧計畫，[〈Alignment Assemblies〉](https://www.cip.org/alignmentassemblies)；Fishkin，《[When the People Speak](https://global.oup.com/academic/product/when-the-people-speak-9780199604432)》（2009）——2024 年對齊大會的形式與方法。
 - 完整足跡見〈[文獻與延伸閱讀](/tw/sources/)〉。
 
-<noscript><img src="/img/pack2-2-tw.jpg" alt="手繪漫畫頁，標題為「NOT：vague promises／BUT：exact commitments——SOLUTION」：一隻若有所思、抱著橘色愛心的貓抬頭望向一疊大字問題——WHO、WHAT、WHEN、WHY、HOW——旁邊文字提出可稽核的「參與契約」，指定具體負責的人、但把做法交由其自行決定，結尾說明臺灣公民大會的建議獲得逾 85% 與會公民支持，一年內目標類別的深偽詐騙下降超過 94%。" class="overview-image" width="1437" height="1999" loading="lazy" decoding="async"></noscript>
+<noscript><img src="/img/pack2-2-tw.jpg" alt="手繪漫畫頁，標題為「NOT：vague promises／BUT：exact commitments——SOLUTION」：一隻若有所思、抱著橘色愛心的貓抬頭望向一疊大字問題——WHO、WHAT、WHEN、WHY、HOW——旁邊文字提出可稽核的「參與契約」，指定具體負責的人、但把做法交由其自行決定，結尾回到臺灣案例：審議之後，85% 的公民大會參與者同意大型平台應負主要責任，後來的法律對廣告商與平台訂下具體義務；到 2026 年 6 月，偵測到的冒名詐騙廣告比 2024 年每週高峰少了約 98%。" class="overview-image" width="1437" height="1999" loading="lazy" decoding="async"></noscript>

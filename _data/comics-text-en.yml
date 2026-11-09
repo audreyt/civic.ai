@@ -195,8 +195,8 @@ pages:
             - id: polis
               box: [2596, 2812, 5332, 3252]
               text: |-
-                  Consider how Taiwan used pol.is to
-                  decide if/how to let Uber enter Taiwan:
+                  In a related open consultation, Taiwan
+                  used pol.is to discuss Uber regulation:
               emphasis: [{ text: pol.is, italic: true }]
             - id: toxic-ego
               box: [276, 3544, 2044, 4876]
@@ -275,7 +275,7 @@ pages:
               text: |-
                   Great projects often need great numbers of
                   people… but great numbers of people often
-                  leads to great amounts of shifting blame.
+                  lead to great amounts of shifting blame.
             - id: no-one-underlines
               type: lettering
               box: [1440, 2398, 3770, 2452]
@@ -339,18 +339,16 @@ pages:
               box: [420, 6096, 5324, 7256]
               text: |-
                   For example: in 2024, Taiwan’s Facebook feeds were flooded with AI-
-                  generated scams. Realistic deepfake videos of Jensen Huang -- the
-                  Taiwanese CEO of Nvidia -- tricked people out of millions of dollars.
-                  Facebook’s response? “We didn’t come up with that advertisement; it is
-                  our algorithm pushing to you.” No responsibility assumed.
+                  generated scams. Realistic deepfake videos, such as those of Jensen
+                  Huang--the founder of Nvidia--tricked people out of millions of dollars.
+                  Facebook’s response, in effect? We didn’t come up with that
+                  advertisement; it is our algorithm pushing to you. No liability assumed.
               emphasis:
-                  [
-                      {
-                          text: "“We didn’t come up with that advertisement; it is",
-                          italic: true,
-                      },
-                      { text: our algorithm pushing to you.”, italic: true },
-                  ]
+                  - { text: We didn’t come up with that, italic: true }
+                  - {
+                        text: "advertisement; it is our algorithm pushing to you.",
+                        italic: true,
+                    }
             - id: following-orders
               box: [848, 7284, 4912, 7620]
               text: "“I’m just following orders/incentives/everyone else.”"
@@ -421,13 +419,14 @@ pages:
                   human autonomy!
               emphasis: [{ text: without, italic: true }]
             - id: taiwan
-              box: [405, 6180, 5265, 7305]
+              box: [405, 6180, 5300, 7365]
               text: |-
-                  Back to the Taiwan deepfake case: a citizens’ assembly took
-                  responsibility to brainstorm laws that 85+% of citizens approve of,
-                  to balance avoiding scams with avoiding censorship. These laws put
-                  fair but specific responsibilities on the advertisers & platform.
-                  The result: within a year, deepfake scams fell by 94%!
+                  Back to the Taiwan deepfake case: a citizens’ assembly took responsibility to
+                  balance avoiding scams with avoiding censorship. After deliberation, 85% of
+                  participants agreed that large platforms should take primary responsibility
+                  for information integrity. The statute later put specific duties on
+                  advertisers and platforms. By June 2026, detected identity-impersonation scam
+                  ads were about 98% below their 2024 weekly peak.
             - id: both
               box: [915, 7330, 4825, 7650]
               text: That’s how we get both responsibility and autonomy!
@@ -521,15 +520,14 @@ pages:
               text: |-
                   Consider Community Notes on X (formerly Birdwatch on Twitter).
                   It works by highlighting where people who usually disagree agree.
-                  So far, it’s the only major “fact-checking” platform that has net-
-                  positive ratings across the American political spectrum!
+                  In its 2022 US pilot, selected notes were more often rated helpful
+                  than unhelpful by Democrats, independents, and Republicans alike!
               emphasis:
                   [
                       {
                           text: highlighting where people who usually disagree agree.,
                           italic: true,
                       },
-                      { text: across, italic: true },
                   ]
             - id: inputs
               box: [468, 3148, 2185, 4260]
@@ -645,7 +643,7 @@ pages:
               text: |-
                   So how can we measure what we
                   value -- our “compass” --
-                  without being mislead?
+                  without being misled?
     Ch4_B:
         boxes:
             - id: header
@@ -858,7 +856,7 @@ pages:
                   can often be found in real life! A
                   few years back, Taiwan had an
                   angry debate about whether to
-                  change its time zone:
+                  change its time zone.
             - id: change
               box: [552, 5732, 1084, 6616]
               text: |-
@@ -878,12 +876,11 @@ pages:
             - id: gold-card
               box: [2956, 4424, 5392, 5492]
               text: |-
-                  But with the help of pol.is and
-                  participation officers, folks found
-                  a new WHAT to fulfil mutual WHYs:
-                  the Gold Card residency, to bring
-                  scientists & artists to Taiwan.
-              emphasis: [{ text: pol.is, italic: true }]
+                  But with the help of participation
+                  officers, folks found a new WHAT
+                  to fulfil mutual WHYs: market
+                  Taiwan’s soft power, so the world
+                  could see Taiwan as distinct.
             - id: for
               box: [3348, 5804, 3592, 5988]
               text: for
@@ -994,18 +991,19 @@ pages:
                   stitu
                   tion
             - id: kami
-              ligatures: true
-              box: [2880, 5536, 5008, 6620]
+              box: [2850, 5536, 5480, 6620]
               text: |-
-                  And finally, this book itself
-                  benefited from a “local spirit” Kami:
-                  not corp-slop on the cloud, but a Kami
-                  stewarding one specific relationship,
-                  locally run on one specific laptop.
+                  And finally, this book itself benefited
+                  from a “local spirit” Kami: not corp-slop
+                  on the cloud, but a Kami stewarding one
+                  specific relationship, locally run on one
+                  specific machine, jdd-kami.eth.
               emphasis:
                   - { text: book itself, italic: true }
-                  - { text: "one specific relationship,", italic: true }
-                  - { text: one specific laptop., italic: true }
+                  - { text: one, occurrence: 1, italic: true }
+                  - { text: "specific relationship,", italic: true }
+                  - { text: one, occurrence: 2, italic: true }
+                  - { text: "specific machine,", italic: true }
             - id: book-cover
               type: lettering
               box: [1364, 5788, 1764, 6264]
@@ -1020,7 +1018,7 @@ pages:
               text: |-
                   This principle, along with all the
                   other principles in this book,
-                  are how we can build a future that does not concentrate power
+                  is how we can build a future that does not concentrate power
               emphasis: [{ text: concentrate, italic: true }]
             - id: principle-end
               box: [552, 7381, 2900, 7620]

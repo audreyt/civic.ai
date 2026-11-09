@@ -129,4 +129,4 @@ Packs 1 到 4 描述的是關懷應該如何被實踐，Pack 5 描述它如何�
 - Hui，《[The Question Concerning Technology in China](https://www.urbanomic.com/book/question-concerning-technology-china/)》（2016）：技術多樣性；Drexler，《[Reframing Superintelligence](https://web.archive.org/web/20250905024310/https://www.fhi.ox.ac.uk/wp-content/uploads/Reframing_Superintelligence_FHI-TR-2019-1.1-1.pdf)》（2019）：有界服務而非單一智慧體。
 - 完整足跡見〈[文獻與延伸閱讀](/tw/sources/)〉。
 
-<noscript><img src="/img/pack6-2-tw.jpg" alt="手繪漫畫頁，標題為「不要：一體適用的霸主／而要：在地解方給在地人——SOLUTION」，呼籲「為使用者而戰」，並舉三個近期例子——非營利組織 ROOST.tools 製作沒有集中控制的開源工具，協助偵測與預防兒童剝削；開源的 gpt-oss-safeguard 讓社群自帶政策，協助而非取代人類審核者；以及這本書本身，由一個守護特定關係、在一台特定筆電上在地運行的「地方之靈」Kami（地神）所輔助——結語說分享權力而非集中權力，正是我們打造未來的方法。" class="overview-image" width="1437" height="1999" loading="lazy" decoding="async"></noscript>
+<noscript><img src="/img/pack6-2-tw.jpg" alt="手繪漫畫頁，標題為「不要：一體適用的霸主／而要：在地解方給在地人——SOLUTION」，呼籲「為使用者而戰」，並舉三個近期例子——非營利組織 ROOST.tools 製作沒有集中控制的開源工具，協助偵測與預防兒童剝削；開源的 gpt-oss-safeguard 讓社群自帶政策，協助而非取代人類審核者；以及這本書本身，由一個守護特定關係、在一台特定機器（jdd-kami.eth）上在地運行的「地方之靈」Kami（地神）所輔助——結語說分享權力而非集中權力，正是我們打造未來的方法。" class="overview-image" width="1437" height="1999" loading="lazy" decoding="async"></noscript>

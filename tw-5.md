@@ -120,4 +120,4 @@ permalink: "/tw/5/"
 - 猶他州 H.B. 418，[《數位選擇法》](https://le.utah.gov/~2025/bills/static/HB0418.html)（2025），現為 [§§13-81-201 與 13-81-202](https://le.utah.gov/xcode/Title13/Chapter81/13-81.html)（2026 年 7 月 1 日生效；2027 年 7 月 1 日由後法取代）；[H.B. 408](https://le.utah.gov/Session/2026/bills/enrolled/HB0408.pdf)（2026）：可攜性已生效；持續即時轉送自 2027 年 7 月 1 日起。
 - 完整足跡見〈[文獻與延伸閱讀](/tw/sources/)〉。
 
-<noscript><img src="/img/pack5-2-tw.jpg" alt="手繪漫畫頁，標題為「NOT：相互保證毀滅／BUT：盡可能雙贏——SOLUTION」：在每個「什麼」背後追問更深的「為什麼」，再打造一個同時滿足雙方的新「什麼」——兩位廚師發現一人要果皮做利口酒、一人要果肉榨汁，於是雙方百分之百滿足、毫無浪費；臺灣也曾用 pol.is 平台把分歧的辯論化為雙贏——包括迎進科學家與藝術家的就業金卡——示範更好的討論如何幫助大家共贏。" class="overview-image" width="1437" height="1999" loading="lazy" decoding="async"></noscript>
+<noscript><img src="/img/pack5-2-tw.jpg" alt="手繪漫畫頁，標題為「NOT：相互保證毀滅／BUT：盡可能雙贏——SOLUTION」：在每個「什麼」背後追問更深的「為什麼」，再打造一個同時滿足雙方的新「什麼」——兩位廚師發現一人要果皮做利口酒、一人要果肉榨汁，於是雙方百分之百滿足、毫無浪費；臺灣曾為是否更改時區激烈辯論，在參與官協助下，大家找到同時滿足雙方「為什麼」的新「什麼」——行銷臺灣的軟實力，讓世界看見臺灣的獨特——示範更好的討論如何幫助大家共贏。" class="overview-image" width="1437" height="1999" loading="lazy" decoding="async"></noscript>
