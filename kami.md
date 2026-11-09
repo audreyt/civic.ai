@@ -39,6 +39,16 @@ In a normal week, the residents' group asks what it agreed at last month's meeti
 
 Installing one may take an afternoon. Earning the group's trust takes many people and much longer. We call that work Keeping: looking after the Kami together, checking it and keeping it answerable. This page helps with the installing; the Keeping is yours.
 
+<h2 id="what-are-you-here-for">What are you here for?</h2>
+
+Every route starts with the four questions. Then take the one closest to your work:
+
+- **Fork the architecture.** For people who want to build: the steps below, from [choosing what to run it on](#choose-what-to-run-it-on); [the instructions](/openclaw/) the Kami itself reads; and the [JDD Kami repository](https://github.com/jdd-kami/jdd-kami).
+- **Commission a Kami for our room.** For people who run a parish, care home, hospice or school: [Keep it together](#keep-it-together), then [When to pause or retire](#when-to-pause-or-retire).
+- **Design a deliberation Kami.** For organisers of citizens' assemblies, town-council facilitators and union halls: [Keep it together](#keep-it-together), especially the override ledger, then [What a webpage cannot teach](#what-a-webpage-cannot-teach).
+- **Understand the pattern first.** For readers who want to think before doing: [Inside the Kami](/inside-the-kami/) and Tenzin Yangtso's companion essay ["A Gentle Bridge"](/gentle-bridge/).
+- **I'm not sure which I am.** Start with [What a webpage cannot teach](#what-a-webpage-cannot-teach), then [Keep it together](#keep-it-together).
+
 <h2 id="choose-what-to-run-it-on">Choose what to run it on</h2>
 
 **Most groups need a chat assistant.** If the job is reading notes and minutes and answering questions about them, use a chat app that can save standing instructions for a project. Paste in [our instructions](/openclaw/) and your group's charter. With no connectors switched on, a chat assistant can only reply to you. It cannot send messages, change files or spend money, and the app itself enforces that limit. That makes it the safer choice. Any chat app with a project or custom-instructions feature will do, hosted or running on your own laptop.
