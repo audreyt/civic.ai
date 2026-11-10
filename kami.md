@@ -33,6 +33,8 @@ Before you upload shared material or install anything for the group, meet the pe
 
 People who cannot attend need named proxies with real authority to overrule on their behalf. If the group cannot answer these questions, stop there. Choosing no AI is a legitimate answer, and a different tool will not make up for missing people, money or authority.
 
+Before installation, write a short charter together: a text file, a shared note, even handwriting on paper. Tie it to the four answers: who keeps it, what a breach could cause, who can overrule and when it ends or is reviewed. It is a snapshot of what you have agreed so far, and you will rewrite it.
+
 These questions and the examples on this page are our proposals. The [source trail](/sources/) shows where evidence exists.
 
 In a normal week, the residents' group asks what it agreed at last month's meeting. The Kami should read the minutes, say what it cannot find and leave people to check the answer. A teacher asks what confused the class most this week. A small charity asks what it promised its funders, and by when. A Kami is only as useful as the notes it can read and the corrections people make.
@@ -51,7 +53,7 @@ Every route starts with the four questions. Then take the one closest to your wo
 
 <h2 id="choose-what-to-run-it-on">Choose what to run it on</h2>
 
-**Most groups need a chat assistant.** If the job is reading notes and minutes and answering questions about them, use a chat app that can save standing instructions for a project. Paste in [our instructions](/openclaw/) and your group's charter. With no connectors switched on, a chat assistant can only reply to you. It cannot send messages, change files or spend money, and the app itself enforces that limit. That makes it the safer choice. Any chat app with a project or custom-instructions feature will do, hosted or running on your own laptop.
+**Most groups need a chat assistant.** If the job is reading notes and minutes and answering questions about them, use a chat app that can save standing instructions for a project. Paste in [our instructions](/openclaw/) and your group's charter. With no connectors switched on, a chat assistant can only reply to you. It cannot send messages, change files or spend money, and the app itself enforces that limit. That makes it the safer choice. Any chat app with a project or custom-instructions feature will do, hosted or running on your own laptop. With a chat assistant that is the installation: skip the four numbered steps below, which are for an agent, and carry on from [What the instructions can and cannot do](#what-the-instructions-can-and-cannot-do).
 
 **Use an AI agent only when the group needs it to act**, for example to read a shared folder, keep notes between sessions or draft posts for a group chat. An agent is the same kind of model, plus tools, access to a computer and permission to use them. Open-source agents include [OpenClaw](https://docs.openclaw.ai), [Hermes Agent](https://hermes-agent.nousresearch.com), [OpenCode](https://opencode.ai) and [Pi](https://pi.dev); OpenAI and Anthropic offer their own. Our instructions are plain text and work with any of them.
 
@@ -175,11 +177,17 @@ A Kami that only you talk to is your private helper. If a place is shared, the K
 
 Return to the [four questions](#before-you-start) when people join or the group's needs change. Everyone affected should know who can act on those answers.
 
+<h3 id="shared-notes">Shared notes</h3>
+
 Keep the shared governance notes where the agreed roles can reach them: a shared folder, a group chat file, even paper on the wall. Keep private details within their agreed access limits. A recoverable copy lets the group carry on if one laptop fails; check what the copy actually contains.
 
 Change the notes together. Read them aloud at a meeting and edit them as a group, so every change is proposed and agreed.
 
+<h3 id="one-machine-or-several">One machine or several</h3>
+
 If your group already trusts each other, you can run one Kami on one machine that stays on, such as a small server or an office laptop, and connect your group's chat to it. Limit who can see which conversations by agreed roles, and check that the permissions actually enforce those limits. Where trust does not exist, run separate Kamis. A shared machine does not replace shared decisions: the notes, the charter and the ledger still apply.
+
+<h3 id="off-switch-and-ledger">The off switch and the override ledger</h3>
 
 No app gives your group a shared complaint box or stop button. Decide who can switch the Kami off, by quitting the app or revoking its access, and make sure at least two people can. Then keep an override ledger on paper: each time someone says no to the Kami, write down the date, what it suggested, who said no (their role, not their name), why in their own words, and what changed. A clipboard works. Each override is the group's record of how the Kami is doing.
 
@@ -187,15 +195,17 @@ The three notes travel, but day-to-day memories live on the machine that runs th
 
 The group keeps its full override record on agreed private terms. A public example needs consent from the people documented, a consent note, only the necessary detail and dates reported by month or more broadly. A month combined with a role or an unusual event can still identify someone, so use these safeguards together. Use roles rather than names unless someone explicitly opts in, and remove identifying details from the reason. People must be able to refuse publication or withdraw consent. Clearly labelled invented teaching examples are allowed, but they are not evidence from a live group.
 
-Before installation, write a short charter together: a text file, a shared note, even handwriting on paper. Tie it to the four answers: who keeps it, what a breach could cause, who can overrule and when it ends or is reviewed. It is a snapshot of what you have agreed so far, and you will rewrite it.
+<h3 id="the-charter">The charter</h3>
 
-Later, those four answers grow into the [engagement contract](/glossary/#engagement-contract) of Pack 2, and for large deployments Pack 6 turns that contract into code. The charter itself is a promise between people. The Kami cannot enforce it; the settings and the keepers do.
+Later, the four answers in your charter grow into the [engagement contract](/glossary/#engagement-contract) of Pack 2, and for large deployments Pack 6 turns that contract into code. The charter itself is a promise between people. The Kami cannot enforce it; the settings and the keepers do.
 
 Choose your setup by asking what a breach would cost. An **ephemeral room**, such as a one-off workshop, risks time and goodwill: embarrassing, but not dangerous. A **relational room**, such as a support group, risks dignity or private details. A **sovereign room** risks safety, public power or fair votes. Most groups need less lockdown than they think. Expensive kit does not replace the human work of Keeping.
 
 Real charters add rules the three notes cannot enforce. In a care home, a resident's earlier choices must bind the alerting system, but silencing a health alert also needs a clinician's sign-off and a review date; a staff member who says no is keeping people safe, and nobody loses shifts or reviews for it. In a citizens' meeting, the output is a public record officials must answer; it is no promise that citizens' words become law.
 
 In a hacker club, at least two named keepers can each shut the Kami down alone, and if the keepers go quiet, the Kami pauses or retires on a timer set in advance. In a family newsletter, the Kami writes only what was heard, checks each quote word for word against that issue's source list, treats each person's consent as covering that topic only, and numbers each issue from the last one actually delivered; a file saved on disk does not count.
+
+<h3 id="what-no-kami-can-fix">What no Kami can fix</h3>
 
 Some groups no Kami can fix: staff against bosses, a split congregation, a meeting captured by people who game the rules, keepers who no longer speak. There the Kami becomes a screen everyone throws anger at, and the fix is human work. Unglamorous jobs hold everything up: the person who fixes things at night, the person who books the room and knows who will not touch a screen, the translator who puts the charter into words everyone uses. One test for that translation: would the people the charter governs use its words to stop the Kami? If not, rewrite it.
 

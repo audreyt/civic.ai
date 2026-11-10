@@ -100,7 +100,7 @@ You can start on your own, without a budget or a technical role. Anything that i
 
 </div>
 
-The book _Civic AI: 6-Pack of Care_ comes out with Wiley in February 2027; its Chapters 3–8 are Packs 1–6. We presented the framework at the [Civic AI Conference](/conference/) at Rhodes House, Oxford, on 25 March 2026. That page has the agenda, selected talks and the community's Polis sensemaking on AI and care.
+The book _The 6-Pack of Care_ comes out with Wiley in February 2027; its Chapters 3–8 are Packs 1–6. We presented the framework at the [Civic AI Conference](/conference/) at Rhodes House, Oxford, on 25 March 2026. That page has the agenda, selected talks and the community's Polis sensemaking on AI and care.
 
 **Where it comes from.** The four phases of care were set out by [Berenice Fisher and Joan Tronto](https://experts.umn.edu/en/publications/toward-a-feminist-theory-of-caring/) in 1990. In 2013 Aimee van Wynsberghe used the same phases to [design care robots](https://doi.org/10.1007/s11948-011-9343-6). The framework also draws on deliberative democracy and [⿻ Plurality](https://plurality.net). It turns care ethics into rules organisations can follow, and [Sources](/sources/) names every debt, pack by pack.
 

@@ -19,6 +19,8 @@ A framework that asks institutions to show their work should show its own. The 6
 
 References identify the work, edition or publication date and a publisher, DOI or stable archive where available. Each annotation says what we draw from it. A theoretical argument, a field study and a project's own account support different kinds of claim.
 
+If you came to check the evidence, three sections do that work: [Reading the evidence](#reading-the-evidence), [The cases this site leans on](#cases) and [What is ours](#what-is-ours).
+
 ### Using a source in conversation
 
 Open the original and ask what claim it can actually support. A theory is not a trial, a project record is not an independent outcome study and the evidence window matters. Where the connection is unclear, record that uncertainty rather than borrow the source's prestige.

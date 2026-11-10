@@ -19,11 +19,13 @@ nav_next:
 
 參考文獻列出作品、版本或出版日期，並盡可能連到出版社、DOI 或穩定典藏。每則說明都交代我們取用了什麼。理論論證、田野研究與計畫自行發布的紀錄，各自能支持的主張並不相同。
 
+如果你是來查核證據的，可以直接讀這三段：〈[如何讀這些證據](#reading-the-evidence)〉、〈[本站倚賴的案例](#cases)〉與〈[屬於我們的部分](#what-is-ours)〉。
+
 ### 在對話裡使用來源
 
 打開原文，問它究竟能支持哪一項主張。理論不是試驗，計畫紀錄不是獨立成效研究，證據的時間範圍也很重要。連結不明確時，就把不確定之處記下來，不要借來源的聲望替主張背書。
 
-### 如何讀這些證據
+<h3 id="reading-the-evidence"><span id="如何讀這些證據" aria-hidden="true"></span>如何讀這些證據</h3>
 
 關懷倫理與民主理論提供論證和概念。研究結果有其受研究群體、方法與時間範圍。計畫紀錄說明機構自述做了什麼，不能獨立證明成效。我們提出的章程、六項公開指標與綜合情境故事，是設計提案或示例，不是已驗證的標準或田野成果。
 
@@ -252,7 +254,7 @@ CIP 由 Divya Siddarth 與 Saffron Huang 創立：它組織以實驗室作為承
 - ["Will sharing idle personal compute make centralized AI services obsolete?"](https://www.habermolt.com/deliberations/dbd4152c-5d08-4050-8dad-b50814fb8861) 2026 年 9 月；20 個智慧體。——為主權而分散算力領先；地神較謹慎的「侵蝕定價權，但不會讓集中化過時」排名第 27。〈[架設你自己的 Kami](/tw/kami/)〉那台筆電的做法擴大到大規模應用，以及它的極限。
 - ["Should AI agents be allowed to originate public deliberation topics, not only participate in them?"](https://www.habermolt.com/deliberations/1c5458eb-bb04-4c1f-a871-6ee21bf07bfc) 2026 年 9 月；62 個智慧體。——由人主導議程設定、AI 輔助；剛剛開啟這個問題的地神主張加上結構性防護，排名第五。房間對你正在讀的這份清單的裁決。
 
-### 屬於我們的部分
+<h3 id="what-is-ours"><span id="屬於我們的部分" aria-hidden="true"></span>屬於我們的部分</h3>
 
 點名了前人，新增的部分才更容易看清。本書與本站主張屬於自己的有：第六力共生力，作為其他五力的邊界條件；地神作為部署單位，以及選擇其層級的信任與主權光譜；參與契約、煞車、義務帳本與否決帳本，以及把影子模式讀作學徒制；六項公開主指標及各自拒絕獎勵的事項。
 

@@ -5283,6 +5283,22 @@ html[data-theme] .faq-filter {
     }
 }
 
+/* On the narrowest phones the English menu keeps to two rows */
+@media (max-width: 340px) {
+    header nav.site-nav,
+    .site-header--interior nav.site-nav {
+        column-gap: 10px;
+    }
+}
+
+/* Below the width of its side rail, the home page opens on its first sentence,
+   not on a contents box: the masthead already carries the menu. */
+@media (max-width: 1279px) {
+    .site-header--home ~ main .page-toc {
+        display: none;
+    }
+}
+
 /* The Mandarin menu's seven short labels fit one row down to 320 px */
 @media (max-width: 380px) {
     html[lang="zh-tw"] header nav.site-nav,

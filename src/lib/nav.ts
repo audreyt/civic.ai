@@ -41,8 +41,8 @@ const entries: readonly NavEntry[] = [
     {
         section: "measures",
         path: "/measures/",
-        en: ["Measures", "Measures"],
-        zh: ["衡量指標", "指標"],
+        en: ["Map & Measures", "Measures"],
+        zh: ["地圖與衡量指標", "指標"],
     },
     {
         section: "faq",

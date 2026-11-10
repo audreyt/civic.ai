@@ -449,8 +449,13 @@ try {
     await navCurrent(browser, "/tw/", ["首頁"], "TW home");
     await navCurrent(browser, "/faq/", ["FAQ"], "EN faq");
     await navCurrent(browser, "/tw/faq/", ["常見問題"], "TW faq");
-    await navCurrent(browser, "/measures/", ["Measures"], "EN measures");
-    await navCurrent(browser, "/tw/measures/", ["衡量指標"], "TW measures");
+    await navCurrent(browser, "/measures/", ["Map & Measures"], "EN measures");
+    await navCurrent(
+        browser,
+        "/tw/measures/",
+        ["地圖與衡量指標"],
+        "TW measures"
+    );
     await navCurrent(browser, "/1/", ["The 6-Pack"], "EN pack 1");
     await navCurrent(browser, "/tw/1/", ["關懷六力"], "TW pack 1");
     await navCurrent(browser, "/manifesto/", ["Library"], "EN manifesto");

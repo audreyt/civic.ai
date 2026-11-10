@@ -29,7 +29,7 @@ test("masthead items come in reading order with full and short labels", () => {
     expect(en.map((item) => item.full)).toEqual([
         "Home",
         "The 6-Pack",
-        "Measures",
+        "Map & Measures",
         "FAQ",
         "Set up a Kami",
         "Library",
