@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: essay
 title: "以資料為土壤，守護主權"
 author: "唐鳳"
 lang: zh-tw

@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: speech
 title: "軟體自由與公民關懷"
 author: "唐鳳"
 lang: zh-tw

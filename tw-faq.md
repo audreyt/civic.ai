@@ -1,5 +1,6 @@
 ---
 layout: chapter
+reading_time: false
 title: "常見問題"
 meta_description: "關於仁工智慧與「關懷六力」的常見問答：關懷倫理與 AI 對齊、地神、可糾正性、日落條款，以及民主化的 AI 治理。"
 summary: "用白話回答關於仁工智慧與關懷六力最難的問題：互助的地神能否在以利潤為導向的 AI 軍備競賽中存活、仁工智慧如何以在地問責補足技術性的 AI 安全工作、由誰來負責，以及一個只做一件事的小型在地地神如何保持安全、可被質疑、並能隨時被關閉。"
@@ -10,8 +11,8 @@ nav_prev:
     url: "/tw/measures/"
     text: "衡量指標"
 nav_next:
-    url: "/tw"
-    text: "首頁"
+    url: "/tw/kami/"
+    text: "架設你自己的 Kami"
 ---
 
 <h2 id="everyday-questions">先從日常問題問起</h2>

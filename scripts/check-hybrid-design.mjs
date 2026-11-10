@@ -72,8 +72,10 @@ for (const [name, html] of [
     expectIncludes(name, html, "nav-label-short");
 }
 
-expectIncludes("home nav map link", home, 'href="/measures/#map"');
-expectIncludes("zh home nav map link", zhHome, 'href="/tw/measures/#map"');
+expectIncludes("home nav measures link", home, 'href="/measures/"');
+expectIncludes("zh home nav measures link", zhHome, 'href="/tw/measures/"');
+expectIncludes("home nav library link", home, 'href="/library/"');
+expectIncludes("zh home nav library link", zhHome, 'href="/tw/library/"');
 expectIncludes("measures title", measures, "Map &amp; Measures");
 expectIncludes("measures map anchor", measures, 'id="map"');
 expectIncludes("measures concept map", measures, 'class="cmap"');

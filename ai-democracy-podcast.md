@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: conversation
 title: "Podcast: AI and Democracy"
 lang: en-gb
 alt_lang_url: "/tw/ai-democracy-podcast/"

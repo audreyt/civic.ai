@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: speech
 title: "⿻ UCSC：從極化到共創"
 author: "唐鳳"
 date: 2026-05-10

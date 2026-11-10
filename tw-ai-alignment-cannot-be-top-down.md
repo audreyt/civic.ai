@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: essay
 title: "AI 對齊不能由上而下"
 author: "唐鳳"
 lang: zh-tw

@@ -36,8 +36,12 @@ function linkFor(slug: string): NavLink {
 const previousSlug = index > 0 ? chapterOrder[index - 1] : undefined;
 const nextSlug = index >= 0 && index < chapterOrder.length - 1 ? chapterOrder[index + 1] : undefined;
 const hasExplicitNav = Boolean(page.data.nav_prev || page.data.nav_next);
-const prev = page.data.nav_prev || (!hasExplicitNav && previousSlug ? linkFor(previousSlug) : !hasExplicitNav ? { url: zh ? "/tw/" : "/", text: zh ? "首頁" : "Home" } : undefined);
-const next: NavLink | undefined = page.data.nav_next || (!hasExplicitNav && nextSlug ? linkFor(nextSlug) : undefined);
+const home: NavLink = { url: zh ? "/tw/" : "/", text: zh ? "首頁" : "Home" };
+// Essays, speeches and conversations are listed in the Library, so their foot
+// leads back to it and then home; a hand-set link still wins (DESIGN.md §9).
+const library: NavLink | undefined = page.data.kind ? { url: zh ? "/tw/library/" : "/library/", text: zh ? "全站目錄" : "Library" } : undefined;
+const prev = page.data.nav_prev || library || (!hasExplicitNav && previousSlug ? linkFor(previousSlug) : !hasExplicitNav ? home : undefined);
+const next: NavLink | undefined = page.data.nav_next || (library ? home : !hasExplicitNav && nextSlug ? linkFor(nextSlug) : undefined);
 // Pack 4 closes the care cycle: besides Pack 5 it links back to Pack 1.
 const first = packs[0];
 const loop: NavLink | undefined = !hasExplicitNav && packNumber === "4"
@@ -87,7 +91,7 @@ if (ldImage) articleLd.image = ldImage.includes("://") ? ldImage : `${site.url}$
         : {})}
     ><InShort page={page} /><WalkingPlayer page={page} /><Fragment set:html={visibleHtml(page)} /></main>
     <section class="next-action"><div class="next-action-content">
-      {prev && <a href={prev.url} class="next-action-button">{!hasExplicitNav && <span class="button-arrow">←</span>}<span class="button-text">{prev.text}</span></a>}
+      {prev && <a href={prev.url} class="next-action-button">{(!hasExplicitNav || prev === library) && <span class="button-arrow">←</span>}<span class="button-text">{prev.text}</span></a>}
       {loop ? (
         <div class="chapter-nav__onward">
           {next && <a href={next.url} class="next-action-button"><span class="button-text">{next.text}</span><span class="button-arrow">→</span></a>}

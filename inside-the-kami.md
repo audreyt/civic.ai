@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: essay
 title: "Inside the Kami"
 author: "Audrey Tang"
 lang: en-gb

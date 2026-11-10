@@ -8,11 +8,11 @@ permalink: "/tw/openclaw/"
 manifesto_link: "/tw/manifesto"
 manifesto_text: "計畫宣言"
 prev_action:
+    url: "/tw/kami/"
+    text: "架設你自己的 Kami"
+next_action:
     url: "/tw/"
     text: "首頁"
-next_action:
-    url: "/tw/manifesto"
-    text: "計畫宣言"
 exclude_from_sitemap: true
 ---
 

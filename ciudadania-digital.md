@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: speech
 title: "Ciudadanía Digital"
 author: "Audrey Tang"
 lang: en-gb

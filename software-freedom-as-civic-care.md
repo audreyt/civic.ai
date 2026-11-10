@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: speech
 title: "Software Freedom as Civic Care"
 author: "Audrey Tang"
 lang: en-gb

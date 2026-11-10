@@ -1,5 +1,6 @@
 ---
 layout: chapter
+reading_time: false
 title: "詞彙表"
 lang: zh-tw
 alt_lang_url: "/glossary"

@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: speech
 title: "SOLVE at MIT 2026"
 meta_description: "Audrey Tang's SOLVE at MIT 2026 keynote: why we, the people — not a single model — are the real superintelligence, and how Civic AI keeps it that way."
 subtitle: "Keynote Speech & Fireside Conversation"
@@ -9,12 +10,6 @@ alt_lang_url: "/tw/we-the-people-are-truly-the-superintelligence"
 permalink: "/we-the-people-are-truly-the-superintelligence/"
 date: 2026-05-14T12:00:00Z
 og_image: "https://i.ytimg.com/vi/fqvdaHWH7a0/maxresdefault.jpg"
-nav_prev:
-    url: "/"
-    text: "Home"
-nav_next:
-    url: "/manifesto/"
-    text: "Manifesto"
 ---
 
 <div class="video-embed">

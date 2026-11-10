@@ -1,5 +1,6 @@
 ---
 layout: chapter
+reading_time: false
 title: "Sources & Further Reading"
 meta_description: "Where the 6-Pack of Care comes from: the care-ethics lineage from Fisher and Tronto to van Wynsberghe's care-centred design, and the sources behind each pack, with links."
 summary: "The 6-Pack did not invent its parts. This page names where each came from — the care-ethics lineage that runs from Berenice Fisher and Joan Tronto through Aimee van Wynsberghe's care-centred design for care robots, and the scholarship behind each pack — so the framework's debts are as visible as its claims."

@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: speech
 title: "民主需要仁工智慧"
 author: "唐鳳"
 lang: zh-tw

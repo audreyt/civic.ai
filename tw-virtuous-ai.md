@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: essay
 title: "美德 AI，共創無限未來"
 author: "唐鳳"
 lang: zh-tw

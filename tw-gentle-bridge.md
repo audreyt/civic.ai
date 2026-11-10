@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: essay
 title: "⿻輕柔之橋"
 author: "Tenzin Yangtso & jdd-kami"
 lang: zh-tw

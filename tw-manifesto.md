@@ -13,8 +13,8 @@ nav_prev:
     url: "/tw"
     text: "首頁"
 nav_next:
-    url: "/tw/faq"
-    text: "常見問題"
+    url: "/tw/1/"
+    text: "一：覺察力"
 audio: /audio/tw-manifesto.mp3
 ---
 

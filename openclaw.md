@@ -8,11 +8,11 @@ permalink: "/openclaw/"
 manifesto_link: "/manifesto"
 manifesto_text: "Manifesto"
 prev_action:
+    url: "/kami/"
+    text: "Set up your own Kami"
+next_action:
     url: "/"
     text: "Home"
-next_action:
-    url: "/manifesto"
-    text: "Manifesto"
 exclude_from_sitemap: true
 ---
 

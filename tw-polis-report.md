@@ -9,8 +9,8 @@ nav_prev:
     url: "/tw/conference"
     text: "研討會"
 nav_next:
-    url: "/tw/manifesto"
-    text: "宣言"
+    url: "/tw/library/"
+    text: "全站目錄"
 ---
 
 ## 怎麼讀這些人數

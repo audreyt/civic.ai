@@ -11,14 +11,14 @@ manifesto_link: "/manifesto"
 manifesto_text: "Manifesto"
 date: 2026-06-06
 prev_action:
-    url: "/"
-    text: "Home"
+    url: "/faq/"
+    text: "FAQ"
 next_action:
     url: "/openclaw/"
     text: "The instructions"
 ---
 
-A Kami is an AI model you can already use, plus three things from this site: instructions the model reads (about 700 words), three short notes it writes about its job, and a group of people who check it, correct it and can switch it off. It serves one place, such as your street, your classroom or your small charity, and answers to the people there. The model and the app stay exactly as they were. Only the instructions change.
+A Kami is an AI model you can already use, plus three things from this site: instructions the model reads (about 1,000 words), three short notes it writes about its job, and a group of people who check it, correct it and can switch it off. It serves one place, such as your street, your classroom or your small charity, and answers to the people there. The model and the app stay exactly as they were. Only the instructions change.
 
 The instructions ask the model to behave well. They cannot make it. Anything that must never happen has to be blocked in the software's settings and watched by people. This page covers both parts.
 

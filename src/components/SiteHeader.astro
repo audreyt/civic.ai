@@ -16,6 +16,11 @@ const zh = lang2(page.data.lang) === "zh";
 const displayTitle = smartQuotes(String(headerTitle || page.data.header_title || page.data.title || ""));
 const displaySubtitle = headerSubtitle || page.data.subtitle ? smartQuotes(String(headerSubtitle || page.data.subtitle)) : undefined;
 const description = page.data.description ? smartQuotes(page.data.description) : undefined;
+// Essays, speeches and conversations say which they are, before the date (DESIGN.md §10).
+const kindLabels = { essay: ["Essay", "文章"], speech: ["Speech", "演講"], conversation: ["Conversation", "對談"] } as const;
+const kindLabel = page.data.kind ? kindLabels[page.data.kind][zh ? 1 : 0] : undefined;
+const dateText = headerDate || (page.data.date ? formatDateDisplay(page.data.date, page.data.lang) : undefined);
+const byline = [kindLabel, dateText].filter(Boolean).join(" · ");
 ---
 <header class:list={["site-header", isHome ? "site-header--home" : "site-header--interior"]}>
   {isHome ? (
@@ -40,7 +45,7 @@ const description = page.data.description ? smartQuotes(page.data.description) :
         <PackEyebrow page={page} />
         <h1>{displayTitle}{displaySubtitle && <span>{displaySubtitle}</span>}</h1>
         <PackEyebrow page={page} part="question" />
-        {headerDate ? <p class="chapter-date">{headerDate}</p> : page.data.date ? <p class="chapter-date">{formatDateDisplay(page.data.date, page.data.lang)}</p> : null}
+        {byline && <p class="chapter-date">{byline}</p>}
         {page.data.author && <p class="chapter-date">{page.data.author}</p>}
         {description && <p set:html={description} />}
       </div>

@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: essay
 title: "Safeguarding Sovereignty with Data as Soil"
 author: "Audrey Tang"
 lang: en-gb

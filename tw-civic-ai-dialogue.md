@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: conversation
 title: "仁工智慧對話"
 author: "唐鳳"
 lang: zh-tw

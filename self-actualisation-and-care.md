@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: speech
 title: "Self-Actualisation & Care"
 author: "Anne-Marie Slaughter"
 lang: en-gb

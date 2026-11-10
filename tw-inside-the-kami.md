@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: essay
 title: "地神之內"
 author: "唐鳳"
 lang: zh-tw

@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: conversation
 title: "Podcast：AI 與民主"
 lang: zh-tw
 alt_lang_url: "/ai-democracy-podcast/"

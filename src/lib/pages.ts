@@ -11,6 +11,9 @@ import { generatedPages } from "./recordPages";
 
 export type LayoutName = "default" | "chapter" | "conference";
 
+export const pageKinds = ["essay", "speech", "conversation"] as const;
+export type PageKind = (typeof pageKinds)[number];
+
 export interface ActionLink {
     url: string;
     text: string;
@@ -38,6 +41,10 @@ export interface PageFrontmatter {
     noindex?: boolean;
     page_class?: string;
     author?: string;
+    /** What a Library page is: shown before its date, and it sets the foot links (DESIGN.md §9). */
+    kind?: PageKind;
+    /** false hides the reading-time figure on pages that are consulted rather than read through. */
+    reading_time?: boolean;
     date?: string | Date;
     audio?: string;
     og_image?: string;

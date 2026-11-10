@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: essay
 title: "長期照護 AI 中的覺察力"
 summary: "一則真實故事——英國照護社群的 100 多人，包括受益者、照顧者、工作者與提供者，如何共同產製出負責任 AI 在照護中的定義，從人們重視什麼出發，而非從科技能最佳化什麼出發。"
 author: "Caroline Emmer De Albuquerque Green"

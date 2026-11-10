@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: essay
 title: "⿻存在"
 author: "Tenzin Yangtso"
 lang: zh-tw

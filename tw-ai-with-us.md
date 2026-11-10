@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: speech
 title: "AI 與我們同在，而非撇開我們"
 author: "Vitalik Buterin"
 lang: zh-tw

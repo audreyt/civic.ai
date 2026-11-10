@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: speech
 title: "AI With Us, Not Without Us"
 author: "Vitalik Buterin"
 lang: en-gb

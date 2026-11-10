@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: conversation
 title: "A Dialogue on Civic AI"
 author: "Audrey Tang"
 lang: en-gb

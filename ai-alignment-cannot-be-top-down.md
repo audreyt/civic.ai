@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: essay
 title: "AI Alignment Cannot Be Top-Down"
 author: "Audrey Tang"
 lang: en-gb

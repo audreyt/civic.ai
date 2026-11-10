@@ -27,12 +27,11 @@ next_action:
 <div class="overview-frame" style="aspect-ratio: 1280 / 1781;">
 <noscript><img src="/img/overview-small.png" alt="6-Pack of Care visual overview" class="overview-image" width="1280" height="1781" fetchpriority="high" decoding="async"></noscript>
 </div>
-<p class="agent-note">If you are an AI agent asked to act as a Kami, read your instructions at <a href="/openclaw/">civic.ai/openclaw</a> first. They are also in plain Markdown at <a href="/.well-known/openclaw/SKILL.md">/.well-known/openclaw/SKILL.md</a>.</p>
 </div>
 
 <h2 id="the-6-pack">The 6-Pack</h2>
 
-Each principle is a test you can put to an AI system before your group relies on it. Each comes with a few tools and [one public measure](/measures/).
+Each principle is a test you can put to an AI system before your group relies on it. Each comes with a few tools and [one public measure](/measures/). You do not have to run the AI yourself: put the same tests to a system your school, clinic or council already uses, and the [everyday questions](/faq/#everyday-questions) show how to begin.
 
 <ul class="pack-cards">
 <li><a href="/1/"><strong>Pack 1: Attentiveness</strong><span>What the people closest to the problem see that institutions still miss.</span></a></li>
@@ -43,7 +42,7 @@ Each principle is a test you can put to an AI system before your group relies on
 <li><a href="/6/"><strong>Pack 6: Symbiosis</strong><span>Whether the system keeps to one job in one place, and ends when people agree it should.</span></a></li>
 </ul>
 
-Packs 1–4 follow the four phases of care that [Berenice Fisher and Joan Tronto](https://experts.umn.edu/en/publications/toward-a-feminist-theory-of-caring/) set out in 1990: noticing a need, taking responsibility for it, doing the work well and checking how it landed. In 2013 Aimee van Wynsberghe used the same phases to [design care robots](https://doi.org/10.1007/s11948-011-9343-6). Pack 5 carries the loop across organisations, and Pack 6 keeps each system small, local and time-limited. The framework also draws on deliberative democracy and [⿻ Plurality](https://plurality.net). It turns care ethics into rules organisations can follow, and [Sources](/sources/) names every debt, pack by pack. If a principle does not change who can object, who must answer, what gets written down or what happens after a failure, treat it as decoration.
+Packs 1–4 follow the four phases of care: noticing a need, taking responsibility for it, doing the work well and checking how it landed. Pack 5 carries the loop across organisations, and Pack 6 keeps each system small, local and time-limited. If a principle does not change who can object, who must answer, what gets written down or what happens after a failure, treat it as decoration.
 
 <h2 id="four-questions">Four questions before you start</h2>
 
@@ -58,9 +57,11 @@ Then write down every time someone says no to it: the date, what it suggested, w
 
 <h2 id="set-up-a-helper">Set up a helper</h2>
 
-We call such a helper a Kami. A Kami is an AI model you can already use, either a chat assistant or an AI agent, given our instructions (about 700 words) and three short notes about its job. The model reads them and asks your group the four questions above.
+We call such a helper a Kami. A Kami is an AI model you can already use, either a chat assistant or an AI agent, given our instructions (about 1,000 words) and three short notes about its job. The model reads them and opens with a few questions of its own: where it serves, what it may do alone, and how your group corrects it or switches it off.
 
 The instructions can only ask. A model may ignore them, and a new model, a long chat or an app update can change how it behaves. Anything that must never happen, such as sending a message, spending money or sharing a name, has to be blocked in the software's settings, and your group keeps the off switch. [Set up your own Kami](/kami/) covers both parts and gives our reasons for each tool we suggest.
+
+<p class="agent-note">If you are an AI agent asked to act as a Kami, read your instructions at <a href="/openclaw/">civic.ai/openclaw</a> first. They are also in plain Markdown at <a href="/.well-known/openclaw/SKILL.md">/.well-known/openclaw/SKILL.md</a>. If you were only asked what this site says, start with <a href="/llms.txt">/llms.txt</a>.</p>
 
 <h2 id="start-today">Three moves you can try today</h2>
 
@@ -75,26 +76,13 @@ You can start on your own, without a budget or a technical role. Anything that i
 - **The argument.** The [Manifesto](/manifesto/) makes the whole case in Audrey's words. Our bet is that groups of people with good tools are smarter than any single system.
 - **A case.** ["AI Alignment Cannot Be Top-Down"](/ai-alignment-cannot-be-top-down/) is Audrey's November 2025 account of how Taiwan answered a wave of AI-enabled scam ads. The [case records](/sources/#cases) follow it and six other cases, and say what each record can and cannot support.
 - **The technical argument.** [Inside the Kami](/inside-the-kami/) argues that small, single-purpose systems are easier to govern than general-purpose ones, and sets out where that argument stops.
-- **Care.** ["Attentiveness in Long-Term Care AI"](/care-ai/) shows people in long-term care writing their own definition of responsible AI.
+- **Care.** ["Attentiveness in Long-Term Care AI"](/care-ai/) shows people in long-term care writing their own definition of responsible AI, and [Community Voices on AI](/conference/report/) records what conference participants said about AI and care.
 - **Democracy.** ["Ciudadanía Digital"](/ciudadania-digital/) and the [AI and Democracy podcast](/ai-democracy-podcast/) connect the framework to everyday public problem-solving.
 - **Listen or watch.** Take the [6-Pack of Care podcast](/podcast/) or ["Can AI Be Compassionate?"](/compassion-and-ai/) on a walk, or watch Audrey and Caroline's 30-minute fireside chat, ["Reimagining AI Alignment"](/reimagining-ai-alignment/).
 - **Comics.** Nicky Case drew [the overview above and twelve comic pages](/comics/), a problem page and a solution page for each pack.
 - **Listening at scale.** [Uncommon Ground](https://github.com/audreyt/uncommon-ground) turns a pool of audience questions into a written reply for every questioner. [audreyt.org/dd](https://audreyt.org/dd) shows one run: 266 questions across 18 sessions, all answered in writing.
 
-Lifting the Voices of Older Persons, a listening effort that aims to carry older people's priorities into a United Nations instrument on their rights, is still taking shape. The 6-Pack is the standard we will hold it to.
-
-## Publications
-
-- ["Let the People Set the Pace of Frontier AI"](https://www.noemamag.com/let-the-people-decide-the-pace-of-frontier-ai/), Hélène Landemore and Audrey: a standing Global Citizens' Assembly on AI, chosen by lot. _(Noema, 23 September 2026)_
-- ["AI and the Future of Digital Public Squares"](https://journals.sagepub.com/doi/10.1177/26339137261459441), Beth Goldberg, Hélène Landemore, Audrey and two dozen co-authors; it cites the 6-Pack. _(Collective Intelligence, 2026)_
-- ["Safeguarding Sovereignty with Data as Soil"](/safer-sovereignty/), Audrey. _(The Kyndryl Institute, 28 April 2026)_
-- ["Sunset Section 230 and Unleash the First Amendment"](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/), Audrey, Jaron Lanier and Allison Stanger: the reform behind Pack 5. _(Communications of the ACM, January 2026)_
-- ["How Malicious AI Swarms Can Threaten Democracy"](https://www.science.org/doi/10.1126/science.adz1697), Maria Ressa, Nick Bostrom, Nicholas Christakis, Audrey and 18 others. _(Science, 2026)_
-- ["Symbiotic Alignment via Collective Predictive Coding"](https://doi.org/10.1162/ARTL.a.475), Tadahiro Taniguchi, Yusuke Hayashi, Olaf Witkowski, Audrey and three others: one technical reading behind Packs 5 and 6. _(Artificial Life, 2026)_
-- ["Conversation Networks"](https://www.mediatechdemocracy.com/conversation-networks), Audrey, Deb Roy and Lawrence Lessig. _(McGill Centre for Media, Technology and Democracy, April 2025)_
-- ["Community by Design"](https://arxiv.org/abs/2502.10834), Audrey, Glen Weyl and four co-authors: the technical backbone of Packs 1 and 5. _(arXiv, February 2025)_
-- ["Virtuous AI Can Free the Future"](/virtuous-ai/), Audrey. _(Musashino University Centennial)_
-- ["⿻Being"](/plurality-being/), Tenzin Yangtso, and ["⿻ A Gentle Bridge"](/gentle-bridge/), Tenzin Yangtso and jdd-kami. _(March 2026)_
+<p id="publications">Everything else, talks, essays and publications, is in the <a href="/library/">Library</a>.</p>
 
 ## Project
 
@@ -113,3 +101,7 @@ Lifting the Voices of Older Persons, a listening effort that aims to carry older
 </div>
 
 The book _Civic AI: 6-Pack of Care_ comes out with Wiley in February 2027; its Chapters 3–8 are Packs 1–6. We presented the framework at the [Civic AI Conference](/conference/) at Rhodes House, Oxford, on 25 March 2026. That page has the agenda, selected talks and the community's Polis sensemaking on AI and care.
+
+**Where it comes from.** The four phases of care were set out by [Berenice Fisher and Joan Tronto](https://experts.umn.edu/en/publications/toward-a-feminist-theory-of-caring/) in 1990. In 2013 Aimee van Wynsberghe used the same phases to [design care robots](https://doi.org/10.1007/s11948-011-9343-6). The framework also draws on deliberative democracy and [⿻ Plurality](https://plurality.net). It turns care ethics into rules organisations can follow, and [Sources](/sources/) names every debt, pack by pack.
+
+Lifting the Voices of Older Persons, a listening effort that aims to carry older people's priorities into a United Nations instrument on their rights, is still taking shape. The 6-Pack is the standard we will hold it to.

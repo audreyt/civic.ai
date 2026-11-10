@@ -283,7 +283,7 @@ header nav.site-nav a {
 
 header nav.site-nav a:hover,
 header nav.site-nav a:focus-visible,
-header nav.site-nav a[aria-current="page"] {
+header nav.site-nav a[aria-current] {
     color: #fbfaf4;
     border-bottom-color: var(--gold-light);
 }
@@ -410,7 +410,7 @@ header .chapter-date {
 
 .site-header--interior nav.site-nav a:hover,
 .site-header--interior nav.site-nav a:focus-visible,
-.site-header--interior nav.site-nav a[aria-current="page"] {
+.site-header--interior nav.site-nav a[aria-current] {
     color: var(--teal);
     border-bottom-color: var(--teal);
 }
@@ -598,6 +598,28 @@ html[data-theme="light"] .partner-logo {
 
 .partner-colophon a {
     white-space: nowrap;
+}
+
+/* The masthead, repeated at the foot of every interior page. */
+.partner-colophon__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 18px;
+    margin: 12px auto;
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.partner-colophon__nav a {
+    padding: 4px 1px;
+}
+
+.partner-colophon__nav a[aria-current] {
+    color: var(--text);
+    text-decoration: none;
 }
 
 /* ─── TABLES ─── */
@@ -1593,6 +1615,7 @@ footer a:hover {
     .skip-link,
     .lang-toggle,
     .site-nav,
+    .partner-colophon__nav,
     .audio-section,
     .video-embed,
     footer {
@@ -4151,55 +4174,6 @@ html:not(.js) .search-toggle {
     }
 }
 
-/* ─── READING PATHS ─── */
-.reading-paths {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-    margin: 0.8em 0 1.5em;
-}
-/* Markdown can inject a stray empty <p> as the first grid child; keep it out
-   of the grid so the three cards stay in one clean row. */
-.reading-paths > p {
-    display: none;
-}
-@media (max-width: 560px) {
-    .reading-paths {
-        grid-template-columns: 1fr;
-    }
-}
-@media (min-width: 1080px) {
-    .reading-paths {
-        width: 820px;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
-.reading-path {
-    background: var(--warm);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 16px 18px;
-}
-.reading-path__title {
-    font-family: var(--sans);
-    font-size: 0.95rem;
-    margin: 0 0 0.5em;
-    padding: 0;
-    border: none;
-    color: var(--heading);
-}
-.reading-path__steps {
-    margin: 0;
-    padding-left: 1.2em;
-    font-size: 1.125rem;
-}
-.reading-path__steps li {
-    margin: 0.3em 0;
-    line-height: 1.5;
-}
-
 /* ─── GLOSSARY LIST ─── */
 .glossary-tier h2 {
     margin-top: 0.55em;
@@ -5123,12 +5097,15 @@ html:lang(zh) {
     line-height: 1.9;
 }
 
-/* Home agent note: readable fine print */
+/* Home agent note: readable fine print closing "Set up a helper" */
 .agent-note {
     font-size: 0.85rem;
     line-height: 1.6;
     color: var(--muted);
     opacity: 1;
+    text-align: start;
+    margin: 1.2em 0 0;
+    padding: 0;
 }
 
 /* Interior title block sits closer to the first content element */
@@ -5214,33 +5191,6 @@ body:has(.site-header--interior) main {
 
     main:not(:has(.cmap, .polis-fullbleed)) .page-toc a[aria-current="true"] {
         font-weight: 600;
-    }
-}
-
-/* Home reading paths: centred, equal-width, wrapping band */
-.reading-paths {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 14px;
-    width: 100%;
-    max-width: 920px;
-    margin: 0.8em auto 1.5em;
-    position: static;
-    left: auto;
-    transform: none;
-}
-
-.reading-paths > .reading-path {
-    flex: 0 1 280px;
-    min-width: 240px;
-}
-
-@media (max-width: 560px) {
-    .reading-paths > .reading-path {
-        flex: 1 1 100%;
-        min-width: 0;
-        max-width: none;
     }
 }
 

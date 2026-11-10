@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: conversation
 page_class: transcript-page
 title: "Podcast: The 6-Pack of Care"
 lang: en-gb

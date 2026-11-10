@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: speech
 title: "數位公民"
 author: "唐鳳"
 lang: zh-tw

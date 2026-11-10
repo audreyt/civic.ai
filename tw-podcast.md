@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: conversation
 page_class: transcript-page
 title: "Podcast：關懷六力"
 lang: zh-tw

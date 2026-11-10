@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: speech
 title: "自我實現與關懷"
 author: "Anne-Marie Slaughter"
 lang: zh-tw

@@ -403,10 +403,8 @@ async function proofShots(browser, path, label) {
 async function navCurrent(browser, path, expected, label) {
     const page = await newPage(browser, 1600, 900);
     await page.goto(`${BASE_URL}${path}`, { waitUntil: "domcontentloaded" });
-    const current = await page.$$eval(
-        'nav.site-nav a[aria-current="page"]',
-        (els) =>
-            els.map((el) => el.querySelector(".nav-label-full").textContent)
+    const current = await page.$$eval("nav.site-nav a[aria-current]", (els) =>
+        els.map((el) => el.querySelector(".nav-label-full").textContent)
     );
     check(
         `${label}: aria-current`,
@@ -450,11 +448,13 @@ try {
     await navCurrent(browser, "/", ["Home"], "EN home");
     await navCurrent(browser, "/tw/", ["首頁"], "TW home");
     await navCurrent(browser, "/faq/", ["FAQ"], "EN faq");
-    await navCurrent(browser, "/tw/faq/", ["常見問答"], "TW faq");
-    await navCurrent(browser, "/measures/", ["Map"], "EN measures");
-    await navCurrent(browser, "/tw/measures/", ["地圖"], "TW measures");
-    await navCurrent(browser, "/1/", [], "EN pack 1");
-    await navCurrent(browser, "/tw/1/", [], "TW pack 1");
+    await navCurrent(browser, "/tw/faq/", ["常見問題"], "TW faq");
+    await navCurrent(browser, "/measures/", ["Measures"], "EN measures");
+    await navCurrent(browser, "/tw/measures/", ["衡量指標"], "TW measures");
+    await navCurrent(browser, "/1/", ["The 6-Pack"], "EN pack 1");
+    await navCurrent(browser, "/tw/1/", ["關懷六力"], "TW pack 1");
+    await navCurrent(browser, "/manifesto/", ["Library"], "EN manifesto");
+    await navCurrent(browser, "/tw/kami/", ["架設 Kami"], "TW kami");
 
     for (const width of [1600, 390]) {
         for (const [path, name] of [

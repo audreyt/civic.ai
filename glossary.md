@@ -1,5 +1,6 @@
 ---
 layout: chapter
+reading_time: false
 title: "Glossary"
 lang: en-gb
 alt_lang_url: "/tw/glossary"

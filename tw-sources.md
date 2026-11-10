@@ -1,5 +1,6 @@
 ---
 layout: chapter
+reading_time: false
 title: "文獻與延伸閱讀"
 meta_description: "關懷六力從何而來：從 Fisher 與 Tronto 到 van Wynsberghe「以關懷為中心的設計」的關懷倫理系譜，以及每一力背後的文獻，附連結。"
 summary: "關懷六力並非憑空發明。這一頁說明每個部分的來歷——從 Berenice Fisher 與 Joan Tronto，經 Aimee van Wynsberghe 為照護機器人提出的「以關懷為中心的設計」，一路延續下來的關懷倫理系譜，以及每一力背後的學術文獻——讓這套框架借重的思想和它的主張同樣清楚可見。"

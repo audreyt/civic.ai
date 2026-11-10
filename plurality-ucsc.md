@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: speech
 title: "⿻ UCSC: From Polarisation to Co-creation"
 author: "Audrey Tang"
 lang: en-gb

@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: conversation
 title: "Doom Debate"
 lang: en-gb
 alt_lang_url: "/tw/doom-debate/"

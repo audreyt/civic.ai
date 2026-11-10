@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: essay
 title: "⿻ A Gentle Bridge"
 author: "Tenzin Yangtso & jdd-kami"
 lang: en-gb

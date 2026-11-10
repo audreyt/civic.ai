@@ -12,8 +12,8 @@ nav_prev:
     url: "/"
     text: "Home"
 nav_next:
-    url: "/faq"
-    text: "FAQ"
+    url: "/1/"
+    text: "Pack 1: Attentiveness"
 permalink: "/manifesto/"
 audio: /audio/manifesto.mp3
 ---

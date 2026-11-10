@@ -111,6 +111,7 @@ Search uses Pagefind for English pages, a Fuse-backed Traditional Mandarin sideb
 - Each page is a single Markdown file with YAML front matter. `permalink` sets the URL — e.g. `1.md` → `/1/`, `manifesto.md` → `/manifesto/`.
 - Every English page `foo.md` has a Traditional Mandarin twin `tw-foo.md` served at `/tw/foo/`. The two link to each other through the `alt_lang_url` front-matter key — **keep them in parity** when you change either.
 - Front matter keys in use: `layout`, `title`, `meta_description`, `summary`, `lang`, `permalink`, `alt_lang_url`.
+- Essays, speeches and conversations also set `kind` (`essay`, `speech` or `conversation`); it labels the byline and sends the foot of the page back to the Library. A new page that is not a masthead destination needs a line in `library.md` and `tw-library.md`, or `vp test` fails.
 - Formatting rules (em dashes, four-space YAML, locked Mandarin terminology) are enforced in CI by `vp check` and `vp test`'s global setup, and locally by the pre-commit hook (staged files) or `vp run lint` (full repo); details in [AGENTS.md](AGENTS.md).
 
 ## Contributing

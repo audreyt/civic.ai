@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: speech
 title: "Democracy Needs Civic AI"
 author: "Audrey Tang"
 lang: en-gb

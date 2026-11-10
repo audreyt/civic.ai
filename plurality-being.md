@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: essay
 title: "⿻Being"
 author: "Tenzin Yangtso"
 lang: en-gb

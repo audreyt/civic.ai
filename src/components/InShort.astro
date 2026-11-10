@@ -20,7 +20,7 @@ const renderedTakeaways = markdown
   : [];
 ---
 {summary && <aside class="in-short" aria-label={summaryLabel}>
-  <div class="in-short__meta"><h2 class="in-short__label" id={summaryAnchor} data-toc-exclude tabindex="-1">{summaryLabel}</h2><span class="in-short__time">{readingTime(page.html, page.data.lang)} {zh ? "分鐘閱讀" : "min read"}</span></div>
+  <div class="in-short__meta"><h2 class="in-short__label" id={summaryAnchor} data-toc-exclude tabindex="-1">{summaryLabel}</h2>{page.data.reading_time !== false && <span class="in-short__time">{readingTime(page.html, page.data.lang)} {zh ? "分鐘閱讀" : "min read"}</span>}</div>
   <p class="in-short__body">{summary}</p>
   {renderedTakeaways.length > 0 && <div class="in-short__takeaways">
     <h3 class="in-short__takeaways-label" id={takeawaysAnchor} data-toc-exclude tabindex="-1">{takeawaysLabel}</h3>

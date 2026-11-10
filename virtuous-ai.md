@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: essay
 title: "Virtuous AI Can Free the Future"
 author: "Audrey Tang"
 lang: en-gb

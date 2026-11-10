@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: conversation
 title: "重新想像 AI 對齊"
 lang: zh-tw
 alt_lang_url: "/reimagining-ai-alignment/"

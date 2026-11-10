@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: speech
 title: "SOLVE at MIT 2026"
 meta_description: "唐鳳 2026 年 SOLVE at MIT 主題演講：為何真正的超級智慧是「我們人民」而非單一模型，以及仁工智慧如何守護這一點。"
 subtitle: "主題演講與爐邊對談"
@@ -9,12 +10,6 @@ alt_lang_url: "/we-the-people-are-truly-the-superintelligence"
 permalink: "/tw/we-the-people-are-truly-the-superintelligence/"
 date: 2026-05-14T12:00:00Z
 og_image: "https://i.ytimg.com/vi/fqvdaHWH7a0/maxresdefault.jpg"
-nav_prev:
-    url: "/tw/"
-    text: "首頁"
-nav_next:
-    url: "/tw/manifesto/"
-    text: "計畫宣言"
 ---
 
 <div class="video-embed">

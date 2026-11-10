@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: conversation
 title: "末日辯論"
 lang: zh-tw
 alt_lang_url: "/doom-debate/"

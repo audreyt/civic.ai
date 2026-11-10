@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: speech
 title: "Treat AI Safety Like Civil Defence"
 author: "Audrey Tang"
 lang: en-gb

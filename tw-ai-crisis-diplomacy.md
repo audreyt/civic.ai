@@ -1,5 +1,6 @@
 ---
 layout: chapter
+kind: speech
 title: "把 AI 安全當成民防來對待"
 author: "唐鳳"
 lang: zh-tw

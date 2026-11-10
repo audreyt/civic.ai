@@ -9,8 +9,8 @@ nav_prev:
     url: "/conference"
     text: "Conference"
 nav_next:
-    url: "/manifesto"
-    text: "Manifesto"
+    url: "/library/"
+    text: "Library"
 ---
 
 ## Reading the counts
