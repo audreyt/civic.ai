@@ -15,11 +15,11 @@ nav_next:
     text: "Home"
 ---
 
+If you came to check the evidence, three sections do that work: [Reading the evidence](#reading-the-evidence), [The cases this site leans on](#cases) and [What is ours](#what-is-ours).
+
 A framework that asks institutions to show their work should show its own. The 6-Pack of Care is an assembly of borrowed parts — a forty-year tradition of care ethics, a fifteen-year literature applying it to machines, and several older ideas from political science, engineering, and design — plus a smaller number of moves that are ours. This is a public source trail for the framework and the book: what we borrowed, from whom, and where a reader can check. No prior reading is required. The debts should be as visible and checkable as the claims. If we have used your idea without naming you, [file an amendment](https://github.com/audreyt/civic.ai/issues).
 
 References identify the work, edition or publication date and a publisher, DOI or stable archive where available. Each annotation says what we draw from it. A theoretical argument, a field study and a project's own account support different kinds of claim.
-
-If you came to check the evidence, three sections do that work: [Reading the evidence](#reading-the-evidence), [The cases this site leans on](#cases) and [What is ours](#what-is-ours).
 
 ### Using a source in conversation
 

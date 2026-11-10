@@ -112,7 +112,7 @@ next_action:
 
 </div>
 
-《關懷六力》一書預計 2027 年 2 月由 Wiley 出版；書中第三至八章就是第一至六力。我們已於 2026 年 3 月 25 日在牛津羅德學院的[仁工智慧研討會（Civic AI Conference）](/tw/conference/)發表本框架。該頁有大會議程、部分演講，以及社群關於 AI 與關懷的 Polis 意義建構成果。
+《關懷六力》（_The 6-Pack of Care_）一書預計 2027 年 2 月由 Wiley 出版；書中第三至八章就是第一至六力。我們已於 2026 年 3 月 25 日在牛津羅德學院的[仁工智慧研討會（Civic AI Conference）](/tw/conference/)發表本框架。該頁有大會議程、部分演講，以及社群關於 AI 與關懷的 Polis 意義建構成果。
 
 **從何而來。** 四個關懷階段由 [Berenice Fisher 與 Joan Tronto](https://experts.umn.edu/en/publications/toward-a-feminist-theory-of-caring/) 在 1990 年提出。Aimee van Wynsberghe 在 2013 年用同樣的階段來[設計照護機器人](https://doi.org/10.1007/s11948-011-9343-6)。這套框架也汲取審議民主與 [⿻ 多元宇宙](https://plurality.net)。它把關懷倫理變成組織能夠遵循的規則，〈[文獻與延伸閱讀](/tw/sources/)〉逐力列出每一項借鑑來源。
 

@@ -5250,8 +5250,8 @@ html[data-theme] .faq-filter {
     }
 }
 
-/* Mobile site navigation wraps instead of hiding links off-screen */
-@media (max-width: 480px) {
+/* Below the desktop masthead, the menu wraps instead of hiding links off-screen */
+@media (max-width: 719px) {
     header nav.site-nav {
         flex-wrap: wrap;
         overflow: visible;
@@ -5283,6 +5283,13 @@ html[data-theme] .faq-filter {
     }
 }
 
+/* The home masthead keeps its seven full labels on one row */
+@media (min-width: 720px) {
+    .site-header--home nav.site-nav {
+        column-gap: 16px;
+    }
+}
+
 /* On the narrowest phones the English menu keeps to two rows */
 @media (max-width: 340px) {
     header nav.site-nav,
@@ -5293,7 +5300,7 @@ html[data-theme] .faq-filter {
 
 /* Below the width of its side rail, the home page opens on its first sentence,
    not on a contents box: the masthead already carries the menu. */
-@media (max-width: 1279px) {
+@media (max-width: 1279.98px) {
     .site-header--home ~ main .page-toc {
         display: none;
     }
