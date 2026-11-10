@@ -6,6 +6,14 @@ Usage: python3 scripts/tts_synth.py manifesto.md audio/manifesto.mp3
 Reads Markdown as spoken English (default) or Mandarin (--lang zh),
 then synthesises via ElevenLabs and writes an MP3.
 
+Mandarin narration tells the API which language to speak (--language-code,
+default "zh" with --lang zh). Without it the model guesses from the text, and
+Traditional characters can come out in Cantonese for a sentence or more,
+most often straight after a run of English. A character-error check with a
+speech recogniser does not catch this, because Cantonese speech is written
+with the same characters: listen to the result, or check it with a model
+that tells Mandarin from Cantonese.
+
 Requires:
   ELEVENLABS_API_KEY   – API key
   ELEVENLABS_VOICE_ID  – voice ID (default: Audrey Tang 0YIItGwEClgeMtCdHyV1)
@@ -301,11 +309,20 @@ def transform_zh(text: str) -> str:
 # ── Synthesis ─────────────────────────────────────────────────────────────────
 
 
-def synthesise_chunk(text: str, out_path: str, model: str = MODEL) -> None:
+def request_body(text: str, model: str, language_code: str | None = None) -> dict:
+    """The JSON sent for one chunk. language_code pins the spoken language."""
+    body = {"text": text, "model_id": model, "voice_settings": VOICE_SETTINGS}
+    if language_code:
+        body["language_code"] = language_code
+    return body
+
+
+def synthesise_chunk(text: str, out_path: str, model: str = MODEL,
+                     language_code: str | None = None) -> None:
     url = f"https://api.elevenlabs.io/v1/text-to-speech/{VOICE_ID}?output_format={FORMAT}"
     r = requests.post(url,
         headers={"xi-api-key": API_KEY, "Content-Type": "application/json"},
-        json={"text": text, "model_id": model, "voice_settings": VOICE_SETTINGS},
+        json=request_body(text, model, language_code),
         timeout=300,
     )
     if r.status_code != 200:
@@ -314,9 +331,12 @@ def synthesise_chunk(text: str, out_path: str, model: str = MODEL) -> None:
         f.write(r.content)
 
 
-def synthesise(text: str, out_path: str, model: str = MODEL, lang: str = "en") -> None:
+def synthesise(text: str, out_path: str, model: str = MODEL, lang: str = "en",
+               language_code: str | None = None) -> None:
     if not API_KEY:
         sys.exit("Error: ELEVENLABS_API_KEY not set")
+    if language_code:
+        print(f"Language enforced: {language_code}")
 
     max_chars = MODEL_MAX_CHARS.get(model, DEFAULT_MAX_CHARS)
     # Han characters carry more speech than English characters. Smaller requests
@@ -366,7 +386,7 @@ def synthesise(text: str, out_path: str, model: str = MODEL, lang: str = "en") -
     print(f"Split into {len(chunks)} chunks for synthesis")
 
     if len(chunks) == 1:
-        synthesise_chunk(chunks[0], out_path, model)
+        synthesise_chunk(chunks[0], out_path, model, language_code)
     else:
         # Synthesize each chunk to a temp file, then concat
         tmpdir = tempfile.mkdtemp(prefix="tts_synth_")
@@ -377,7 +397,7 @@ def synthesise(text: str, out_path: str, model: str = MODEL, lang: str = "en") -
             for i, chunk in enumerate(chunks):
                 part_path = os.path.join(tmpdir, f"part_{i:03d}.mp3")
                 print(f"Synthesising chunk {i+1}/{len(chunks)} ({len(chunk):,} chars)...")
-                synthesise_chunk(chunk, part_path, model)
+                synthesise_chunk(chunk, part_path, model, language_code)
                 parts.append(part_path)
             
             # Concatenate
@@ -416,6 +436,8 @@ def synthesise(text: str, out_path: str, model: str = MODEL, lang: str = "en") -
 TARGET_I   = -16    # integrated loudness (LUFS), broadcast standard for speech
 TARGET_TP  = -1.5   # true peak (dBTP)
 TARGET_LRA =  7     # loudness range (LU)
+# Output is 64 kb/s mono, like every published narration: at 128 kb/s the
+# half-hour Mandarin manifesto exceeds Cloudflare Pages' 25 MiB per-file limit.
 
 # dynaudnorm flattens frame-level dynamics (fixes files that start loud
 # then trail off); two-pass loudnorm then hits the target LUFS precisely.
@@ -458,7 +480,7 @@ def normalize_loudness(mp3_path: str) -> None:
                  f":measured_thresh={stats['input_thresh']}"
                  f":linear=true"
              ),
-             "-ar", "44100", tmp_path],
+             "-ar", "44100", "-ac", "1", "-b:a", "64k", tmp_path],
             check=True, capture_output=True,
         )
         os.replace(tmp_path, mp3_path)
@@ -475,6 +497,7 @@ if __name__ == "__main__":
     argv  = sys.argv[1:]
     model = MODEL
     lang = "en"
+    language_code = None   # None: decide from --lang below
     rest  = []
     i = 0
     while i < len(argv):
@@ -487,12 +510,18 @@ if __name__ == "__main__":
         elif argv[i] == "--lang" and i + 1 < len(argv):
             lang = argv[i + 1]
             i += 2
+        elif argv[i] == "--language-code" and i + 1 < len(argv):
+            language_code = argv[i + 1]
+            i += 2
+        elif argv[i].startswith("--language-code="):
+            language_code = argv[i].split("=", 1)[1]
+            i += 1
         else:
             rest.append(argv[i])
             i += 1
     positional = [a for a in rest if not a.startswith("--")]
     if len(positional) < 2:
-        print(f"Usage: {sys.argv[0]} <input.md> <output.mp3> [--model MODEL_ID] [--lang en|zh] [--dry-run]")
+        print(f"Usage: {sys.argv[0]} <input.md> <output.mp3> [--model MODEL_ID] [--lang en|zh] [--language-code CODE|none] [--dry-run]")
         sys.exit(1)
 
     in_path  = positional[0]
@@ -505,10 +534,15 @@ if __name__ == "__main__":
     if lang not in ("en", "zh"):
         sys.exit("Error: --lang must be en or zh")
     text = transform_zh(raw) if lang == "zh" else transform(raw)
+    # Mandarin is pinned by default; English keeps sending no language, as before.
+    if language_code is None:
+        language_code = "zh" if lang == "zh" else ""
+    if language_code.lower() == "none":
+        language_code = ""
 
     if dry_run:
         print(text)
         sys.exit(0)
 
-    synthesise(text, out_path, model, lang)
+    synthesise(text, out_path, model, lang, language_code or None)
     normalize_loudness(out_path)
