@@ -443,8 +443,11 @@ def normalize_loudness(mp3_path: str) -> None:
     print(f"Measured loudness: {stats['input_i']} LUFS  "
           f"(range {stats['input_lra']} LU, peak {stats['input_tp']} dBTP)")
 
-    # Pass 2: apply with measured values + linear gain
-    tmp_fd, tmp_path = tempfile.mkstemp(suffix=".mp3")
+    # Pass 2: apply with measured values + linear gain.
+    # Temp must live on the destination volume: os.replace is rename(2),
+    # which raises EXDEV (Errno 18) across /var and /Volumes/w.
+    dest_dir = os.path.dirname(os.path.abspath(mp3_path)) or "."
+    tmp_fd, tmp_path = tempfile.mkstemp(suffix=".mp3", dir=dest_dir)
     os.close(tmp_fd)
     try:
         subprocess.run(
@@ -465,6 +468,7 @@ def normalize_loudness(mp3_path: str) -> None:
         print(f"Normalized → {TARGET_I} LUFS")
     except subprocess.CalledProcessError as e:
         print(f"Warning: loudness normalization failed: {e.stderr[:200] if e.stderr else e}")
+    finally:
         if os.path.exists(tmp_path):
             os.unlink(tmp_path)
 
