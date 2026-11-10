@@ -112,20 +112,6 @@ const siteFixture = vi.hoisted(() => {
     return {
         lang2: (lang: string | undefined) =>
             String(lang || "").split("-")[0] === "zh" ? "zh" : "en",
-        paths: [
-            {
-                label_en: "EN Path",
-                label_tw: "TW 路徑",
-                steps: [
-                    {
-                        url: "/a/",
-                        url_tw: "/tw/a/",
-                        label_en: "Step A",
-                        label_tw: "步驟甲",
-                    },
-                ],
-            },
-        ],
         comics: {
             source_repo: "https://example.com/comics-repo",
             overview: {

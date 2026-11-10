@@ -137,7 +137,6 @@ export function createRecordLoader(
 export function recordSources(page: PageRecord): string[] {
     const sources = [page.sourceName, ...(page.data.record_sources ?? [])];
     const generated = [
-        ["reading-paths", "_data/paths.json", "src/lib/shortcodes.ts"],
         ["comics-gallery", "_data/comics.json", "src/lib/shortcodes.ts"],
         ["glossary-list", "_data/glossary.json", "src/lib/shortcodes.ts"],
         ["concept-map", "src/lib/conceptMap.ts"],

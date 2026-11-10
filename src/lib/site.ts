@@ -1,7 +1,6 @@
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import siteData from "../../_data/site.json";
-import pathsData from "../../_data/paths.json";
 import glossaryData from "../../_data/glossary.json";
 import packsData from "../../_data/packs.json";
 import comicsData from "../../_data/comics.json";
@@ -36,7 +35,6 @@ export interface ComicsOverlayFrame {
 }
 
 export const site = siteData;
-export const paths = pathsData;
 export const glossary = glossaryData;
 export const packs = packsData;
 export const comics = comicsData;

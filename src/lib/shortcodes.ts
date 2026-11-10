@@ -8,7 +8,6 @@ import {
     glossary,
     lang2,
     openclawBootstrap,
-    paths,
 } from "./site";
 
 function escapeHtml(value: string | number | null | undefined): string {
@@ -28,10 +27,6 @@ export function expandShortcodes(
     body: string
 ): string {
     let expanded = body
-        .replaceAll(
-            "<!-- astro:reading-paths -->",
-            renderReadingPaths(page.data.lang)
-        )
         .replaceAll(
             "<!-- astro:comics-gallery -->",
             renderComicsGallery(page.data.lang)
@@ -70,24 +65,6 @@ export function expandShortcodes(
             `Unhandled legacy template syntax in ${page.sourcePath}`
         );
     return expanded;
-}
-
-export function renderReadingPaths(lang: string | undefined): string {
-    const zh = lang2(lang) === "zh";
-    const groups = paths
-        .map((path) => {
-            const title = zh ? path.label_tw : path.label_en;
-            const steps = path.steps
-                .map((step) => {
-                    const href = zh ? step.url_tw : step.url;
-                    const label = zh ? step.label_tw : step.label_en;
-                    return `<li><a href="${escapeAttr(href)}">${escapeHtml(label)}</a></li>`;
-                })
-                .join("");
-            return `<div class="reading-path"><h3 class="reading-path__title">${escapeHtml(title)}</h3><ol class="reading-path__steps">${steps}</ol></div>`;
-        })
-        .join("");
-    return `<nav class="reading-paths" aria-label="${zh ? "依讀者類型的閱讀路徑" : "Reading paths by audience"}">${groups}</nav>`;
 }
 
 export function renderComicsGallery(lang: string | undefined): string {
