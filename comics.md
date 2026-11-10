@@ -9,8 +9,8 @@ alt_lang_url: "/tw/comics"
 permalink: "/comics/"
 og_image: "/img/overview-small.jpg"
 nav_prev:
-    url: "/"
-    text: "Home"
+    url: "/library/"
+    text: "Library"
 nav_next:
     url: "/1"
     text: "Pack 1: Attentiveness"

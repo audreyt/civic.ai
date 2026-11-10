@@ -53,7 +53,7 @@ const entries: readonly NavEntry[] = [
     {
         section: "kami",
         path: "/kami/",
-        en: ["Set up a Kami", "Kami"],
+        en: ["Set up a Kami", "Set up a Kami"],
         zh: ["架設 Kami", "Kami"],
     },
     {

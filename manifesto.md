@@ -9,8 +9,8 @@ description: "Speech delivered at Google DeepMind, London. Editorial notes at th
 lang: en-gb
 alt_lang_url: "/tw/manifesto"
 nav_prev:
-    url: "/"
-    text: "Home"
+    url: "/library/"
+    text: "Library"
 nav_next:
     url: "/1/"
     text: "Pack 1: Attentiveness"

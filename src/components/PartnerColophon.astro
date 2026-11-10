@@ -5,9 +5,9 @@ const zh = lang2(Astro.props.lang) === "zh";
 // The foot repeats the masthead, so the end of a long page is never a dead end (DESIGN.md §7.1).
 const items = navItems(Astro.props.lang, Astro.props.url ?? "");
 ---
-<section class="partner-colophon" role="contentinfo" aria-label={zh ? "合作機構" : "Institutional partners"}>
+<section class="partner-colophon" role="contentinfo" aria-label={zh ? "關於本站" : "About this site"}>
   <p class="partner-colophon__about">{zh ? <><a href="/tw/">仁工智慧</a>：{site.description_zh}</> : <><a href="/">Civic AI</a>: {site.description}</>}</p>
-  <nav class="partner-colophon__nav" aria-label={zh ? "網站區段（頁尾）" : "Site sections, repeated"}>
+  <nav class="foot-nav" aria-label={zh ? "網站區段（頁尾）" : "Site sections, repeated"}>
     {items.map((item) => <a href={item.href} aria-current={item.current}>{item.full}</a>)}
   </nav>
   <div class="partner-colophon__marks">

@@ -7,8 +7,8 @@ alt_lang_url: "/tw/glossary"
 permalink: "/glossary/"
 summary: "Plain-language definitions of the key terms used across Civic AI and the 6-Pack of Care."
 nav_prev:
-    url: "/faq/"
-    text: "FAQ"
+    url: "/library/"
+    text: "Library"
 nav_next:
     url: "/sources/"
     text: "Sources"

@@ -9,8 +9,8 @@ alt_lang_url: "/comics"
 permalink: "/tw/comics/"
 og_image: "/img/overview-small-tw.jpg"
 nav_prev:
-    url: "/tw"
-    text: "首頁"
+    url: "/tw/library/"
+    text: "全站目錄"
 nav_next:
     url: "/tw/1"
     text: "一：覺察力"

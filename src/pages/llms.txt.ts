@@ -5,11 +5,11 @@ import { comics, lang2, openclawBootstrap, site } from "../lib/site";
 // What each masthead destination is for, in the words a person would be told.
 const destinations: Record<NavSection, string> = {
     home: "what Civic AI is, the six principles on one page, four questions to agree before a group uses AI, and three moves to try today",
-    packs: "the six principles, each a test you can put to an AI system; Packs 1 to 6 are at /1/ to /6/",
+    packs: `the six principles, each a test you can put to an AI system; Packs 1 to 6 are at ${site.url}/1/ to ${site.url}/6/`,
     measures:
         "a map of how the six packs fit together, and one public measure for each",
-    faq: "plain answers; for an AI that a school, clinic or council already runs, begin at /faq/#everyday-questions",
-    kami: "how a group sets up its own helper: an existing model, these instructions, and limits set in software",
+    faq: `plain answers; for an AI that a school, clinic or council already runs, begin at ${site.url}/faq/#everyday-questions`,
+    kami: "how a group sets up its own helper: an existing model, the site's instructions, and limits set in software",
     library:
         "everything else, listed once by kind: the manifesto, comics, glossary, essays, speeches, conversations and the conference record",
     sources:
@@ -24,7 +24,7 @@ function libraryListing(url: string): string[] {
         .split("\n")
         .map((line) =>
             line
-                .replace(/^<h2 id="[^"]+">(.*)<\/h2>$/, "## $1")
+                .replace(/^<h2 id="[^"]+">(.*)<\/h2>$/, "### $1")
                 .replace(/\]\(\//g, `](${site.url}/`)
         );
 }
@@ -35,7 +35,7 @@ export function GET() {
         "",
         "The 6-Pack of Care: six principles for AI that a community runs, plus instructions an AI agent can follow. The instructions guide the AI; the group holds it to them by checking its work, correcting it and keeping the off switch.",
         "",
-        "By Audrey Tang and Caroline Green, at the Oxford Institute for Ethics in AI. Everything on the site is CC0 (public domain). To quote it, link a numbered paragraph (for example /1/#p1) on a pack page, Measures or the FAQ; the numbers survive edits.",
+        `By Audrey Tang and Caroline Green, at the Oxford Institute for Ethics in AI. Everything on the site is CC0 (public domain). To quote it, link a numbered paragraph (for example ${site.url}/1/#p1) on a pack page, Measures or the FAQ; the numbers survive edits.`,
         "",
         "If a person asked you what this is or where to start, these are the site's own menu, in reading order:",
         ...navItems("en-gb", "").map(
@@ -55,11 +55,11 @@ export function GET() {
                 `- ${item.title.en}: ${site.url}${item.url.en} — ${item.why.en}`
         ),
         "",
-        "# Library",
+        "## Library",
         "",
         ...libraryListing("/library/"),
         "",
-        "# 全站目錄",
+        "## 全站目錄",
         "",
         ...libraryListing("/tw/library/"),
         "",

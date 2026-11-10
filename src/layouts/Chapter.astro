@@ -91,14 +91,14 @@ if (ldImage) articleLd.image = ldImage.includes("://") ? ldImage : `${site.url}$
         : {})}
     ><InShort page={page} /><WalkingPlayer page={page} /><Fragment set:html={visibleHtml(page)} /></main>
     <section class="next-action"><div class="next-action-content">
-      {prev && <a href={prev.url} class="next-action-button">{(!hasExplicitNav || prev === library) && <span class="button-arrow">←</span>}<span class="button-text">{prev.text}</span></a>}
+      {prev && <a href={prev.url} class="next-action-button"><span class="button-arrow">←</span><span class="button-text">{prev.text}</span></a>}
       {loop ? (
         <div class="chapter-nav__onward">
           {next && <a href={next.url} class="next-action-button"><span class="button-text">{next.text}</span><span class="button-arrow">→</span></a>}
           <a href={loop.url} class="next-action-button chapter-nav__loop"><span class="button-arrow" aria-hidden="true">↺</span><span class="button-text">{loop.text}</span></a>
         </div>
       ) : (
-        next && <a href={next.url} class="next-action-button"><span class="button-text">{next.text}</span>{!hasExplicitNav && <span class="button-arrow">→</span>}</a>
+        next && <a href={next.url} class="next-action-button"><span class="button-text">{next.text}</span><span class="button-arrow">→</span></a>
       )}
     </div></section>
     <Trace page={page} />

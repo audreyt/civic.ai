@@ -1,8 +1,14 @@
 ---
+import { navItems } from "../lib/nav";
 import { lang2 } from "../lib/site";
 const zh = lang2(Astro.props.lang) === "zh";
+// The home page closes on the same menu as every other page (DESIGN.md §7.1).
+const items = navItems(Astro.props.lang, zh ? "/tw/" : "/");
 ---
 <footer>
+  <nav class="foot-nav" aria-label={zh ? "網站區段（頁尾）" : "Site sections, repeated"}>
+    {items.map((item) => <a href={item.href} aria-current={item.current}>{item.full}</a>)}
+  </nav>
 {zh ? <>
   <p><span title="CC0" aria-hidden="true">⓪</span> <a href="https://audreyt.org/">唐鳳</a>與 <a href="https://www.oxford-aiethics.ox.ac.uk/caroline-emmer-de-albuquerque-green">Caroline Emmer De Albuquerque Green</a>。與 <a href="https://github.com/jdd-kami">jdd-kami</a> 共同撰寫，由 <a href="https://ty.civic.ai">Tenzin Yangtso</a> 悉心培育——完整紀錄見 <a href="https://github.com/audreyt/civic.ai/commits/main/">GitHub 提交日誌</a>。<a href="/tw/comics/">插圖</a>由 <a href="https://ncase.me">Nicky Case</a> 創作。CC0（公眾領域）。<a href="https://www.oxford-aiethics.ox.ac.uk/">牛津 AI 倫理研究所</a>「<a href="https://afp.oxford-aiethics.ox.ac.uk/">加速哲人計畫</a>」研究成果。</p>
   <p>發現錯誤或漏列的來源？<a href="https://github.com/audreyt/civic.ai/issues">提出修正</a>。目前的定義見<a href="/tw/glossary/">詞彙表</a>，各項主張的證據見<a href="/tw/sources/">文獻</a>。</p>

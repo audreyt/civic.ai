@@ -71,7 +71,7 @@ test("normalizes front-matter action and navigation links", () => {
     expect(indexPage.data.next_action?.url).toBe("/1/");
 
     const comicsPage = getPageByUrl("/comics/");
-    expect(comicsPage.data.nav_prev?.url).toBe("/");
+    expect(comicsPage.data.nav_prev?.url).toBe("/library/");
     expect(comicsPage.data.nav_next?.url).toBe("/1/");
 
     const twIndexPage = getPageByUrl("/tw/");

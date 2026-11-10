@@ -415,6 +415,10 @@ header .chapter-date {
     border-bottom-color: var(--teal);
 }
 
+header nav.site-nav a[aria-current] {
+    font-weight: 700;
+}
+
 .nav-label-short {
     display: none;
 }
@@ -600,8 +604,16 @@ html[data-theme="light"] .partner-logo {
     white-space: nowrap;
 }
 
-/* The masthead, repeated at the foot of every interior page. */
-.partner-colophon__nav {
+/* What the site is, in the human voice, above the menu. */
+.partner-colophon .partner-colophon__about {
+    font-family: var(--serif);
+    font-size: 0.85rem;
+    letter-spacing: 0;
+}
+
+/* The masthead, repeated at the foot of every page. Only the page being read
+   loses its underline; the section a page sits in stays a visible link. */
+.foot-nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -613,13 +625,23 @@ html[data-theme="light"] .partner-logo {
     text-transform: uppercase;
 }
 
-.partner-colophon__nav a {
+.foot-nav a {
     padding: 4px 1px;
+    white-space: nowrap;
 }
 
-.partner-colophon__nav a[aria-current] {
-    color: var(--text);
+.foot-nav a[aria-current="page"] {
     text-decoration: none;
+}
+
+.foot-nav a[aria-current="true"] {
+    font-weight: 600;
+}
+
+/* Kami is the Mandarin menu's one Latin word; it keeps its own capitals. */
+html[lang="zh-tw"] header nav.site-nav a,
+html[lang="zh-tw"] .foot-nav a {
+    text-transform: none;
 }
 
 /* ─── TABLES ─── */
@@ -1207,7 +1229,6 @@ footer a {
     color: var(--gold-light);
     text-decoration: none;
     text-decoration-thickness: 1px;
-    white-space: nowrap;
 }
 
 footer a:hover {
@@ -1615,7 +1636,7 @@ footer a:hover {
     .skip-link,
     .lang-toggle,
     .site-nav,
-    .partner-colophon__nav,
+    .foot-nav,
     .audio-section,
     .video-embed,
     footer {
@@ -3983,22 +4004,6 @@ pre code {
     }
 }
 
-/* Agent bootstrap directive: fine print tucked under the hero; present and machine-readable */
-.agent-note {
-    text-align: center;
-    font-size: 0.6rem;
-    line-height: 1.4;
-    color: var(--muted);
-    opacity: 0.4;
-    margin: 0.55rem auto 0;
-    padding: 0 1rem;
-}
-
-.agent-note a {
-    color: inherit;
-    text-decoration: underline;
-}
-
 /* ─── IN-SHORT SUMMARY CARD ─── */
 .in-short {
     margin: 0 0 2em;
@@ -5034,7 +5039,7 @@ header nav.site-nav a {
 
 /* ─── AESTHETIC PASS · ROUND 1 ───
    Text-safe colour variants, line breaking, zh-TW typography, TOC margin rail,
-   title spacing, reading paths, flush filter bars, mobile nav wrap. */
+   title spacing, flush filter bars, mobile nav wrap. */
 :root,
 html[data-theme="light"] {
     --gold-text: #7a6128;
@@ -5097,15 +5102,19 @@ html:lang(zh) {
     line-height: 1.9;
 }
 
-/* Home agent note: readable fine print closing "Set up a helper" */
+/* Home agent note: readable fine print closing "Set up a helper"; present and machine-readable */
 .agent-note {
     font-size: 0.85rem;
     line-height: 1.6;
     color: var(--muted);
-    opacity: 1;
     text-align: start;
     margin: 1.2em 0 0;
     padding: 0;
+}
+
+.agent-note a {
+    color: inherit;
+    text-decoration: underline;
 }
 
 /* Interior title block sits closer to the first content element */
@@ -5271,6 +5280,25 @@ html[data-theme] .faq-filter {
 
     header nav.site-nav a {
         min-height: 40px;
+    }
+}
+
+/* The Mandarin menu's seven short labels fit one row down to 320 px */
+@media (max-width: 380px) {
+    html[lang="zh-tw"] header nav.site-nav,
+    html[lang="zh-tw"] .site-header--interior nav.site-nav {
+        column-gap: 10px;
+    }
+}
+
+@media (max-width: 340px) {
+    html[lang="zh-tw"] header nav.site-nav,
+    html[lang="zh-tw"] .site-header--interior nav.site-nav {
+        column-gap: 8px;
+    }
+
+    html[lang="zh-tw"] header nav.site-nav a {
+        letter-spacing: 0.02em;
     }
 }
 
