@@ -732,7 +732,7 @@
                 "text": "The full trail is on the Sources page."
             }
         ],
-        "retired": []
+        "retired": ["p53a"]
     },
     "/3/": {
         "units": [
@@ -962,7 +962,7 @@
                 "text": "Unsafe confidence. The system acts despite weak evidence. Fix: Confidence thresholds, fallback routing, and pause on amb"
             },
             {
-                "id": "p45a",
+                "id": "p46",
                 "hash": "11190bdb82ac",
                 "text": "Data leakage. Evaluation information leaks into training or model selection. Evals look good; reality fails. Fix: Hold-o"
             },
@@ -1057,7 +1057,7 @@
                 "text": "The full trail is on the Sources page."
             }
         ],
-        "retired": ["p46"]
+        "retired": ["p45a"]
     },
     "/4/": {
         "units": [
@@ -2107,7 +2107,7 @@
                 "text": "Consider what happens when you translate care’s supposed weaknesses into design constraints for AI:"
             },
             {
-                "id": "p21a",
+                "id": "p22",
                 "hash": "0260b2274098",
                 "text": "Parochialism becomes boundedness. A Kami (an existing AI model given a prompt and a few note files, kept by a group of p"
             },
@@ -2377,7 +2377,7 @@
                 "text": "The framework lets people take part while they still distrust it: each step should be checkable, limited and reversible,"
             },
             {
-                "id": "p75a",
+                "id": "p76",
                 "hash": "8c20937b0c26",
                 "text": "Taiwan’s digital democracy was born in the aftermath of authoritarianism and a severe crisis of public faith (the Sunflo"
             },
@@ -3067,7 +3067,7 @@
                 "text": "This closes the remedial gap and leaves the culpability gap open. Whether anyone deserves blame for an unforeseeable har"
             }
         ],
-        "retired": ["p22", "p33", "p76"]
+        "retired": ["p33", "p21a", "p48a", "p75a", "p179a"]
     },
     "/manifesto/": {
         "units": [
@@ -4127,12 +4127,12 @@
                 "text": "大聲者主導。 資金充足的團體佔據管道。解方：限流、公平配額、公開注意力儀表板。"
             },
             {
-                "id": "p48",
+                "id": "p47",
                 "hash": "b940655c8daf",
                 "text": "先發者鎖定框架。 早期語言被固定。解方：滾動式視窗，提高後期提出、但具重要性的觀點的優先權。"
             },
             {
-                "id": "p50",
+                "id": "p49",
                 "hash": "34d09c41f9bc",
                 "text": "虛假等價。 將有害主張視為同等正當。解方：將事實與價值觀分開，維護基本權利，拒絕虛假對等。"
             },
@@ -4231,8 +4231,8 @@
             "p42",
             "p44",
             "p46",
-            "p47",
-            "p49",
+            "p48",
+            "p50",
             "p52",
             "p54",
             "p56",
@@ -4507,7 +4507,7 @@
                 "text": "煞車。 大會建議：平台若未設置能處理求償的在地代表，影片流量每天減速 1%。第 29 條要求未在台設立據點的適用境外平台，指定在台法律代表。第 39 條：未指定、或法律代表怠於告知協助，可處罰鍰；情節重大者，經專家程序後，可為解析／連線限制"
             },
             {
-                "id": "p53a",
+                "id": "p54",
                 "hash": "2bd5ad8c0b41",
                 "text": "結果。 審議之後，85% 的參與者同意大型平台應為資訊完整性負主要責任。大會產出公開的重新思考紀錄與可行動建議；條文並非公民起草。大會在 2024 年 3 月開出了一條公眾回應路徑；行政院則在 5 月 9 日通過《詐欺犯罪危害防制條例》草案"
             },
@@ -4637,7 +4637,7 @@
                 "text": "完整足跡見〈文獻與延伸閱讀〉。"
             }
         ],
-        "retired": ["p54"]
+        "retired": ["p53a"]
     },
     "/tw/3/": {
         "units": [
@@ -4962,7 +4962,7 @@
                 "text": "完整足跡見〈文獻與延伸閱讀〉。"
             }
         ],
-        "retired": []
+        "retired": ["p45a"]
     },
     "/tw/4/": {
         "units": [
@@ -6147,7 +6147,7 @@
                 "text": "速度落差確實存在，但立憲民主一直都在處理同樣的落差：憲法慢、立法快、行政更快，每一層受上一層約束。六力把這套結構搬到 AI 治理上。大會訂下允許更新的條件，條件內的每次更新不必重新投票；條件一旦被違反，煞車早就接好了。"
             },
             {
-                "id": "p48a",
+                "id": "p49",
                 "hash": "685b2f0acb09",
                 "text": "實際上，臺灣從對齊大會到一條可問責的立法回應路徑，只花了幾個月。大會在 2024 年 3 月開出了一條公眾回應路徑；行政院則在 5 月 9 日通過《詐欺犯罪危害防制條例》草案，決議送請立法院審議。法律並不是大會自己訂的。審議之所以慢，往往是"
             },
@@ -6807,7 +6807,7 @@
                 "text": "所以，關懷的動機是回到 Tronto 更樸素的起點，用不著崇拜地神：在身邊的人身上看見需求，這個需求本身就是在向你提出請求（關懷倫理）。地神能有一席之地，是因為它讓我們更有能力在此時此地回應那個請求，絕不是靠要我們守護它的尊嚴。這也是為什麼"
             },
             {
-                "id": "p179a",
+                "id": "p180",
                 "hash": "1db140b8deb1",
                 "text": "人類中心，坦白承認。 用中性的意思講：是的，這是一套關於權威的人本理論。治理的資格屬於人；地神是人打造、人掌舵的基礎設施。白話地說，地神是現成的 AI 模型，加上一份指示（提示詞）和幾個筆記檔，由一群人養護。任何要緊的限制，都靠軟體權限和這"
             },
@@ -6972,7 +6972,7 @@
                 "text": "這補上了補救的缺口，罪責的缺口則仍然開著。沒人預見得到的傷害，到底有沒有人該被責怪，仍然要交給法院和道德判斷。契約要確保的事比較窄，卻對受害的人更實在：一定有人出面回應，而修補不必等到責任歸屬吵完才開始。"
             }
         ],
-        "retired": ["p49", "p33", "p180"]
+        "retired": ["p33", "p21a", "p48a", "p75a", "p179a"]
     },
     "/tw/manifesto/": {
         "units": [

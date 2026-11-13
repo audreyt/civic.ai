@@ -240,3 +240,25 @@ test("renders ledger identities and accessible suffixed labels", () => {
     expect(html).toContain("¶ 1a<span");
     expect(html).toContain("(permalink to paragraph 1a)");
 });
+
+test("gives each record paragraph the same number in English and Mandarin", () => {
+    // Given every English record page in the committed ledger.
+    const ledger: Readonly<Record<string, ReturnType<typeof assignAnchors>>> =
+        anchorData;
+    const english = Object.keys(ledger).filter(
+        (url) => !url.startsWith("/tw/")
+    );
+    // When each is read beside its /tw/ twin.
+    const twins = english.map((url) => ({
+        en: ledger[url],
+        tw: ledger[`/tw${url}`],
+    }));
+    // Then identities and retirements match, so one citation serves both.
+    expect(english.length).toBeGreaterThan(0);
+    expect(twins.map(({ tw }) => tw && ids(tw))).toEqual(
+        twins.map(({ en }) => en && ids(en))
+    );
+    expect(twins.map(({ tw }) => tw && [...tw.retired].sort())).toEqual(
+        twins.map(({ en }) => en && [...en.retired].sort())
+    );
+});
