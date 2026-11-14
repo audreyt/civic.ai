@@ -42,6 +42,7 @@ To quote the framework, link a numbered paragraph (¶) on a pack page, Measures 
 
 <h2 id="speeches">Speeches</h2>
 
+- [Who Counts](/who-counts/) — Audrey's commentary for the Taiwan Philosophical Association: whose needs count, and whose word counts. Video. _(15 November 2026)_
 - [Outrage to Overlap: Civic AI & 6-Pack of Care](/outrage-to-overlap/) — Audrey's Oxford Taiwan Studies seminar on how the framework can strengthen collective self-government when local accountability bounds it. _(28 May 2026)_
 - [Software Freedom as Civic Care](/software-freedom-as-civic-care/) — Audrey on the Free Software movement as a foundation for care ethics, democracy and local stewardship, narrated in her AI voice. _(22 May 2026)_
 - [SOLVE at MIT 2026](/we-the-people-are-truly-the-superintelligence/) — Audrey's keynote and fireside conversation: we, the people, are the superintelligence. Video. _(14 May 2026)_

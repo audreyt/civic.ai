@@ -1023,6 +1023,31 @@ main
 }
 
 /* ─── VIDEO EMBED ─── */
+/* Tractatus-style numbered propositions (speeches given as an argument tree) */
+.tract ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.tract ul ul {
+    margin-top: 0.4em;
+    padding-left: 1.25em;
+    border-left: 1px solid var(--rule);
+}
+
+.tract li {
+    margin-bottom: 0.6em;
+}
+
+.tract li > strong:first-child,
+.tract li > p:first-child > strong:first-child {
+    font-family: var(--machine);
+    font-size: 0.85em;
+    font-weight: 600;
+    color: var(--harvest);
+    margin-right: 0.35em;
+}
+
 .video-embed {
     position: relative;
     padding-top: 56.25%;
