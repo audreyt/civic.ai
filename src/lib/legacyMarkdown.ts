@@ -64,10 +64,47 @@ export function createMarkdownRenderer(): MarkdownIt {
     return md;
 }
 
+// A proposition in an argument tree (`<div class="tract">` around a list)
+// opens with its bold number, e.g. `- **2.21** So how to treat ...`.
+const TRACT_NUMBER = /^\*\*(\d+(?:\.\d+)*)\*\*\s/;
+
 export function renderMarkdown(body: string, url = ""): string {
     const md = createMarkdownRenderer();
+    const numbers = new Map<number, string>();
+    // Each numbered proposition in a tract is its own ¶, cited by its number.
+    md.core.ruler.push("tract_propositions", (state) => {
+        const tokens = state.tokens;
+        let inTract = false;
+        for (const [index, token] of tokens.entries()) {
+            if (token.type === "html_block") {
+                if (token.content.includes('class="tract"')) inTract = true;
+                else if (token.content.trim() === "</div>") inTract = false;
+                continue;
+            }
+            if (!inTract || token.type !== "list_item_open") continue;
+            // list_item_open, paragraph_open, inline: the item's own text.
+            const label = TRACT_NUMBER.exec(
+                tokens
+                    .slice(index + 2, index + 3)
+                    .map((t) => t.content)
+                    .join("")
+            )?.[1];
+            if (!label) continue;
+            token.attrSet("id", `p${label}`);
+            token.attrSet("class", "record-paragraph");
+            token.attrSet("data-record-paragraph", label);
+            numbers.set(
+                tokens.findIndex(
+                    (t, i) =>
+                        i > index &&
+                        t.type === "list_item_close" &&
+                        t.level === token.level
+                ),
+                label
+            );
+        }
+    });
     if (RECORD_URL.test(url)) {
-        const numbers = new Map<number, string>();
         // The shared selector preserves the existing citable-unit contract;
         // the committed ledger supplies identities across subsequent edits.
         md.core.ruler.push("record_paragraphs", (state) => {
@@ -88,21 +125,21 @@ export function renderMarkdown(body: string, url = ""): string {
                 }
             }
         });
-        const closeWithLink: NonNullable<
-            typeof md.renderer.rules.paragraph_close
-        > = (tokens, index, options, _env, renderer) => {
-            const number = numbers.get(index);
-            // The visible "¶ N" stays inside the accessible name (WCAG 2.5.3,
-            // label in name); the longer description is visually hidden.
-            return (
-                (number
-                    ? `<a class="record-paragraph__link" href="#p${number}" data-pagefind-ignore>¶ ${number}<span class="visually-hidden">${url.startsWith("/tw/") ? `（第 ${number} 段的永久連結）` : ` (permalink to paragraph ${number})`}</span></a>`
-                    : "") + renderer.renderToken(tokens, index, options)
-            );
-        };
-        md.renderer.rules.paragraph_close = closeWithLink;
-        md.renderer.rules.list_item_close = closeWithLink;
     }
+    const closeWithLink: NonNullable<
+        typeof md.renderer.rules.paragraph_close
+    > = (tokens, index, options, _env, renderer) => {
+        const number = numbers.get(index);
+        // The visible "¶ N" stays inside the accessible name (WCAG 2.5.3,
+        // label in name); the longer description is visually hidden.
+        return (
+            (number
+                ? `<a class="record-paragraph__link" href="#p${number}" data-pagefind-ignore>¶ ${number}<span class="visually-hidden">${url.startsWith("/tw/") ? `（第 ${number} 段的永久連結）` : ` (permalink to paragraph ${number})`}</span></a>`
+                : "") + renderer.renderToken(tokens, index, options)
+        );
+    };
+    md.renderer.rules.paragraph_close = closeWithLink;
+    md.renderer.rules.list_item_close = closeWithLink;
     return md.render(body);
 }
 

@@ -157,6 +157,22 @@ test("numbers each bullet, nested ones included, but not quoted or empty bullets
     expect(html).toContain('href="#p0b"');
 });
 
+test("anchors each numbered tract proposition by its own number, on any page", () => {
+    const html = renderMarkdown(
+        '<div class="tract">\n\n- **1** Root.\n\n- **2** Branch.\n    - **2.21** Leaf.\n    - Unnumbered.\n\n<p>Aside</p>\n\n</div>\n\n- **3** Outside.\n',
+        "/tw/who-counts/"
+    );
+    expect(html.match(/<li id="p[\d.]+"/g)).toEqual([
+        '<li id="p1"',
+        '<li id="p2"',
+        '<li id="p2.21"',
+    ]);
+    expect(html).toContain(
+        'Leaf.<a class="record-paragraph__link" href="#p2.21" data-pagefind-ignore>¶ 2.21<span class="visually-hidden">（第 2.21 段的永久連結）</span></a></li>'
+    );
+    expect(html).not.toContain("#p3");
+});
+
 test("reserves existing raw and generated heading IDs when allocating paragraph anchors", () => {
     const html = renderMarkdown(
         '<h2 id="p1">Existing</h2>\n\n## p2\n\nProse.',
