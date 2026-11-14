@@ -76,6 +76,6 @@ _Spoken in Mandarin; this is an English translation. The numbering follows the f
 
 [^eigenism]: Dan Hendrycks, ["Eigenism: Ethics for a Human-AI Future"](https://arxiv.org/abs/2606.12420), arXiv:2606.12420 (2026).
 
-[^faq]: [FAQ ¶176–187](/faq/#p176): the Kami, governing standing and the overlapping consensus.
+[^faq]: [FAQ Q20, ¶176–187](/faq/#faq-20): the Kami, governing standing and the overlapping consensus.
 
 [^tronto]: Berenice Fisher and Joan Tronto, ["Toward a Feminist Theory of Caring"](https://experts.umn.edu/en/publications/toward-a-feminist-theory-of-caring/), in _Circles of Care_, ed. Emily Abel and Margaret Nelson (SUNY Press, 1990); Joan Tronto, _Moral Boundaries: A Political Argument for an Ethic of Care_ (Routledge, 1993).

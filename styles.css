@@ -4129,8 +4129,14 @@ h3[id^="faq-"] {
     scroll-margin-top: 96px;
 }
 
+/* Numbered paragraphs (#pN) under the same sticky pill need the same clearance. */
+main:has(.faq-filter) .record-paragraph {
+    scroll-margin-top: 96px;
+}
+
 @media (max-width: 640px) {
-    h3[id^="faq-"] {
+    h3[id^="faq-"],
+    main:has(.faq-filter) .record-paragraph {
         /* Wrapped pill can reach three rows on very narrow screens. */
         scroll-margin-top: 140px;
     }

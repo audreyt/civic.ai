@@ -76,6 +76,6 @@ _樹的編號依影片段落。這段評論回應張明融在台灣哲學學會 
 
 [^eigenism]: Dan Hendrycks, ["Eigenism: Ethics for a Human-AI Future"](https://arxiv.org/abs/2606.12420), arXiv:2606.12420（2026）。
 
-[^faq]: [常見問題 ¶176–187](/tw/faq/#p176)：地神、治理資格與重疊共識。
+[^faq]: [常見問題 Q20，¶176–187](/tw/faq/#faq-20)：地神、治理資格與重疊共識。
 
 [^tronto]: Berenice Fisher and Joan Tronto, ["Toward a Feminist Theory of Caring"](https://experts.umn.edu/en/publications/toward-a-feminist-theory-of-caring/), in _Circles of Care_, ed. Emily Abel and Margaret Nelson（SUNY Press, 1990）；Joan Tronto, _Moral Boundaries: A Political Argument for an Ethic of Care_（Routledge, 1993）。
