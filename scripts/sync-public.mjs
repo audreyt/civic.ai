@@ -20,6 +20,7 @@ const PASSTHROUGH = [
     ".nojekyll",
     "favicon.ico",
     "favicon.svg",
+    ".well-known",
 ];
 
 const root = resolve(new URL("..", import.meta.url).pathname);
