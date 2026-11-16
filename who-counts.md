@@ -70,7 +70,7 @@ Thank you all. Live long and prosper.
 
 _Spoken in Mandarin; this is an English translation. The numbering follows the film's segments. The commentary responds to 張明融's paper for the meeting's panel on pluralistic and interdisciplinary dialogues in the philosophy of AI in Taiwan, held on 15 November 2026._
 
-[^paper]: 張明融, 〈作為地神的「仁工智慧」：從關懷六力探問 AI 對齊與 AI 福祉的共同基礎〉 ("Civic AI as Kami: Seeking Common Ground for AI Alignment and AI Welfare through the 6-Pack of Care"), Taiwan Philosophical Association 2026 annual meeting, 15 November 2026.
+[^paper]: 張明融, 〈作為地神的「仁工智慧」：從關懷六力探問 AI 對齊與 AI 福祉的共同基礎〉 ("Civic AI as Kami: Toward a Common Ground for AI Welfare and AI Alignment"), Taiwan Philosophical Association 2026 annual meeting, 15 November 2026.
 
 [^bales-gabriel]: Adam Bales and Iason Gabriel, "Artificial Minds, Human Disagreement: The Political Challenge of AI Consciousness" (manuscript, 2026).
 
