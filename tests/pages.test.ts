@@ -28,12 +28,14 @@ test("keeps book-aligned source material tableless", () => {
 
     const kamiSetup = getPageByUrl("/kami/").html;
     expect(kamiSetup).not.toContain("<th>RAM</th>");
-    expect(kamiSetup).toContain("On a laptop with 16 GB of memory or more");
+    expect(kamiSetup).toContain(
+        "On a machine with 32 GB of unified memory or a 24 GB GPU"
+    );
 
     const twKamiSetup = getPageByUrl("/tw/kami/").html;
     expect(twKamiSetup).not.toContain("<th>記憶體</th>");
     expect(twKamiSetup).toContain(
-        '記憶體 <span lang="en-GB">16 GB</span> 以上的筆電'
+        '具備 <span lang="en-GB">32 GB</span> 以上統一記憶體或 <span lang="en-GB">24 GB</span> 獨立顯示卡的機器'
     );
 
     const measures = getPageByUrl("/measures/").html;

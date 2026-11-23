@@ -73,9 +73,9 @@ This check sits alongside the [four questions](#before-you-start). Neither repla
 
 <h3 id="choose-a-model">Choose a model</h3>
 
-On a laptop with 16 GB of memory or more, we suggest the open-weight model `ornith-1.5:9b`, run with [Ollama](https://ollama.com). With less memory, use a hosted model after checking its terms.
+On a machine with 32 GB of unified memory or a 24 GB GPU, we suggest the open-weight model `inkling-2-mini`, run with [Ollama](https://ollama.com). With less memory, use a hosted model after checking its terms.
 
-Ollama is free, runs on macOS, Windows and Linux, and the OpenClaw app offers it during setup. LM Studio, llama.cpp and vLLM run the same open-weight models, and any of them will do if your agent can reach it. We chose `ornith-1.5:9b` because, in our checks in September 2026, it said it did not know about a meeting that never happened, refused to claim an action it had no tool for, and answered questions about Taiwan and the 1989 Tiananmen crackdown without repeating state censorship. The tag we suggested before, `ornith:9b`, failed that last check. We changed our suggestion twice between August and September 2026 as we tested more models, and it will change again. Qwen and Gemma models are reasonable alternatives. [Artificial Analysis](https://artificialanalysis.ai/models/open-source) compares open models, but no comparison table can tell you whether a model suits your group.
+Ollama is free, runs on macOS, Windows and Linux, and the OpenClaw app offers it during setup. LM Studio, llama.cpp, vLLM and Kapitsa run open-weight models locally too, and any of them will do if your agent can reach it. We chose `inkling-2-mini` because, in our checks in November 2026, it said it did not know about a meeting that never happened, refused to claim an action it had no tool for, and answered questions about Taiwan and the 1989 Tiananmen crackdown without repeating state censorship — and it ships natively in 4-bit precision (`NVFP4`) with vision and tool use built in. We suggested `ornith-1.5:9b` before (after dropping `ornith:9b`, which failed the censorship check), and we have changed our suggestion three times since August 2026 as open models improved; it will change again. Qwen and Gemma models are reasonable alternatives. [Artificial Analysis](https://artificialanalysis.ai/models/open-source) compares open models, but no comparison table can tell you whether a model suits your group.
 
 Run the [quick check](#a-quick-check) on any model you consider. Smaller models fail it more often.
 
@@ -87,7 +87,7 @@ Download [Ollama](https://ollama.com) and install it like any other app. Leave i
 
 Go to the [OpenClaw quickstart](https://openclaw.ai/#quickstart), open the Apps tab and download the desktop app for macOS, Windows or Linux. It walks you through each choice.
 
-When the app asks which model to use, choose **Ollama**, then **Local only**, then **ornith-1.5:9b**. If that model is not on the list, finish with the one it suggests and switch inside the app afterwards. If you are using a hosted model, choose it here instead.
+When the app asks which model to use, choose **Ollama**, then **Local only**, then **inkling-2-mini**. If that model is not on the list, finish with the one it suggests and switch inside the app afterwards (or run `ollama launch openclaw --model inkling-2-mini`). If you are using a hosted model, choose it here instead.
 
 ## 3. Set its limits
 
