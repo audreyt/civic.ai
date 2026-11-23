@@ -30,7 +30,7 @@ void test("rag keeps the gateway and Workers AI chat paths wired", () => {
     assert.doesNotMatch(source, /BASETEN_API_KEY/);
     assert.match(
         wrangler,
-        /AUDREY_MODEL = "@cf\/deepseek-ai\/deepseek-v4-flash-0731"/
+        /AUDREY_MODEL = "@cf\/thinkingmachines\/inkling-2-small"/
     );
 });
 
@@ -101,7 +101,7 @@ void test("a @cf model generates on the Workers AI binding without a gateway hop
     try {
         const res = await streamSiteAnswer(
             {
-                AUDREY_MODEL: "@cf/deepseek-ai/deepseek-v4-flash-0731",
+                AUDREY_MODEL: "@cf/thinkingmachines/inkling-2-small",
                 AI: ai,
             },
             "hello",
@@ -116,7 +116,7 @@ void test("a @cf model generates on the Workers AI binding without a gateway hop
         assert.equal(runs.length, 1);
         assert.equal(
             runs[0].model,
-            "@cf/deepseek-ai/deepseek-v4-flash-0731"
+            "@cf/thinkingmachines/inkling-2-small"
         );
         assert.equal(runs[0].input.stream, true);
         assert.equal(runs[0].input.max_completion_tokens, 8192);

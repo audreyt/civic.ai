@@ -12,7 +12,7 @@ workers_dev = true
 # "@cf/..." ids generate on the Workers AI binding ([ai]) — no gateway hop,
 # so no CF_AIG_TOKEN is needed on this path. "nemotron-ultra" / "fugu" stream
 # through AI Gateway instead and DO need CF_AIG_TOKEN (still set as a secret).
-AUDREY_MODEL = "@cf/deepseek-ai/deepseek-v4-flash-0731"
+AUDREY_MODEL = "@cf/thinkingmachines/inkling-2-small"
 
 [ai]
 binding = "AI"
