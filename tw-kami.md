@@ -73,7 +73,7 @@ Kami 是你已經能使用的 AI 模型，再加上本站的三樣東西：模�
 
 <h3 id="choose-a-model">選擇模型</h3>
 
-具備 32 GB 以上統一記憶體或 24 GB 獨立顯示卡的機器，我們建議用 [Ollama](https://ollama.com) 來跑開放權重模型 `inkling-2-mini`。記憶體不足時，先核對條款，再改用託管模型。
+在自己的機器上，我們建議用 Ollama 跑開放權重模型 [Inkling-2-Mini](https://ollama.com/library/inkling-2-mini)。請用至少有 32 GB 統一記憶體的機器，或配備至少有 24 GB 顯示記憶體的顯示卡。記憶體不足時，先核對條款，再改用託管模型。
 
 Ollama 免費，能在 macOS、Windows 和 Linux 上執行，OpenClaw 應用程式在設定時也會提供這個選項。LM Studio、llama.cpp、vLLM 和 Kapitsa 也能在本地跑開放權重模型，只要你的智慧體連得到，用哪一個都可以。我們選 `inkling-2-mini`，是因為在 2026 年 11 月的檢查裡，它對一場從未發生的會議老實說不知道，拒絕宣稱自己做了沒有工具能做的事，回答關於臺灣和 1989 年天安門鎮壓的問題時，也沒有複述國家審查的說法，而且它以原生 4-bit 精度（`NVFP4`）發布，內建視覺理解與工具呼叫能力。我們先前建議的是 `ornith-1.5:9b`（在換掉未通過審查檢查的 `ornith:9b` 之後）；從 2026 年 8 月至今，隨著開放模型進步，我們已經換過三次建議，以後還會再改。Qwen 和 Gemma 系列的模型也是合理的選擇。[Artificial Analysis](https://artificialanalysis.ai/models/open-source) 可以比較開放模型，但沒有任何比較表能告訴你某個模型適不適合你的群體。
 
@@ -87,7 +87,7 @@ Ollama 免費，能在 macOS、Windows 和 Linux 上執行，OpenClaw 應用程�
 
 到 [OpenClaw quickstart](https://openclaw.ai/#quickstart)，打開 Apps 分頁，下載適合你系統的桌面應用程式（macOS、Windows 或 Linux）。它會一步一步帶你完成每個選擇。
 
-當應用程式問你要用哪個模型，選 **Ollama**，再選 **Local only**（只用在地模型），然後挑 **inkling-2-mini**。如果清單裡沒有它，就先用它建議的模型完成設定，之後再到應用程式裡切換（或直接執行 `ollama launch openclaw --model inkling-2-mini`）。如果你用的是託管模型，就在這裡選它。
+當應用程式問你要用哪個模型，選 **Ollama**，再選 **Local only**（只用在地模型），然後挑 **inkling-2-mini**。如果清單裡沒有它，在終端機執行 `ollama launch openclaw --model inkling-2-mini` 就能直接設定。如果你用的是託管模型，就在應用程式裡選它。
 
 ## 3. 設定它的界限
 

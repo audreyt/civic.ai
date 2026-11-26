@@ -73,7 +73,7 @@ This check sits alongside the [four questions](#before-you-start). Neither repla
 
 <h3 id="choose-a-model">Choose a model</h3>
 
-On a machine with 32 GB of unified memory or a 24 GB GPU, we suggest the open-weight model `inkling-2-mini`, run with [Ollama](https://ollama.com). With less memory, use a hosted model after checking its terms.
+For local use, we suggest [Inkling-2-Mini](https://ollama.com/library/inkling-2-mini), an open-weight model you can run with Ollama. Use a machine with at least 32 GB of unified memory or a GPU with at least 24 GB of video memory. With less memory, use a hosted model after checking its terms.
 
 Ollama is free, runs on macOS, Windows and Linux, and the OpenClaw app offers it during setup. LM Studio, llama.cpp, vLLM and Kapitsa run open-weight models locally too, and any of them will do if your agent can reach it. We chose `inkling-2-mini` because, in our checks in November 2026, it said it did not know about a meeting that never happened, refused to claim an action it had no tool for, and answered questions about Taiwan and the 1989 Tiananmen crackdown without repeating state censorship — and it ships natively in 4-bit precision (`NVFP4`) with vision and tool use built in. We suggested `ornith-1.5:9b` before (after dropping `ornith:9b`, which failed the censorship check), and we have changed our suggestion three times since August 2026 as open models improved; it will change again. Qwen and Gemma models are reasonable alternatives. [Artificial Analysis](https://artificialanalysis.ai/models/open-source) compares open models, but no comparison table can tell you whether a model suits your group.
 
@@ -87,7 +87,7 @@ Download [Ollama](https://ollama.com) and install it like any other app. Leave i
 
 Go to the [OpenClaw quickstart](https://openclaw.ai/#quickstart), open the Apps tab and download the desktop app for macOS, Windows or Linux. It walks you through each choice.
 
-When the app asks which model to use, choose **Ollama**, then **Local only**, then **inkling-2-mini**. If that model is not on the list, finish with the one it suggests and switch inside the app afterwards (or run `ollama launch openclaw --model inkling-2-mini`). If you are using a hosted model, choose it here instead.
+When the app asks which model to use, choose **Ollama**, then **Local only**, then **inkling-2-mini**. If the model is not on the list, run `ollama launch openclaw --model inkling-2-mini` in a terminal to set it up directly. If you are using a hosted model, choose it in the app instead.
 
 ## 3. Set its limits
 
