@@ -410,31 +410,41 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                         pre.parentElement.classList.contains("code-block")
                     )
                         return;
-                    var wrap = document.createElement("div");
-                    wrap.className = "code-block";
-                    pre.parentNode.insertBefore(wrap, pre);
-                    wrap.appendChild(pre);
+                    var prompt = pre.closest(".kami-prompt");
+                    var wrap;
+                    if (prompt) {
+                        wrap = prompt.querySelector(".kami-prompt-actions");
+                    } else {
+                        wrap = document.createElement("div");
+                        wrap.className = "code-block";
+                        pre.parentNode.insertBefore(wrap, pre);
+                        wrap.appendChild(pre);
+                    }
                     var btn = document.createElement("button");
                     btn.type = "button";
                     btn.className = "copy-btn";
-                    btn.textContent = L.copy;
-                    btn.setAttribute("aria-label", L.copy);
+                    var label = prompt ? (zh ? "複製 Kami 指示" : "Copy Kami instructions") : L.copy;
+                    btn.textContent = label;
+                    btn.setAttribute("aria-live", "polite");
                     btn.addEventListener("click", function () {
                         var code = pre.querySelector("code");
-                        var text = code ? code.innerText : pre.innerText;
+                        var text = code ? code.textContent : pre.innerText;
                         navigator.clipboard.writeText(text).then(
                             function () {
                                 btn.textContent = L.done;
                                 btn.classList.add("copied");
                                 setTimeout(function () {
-                                    btn.textContent = L.copy;
+                                    btn.textContent = label;
                                     btn.classList.remove("copied");
                                 }, 1500);
                             },
-                            function () {}
+                            function () {
+                                if (prompt) prompt.querySelector("details").open = true;
+                                btn.textContent = zh ? "請選取文字後複製" : "Select the text to copy";
+                            }
                         );
                     });
-                    wrap.appendChild(btn);
+                    wrap.prepend(btn);
                 });
             })();
         </script>

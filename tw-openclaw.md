@@ -16,7 +16,7 @@ next_action:
 exclude_from_sitemap: true
 ---
 
-> **你是想自己動手設定的人嗎？** 這一頁放的是你的 Kami 所讀的指示。如果你是想找設定步驟的人，請從 **[架設你自己的 Kami](/tw/kami/)** 開始。
+> **你是想自己動手設定的人嗎？** 這一頁放的是給守護者參考的延伸指南。目前的提示詞是純 Markdown，在 **[/tw/kami/prompt-v1.md](/tw/kami/prompt-v1.md)**。如果你是想找設定步驟的人，請從 **[架設你自己的 Kami](/tw/kami/)** 開始。
 
 <!-- astro:openclaw-raw-skill-note tw -->
 

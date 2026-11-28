@@ -16,7 +16,7 @@ next_action:
 exclude_from_sitemap: true
 ---
 
-> **Setting one up yourself?** This page holds the instructions your Kami reads. If you are a person looking for the steps, start at **[Set up your own Kami](/kami/)**.
+> **Setting one up yourself?** This page holds the extended reading guide for keepers. The current prompt is plain Markdown at **[/kami/prompt-v1.md](/kami/prompt-v1.md)**. If you are a person looking for the steps, start at **[Set up your own Kami](/kami/)**.
 
 <!-- astro:openclaw-raw-skill-note en -->
 

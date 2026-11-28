@@ -146,6 +146,16 @@ export function recordSources(page: PageRecord): string[] {
             "_data/polis_care_snapshot/manifest.json",
         ],
         ["openclaw-", "_data/openclaw_bootstrap.js", "src/lib/shortcodes.ts"],
+        [
+            "kami-prompt en",
+            "_data/kami-prompt-v1.en.md",
+            "src/lib/shortcodes.ts",
+        ],
+        [
+            "kami-prompt tw",
+            "_data/kami-prompt-v1.tw.md",
+            "src/lib/shortcodes.ts",
+        ],
     ];
     for (const [marker, ...files] of generated) {
         if (marker && page.rawBody.includes(`<!-- astro:${marker}`))

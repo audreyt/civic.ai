@@ -1,6 +1,7 @@
 import { getPageByUrl, getSitemapPages, hasPublicFile } from "../lib/pages";
 import { navItems, type NavSection } from "../lib/nav";
 import { comics, lang2, openclawBootstrap, site } from "../lib/site";
+import { kamiPromptUrl } from "../lib/kamiPrompt";
 
 // What each masthead destination is for, in the words a person would be told.
 const destinations: Record<NavSection, string> = {
@@ -45,11 +46,13 @@ export function GET() {
         `- 華文版: ${site.url}/tw/`,
         "",
         "If you were asked to act as a Kami:",
-        `- Kami bootstrap guide: ${site.url}${openclawBootstrap.urls.guide.en}`,
-        `- Kami bootstrap skill (plain Markdown): ${site.url}${openclawBootstrap.urls.rawSkill}`,
-        `- 華文 guide: ${site.url}${openclawBootstrap.urls.guide.tw}`,
+        `- Kami instructions (copy or download): ${site.url}${kamiPromptUrl.en}`,
+        `- 華文指示：${site.url}${kamiPromptUrl.tw}`,
+        `- OpenClaw skill: ${site.url}${openclawBootstrap.urls.rawSkill}`,
+        `- Extended guide: ${site.url}${openclawBootstrap.urls.guide.en}`,
+        `- 華文延伸指南：${site.url}${openclawBootstrap.urls.guide.tw}`,
         "",
-        "Recommended reading order for a Kami:",
+        "Optional background for keepers:",
         ...openclawBootstrap.readingOrder.map(
             (item) =>
                 `- ${item.title.en}: ${site.url}${item.url.en} — ${item.why.en}`

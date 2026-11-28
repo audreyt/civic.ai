@@ -27,7 +27,7 @@ next_action:
 
 - [詞彙表](/tw/glossary/)——用白話解釋全站使用的詞彙，每個詞並列英文對應詞。
 - [修訂紀錄](/tw/ledger/)——本站的每一次修改，逐月列出，並附本站自己的檢查結果。
-- [仁工智慧 Kami 啟動指南](/tw/openclaw/)——群體請 AI 智慧體成為 Kami 時，它所讀的指示。同一份文字的純 Markdown 版在 [/.well-known/openclaw/SKILL.md](/.well-known/openclaw/SKILL.md)；[llms.txt](/llms.txt) 為機器讀者列出每一頁。
+- [仁工智慧 Kami 啟動指南](/tw/openclaw/)——供守護者按需閱讀的背景資料。[通用提示詞](/tw/kami/prompt-v1.md)的英文版也收錄在 [OpenClaw 技能檔](/.well-known/openclaw/SKILL.md)。[llms.txt](/llms.txt) 為機器讀者列出每一頁。
 
 引用這套框架時，請連結到各力頁面、衡量指標或常見問題裡的段落編號（¶）。編號不會因為修訂而改變，每頁頁尾的「紀錄」會標出最近一次修訂的日期。
 

@@ -4021,6 +4021,31 @@ pre code {
     border-color: var(--teal);
 }
 
+.kami-prompt-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    margin-bottom: 0.65rem;
+}
+
+.kami-prompt-actions .copy-btn {
+    position: static;
+    min-height: 44px;
+    padding: 0.5rem 0.85rem;
+    color: var(--teal);
+    font-size: 0.88rem;
+}
+
+.kami-prompt summary {
+    cursor: pointer;
+}
+
+.kami-prompt pre code {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
 /* Phones: long prompts wrap rather than scroll sideways; Copy still copies them whole. */
 @media (max-width: 600px) {
     pre code {

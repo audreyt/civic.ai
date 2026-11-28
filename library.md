@@ -27,7 +27,7 @@ next_action:
 
 - [Glossary](/glossary/) — plain-language definitions of the terms used across the site, each beside its Mandarin twin.
 - [Amendment ledger](/ledger/) — every change to this site, month by month, beside the site's own checks.
-- [Civic AI Kami Bootstrap Guide](/openclaw/) — the instructions an AI agent reads when its group asks it to become a Kami. The same text is in plain Markdown at [/.well-known/openclaw/SKILL.md](/.well-known/openclaw/SKILL.md), and [llms.txt](/llms.txt) lists every page for machine readers.
+- [Civic AI Kami Bootstrap Guide](/openclaw/) — optional background for keepers. The [portable prompt](/kami/prompt-v1.md) also comes as an [OpenClaw skill](/.well-known/openclaw/SKILL.md). [llms.txt](/llms.txt) lists every page for machine readers.
 
 To quote the framework, link a numbered paragraph (¶) on a pack page, Measures or the FAQ. The numbers survive edits, and the Trace at the foot of each page gives the date it was last amended.
 

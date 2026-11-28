@@ -1,4 +1,6 @@
 import { expect, test, vi } from "vite-plus/test";
+import { readFileSync } from "node:fs";
+import { parseFragment } from "parse5";
 import type { ComicsOverlayFrame } from "../src/lib/site";
 
 // `expandShortcodes` unconditionally invokes every `render*` helper in this
@@ -292,6 +294,27 @@ test("expandShortcodes returns the expanded body when no legacy syntax remains",
     );
     expect(result).toBe("Plain body with no legacy shortcodes.");
 });
+
+test.each([
+    ["en", "/kami/prompt-v1.md"],
+    ["tw", "/tw/kami/prompt-v1.md"],
+])(
+    "the %s copy control contains the complete downloadable prompt",
+    (lang, url) => {
+        const html = expandShortcodes(
+            { sourcePath: "kami.md", data: {} },
+            `<!-- astro:kami-prompt ${lang} -->`
+        );
+        expect(html).toContain(`download href="${url}"`);
+        const code = html.match(/<pre><code>(.*?)<\/code><\/pre>/s)?.[1] ?? "";
+        expect(parseFragment(code).childNodes).toMatchObject([
+            {
+                nodeName: "#text",
+                value: readFileSync(`_data/kami-prompt-v1.${lang}.md`, "utf8"),
+            },
+        ]);
+    }
+);
 
 test("expandShortcodes inserts the bilingual report from one snapshot", () => {
     const english = expandShortcodes(

@@ -55,11 +55,11 @@ next_action:
 
 <h2 id="set-up-a-helper">架設小幫手</h2>
 
-我們把這樣的小幫手叫做地神（Kami）。Kami 是你已經能使用的 AI 模型，可以是聊天助理，也可以是 AI 智慧體，加上我們的指示（大約一千七百字）和三份關於它工作的簡短筆記。模型讀了這些，會先向你的群體問幾個問題：它服務哪個地方、哪些事可以自己做，以及你們如何修正它或把它關掉。
+我們把這樣的小幫手叫做地神（Kami）。Kami 是你已經能使用的 AI 模型，可以是聊天助理，也可以是 AI 智慧體，加上我們的指示和三份關於它工作的簡短筆記。模型讀了這些，會先向你的群體問幾個問題：它服務哪個地方、哪些事可以自己做，以及你們如何修正它或把它關掉。
 
-指示只能請求。模型可能不照做；換了模型、對話拉長或應用程式更新，都可能改變它的行為。凡是絕對不能發生的事，例如寄出訊息、花錢或洩漏某人的姓名，都必須在軟體設定裡擋下，而關掉它的開關由你的群體掌握。〈[架設你自己的 Kami](/tw/kami/)〉說明這兩部分，也交代我們建議每項工具的理由。
+指示只能請求。模型可能不照做；換了模型、對話拉長或應用程式更新，都可能改變它的行為。凡是絕對不能發生的事，例如寄出訊息、花錢或洩漏某人的姓名，都必須在軟體設定裡擋下，而關掉它的開關由你的群體掌握。〈[架設你自己的 Kami](/tw/kami/)〉說明這兩部分，也交代我們建議每項工具的理由。大多數群體可以從已經在用的助理開始，替它開[一個專屬的私人專案](/tw/kami/#use-your-assistant)。
 
-<p class="agent-note">如果你是被要求擔任 Kami 的 AI 智慧體，請先讀 <a href="/tw/openclaw/">civic.ai/tw/openclaw</a> 上給你的指示。純 Markdown 版在 <a href="/.well-known/openclaw/SKILL.md">/.well-known/openclaw/SKILL.md</a>。如果只是有人問你這個網站說了什麼，請從 <a href="/llms.txt">/llms.txt</a> 讀起。</p>
+<p class="agent-note">如果你是被要求擔任 Kami 的 AI 智慧體，請先讀 <a href="/tw/kami/prompt-v1.md">/tw/kami/prompt-v1.md</a> 上給你的指示。也可參考<a href="/tw/openclaw/">延伸指南</a>。同一份指示的英文版收錄在 OpenClaw 技能檔 <a href="/.well-known/openclaw/SKILL.md">/.well-known/openclaw/SKILL.md</a>。如果只是有人問你這個網站說了什麼，請從 <a href="/llms.txt">/llms.txt</a> 讀起。</p>
 
 <h2 id="start-today">今天就能試的三個動作</h2>
 

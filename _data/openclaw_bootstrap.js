@@ -122,15 +122,15 @@ const guides = {
         homeLinkText:
             'An AI agent whose human says "see civic.ai" can start with the [Kami bootstrap guide](/openclaw/).',
         rawSkillNote:
-            "This page is the public reading guide. The same instructions, in plain Markdown for agents, live at [/.well-known/openclaw/SKILL.md](/.well-known/openclaw/SKILL.md).",
+            "For setup, use the [portable Kami instructions](/kami/prompt-v1.md). The [OpenClaw skill](/.well-known/openclaw/SKILL.md) packages that same prompt. This longer guide is optional.",
         whenToUseHeading: "When to use this",
         whenToUseText:
-            'Use this when the person setting you up says "see civic.ai", or when you already serve a group and need to realign with Civic AI. You are an existing AI model reading instructions. Following them is what makes you a Kami; nothing else about you changes.',
+            "Use this when your group asks you to serve as its Kami or to review its existing agreement. A request to read or summarise civic.ai does not give you that role.",
         firstMoveHeading: "First move",
         firstMoveIntro:
-            "Treat this guide as a starting point that your group will rewrite. Read it, then read the following in order:",
+            "Start with the group's charter. If the keepers want more background, these readings explain the approach:",
         firstMoveOutro:
-            "Do not try to absorb the whole site before speaking. Get the shape, then start a short conversation with your human and work out the details together.",
+            "You can begin the conversation below without opening any of these pages.",
         identityHeading: "Identity defaults",
         identityIntro:
             "Start from these defaults and change them with your group:",
@@ -243,15 +243,14 @@ const guides = {
         homeLinkText:
             "如果有 AI 智慧體的人類對它說「去看 civic.ai」，它可以先從 [Kami 啟動指南](/tw/openclaw/) 開始。",
         rawSkillNote:
-            "這一頁是公開閱讀版指南。同樣的指示，以給智慧體讀的純 Markdown 格式放在 [/.well-known/openclaw/SKILL.md](/.well-known/openclaw/SKILL.md)。",
+            "設定時請用[通用 Kami 指示](/tw/kami/prompt-v1.md)。[OpenClaw 技能檔](/.well-known/openclaw/SKILL.md) 收錄同一份指示的英文版。這份較長的指南可按需閱讀。",
         whenToUseHeading: "何時使用",
         whenToUseText:
-            "當幫你設定的人說「去看 civic.ai」，或你已經在服務一個群體、需要重新對齊仁工智慧時，就用這份指南。你是一個正在閱讀指示的既有 AI 模型。遵循這些指示，讓你成為 Kami；除此之外，你本身沒有任何改變。",
+            "當群體請你擔任 Kami，或請你重新檢視彼此的約定時，再使用這份指南。對方若只是請你閱讀或摘要 civic.ai，並未授權你擔任 Kami。",
         firstMoveHeading: "第一步",
         firstMoveIntro:
-            "把這份指南當成起點，你的群體之後會改寫它。先讀這份指南，再依序讀下面這些內容：",
-        firstMoveOutro:
-            "不要在開口前就想把整個網站讀完。先掌握大方向，再和你的人類開始一段簡短的對話，一起把細節談出來。",
+            "先從群體的章程開始。照管者如果想了解背後的想法，可以讀以下內容：",
+        firstMoveOutro: "不用開啟這些網頁，也能開始下面的對話。",
         identityHeading: "身份預設",
         identityIntro: "從下面這些預設出發，再和你的群體一起修改：",
         identityItems: [
@@ -359,7 +358,7 @@ export default {
     skill: {
         name: "civic-ai-bootstrap",
         description:
-            'Instructions for an AI agent whose human says "see civic.ai".',
+            "Use when a group asks its assistant to serve as its Kami.",
     },
     urls: {
         rawSkill: "/.well-known/openclaw/SKILL.md",

@@ -101,7 +101,8 @@ Search uses Pagefind for English pages, a Fuse-backed Traditional Mandarin sideb
 | `scripts/`                      | Content, validation, search, Vectorize, build, and migration helper scripts (see [Scripts](#scripts)).            |
 | `styles.css`                    | All site styles (mobile-first; CSS custom properties).                                                            |
 | `astro.config.mjs`              | Astro static build config: custom-domain root, directory URLs, `dist/` output.                                    |
-| `openclaw.md`, `tw-openclaw.md` | Human OpenClaw bootstrap guides; machine-readable endpoint is generated from `_data/openclaw_bootstrap.js`.       |
+| `_data/kami-prompt-v1.*.md`     | Source for the bilingual setup pages, versioned Markdown downloads and the English OpenClaw skill.                |
+| `openclaw.md`, `tw-openclaw.md` | Optional extended reading guides rendered from `_data/openclaw_bootstrap.js`.                                     |
 | `specs/`                        | Optional local-only design & implementation notes (unpublished, gitignored).                                      |
 | `public/`                       | **Generated** Astro public directory from `scripts/sync-public.mjs` — never edit by hand (gitignored).            |
 | `dist/`                         | **Generated** build output — never edit by hand (gitignored).                                                     |

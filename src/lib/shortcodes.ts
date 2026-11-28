@@ -1,6 +1,7 @@
 import { renderPolisReport } from "../../_data/polis_report.js";
 import type { PageRecord } from "./pages";
 import { renderConceptMap } from "./conceptMap";
+import { kamiPrompt, kamiPromptUrl } from "./kamiPrompt";
 import {
     type ComicsOverlayFrame,
     comics,
@@ -60,6 +61,19 @@ export function expandShortcodes(
         "<!-- astro:openclaw-guide tw -->",
         renderOpenClawGuideMarkdown("tw")
     );
+    for (const lang of ["en", "tw"] as const) {
+        expanded = expanded.replaceAll(
+            `<!-- astro:kami-prompt ${lang} -->`,
+            () => {
+                const tw = lang === "tw";
+                const text = escapeHtml(kamiPrompt[lang]).replaceAll(
+                    "\n",
+                    "&#10;"
+                );
+                return `<div class="kami-prompt"><div class="kami-prompt-actions"><a download href="${kamiPromptUrl[lang]}">${tw ? "下載 Markdown（第 1 版）" : "Download Markdown (v1)"}</a></div><details><summary>${tw ? "閱讀完整指示" : "Read the full instructions"}</summary><pre><code>${text}</code></pre></details></div>`;
+            }
+        );
+    }
     if (/\{%|\{\{/.test(expanded))
         throw new Error(
             `Unhandled legacy template syntax in ${page.sourcePath}`

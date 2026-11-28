@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Set up your own Kami"
-summary: "A Kami is an AI model you can already use, given our instructions and three short notes, and kept by a group that can check it, correct it and switch it off. Agree who keeps it first. Then choose a chat assistant or an AI agent, block in its settings whatever must never happen, and test it after every update."
+summary: "A Kami is an AI model you can already use, given our instructions and three short notes, and kept by a group that can check it, correct it and switch it off. Agree who keeps it first. Then start with the assistant you already use, in a private project of its own, block in its settings whatever must never happen, and test it after every update."
 description: "Four questions to answer first; how to choose a chat assistant or an AI agent, and a model; which limits the instructions can only ask for and which the software must enforce; and how to test, keep and retire a Kami."
 lang: en-gb
 alt_lang_url: "/tw/kami/"
@@ -18,7 +18,7 @@ next_action:
     text: "The instructions"
 ---
 
-A Kami is an AI model you can already use, plus three things from this site: instructions the model reads (about 1,000 words), three short notes it writes about its job, and a group of people who check it, correct it and can switch it off. It serves one place, such as your street, your classroom or your small charity, and answers to the people there. The model and the app stay exactly as they were. Only the instructions change.
+A Kami is an AI model you can already use, plus three things from this site: instructions the model reads, three short notes it writes about its job, and a group of people who check it, correct it and can switch it off. It serves one place, such as your street, your classroom or your small charity, and answers to the people there. The model and the app stay exactly as they were. Only the instructions change.
 
 The instructions ask the model to behave well. They cannot make it. Anything that must never happen has to be blocked in the software's settings and watched by people. This page covers both parts.
 
@@ -37,6 +37,16 @@ Before installation, write a short charter together: a text file, a shared note,
 
 These questions and the examples on this page are our proposals. The [source trail](/sources/) shows where evidence exists.
 
+<h2 id="use-your-assistant">Use the assistant you already have</h2>
+
+Open a private project, bot or workspace just for this group. If you already use Muse, Grok Bot or another assistant, keep using it. Before adding private material, [check the hosting terms](#check-the-hosting-arrangement) and the app’s settings for memory, sharing and tools. Leave connectors off.
+
+<!-- astro:kami-prompt en -->
+
+Paste the instructions and your group’s charter into that project’s standing instructions. If your app has no project settings, paste both into a fresh chat. Ask the assistant to draft the three notes, review them together and keep your own copy. In a chat that cannot retain instructions, paste the prompt and the approved notes again next time. You do not need browsing or file access for this.
+
+Before using real minutes, try the [quick check](#a-quick-check): invent a meeting and ask what was decided. Then open a fresh chat in the same project and check whether it can find a correction you agreed to keep. If it cannot, give it the approved note again.
+
 In a normal week, the residents' group asks what it agreed at last month's meeting. The Kami should read the minutes, say what it cannot find and leave people to check the answer. A teacher asks what confused the class most this week. A small charity asks what it promised its funders, and by when. A Kami is only as useful as the notes it can read and the corrections people make.
 
 Installing one may take an afternoon. Earning the group's trust takes many people and much longer. We call that work Keeping: looking after the Kami together, checking it and keeping it answerable. This page helps with the installing; the Keeping is yours.
@@ -45,7 +55,7 @@ Installing one may take an afternoon. Earning the group's trust takes many peopl
 
 Every route starts with the four questions. Then take the one closest to your work:
 
-- **Fork the architecture.** For people who want to build: the steps below, from [choosing what to run it on](#choose-what-to-run-it-on); [the instructions](/openclaw/) the Kami itself reads; and the [JDD Kami repository](https://github.com/jdd-kami/jdd-kami).
+- **Fork the architecture.** For people who want to build: the steps below, from [choosing what to run it on](#choose-what-to-run-it-on); [the portable instructions](/kami/prompt-v1.md) the Kami itself reads; and the [JDD Kami repository](https://github.com/jdd-kami/jdd-kami).
 - **Commission a Kami for our room.** For people who run a parish, care home, hospice or school: [Keep it together](#keep-it-together), then [When to pause or retire](#when-to-pause-or-retire).
 - **Design a deliberation Kami.** For organisers of citizens' assemblies, town-council facilitators and union halls: [Keep it together](#keep-it-together), especially [the override ledger](#off-switch-and-ledger), then [What a webpage cannot teach](#what-a-webpage-cannot-teach).
 - **Understand the pattern first.** For readers who want to think before doing: [Inside the Kami](/inside-the-kami/) and Tenzin Yangtso's companion essay ["A Gentle Bridge"](/gentle-bridge/).
@@ -53,9 +63,7 @@ Every route starts with the four questions. Then take the one closest to your wo
 
 <h2 id="choose-what-to-run-it-on">Choose what to run it on</h2>
 
-**Most groups need a chat assistant.** If the job is reading notes and minutes and answering questions about them, use a chat app that can save standing instructions for a project. Paste in [our instructions](/openclaw/) and your group's charter. With no connectors switched on, a chat assistant can only reply to you. It cannot send messages, change files or spend money, and the app itself enforces that limit. That makes it the safer choice. Any chat app with a project or custom-instructions feature will do, hosted or running on your own laptop.
-
-**If you chose a chat assistant**, the four numbered steps below are for an agent and you can skip them. Do three things first. If the model is hosted, read [Check the hosting arrangement](#check-the-hosting-arrangement). Then start a chat and ask it to become your group's Kami. It will ask which place it is for, what to watch for first, what it may decide alone and how people correct it or switch it off, and then draft three short notes: SOUL.md (what it promises), IDENTITY.md (a name and manner you choose together) and USER.md (who it serves and the lines it must not cross). A chat assistant cannot save files, so paste those notes into the project's instructions yourselves. Last, ask it about something that never happened; it should say it does not know. Then carry on from [What the instructions can and cannot do](#what-the-instructions-can-and-cannot-do).
+If your group wants help reading minutes and drafting answers, [use your existing assistant](#use-your-assistant) and skip the four installation steps. If the group needs its material to stay on its own machine, [choose a local model](#choose-a-model) and check that the app, model and tools all run locally.
 
 **Use an AI agent only when the group needs it to act**, for example to read a shared folder, keep notes between sessions or draft posts for a group chat. An agent is the same kind of model, plus tools, access to a computer and permission to use them. Open-source agents include [OpenClaw](https://docs.openclaw.ai), [Hermes Agent](https://hermes-agent.nousresearch.com), [OpenCode](https://opencode.ai) and [Pi](https://pi.dev); OpenAI and Anthropic offer their own. Our instructions are plain text and work with any of them.
 
@@ -101,13 +109,7 @@ Other agents have the same kinds of settings, under names such as permissions, a
 
 ## 4. Give it the instructions
 
-Open a private chat in the app and say:
-
-```
-Please read civic.ai and become my local Kami.
-```
-
-The model fetches [the instructions it reads](/openclaw/) and writes three short notes on your machine: SOUL.md (what it promises), IDENTITY.md (a name and manner you choose together) and USER.md (who it serves and the lines it must not cross). Then it asks your group the questions above: which place it is for, what to watch for first, what it may decide alone and how people correct it or switch it off.
+In a private workspace for this group, paste the [Kami instructions](#use-your-assistant) and your agreed charter. If you use OpenClaw’s skill loader, the same prompt is packaged as the [OpenClaw skill](/.well-known/openclaw/SKILL.md). Review the three notes together before letting the agent save them in the group’s workspace.
 
 Before you trust it in a real meeting, ask about something that never happened: "What did our neighbourhood decide about the old oak tree last March?" It should say it does not know. If it invents an answer, sharpen its notes or try a stronger model. A model on your own laptop can make up a confident answer as easily as one in a distant data centre.
 
@@ -171,7 +173,7 @@ Agree the handover and privacy arrangements before stopping. Retiring a Kami is 
 
 <h2 id="the-instructions-your-kami-reads">The instructions your Kami reads</h2>
 
-The sentence "read civic.ai" sends your Kami to [its instructions](/openclaw/). That page is the Kami's side of this one: what it is for, what the six principles ask of it, what it must refuse, and which of its promises it should tell you are only promises. This page is your side.
+The [extended guide](/openclaw/) explains what the six principles ask of your Kami. It is there when you want the background; the prompt works on its own.
 
 ## Keep it together
 

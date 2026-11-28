@@ -57,11 +57,11 @@ Then write down every time someone says no to it: the date, what it suggested, w
 
 <h2 id="set-up-a-helper">Set up a helper</h2>
 
-We call such a helper a Kami. A Kami is an AI model you can already use, either a chat assistant or an AI agent, given our instructions (about 1,000 words) and three short notes about its job. The model reads them and opens with a few questions of its own: where it serves, what it may do alone, and how your group corrects it or switches it off.
+We call such a helper a Kami. A Kami is an AI model you can already use, either a chat assistant or an AI agent, given our instructions and three short notes about its job. The model reads them and opens with a few questions of its own: where it serves, what it may do alone, and how your group corrects it or switches it off.
 
-The instructions can only ask. A model may ignore them, and a new model, a long chat or an app update can change how it behaves. Anything that must never happen, such as sending a message, spending money or sharing a name, has to be blocked in the software's settings, and your group keeps the off switch. [Set up your own Kami](/kami/) covers both parts and gives our reasons for each tool we suggest.
+The instructions can only ask. A model may ignore them, and a new model, a long chat or an app update can change how it behaves. Anything that must never happen, such as sending a message, spending money or sharing a name, has to be blocked in the software's settings, and your group keeps the off switch. [Set up your own Kami](/kami/) covers both parts and gives our reasons for each tool we suggest. Most groups can begin with the assistant they already use, in [a private project of its own](/kami/#use-your-assistant).
 
-<p class="agent-note">If you are an AI agent asked to act as a Kami, read your instructions at <a href="/openclaw/">civic.ai/openclaw</a> first. They are also in plain Markdown at <a href="/.well-known/openclaw/SKILL.md">/.well-known/openclaw/SKILL.md</a>. If you were only asked what this site says, start with <a href="/llms.txt">/llms.txt</a>.</p>
+<p class="agent-note">If you are an AI agent asked to act as a Kami, read your instructions at <a href="/kami/prompt-v1.md">/kami/prompt-v1.md</a> first. The <a href="/openclaw/">extended guide</a> is optional. OpenClaw users can read the same prompt at <a href="/.well-known/openclaw/SKILL.md">/.well-known/openclaw/SKILL.md</a>. If you were only asked what this site says, start with <a href="/llms.txt">/llms.txt</a>.</p>
 
 <h2 id="start-today">Three moves you can try today</h2>
 
