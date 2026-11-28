@@ -80,7 +80,6 @@ You can start on your own, without a budget or a technical role. Anything that i
 - **Care.** ["Attentiveness in Long-Term Care AI"](/care-ai/) shows people in long-term care writing their own definition of responsible AI, and [Community Voices on AI](/conference/report/) records what conference participants said about AI and care.
 - **Democracy.** ["Ciudadanía Digital"](/ciudadania-digital/) and the [AI and Democracy podcast](/ai-democracy-podcast/) connect the framework to everyday public problem-solving.
 - **Listen or watch.** Take the [6-Pack of Care podcast](/podcast/) or ["Can AI Be Compassionate?"](/compassion-and-ai/) on a walk, or watch Audrey and Caroline's 30-minute fireside chat, ["Reimagining AI Alignment"](/reimagining-ai-alignment/).
-- **Comics.** Nicky Case drew [the overview above and twelve comic pages](/comics/), a problem page and a solution page for each pack.
 - **Listening at scale.** [Uncommon Ground](https://github.com/audreyt/uncommon-ground) turns a pool of audience questions into a written reply for every questioner. [audreyt.org/dd](https://audreyt.org/dd) shows one run: 266 questions across 18 sessions, all answered in writing.
 
 <p id="publications">Everything else, talks, essays and publications, is in the <a href="/library/">Library</a>.</p>

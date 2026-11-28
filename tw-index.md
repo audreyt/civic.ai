@@ -78,7 +78,6 @@ next_action:
 - **照護。** [《長期照護 AI 中的覺察力》](/tw/care-ai/)記錄長期照護現場的人，如何寫下他們自己對負責任 AI 的定義；〈[社群談 AI 的聲音](/tw/conference/report/)〉記錄研討會參與者對 AI 與關懷的看法。
 - **民主。** [《數位公民》](/tw/ciudadania-digital/)和 [Podcast：AI 與民主](/tw/ai-democracy-podcast/)把這套框架連到日常的公共問題解決。
 - **用聽的或看的。** 散步時帶上 [Podcast：關懷六力](/tw/podcast/)或[《AI 能有「慈悲心」嗎？》](/tw/compassion-and-ai/)，或看唐鳳與 Caroline Green 三十分鐘的爐邊對談[《重新想像 AI 對齊》](/tw/reimagining-ai-alignment/)。
-- **漫畫。** Nicky Case 畫了[上面的概覽圖和十二張漫畫頁](/tw/comics/)，每一力各有一張問題頁、一張解方頁。
 - **大規模傾聽。** [罕見共識](https://github.com/audreyt/uncommon-ground)把一整池觀眾提問，變成給每一位提問者的書面回覆。[audreyt.org/dd](https://audreyt.org/dd) 是一次實際的運作：18 個場次、266 個提問，全部以書面回覆。
 
 <p id="學術發表">其餘的演講、文章與論文，都列在<a href="/tw/library/">全站目錄</a>。</p>
