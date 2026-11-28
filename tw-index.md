@@ -74,6 +74,7 @@ next_action:
 - **核心論證。** [計畫宣言](/tw/manifesto/)由唐鳳親自說明完整的論證。我們押注的是：人們有了好工具，集體會比任何單一系統更聰明。
 - **一個案例。** [《AI 對齊不能由上而下》](/tw/ai-alignment-cannot-be-top-down/)是唐鳳 2025 年 11 月寫下的紀錄，講臺灣如何回應一波 AI 詐騙廣告。[案例紀錄](/tw/sources/#cases)追蹤這個案例和另外六個案例，並說明每份紀錄能支撐什麼、不能支撐什麼。
 - **技術論證。** [《地神之內》](/tw/inside-the-kami/)主張單一用途的小型系統比通用系統更容易治理，並說明這個論證在哪裡止步。
+- **關係與共生。** 〈[⿻輕柔之橋](/tw/gentle-bridge/)〉從關懷六力出發，探問 AI 如何支持人與人之間的關係；〈[⿻存在](/tw/plurality-being/)〉把問題拉得更遠：如果科技不再榨取人的注意力，而是用來耕耘關係，我們的生活會有什麼不同？
 - **照護。** [《長期照護 AI 中的覺察力》](/tw/care-ai/)記錄長期照護現場的人，如何寫下他們自己對負責任 AI 的定義；〈[社群談 AI 的聲音](/tw/conference/report/)〉記錄研討會參與者對 AI 與關懷的看法。
 - **民主。** [《數位公民》](/tw/ciudadania-digital/)和 [Podcast：AI 與民主](/tw/ai-democracy-podcast/)把這套框架連到日常的公共問題解決。
 - **用聽的或看的。** 散步時帶上 [Podcast：關懷六力](/tw/podcast/)或[《AI 能有「慈悲心」嗎？》](/tw/compassion-and-ai/)，或看唐鳳與 Caroline Green 三十分鐘的爐邊對談[《重新想像 AI 對齊》](/tw/reimagining-ai-alignment/)。
